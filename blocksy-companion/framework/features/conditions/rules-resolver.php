@@ -566,7 +566,11 @@ class ConditionsRulesResolver {
 			}
 		}
 
-		return false;
+		return apply_filters(
+			'blocksy:conditions:rules:resolve',
+			false,
+			$rule
+		);
 	}
 
 	private function match_taxonomy_in_rule_for($rule, $post_id) {

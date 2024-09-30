@@ -7509,7 +7509,7 @@ msgstr "Главный цвет"
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:83,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:84
 msgid "Icon Badge"
-msgstr "��одпись значка"
+msgstr "Подп��сь значка"
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:174,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:178,
@@ -7849,7 +7849,7 @@ msgstr "URL сайта агенства"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:187
 msgid "Agency Support/Contact Form URL"
-msgstr "URL контактной формы/портала поддержки агентства"
+msgstr "URL конта��тной формы/портала поддержки агентства"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:220
 msgid "Theme Details"

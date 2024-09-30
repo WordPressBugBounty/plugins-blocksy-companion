@@ -1,4 +1,4 @@
-import cachedFetch, { makeDeferred } from '../../helpers/cached-fetch'
+import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
 
 export const getStarterSitesStatus = () => {
 	const url = new URL('https://startersites.io?route=v2/demo/get_all')

@@ -1,5 +1,7 @@
 import { useMemo, useState, useEffect } from '@wordpress/element'
-import { cachedFetch, getStableJsonKey } from 'blocksy-options'
+
+import { getStableJsonKey } from 'ct-wordpress-helpers/get-stable-json-key'
+import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
 
 // TODO: maybe rename this hook to show that it can be used for something else
 // other than custom fields.
@@ -26,8 +28,9 @@ const useCustomFieldData = ({ postId, fieldDescriptor }) => {
 
 	useEffect(() => {
 		if (!fieldData[requestDescriptor.cacheKey]) {
-			cachedFetch(requestDescriptor.url, requestDescriptor.body).then(
-				({ success, data }) => {
+			cachedFetch(requestDescriptor.url, requestDescriptor.body)
+				.then((response) => response.json())
+				.then(({ success, data }) => {
 					if (!success) {
 						return
 					}
@@ -36,8 +39,7 @@ const useCustomFieldData = ({ postId, fieldDescriptor }) => {
 						...prev,
 						[requestDescriptor.cacheKey]: data.field_data,
 					}))
-				}
-			)
+				})
 		}
 	}, [requestDescriptor, fieldData])
 

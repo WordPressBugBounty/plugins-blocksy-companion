@@ -141,6 +141,7 @@ class ConditionsManager {
 		$sections[] = 'requests';
 		$sections[] = 'localization';
 		$sections[] = 'bbPress';
+		$sections[] = 'custom';
 
 		if ($args['filter'] === 'archive' || $args['filter'] === 'singular') {
 			$sections = [
@@ -151,7 +152,8 @@ class ConditionsManager {
 				'specific',
 				'user-auth',
 				'date-time',
-				'localization'
+				'localization',
+				'custom'
 			];
 		}
 
@@ -160,7 +162,8 @@ class ConditionsManager {
 				'basic',
 				'user-auth',
 				'date-time',
-				'localization'
+				'localization',
+				'custom'
 			];
 		}
 

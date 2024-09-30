@@ -1,6 +1,7 @@
 import { useState, useEffect } from '@wordpress/element'
 import { __ } from 'ct-i18n'
-import { cachedFetch, getOptionsForBlock } from 'blocksy-options'
+import { getOptionsForBlock } from 'blocksy-options'
+import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
 
 import { getLabelForProvider } from '../utils'
 import { useTaxonomies } from '../../query/edit/utils/utils'
@@ -162,9 +163,11 @@ const useDynamicDataDescriptor = ({ postId, postType, termId, taxonomy }) => {
 				{
 					post_id: postId,
 				}
-			).then(({ success, data }) => {
-				setAdditionalFields(data.fields)
-			})
+			)
+				.then((response) => response.json())
+				.then(({ success, data }) => {
+					setAdditionalFields(data.fields)
+				})
 		}
 	}, [postId, termId])
 

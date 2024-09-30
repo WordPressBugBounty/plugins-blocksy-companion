@@ -43,7 +43,13 @@ const SingleCondition = ({ className = '', condition, onRemove, onChange }) => {
 		condition.rule === 'request_url' ||
 		(ruleDescriptor &&
 			ruleDescriptor.sub_ids &&
-			ruleDescriptor.sub_ids.length > 0)
+			ruleDescriptor.sub_ids.length > 0) ||
+		(ruleDescriptor &&
+			ruleDescriptor.is_custom_rule &&
+			ruleDescriptor.has_text_field) ||
+		(ruleDescriptor &&
+			ruleDescriptor.is_custom_rule &&
+			ruleDescriptor.choices)
 
 	return (
 		<div
@@ -445,6 +451,58 @@ const SingleCondition = ({ className = '', condition, onRemove, onChange }) => {
 					</span>
 				</div>
 			)}
+
+			{ruleDescriptor &&
+				ruleDescriptor.is_custom_rule &&
+				ruleDescriptor.has_text_field && (
+					<div className="ct-option-input">
+						<input
+							type="text"
+							placeholder=""
+							value={condition.payload.value || ''}
+							onChange={(e) => {
+								onChange({
+									...condition,
+									payload: {
+										...condition.payload,
+										value: e.target.value,
+									},
+								})
+							}}
+						/>
+					</div>
+				)}
+
+			{ruleDescriptor &&
+				ruleDescriptor.is_custom_rule &&
+				ruleDescriptor.choices && (
+					<Select
+						option={{
+							appendToBody: true,
+							placeholder: __(
+								'Select value',
+								'blocksy-companion'
+							),
+							choices: ruleDescriptor.choices,
+
+							search: true,
+							inputClassName: 'ct-dropdown-normal-width',
+						}}
+						value={
+							condition.payload.value ||
+							ruleDescriptor.choices[0].key
+						}
+						onChange={(value) => {
+							onChange({
+								...condition,
+								payload: {
+									...condition.payload,
+									value,
+								},
+							})
+						}}
+					/>
+				)}
 
 			<button
 				type="button"

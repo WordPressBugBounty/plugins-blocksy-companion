@@ -1,6 +1,6 @@
 import { useEffect, useState } from '@wordpress/element'
 
-import { getStableJsonKey } from 'blocksy-options'
+import { getStableJsonKey } from 'ct-wordpress-helpers/get-stable-json-key'
 
 function getJsonFromUrl(url) {
 	if (!url) url = location.search

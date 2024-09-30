@@ -12,7 +12,6 @@ import DemoInstall from './dashboard/screens/DemoInstall'
 import SiteExport from './dashboard/screens/SiteExport'
 import DemoToInstall from './dashboard/screens/DemoInstall/DemoToInstall'
 
-import cachedFetch from './helpers/cached-fetch'
 import { getStarterSitesStatus } from './dashboard/helpers/starter-sites'
 
 getStarterSitesStatus()

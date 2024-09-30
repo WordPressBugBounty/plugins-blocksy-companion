@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-09-15 06:31:34+0000\n"
+"PO-Revision-Date: 2024-09-25 21:56:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3194,7 +3194,7 @@ msgstr "Nhãn chế độ sáng"
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:118,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/view.php:56
 msgid "Light Mode"
-msgstr "Chế độ sáng"
+msgstr "Chuyển chế độ sáng"
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:128
 msgid "Default Color Mode"
@@ -3340,7 +3340,7 @@ msgstr "Kết nối trước Google Fonts"
 
 #: framework/premium/features/performance-typography/feature.php:127
 msgid "Preconnect Adobe Typekit Fonts"
-msgstr "Kết n��i trước với phông chữ Adobe Typekit"
+msgstr "Kết nối trước với phông chữ Adobe Typekit"
 
 #: framework/features/header/items/account/config.php:4
 msgid "Account"
@@ -3542,7 +3542,7 @@ msgstr "Sau meta bài viết thứ hai"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:580
 msgid "Offcanvas Cart - Empty State"
-msgstr "Giỏ hàng Offcanvas - Trạng thái trống"
+msgstr "Giỏ hàng Offcanvas - Trạng thái tr���ng"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:705
 msgid "Before single product gallery"
@@ -6206,7 +6206,7 @@ msgstr "Bắt đầu hộp bật lên form quên mật khẩu"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:548
 msgid "Lost password form modal end"
-msgstr "Kết thúc hộp bật lên form quên mật kh���u"
+msgstr "Kết thúc hộp bật lên form quên mật khẩu"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:556
 msgid "Before main content"
@@ -7309,7 +7309,7 @@ msgstr "Trượt vào từ phải"
 #: framework/premium/features/content-blocks/options/popup.php:349,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:533
 msgid "Slide in from top"
-msgstr "Trượt vào từ tr��n"
+msgstr "Trượt vào từ trên"
 
 #: framework/premium/features/content-blocks/options/popup.php:350,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:534
@@ -7538,7 +7538,7 @@ msgstr "Lề ngoài"
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:106,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/view.php:47
 msgid "Dark Mode"
-msgstr "Chế độ tối"
+msgstr "Chuyển chế độ tối"
 
 #: framework/features/header/items/account/options.php:68,
 #: framework/features/header/items/account/options.php:1999,
@@ -9584,7 +9584,7 @@ msgstr "Nhược điểm"
 
 #: framework/extensions/trending/customizer.php:169
 msgid "Trending Posts"
-msgstr "Bài viết xu hướng"
+msgstr "Bài viết nổi bật"
 
 #: framework/extensions/trending/config.php:6
 msgid "Highlight your most popular posts or products based on the number of comments or reviews they have gotten in the specified period of time."
