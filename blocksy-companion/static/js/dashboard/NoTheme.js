@@ -2,6 +2,8 @@ import { createElement, render, useState } from '@wordpress/element'
 import * as check from '@wordpress/element'
 import { __ } from 'ct-i18n'
 
+import { wpUpdatesAjax } from '../helpers/wp-updates'
+
 const NoTheme = () => {
 	const [isLoading, setIsLoading] = useState(false)
 
@@ -44,7 +46,7 @@ const NoTheme = () => {
 						return
 					}
 
-					wp.updates.ajax('install-theme', {
+					wpUpdatesAjax('install-theme', {
 						success: (...a) => {
 							setTimeout(() => {
 								location = ctDashboardLocalizations.activate

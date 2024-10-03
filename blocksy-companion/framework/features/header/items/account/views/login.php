@@ -491,7 +491,11 @@ if ($loggedin_interaction_type === 'dropdown') {
 
 			$maybe_page_id = blocksy_get_theme_mod('woocommerce_wish_list_page');
 
-			if (!empty($maybe_page_id)) {
+			if (
+				! empty($maybe_page_id)
+				&&
+				blocksy_get_theme_mod('product_wishlist_display_for', 'logged_users') === 'all_users'
+			) {
 				$maybe_permalink = get_permalink($maybe_page_id);
 
 				if ($maybe_permalink) {
@@ -514,6 +518,40 @@ if ($loggedin_interaction_type === 'dropdown') {
 						'label',
 						$dropdown_row,
 						__('Wishlist', 'blocksy-companion')
+					)
+				)
+			];
+		}
+
+		if (
+			$dropdown_row['id'] === 'waitlist'
+			&&
+			function_exists('wc_get_endpoint_url')
+		) {
+			$url = wc_get_endpoint_url(
+				apply_filters(
+					'blocksy:pro:woocommerce-extra:waitlist-list:slug',
+					'woo-waitlist-list'
+				),
+				'',
+				get_permalink(get_option('woocommerce_myaccount_page_id'))
+			);
+
+			$dropdown_items_descriptors[] = [
+				'attr' => [
+					'class' => 'menu-item'
+				],
+
+				'link' => $url,
+				'link_attr' => [
+					'class' => 'ct-menu-link'
+				],
+
+				'html' => do_shortcode(
+					blocksy_default_akg(
+						'label',
+						$dropdown_row,
+						__('Waitlist', 'blocksy-companion')
 					)
 				)
 			];

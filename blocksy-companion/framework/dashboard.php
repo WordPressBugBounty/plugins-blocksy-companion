@@ -372,7 +372,6 @@ class Dashboard {
 					'wp-element',
 					'wp-date',
 					'wp-i18n',
-					'updates'
 				],
 				$data['Version'],
 				false
@@ -386,6 +385,7 @@ class Dashboard {
 					&&
 					! wp_get_theme($slug)->errors()
 				),
+				'updatesNonce' => wp_installing() ? '' : wp_create_nonce('updates'),
 				'activate'=> current_user_can('switch_themes') ? wp_nonce_url(admin_url('themes.php?action=activate&amp;stylesheet=' . $slug), 'switch-theme_' . $slug) : null
 			];
 
@@ -449,11 +449,18 @@ class Dashboard {
 					'react-dom',
 					'wp-element',
 					'wp-date',
-					'wp-i18n',
-					'updates'
+					'wp-i18n'
 				],
 				$data['Version'],
 				false
+			);
+
+			wp_localize_script(
+				'blocksy-admin-notifications-scripts',
+				'ctDashboardLocalizations',
+				[
+					'updatesNonce' => wp_installing() ? '' : wp_create_nonce('updates'),
+				]
 			);
 		}
 	}

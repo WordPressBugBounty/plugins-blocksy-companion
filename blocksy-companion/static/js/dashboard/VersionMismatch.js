@@ -3,6 +3,8 @@ import * as check from '@wordpress/element'
 import { __ } from 'ct-i18n'
 import cls from 'classnames'
 
+import { wpUpdatesAjax } from '../helpers/wp-updates'
+
 const VersionMismatch = ({ className = '' }) => {
 	const [isLoading, setIsLoading] = useState(false)
 
@@ -41,7 +43,7 @@ const VersionMismatch = ({ className = '' }) => {
 
 					setIsLoading(true)
 
-					wp.updates.ajax('update-theme', {
+					wpUpdatesAjax('update-theme', {
 						success: (...a) => {
 							setTimeout(() => {
 								location.reload()

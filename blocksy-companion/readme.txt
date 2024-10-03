@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.69
+Stable tag: 2.0.70
 
 == Description ==
 
@@ -52,6 +52,9 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.70: 2024-10-03
+- Improvement: Dont require updates script from Core when installing or updating theme from companion
+
 2.0.69: 2024-09-26
 - Improvement: General fixes and improvements
 

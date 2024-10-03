@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-09-25 21:56:32+0000\n"
+"PO-Revision-Date: 2024-09-30 07:00:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -639,7 +639,7 @@ msgstr "Ngày đăng"
 
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:64
 msgid "Terms"
-msgstr "Thuật ngữ"
+msgstr "Mục phân loại"
 
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:90
 #: static/js/editor/blocks/dynamic-data/preview-parts/WpFieldPreview.js:46
@@ -1320,7 +1320,7 @@ msgstr "Tìm kiếm qua các thuật ngữ"
 #: framework/features/blocks/search/options.php:209,
 #: framework/premium/features/premium-header/items/search-input/options.php:196
 msgid "Search through taxonomies from selected custom post types."
-msgstr "Tìm kiếm qua các thuật ngữ từ các loại bài viết tùy chỉnh đã chọn."
+msgstr "Tìm kiếm qua phân loại từ các loại nội dung tùy chỉnh đã chọn."
 
 #: framework/features/blocks/share-box/options.php:15
 msgid "Share Icons"
@@ -3340,7 +3340,7 @@ msgstr "Kết nối trước Google Fonts"
 
 #: framework/premium/features/performance-typography/feature.php:127
 msgid "Preconnect Adobe Typekit Fonts"
-msgstr "Kết nối trước với phông chữ Adobe Typekit"
+msgstr "K���t nối trước với phông chữ Adobe Typekit"
 
 #: framework/features/header/items/account/config.php:4
 msgid "Account"
@@ -3542,7 +3542,7 @@ msgstr "Sau meta bài viết thứ hai"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:580
 msgid "Offcanvas Cart - Empty State"
-msgstr "Giỏ hàng Offcanvas - Trạng thái tr���ng"
+msgstr "Giỏ hàng Offcanvas - Trạng thái trống"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:705
 msgid "Before single product gallery"
@@ -4064,7 +4064,7 @@ msgstr "Thẻ sản phẩm"
 
 #: framework/features/conditions/rules/cpt.php:53
 msgid "Custom Post Types"
-msgstr "Loại bài viết tùy chỉnh"
+msgstr "Loại nội dung tùy chỉnh"
 
 #: framework/features/conditions/rules/localization.php:15
 msgid "Current Language"
@@ -4582,7 +4582,7 @@ msgstr "Menu nâng cao"
 #: framework/helpers/exts-configs.php:136
 msgctxt "Extension Brand Name"
 msgid "Post Types Extra"
-msgstr "Loại bài bổ sung"
+msgstr "Loại nội dung bổ sung"
 
 #. translators: This is a brand name. Preferably to not be translated
 #: framework/helpers/exts-configs.php:179,
@@ -4758,7 +4758,7 @@ msgstr "Hiệu ứng"
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:73
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:68
 msgid "Offset"
-msgstr "Độ dịch chuyển"
+msgstr "Độ lệch"
 
 #: framework/premium/features/content-blocks/admin-ui.php:275
 msgid "All types"
@@ -6758,7 +6758,7 @@ msgstr "Ngẫu nhiên"
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:117
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:112
 msgid "Order by"
-msgstr "Đặt theo"
+msgstr "Sắp xếp theo"
 
 #: framework/features/blocks/dynamic-data/options.php:109,
 #: framework/features/blocks/dynamic-data/views/wp-field.php:196
@@ -7633,7 +7633,7 @@ msgstr "Tìm kiếm thông qua tiêu chí"
 #: framework/features/blocks/search/options.php:187,
 #: framework/premium/features/premium-header/items/search-input/options.php:176
 msgid "Chose in which post types do you want to perform searches."
-msgstr "Chọn loại bài viết mà bạn muốn thực hiện tìm kiếm."
+msgstr "Chọn loại nội dung mà bạn muốn thực hiện tìm kiếm."
 
 #: framework/premium/features/premium-header/items/search-input/options.php:396,
 #: framework/premium/features/premium-header/items/search-input/options.php:425,

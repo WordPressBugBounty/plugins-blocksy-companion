@@ -378,6 +378,14 @@ if (! $only_billing_data) {
 					'description' => __('Show a dynamic confirmation popup with product recommendations whenever items are added to the cart.', 'blocksy-companion'),
 					'documentation' => 'https://creativethemes.com/blocksy/docs/woocommerce/added-to-cart-pop-up/',
 					'customize' => admin_url('customize.php?ct_autofocus=woocommerce_general:has_added_to_cart_panel'),
+				],
+
+				[
+					'id' => 'product-waitlist',
+					'title' => __('Product Waitlist', 'blocksy-companion'),
+					'description' => __('Allow your customers to sign up for a waitlist for products that are out of stock and get notified when they are back in stock.', 'blocksy-companion'),
+					'documentation' => 'https://creativethemes.com/blocksy/docs/woocommerce/waitlist/',
+					'customize' => admin_url('customize.php?ct_autofocus=woocommerce_general:has_product_waitlist_panel'),
 				]
 			],
 		]

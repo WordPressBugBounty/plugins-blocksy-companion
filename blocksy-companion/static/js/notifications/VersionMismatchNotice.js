@@ -9,7 +9,7 @@ import {
 import { __, sprintf } from 'ct-i18n'
 import $ from 'jquery'
 
-import VersionMismatch from '../dashboard/VersionMismatch'
+import { wpUpdatesAjax } from '../helpers/wp-updates'
 
 const VersionMismatchNotice = ({ updatesUrl }) => {
 	const containerEl = useRef()
@@ -17,10 +17,7 @@ const VersionMismatchNotice = ({ updatesUrl }) => {
 	const [isLoading, setIsLoading] = useState(false)
 
 	return (
-		<div
-			className="ct-theme-required"
-			ref={containerEl}>
-
+		<div className="ct-theme-required" ref={containerEl}>
 			<h2>
 				<span>
 					<svg viewBox="0 0 24 24">
@@ -58,7 +55,7 @@ const VersionMismatchNotice = ({ updatesUrl }) => {
 
 					setIsLoading(true)
 
-					wp.updates.ajax('update-theme', {
+					wpUpdatesAjax('update-theme', {
 						success: (...a) => {
 							setTimeout(() => {
 								location.reload()
@@ -76,7 +73,6 @@ const VersionMismatchNotice = ({ updatesUrl }) => {
 					? __('Loading...', 'blocksy-companion')
 					: __('Update Blocksy Theme Now', 'blocksy-companion')}
 			</button>
-
 		</div>
 	)
 }
