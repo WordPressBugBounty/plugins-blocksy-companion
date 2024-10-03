@@ -1603,7 +1603,7 @@ msgstr "Количество товаров, которые клиент дол�
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:168
 msgid "You can use dynamic code tags such as {items} inside this option."
-msgstr "Можно использовать те��и динамического кода, такие как {items}, внутри этого параметра."
+msgstr "Можно использовать теги динамического кода, такие как {items}, внутри этого параметра."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:195,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/options.php:62
@@ -7509,7 +7509,7 @@ msgstr "Главный цвет"
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:83,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:84
 msgid "Icon Badge"
-msgstr "��одпись значка"
+msgstr "Подп��сь значка"
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:174,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:178,
