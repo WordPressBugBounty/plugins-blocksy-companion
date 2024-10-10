@@ -372,6 +372,7 @@ class Dashboard {
 					'wp-element',
 					'wp-date',
 					'wp-i18n',
+					'wp-util'
 				],
 				$data['Version'],
 				false

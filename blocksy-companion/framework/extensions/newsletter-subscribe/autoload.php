@@ -11,5 +11,6 @@ $autoload = [
 	'ConvertKitProvider' => 'providers/convertkit.php',
 	'DemoProvider' => 'providers/demo.php',
 	'MailPoetProvider' => 'providers/mailpoet.php',
+	'ActiveCampaignProvider' => 'providers/active-campaign.php',
 ];
 

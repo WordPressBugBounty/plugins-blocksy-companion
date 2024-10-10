@@ -18,6 +18,7 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 	const [provider, setProvider] = useState(extension.data.provider)
 
 	const [apiKey, setApiKey] = useState(extension.data.api_key)
+	const [apiUrl, setApiUrl] = useState(extension.data.api_url)
 	const [listId, setListId] = useState(extension.data.list_id)
 	const [isLoading, setIsLoading] = useState(false)
 
@@ -40,6 +41,7 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 
 		body.append('provider', provider)
 		body.append('api_key', apiKey)
+		body.append('api_url', apiUrl)
 		body.append('list_id', listId)
 
 		body.append(
@@ -83,7 +85,8 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 			<div
 				className="ct-newsletter-credentials"
 				data-columns={
-					provider.indexOf('mailerlite') > -1
+					provider.indexOf('mailerlite') > -1 ||
+					provider === 'activecampaign'
 						? 4
 						: provider.indexOf('mailpoet') > -1
 						? 2
@@ -118,6 +121,22 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 						}
 					/>
 				</section>
+
+				{provider.indexOf('activecampaign') > -1 && (
+					<section>
+						<label>{__('API URL', 'blocksy-companion')}</label>
+
+						<div className="ct-option-input">
+							<input
+								type="text"
+								onChange={({ target: { value } }) =>
+									setApiUrl(value)
+								}
+								value={apiUrl || ''}
+							/>
+						</div>
+					</section>
+				)}
 
 				{provider.indexOf('mailerlite') > -1 && (
 					<section>
@@ -183,6 +202,7 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 								listId={listId}
 								onChange={(id) => setListId(id)}
 								provider={provider}
+								apiUrl={apiUrl}
 								apiKey={apiKey}
 							/>
 						</section>
@@ -276,6 +296,24 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 				)}
 
 			{ctDashboardLocalizations.plugin_data.is_pro &&
+				provider === 'activecampaign' && (
+					<span
+						className="ct-option-description"
+						dangerouslySetInnerHTML={{
+							__html: sprintf(
+								__(
+									'More information on how to generate an API key for ActiveCampaign can be found %shere%s.',
+									'blocksy-companion'
+								),
+
+								'<a target="_blank" href="https://developers.activecampaign.com/reference/overview">',
+								'</a>'
+							),
+						}}
+					/>
+				)}
+
+			{ctDashboardLocalizations.plugin_data.is_pro &&
 				provider === 'campaignmonitor' && (
 					<span
 						className="ct-option-description"
@@ -299,7 +337,10 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 						className="ct-option-description"
 						dangerouslySetInnerHTML={{
 							__html: sprintf(
-								__('More information on how to create a list in MailPoet can be found %shere%s.', 'blocksy-companion'),
+								__(
+									'More information on how to create a list in MailPoet can be found %shere%s.',
+									'blocksy-companion'
+								),
 
 								'<a target="_blank" href="https://kb.mailpoet.com/article/282-create-a-list">',
 								'</a>'
@@ -311,7 +352,10 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 			<button
 				className="ct-button-primary"
 				disabled={
-					(!apiKey && provider !== 'mailpoet') || !listId || isLoading
+					(!apiKey && provider !== 'mailpoet') ||
+					!listId ||
+					isLoading ||
+					(!apiUrl && provider === 'activecampaign')
 				}
 				onClick={() => attemptToSaveCredentials()}>
 				{isLoading

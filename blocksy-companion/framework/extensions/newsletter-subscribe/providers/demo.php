@@ -6,7 +6,7 @@ class DemoProvider extends Provider {
 	public function __construct() {
 	}
 
-	public function fetch_lists($api_key) {
+	public function fetch_lists($api_key, $api_url = '') {
 		if (! $api_key) {
 			return 'api_key_invalid';
 		}

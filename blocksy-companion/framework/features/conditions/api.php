@@ -83,6 +83,7 @@ class ConditionsManagerAPI {
 				'archive',
 				'singular',
 				'product_tabs',
+				'product_waitlist',
 				'maintenance-mode',
 				'content_block_hook'
 			];

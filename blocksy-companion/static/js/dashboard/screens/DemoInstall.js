@@ -91,7 +91,18 @@ const DemoInstall = ({ children, path, location }) => {
 	}
 
 	useEffect(() => {
-		syncDemos(!demos_cache)
+		if (ctDashboardLocalizations.plugin_data.demo_install_error) {
+			setIsLoading(false)
+
+			setDemoError({
+				isError: true,
+				message:
+					ctDashboardLocalizations.plugin_data.demo_install_error,
+				reason: 'generic',
+			})
+		} else {
+			syncDemos(!demos_cache)
+		}
 	}, [])
 
 	if (forceEmptyDemos) {

@@ -137,12 +137,21 @@ class ConditionsManager {
 			$args['filter'] = 'all';
 		}
 
-		$sections[] = 'user-auth';
 		$sections[] = 'date-time';
 		$sections[] = 'requests';
 		$sections[] = 'localization';
 		$sections[] = 'bbPress';
 		$sections[] = 'custom';
+
+		if ($args['filter'] === 'product_waitlist') {
+			$sections = [
+				'basic',
+				'woo',
+				'requests',
+				'localization',
+				'custom'
+			];
+		}
 
 		if ($args['filter'] === 'archive' || $args['filter'] === 'singular') {
 			$sections = [

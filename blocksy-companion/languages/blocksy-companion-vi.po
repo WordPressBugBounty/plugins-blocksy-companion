@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-09-30 07:00:38+0000\n"
+"PO-Revision-Date: 2024-10-08 00:03:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,435 @@ msgstr ""
 "X-Generator: GlotPress/4.0.1\n"
 "Language: vi_VN\n"
 "Project-Id-Version: Blocksy Companion Pro\n"
+
+#: static/js/dashboard/helpers/useUpsellModal.js:88
+msgid "Business or Agency"
+msgstr ""
+
+#: static/js/options/ConditionsManager/SingleCondition.js:482
+msgid "Select value"
+msgstr ""
+
+#: framework/helpers/exts-configs.php:385
+msgid "Product Waitlist"
+msgstr ""
+
+#: framework/helpers/exts-configs.php:386
+msgid "Allow your customers to sign up for a waitlist for products that are out of stock and get notified when they are back in stock."
+msgstr ""
+
+#: framework/features/blocks/share-box/options.php:103
+msgid "Clipboard"
+msgstr ""
+
+#: framework/premium/extensions/shortcuts/customizer.php:609,
+#: framework/premium/extensions/shortcuts/customizer.php:635,
+#: framework/premium/extensions/shortcuts/views/bar.php:53,
+#: framework/features/header/items/account/views/login.php:554,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:4,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:189,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:193,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-account.php:67
+msgid "Waitlist"
+msgstr ""
+
+#: framework/premium/extensions/shortcuts/customizer.php:895
+msgid "Tooltip Visibility"
+msgstr ""
+
+#: framework/premium/extensions/shortcuts/customizer.php:1351
+msgid "Container Backdrop Blur"
+msgstr ""
+
+#: framework/premium/features/content-blocks/hooks-manager.php:957
+msgid "Added to Cart: Before product"
+msgstr ""
+
+#: framework/premium/features/content-blocks/hooks-manager.php:961
+msgid "Added to Cart: Before actions"
+msgstr ""
+
+#: framework/premium/features/content-blocks/hooks-manager.php:965
+msgid "Added to Cart: Before suggested products"
+msgstr ""
+
+#: framework/premium/features/content-blocks/hooks-manager.php:969
+msgid "Added to Cart: After suggested products"
+msgstr ""
+
+#: framework/premium/features/content-blocks/hooks-manager.php:971
+msgid "WooCommerce: Added to Cart"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:294
+msgid "Upsell Products"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:295
+msgid "Cross-sell Products"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:506
+msgid "Auto Close Panel"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:507
+msgid "Automatically close the panel when a filter option is selected."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:15
+msgid "Form Type"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:29
+msgid "Form Max Width"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:41
+msgid "Enable For Backorders"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:42
+msgid "Allow users to join the waitlist even if the product is on backorder."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:55
+msgid "Show Users Count"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:56
+msgid "Display a counter that reflects the current number of users on the waitlist."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:69
+msgid "Logged In Users Only"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
+msgid "Display the waitlist feature exclusively to users who are logged in."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
+msgid "Subscription Confirmation"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:84
+msgid "Specify which users should verify their waitlist subscription through email confirmation."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:107
+msgid "Waitlist Form Display Conditions"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:108
+msgid "Choose where you want this Waitlist Form to be displayed."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:160
+msgid "Message Font"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:168
+msgid "Message Color"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:225
+msgid "Container Padding"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/table.php:40,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:46
+msgid "Actions"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:96,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:200,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:221,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:282
+msgid "Invalid request"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:106
+msgid "No waitlist found"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:127,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:128,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:162
+msgid "Waitlists"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:153
+msgid "Number of items per page"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:171
+msgid "Waitlist for %s"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:213
+msgid "Invalid email"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:229
+msgid "You are already on the waitlist"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:267
+msgid "You have been added to the waitlist"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:291
+msgid "You have been removed from the waitlist"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:33
+msgid "%s %s joined the waitlist for this item."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:243
+msgid "Waitlist Form"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:78
+msgid "Your waitlist subscription has been successfully canceled."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:117
+msgid "Your waitlist subscription has been successfully confirmed."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
+msgid "Search Products"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:14
+msgid "Export Subscribers"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:63
+msgid "Guest"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:75
+msgid "Edit this customer"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:76
+msgid "Edit"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:115,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:182
+msgid "Delete"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:123
+msgid "View"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:153
+msgid "%s ago"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:169
+msgid "Is registered"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:170
+msgid "Date created"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:8
+msgid "Waitlist - Back in Stock Notification"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:9
+msgid "This email is sent when a product is back in stock"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:10
+msgid "A product you are waiting for is back in stock"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
+msgid "Good news! The product you have been waiting for is now back in stock!"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
+msgid "Waitlist - Confirm Subscription"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:9
+msgid "This email is sent when a user subscribes to a product stock alert and should confirm their subscription"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:10
+msgid "Confirm waitlist subscription"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:11
+msgid "Get notified when {product_title} is back in stock"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:8
+msgid "Waitlist - Subscription Confirmed"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:9
+msgid "This email is sent after a user confirmed the subscription to a product stock alert"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:10
+msgid "Waitlist subscription confirmed"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
+msgid "You will be notified when {product_title} is back in stock"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:35,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:139
+msgid "Customer"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:27
+msgid "Enter your email"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:40
+msgid "Join Waitlist"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:53
+msgid "This product is currently sold out!"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:61
+msgid "No worries! Please enter your e-mail address and we will promptly notify you as soon as the item is back in stock."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:69
+msgid "Great! You have been added to the waitlist for this product. Please check your inbox and confirm the subscription to this waitlist."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:97
+msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:151,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:86
+msgid "Unsubscribe"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:65
+msgid "Yes"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:65
+msgid "No"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:21
+msgid "You don't have any products in your waitlist yet."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:42
+msgid "Confirmed"
+msgstr ""
+
+#. translators: %s User name.
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:19,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:17,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:17,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:12,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:10,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:10
+msgid "Hi, %s!"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:31,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:19
+msgid "Great news! The %s from your waitlist is now back in stock!"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:42,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:24
+msgid "Click the link below to secure your purchase before it is gone!"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:26,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:15
+msgid "You have requested to join the waitlist for this item:"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:62
+msgid "Click the button below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:66
+msgid "Confirm Subscription"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:70,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:26
+msgid "Please note, the confirmation period is 2 days."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:77,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:65
+msgid "If you don't want to receive any further notifications, please %s"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:78,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:66
+msgid "unsubscribe"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:26,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
+msgid "You have been successfully added to the waitlist for the following item:"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:28,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
+msgid "Product:"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:18
+msgid "Price:"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:30
+msgid "Add to cart:"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:19
+msgid "Product link:"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:23
+msgid "Click the link below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:32,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:25
+msgid "If you don't want to receive any further notifications, please unsubscribe by clicking on this link - %s"
+msgstr ""
+
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:127
+msgid "API URL"
+msgstr ""
+
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:304
+msgid "More information on how to generate an API key for ActiveCampaign can be found %shere%s."
+msgstr ""
+
+#: static/js/dashboard/helpers/useUpsellModal.js:18
+#: static/js/dashboard/screens/DemoInstall/SingleDemo.js:111
+msgid "Business"
+msgstr ""
 
 #: framework/helpers/exts-configs.php:377,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:4
@@ -61,7 +490,7 @@ msgid "Suggested Products"
 msgstr "Sản phẩm gợi ý"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:292,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/suggested-products.php:41
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/suggested-products.php:51
 msgid "Related Products"
 msgstr "Sản phẩm liên quan"
 
@@ -69,25 +498,26 @@ msgstr "Sản phẩm liên quan"
 msgid "Recently Viewed Products"
 msgstr "Sản phẩm đã xem gần đây"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:366
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:368
 msgid "Products Card Type"
 msgstr "Loại thẻ sản phẩm"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:380
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:382
 msgid "Products Visibility"
 msgstr "Hiển thị sản phẩm"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:514
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:516
 msgid "Popup Options"
 msgstr "Tùy chọn Popup"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:713,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:736,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:752,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:315,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:96
 msgid "Popup Backdrop"
 msgstr "Phông nền Popup"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:732
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:768
 msgid "Close Icon Size"
 msgstr "Kích thước biểu tượng đóng"
 
@@ -121,23 +551,23 @@ msgstr "Số tiền thuế"
 msgid "Cart Total"
 msgstr "Tổng giỏ hàng"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:22
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:24
 msgid "View Cart"
 msgstr "Xem giỏ hàng"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:32
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:34
 msgid "Checkout"
 msgstr "Thanh toán"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:42
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:44
 msgid "Continue Shopping"
 msgstr "Tiếp tục mua sắm"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/suggested-products.php:43
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/suggested-products.php:53
 msgid "Recently Viewed"
 msgstr "Đã xem gần đây"
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:302
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:340
 msgid "More information on how to create a list in MailPoet can be found %shere%s."
 msgstr "Thông tin thêm về cách tạo danh sách trong MailPoet có thể được tìm thấy %stại đây%s."
 
@@ -165,6 +595,7 @@ msgstr "Màu 1"
 msgid "Color 2"
 msgstr "Màu 2"
 
+#: framework/features/blocks/share-box/options.php:110,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:88
 msgid "Tooltip"
 msgstr "Chú thích"
@@ -202,11 +633,11 @@ msgstr "Ẩn ngôn ngữ bị thiếu"
 msgid "Please wait until the lookup table is generated."
 msgstr "Vui lòng đợi cho đến khi bảng tra cứu được tạo."
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:465
+#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:472
 msgid "Collapse"
 msgstr "Thu gọn"
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:466
+#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:473
 msgid "Expand"
 msgstr "Mở rộng"
 
@@ -276,11 +707,11 @@ msgstr "Màu viền của vùng chứa"
 msgid "Container Background Color"
 msgstr "Màu nền của vùng chứa"
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:124
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:143
 msgid "API Version"
 msgstr "Phiên bản API"
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:248
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:268
 msgid "More information on how to generate an API key for Brevo can be found %shere%s."
 msgstr "Thông tin thêm về cách tạo khóa API cho Brevo có thể được tìm thấy %stại đây%s."
 
@@ -357,16 +788,16 @@ msgstr "Chiều cao tối đa của vùng chứa"
 msgid "Exclude Speciffic Items"
 msgstr "Loại trừ các mục cụ thể"
 
-#: static/js/dashboard/VersionMismatch.js:60
-#: static/js/notifications/VersionMismatchNotice.js:77
+#: static/js/dashboard/VersionMismatch.js:62
+#: static/js/notifications/VersionMismatchNotice.js:74
 msgid "Update Blocksy Theme Now"
 msgstr "Cập nhật chủ đề Blocksy ngay bây giờ"
 
-#: static/js/dashboard/screens/DemoInstall.js:205
+#: static/js/dashboard/screens/DemoInstall.js:183
 msgid "Your site is misconfigured and AJAX requests are not reaching your backend. Please click %shere%s to find the common causes and possible solutions to this.<br> Error code - %s"
 msgstr "Trang web của bạn đã được cấu hình sai và các yêu cầu AJAX không đến được backend của bạn. Vui lòng nhấn %svào đây%s để tìm hiểu nguyên nhân phổ biến và các giải pháp có thể cho điều này.<br> Mã lỗi - %s"
 
-#: static/js/dashboard/screens/DemoInstall.js:223
+#: static/js/dashboard/screens/DemoInstall.js:201
 msgid "Failed to retrieve starter sites list.<br> Error code - %s"
 msgstr "Không thể lấy danh sách các mẫu web bắt đầu.<br> Mã lỗi - %s"
 
@@ -602,51 +1033,52 @@ msgstr "Khoảng"
 msgid "Div"
 msgstr "Div"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:100
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:101
 msgid "Archive Image"
 msgstr "Hình ảnh lưu trữ"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:135
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:38
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:136
 msgid "Stock Status"
 msgstr "Trạng thái hàng tồn kho"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:23
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:24
 #: static/js/editor/blocks/dynamic-data/preview-parts/wp/TermTextPreview.js:8
 msgid "Term Title"
 msgstr "Tiêu đề thuật ngữ"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:27
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:28
 #: static/js/editor/blocks/dynamic-data/preview-parts/wp/TermTextPreview.js:9
 msgid "Term Description"
 msgstr "Mô tả thuật ngữ"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:31
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:32
 msgid "Term Image"
 msgstr "Hình ảnh thuật ngữ"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:35
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:36
 #: static/js/editor/blocks/dynamic-data/preview-parts/wp/TermTextPreview.js:10
 msgid "Term Count"
 msgstr "Số lượng thuật ngữ"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:49
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:50
 msgid "Excerpt"
 msgstr "Tóm tắt"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:54
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:55
 msgid "Post Date"
 msgstr "Ngày đăng"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:64
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:65
 msgid "Terms"
 msgstr "Mục phân loại"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:90
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:91
 #: static/js/editor/blocks/dynamic-data/preview-parts/WpFieldPreview.js:46
 msgid "Archive Title"
 msgstr "Tiêu đề lưu trữ"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:95
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:96
 #: static/js/editor/blocks/dynamic-data/preview-parts/WpFieldPreview.js:50
 msgid "Archive Description"
 msgstr "Mô tả lưu trữ"
@@ -972,7 +1404,7 @@ msgstr "Đặt lại tất cả"
 msgid "The expiration date cannot be set earlier than the start date."
 msgstr "Ngày hết hạn không thể được đặt sớm hơn ngày bắt đầu."
 
-#: framework/features/demo-install.php:115,
+#: framework/features/demo-install.php:155,
 #: framework/features/demo-install/content-installer.php:164,
 #: framework/features/demo-install/content-installer.php:159,
 #: framework/features/demo-install/demo-register.php:9
@@ -980,8 +1412,8 @@ msgid "No demo name provided."
 msgstr "Không có tên demo được cung cấp."
 
 #: framework/helpers/exts-configs.php:369,
-#: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:241,
-#: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:264,
+#: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:248,
+#: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:271,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/options.php:4
 msgid "Stock Scarcity"
 msgstr "Khan hiếm hàng tồn kho"
@@ -991,20 +1423,20 @@ msgid "Show the remaining stock of a product to create a sense of urgency and en
 msgstr "Hiển thị số lượng hàng tồn kho còn lại của một sản phẩm để tạo cảm giác gấp rút và khuyến khích khách truy cập của bạn thực hiện mua hàng."
 
 #: framework/views/theme-mismatch.php:36
-#: static/js/dashboard/VersionMismatch.js:17
-#: static/js/notifications/VersionMismatchNotice.js:30
+#: static/js/dashboard/VersionMismatch.js:19
+#: static/js/notifications/VersionMismatchNotice.js:27
 msgid "Action required - please update Blocksy theme to the latest version!"
 msgstr "Yêu cầu hành động - vui lòng cập nhật chủ đề Blocksy lên phiên bản mới nhất!"
 
 #: framework/views/theme-mismatch.php:41
-#: static/js/dashboard/VersionMismatch.js:23
-#: static/js/notifications/VersionMismatchNotice.js:38
+#: static/js/dashboard/VersionMismatch.js:25
+#: static/js/notifications/VersionMismatchNotice.js:35
 msgid "We detected that you are using an outdated version of Blocksy theme."
 msgstr "Chúng tôi phát hiện ra rằng bạn đang sử dụng phiên bản lỗi thời của chủ đề Blocksy."
 
 #: framework/views/theme-mismatch.php:45
-#: static/js/dashboard/VersionMismatch.js:30
-#: static/js/notifications/VersionMismatchNotice.js:47
+#: static/js/dashboard/VersionMismatch.js:32
+#: static/js/notifications/VersionMismatchNotice.js:44
 msgid "In order to take full advantage of all features the core has to offer - please install and activate the latest version of Blocksy theme."
 msgstr "Để tận dụng tối đa tất cả các tính năng mà lõi phải cung cấp - vui lòng cài đặt và kích hoạt phiên bản mới nhất của chủ đề Blocksy."
 
@@ -1082,8 +1514,8 @@ msgstr "Màu phông chữ phân loại"
 
 #: framework/extensions/trending/customizer.php:860,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:248,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:474,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:492
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:476,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:494
 msgid "Image Border Radius"
 msgstr "Bán kính viền hình ảnh"
 
@@ -1167,7 +1599,7 @@ msgstr "Khoảng cách trường"
 
 #: framework/features/blocks/about-me/options.php:21
 msgid "User Source"
-msgstr "Nguồn người dùng"
+msgstr "Nguồn ngư��i dùng"
 
 #: framework/features/blocks/about-me/options.php:26
 msgid "Dynamic"
@@ -1191,7 +1623,7 @@ msgid "Social Channels"
 msgstr "Kênh xã hội"
 
 #: framework/features/blocks/about-me/options.php:195,
-#: framework/features/blocks/share-box/options.php:137,
+#: framework/features/blocks/share-box/options.php:149,
 #: framework/features/blocks/socials/options.php:101
 msgid "Official"
 msgstr "Chính thức"
@@ -1486,15 +1918,15 @@ msgid "Set the close delay time (in seconds) after the form submit action is det
 msgstr "Đặt thời gian độ trễ đóng (theo giây) sau khi hành động gửi biểu mẫu được phát hiện."
 
 #: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:100,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:753
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:813
 msgid "Featured Icon/Logo"
 msgstr "Biểu tượng/Logo nổi bật"
 
-#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:563
+#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:570
 msgid "Upvote"
 msgstr "Bình chọn lên"
 
-#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:577
+#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:584
 msgid "Downvote"
 msgstr "Bình chọn xuống"
 
@@ -1547,20 +1979,20 @@ msgstr "Đã mở"
 msgid "Panel AJAX Reveal"
 msgstr "Bảng điều khiển hiển thị AJAX"
 
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:137
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:140
 msgid "Autoplay Gallery"
 msgstr "Tự động phát thư viện"
 
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:149
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:152
 msgid "Delay (in seconds)"
 msgstr "Trễ (theo giây)"
 
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:216
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:219
 msgid "Columns Spacing"
 msgstr "Khoảng cách cột"
 
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:244,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:272
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:247,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:275
 msgid "Arrows Visibility"
 msgstr "Hiển thị mũi tên"
 
@@ -1584,8 +2016,11 @@ msgstr "Tiêu chí đếm"
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:69,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:59,
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/active-filters.php:246,
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/price-filter.php:280
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:127
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/price-filter.php:299,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:53,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:34,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:34
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:128
 msgid "Price"
 msgstr "Giá"
 
@@ -1610,7 +2045,7 @@ msgstr "Bạn có thể sử dụng các thẻ mã động như {items} bên tro
 msgid "Bar Color"
 msgstr "Màu thanh"
 
-#: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:180,
+#: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:187,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/options.php:29
 msgid "🚨 Hurry up! Only {items} units left in stock!"
 msgstr "🚨 Nhanh lên! Chỉ còn {items} đơn vị trong kho!"
@@ -1631,38 +2066,38 @@ msgstr "Tin nhắn"
 msgid "Bar Height"
 msgstr "Chiều cao thanh"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:666
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:686
 msgid "Swatches removed"
 msgstr "Đã xóa mẫu màu"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:673
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:693
 msgid "Swatches saved"
 msgstr "Đã lưu mẫu màu"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:735
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:755
 msgid "Custom Attributes"
 msgstr "Thuộc tính tùy chỉnh"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:741,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:780,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:853
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:761,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:800,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:873
 msgid "Terms Limit"
 msgstr "Giới hạn điều khoản"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:744,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:783
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:764,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:803
 msgid "Set how many terms you want to display in this attribute."
 msgstr "Đặt số lượng điều khoản bạn muốn hiển thị trong thuộc tính này."
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:754,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:793,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:867
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:774,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:813,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:887
 #: static/js/editor/blocks/query/Edit.js:178
 #: static/js/editor/blocks/tax-query/Edit.js:165
 msgid "Limit"
 msgstr "Giới hạn"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:856
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:876
 msgid "Set how many terms you want to display in each attribute."
 msgstr "Đặt số lượng điều khoản bạn muốn hiển thị trong mỗi thuộc tính."
 
@@ -1679,7 +2114,7 @@ msgstr "Tạo URL biến thể"
 msgid "Generate a shareable single product page URL with pre-selected variation attributes."
 msgstr "Tạo URL trang sản phẩm đơn có thể chia sẻ với các thuộc tính biến thể được chọn trước."
 
-#: static/js/options/ConditionsManager/SingleCondition.js:440
+#: static/js/options/ConditionsManager/SingleCondition.js:446
 msgid "Display if query string is present in URL"
 msgstr "Hiển thị nếu chuỗi truy vấn có trong URL"
 
@@ -1787,25 +2222,21 @@ msgstr "Chỉ cuối tuần"
 msgid "Only weekdays"
 msgstr "Chỉ các ngày trong tuần"
 
-#: static/js/options/ConditionsManager/SingleCondition.js:319
+#: static/js/options/ConditionsManager/SingleCondition.js:325
 msgid "Select sub field"
 msgstr "Chọn trường phụ"
 
-#: static/js/options/ConditionsManager/SingleCondition.js:372
+#: static/js/options/ConditionsManager/SingleCondition.js:378
 msgid "Display based on referer domain"
 msgstr "Hiển thị dựa trên tên miền tham chiếu"
 
-#: static/js/options/ConditionsManager/SingleCondition.js:406
+#: static/js/options/ConditionsManager/SingleCondition.js:412
 msgid "Display if cookie is present"
 msgstr "Hiển thị nếu có cookie"
 
 #: static/js/dashboard/helpers/useUpsellModal.js:42
 msgid "Upgrade to the agency plan and get instant access to this and many other features."
 msgstr "Nâng cấp lên gói đại lý và có quyền truy cập ngay vào tính năng này cũng như nhiều tính năng khác."
-
-#: static/js/dashboard/helpers/useUpsellModal.js:88
-msgid "Professional or Agency"
-msgstr "Gói chuyên nghiệp hoặc đại lý"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:53
 msgid "This is a Pro starter site"
@@ -1816,8 +2247,8 @@ msgid "Upgrade to any pro plan and get instant access to this starter site and m
 msgstr "Nâng cấp lên bất kỳ gói pro nào và có quyền truy cập ngay vào mẫu web bắt đầu này cũng như nhiều tính năng khác."
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:61
-msgid "Upgrade to the professional or agency plan and get instant access to this starter site and many other features."
-msgstr "Nâng cấp lên gói chuyên nghiệp hoặc đại lý và có quyền truy cập ngay vào mẫu web bắt đầu này cùng nhiều tính năng khác."
+msgid "Upgrade to the business or agency plan and get instant access to this starter site and many other features."
+msgstr ""
 
 #: static/js/dashboard/helpers/useProExtensionInFree.js:14
 msgid "This is a Pro extension"
@@ -1842,11 +2273,6 @@ msgstr "So sánh các kế hoạch"
 msgid "Personal"
 msgstr "Cá nhân"
 
-#: static/js/dashboard/helpers/useUpsellModal.js:18
-#: static/js/dashboard/screens/DemoInstall/SingleDemo.js:111
-msgid "Professional"
-msgstr "Chuyên nghiệp"
-
 #: static/js/dashboard/helpers/useUpsellModal.js:27
 msgid "This is a Pro feature"
 msgstr "Đây là một tính năng Pro"
@@ -1856,22 +2282,22 @@ msgid "Upgrade to any pro plan and get instant access to this and many other fea
 msgstr "Nâng cấp lên bất kỳ gói Pro nào và có quyền truy cập ngay vào tính năng này cũng như nhiều tính năng khác."
 
 #: static/js/dashboard/helpers/useUpsellModal.js:35
-msgid "Upgrade to the professional or agency plan and get instant access to this and many other features."
-msgstr "Nâng cấp lên gói chuyên nghiệp hoặc đại lý và có quyền truy cập ngay vào tính năng này cũng như nhiều tính năng khác."
+msgid "Upgrade to the business or agency plan and get instant access to this and many other features."
+msgstr ""
 
-#: static/js/dashboard/NoTheme.js:29
+#: static/js/dashboard/NoTheme.js:31
 msgid "In order to take full advantage of all features it has to offer - please install and activate the Blocksy theme also."
 msgstr "Để tận dụng tối đa tất cả các tính năng mà nó cung cấp - vui lòng cài đặt và kích hoạt giao diện Blocksy và Plugin Blocksy Companion."
 
-#: static/js/dashboard/NoTheme.js:63
+#: static/js/dashboard/NoTheme.js:65
 msgid "Install and activate the Blocksy theme"
 msgstr "Cài đặt và kích hoạt Giao diện Blocksy"
 
-#: static/js/dashboard/NoTheme.js:16
+#: static/js/dashboard/NoTheme.js:18
 msgid "Action Required - Install Blocksy Theme"
 msgstr "Yêu cầu hành động - Cài đặt giao diện Blocksy"
 
-#: static/js/dashboard/NoTheme.js:22
+#: static/js/dashboard/NoTheme.js:24
 msgid "Blocksy Companion is the complementary plugin to Blocksy theme. It adds a bunch of great features to the theme and acts as an unlocker for the Blocksy Pro package."
 msgstr "Blocksy Companion là plugin bổ sung cho chủ đề Blocksy. Nó thêm một loạt các tính năng tuyệt vời vào chủ đề và hoạt động như một bộ mở khóa cho gói Blocksy Pro."
 
@@ -2133,19 +2559,19 @@ msgstr "Tải trước"
 msgid "Available Fonts"
 msgstr "Phông chữ khả dụng"
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:284
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:322
 msgid "More information on how to generate an API key for Campaign Monitor can be found %shere%s."
 msgstr "Bạn có thể tìm thêm thông tin về cách tạo API key cho Giám sát chiến dịch %stại đây%s."
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:81
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:83
 msgid "Connect Newsletter Provider"
 msgstr "Kết nối nhà cung cấp bản tin"
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:93
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:96
 msgid "Provider"
 msgstr "Các nhà cung cấp"
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/ListPicker.js:90
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/ListPicker.js:91
 msgid "Fetching..."
 msgstr "Đang tìm nạp..."
 
@@ -2153,7 +2579,7 @@ msgstr "Đang tìm nạp..."
 msgid "Please enter a valid Project ID to get all fonts."
 msgstr "Vui lòng nhập ID Dự Án hợp lệ để nhận tất cả các font."
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:234
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:254
 msgid "This provider is used only for testing purposes. It doesnt register any real subscribers."
 msgstr "Nhà cung cấp này chỉ được sử dụng cho mục đích thử nghiệm. Nó không đăng ký bất kỳ người đăng ký thực sự nào."
 
@@ -2229,13 +2655,13 @@ msgid "Reset Filters"
 msgstr "Đặt lại các bộ lọc"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/filter-presenter.php:149,
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/price-filter.php:186
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/price-filter.php:188
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/Preview.js:59
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Preview.js:183
 msgid "Reset Filter"
 msgstr "Đặt lại bộ lọc"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:708,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:728,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:24,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:46,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:142
@@ -2246,25 +2672,26 @@ msgstr "Màu sắc"
 msgid "Short Name"
 msgstr "Tên ngắn"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:234
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:245
 msgid "Sorry, this product is unavailable. Please choose a different combination."
 msgstr "Xin lỗi, sản phẩm này không có sẵn. Vui lòng chọn một sự kết hợp khác."
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:26,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:235,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:246,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:481,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/includes/swatch-element-render.php:47
+#: framework/premium/extensions/woocommerce-extra/features/swatches/includes/swatch-element-render.php:47,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:57
 #: static/js/editor/blocks/dynamic-data/preview-parts/woo/StockPreview.js:7
 msgid "Out of Stock"
 msgstr "Hết hàng"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:520
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:540
 msgid "Display Variations Inline"
 msgstr "Hiển thị biến thể nội tuyến"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:616,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:716,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:813
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:636,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:736,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:833
 msgid "Swatches"
 msgstr "Mẫu"
 
@@ -2318,7 +2745,7 @@ msgstr "Mẫu hình ảnh"
 msgid "Button Swatches"
 msgstr "Mẫu nút"
 
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:349
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:395
 msgid "Wishlist Button"
 msgstr "Nút Yêu thích"
 
@@ -2331,9 +2758,10 @@ msgid "This option will allow you to add a speciffic product variation to wishli
 msgstr "Tùy chọn này sẽ cho phép bạn thêm một biến thể sản phẩm cụ thể vào danh sách yêu thích."
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:601,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/views/table-no-results.php:3
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/views/table-no-results.php:3,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:19
 msgid "Browse products"
-msgstr "Duyệt sản phẩm"
+msgstr "Duyệt sản ph���m"
 
 #: framework/features/blocks/contact-info/options.php:533,
 #: framework/premium/features/premium-header/items/contacts/options.php:417
@@ -2397,11 +2825,11 @@ msgstr "Điều kiện hiển thị hướng dẫn kích thước"
 msgid "Choose where you want this size guide to be displayed."
 msgstr "Chọn nơi bạn muốn hiển thị hướng dẫn kích thước này."
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:232
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:243
 msgid "Sorry, no products matched your selection. Please choose a different combination."
 msgstr "Rất tiếc, không có sản phẩm nào phù hợp với lựa chọn của bạn. Vui lòng chọn một sự kết hợp khác."
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:233
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:244
 msgid "Please select some product options before adding this product to your cart."
 msgstr "Vui lòng chọn một số tùy chọn sản phẩm trước khi thêm sản phẩm này vào giỏ hàng của bạn."
 
@@ -2452,12 +2880,12 @@ msgstr "Bảng điều khiển bên"
 msgid "Reveal From"
 msgstr "Tiết lộ từ"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:301,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:303,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:30
 msgid "Columns & Products"
 msgstr "Cột & Sản phẩm"
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:328,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:330,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:57
 msgid "Number of products"
 msgstr "Số sản phẩm"
@@ -2518,12 +2946,12 @@ msgstr "Giỏ hàng"
 msgid "Close cart drawer"
 msgstr "Đóng ngăn kéo giỏ hàng"
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/feature.php:142,
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:510
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/feature.php:152,
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:525
 msgid "WooCommerce Filters Canvas"
 msgstr "Bộ lọc Canvas WooCommerce"
 
-#: framework/premium/extensions/shortcuts/customizer.php:456,
+#: framework/premium/extensions/shortcuts/customizer.php:477,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:4
 msgid "Filters Canvas"
 msgstr "Bộ lọc Canvas"
@@ -2549,11 +2977,11 @@ msgstr "Cột bảng điều khiển"
 msgid "Panel Backdrop"
 msgstr "Phông nền Bảng điều khiển"
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:501
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:516
 msgid "Widget Area Source"
 msgstr "Nguồn khu vực tiện ích"
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:509
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:524
 msgid "WooCommerce Sidebar"
 msgstr "Thanh bên WooCommerce"
 
@@ -2601,7 +3029,7 @@ msgstr "Loại nút"
 #: framework/extensions/trending/customizer.php:449,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:33,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:80,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:707
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:727
 msgid "Button"
 msgstr "Nút bấm"
 
@@ -2626,19 +3054,20 @@ msgid "Display next/previous buttons that will help to easily navigate through p
 msgstr "Hiển thị các nút tiếp theo/trước đó sẽ giúp dễ dàng điều hướng qua các sản phẩm."
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:175,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:410,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:412,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:130,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:138
 msgid "Title Font"
 msgstr "Phông chữ tiêu đề"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:210,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:440,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:442,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:168
 msgid "Price Font"
 msgstr "Phông chữ giá"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:219,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:448,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:450,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:176
 msgid "Price Color"
 msgstr "Màu giá"
@@ -2948,27 +3377,27 @@ msgstr "Cơ sở thương hiệu sản phẩm"
 msgid "brand"
 msgstr "thương hiệu"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:442,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:474
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:500,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:532
 msgid "About Brands"
 msgstr "Sau Thương hiệu"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:443,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:476
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:501,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:534
 msgid "About %s"
 msgstr "Giới thiệu về %s"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:500,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:520,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:582,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:649,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:660,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:558,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:578,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:640,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:707,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:718,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:493
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:145
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:146
 msgid "Brands"
 msgstr "Thương hiệu"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:504,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:562,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:150,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:177,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:221,
@@ -2978,54 +3407,54 @@ msgstr "Thương hiệu"
 msgid "Sticky Row"
 msgstr "Hàng ghim"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:535,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:586
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:593,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:644
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:257
 msgid "Logo Size"
 msgstr "Kích thước Logo"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:547,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:598
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:605,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:656
 msgid "Logos Gap"
 msgstr "Khoảng cách Logo"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:650
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:708
 msgid "Brand"
 msgstr "Thương hiệu"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:651
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:709
 msgid "Search Brands"
 msgstr "Tìm kiếm thương hiệu"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:652
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:710
 msgid "All Brands"
 msgstr "Tất cả thương hiệu"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:653
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:711
 msgid "Parent Brand"
 msgstr "Thương hiệu cha"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:654
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:712
 msgid "Parent Brand:"
 msgstr "Thương hiệu cha:"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:655
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:713
 msgid "View Brand"
 msgstr "Xem thương hiệu"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:656
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:714
 msgid "Edit Brand"
 msgstr "Chỉnh sửa thương hiệu"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:657
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:715
 msgid "Update Brand"
 msgstr "Cập nhật Thương hiệu"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:658
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:716
 msgid "Add New Brand"
 msgstr "Thêm thương hiệu mới"
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:659
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:717
 msgid "New Brand Name"
 msgstr "Tên thương hiệu mới"
 
@@ -3057,28 +3486,28 @@ msgstr "Di chuột qua văn bản"
 msgid "Background Initial"
 msgstr "Nền ban đầu"
 
-#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:369
+#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:376
 msgid "Star"
 msgstr "Ngôi sao"
 
-#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:369
+#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:376
 msgid "Stars"
 msgstr "Ngôi sao"
 
-#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:435
+#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:442
 msgid "%s%% of customers recommend this product."
 msgstr "%s%% khách hàng giới thiệu sản phẩm này"
 
-#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:597
+#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:604
 msgid "%s of %s found this review helpful"
 msgstr "%s trong số %s thấy đánh giá này hữu ích"
 
-#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:659,
+#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:666,
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:44
 msgid "Review Title"
 msgstr "Tiêu đề đánh giá"
 
-#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:687
+#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:694
 msgid "Upload Image (Optional)"
 msgstr "Tải hình ảnh lên (tùy chọn)"
 
@@ -3122,7 +3551,7 @@ msgstr "Cho phép người dùng thêm tiêu đề khi để lại đánh giá."
 msgid "Image Upload"
 msgstr "Tải lên hình ảnh"
 
-#: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/view.php:80
+#: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/view.php:78
 msgid "Color mode switch"
 msgstr "Chuyển đổi chế độ màu"
 
@@ -3140,7 +3569,7 @@ msgid "Columns & Posts"
 msgstr "Cột & Bài viết"
 
 #: framework/premium/extensions/post-types-extra/features/related-slideshow/feature.php:49,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:309,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:311,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:38
 msgid "Number of columns"
 msgstr "Số cột"
@@ -3150,19 +3579,19 @@ msgid "Number of posts"
 msgstr "Số bài viết"
 
 #: framework/premium/extensions/post-types-extra/features/related-slideshow/feature.php:91,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:342,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:344,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:75
 msgid "Autoplay"
 msgstr "Tự động phát"
 
 #: framework/premium/extensions/post-types-extra/features/related-slideshow/feature.php:112,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:354,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:356,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:91
 msgid "Delay (Seconds)"
 msgstr "Độ trễ (giây)"
 
 #: framework/premium/extensions/post-types-extra/features/related-slideshow/feature.php:113,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:355,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:357,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:92
 msgid "Specify the amount of time (in seconds) to delay between automatically cycling an item."
 msgstr "Chỉ định lượng thời gian (tính bằng giây) để trì hoãn giữa việc tự động chuyển một mục."
@@ -3192,7 +3621,7 @@ msgid "Light Mode Label"
 msgstr "Nhãn chế độ sáng"
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:118,
-#: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/view.php:56
+#: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/view.php:54
 msgid "Light Mode"
 msgstr "Chuyển chế độ sáng"
 
@@ -3241,7 +3670,8 @@ msgstr "Luôn luôn"
 msgid "Set this option to always if you have dynamic content inside the popup in order to keep everything up to date."
 msgstr "Đặt tùy chọn này thành luôn luôn nếu bạn có nội dung động bên trong popup để luôn cập nhật mọi thứ."
 
-#: framework/premium/features/content-blocks/options/popup.php:495
+#: framework/premium/features/content-blocks/options/popup.php:495,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:637
 msgid "Popup Visibility"
 msgstr "Khả năng hiển thị popup"
 
@@ -3322,7 +3752,7 @@ msgstr "Bộ chọn lớp nút"
 msgid "Choose where you want this content block to be displayed."
 msgstr "Chọn nơi bạn muốn hiển thị khối nội dung này."
 
-#: framework/premium/features/content-blocks/options/hook.php:272
+#: framework/premium/features/content-blocks/options/hook.php:283
 msgid "Select a post/page to preview it's content inside the editor while building the hook."
 msgstr "Chọn một bài viết/trang để xem trước nội dung của nó bên trong trình chỉnh sửa trong khi tạo hook."
 
@@ -3340,7 +3770,7 @@ msgstr "Kết nối trước Google Fonts"
 
 #: framework/premium/features/performance-typography/feature.php:127
 msgid "Preconnect Adobe Typekit Fonts"
-msgstr "K���t nối trước với phông chữ Adobe Typekit"
+msgstr "Kết nối trước với phông chữ Adobe Typekit"
 
 #: framework/features/header/items/account/config.php:4
 msgid "Account"
@@ -3371,24 +3801,24 @@ msgstr "Đăng xuất"
 
 #: framework/features/header/items/account/options.php:185,
 #: framework/features/header/items/account/options.php:189,
-#: framework/features/header/items/account/views/login.php:553
+#: framework/features/header/items/account/views/login.php:591
 msgid "Dokan Dashboard"
 msgstr "Bảng điều khiển Dokan"
 
 #: framework/features/header/items/account/options.php:199,
 #: framework/features/header/items/account/options.php:203,
-#: framework/features/header/items/account/views/login.php:587
+#: framework/features/header/items/account/views/login.php:625
 msgid "Dokan Shop"
 msgstr "Dokan Shop"
 
 #: framework/features/header/items/account/options.php:215,
 #: framework/features/header/items/account/options.php:219,
-#: framework/features/header/items/account/views/login.php:619
+#: framework/features/header/items/account/views/login.php:657
 msgid "Tutor LMS Dashboard"
 msgstr "Bảng điều khiển Tutor LMS"
 
 #: framework/features/header/items/account/options.php:235,
-#: framework/features/header/items/account/views/login.php:646
+#: framework/features/header/items/account/views/login.php:684
 msgid "bbPress Dashboard"
 msgstr "bảng điều khiển bbPress"
 
@@ -3412,14 +3842,14 @@ msgstr "Logo chế độ tối"
 #: framework/premium/extensions/woocommerce-extra/features/sku-layer.php:60,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:248,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:434
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:139
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:140
 msgid "SKU"
 msgstr "SKU"
 
 #: framework/premium/features/content-blocks/options/404.php:84,
 #: framework/premium/features/content-blocks/options/archive.php:161,
 #: framework/premium/features/content-blocks/options/header.php:102,
-#: framework/premium/features/content-blocks/options/hook.php:200,
+#: framework/premium/features/content-blocks/options/hook.php:211,
 #: framework/premium/features/content-blocks/options/maintenance.php:81,
 #: framework/premium/features/content-blocks/options/nothing_found.php:102,
 #: framework/premium/features/content-blocks/options/single.php:93
@@ -3565,12 +3995,12 @@ msgstr "Cài đặt huy hiệu"
 msgid "Column Background"
 msgstr "Nền cột"
 
-#: framework/premium/extensions/shortcuts/customizer.php:582,
-#: framework/premium/extensions/shortcuts/customizer.php:605,
-#: framework/premium/extensions/shortcuts/views/bar.php:53,
+#: framework/premium/extensions/shortcuts/customizer.php:673,
+#: framework/premium/extensions/shortcuts/customizer.php:699,
+#: framework/premium/extensions/shortcuts/views/bar.php:55,
 #: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:241,
 #: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:245,
-#: framework/premium/extensions/woocommerce-extra/features/compare/helpers.php:108,
+#: framework/premium/extensions/woocommerce-extra/features/compare/helpers.php:110,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:36,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:418,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/bar.php:53,
@@ -3580,15 +4010,15 @@ msgstr "Nền cột"
 msgid "Compare"
 msgstr "So sánh"
 
-#: framework/premium/extensions/shortcuts/customizer.php:1003
+#: framework/premium/extensions/shortcuts/customizer.php:1124
 msgid "Item Background Color"
 msgstr "Màu nền mục"
 
-#: framework/premium/extensions/shortcuts/customizer.php:1084
+#: framework/premium/extensions/shortcuts/customizer.php:1205
 msgid "Wishlist Badge Color"
 msgstr "Màu huy hiệu yêu thích"
 
-#: framework/premium/extensions/shortcuts/customizer.php:1126
+#: framework/premium/extensions/shortcuts/customizer.php:1247
 msgid "Compare Badge Color"
 msgstr "Màu huy hiệu so sánh"
 
@@ -3600,7 +4030,7 @@ msgstr "Xóa bỏ khu vực tiện ích"
 msgid "This extension requires the WooCommerce plugin to be installed and activated."
 msgstr "Tiện ích mở rộng này yêu cầu cài đặt và kích hoạt plugin WooCommerce."
 
-#: framework/premium/extensions/woocommerce-extra/extension.php:354
+#: framework/premium/extensions/woocommerce-extra/extension.php:359
 msgid "Cart Page"
 msgstr "Trang giỏ hàng"
 
@@ -3621,14 +4051,15 @@ msgstr "Khi nhấp vào phần tử"
 #: framework/premium/features/content-blocks/content-block-layer.php:244,
 #: framework/premium/extensions/woocommerce-extra/features/sku-layer.php:64,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:739,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:559,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:610,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:617,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:668,
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:339,
 #: framework/premium/extensions/woocommerce-extra/features/share-box-layer/feature.php:203,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:190,
-#: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:244,
-#: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:267,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:883
+#: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:251,
+#: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:274,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:903,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:246
 msgid "Bottom Spacing"
 msgstr "Khoảng cách dưới cùng"
 
@@ -3640,7 +4071,8 @@ msgstr "Trước meta bài viết đầu tiên"
 msgid "Before second post meta"
 msgstr "Trước meta bài viết thứ hai"
 
-#: framework/features/conditions/rules/woo.php:80
+#: framework/features/conditions/rules/woo.php:80,
+#: framework/features/conditions/rules/woo.php:95
 msgid "Product with Taxonomy ID"
 msgstr "Sản phẩm với ID phân loại"
 
@@ -3721,16 +4153,16 @@ msgstr "Email của bạn *"
 msgid "Demo List"
 msgstr "Danh sách demo"
 
-#: framework/features/conditions/rules/basic.php:6,
+#: framework/features/conditions/rules/basic.php:10,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/options.php:12
 msgid "All Products"
 msgstr "Tất cả sản phẩm"
 
-#: framework/features/conditions/rules/basic.php:28
+#: framework/features/conditions/rules/basic.php:40
 msgid "All Singulars"
 msgstr "Tất cả nội dung đơn lẻ"
 
-#: framework/features/conditions/rules/basic.php:35
+#: framework/features/conditions/rules/basic.php:51
 msgid "All Archives"
 msgstr "Tất cả lưu trữ"
 
@@ -3767,7 +4199,8 @@ msgstr "Yêu cầu URL"
 msgid "Post with Author ID"
 msgstr "Bài viết với ID Tác Giả"
 
-#: framework/features/conditions/rules/woo.php:75
+#: framework/features/conditions/rules/woo.php:75,
+#: framework/features/conditions/rules/woo.php:90
 msgid "Product ID"
 msgstr "ID Sản phẩm"
 
@@ -3859,7 +4292,7 @@ msgstr "Trình bày thông tin bổ sung về sản phẩm của bạn bằng c�
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:58,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:62,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:272,
-#: framework/premium/extensions/woocommerce-extra/features/size-guide/helpers.php:45,
+#: framework/premium/extensions/woocommerce-extra/features/size-guide/helpers.php:47,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/modal-view.php:18,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/side-view.php:27
 msgid "Size Guide"
@@ -3932,7 +4365,7 @@ msgid "Preview the available products and let your users make quick and informat
 msgstr "Xem trước các sản phẩm có sẵn và để người dùng của bạn đưa ra quyết định nhanh chóng và thông minh về việc mua hàng của họ."
 
 #: framework/helpers/exts-configs.php:254,
-#: framework/premium/extensions/shortcuts/views/bar.php:52
+#: framework/premium/extensions/shortcuts/views/bar.php:54
 msgid "Filters"
 msgstr "Bộ lọc"
 
@@ -4011,9 +4444,9 @@ msgstr "Đăng ký hoàn tất. Vui lòng kiểm tra email của bạn, sau đó
 #: framework/features/header/items/account/views/login.php:158,
 #: framework/features/header/items/account/views/login.php:335
 msgid "Dashboard"
-msgstr "Bảng tổng quan"
+msgstr "Trang quản trị"
 
-#: framework/dashboard.php:466
+#: framework/dashboard.php:521
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Bạn không có đủ quyền để truy cập trang này."
 
@@ -4034,7 +4467,7 @@ msgstr "Trang Chính sách bảo mật"
 msgid "Author Archives"
 msgstr "Lưu trữ tác giả"
 
-#: framework/features/conditions/rules/woo.php:89,
+#: framework/features/conditions/rules/woo.php:104,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:42
 msgid "WooCommerce"
 msgstr "WooCommerce"
@@ -4341,7 +4774,7 @@ msgstr "Nhấp để tải lên"
 msgid "All Icons"
 msgstr "Tất cả biểu tượng"
 
-#: static/js/options/ConditionsManager/SingleCondition.js:290
+#: static/js/options/ConditionsManager/SingleCondition.js:296
 msgid "All authors"
 msgstr "Tất cả tác giả"
 
@@ -4352,6 +4785,68 @@ msgstr "Không thể nhập mẫu web bắt đầu"
 #: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:31
 msgid "Unfortunately, your hosting configuration doesn't meet the minimum requirements for importing a starter site."
 msgstr "Thật không may, cấu hình hosting của bạn không đáp ứng các yêu cầu tối thiểu để nhập một mẫu web bắt đầu."
+
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/views/panel.php:62
+msgid "Close filters modal"
+msgstr "Đóng hộp bật lên bộ lọc"
+
+#: framework/premium/extensions/woocommerce-extra/features/quick-view/view.php:45
+msgid "Close quick view"
+msgstr "Đóng chế độ xem nhanh"
+
+#: framework/premium/extensions/woocommerce-extra/features/quick-view/helpers.php:45
+msgid "Quick view toggle"
+msgstr "Chuyển đổi xem nhanh"
+
+#: framework/premium/extensions/woocommerce-extra/features/quick-view/helpers.php:32
+msgid "Quick view icon"
+msgstr "Biểu tượng xem nhanh"
+
+#: framework/features/header/items/account/options.php:1724,
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:314,
+#: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:185
+msgid "Close Button Type"
+msgstr "Loại nút đóng"
+
+#: framework/features/header/items/account/options.php:726,
+#: framework/features/header/items/account/options.php:1731,
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:323,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:23,
+#: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:194
+msgid "Simple"
+msgstr "Đơn giản"
+
+#: framework/features/header/items/account/options.php:1732,
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:324,
+#: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:195
+msgid "Border"
+msgstr "Viền"
+
+#: framework/features/header/items/account/options.php:1778,
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:366,
+#: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:248,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:254,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:298,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:382,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:466
+msgid "Border Color"
+msgstr "Màu viền"
+
+#: framework/premium/features/content-blocks/hooks-manager.php:170
+msgid "Before description"
+msgstr "Trước mô tả"
+
+#: framework/premium/features/content-blocks/hooks-manager.php:178
+msgid "Before breadcrumbs"
+msgstr "Trước điều hướng trang"
+
+#: framework/premium/features/content-blocks/hooks-manager.php:218
+msgid "After description"
+msgstr "Sau mô tả"
+
+#: framework/premium/features/content-blocks/hooks-manager.php:226
+msgid "After breadcrumbs"
+msgstr "Sau điều hướng trang"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:630
 msgid "Before shop loop item actions"
@@ -4375,12 +4870,14 @@ msgid "User Visibility"
 msgstr "Khả năng hiển thị của người dùng"
 
 #: framework/features/header/items/account/options.php:1099,
-#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:116
+#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:116,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:95
 msgid "Logged In"
 msgstr "Đăng nhập"
 
 #: framework/features/header/items/account/options.php:1100,
-#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:117
+#: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:117,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:96
 msgid "Logged Out"
 msgstr "Đăng xuất"
 
@@ -4402,7 +4899,7 @@ msgid "Inherit card wrapper settings from Customizer (background color, spacing,
 msgstr "Kế thừa cài đặt trình bao bọc thẻ từ Tùy biến (màu nền, khoảng cách, bóng)."
 
 #: framework/premium/features/content-blocks/options/archive.php:53,
-#: framework/premium/features/content-blocks/options/hook.php:266,
+#: framework/premium/features/content-blocks/options/hook.php:277,
 #: framework/premium/features/content-blocks/options/popup.php:483,
 #: framework/premium/features/content-blocks/options/single.php:151
 msgid "Dynamic Content Preview"
@@ -4433,11 +4930,11 @@ msgstr "Đặt sau bao nhiêu trang đã truy cập, khối Popup sẽ xuất hi
 msgid "Select a post/page to preview it's content inside the editor while building the post/page."
 msgstr "Chọn một bài viết/trang để xem trước nội dung bên trong trình chỉnh sửa khi xây dựng lưu trữ."
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:216
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:236
 msgid "More information on how to generate an API key for Mailerlite can be found %shere%s. Please note that it is required at least one group to be created in your account for the integration to work. More info on how to create a group %shere%s."
 msgstr "Thêm thông tin về cách tạo một khóa API cho Mailerlite có thể được tìm thấy %stại đây%s. Lưu ý ít nhất một nhóm phải được tạo trong tài khoản của bạn để tích hợp hoạt động. Thêm thông tin về cách tạo một nhóm %stại đây%s."
 
-#: framework/premium/static/js/hooks/CodeEditor.js:58
+#: framework/premium/static/js/hooks/CodeEditor.js:59
 msgid "Code Editor"
 msgstr "Chỉnh sửa mã"
 
@@ -4535,6 +5032,7 @@ msgstr "Mobile Menu 1"
 msgid "Mobile Menu 2"
 msgstr "Mobile Menu 2"
 
+#: framework/extensions/newsletter-subscribe/providers/active-campaign.php:154,
 #: framework/extensions/newsletter-subscribe/providers/brevo.php:116,
 #: framework/extensions/newsletter-subscribe/providers/campaign-monitor.php:136,
 #: framework/extensions/newsletter-subscribe/providers/convertkit.php:97,
@@ -4587,16 +5085,16 @@ msgstr "Loại nội dung bổ sung"
 #. translators: This is a brand name. Preferably to not be translated
 #: framework/helpers/exts-configs.php:179,
 #: framework/premium/extensions/shortcuts/config.php:5,
-#: framework/premium/extensions/shortcuts/customizer.php:657
+#: framework/premium/extensions/shortcuts/customizer.php:751
 msgctxt "Extension Brand Name"
 msgid "Shortcuts Bar"
 msgstr "Thanh điều hướng nhanh"
 
-#: framework/premium/extensions/shortcuts/customizer.php:299
+#: framework/premium/extensions/shortcuts/customizer.php:314
 msgid "Set link to nofollow"
 msgstr "Đặt liên kết thành nofollow"
 
-#: framework/premium/extensions/shortcuts/customizer.php:305
+#: framework/premium/extensions/shortcuts/customizer.php:320
 msgid "Custom class"
 msgstr "Lớp tùy chỉnh"
 
@@ -4612,75 +5110,14 @@ msgctxt "Extension Brand Name"
 msgid "White Label"
 msgstr "Gắn nhãn trắng"
 
-#: framework/features/blocks/share-box/options.php:120,
+#: framework/features/blocks/share-box/options.php:132,
 #: framework/features/blocks/socials/options.php:84
 msgid "Icons Spacing"
 msgstr "Khoảng cách biểu tượng "
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/feature.php:147
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/feature.php:157
 msgid "Add widgets here."
 msgstr "Thêm tiện ích ở đây."
-
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/views/panel.php:47
-msgid "Close filters modal"
-msgstr "Đóng hộp bật lên bộ lọc"
-
-#: framework/premium/extensions/woocommerce-extra/features/quick-view/view.php:45
-msgid "Close quick view"
-msgstr "Đóng chế độ xem nhanh"
-
-#: framework/premium/extensions/woocommerce-extra/features/quick-view/helpers.php:45
-msgid "Quick view toggle"
-msgstr "Chuyển đổi xem nhanh"
-
-#: framework/premium/extensions/woocommerce-extra/features/quick-view/helpers.php:32
-msgid "Quick view icon"
-msgstr "Biểu tượng xem nhanh"
-
-#: framework/features/header/items/account/options.php:1724,
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:314,
-#: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:185
-msgid "Close Button Type"
-msgstr "Loại nút đóng"
-
-#: framework/features/header/items/account/options.php:726,
-#: framework/features/header/items/account/options.php:1731,
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:323,
-#: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:194
-msgid "Simple"
-msgstr "Đơn giản"
-
-#: framework/features/header/items/account/options.php:1732,
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:324,
-#: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:195
-msgid "Border"
-msgstr "Viền"
-
-#: framework/features/header/items/account/options.php:1778,
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:366,
-#: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:248,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:254,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:298,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:382,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:466
-msgid "Border Color"
-msgstr "Màu viền"
-
-#: framework/premium/features/content-blocks/hooks-manager.php:170
-msgid "Before description"
-msgstr "Trước mô tả"
-
-#: framework/premium/features/content-blocks/hooks-manager.php:178
-msgid "Before breadcrumbs"
-msgstr "Trước điều hướng trang"
-
-#: framework/premium/features/content-blocks/hooks-manager.php:218
-msgid "After description"
-msgstr "Sau mô tả"
-
-#: framework/premium/features/content-blocks/hooks-manager.php:226
-msgid "After breadcrumbs"
-msgstr "Sau điều hướng trang"
 
 #. translators: 1: link open 2: link close
 #: framework/features/account-auth.php:106
@@ -4769,7 +5206,7 @@ msgstr "Tất cả loại"
 msgid "After x pages"
 msgstr "Sau x trang"
 
-#: framework/premium/features/content-blocks/popups.php:373
+#: framework/premium/features/content-blocks/popups.php:376
 msgid "Close popup"
 msgstr "Thoát Popup"
 
@@ -4802,27 +5239,27 @@ msgstr "Tạo tiêu đề mới và gán nó cho các trang hoặc bài viết k
 msgid "Header name"
 msgstr "Tên đầu trang"
 
-#: framework/premium/static/js/hooks/CodeEditor.js:237
+#: framework/premium/static/js/hooks/CodeEditor.js:238
 msgid "Yes, continue"
 msgstr "Vâng, tiếp tục"
 
-#: framework/premium/static/js/hooks/CodeEditor.js:149
+#: framework/premium/static/js/hooks/CodeEditor.js:150
 msgid "Use code editor"
 msgstr "Sử dụng trình chỉnh sửa mã"
 
-#: framework/premium/static/js/hooks/CodeEditor.js:152
+#: framework/premium/static/js/hooks/CodeEditor.js:153
 msgid "Exit code editor"
 msgstr "Thoát chỉnh sửa mã"
 
-#: framework/premium/static/js/hooks/CodeEditor.js:164
+#: framework/premium/static/js/hooks/CodeEditor.js:165
 msgid "Heads up!"
 msgstr "Hướng lên đầu!"
 
-#: framework/premium/static/js/hooks/CodeEditor.js:166
+#: framework/premium/static/js/hooks/CodeEditor.js:167
 msgid "Enabling & disabling the code editor will erase everything from your post editor and this action is irreversible."
 msgstr "Việc bật và tắt trình chỉnh sửa mã sẽ xóa mọi thứ khỏi trình chỉnh sửa bài viết của bạn và hành động này không thể thay đổi được."
 
-#: framework/premium/static/js/hooks/CodeEditor.js:173
+#: framework/premium/static/js/hooks/CodeEditor.js:174
 msgid "Are you sure you want to continue?"
 msgstr "Bạn có chắc chắn muốn tiếp tục không?"
 
@@ -4879,19 +5316,19 @@ msgstr "Vì lý do hiệu suất và tùy chỉnh, chỉ cho phép các tệp SV
 msgid "Search icon"
 msgstr "Biểu tượng tìm kiếm"
 
-#: framework/premium/static/js/options/MultipleLocationsSelect.js:158
+#: framework/premium/static/js/options/MultipleLocationsSelect.js:151
 msgid "Add New Location"
 msgstr "Thêm vị trí mới"
 
-#: framework/premium/static/js/options/MultipleLocationsSelect.js:47
+#: framework/premium/static/js/options/MultipleLocationsSelect.js:53
 msgid "Select location"
 msgstr "Chọn vị trí"
 
-#: static/js/dashboard.js:39
+#: static/js/dashboard.js:64
 msgid "Starter Sites"
 msgstr "Mẫu web bắt đầu"
 
-#: static/js/dashboard.js:51
+#: static/js/dashboard.js:76
 msgid "Extensions"
 msgstr "Tiện ích"
 
@@ -4936,23 +5373,23 @@ msgstr "Tham gia cộng đồng Facebook"
 msgid "Upgrade Now"
 msgstr "Nâng cấp ngay"
 
-#: static/js/options/ConditionsManager/SingleCondition.js:108
+#: static/js/options/ConditionsManager/SingleCondition.js:114
 msgid "Select rule"
 msgstr "Chọn quy tắc"
 
-#: static/js/options/ConditionsManager/SingleCondition.js:198
+#: static/js/options/ConditionsManager/SingleCondition.js:204
 msgid "Select taxonomy"
 msgstr "Chọn taxonomy"
 
-#: static/js/options/ConditionsManager/SingleCondition.js:230
+#: static/js/options/ConditionsManager/SingleCondition.js:236
 msgid "Select language"
 msgstr "Chọn ngôn ngữ"
 
-#: static/js/options/ConditionsManager/SingleCondition.js:286
+#: static/js/options/ConditionsManager/SingleCondition.js:292
 msgid "Select user"
 msgstr "Chọn người dùng"
 
-#: static/js/options/ConditionsManager/SingleCondition.js:259
+#: static/js/options/ConditionsManager/SingleCondition.js:265
 msgid "Current user"
 msgstr "Người dùng hiện tại"
 
@@ -4960,17 +5397,17 @@ msgstr "Người dùng hiện tại"
 msgid "Add Display Condition"
 msgstr "Thêm điều kiện hiển thị"
 
-#: framework/features/conditions-manager.php:234,
+#: framework/features/conditions-manager.php:242,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:126
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:283
-#: static/js/options/ConditionsManager/SingleCondition.js:91
+#: static/js/options/ConditionsManager/SingleCondition.js:97
 msgid "Include"
 msgstr "Bao gồm"
 
-#: framework/features/conditions-manager.php:234,
+#: framework/features/conditions-manager.php:242,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:127
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:291
-#: static/js/options/ConditionsManager/SingleCondition.js:92
+#: static/js/options/ConditionsManager/SingleCondition.js:98
 msgid "Exclude"
 msgstr "Loại trừ "
 
@@ -5072,7 +5509,7 @@ msgstr "Điều kiện hiển thị Đầu trang trong suốt"
 msgid "Add one or more conditions to display the transparent header."
 msgstr "Thêm một hoặc nhiều điều kiện để hiển thị đầu trang trong suốt."
 
-#: static/js/dashboard/screens/DemoInstall.js:188
+#: static/js/dashboard/screens/DemoInstall.js:166
 msgid "Loading Starter Sites..."
 msgstr "Đang tải mẫu web bắt đầu..."
 
@@ -5318,8 +5755,8 @@ msgstr "Cài và Kích hoạt Plugin"
 msgid "The following plugins are required for this starter site in order to work properly."
 msgstr "Các plugin sau là bắt buộc đối với mẫu web bắt đầu để hoạt động bình thường."
 
-#: static/js/dashboard/screens/Extension.js:89
-#: static/js/dashboard/screens/Extensions.js:60
+#: static/js/dashboard/screens/Extension.js:95
+#: static/js/dashboard/screens/Extensions.js:86
 msgid "Loading Extensions Status..."
 msgstr "Đang tải Trạng thái Tiện ích..."
 
@@ -5372,8 +5809,8 @@ msgid "Default Width"
 msgstr "Chiều rộng mặc định"
 
 #: framework/premium/extensions/mega-menu/options.php:86,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:175,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:194
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:178,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:197
 msgid "Columns"
 msgstr "Cột"
 
@@ -5410,7 +5847,7 @@ msgstr "Bật"
 #: framework/premium/features/content-blocks/options/404.php:111,
 #: framework/premium/features/content-blocks/options/archive.php:188,
 #: framework/premium/features/content-blocks/options/header.php:129,
-#: framework/premium/features/content-blocks/options/hook.php:227,
+#: framework/premium/features/content-blocks/options/hook.php:238,
 #: framework/premium/features/content-blocks/options/maintenance.php:108,
 #: framework/premium/features/content-blocks/options/nothing_found.php:129,
 #: framework/premium/features/content-blocks/options/single.php:120
@@ -5439,9 +5876,9 @@ msgstr "Căn chỉnh dọc"
 #: framework/features/header/header-options.php:251,
 #: framework/features/header/header-options.php:266,
 #: framework/premium/extensions/mega-menu/options.php:585,
-#: framework/premium/extensions/shortcuts/customizer.php:1060,
-#: framework/premium/extensions/shortcuts/customizer.php:1102,
-#: framework/premium/extensions/shortcuts/customizer.php:1144,
+#: framework/premium/extensions/shortcuts/customizer.php:1181,
+#: framework/premium/extensions/shortcuts/customizer.php:1223,
+#: framework/premium/extensions/shortcuts/customizer.php:1265,
 #: framework/features/header/items/account/options.php:1733,
 #: framework/premium/extensions/woocommerce-extra/features/custom-badges/design-options.php:37,
 #: framework/premium/extensions/woocommerce-extra/features/custom-badges/design-options.php:77,
@@ -5462,7 +5899,7 @@ msgstr "Màu liên kết"
 
 #: framework/premium/extensions/mega-menu/options.php:619,
 #: framework/features/header/items/account/options.php:1933,
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:619,
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:634,
 #: framework/premium/features/premium-header/items/contacts/options.php:641,
 #: framework/premium/features/premium-header/items/contacts/options.php:681,
 #: framework/premium/features/premium-header/items/contacts/options.php:720
@@ -5502,7 +5939,7 @@ msgid "Text Color"
 msgstr "Màu chữ"
 
 #: framework/premium/extensions/mega-menu/options.php:684,
-#: framework/premium/extensions/shortcuts/customizer.php:1161,
+#: framework/premium/extensions/shortcuts/customizer.php:1282,
 #: framework/premium/features/premium-header/items/search-input/options.php:904,
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:161
 msgid "Items Divider"
@@ -5564,51 +6001,53 @@ msgid "Easily turn your websites into mobile first experiences. You can easily a
 msgstr "Dễ dàng biến trang web của bạn thành trải nghiệm di động trước. Bạn có thể dễ dàng thêm các hành động quan trọng nhất ở phía dưới màn hình để dễ dàng truy cập."
 
 #: framework/premium/extensions/shortcuts/customizer.php:12,
-#: framework/premium/extensions/shortcuts/customizer.php:35,
-#: framework/premium/extensions/shortcuts/customizer.php:696,
+#: framework/premium/extensions/shortcuts/customizer.php:38,
+#: framework/premium/extensions/shortcuts/customizer.php:790,
 #: framework/premium/extensions/shortcuts/extension.php:173,
 #: framework/premium/extensions/shortcuts/views/bar.php:13,
-#: framework/premium/extensions/shortcuts/views/bar.php:45
+#: framework/premium/extensions/shortcuts/views/bar.php:46
 msgid "Home"
 msgstr "Trang chủ"
 
 #: framework/features/blocks/contact-info/options.php:139,
-#: framework/premium/extensions/shortcuts/customizer.php:68,
-#: framework/premium/extensions/shortcuts/customizer.php:91,
-#: framework/premium/extensions/shortcuts/customizer.php:705,
+#: framework/premium/extensions/shortcuts/customizer.php:71,
+#: framework/premium/extensions/shortcuts/customizer.php:97,
+#: framework/premium/extensions/shortcuts/customizer.php:799,
 #: framework/premium/extensions/shortcuts/extension.php:182,
 #: framework/premium/extensions/shortcuts/views/bar.php:22,
-#: framework/premium/extensions/shortcuts/views/bar.php:46,
+#: framework/premium/extensions/shortcuts/views/bar.php:47,
 #: framework/premium/features/premium-header/items/contacts/options.php:127
 msgid "Phone"
 msgstr "Điện Thoại"
 
-#: framework/premium/extensions/shortcuts/customizer.php:192,
-#: framework/premium/extensions/shortcuts/customizer.php:215,
-#: framework/premium/extensions/shortcuts/views/bar.php:48
+#: framework/premium/extensions/shortcuts/customizer.php:201,
+#: framework/premium/extensions/shortcuts/customizer.php:227,
+#: framework/premium/extensions/shortcuts/views/bar.php:49
 msgid "Scroll Top"
 msgstr "Cuộn lên đầu"
 
-#: framework/premium/extensions/shortcuts/customizer.php:337,
-#: framework/premium/extensions/shortcuts/customizer.php:360,
-#: framework/premium/extensions/shortcuts/views/bar.php:49
+#: framework/premium/extensions/shortcuts/customizer.php:352,
+#: framework/premium/extensions/shortcuts/customizer.php:378,
+#: framework/premium/extensions/shortcuts/views/bar.php:50
 msgid "Cart"
 msgstr "Giỏ hàng"
 
-#: framework/premium/extensions/shortcuts/customizer.php:393,
-#: framework/premium/extensions/shortcuts/customizer.php:416
+#: framework/premium/extensions/shortcuts/customizer.php:411,
+#: framework/premium/extensions/shortcuts/customizer.php:437
 msgid "Shop"
 msgstr "Của hàng"
 
 #: framework/helpers/exts-configs.php:262,
-#: framework/premium/extensions/shortcuts/customizer.php:521,
-#: framework/premium/extensions/shortcuts/customizer.php:544,
-#: framework/features/header/items/account/views/login.php:516,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:360,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:364,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:392,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:396,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:166,
+#: framework/premium/extensions/shortcuts/customizer.php:545,
+#: framework/premium/extensions/shortcuts/customizer.php:571,
+#: framework/premium/extensions/shortcuts/views/bar.php:52,
+#: framework/features/header/items/account/views/login.php:520,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:309,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:406,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:410,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:438,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:442,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:168,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:17,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/config.php:4,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:141,
@@ -5616,11 +6055,11 @@ msgstr "Của hàng"
 msgid "Wishlist"
 msgstr "Yêu thích"
 
-#: framework/premium/extensions/shortcuts/customizer.php:690
+#: framework/premium/extensions/shortcuts/customizer.php:784
 msgid "Shortcuts"
 msgstr "Mã ngắn"
 
-#: framework/premium/extensions/shortcuts/customizer.php:745,
+#: framework/premium/extensions/shortcuts/customizer.php:839,
 #: framework/features/header/items/account/options.php:520,
 #: framework/features/header/items/account/options.php:983,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:57,
@@ -5630,7 +6069,7 @@ msgstr "Mã ngắn"
 msgid "Label Visibility"
 msgstr "Hiển thị nhãn"
 
-#: framework/premium/extensions/shortcuts/customizer.php:785,
+#: framework/premium/extensions/shortcuts/customizer.php:879,
 #: framework/features/header/items/account/options.php:554,
 #: framework/features/header/items/account/options.php:1017,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:88,
@@ -5639,7 +6078,7 @@ msgstr "Hiển thị nhãn"
 msgid "Label Position"
 msgstr "Vị trí nhãn"
 
-#: framework/premium/extensions/shortcuts/customizer.php:794,
+#: framework/premium/extensions/shortcuts/customizer.php:888,
 #: framework/premium/features/content-blocks/hooks-manager.php:477,
 #: framework/features/header/items/account/options.php:563,
 #: framework/features/header/items/account/options.php:1035,
@@ -5651,7 +6090,7 @@ msgid "Bottom"
 msgstr "Dưới cùng"
 
 #: framework/premium/extensions/mega-menu/options.php:482,
-#: framework/premium/extensions/shortcuts/customizer.php:805,
+#: framework/premium/extensions/shortcuts/customizer.php:925,
 #: framework/features/header/items/account/options.php:508,
 #: framework/features/header/items/account/options.php:882,
 #: framework/features/header/items/account/options.php:968,
@@ -5664,32 +6103,32 @@ msgstr "Dưới cùng"
 msgid "Icon Size"
 msgstr "Kích thước biểu tượng"
 
-#: framework/premium/extensions/shortcuts/customizer.php:815,
+#: framework/premium/extensions/shortcuts/customizer.php:936,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:383
 msgid "Container Height"
 msgstr "Chiều cao vùng chứa"
 
-#: framework/premium/extensions/shortcuts/customizer.php:830
+#: framework/premium/extensions/shortcuts/customizer.php:951
 msgid "Container Max Width"
 msgstr "Chiều rộng tối đa vùng chứa"
 
-#: framework/premium/extensions/shortcuts/customizer.php:854
+#: framework/premium/extensions/shortcuts/customizer.php:975
 msgid "Scroll Interaction"
 msgstr "Tương tác cuộn"
 
-#: framework/premium/extensions/shortcuts/customizer.php:860
+#: framework/premium/extensions/shortcuts/customizer.php:981
 msgid "Hide"
 msgstr "Ẩn"
 
-#: framework/premium/extensions/shortcuts/customizer.php:902
+#: framework/premium/extensions/shortcuts/customizer.php:1023
 msgid "Shortcuts Bar Display Conditions"
 msgstr "Điều kiện hiển thị thanh lối tắt"
 
-#: framework/premium/extensions/shortcuts/customizer.php:903
+#: framework/premium/extensions/shortcuts/customizer.php:1024
 msgid "Add one or more conditions to display the shortcuts bar."
 msgstr "Thêm một hoặc nhiều điều kiện để hiển thị thanh lối tắt"
 
-#: framework/premium/extensions/shortcuts/customizer.php:927,
+#: framework/premium/extensions/shortcuts/customizer.php:1048,
 #: framework/features/header/items/account/options.php:1895,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:184,
 #: framework/premium/features/premium-header/items/contacts/options.php:577,
@@ -5700,9 +6139,9 @@ msgid "Font"
 msgstr "Phông chữ"
 
 #: framework/features/blocks/about-me/options.php:187,
-#: framework/features/blocks/share-box/options.php:129,
+#: framework/features/blocks/share-box/options.php:141,
 #: framework/features/blocks/socials/options.php:93,
-#: framework/premium/extensions/shortcuts/customizer.php:971,
+#: framework/premium/extensions/shortcuts/customizer.php:1092,
 #: framework/premium/features/premium-header/items/contacts/options.php:751,
 #: framework/premium/features/premium-header/items/contacts/options.php:780,
 #: framework/premium/features/premium-header/items/contacts/options.php:811,
@@ -5712,18 +6151,18 @@ msgstr "Phông chữ"
 msgid "Icons Color"
 msgstr "Màu biểu tượng"
 
-#: framework/premium/extensions/shortcuts/customizer.php:1042
+#: framework/premium/extensions/shortcuts/customizer.php:1163
 msgid "Cart Badge Color"
 msgstr "Màu huy hiệu giỏ hàng"
 
-#: framework/premium/extensions/shortcuts/customizer.php:1181
+#: framework/premium/extensions/shortcuts/customizer.php:1302
 msgid "Items Divider Height"
 msgstr "Chiều cao dải phân cách mục"
 
-#: framework/premium/extensions/shortcuts/customizer.php:1195,
+#: framework/premium/extensions/shortcuts/customizer.php:1316,
 #: framework/features/header/items/account/options.php:2016,
 #: framework/premium/features/content-blocks/options/popup.php:545,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:678,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:701,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:150,
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:175
 msgid "Shadow"
@@ -5773,7 +6212,7 @@ msgstr "Nút xem nhanh"
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:33,
 #: framework/premium/extensions/woocommerce-extra/features/archive-card/feature.php:13,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:66,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:108,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:111,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:65,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:66
 msgid "Type 3"
@@ -5783,11 +6222,11 @@ msgstr "Loại 3"
 #: framework/features/header/items/account/options.php:851,
 #: framework/features/header/items/account/options.php:939,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:71,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:113
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:116
 msgid "Type 4"
 msgstr "Loại 4"
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/views/panel.php:46
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/views/panel.php:61
 msgid "Available Filters"
 msgstr "Bộ lọc khả dụng"
 
@@ -5841,7 +6280,7 @@ msgstr "Hiển thị giỏ hàng nổi"
 msgid "Go to product page"
 msgstr "Đi đến trang sản phẩm"
 
-#: framework/premium/extensions/shortcuts/customizer.php:483,
+#: framework/premium/extensions/shortcuts/customizer.php:507,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/helpers.php:40,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:111
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:108
@@ -5849,29 +6288,29 @@ msgstr "Đi đến trang sản phẩm"
 msgid "Filter"
 msgstr "Bộ lọc"
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:517
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:532
 msgid "Filter Widgets"
 msgstr "Lọc tiện ích"
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:521
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:536
 msgid "Widgets"
 msgstr "Các tiện ích"
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:565
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:580
 msgid "Widgets Vertical Spacing"
 msgstr "Khoảng cách dọc tiện ích"
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:583
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:598
 msgid "Widgets Font"
 msgstr "Màu phông chữ tiện ích"
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:591
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:606
 msgid "Widgets Font Color"
 msgstr "Màu phông chữ tiện ích"
 
 #: framework/features/header/items/account/options.php:1927,
 #: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:134,
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:613,
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:628,
 #: framework/premium/features/premium-header/items/contacts/options.php:635,
 #: framework/premium/features/premium-header/items/contacts/options.php:676,
 #: framework/premium/features/premium-header/items/contacts/options.php:715
@@ -5879,7 +6318,7 @@ msgid "Text Initial"
 msgstr "Văn bản ban đầu"
 
 #: framework/features/header/items/account/options.php:1939,
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:624,
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:639,
 #: framework/premium/features/premium-header/items/contacts/options.php:647,
 #: framework/premium/features/premium-header/items/contacts/options.php:687,
 #: framework/premium/features/premium-header/items/contacts/options.php:726
@@ -5918,7 +6357,7 @@ msgid "Panel Background"
 msgstr "Nền bảng điều khiển"
 
 #: framework/premium/features/content-blocks/options/popup.php:615,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:743
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:779
 msgid "Close Icon Color"
 msgstr "Mầu biểu tượng thoát"
 
@@ -6101,7 +6540,7 @@ msgstr "Trước bình luận"
 #: framework/premium/features/content-blocks/hooks-manager.php:320,
 #: framework/premium/features/content-blocks/hooks-manager.php:327,
 #: framework/premium/features/content-blocks/hooks-manager.php:334
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:59
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:60
 msgid "Comments"
 msgstr "Bình luận"
 
@@ -6503,38 +6942,38 @@ msgstr "Sau tài khoản của tôi"
 msgid "WooCommerce Account"
 msgstr "Tài khoản WooCommerce"
 
-#: framework/premium/features/content-blocks/hooks-manager.php:957
+#: framework/premium/features/content-blocks/hooks-manager.php:977
 msgid "WP footer"
 msgstr "Chân trang WP"
 
 #: framework/premium/features/content-blocks/admin-ui.php:266,
-#: framework/premium/features/content-blocks/hooks-manager.php:958,
-#: framework/premium/features/content-blocks/hooks-manager.php:966,
-#: framework/premium/features/content-blocks/hooks-manager.php:974
+#: framework/premium/features/content-blocks/hooks-manager.php:978,
+#: framework/premium/features/content-blocks/hooks-manager.php:986,
+#: framework/premium/features/content-blocks/hooks-manager.php:994
 msgid "Footer"
 msgstr "Chân trang"
 
-#: framework/premium/features/content-blocks/hooks-manager.php:965
+#: framework/premium/features/content-blocks/hooks-manager.php:985
 msgid "Footer before"
 msgstr "Chân trang trước"
 
-#: framework/premium/features/content-blocks/hooks-manager.php:973
+#: framework/premium/features/content-blocks/hooks-manager.php:993
 msgid "Footer after"
 msgstr "Chân trang sau"
 
-#: framework/premium/features/content-blocks/hooks-manager.php:989
+#: framework/premium/features/content-blocks/hooks-manager.php:1009
 msgid "Custom Hook (%s)"
 msgstr "Hook tùy chỉnh (%s)"
 
-#: framework/premium/features/content-blocks/hooks-manager.php:995,
-#: framework/premium/features/content-blocks/options/hook.php:109
-#: framework/premium/static/js/options/MultipleLocationsSelect.js:90
+#: framework/premium/features/content-blocks/hooks-manager.php:1015,
+#: framework/premium/features/content-blocks/options/hook.php:116
+#: framework/premium/static/js/options/MultipleLocationsSelect.js:94
 msgid "After Block Number"
 msgstr "Sau số khối"
 
-#: framework/premium/features/content-blocks/hooks-manager.php:1001,
-#: framework/premium/features/content-blocks/options/hook.php:126
-#: framework/premium/static/js/options/MultipleLocationsSelect.js:112
+#: framework/premium/features/content-blocks/hooks-manager.php:1021,
+#: framework/premium/features/content-blocks/options/hook.php:133
+#: framework/premium/static/js/options/MultipleLocationsSelect.js:116
 msgid "Before Heading Number"
 msgstr "Trước số tiêu đề"
 
@@ -6549,10 +6988,12 @@ msgstr "Về tôi"
 #: framework/features/blocks/about-me/options.php:49,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:81,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:709,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:729,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:68,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:99,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:143
+#: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:143,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:166,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:166
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:96
 msgid "Image"
 msgstr "Hình ảnh"
@@ -6564,8 +7005,8 @@ msgstr "Tải lên Hình ảnh"
 #: framework/features/blocks/about-me/options.php:53,
 #: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:96,
 #: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:106,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:749,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:759,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:809,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:819,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:72
 msgid "Select Image"
 msgstr "Chọn hình ảnh"
@@ -6583,7 +7024,7 @@ msgid "Image Ratio"
 msgstr "Tỷ lệ hình ảnh"
 
 #: framework/features/blocks/contact-info/options.php:520,
-#: framework/premium/extensions/shortcuts/customizer.php:292
+#: framework/premium/extensions/shortcuts/customizer.php:307
 msgid "Open link in new tab"
 msgstr "Mở liên kết trong tab mới"
 
@@ -6687,7 +7128,7 @@ msgstr "Lớn"
 
 #: framework/features/blocks/about-me/options.php:200,
 #: framework/features/blocks/contact-info/options.php:557,
-#: framework/features/blocks/share-box/options.php:142,
+#: framework/features/blocks/share-box/options.php:154,
 #: framework/features/blocks/socials/options.php:106,
 #: framework/premium/features/premium-header/items/contacts/options.php:445
 msgid "Icons Shape Type"
@@ -6696,7 +7137,7 @@ msgstr "Loại hình dạng biểu tượng"
 #: framework/features/blocks/about-me/options.php:97,
 #: framework/features/blocks/about-me/options.php:205,
 #: framework/features/blocks/contact-info/options.php:565,
-#: framework/features/blocks/share-box/options.php:149,
+#: framework/features/blocks/share-box/options.php:161,
 #: framework/features/blocks/socials/options.php:113,
 #: framework/premium/features/premium-header/items/contacts/options.php:452
 msgid "Rounded"
@@ -6705,7 +7146,7 @@ msgstr "Làm tròn"
 #: framework/features/blocks/about-me/options.php:98,
 #: framework/features/blocks/about-me/options.php:206,
 #: framework/features/blocks/contact-info/options.php:566,
-#: framework/features/blocks/share-box/options.php:150,
+#: framework/features/blocks/share-box/options.php:162,
 #: framework/features/blocks/socials/options.php:114,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:27,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:81,
@@ -6718,7 +7159,7 @@ msgstr "Hình vuông"
 
 #: framework/features/blocks/about-me/options.php:215,
 #: framework/features/blocks/contact-info/options.php:575,
-#: framework/features/blocks/share-box/options.php:159,
+#: framework/features/blocks/share-box/options.php:171,
 #: framework/features/blocks/socials/options.php:123,
 #: framework/premium/features/premium-header/items/contacts/options.php:464
 msgid "Shape Fill Type"
@@ -6726,7 +7167,7 @@ msgstr "Loại tô hình dạng"
 
 #: framework/features/blocks/about-me/options.php:220,
 #: framework/features/blocks/contact-info/options.php:582,
-#: framework/features/blocks/share-box/options.php:166,
+#: framework/features/blocks/share-box/options.php:178,
 #: framework/features/blocks/socials/options.php:130,
 #: framework/premium/features/premium-header/items/contacts/options.php:472
 msgid "Solid"
@@ -6734,7 +7175,7 @@ msgstr "Mầu đậm"
 
 #: framework/features/blocks/about-me/options.php:219,
 #: framework/features/blocks/contact-info/options.php:581,
-#: framework/features/blocks/share-box/options.php:165,
+#: framework/features/blocks/share-box/options.php:177,
 #: framework/features/blocks/socials/options.php:129,
 #: framework/premium/features/premium-header/items/contacts/options.php:471
 msgid "Outline"
@@ -6765,7 +7206,7 @@ msgstr "Sắp xếp theo"
 msgid "% comments"
 msgstr "% bình luận"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:79
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:80
 msgid "Author Avatar"
 msgstr "Ảnh đại diện tác giả"
 
@@ -6785,7 +7226,7 @@ msgstr "Mở liên kết trong tab mới"
 
 #: framework/features/blocks/about-me/options.php:163,
 #: framework/features/blocks/contact-info/options.php:527,
-#: framework/features/blocks/share-box/options.php:104,
+#: framework/features/blocks/share-box/options.php:117,
 #: framework/features/blocks/socials/options.php:69,
 #: framework/premium/features/premium-header/items/contacts/options.php:411
 msgid "Set links to nofollow"
@@ -7059,14 +7500,14 @@ msgstr "Thời gian đọc"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/helpers.php:191,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:195,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:822
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:842
 #: static/js/editor/blocks/query/edit/layers/useTaxonomiesLayers.js:65
 msgid "All"
 msgstr "Tất cả"
 
 #: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:92,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:743
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:74
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:803
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:75
 msgid "Featured Image"
 msgstr "Hình ảnh nổi bật"
 
@@ -7074,13 +7515,8 @@ msgstr "Hình ảnh nổi bật"
 msgid "Accent Color"
 msgstr "Màu nhấn"
 
-#: framework/premium/extensions/shortcuts/views/bar.php:51,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:263
-msgid "Wish List"
-msgstr "Danh sách Yêu thích"
-
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:150,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:211
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:209
 msgid "Add to wishlist"
 msgstr "Thêm vào yêu thích"
 
@@ -7102,8 +7538,8 @@ msgid "All Users"
 msgstr "Tất cả người dùng"
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:40
-msgid "Wish List Page"
-msgstr "Trang Danh sách Yêu thích"
+msgid "Wishlist Page"
+msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:46
 msgid "The page you select here will display the wish list for your logged out users."
@@ -7133,7 +7569,8 @@ msgid "You don't have any products in your wish list yet."
 msgstr "Bạn chưa có sản phẩm nào trong danh sách yêu thích."
 
 #: framework/premium/extensions/woocommerce-extra/features/archive-card/feature.php:56,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/table.php:40
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:54,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:82
 msgid "Add to cart"
 msgstr "Thêm vào giỏ hàng"
 
@@ -7150,7 +7587,7 @@ msgstr "Hình ảnh biến thể Blocksy"
 
 #: framework/premium/features/content-blocks/options/404.php:33,
 #: framework/premium/features/content-blocks/options/header.php:55,
-#: framework/premium/features/content-blocks/options/hook.php:148,
+#: framework/premium/features/content-blocks/options/hook.php:159,
 #: framework/premium/features/content-blocks/options/maintenance.php:30,
 #: framework/premium/features/content-blocks/options/nothing_found.php:51,
 #: framework/premium/features/content-blocks/options/popup.php:41
@@ -7160,7 +7597,7 @@ msgstr "Cấu trúc vùng chứa"
 #: framework/premium/features/content-blocks/options/404.php:65,
 #: framework/premium/features/content-blocks/options/archive.php:132,
 #: framework/premium/features/content-blocks/options/header.php:83,
-#: framework/premium/features/content-blocks/options/hook.php:181,
+#: framework/premium/features/content-blocks/options/hook.php:192,
 #: framework/premium/features/content-blocks/options/maintenance.php:62,
 #: framework/premium/features/content-blocks/options/nothing_found.php:83,
 #: framework/premium/features/content-blocks/options/single.php:64
@@ -7170,7 +7607,7 @@ msgstr "Chiều rộng hẹp"
 #: framework/premium/features/content-blocks/options/404.php:70,
 #: framework/premium/features/content-blocks/options/archive.php:137,
 #: framework/premium/features/content-blocks/options/header.php:88,
-#: framework/premium/features/content-blocks/options/hook.php:186,
+#: framework/premium/features/content-blocks/options/hook.php:197,
 #: framework/premium/features/content-blocks/options/maintenance.php:67,
 #: framework/premium/features/content-blocks/options/nothing_found.php:88,
 #: framework/premium/features/content-blocks/options/single.php:69
@@ -7180,7 +7617,7 @@ msgstr "Chiều rộng bình thường"
 #: framework/premium/features/content-blocks/options/404.php:76,
 #: framework/premium/features/content-blocks/options/archive.php:153,
 #: framework/premium/features/content-blocks/options/header.php:94,
-#: framework/premium/features/content-blocks/options/hook.php:192,
+#: framework/premium/features/content-blocks/options/hook.php:203,
 #: framework/premium/features/content-blocks/options/maintenance.php:73,
 #: framework/premium/features/content-blocks/options/nothing_found.php:94,
 #: framework/premium/features/content-blocks/options/single.php:85
@@ -7190,7 +7627,7 @@ msgstr "Loại khu vực nội dung"
 #: framework/premium/features/content-blocks/options/404.php:90,
 #: framework/premium/features/content-blocks/options/archive.php:167,
 #: framework/premium/features/content-blocks/options/header.php:108,
-#: framework/premium/features/content-blocks/options/hook.php:206,
+#: framework/premium/features/content-blocks/options/hook.php:217,
 #: framework/premium/features/content-blocks/options/maintenance.php:87,
 #: framework/premium/features/content-blocks/options/nothing_found.php:108
 msgid "Content Area Vertical Spacing"
@@ -7199,7 +7636,7 @@ msgstr "Khoảng cách dọc khu vực nội dung"
 #: framework/premium/features/content-blocks/options/404.php:102,
 #: framework/premium/features/content-blocks/options/archive.php:179,
 #: framework/premium/features/content-blocks/options/header.php:120,
-#: framework/premium/features/content-blocks/options/hook.php:218,
+#: framework/premium/features/content-blocks/options/hook.php:229,
 #: framework/premium/features/content-blocks/options/maintenance.php:99,
 #: framework/premium/features/content-blocks/options/nothing_found.php:120,
 #: framework/premium/features/content-blocks/options/single.php:111
@@ -7209,7 +7646,7 @@ msgstr "Trên cùng & Dưới cùng"
 #: framework/premium/features/content-blocks/options/404.php:105,
 #: framework/premium/features/content-blocks/options/archive.php:182,
 #: framework/premium/features/content-blocks/options/header.php:123,
-#: framework/premium/features/content-blocks/options/hook.php:221,
+#: framework/premium/features/content-blocks/options/hook.php:232,
 #: framework/premium/features/content-blocks/options/maintenance.php:102,
 #: framework/premium/features/content-blocks/options/nothing_found.php:123,
 #: framework/premium/features/content-blocks/options/single.php:114
@@ -7219,7 +7656,7 @@ msgstr "Chỉ đầu trang"
 #: framework/premium/features/content-blocks/options/404.php:108,
 #: framework/premium/features/content-blocks/options/archive.php:185,
 #: framework/premium/features/content-blocks/options/header.php:126,
-#: framework/premium/features/content-blocks/options/hook.php:224,
+#: framework/premium/features/content-blocks/options/hook.php:235,
 #: framework/premium/features/content-blocks/options/maintenance.php:105,
 #: framework/premium/features/content-blocks/options/nothing_found.php:126,
 #: framework/premium/features/content-blocks/options/single.php:117
@@ -7231,98 +7668,98 @@ msgid "Location & Priority"
 msgstr "Vị trí & ưu tiên"
 
 #: framework/premium/features/content-blocks/options/hook.php:23,
-#: framework/premium/features/content-blocks/options/hook.php:93
-#: framework/premium/static/js/options/MultipleLocationsSelect.js:72
+#: framework/premium/features/content-blocks/options/hook.php:100
+#: framework/premium/static/js/options/MultipleLocationsSelect.js:76
 msgid "Custom Hook"
 msgstr "Hook tùy chỉnh"
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:710
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:730
 msgid "Mixed"
 msgstr "Hỗn hợp"
 
 #: framework/premium/features/content-blocks/options/popup.php:438,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:626
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:628
 msgid "Popup Position"
 msgstr "Vị trí popup"
 
 #: framework/premium/features/content-blocks/options/popup.php:384,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:571
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:573
 msgid "Popup Size"
 msgstr "Kích thước popup"
 
 #: framework/premium/features/content-blocks/options/popup.php:390,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:578
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:580
 msgid "Small Size"
 msgstr "Kích cỡ nhỏ"
 
 #: framework/premium/features/content-blocks/options/popup.php:391,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:579
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:581
 msgid "Medium Size"
 msgstr "Kích thước trung bình"
 
 #: framework/premium/features/content-blocks/options/popup.php:392,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:580
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:582
 msgid "Large Size"
 msgstr "Kích thước lớn"
 
 #: framework/premium/features/content-blocks/options/popup.php:393,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:581
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:583
 msgid "Custom Size"
 msgstr "Kích thước tùy chỉnh"
 
 #: framework/premium/features/content-blocks/options/popup.php:403,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:591
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:593
 msgid "Max Width"
 msgstr "Chiều rộng tối đa"
 
 #: framework/premium/features/content-blocks/options/popup.php:419,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:607
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:609
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:510
 msgid "Max Height"
 msgstr "Chiều cao tối đa"
 
 #: framework/premium/features/content-blocks/options/popup.php:339,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:523
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:525
 msgid "Popup Animation"
 msgstr "Hoạt hình cửa sổ bật lên"
 
 #: framework/premium/features/content-blocks/options/popup.php:345,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:529
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:531
 msgid "Fade in fade out"
 msgstr "Dần dần mờ dần"
 
 #: framework/premium/features/content-blocks/options/popup.php:346,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:530
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:532
 msgid "Zoom in zoom out"
 msgstr "Phóng to thu nhỏ"
 
 #: framework/premium/features/content-blocks/options/popup.php:347,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:531
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:533
 msgid "Slide in from left"
 msgstr "Trượt vào từ trái"
 
 #: framework/premium/features/content-blocks/options/popup.php:348,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:532
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:534
 msgid "Slide in from right"
 msgstr "Trượt vào từ phải"
 
 #: framework/premium/features/content-blocks/options/popup.php:349,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:533
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:535
 msgid "Slide in from top"
 msgstr "Trượt vào từ trên"
 
 #: framework/premium/features/content-blocks/options/popup.php:350,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:534
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:536
 msgid "Slide in from bottom"
 msgstr "Trượt vào từ dưới"
 
 #: framework/premium/features/content-blocks/options/popup.php:355,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:540
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:542
 msgid "Animation Speed"
 msgstr "Tốc độ hoạt hình"
 
 #: framework/premium/features/content-blocks/options/popup.php:372,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:558
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:560
 msgid "Entrance Value"
 msgstr "Giá trị nhập"
 
@@ -7377,14 +7814,14 @@ msgid "Set after how much time (in seconds) the popup block will appear."
 msgstr "Đặt sau bao nhiêu thời gian (theo giây), khối cửa sổ bật lên sẽ xuất hiện."
 
 #: framework/premium/features/content-blocks/options/popup.php:522,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:653
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:676
 msgid "Padding"
 msgstr "Lề trong"
 
 #: framework/features/header/items/account/options.php:2034,
 #: framework/premium/features/content-blocks/options/popup.php:533,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:298,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:665,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:688,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:455,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:330,
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:194
@@ -7392,7 +7829,7 @@ msgid "Border Radius"
 msgstr "Bán kính viền"
 
 #: framework/premium/features/content-blocks/options/popup.php:563,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:643
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:666
 msgid "Popup Offset"
 msgstr "Khoảng cách cửa sổ bật lên"
 
@@ -7429,7 +7866,7 @@ msgid "Outside"
 msgstr "Bên ngoài"
 
 #: framework/premium/features/content-blocks/options/popup.php:679,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:697,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:720,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:299,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:72
 msgid "Popup Background"
@@ -7536,7 +7973,7 @@ msgid "Margin"
 msgstr "Lề ngoài"
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:106,
-#: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/view.php:47
+#: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/view.php:45
 msgid "Dark Mode"
 msgstr "Chuyển chế độ tối"
 
@@ -7587,7 +8024,7 @@ msgstr "Ẩn ngôn ngữ hiện tại"
 #: framework/features/header/items/account/options.php:1890,
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:59
 msgid "Dropdown Options"
-msgstr "Tùy chọn Menu thả xuống"
+msgstr "Tùy ch��n Menu thả xuống"
 
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:70
 msgid "Dropdown Top Offset"
@@ -7657,10 +8094,10 @@ msgstr "Khu vực tiện ích"
 
 #: framework/extensions/newsletter-subscribe/admin-static/js/ListPicker.js:14
 #: framework/extensions/newsletter-subscribe/admin-static/js/ListPicker/Implementation.js:72
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:318
-#: static/js/dashboard/NoTheme.js:62 static/js/dashboard/VersionMismatch.js:59
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:362
+#: static/js/dashboard/NoTheme.js:64 static/js/dashboard/VersionMismatch.js:61
 #: static/js/dashboard/screens/SiteExport.js:310
-#: static/js/notifications/VersionMismatchNotice.js:76
+#: static/js/notifications/VersionMismatchNotice.js:73
 msgid "Loading..."
 msgstr "Đang tải..."
 
@@ -7669,25 +8106,25 @@ msgid "Invalid API Key..."
 msgstr "Mã API không hợp lệ..."
 
 #: framework/extensions/newsletter-subscribe/admin-static/js/ListPicker/Implementation.js:101
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/ListPicker.js:118
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/ListPicker.js:119
 msgid "Select list..."
 msgstr "Chọn danh sách..."
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:198
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:218
 msgid "More information on how to generate an API key for Mailchimp can be found %shere%s."
 msgstr "Thêm thông tin về cách tạo một API key cho Mailchimp có thể được tìm thấy %stại đây%s."
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:266
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:286
 msgid "More information on how to generate an API key for ConvertKit can be found %shere%s."
 msgstr "Thêm thông tin về cách tạo một API key cho ConvertKit có thể được tìm thấy %stại đây%s."
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:165
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:184
 msgid "API Key"
 msgstr "API Key"
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:319
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:363
 #: framework/extensions/product-reviews/static/js/ProductReviews.js:94
-#: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:278
+#: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:280
 #: framework/premium/extensions/sidebars/static/js/SettingsManager.js:111
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:910
 #: framework/premium/static/js/footer/EditConditions.js:143
@@ -7695,7 +8132,7 @@ msgstr "API Key"
 msgid "Save Settings"
 msgstr "Lưu cài đặt"
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:134
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:153
 msgid "Pick Mailing Service"
 msgstr "Chọn dịch vụ gửi email"
 
@@ -7768,7 +8205,7 @@ msgid "Choose"
 msgstr "Chọn"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:127
-#: static/js/options/ConditionsManager/SingleCondition.js:89
+#: static/js/options/ConditionsManager/SingleCondition.js:95
 msgid "Select variation"
 msgstr "Chọn biến thể"
 
@@ -7801,7 +8238,7 @@ msgstr "Thêm biến thể"
 msgid "Download a font and serve it directly from your server, this is handy for those who want to comply with GDPR regulations or serve the font via CDN."
 msgstr "Tải xuống phông chữ và phân phối phông chữ trực tiếp từ máy chủ của bạn, điều này rất hữu ích cho những ai muốn tuân thủ các quy định của GDPR hoặc phân phối phông chữ qua CDN."
 
-#: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:187
+#: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:189
 msgid "Item Settings"
 msgstr "Cài đặt mục"
 
@@ -7927,7 +8364,7 @@ msgstr "Ẩn tiện ích mở rộng gắn nhãn trắng"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:891
 msgid "Please note that the white label extension will be hidden if this option is enabled. In order to bring it back you have to hit the SHIFT key and click on the dashboard logo."
-msgstr "Lưu ý tiện ích mở rộng gắn nhãn trắng sẽ bị ẩn nếu tùy chọn này được kích hoạt. Để mở lại, bạn phải nhấn phím SHIFT và nhấp vào biểu tượng bảng điều khiển."
+msgstr "Lưu ý tiện ích mở rộng gắn nhãn trắng sẽ bị ẩn nếu tùy ch���n này được kích hoạt. Để mở lại, bạn phải nhấn phím SHIFT và nhấp vào biểu tượng bảng điều khiển."
 
 #: framework/premium/static/js/footer/CloneItem.js:66
 #: framework/premium/static/js/header/CloneItem.js:66
@@ -8001,7 +8438,7 @@ msgid "You are about to remove a custom footer, are you sure you want to continu
 msgstr "Bạn sắp xóa chân trang tùy chỉnh, bạn có chắc chắn muốn tiếp tục không?"
 
 #: framework/premium/static/js/footer/PanelsManager.js:212
-#: framework/premium/static/js/hooks/CodeEditor.js:188
+#: framework/premium/static/js/hooks/CodeEditor.js:189
 #: static/js/header/PanelsManager.js:217
 #: static/js/options/CustomizerOptionsManager.js:463
 msgid "Cancel"
@@ -8019,12 +8456,12 @@ msgid "Edit Conditions"
 msgstr "Sửa điều kiện"
 
 #. translators: %s: PHP version
-#: blocksy-companion.php:178
+#: blocksy-companion.php:182
 msgid "Blocksy requires PHP version %s+, plugin is currently NOT RUNNING."
 msgstr "Blocksy yêu cầu phiên bản PHP %s+, plugin hiện KHÔNG CHẠY."
 
 #. translators: %s: WordPress version
-#: blocksy-companion.php:189
+#: blocksy-companion.php:193
 msgid "Blocksy requires WordPress version %s+. Because you are using an earlier version, the plugin is currently NOT RUNNING."
 msgstr "Blocksy yêu cầu phiên bản WordPress %s+. Bởi vì bạn đang sử dụng phiên bản cũ hơn, plugin hiện KHÔNG CHẠY."
 
@@ -8138,7 +8575,7 @@ msgstr "%s %s Phân loại"
 msgid "Entire Website"
 msgstr "Toàn bộ trang web"
 
-#: framework/features/conditions/rules/basic.php:41
+#: framework/features/conditions/rules/basic.php:57
 msgid "Basic"
 msgstr "Cơ bản"
 
@@ -8230,7 +8667,7 @@ msgstr "Blog"
 msgid "Front Page"
 msgstr "Trang chính"
 
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:69
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:70
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:157
 msgid "Author"
 msgstr "Tác giả"
@@ -8259,11 +8696,11 @@ msgstr "Vai trò Người dùng"
 msgid "Other"
 msgstr "Khác"
 
-#: framework/features/conditions-manager.php:299
+#: framework/features/conditions-manager.php:307
 msgid "Language"
 msgstr "Ngôn ngữ"
 
-#: framework/features/demo-install.php:181
+#: framework/features/demo-install.php:98
 msgid "Your PHP installation doesn't have support for XML. Please install the <i>xml</i> or <i>simplexml</i> PHP extension in order to be able to install starter sites. You might need to contact your hosting provider to assist you in doing so."
 msgstr "Cài đặt PHP của bạn không có hỗ trợ cho XML. Vui lòng cài đặt phần mở rộng <i>xml</i> hoặc <i>simplexml</i> PHP để có thể cài đặt mẫu web bắt đầu. Bạn có thể cần liên hệ với nhà cung cấp dịch vụ lưu trữ của mình để hỗ trợ bạn làm việc này."
 
@@ -8326,12 +8763,12 @@ msgstr "Hiển thị hộp chấp nhận cookie để tuân thủ quy định v�
 #: framework/extensions/trending/customizer.php:173,
 #: framework/features/header/header-options.php:6,
 #: framework/premium/extensions/mega-menu/options.php:6,
-#: framework/premium/extensions/shortcuts/customizer.php:667,
+#: framework/premium/extensions/shortcuts/customizer.php:761,
 #: framework/features/header/items/account/options.php:330,
 #: framework/premium/features/content-blocks/options/404.php:55,
 #: framework/premium/features/content-blocks/options/archive.php:122,
 #: framework/premium/features/content-blocks/options/header.php:73,
-#: framework/premium/features/content-blocks/options/hook.php:171,
+#: framework/premium/features/content-blocks/options/hook.php:182,
 #: framework/premium/features/content-blocks/options/maintenance.php:52,
 #: framework/premium/features/content-blocks/options/nothing_found.php:73,
 #: framework/premium/features/content-blocks/options/popup.php:30,
@@ -8340,12 +8777,13 @@ msgstr "Hiển thị hộp chấp nhận cookie để tuân thủ quy định v�
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:35,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:10,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:279,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:518,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:520,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:41,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:120,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:378,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:9,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:20,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:10,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:66,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:10,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:11,
@@ -8369,32 +8807,32 @@ msgid "General"
 msgstr "Tổng quan"
 
 #: framework/extensions/cookies-consent/customizer.php:28,
-#: framework/premium/extensions/shortcuts/customizer.php:679,
+#: framework/premium/extensions/shortcuts/customizer.php:773,
 #: framework/features/header/items/account/options.php:447,
 #: framework/features/header/items/account/options.php:821,
 #: framework/features/header/items/account/options.php:909,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:23,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:48,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:373,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:375,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:56,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:98,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:101,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:55,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:56
 msgid "Type 1"
 msgstr "Loại 1"
 
 #: framework/extensions/cookies-consent/customizer.php:33,
-#: framework/premium/extensions/shortcuts/customizer.php:684,
+#: framework/premium/extensions/shortcuts/customizer.php:778,
 #: framework/features/header/items/account/options.php:457,
 #: framework/features/header/items/account/options.php:831,
 #: framework/features/header/items/account/options.php:919,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:28,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:53,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:374,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:376,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:36,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:61,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:103,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:106,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:60,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:61
 msgid "Type 2"
@@ -8478,12 +8916,12 @@ msgstr "Chấp nhận"
 #: framework/extensions/trending/customizer.php:582,
 #: framework/features/header/header-options.php:203,
 #: framework/premium/extensions/mega-menu/options.php:567,
-#: framework/premium/extensions/shortcuts/customizer.php:911,
+#: framework/premium/extensions/shortcuts/customizer.php:1032,
 #: framework/features/header/items/account/options.php:1107,
 #: framework/premium/features/content-blocks/options/404.php:119,
 #: framework/premium/features/content-blocks/options/archive.php:196,
 #: framework/premium/features/content-blocks/options/header.php:137,
-#: framework/premium/features/content-blocks/options/hook.php:235,
+#: framework/premium/features/content-blocks/options/hook.php:246,
 #: framework/premium/features/content-blocks/options/maintenance.php:116,
 #: framework/premium/features/content-blocks/options/nothing_found.php:137,
 #: framework/premium/features/content-blocks/options/popup.php:517,
@@ -8491,13 +8929,14 @@ msgstr "Chấp nhận"
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:147,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:178,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:169,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:404,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:638,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:406,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:661,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:289,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:458,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:108,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:253,
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:555,
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:570,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:124,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:132,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:190,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:66,
@@ -8517,7 +8956,7 @@ msgstr "Thiết kế"
 #: framework/extensions/cookies-consent/customizer.php:203,
 #: framework/extensions/cookies-consent/customizer.php:270,
 #: framework/premium/extensions/mega-menu/options.php:879,
-#: framework/premium/extensions/shortcuts/customizer.php:937,
+#: framework/premium/extensions/shortcuts/customizer.php:1058,
 #: framework/features/header/items/account/options.php:1518,
 #: framework/features/header/items/account/options.php:1902,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:202,
@@ -8569,9 +9008,9 @@ msgstr "Mầu phông chữ"
 #: framework/premium/extensions/mega-menu/options.php:845,
 #: framework/premium/extensions/mega-menu/options.php:892,
 #: framework/premium/extensions/mega-menu/options.php:911,
-#: framework/premium/extensions/shortcuts/customizer.php:955,
-#: framework/premium/extensions/shortcuts/customizer.php:989,
-#: framework/premium/extensions/shortcuts/customizer.php:1021,
+#: framework/premium/extensions/shortcuts/customizer.php:1076,
+#: framework/premium/extensions/shortcuts/customizer.php:1110,
+#: framework/premium/extensions/shortcuts/customizer.php:1142,
 #: framework/features/header/items/account/options.php:1198,
 #: framework/features/header/items/account/options.php:1242,
 #: framework/features/header/items/account/options.php:1284,
@@ -8600,15 +9039,17 @@ msgstr "Mầu phông chữ"
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:270,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:196,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:232,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:431,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:461,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:761,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:433,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:463,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:797,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:480,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:511,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:126,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:349,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:383,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:422,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:151,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:180,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:159,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:189,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:209,
@@ -8699,9 +9140,9 @@ msgstr "Ban đầu"
 #: framework/extensions/trending/customizer.php:804,
 #: framework/extensions/trending/customizer.php:895,
 #: framework/premium/extensions/mega-menu/options.php:850,
-#: framework/premium/extensions/shortcuts/customizer.php:961,
-#: framework/premium/extensions/shortcuts/customizer.php:995,
-#: framework/premium/extensions/shortcuts/customizer.php:1027,
+#: framework/premium/extensions/shortcuts/customizer.php:1082,
+#: framework/premium/extensions/shortcuts/customizer.php:1116,
+#: framework/premium/extensions/shortcuts/customizer.php:1148,
 #: framework/features/header/items/account/options.php:1207,
 #: framework/features/header/items/account/options.php:1250,
 #: framework/features/header/items/account/options.php:1292,
@@ -8722,7 +9163,7 @@ msgstr "Ban đầu"
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:381,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:410,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1436,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:766,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:802,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:486,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:517,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:354,
@@ -8835,7 +9276,7 @@ msgstr "Biểu mẫu đăng ký"
 #: framework/features/blocks/contact-info/options.php:460,
 #: framework/features/blocks/share-box/options.php:14,
 #: framework/features/blocks/socials/options.php:14,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:524,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:582,
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:327,
 #: framework/premium/features/premium-header/items/contacts/options.php:87,
 #: framework/premium/features/premium-header/items/contacts/options.php:132,
@@ -8844,7 +9285,7 @@ msgstr "Biểu mẫu đăng ký"
 #: framework/premium/features/premium-header/items/contacts/options.php:268,
 #: framework/premium/features/premium-header/items/contacts/options.php:313,
 #: framework/premium/features/premium-header/items/contacts/options.php:358
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:44
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:45
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:125
 msgid "Title"
 msgstr "Tiêu đề"
@@ -8893,7 +9334,7 @@ msgstr "Nguồn danh sách"
 #: framework/features/blocks/contact-info/options.php:490,
 #: framework/features/header/items/account/options.php:385,
 #: framework/features/header/items/account/options.php:766,
-#: framework/premium/features/content-blocks/options/hook.php:155,
+#: framework/premium/features/content-blocks/options/hook.php:166,
 #: framework/premium/extensions/post-types-extra/features/related-slideshow/feature.php:19,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:12,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:17,
@@ -8917,21 +9358,22 @@ msgstr "Mặc định"
 #: framework/features/blocks/contact-info/options.php:428,
 #: framework/features/blocks/contact-info/options.php:491,
 #: framework/features/blocks/dynamic-data/options.php:64,
-#: framework/features/blocks/share-box/options.php:136,
+#: framework/features/blocks/share-box/options.php:148,
 #: framework/features/blocks/socials/options.php:100,
-#: framework/premium/extensions/shortcuts/customizer.php:248,
-#: framework/premium/extensions/shortcuts/customizer.php:272,
+#: framework/features/conditions/rules/custom.php:33,
+#: framework/premium/extensions/shortcuts/customizer.php:260,
+#: framework/premium/extensions/shortcuts/customizer.php:287,
 #: framework/features/header/items/account/options.php:25,
 #: framework/features/header/items/account/options.php:389,
 #: framework/features/header/items/account/options.php:770,
 #: framework/premium/features/content-blocks/options/archive.php:75,
-#: framework/premium/features/content-blocks/options/hook.php:157,
+#: framework/premium/features/content-blocks/options/hook.php:168,
 #: framework/premium/features/content-blocks/options/popup.php:287,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:616,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:196,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:188,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:41,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:823,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:843,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:18,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:18
 #: static/js/editor/blocks/dynamic-data/utils.js:10
@@ -8940,7 +9382,7 @@ msgstr "Tùy chỉnh"
 
 #: framework/extensions/newsletter-subscribe/customizer.php:61,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:50
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:180
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:199
 msgid "List ID"
 msgstr "ID danh sách"
 
@@ -8992,19 +9434,20 @@ msgstr "Đăng ký"
 
 #: framework/extensions/newsletter-subscribe/customizer.php:149,
 #: framework/extensions/trending/customizer.php:516,
-#: framework/premium/extensions/shortcuts/customizer.php:45,
-#: framework/premium/extensions/shortcuts/customizer.php:107,
-#: framework/premium/extensions/shortcuts/customizer.php:169,
-#: framework/premium/extensions/shortcuts/customizer.php:225,
-#: framework/premium/extensions/shortcuts/customizer.php:311,
-#: framework/premium/extensions/shortcuts/customizer.php:370,
-#: framework/premium/extensions/shortcuts/customizer.php:426,
-#: framework/premium/extensions/shortcuts/customizer.php:493,
-#: framework/premium/extensions/shortcuts/customizer.php:554,
-#: framework/premium/extensions/shortcuts/customizer.php:615,
-#: framework/premium/extensions/shortcuts/customizer.php:875,
+#: framework/premium/extensions/shortcuts/customizer.php:48,
+#: framework/premium/extensions/shortcuts/customizer.php:113,
+#: framework/premium/extensions/shortcuts/customizer.php:178,
+#: framework/premium/extensions/shortcuts/customizer.php:237,
+#: framework/premium/extensions/shortcuts/customizer.php:326,
+#: framework/premium/extensions/shortcuts/customizer.php:388,
+#: framework/premium/extensions/shortcuts/customizer.php:447,
+#: framework/premium/extensions/shortcuts/customizer.php:517,
+#: framework/premium/extensions/shortcuts/customizer.php:581,
+#: framework/premium/extensions/shortcuts/customizer.php:645,
+#: framework/premium/extensions/shortcuts/customizer.php:709,
+#: framework/premium/extensions/shortcuts/customizer.php:996,
 #: framework/premium/features/content-blocks/options/header.php:167,
-#: framework/premium/features/content-blocks/options/hook.php:289,
+#: framework/premium/features/content-blocks/options/hook.php:300,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:155,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:423,
 #: framework/premium/extensions/post-types-extra/features/read-time/read-progress/customizer.php:43
@@ -9018,34 +9461,37 @@ msgstr "Hiển thị"
 #: framework/features/blocks/contact-info/options.php:24,
 #: framework/features/blocks/search/options.php:168,
 #: framework/premium/extensions/mega-menu/options.php:413,
-#: framework/premium/extensions/shortcuts/customizer.php:59,
-#: framework/premium/extensions/shortcuts/customizer.php:121,
-#: framework/premium/extensions/shortcuts/customizer.php:183,
-#: framework/premium/extensions/shortcuts/customizer.php:239,
-#: framework/premium/extensions/shortcuts/customizer.php:326,
-#: framework/premium/extensions/shortcuts/customizer.php:384,
-#: framework/premium/extensions/shortcuts/customizer.php:440,
-#: framework/premium/extensions/shortcuts/customizer.php:507,
-#: framework/premium/extensions/shortcuts/customizer.php:568,
-#: framework/premium/extensions/shortcuts/customizer.php:629,
-#: framework/premium/extensions/shortcuts/customizer.php:767,
-#: framework/premium/extensions/shortcuts/customizer.php:889,
+#: framework/premium/extensions/shortcuts/customizer.php:62,
+#: framework/premium/extensions/shortcuts/customizer.php:127,
+#: framework/premium/extensions/shortcuts/customizer.php:192,
+#: framework/premium/extensions/shortcuts/customizer.php:251,
+#: framework/premium/extensions/shortcuts/customizer.php:341,
+#: framework/premium/extensions/shortcuts/customizer.php:402,
+#: framework/premium/extensions/shortcuts/customizer.php:461,
+#: framework/premium/extensions/shortcuts/customizer.php:531,
+#: framework/premium/extensions/shortcuts/customizer.php:595,
+#: framework/premium/extensions/shortcuts/customizer.php:659,
+#: framework/premium/extensions/shortcuts/customizer.php:723,
+#: framework/premium/extensions/shortcuts/customizer.php:861,
+#: framework/premium/extensions/shortcuts/customizer.php:918,
+#: framework/premium/extensions/shortcuts/customizer.php:1010,
 #: framework/features/header/items/account/options.php:532,
 #: framework/features/header/items/account/options.php:995,
 #: framework/premium/features/content-blocks/options/header.php:178,
-#: framework/premium/features/content-blocks/options/hook.php:300,
+#: framework/premium/features/content-blocks/options/hook.php:311,
 #: framework/premium/features/content-blocks/options/popup.php:506,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:70,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:168,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:394,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:396,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:651,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:436,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:42,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:61,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:80,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:98,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:90,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:255,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:283,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:258,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:286,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:49,
 #: framework/premium/features/premium-header/items/contacts/options.php:32,
 #: framework/premium/features/premium-header/items/contacts/options.php:553,
@@ -9062,36 +9508,39 @@ msgstr "Máy tính"
 #: framework/extensions/trending/customizer.php:529,
 #: framework/features/blocks/contact-info/options.php:25,
 #: framework/features/blocks/search/options.php:169,
-#: framework/premium/extensions/shortcuts/customizer.php:60,
-#: framework/premium/extensions/shortcuts/customizer.php:122,
-#: framework/premium/extensions/shortcuts/customizer.php:184,
-#: framework/premium/extensions/shortcuts/customizer.php:240,
-#: framework/premium/extensions/shortcuts/customizer.php:327,
-#: framework/premium/extensions/shortcuts/customizer.php:385,
-#: framework/premium/extensions/shortcuts/customizer.php:441,
-#: framework/premium/extensions/shortcuts/customizer.php:508,
-#: framework/premium/extensions/shortcuts/customizer.php:569,
-#: framework/premium/extensions/shortcuts/customizer.php:630,
-#: framework/premium/extensions/shortcuts/customizer.php:768,
-#: framework/premium/extensions/shortcuts/customizer.php:890,
+#: framework/premium/extensions/shortcuts/customizer.php:63,
+#: framework/premium/extensions/shortcuts/customizer.php:128,
+#: framework/premium/extensions/shortcuts/customizer.php:193,
+#: framework/premium/extensions/shortcuts/customizer.php:252,
+#: framework/premium/extensions/shortcuts/customizer.php:342,
+#: framework/premium/extensions/shortcuts/customizer.php:403,
+#: framework/premium/extensions/shortcuts/customizer.php:462,
+#: framework/premium/extensions/shortcuts/customizer.php:532,
+#: framework/premium/extensions/shortcuts/customizer.php:596,
+#: framework/premium/extensions/shortcuts/customizer.php:660,
+#: framework/premium/extensions/shortcuts/customizer.php:724,
+#: framework/premium/extensions/shortcuts/customizer.php:862,
+#: framework/premium/extensions/shortcuts/customizer.php:919,
+#: framework/premium/extensions/shortcuts/customizer.php:1011,
 #: framework/features/header/items/account/options.php:533,
 #: framework/features/header/items/account/options.php:996,
 #: framework/features/header/items/account/options.php:2069,
 #: framework/premium/features/content-blocks/options/header.php:179,
-#: framework/premium/features/content-blocks/options/hook.php:301,
+#: framework/premium/features/content-blocks/options/hook.php:312,
 #: framework/premium/features/content-blocks/options/popup.php:507,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:71,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:452,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:169,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:395,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:397,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:652,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:437,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:43,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:62,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:81,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:99,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:91,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:256,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:284,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:259,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:287,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:50,
 #: framework/premium/features/premium-header/items/contacts/options.php:33,
 #: framework/premium/features/premium-header/items/contacts/options.php:497,
@@ -9117,36 +9566,39 @@ msgstr "Máy tính bảng"
 #: framework/features/blocks/contact-info/options.php:202,
 #: framework/features/blocks/search/options.php:170,
 #: framework/premium/extensions/mega-menu/options.php:414,
-#: framework/premium/extensions/shortcuts/customizer.php:61,
-#: framework/premium/extensions/shortcuts/customizer.php:123,
-#: framework/premium/extensions/shortcuts/customizer.php:185,
-#: framework/premium/extensions/shortcuts/customizer.php:241,
-#: framework/premium/extensions/shortcuts/customizer.php:328,
-#: framework/premium/extensions/shortcuts/customizer.php:386,
-#: framework/premium/extensions/shortcuts/customizer.php:442,
-#: framework/premium/extensions/shortcuts/customizer.php:509,
-#: framework/premium/extensions/shortcuts/customizer.php:570,
-#: framework/premium/extensions/shortcuts/customizer.php:631,
-#: framework/premium/extensions/shortcuts/customizer.php:769,
-#: framework/premium/extensions/shortcuts/customizer.php:891,
+#: framework/premium/extensions/shortcuts/customizer.php:64,
+#: framework/premium/extensions/shortcuts/customizer.php:129,
+#: framework/premium/extensions/shortcuts/customizer.php:194,
+#: framework/premium/extensions/shortcuts/customizer.php:253,
+#: framework/premium/extensions/shortcuts/customizer.php:343,
+#: framework/premium/extensions/shortcuts/customizer.php:404,
+#: framework/premium/extensions/shortcuts/customizer.php:463,
+#: framework/premium/extensions/shortcuts/customizer.php:533,
+#: framework/premium/extensions/shortcuts/customizer.php:597,
+#: framework/premium/extensions/shortcuts/customizer.php:661,
+#: framework/premium/extensions/shortcuts/customizer.php:725,
+#: framework/premium/extensions/shortcuts/customizer.php:863,
+#: framework/premium/extensions/shortcuts/customizer.php:920,
+#: framework/premium/extensions/shortcuts/customizer.php:1012,
 #: framework/features/header/items/account/options.php:534,
 #: framework/features/header/items/account/options.php:997,
 #: framework/features/header/items/account/options.php:2070,
 #: framework/premium/features/content-blocks/options/header.php:180,
-#: framework/premium/features/content-blocks/options/hook.php:302,
+#: framework/premium/features/content-blocks/options/hook.php:313,
 #: framework/premium/features/content-blocks/options/popup.php:508,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:72,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:453,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:170,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:396,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:398,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:653,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:438,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:44,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:63,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:82,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:100,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:92,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:257,
-#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:285,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:260,
+#: framework/premium/extensions/woocommerce-extra/features/product-gallery/feature.php:288,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:51,
 #: framework/premium/features/premium-header/items/contacts/options.php:34,
 #: framework/premium/features/premium-header/items/contacts/options.php:172,
@@ -9167,7 +9619,8 @@ msgstr "Di động"
 
 #: framework/extensions/newsletter-subscribe/customizer.php:175,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:183,
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:418,
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:420,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:138,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:146
 msgid "Title Color"
 msgstr "Màu chữ tiêu đề"
@@ -9234,12 +9687,14 @@ msgstr "Màu nền đầu vào"
 
 #: framework/extensions/newsletter-subscribe/customizer.php:357,
 #: framework/extensions/trending/customizer.php:903,
-#: framework/premium/extensions/shortcuts/customizer.php:1214,
-#: framework/premium/extensions/woocommerce-extra/features/compare/options.php:525
+#: framework/premium/extensions/shortcuts/customizer.php:1335,
+#: framework/premium/extensions/woocommerce-extra/features/compare/options.php:525,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:209
 msgid "Container Background"
 msgstr "Nền vùng chứa"
 
-#: framework/extensions/newsletter-subscribe/customizer.php:373
+#: framework/extensions/newsletter-subscribe/customizer.php:373,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:193
 msgid "Container Border"
 msgstr "Viền Container"
 
@@ -9249,7 +9704,8 @@ msgid "Container Inner Spacing"
 msgstr "Khoảng cách trong vùng chứa"
 
 #: framework/extensions/newsletter-subscribe/customizer.php:422,
-#: framework/premium/extensions/shortcuts/customizer.php:1235
+#: framework/premium/extensions/shortcuts/customizer.php:1368,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:237
 msgid "Container Border Radius"
 msgstr "Góc bo đường viền vùng chứa"
 
@@ -9259,7 +9715,8 @@ msgstr "Tắt biểu mẫu đăng ký"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:253,
 #: framework/features/blocks/about-me/options.php:58,
-#: framework/features/header/items/account/options.php:578
+#: framework/features/header/items/account/options.php:578,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:167
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:128
 msgid "Name"
 msgstr "Tên"
@@ -9269,10 +9726,11 @@ msgstr "Tên"
 #: framework/features/blocks/dynamic-data/options.php:143,
 #: framework/features/blocks/share-box/options.php:97,
 #: framework/features/header/modal/register.php:47,
-#: framework/premium/extensions/shortcuts/customizer.php:130,
-#: framework/premium/extensions/shortcuts/customizer.php:153,
-#: framework/premium/extensions/shortcuts/views/bar.php:47,
-#: framework/premium/features/premium-header/items/contacts/options.php:308
+#: framework/premium/extensions/shortcuts/customizer.php:136,
+#: framework/premium/extensions/shortcuts/customizer.php:162,
+#: framework/premium/extensions/shortcuts/views/bar.php:48,
+#: framework/premium/features/premium-header/items/contacts/options.php:308,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:168
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:23
 msgid "Email"
 msgstr "Email"
@@ -9443,7 +9901,7 @@ msgstr "Tên danh mục mới"
 msgid "%s Settings"
 msgstr "%s Cài đặt"
 
-#: framework/dashboard.php:421, framework/dashboard.php:422,
+#: framework/dashboard.php:476, framework/dashboard.php:477,
 #: framework/extensions/product-reviews/extension.php:619
 msgid "Blocksy"
 msgstr "Blocksy"
@@ -9452,7 +9910,7 @@ msgstr "Blocksy"
 #: framework/extensions/product-reviews/metabox.php:181,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:230,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:394
-#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:131
+#: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:132
 msgid "Rating"
 msgstr "Xếp hạng"
 
@@ -9461,7 +9919,11 @@ msgid "Review Entity"
 msgstr "Lượt nhập đánh giá"
 
 #: framework/extensions/product-reviews/metabox.php:18,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/table.php:39
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/table.php:39,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:34,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:52,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:33,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:33
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:11
 msgid "Product"
 msgstr "Sản phẩm"
@@ -9592,7 +10054,7 @@ msgstr "Làm nổi bật các bài viết hoặc sản phẩm phổ biến nhấ
 
 #: framework/extensions/trending/customizer.php:8,
 #: framework/features/blocks/search/options.php:16,
-#: framework/premium/extensions/shortcuts/views/bar.php:50,
+#: framework/premium/extensions/shortcuts/views/bar.php:51,
 #: framework/premium/features/premium-header/items/search-input/options.php:14
 msgid "Products"
 msgstr "Sản phẩm"
@@ -9733,7 +10195,7 @@ msgstr "Tính năng Trong suốt"
 
 #: framework/extensions/trending/customizer.php:561,
 #: framework/features/header/header-options.php:163,
-#: framework/premium/extensions/shortcuts/customizer.php:896,
+#: framework/premium/extensions/shortcuts/customizer.php:1017,
 #: framework/premium/features/content-blocks/options/header.php:31,
 #: framework/premium/features/content-blocks/options/hook.php:36,
 #: framework/premium/features/content-blocks/options/maintenance.php:5,
@@ -9743,6 +10205,7 @@ msgstr "Tính năng Trong suốt"
 #: framework/premium/features/content-blocks/options/single.php:10,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:443,
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/options.php:5,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:102,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/options.php:24
 #: framework/premium/extensions/sidebars/static/js/SettingsManager.js:50
 #: framework/premium/static/js/footer/EditConditions.js:97
@@ -9754,7 +10217,7 @@ msgstr "Điều kiện hiển thị"
 msgid "Hooks Locations"
 msgstr "Vị trí Hooks"
 
-#: framework/premium/extensions/shortcuts/customizer.php:671,
+#: framework/premium/extensions/shortcuts/customizer.php:765,
 #: framework/premium/features/content-blocks/admin-ui.php:342,
 #: framework/premium/extensions/post-types-extra/features/related-slideshow/feature.php:12,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:5
@@ -9781,16 +10244,16 @@ msgstr "Bật/Tắt"
 
 #: framework/features/blocks/about-me/options.php:204,
 #: framework/features/blocks/contact-info/options.php:564,
-#: framework/features/blocks/share-box/options.php:148,
+#: framework/features/blocks/share-box/options.php:160,
 #: framework/features/blocks/socials/options.php:112,
-#: framework/premium/extensions/shortcuts/customizer.php:859,
+#: framework/premium/extensions/shortcuts/customizer.php:980,
 #: framework/premium/features/content-blocks/admin-ui.php:371,
 #: framework/features/header/items/account/options.php:22,
 #: framework/features/header/items/account/options.php:348,
 #: framework/features/header/items/account/options.php:746,
 #: framework/premium/features/content-blocks/options/hook.php:9,
-#: framework/premium/features/content-blocks/options/hook.php:70,
-#: framework/premium/features/content-blocks/options/hook.php:156,
+#: framework/premium/features/content-blocks/options/hook.php:77,
+#: framework/premium/features/content-blocks/options/hook.php:167,
 #: framework/premium/features/content-blocks/options/popup.php:75,
 #: framework/premium/features/content-blocks/options/popup.php:222,
 #: framework/premium/features/content-blocks/options/popup.php:603,
@@ -9840,12 +10303,12 @@ msgstr "Xuống"
 msgid "Up"
 msgstr "Lên"
 
-#: framework/premium/features/content-blocks.php:320,
-#: framework/premium/features/content-blocks.php:326
+#: framework/premium/features/content-blocks.php:193,
+#: framework/premium/features/content-blocks.php:199
 msgid "Content Blocks"
 msgstr "Khối nội dung"
 
-#: framework/premium/features/content-blocks.php:321,
+#: framework/premium/features/content-blocks.php:194,
 #: framework/premium/extensions/mega-menu/options.php:346,
 #: framework/premium/features/content-blocks/content-block-layer.php:163,
 #: framework/premium/features/content-blocks/content-block-layer.php:214,
@@ -9855,43 +10318,43 @@ msgstr "Khối nội dung"
 msgid "Content Block"
 msgstr "Khối nội dung"
 
-#: framework/premium/features/content-blocks.php:322,
+#: framework/premium/features/content-blocks.php:195,
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/feature.php:138,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:482,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:273
 msgid "Add New"
 msgstr "Thêm mới"
 
-#: framework/premium/features/content-blocks.php:323
+#: framework/premium/features/content-blocks.php:196
 msgid "Add New Content Block"
 msgstr "Thêm mới khối nội dung"
 
-#: framework/premium/features/content-blocks.php:324
+#: framework/premium/features/content-blocks.php:197
 #: framework/premium/static/js/blocks/ContentBlock.js:89
 msgid "Edit Content Block"
 msgstr "Sửa khối nội dung"
 
-#: framework/premium/features/content-blocks.php:325
+#: framework/premium/features/content-blocks.php:198
 #: framework/premium/static/js/hooks/CreateHook.js:33
 msgid "New Content Block"
 msgstr "Khối nội dung mới"
 
-#: framework/premium/features/content-blocks.php:327
+#: framework/premium/features/content-blocks.php:200
 msgid "View Content Block"
 msgstr "Xem khối nội dung"
 
-#: framework/premium/features/content-blocks.php:328
+#: framework/premium/features/content-blocks.php:201
 msgid "Search Content Blocks"
 msgstr "Tìm kiếm khối nội dung"
 
-#: framework/premium/features/content-blocks.php:329,
+#: framework/premium/features/content-blocks.php:202,
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/feature.php:145,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:489,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:280
 msgid "Nothing found"
 msgstr "Không tìm thấy gì"
 
-#: framework/premium/features/content-blocks.php:330,
+#: framework/premium/features/content-blocks.php:203,
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/feature.php:146,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:490,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:281
@@ -9954,7 +10417,7 @@ msgstr "Biểu tượng"
 #: framework/premium/features/premium-header.php:277,
 #: framework/features/blocks/about-me/options.php:168,
 #: framework/features/blocks/contact-info/options.php:538,
-#: framework/features/blocks/share-box/options.php:110,
+#: framework/features/blocks/share-box/options.php:122,
 #: framework/features/blocks/socials/options.php:74,
 #: framework/premium/features/premium-header/items/contacts/options.php:426
 msgid "Icons Size"
@@ -9967,7 +10430,7 @@ msgstr "Vị trí biểu tượng"
 
 #: framework/premium/features/premium-header.php:296,
 #: framework/premium/extensions/mega-menu/options.php:516,
-#: framework/premium/extensions/shortcuts/customizer.php:792,
+#: framework/premium/extensions/shortcuts/customizer.php:886,
 #: framework/features/header/items/account/options.php:561,
 #: framework/features/header/items/account/options.php:1027,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:95,
@@ -9978,7 +10441,7 @@ msgstr "Bên trái"
 
 #: framework/premium/features/premium-header.php:297,
 #: framework/premium/extensions/mega-menu/options.php:517,
-#: framework/premium/extensions/shortcuts/customizer.php:793,
+#: framework/premium/extensions/shortcuts/customizer.php:887,
 #: framework/features/header/items/account/options.php:562,
 #: framework/features/header/items/account/options.php:1031,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:96,
@@ -9995,9 +10458,9 @@ msgstr "Bản tin"
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:13,
 #: framework/features/blocks/contact-info/options.php:39,
 #: framework/premium/extensions/mega-menu/options.php:544,
-#: framework/premium/extensions/shortcuts/customizer.php:1066,
-#: framework/premium/extensions/shortcuts/customizer.php:1108,
-#: framework/premium/extensions/shortcuts/customizer.php:1150,
+#: framework/premium/extensions/shortcuts/customizer.php:1187,
+#: framework/premium/extensions/shortcuts/customizer.php:1229,
+#: framework/premium/extensions/shortcuts/customizer.php:1271,
 #: framework/features/header/items/account/options.php:577,
 #: framework/premium/extensions/woocommerce-extra/features/custom-badges/design-options.php:32,
 #: framework/premium/extensions/woocommerce-extra/features/custom-badges/design-options.php:72,
@@ -10026,10 +10489,11 @@ msgstr "Loại vùng chứa"
 #: framework/premium/features/content-blocks/options/404.php:85,
 #: framework/premium/features/content-blocks/options/archive.php:162,
 #: framework/premium/features/content-blocks/options/header.php:103,
-#: framework/premium/features/content-blocks/options/hook.php:201,
+#: framework/premium/features/content-blocks/options/hook.php:212,
 #: framework/premium/features/content-blocks/options/maintenance.php:82,
 #: framework/premium/features/content-blocks/options/nothing_found.php:103,
-#: framework/premium/features/content-blocks/options/single.php:94
+#: framework/premium/features/content-blocks/options/single.php:94,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:22
 msgid "Boxed"
 msgstr "Đóng hộp"
 

@@ -65,6 +65,11 @@ class BlocksyExtensionNewsletterSubscribePreBoot {
 				'key' => 'convertkit',
 				'value' => 'ConvertKit',
 			],
+
+			[
+				'key' => 'activecampaign',
+				'value' => 'Active Campaign',
+			],
 		];
 
 		if (class_exists(\MailPoet\API\API::class)) {
@@ -113,7 +118,7 @@ class BlocksyExtensionNewsletterSubscribePreBoot {
 
 		$settings = $m->get_settings();
 
-		$lists = $m->fetch_lists($settings['api_key']);
+		$lists = $m->fetch_lists($settings['api_key'], $settings['api_url']);
 
 		wp_send_json_success([
 			'result' => $lists
@@ -137,13 +142,14 @@ class BlocksyExtensionNewsletterSubscribePreBoot {
 			wp_send_json_error();
 		}
 
-		$lists = $m->fetch_lists($this->get_api_key_from_request());
+		$lists = $m->fetch_lists($this->get_api_key_from_request(), $this->get_api_url_from_request());
 
 		if ($save) {
 			if (is_array($lists)) {
 				$m->set_settings([
 					'provider' => $this->get_provider_from_request(),
 					'api_key' => $this->get_api_key_from_request(),
+					'api_url' => $this->get_api_url_from_request(),
 					'list_id' => $this->get_list_id_from_request(),
 				]);
 			}
@@ -168,6 +174,14 @@ class BlocksyExtensionNewsletterSubscribePreBoot {
 		}
 
 		return addslashes($_POST['api_key']);
+	}
+
+	public function get_api_url_from_request() {
+		if (! isset($_POST['api_url'])) {
+			wp_send_json_error();
+		}
+
+		return addslashes($_POST['api_url']);
 	}
 
 	public function get_list_id_from_request() {

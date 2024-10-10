@@ -111,6 +111,30 @@ if ($fill) {
 	}
 }
 
+
+// v.2.0.74 migration
+$share_networks = blocksy_akg('share_networks', $atts, []);
+
+if (empty($share_networks)) {
+	foreach ($atts as $key => $value) {
+		if ($value !== 'yes' && $value !== 'no') {
+			continue;
+		}
+	
+		if (strpos($key, 'share_') !== 0) {
+			continue;
+		}
+	
+		$share_networks[str_replace('share_', '', $key)] = [
+			'id' => str_replace('share_', '', $key),
+			'enabled' => $value === 'yes'
+		];
+	}
+}
+
+$atts['share_networks'] = $share_networks;
+// v.2.0.74 migration
+
 echo blocksy_get_social_share_box([
 	'type' => 'share',
 	'class' => '',

@@ -3,7 +3,7 @@
 namespace Blocksy\Extensions\NewsletterSubscribe;
 
 class MailerliteNewProvider extends Provider {
-	public function fetch_lists($api_key) {
+	public function fetch_lists($api_key, $api_url = '') {
 		if (! $api_key) {
 			return 'api_key_invalid';
 		}

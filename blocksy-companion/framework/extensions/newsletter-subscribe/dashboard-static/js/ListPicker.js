@@ -9,7 +9,7 @@ import Downshift from 'downshift'
 import { __ } from 'ct-i18n'
 import classnames from 'classnames'
 
-const ListPicker = ({ listId, provider, apiKey, onChange }) => {
+const ListPicker = ({ listId, provider, apiKey, apiUrl, onChange }) => {
 	const [lists, setLists] = useState([])
 	const [isLoadingLists, setListsLoading] = useState(false)
 
@@ -35,6 +35,7 @@ const ListPicker = ({ listId, provider, apiKey, onChange }) => {
 		const body = new FormData()
 
 		body.append('api_key', apiKey)
+		body.append('api_url', apiUrl)
 		body.append('provider', provider)
 		body.append(
 			'action',
@@ -80,7 +81,7 @@ const ListPicker = ({ listId, provider, apiKey, onChange }) => {
 		}
 
 		maybeFetchLists()
-	}, [provider, apiKey])
+	}, [provider, apiKey, apiUrl])
 
 	return lists.length === 0 ? (
 		<div className={classnames('ct-select-input', 'ct-no-results')}>

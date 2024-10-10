@@ -36,7 +36,7 @@ class Plugin {
 
 	private $is_blocksy = '__NOT_SET__';
 	public $is_blocksy_data = null;
-	private $desired_blocksy_version = '2.0.70-beta1';
+	private $desired_blocksy_version = '2.0.72-beta1';
 
 	/**
 	 * Instance.

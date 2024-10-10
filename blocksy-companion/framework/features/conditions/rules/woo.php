@@ -83,6 +83,21 @@ if ($filter === 'product_tabs') {
 	];
 }
 
+if ($filter === 'product_waitlist') {
+	$woo_rules = [
+		[
+			'id' => 'product_ids',
+			'title' => __('Product ID', 'blocksy-companion')
+		],
+
+		[
+			'id' => 'product_with_taxonomy_ids',
+			'title' => __('Product with Taxonomy ID', 'blocksy-companion'),
+			'post_type' => 'product'
+		]
+	];
+}
+
 if ($has_woo) {
 	$options = [
 		[

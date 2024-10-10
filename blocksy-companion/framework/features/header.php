@@ -285,10 +285,12 @@ class HeaderAdditions {
 				]
 			);
 
+			$transparent_behaviour = blocksy_expand_responsive_value($transparent_behaviour);
+
 			$transparent_result = [];
 
 			foreach ($transparent_behaviour as $device => $value) {
-				if (!$value) {
+				if (! $value) {
 					continue;
 				}
 
@@ -384,6 +386,13 @@ class HeaderAdditions {
 				]
 			);
 
+			if (! is_array($sticky_behaviour)) {
+				$sticky_behaviour = [
+					'desktop' => $sticky_behaviour,
+					'mobile' => $sticky_behaviour,
+				];
+			}
+
 			$has_sticky_header_result = [
 				'devices' => [],
 
@@ -400,7 +409,7 @@ class HeaderAdditions {
 			];
 
 			foreach ($sticky_behaviour as $device => $value) {
-				if (!$value) {
+				if (! $value) {
 					continue;
 				}
 
@@ -569,7 +578,7 @@ class HeaderAdditions {
 			'logged_in' => true,
 			'logged_out' => true,
 		]);
-		
+
 		if (
 			! $account_user_visibility['logged_out']
 			&&

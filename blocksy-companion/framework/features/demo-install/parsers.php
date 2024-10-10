@@ -502,8 +502,11 @@ class Blocksy_WXR_Parser_Regex {
 	var $terms = [];
 	var $base_url = '';
 
+	private $has_gzip = false;
+
 	function __construct() {
-		$this->has_gzip = is_callable('gzopen');
+		// $this->has_gzip = is_callable('gzopen');
+		$this->has_gzip = false;
 	}
 
 	function parse($file) {

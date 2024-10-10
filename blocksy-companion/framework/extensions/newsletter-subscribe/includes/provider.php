@@ -41,10 +41,14 @@ class Provider {
 			return new MailPoetProvider();
 		}
 
+		if ($provider === 'activecampaign') {
+			return new ActiveCampaignProvider();
+		}
+
 		return new MailerliteClassicProvider();
 	}
 
-	public function fetch_lists($api_key) {
+	public function fetch_lists($api_key, $api_url) {
 		return [];
 	}
 

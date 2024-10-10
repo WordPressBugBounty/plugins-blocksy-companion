@@ -7,6 +7,8 @@ import { getAttributesFromOptions, getOptionsForBlock } from '../../utils'
 import Edit from './Edit'
 import { colorsDefaults } from './colors'
 
+import deprecated from './deprecated'
+
 export const options = getOptionsForBlock('share_box')
 export const defaultAttributes = getAttributesFromOptions(options)
 
@@ -34,15 +36,21 @@ registerBlockType('blocksy/share-box', {
 		...colorsDefaults,
 	},
 	edit: (props) => <Edit {...props} />,
+
 	save: function () {
 		return <div>Blocksy: Share Box</div>
 	},
+
+	deprecated,
 })
 
 wp.blocks.registerBlockVariation('blocksy/widgets-wrapper', {
 	name: 'blocksy-share-box',
 	title: __('Share Box', 'blocksy-companion'),
-	description: __('Share content on social media, boosting visibility & engagement.', 'blocksy-companion'),
+	description: __(
+		'Share content on social media, boosting visibility & engagement.',
+		'blocksy-companion'
+	),
 	attributes: {
 		heading: __('Share Box', 'blocksy-companion'),
 		block: 'blocksy/share-box',
