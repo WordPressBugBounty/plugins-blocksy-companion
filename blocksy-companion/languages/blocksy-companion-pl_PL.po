@@ -6711,7 +6711,7 @@ msgstr "Product meta end"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:673
 msgid "Share"
-msgstr "Udostępnij"
+msgstr "Udost��pnij"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:677
 msgid "After single product"

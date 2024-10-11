@@ -14,11 +14,11 @@ $visibility_option = [
 		'type' => 'ct-visibility',
 		'design' => 'block',
 		// 'allow_empty' => true,
-		'value' => [
+		'value' => blocksy_default_responsive_value([
 			'desktop' => true,
 			'tablet' => true,
 			'mobile' => true,
-		],
+		]),
 
 		'choices' => blocksy_ordered_keys([
 			'desktop' => __( 'Desktop', 'blocksy-companion' ),

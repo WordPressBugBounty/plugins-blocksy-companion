@@ -5631,7 +5631,7 @@ msgstr "alap widgetek visszaállítása"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:89
 msgid "users"
-msgstr "felhaszn��ló"
+msgstr "felhasználó"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:90
 msgid "terms"

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-10 10:53:59+0000\n"
+"PO-Revision-Date: 2024-10-10 21:05:26+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -194,84 +194,84 @@ msgstr "Вы удалены из списка ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:33
 msgid "%s %s joined the waitlist for this item."
-msgstr ""
+msgstr "%s %s присоединился к списку ожидания получения этого товара."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:243
 msgid "Waitlist Form"
-msgstr ""
+msgstr "Форма предзаказа"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:78
 msgid "Your waitlist subscription has been successfully canceled."
-msgstr ""
+msgstr "Ваша предзаказ был успешно отменён."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:117
 msgid "Your waitlist subscription has been successfully confirmed."
-msgstr ""
+msgstr "Ваша предзаказ подтверждён."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
-msgstr ""
+msgstr "Поиск товаров"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:14
 msgid "Export Subscribers"
-msgstr ""
+msgstr "Экспорт ожидающих"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:63
 msgid "Guest"
-msgstr ""
+msgstr "Гость"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:75
 msgid "Edit this customer"
-msgstr ""
+msgstr "Править клиента"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:76
 msgid "Edit"
-msgstr ""
+msgstr "Править"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:115,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:182
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:123
 msgid "View"
-msgstr ""
+msgstr "Просмотр"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:153
 msgid "%s ago"
-msgstr ""
+msgstr "%s назад"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:169
 msgid "Is registered"
-msgstr ""
+msgstr "Зарегистрирован"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:170
 msgid "Date created"
-msgstr ""
+msgstr "Дата создания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:8
 msgid "Waitlist - Back in Stock Notification"
-msgstr ""
+msgstr "Предзаказ – уведомление о наличии"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:9
 msgid "This email is sent when a product is back in stock"
-msgstr ""
+msgstr "Это письмо отправляется, когда товар снова появляется на складе."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:10
 msgid "A product you are waiting for is back in stock"
-msgstr ""
+msgstr "Товар, который вы ждёте, снова в наличии"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr ""
+msgstr "Хорошие новости! Товар, который вы так долго ждали, снова в наличии!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
-msgstr ""
+msgstr "Предзаказ – подтверждение"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:9
 msgid "This email is sent when a user subscribes to a product stock alert and should confirm their subscription"
-msgstr ""
+msgstr "Это письмо отправляется, когда пользователь делает предзаказ и должен подтвердить его."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:10
 msgid "Confirm waitlist subscription"
@@ -447,7 +447,7 @@ msgstr "Окно корзины"
 
 #: framework/helpers/exts-configs.php:378
 msgid "Show a dynamic confirmation popup with product recommendations whenever items are added to the cart."
-msgstr "Отображение всплывающего окна динамического подтверждения с рекомендациями по товару при каждом добавлении в корзину."
+msgstr "Отображение всплывающего ок��а динамического подтверждения с рекомендациями по товару при каждом добавлении в корзину."
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
@@ -631,7 +631,7 @@ msgstr "Скрыть пропущенный язык"
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:52
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Preview.js:94
 msgid "Please wait until the lookup table is generated."
-msgstr "Подождите пока генерируется таблица поиска."
+msgstr "��одождите пока генерируется таблица поиска."
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:472
 msgid "Collapse"
@@ -713,7 +713,7 @@ msgstr "Версия API"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:268
 msgid "More information on how to generate an API key for Brevo can be found %shere%s."
-msgstr "Более подробную информацию о том, как с��енерировать API-ключ для Brevo, можно найти %sздесь%s."
+msgstr "Более подробную информацию о том, как сгенерировать API-ключ для Brevo, можно найти %sздесь%s."
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:834
 msgid "Hide Documentation Links"
@@ -991,7 +991,7 @@ msgstr "Поиск по полю"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:87
 msgid "Image Source"
-msgstr "Источник изображения"
+msgstr "Источник изображени��"
 
 #: static/js/editor/blocks/dynamic-data/components/TagNameDropdown.js:14
 msgid "Change heading level"
@@ -1556,7 +1556,7 @@ msgstr "Нет страниц для применения."
 
 #: framework/features/demo-install/install-finish.php:23
 msgid "Sorry, you don't have permission to finish the installation."
-msgstr "У вас нет ��азрешения на завершение установки."
+msgstr "У вас нет разрешения на завершение установки."
 
 #: framework/features/demo-install/options-import.php:38
 msgid "Sorry, you don't have permission to install options."
@@ -1634,7 +1634,7 @@ msgstr "Смотреть профиль"
 
 #: framework/features/blocks/contact-info/options.php:44
 msgid "Contact Information"
-msgstr "Контактная информация"
+msgstr "Ко��тактная информация"
 
 #: framework/features/blocks/dynamic-data/options.php:24,
 #: framework/features/blocks/dynamic-data/options.php:49
@@ -1899,7 +1899,7 @@ msgstr "Меню"
 
 #: framework/features/header/items/account/options.php:717
 msgid "Items Hover Effect"
-msgstr "Эффект при н��ведении"
+msgstr "Эффект при наведении"
 
 #: framework/features/header/items/account/options.php:727
 msgid "Boxed Color"
@@ -2866,7 +2866,7 @@ msgstr "Сообщение об успехе"
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:271,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:277
 msgid "Size Guides"
-msgstr "Таблицы размеров"
+msgstr "Таблицы размеро��"
 
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:16
 msgid "Size Guide Placement"
@@ -3210,7 +3210,7 @@ msgstr "Добавить в сравнение"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:46
 msgid "Compare Placement"
-msgstr "Размещение сравнения"
+msgstr "Размещение срав��ения"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:53
 #: static/js/editor/blocks/breadcrumbs/Preview.js:46
@@ -4606,7 +4606,7 @@ msgstr "Создать блок содержимого/зацепа"
 
 #: framework/premium/extensions/mega-menu/options.php:637
 msgid "Heading Font"
-msgstr "Шрифт ��аголовка"
+msgstr "Шрифт заголовка"
 
 #: framework/premium/features/content-blocks/admin-ui.php:155
 msgid "Enable"
@@ -4934,7 +4934,7 @@ msgstr "После скольких посещённых страниц появ
 #: framework/premium/features/content-blocks/options/popup.php:489,
 #: framework/premium/features/content-blocks/options/single.php:157
 msgid "Select a post/page to preview it's content inside the editor while building the post/page."
-msgstr "Выберите запись/страницу для предпросмотра её содержимого в редакторе при настройки записи/страницы."
+msgstr "Выберите запис��/страницу для предпросмотра её содержимого в редакторе при настройки записи/страницы."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:236
 msgid "More information on how to generate an API key for Mailerlite can be found %shere%s. Please note that it is required at least one group to be created in your account for the integration to work. More info on how to create a group %shere%s."
@@ -4946,7 +4946,7 @@ msgstr "Редактор кода"
 
 #: framework/premium/static/js/hooks/CreateHook.js:101
 msgid "Template Type"
-msgstr "Тип шаблон��"
+msgstr "Тип шаблона"
 
 #: framework/premium/static/js/hooks/CreateHook.js:116
 msgid "Archive Template"
@@ -6755,7 +6755,7 @@ msgstr "Содержимое корзины"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:758
 msgid "After cart contents"
-msgstr "Посл�� содержимого корзины"
+msgstr "После содержимого корзины"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:762
 msgid "Cart coupon"
@@ -7468,7 +7468,7 @@ msgstr "Видимость элемента"
 
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:655
 msgid "You have no %s fields declared for this custom post type."
-msgstr "У в��с нет полей %s, заявленных для этого произвольного типа записей."
+msgstr "У вас нет полей %s, заявленных для этого произвольного типа записей."
 
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:667,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1401,
@@ -8433,7 +8433,7 @@ msgstr "Создать/изменить условия"
 
 #: framework/premium/static/js/footer/PanelsManager.js:169
 msgid "Remove footer"
-msgstr "Удалить подвал"
+msgstr "Удалить подва��"
 
 #: framework/premium/static/js/footer/PanelsManager.js:193
 msgid "Remove Footer"

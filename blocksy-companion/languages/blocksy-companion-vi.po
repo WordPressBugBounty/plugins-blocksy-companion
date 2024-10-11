@@ -2687,7 +2687,7 @@ msgstr "Hết hàng"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:540
 msgid "Display Variations Inline"
-msgstr "Hiển thị biến thể nội tuyến"
+msgstr "Hi��n thị biến thể nội tuyến"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:636,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:736,
@@ -2761,7 +2761,7 @@ msgstr "Tùy chọn này sẽ cho phép bạn thêm một biến thể sản ph�
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/views/table-no-results.php:3,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:19
 msgid "Browse products"
-msgstr "Duyệt sản ph���m"
+msgstr "Duyệt sản phẩm"
 
 #: framework/features/blocks/contact-info/options.php:533,
 #: framework/premium/features/premium-header/items/contacts/options.php:417
@@ -3031,7 +3031,7 @@ msgstr "Loại nút"
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:80,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:727
 msgid "Button"
-msgstr "Nút bấm"
+msgstr "N��t bấm"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:72
 msgid "Modal Trigger"
@@ -8024,7 +8024,7 @@ msgstr "Ẩn ngôn ngữ hiện tại"
 #: framework/features/header/items/account/options.php:1890,
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:59
 msgid "Dropdown Options"
-msgstr "Tùy ch��n Menu thả xuống"
+msgstr "Tùy chọn Menu thả xuống"
 
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:70
 msgid "Dropdown Top Offset"
@@ -8364,7 +8364,7 @@ msgstr "Ẩn tiện ích mở rộng gắn nhãn trắng"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:891
 msgid "Please note that the white label extension will be hidden if this option is enabled. In order to bring it back you have to hit the SHIFT key and click on the dashboard logo."
-msgstr "Lưu ý tiện ích mở rộng gắn nhãn trắng sẽ bị ẩn nếu tùy ch���n này được kích hoạt. Để mở lại, bạn phải nhấn phím SHIFT và nhấp vào biểu tượng bảng điều khiển."
+msgstr "Lưu ý tiện ích mở rộng gắn nhãn trắng sẽ bị ẩn nếu tùy chọn này được kích hoạt. Để mở lại, bạn phải nhấn phím SHIFT và nhấp vào biểu tượng bảng điều khiển."
 
 #: framework/premium/static/js/footer/CloneItem.js:66
 #: framework/premium/static/js/header/CloneItem.js:66
@@ -9258,7 +9258,7 @@ msgstr "Người tùy chỉnh"
 
 #: framework/extensions/newsletter-subscribe/config.php:6
 msgid "Easily capture new leads for your newsletter with the help of a widget, shortcode or even a block inserted on your pages or posts."
-msgstr "Dễ dàng tạo khách hàng tiềm năng mới cho bản tin của bạn với sự giúp đỡ của một tiện ích, mã ngắn hoặc thậm chí một khối được chèn vào trang hoặc bài viết của bạn."
+msgstr "Dễ dàng tạo khách hàng tiềm năng mới cho bản tin của bạn với sự gi��p đỡ của một tiện ích, mã ngắn hoặc thậm chí một khối được chèn vào trang hoặc bài viết của bạn."
 
 #: framework/extensions/newsletter-subscribe/customizer.php:4
 msgid "Subscribe Form"
