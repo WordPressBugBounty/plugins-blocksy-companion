@@ -36,7 +36,7 @@ class Plugin {
 
 	private $is_blocksy = '__NOT_SET__';
 	public $is_blocksy_data = null;
-	private $desired_blocksy_version = '2.0.73-beta1';
+	private $desired_blocksy_version = '2.0.74-beta1';
 
 	/**
 	 * Instance.
@@ -182,6 +182,14 @@ class Plugin {
 		require_once BLOCKSY_PATH . '/framework/helpers/helpers.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/exts.php';
 
+		add_filter(
+			'extra_theme_headers',
+			function ($extra) {
+				$extra[] = 'Blocksy Minimum Companion Version';
+				return $extra;
+			}
+		);
+
 		$this->register_autoloader();
 
 		$this->early_init();
@@ -196,10 +204,16 @@ class Plugin {
 	}
 
 	public function check_if_blocksy_is_activated() {
+		if (! function_exists('get_plugin_data')) {
+			require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+		}
+
 		$is_cli = defined('WP_CLI') && WP_CLI;
 
 		if ($this->is_blocksy === '__NOT_SET__') {
 			$theme = wp_get_theme(get_template());
+
+			$data = get_plugin_data(BLOCKSY__FILE__);
 
 			if ($theme->parent() && $theme->parent()->exists()) {
 				$theme = $theme->parent();
@@ -209,10 +223,25 @@ class Plugin {
 				$theme->get('Name'), 'Blocksy'
 			) !== false;
 
-			$is_correct_version = version_compare(
+			$is_theme_version_ok = version_compare(
 				$theme->get('Version'),
 				$this->desired_blocksy_version
 			) > -1;
+
+			$is_companion_version_ok = true;
+
+			$maybe_minimum_companion_version = $theme->get('Blocksy Minimum Companion Version');
+
+			if (! empty($maybe_minimum_companion_version)) {
+				$is_companion_version_ok = version_compare(
+					$data['Version'],
+					$maybe_minimum_companion_version
+				) > -1;
+			}
+
+			$is_correct_version = (
+				$is_theme_version_ok && $is_companion_version_ok
+			);
 
 			$another_theme_in_preview = false;
 
@@ -295,6 +324,8 @@ class Plugin {
 					&&
 					! $another_theme_in_preview
 				),
+				'is_theme_version_ok' => $is_theme_version_ok,
+				'is_companion_version_ok' => $is_companion_version_ok,
 				'another_theme_in_preview' => $another_theme_in_preview
 			];
 

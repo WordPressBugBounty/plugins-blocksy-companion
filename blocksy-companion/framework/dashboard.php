@@ -70,7 +70,10 @@ class Dashboard {
 			) {
 				echo blocksy_render_view(
 					dirname(__FILE__) . '/views/theme-mismatch.php',
-					[]
+					[
+						'is_theme_version_ok' => $blocksy_data['is_theme_version_ok'],
+						'is_companion_version_ok' => $blocksy_data['is_companion_version_ok'],
+					]
 				);
 			}
 		});
@@ -393,8 +396,27 @@ class Dashboard {
 			$blocksy_data = Plugin::instance()->is_blocksy_data;
 
 			if ($blocksy_data && $blocksy_data['is_correct_theme']) {
-				$localize_data['theme_version_mismatch'] = true;
-				$localize_data['run_updates'] = self_admin_url('update-core.php');
+				$mismatched_product_name = 'Blocksy theme';
+				$mismatched_product_slug = 'blocksy';
+
+				if (
+					$blocksy_data['is_theme_version_ok']
+					&&
+					! $blocksy_data['is_companion_version_ok']
+				) {
+					$mismatched_product_name = 'Blocksy Companion plugin';
+					$mismatched_product_slug = 'blocksy-companion';
+
+					if (blc_can_use_premium_code()) {
+						$mismatched_product_name = 'Blocksy Companion Pro plugin';
+						$mismatched_product_slug = 'blocksy-companion-pro';
+					}
+				}
+
+				$localize_data['theme_version_mismatch'] = [
+					'productName' => $mismatched_product_name,
+					'slug' => $mismatched_product_slug
+				];
 			}
 
 			wp_localize_script(

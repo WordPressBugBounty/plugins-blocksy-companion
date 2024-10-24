@@ -3,11 +3,17 @@ import * as check from '@wordpress/element'
 import { __ } from 'ct-i18n'
 
 import NoTheme from './dashboard/NoTheme'
-import VersionMismatch from './dashboard/VersionMismatch'
+import VersionMismatchNotice from './notifications/VersionMismatchNotice'
 
 const Dashboard = () => {
 	if (ctDashboardLocalizations.theme_version_mismatch) {
-		return <VersionMismatch />
+		return (
+			<VersionMismatchNotice
+				mismatched_version_descriptor={
+					ctDashboardLocalizations.theme_version_mismatch
+				}
+			/>
+		)
 	}
 
 	return <NoTheme />

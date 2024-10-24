@@ -69,13 +69,20 @@ class BlocksyExtensionNewsletterSubscribePreBoot {
 			[
 				'key' => 'activecampaign',
 				'value' => 'Active Campaign',
-			],
+			]
 		];
 
 		if (class_exists(\MailPoet\API\API::class)) {
 			$providers[] = [
 				'key' => 'mailpoet',
 				'value' => 'MailPoet',
+			];
+		}
+
+		if (class_exists(\FluentCrm\App\Models\Lists::class)) {
+			$providers[] = [
+				'key' => 'fluentcrm',
+				'value' => 'Fluent CRM',
 			];
 		}
 

@@ -137,6 +137,10 @@ class ConditionsManager {
 			$args['filter'] = 'all';
 		}
 
+		if ($args['filter'] === 'all') {
+			$sections[] = 'user-auth';
+		}
+		
 		$sections[] = 'date-time';
 		$sections[] = 'requests';
 		$sections[] = 'localization';

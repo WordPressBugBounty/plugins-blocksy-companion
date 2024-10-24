@@ -145,15 +145,11 @@ if (
 
 	$value .= $maybe_video['icon'];
 
-	if ( blocksy_akg('media_video_player', $maybe_video, 'no') === 'yes' ) {
+	if (blocksy_akg('media_video_player', $maybe_video, 'no') === 'yes') {
 		$classes[] = 'ct-simplified-player';
 	}
 
-	if (
-		blocksy_akg('media_video_autoplay', $maybe_video, 'no') === 'yes'
-		&&
-		$wrapper_attr['display_video'] !== 'pill'
-	) {
+	if (blocksy_akg('media_video_autoplay', $maybe_video, 'no') === 'yes') {
 		$wrapper_attr['data-state'] = 'autoplay';
 	}
 }

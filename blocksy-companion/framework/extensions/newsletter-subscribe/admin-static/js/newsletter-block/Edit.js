@@ -48,10 +48,13 @@ const Edit = ({
 			'--theme-form-text-focus-color': inputFontColorFocus?.color,
 
 			'--theme-form-field-border-initial-color': inputBorderColor?.color,
-			'--theme-form-field-border-focus-color': inputBorderColorFocus?.color,
+			'--theme-form-field-border-focus-color':
+				inputBorderColorFocus?.color,
 
-			'--theme-form-field-background-initial-color': inputBackgroundColor?.color,
-			'--theme-form-field-background-focus-color': inputBackgroundColorFocus?.color,
+			'--theme-form-field-background-initial-color':
+				inputBackgroundColor?.color,
+			'--theme-form-field-background-focus-color':
+				inputBackgroundColorFocus?.color,
 
 			...(attributes?.newsletter_subscribe_height
 				? {
@@ -154,9 +157,12 @@ const Edit = ({
 				/>
 
 				<ColorsPanel
-					label={attributes.newsletter_subscribe_container_type === 'boxed'
-						? __('Container Border Color', 'blocksy-companion')
-						: __('Input Border Color', 'blocksy-companion')}
+					label={
+						attributes.newsletter_subscribe_container_type ===
+						'boxed'
+							? __('Container Border Color', 'blocksy-companion')
+							: __('Input Border Color', 'blocksy-companion')
+					}
 					resetAll={() => {
 						setInputBorderColor(colors.inputBorderColor)
 						setInputBorderColorFocus(colors.inputBorderColorFocus)
@@ -185,9 +191,15 @@ const Edit = ({
 				/>
 
 				<ColorsPanel
-					label={attributes.newsletter_subscribe_container_type === 'boxed'
-						? __('Container Background Color', 'blocksy-companion')
-						: __('Input Background Color', 'blocksy-companion')}
+					label={
+						attributes.newsletter_subscribe_container_type ===
+						'boxed'
+							? __(
+									'Container Background Color',
+									'blocksy-companion'
+							  )
+							: __('Input Background Color', 'blocksy-companion')
+					}
 					resetAll={() => {
 						setInputBackgroundColor(colors.inputBackgroundColor)
 						setInputBackgroundColorFocus(

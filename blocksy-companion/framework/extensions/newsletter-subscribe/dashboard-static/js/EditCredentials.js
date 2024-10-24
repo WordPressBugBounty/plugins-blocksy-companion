@@ -88,7 +88,7 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 					provider.indexOf('mailerlite') > -1 ||
 					provider === 'activecampaign'
 						? 4
-						: provider.indexOf('mailpoet') > -1
+						: ['mailpoet', 'fluentcrm'].includes(provider)
 						? 2
 						: 3
 				}>
@@ -96,6 +96,7 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 					<label>{__('Provider', 'blocksy-companion')}</label>
 					<Select
 						onChange={(copy) => {
+							console.log(copy, extension.data.providers)
 							if (!isPro && !freeProviders.includes(copy)) {
 								setProvider(copy)
 								setTimeout(() => {
@@ -178,7 +179,7 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 				{(freeProviders.includes(provider) ||
 					ctDashboardLocalizations.plugin_data.is_pro) && (
 					<Fragment>
-						{provider !== 'mailpoet' ? (
+						{!['mailpoet', 'fluentcrm'].includes(provider) ? (
 							<section>
 								<label>
 									{__('API Key', 'blocksy-companion')}
@@ -343,6 +344,24 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 								),
 
 								'<a target="_blank" href="https://kb.mailpoet.com/article/282-create-a-list">',
+								'</a>'
+							),
+						}}
+					/>
+				)}
+
+			{ctDashboardLocalizations.plugin_data.is_pro &&
+				provider === 'fluentcrm' && (
+					<span
+						className="ct-option-description"
+						dangerouslySetInnerHTML={{
+							__html: sprintf(
+								__(
+									'More information on how to create a list in fluentcrm can be found %shere%s.',
+									'blocksy-companion'
+								),
+
+								'<a target="_blank" href="https://kb.fluentcrm.com/article/282-create-a-list">',
 								'</a>'
 							),
 						}}

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-09 14:30:47+0000\n"
+"PO-Revision-Date: 2024-10-14 12:49:22+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,11 +13,11 @@ msgstr ""
 
 #: static/js/dashboard/helpers/useUpsellModal.js:88
 msgid "Business or Agency"
-msgstr ""
+msgstr "Negócio ou Agência"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:482
 msgid "Select value"
-msgstr ""
+msgstr "Selecionar valor"
 
 #: framework/helpers/exts-configs.php:385
 msgid "Product Waitlist"
@@ -29,7 +29,7 @@ msgstr "Permita que os seus clientes se inscrevam numa lista de espera para prod
 
 #: framework/features/blocks/share-box/options.php:103
 msgid "Clipboard"
-msgstr ""
+msgstr "Área de transferência"
 
 #: framework/premium/extensions/shortcuts/customizer.php:609,
 #: framework/premium/extensions/shortcuts/customizer.php:635,
@@ -44,59 +44,59 @@ msgstr "Lista de espera"
 
 #: framework/premium/extensions/shortcuts/customizer.php:895
 msgid "Tooltip Visibility"
-msgstr ""
+msgstr "Visibilidade da dica"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1351
 msgid "Container Backdrop Blur"
-msgstr ""
+msgstr "Desfoque do fundo do contentor"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:957
 msgid "Added to Cart: Before product"
-msgstr ""
+msgstr "Adicionado ao carrinho: Antes do produto"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:961
 msgid "Added to Cart: Before actions"
-msgstr ""
+msgstr "Adicionado ao carrinho: Antes das ações"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:965
 msgid "Added to Cart: Before suggested products"
-msgstr ""
+msgstr "Adicionado ao carrinho: Antes dos produtos sugeridos"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:969
 msgid "Added to Cart: After suggested products"
-msgstr ""
+msgstr "Adicionado ao carrinho: Após os produtos sugeridos"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:971
 msgid "WooCommerce: Added to Cart"
-msgstr ""
+msgstr "WooCommerce: Adicionado ao carrinho"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:294
 msgid "Upsell Products"
-msgstr ""
+msgstr "Produtos adicionais"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:295
 msgid "Cross-sell Products"
-msgstr ""
+msgstr "Produtos cruzados"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:506
 msgid "Auto Close Panel"
-msgstr ""
+msgstr "Fechar painel automaticamente"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:507
 msgid "Automatically close the panel when a filter option is selected."
-msgstr ""
+msgstr "Fechar automaticamente o painel quando uma opção de filtro é selecionada."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:15
 msgid "Form Type"
-msgstr ""
+msgstr "Tipo de formulário"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:29
 msgid "Form Max Width"
-msgstr ""
+msgstr "Largura máxima do formulário"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:41
 msgid "Enable For Backorders"
-msgstr ""
+msgstr "Ativar para encomendas pendentes"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:42
 msgid "Allow users to join the waitlist even if the product is on backorder."
@@ -104,207 +104,207 @@ msgstr "Permita que os utilizadores se inscrevam na lista de espera, mesmo que o
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:55
 msgid "Show Users Count"
-msgstr ""
+msgstr "Mostrar contagem de utilizadores"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:56
 msgid "Display a counter that reflects the current number of users on the waitlist."
-msgstr ""
+msgstr "Exibir um contador que reflete o número atual de utilizadores na lista de espera."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:69
 msgid "Logged In Users Only"
-msgstr ""
+msgstr "Apenas utilizadores logados"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
-msgstr ""
+msgstr "Exibir a funcionalidade da lista de espera exclusivamente para utilizadores logados."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"
-msgstr ""
+msgstr "Confirmação de Subscrição"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:84
 msgid "Specify which users should verify their waitlist subscription through email confirmation."
-msgstr ""
+msgstr "Especifique quais utilizadores devem verificar a sua subscrição da lista de espera através da confirmação por e-mail."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:107
 msgid "Waitlist Form Display Conditions"
-msgstr ""
+msgstr "Condições de exibição do formulário da lista de espera"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:108
 msgid "Choose where you want this Waitlist Form to be displayed."
-msgstr ""
+msgstr "Escolha onde deseja que este formulário da lista de espera seja exibido."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:160
 msgid "Message Font"
-msgstr ""
+msgstr "Fonte da mensagem"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:168
 msgid "Message Color"
-msgstr ""
+msgstr "Cor da mensagem"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:225
 msgid "Container Padding"
-msgstr ""
+msgstr "Preenchimento do contentor"
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/table.php:40,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:46
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:96,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:200,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:221,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:282
 msgid "Invalid request"
-msgstr ""
+msgstr "Pedido inválido"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:106
 msgid "No waitlist found"
-msgstr ""
+msgstr "Nenhuma lista de espera encontrada"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:127,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:128,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:162
 msgid "Waitlists"
-msgstr ""
+msgstr "Listas de espera"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:153
 msgid "Number of items per page"
-msgstr ""
+msgstr "Número de itens por página"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:171
 msgid "Waitlist for %s"
-msgstr ""
+msgstr "Lista de espera para %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:213
 msgid "Invalid email"
-msgstr ""
+msgstr "E-mail inválido"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:229
 msgid "You are already on the waitlist"
-msgstr ""
+msgstr "Já está na lista de espera"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:267
 msgid "You have been added to the waitlist"
-msgstr ""
+msgstr "Foi adicionado à lista de espera"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:291
 msgid "You have been removed from the waitlist"
-msgstr ""
+msgstr "Foi removido da lista de espera"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:33
 msgid "%s %s joined the waitlist for this item."
-msgstr ""
+msgstr "%s %s juntou-se à lista de espera para este item."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:243
 msgid "Waitlist Form"
-msgstr ""
+msgstr "Formulário da Lista de Espera"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:78
 msgid "Your waitlist subscription has been successfully canceled."
-msgstr ""
+msgstr "A sua subscrição da lista de espera foi cancelada com sucesso."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:117
 msgid "Your waitlist subscription has been successfully confirmed."
-msgstr ""
+msgstr "A sua subscrição da lista de espera foi confirmada com sucesso."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
-msgstr ""
+msgstr "Pesquisar produtos"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:14
 msgid "Export Subscribers"
-msgstr ""
+msgstr "Exportar subscritores"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:63
 msgid "Guest"
-msgstr ""
+msgstr "Convidado"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:75
 msgid "Edit this customer"
-msgstr ""
+msgstr "Editar este cliente"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:76
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:115,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:182
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:123
 msgid "View"
-msgstr ""
+msgstr "Ver"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:153
 msgid "%s ago"
-msgstr ""
+msgstr "%s atrás"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:169
 msgid "Is registered"
-msgstr ""
+msgstr "Está registado"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:170
 msgid "Date created"
-msgstr ""
+msgstr "Data de criação"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:8
 msgid "Waitlist - Back in Stock Notification"
-msgstr ""
+msgstr "Lista de Espera - Notificação de Disponibilidade"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:9
 msgid "This email is sent when a product is back in stock"
-msgstr ""
+msgstr "Este e-mail é enviado quando um produto está novamente disponível"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:10
 msgid "A product you are waiting for is back in stock"
-msgstr ""
+msgstr "Está novamente disponível o produto ppelo qual estava a espera"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr ""
+msgstr "Boas notícias! O produto que estava à espera está novamente disponível!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
-msgstr ""
+msgstr "Lista de Espera - Confirmar Subscrição"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:9
 msgid "This email is sent when a user subscribes to a product stock alert and should confirm their subscription"
-msgstr ""
+msgstr "Este e-mail é enviado quando um utilizador se inscreve para um alerta de stock de produto e deve confirmar a sua subscrição"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:10
 msgid "Confirm waitlist subscription"
-msgstr ""
+msgstr "Confirmar subscrição da lista de espera"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:11
 msgid "Get notified when {product_title} is back in stock"
-msgstr ""
+msgstr "Receba uma notificação quando {product_title} estiver novamente disponível"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:8
 msgid "Waitlist - Subscription Confirmed"
-msgstr ""
+msgstr "Lista de Espera - Subscrição Confirmada"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:9
 msgid "This email is sent after a user confirmed the subscription to a product stock alert"
-msgstr ""
+msgstr "Este e-mail é enviado após um utilizador confirmar a subscrição a um alerta de stock de produto"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:10
 msgid "Waitlist subscription confirmed"
-msgstr ""
+msgstr "Subscrição da lista de espera confirmada"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr ""
+msgstr "Será notificado quando {product_title} estiver novamente disponível"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:35,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:139
 msgid "Customer"
-msgstr ""
+msgstr "Cliente"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:27
 msgid "Enter your email"
-msgstr ""
+msgstr "Insira o seu e-mail"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:40
 msgid "Join Waitlist"
@@ -320,32 +320,32 @@ msgstr "Não se preocupe! Insira o seu endereço de e-mail e iremos notificá-lo
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:69
 msgid "Great! You have been added to the waitlist for this product. Please check your inbox and confirm the subscription to this waitlist."
-msgstr ""
+msgstr "Ótimo! Foi adicionado à lista de espera para este produto. Por favor, verifique a sua caixa de entrada e confirme a subscrição desta lista de espera."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:97
 msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
-msgstr ""
+msgstr "Ótimo! Foi adicionado à lista de espera para este produto. Irá receber um e-mail assim que o item estiver novamente disponível."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:151,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:86
 msgid "Unsubscribe"
-msgstr ""
+msgstr "Cancelar subscrição"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:65
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:65
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:21
 msgid "You don't have any products in your waitlist yet."
-msgstr ""
+msgstr "Ainda não tem produtos na sua lista de espera."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:42
 msgid "Confirmed"
-msgstr ""
+msgstr "Confirmado"
 
 #. translators: %s User name.
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:19,
@@ -355,60 +355,60 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:10,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:10
 msgid "Hi, %s!"
-msgstr ""
+msgstr "Olá, %s!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:19
 msgid "Great news! The %s from your waitlist is now back in stock!"
-msgstr ""
+msgstr "Boas notícias! O %s da sua lista de espera está novamente disponível!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:42,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:24
 msgid "Click the link below to secure your purchase before it is gone!"
-msgstr ""
+msgstr "Clique no link abaixo para garantir a sua compra antes que acabe!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:15
 msgid "You have requested to join the waitlist for this item:"
-msgstr ""
+msgstr "Solicitou entrar na lista de espera para este item:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:62
 msgid "Click the button below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
-msgstr ""
+msgstr "Clique no botão abaixo para confirmar a sua subscrição. Uma vez confirmada, notificá-lo-emos quando o item estiver novamente disponível."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:66
 msgid "Confirm Subscription"
-msgstr ""
+msgstr "Confirmar Subscrição"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:70,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:26
 msgid "Please note, the confirmation period is 2 days."
-msgstr ""
+msgstr "Por favor, note que o período de confirmação é de 2 dias."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:77,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:65
 msgid "If you don't want to receive any further notifications, please %s"
-msgstr ""
+msgstr "Se não quiser receber mais notificações, por favor %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:78,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:66
 msgid "unsubscribe"
-msgstr ""
+msgstr "cancelar subscrição"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
 msgid "You have been successfully added to the waitlist for the following item:"
-msgstr ""
+msgstr "Foi adicionado com sucesso à lista de espera para o seguinte item:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:28,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
 msgid "Product:"
-msgstr ""
+msgstr "Produto:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:18
 msgid "Price:"
-msgstr ""
+msgstr "Preço:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:30
 msgid "Add to cart:"
@@ -1204,7 +1204,7 @@ msgstr ""
 #: static/js/editor/blocks/query/Edit.js:214
 #: static/js/editor/blocks/tax-query/Edit.js:195
 msgid "Please look at the documentation for more information on why this is useful."
-msgstr "Consulte a documentação para obter mais informações sobre a sua utilidade."
+msgstr "Consulte a documentaç��o para obter mais informações sobre a sua utilidade."
 
 #: static/js/editor/blocks/query/edit/PatternSelectionModal.js:82
 #: static/js/editor/blocks/tax-query/edit/PatternSelectionModal.js:68

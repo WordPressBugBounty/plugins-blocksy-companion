@@ -4,12 +4,16 @@ import $ from 'jquery'
 
 export const mount = (el) => {
 	if (el.querySelector('.notice-blocksy-theme-version-mismatch')) {
+		const container = el.querySelector(
+			'.notice-blocksy-theme-version-mismatch'
+		)
+
 		render(
 			<VersionMismatchNotice
-				updatesUrl={
-					el.querySelector('.notice-blocksy-theme-version-mismatch')
-						.dataset.url
-				}
+				mismatched_version_descriptor={{
+					productName: container.dataset.productName,
+					slug: container.dataset.slug,
+				}}
 			/>,
 			el.querySelector('.notice-blocksy-theme-version-mismatch')
 		)

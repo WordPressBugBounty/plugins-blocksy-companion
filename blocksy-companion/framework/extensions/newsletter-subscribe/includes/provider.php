@@ -45,6 +45,10 @@ class Provider {
 			return new ActiveCampaignProvider();
 		}
 
+		if ($provider === 'fluentcrm') {
+			return new FluentCRMProvider();
+		}
+
 		return new MailerliteClassicProvider();
 	}
 

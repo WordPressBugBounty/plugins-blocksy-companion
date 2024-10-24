@@ -30,6 +30,7 @@ class DemoInstallContentEraser {
 		$this->reset_previous_posts();
 		$this->reset_previous_terms();
 		$this->reset_menus();
+		$this->erase_fluent_booking_data();
 
 		if ($this->is_ajax_request) {
 			wp_send_json_success();
@@ -148,6 +149,28 @@ class DemoInstallContentEraser {
 
 			wp_delete_nav_menu($single_menu->term_id);
 		}
+	}
+
+	private function erase_fluent_booking_data() {
+		if (! class_exists('\FluentBooking\App\Models\Calendar')) {
+			return;
+		}
+
+		$current_demo = get_option('blocksy_ext_demos_current_demo', []);
+
+		if (! isset($current_demo['fluent_booking_calendar'])) {
+			return;
+		}
+
+		$calendar = \FluentBooking\App\Models\Calendar::find(
+			$current_demo['fluent_booking_calendar']
+		);
+
+		if (! $calendar) {
+			return;
+		}
+
+		$calendar->delete();
 	}
 }
 

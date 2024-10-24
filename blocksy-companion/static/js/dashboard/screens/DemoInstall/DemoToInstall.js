@@ -39,6 +39,7 @@ const DemoToInstall = ({ location, navigate }) => {
 		pluginsStatus,
 		currentlyInstalledDemo: globalCurrentlyInstalledDemo,
 		setCurrentDemo,
+		filters,
 	} = useContext(DemosContext)
 
 	const { is_child_theme } = useContext(DashboardContext)
@@ -151,13 +152,24 @@ const DemoToInstall = ({ location, navigate }) => {
 		setCurrentConfigurationStep(0)
 		setCurrentlyInstalledDemo(globalCurrentlyInstalledDemo)
 
+		let demoVariationToUse = demoVariations[0]
+
+		if (filters.builder !== 'all') {
+			const maybeDemoVariation = demoVariations.find(
+				({ builder }) => builder === filters.builder
+			)
+
+			if (maybeDemoVariation) {
+				demoVariationToUse = maybeDemoVariation
+			}
+		}
+
 		setDemoConfiguration({
-			builder:
-				demoVariations.length === 1 ? demoVariations[0].builder : null,
+			builder: demoVariationToUse.builder,
 
 			child_theme: false,
 
-			plugins: demoVariations[0].plugins.map((plugin) => ({
+			plugins: demoVariationToUse.plugins.map((plugin) => ({
 				plugin,
 				enabled: true,
 			})),

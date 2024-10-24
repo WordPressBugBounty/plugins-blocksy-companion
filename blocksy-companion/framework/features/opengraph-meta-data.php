@@ -94,9 +94,7 @@ class OpenGraphMetaData {
 		if (is_category() || is_tag() || is_tax()) {
 			$description = wp_strip_all_tags(term_description());
 		} else if (is_singular()) {
-			$description = wp_strip_all_tags(blocksy_entry_excerpt([
-				'length' => 40
-			]));
+			$description = wp_strip_all_tags(get_the_excerpt());
 		}
 
 		// Image

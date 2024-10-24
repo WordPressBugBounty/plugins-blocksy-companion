@@ -158,8 +158,18 @@ class DemoInstallOptionsInstaller {
 			\FluentBooking\Database\DBMigrator::run(false);
 			\FluentBooking\Database\DBSeeder::run();
 
-			$import_service = new \FluentBooking\App\Services\ImportService();
-			$import_service->importHostJson($options['fluent_booking_data']);
+
+			try {
+				$import_service = new \FluentBooking\App\Services\ImportService();
+				$calendar = $import_service->importHostJson($options['fluent_booking_data']);
+
+				if (isset($calendar['calendar'])) {
+					$current_demo = get_option('blocksy_ext_demos_current_demo', []);
+					$current_demo['fluent_booking_calendar'] = $calendar['calendar']->id;
+					update_option('blocksy_ext_demos_current_demo', $current_demo);
+				}
+			} catch (\Throwable $e) {
+			}
 		}
 
 		if (

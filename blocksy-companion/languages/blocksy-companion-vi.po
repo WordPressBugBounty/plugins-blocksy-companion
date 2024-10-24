@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-08 00:03:35+0000\n"
+"PO-Revision-Date: 2024-10-14 04:34:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,23 +13,23 @@ msgstr ""
 
 #: static/js/dashboard/helpers/useUpsellModal.js:88
 msgid "Business or Agency"
-msgstr ""
+msgstr "Doanh nghiệp hoặc đại lý"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:482
 msgid "Select value"
-msgstr ""
+msgstr "Chọn giá trị"
 
 #: framework/helpers/exts-configs.php:385
 msgid "Product Waitlist"
-msgstr ""
+msgstr "Danh sách chờ sản phẩm"
 
 #: framework/helpers/exts-configs.php:386
 msgid "Allow your customers to sign up for a waitlist for products that are out of stock and get notified when they are back in stock."
-msgstr ""
+msgstr "Cho phép khách hàng của bạn đăng ký vào danh sách chờ cho các sản phẩm đã hết hàng và nhận thông báo khi chúng có hàng trở lại."
 
 #: framework/features/blocks/share-box/options.php:103
 msgid "Clipboard"
-msgstr ""
+msgstr "Bộ nhớ tạm"
 
 #: framework/premium/extensions/shortcuts/customizer.php:609,
 #: framework/premium/extensions/shortcuts/customizer.php:635,
@@ -40,312 +40,312 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:193,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-account.php:67
 msgid "Waitlist"
-msgstr ""
+msgstr "Danh sách chờ"
 
 #: framework/premium/extensions/shortcuts/customizer.php:895
 msgid "Tooltip Visibility"
-msgstr ""
+msgstr "Hiển thị chú thích"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1351
 msgid "Container Backdrop Blur"
-msgstr ""
+msgstr "Làm mờ nền của khung chứa"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:957
 msgid "Added to Cart: Before product"
-msgstr ""
+msgstr "Đã thêm vào giỏ hàng: Trước sản phẩm"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:961
 msgid "Added to Cart: Before actions"
-msgstr ""
+msgstr "Đã thêm vào giỏ hàng: Trước hành động"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:965
 msgid "Added to Cart: Before suggested products"
-msgstr ""
+msgstr "Đã thêm vào giỏ hàng: Trước sản phẩm đề xuất"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:969
 msgid "Added to Cart: After suggested products"
-msgstr ""
+msgstr "Đã thêm vào giỏ hàng: Sau sản phẩm đề xuất"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:971
 msgid "WooCommerce: Added to Cart"
-msgstr ""
+msgstr "WooCommerce: Đã thêm vào giỏ hàng"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:294
 msgid "Upsell Products"
-msgstr ""
+msgstr "Sản phẩm bán thêm"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:295
 msgid "Cross-sell Products"
-msgstr ""
+msgstr "Sản phẩm bán chéo"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:506
 msgid "Auto Close Panel"
-msgstr ""
+msgstr "Tự động đóng bảng điều khiển"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:507
 msgid "Automatically close the panel when a filter option is selected."
-msgstr ""
+msgstr "Tự động đóng bảng điều khiển khi một tùy chọn bộ lọc được chọn."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:15
 msgid "Form Type"
-msgstr ""
+msgstr "Loại biểu mẫu"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:29
 msgid "Form Max Width"
-msgstr ""
+msgstr "Chiều rộng tối đa của biểu mẫu"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:41
 msgid "Enable For Backorders"
-msgstr ""
+msgstr "Bật cho các đơn đặt hàng trước"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:42
 msgid "Allow users to join the waitlist even if the product is on backorder."
-msgstr ""
+msgstr "Cho phép người dùng tham gia danh sách chờ ngay cả khi sản phẩm đang trong tình trạng đặt hàng trước."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:55
 msgid "Show Users Count"
-msgstr ""
+msgstr "Hiển thị số lượng người dùng"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:56
 msgid "Display a counter that reflects the current number of users on the waitlist."
-msgstr ""
+msgstr "Hiển thị bộ đếm phản ánh số lượng người dùng hiện tại trong danh sách chờ."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:69
 msgid "Logged In Users Only"
-msgstr ""
+msgstr "Chỉ hiển thị cho người dùng đã đăng nhập"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
-msgstr ""
+msgstr "Hiển thị tính năng danh sách chờ chỉ cho người dùng đã đăng nhập."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"
-msgstr ""
+msgstr "Xác nhận đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:84
 msgid "Specify which users should verify their waitlist subscription through email confirmation."
-msgstr ""
+msgstr "Chỉ định người dùng cần xác nhận đăng ký danh sách chờ thông qua email."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:107
 msgid "Waitlist Form Display Conditions"
-msgstr ""
+msgstr "Điều kiện hiển thị biểu mẫu danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:108
 msgid "Choose where you want this Waitlist Form to be displayed."
-msgstr ""
+msgstr "Chọn nơi bạn muốn hiển thị biểu mẫu danh sách chờ."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:160
 msgid "Message Font"
-msgstr ""
+msgstr "Phông chữ thông điệp"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:168
 msgid "Message Color"
-msgstr ""
+msgstr "Màu thông điệp"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:225
 msgid "Container Padding"
-msgstr ""
+msgstr "Lề trong vùng chứa"
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/table.php:40,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:46
 msgid "Actions"
-msgstr ""
+msgstr "Hành động"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:96,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:200,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:221,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:282
 msgid "Invalid request"
-msgstr ""
+msgstr "Yêu cầu không hợp lệ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:106
 msgid "No waitlist found"
-msgstr ""
+msgstr "Không tìm thấy danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:127,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:128,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:162
 msgid "Waitlists"
-msgstr ""
+msgstr "Danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:153
 msgid "Number of items per page"
-msgstr ""
+msgstr "Số lượng mục mỗi trang"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:171
 msgid "Waitlist for %s"
-msgstr ""
+msgstr "Danh sách chờ cho %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:213
 msgid "Invalid email"
-msgstr ""
+msgstr "Email không hợp lệ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:229
 msgid "You are already on the waitlist"
-msgstr ""
+msgstr "Bạn đã có trong danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:267
 msgid "You have been added to the waitlist"
-msgstr ""
+msgstr "Bạn đã được thêm vào danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:291
 msgid "You have been removed from the waitlist"
-msgstr ""
+msgstr "Bạn đã được xóa khỏi danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:33
 msgid "%s %s joined the waitlist for this item."
-msgstr ""
+msgstr "%s %s Biểu mẫu danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:243
 msgid "Waitlist Form"
-msgstr ""
+msgstr "Biểu mẫu danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:78
 msgid "Your waitlist subscription has been successfully canceled."
-msgstr ""
+msgstr "Đăng ký danh sách chờ của bạn đã được hủy thành công."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:117
 msgid "Your waitlist subscription has been successfully confirmed."
-msgstr ""
+msgstr "Đăng ký danh sách chờ của bạn đã được xác nhận thành công."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
-msgstr ""
+msgstr "Tìm kiếm sản phẩm"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:14
 msgid "Export Subscribers"
-msgstr ""
+msgstr "Xuất danh sách người đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:63
 msgid "Guest"
-msgstr ""
+msgstr "Khách"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:75
 msgid "Edit this customer"
-msgstr ""
+msgstr "Chỉnh sửa khách hàng này"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:76
 msgid "Edit"
-msgstr ""
+msgstr "Chỉnh sửa"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:115,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:182
 msgid "Delete"
-msgstr ""
+msgstr "Xóa"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:123
 msgid "View"
-msgstr ""
+msgstr "Xem"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:153
 msgid "%s ago"
-msgstr ""
+msgstr "Cách đây %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:169
 msgid "Is registered"
-msgstr ""
+msgstr "Đã đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:170
 msgid "Date created"
-msgstr ""
+msgstr "Ngày tạo"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:8
 msgid "Waitlist - Back in Stock Notification"
-msgstr ""
+msgstr "Danh sách chờ - Thông báo sản phẩm có hàng lại"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:9
 msgid "This email is sent when a product is back in stock"
-msgstr ""
+msgstr "Email này được gửi khi sản phẩm có hàng trở lại"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:10
 msgid "A product you are waiting for is back in stock"
-msgstr ""
+msgstr "Sản phẩm bạn đang chờ đã có hàng trở lại"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr ""
+msgstr "Tin tốt! Sản phẩm bạn đang chờ hiện đã có hàng trở lại!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
-msgstr ""
+msgstr "Danh sách chờ - Xác nhận đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:9
 msgid "This email is sent when a user subscribes to a product stock alert and should confirm their subscription"
-msgstr ""
+msgstr "Email này được gửi khi người dùng đăng ký thông báo về sản phẩm và cần xác nhận đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:10
 msgid "Confirm waitlist subscription"
-msgstr ""
+msgstr "Xác nhận đăng ký danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:11
 msgid "Get notified when {product_title} is back in stock"
-msgstr ""
+msgstr "Nhận thông báo khi {product_title} có hàng trở lại"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:8
 msgid "Waitlist - Subscription Confirmed"
-msgstr ""
+msgstr "Danh sách chờ - Đăng ký đã được xác nhận"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:9
 msgid "This email is sent after a user confirmed the subscription to a product stock alert"
-msgstr ""
+msgstr "Email này được gửi sau khi người dùng xác nhận đăng ký thông báo sản phẩm"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:10
 msgid "Waitlist subscription confirmed"
-msgstr ""
+msgstr "Đăng ký danh sách chờ đã được xác nhận"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr ""
+msgstr "Bạn sẽ nhận được thông báo khi {product_title} có hàng trở lại"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:35,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:139
 msgid "Customer"
-msgstr ""
+msgstr "Khách hàng"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:27
 msgid "Enter your email"
-msgstr ""
+msgstr "Nhập email của bạn"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:40
 msgid "Join Waitlist"
-msgstr ""
+msgstr "Tham gia danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:53
 msgid "This product is currently sold out!"
-msgstr ""
+msgstr "Sản phẩm này hiện đã hết hàng!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:61
 msgid "No worries! Please enter your e-mail address and we will promptly notify you as soon as the item is back in stock."
-msgstr ""
+msgstr "Đừng lo! Vui lòng nhập địa chỉ email của bạn và chúng tôi sẽ nhanh chóng thông báo cho bạn ngay khi sản phẩm có hàng trở lại."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:69
 msgid "Great! You have been added to the waitlist for this product. Please check your inbox and confirm the subscription to this waitlist."
-msgstr ""
+msgstr "Tuyệt vời! Bạn đã được thêm vào danh sách chờ cho sản phẩm này. Vui lòng kiểm tra hộp thư đến và xác nhận đăng ký danh sách chờ này."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:97
 msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
-msgstr ""
+msgstr "Tuyệt vời! Bạn đã được thêm vào danh sách chờ cho sản phẩm này. Bạn sẽ nhận được email ngay khi sản phẩm có hàng trở lại."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:151,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:86
 msgid "Unsubscribe"
-msgstr ""
+msgstr "Hủy đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:65
 msgid "Yes"
-msgstr ""
+msgstr "Có"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:65
 msgid "No"
-msgstr ""
+msgstr "Không"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:21
 msgid "You don't have any products in your waitlist yet."
-msgstr ""
+msgstr "Bạn chưa có sản phẩm nào trong danh sách chờ."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:42
 msgid "Confirmed"
-msgstr ""
+msgstr "Đã xác nhận"
 
 #. translators: %s User name.
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:19,
@@ -355,90 +355,90 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:10,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:10
 msgid "Hi, %s!"
-msgstr ""
+msgstr "Chào, %s!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:19
 msgid "Great news! The %s from your waitlist is now back in stock!"
-msgstr ""
+msgstr "Tin tốt! %s từ danh sách chờ của bạn hiện đã có hàng trở lại!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:42,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:24
 msgid "Click the link below to secure your purchase before it is gone!"
-msgstr ""
+msgstr "Nhấp vào liên kết dưới đây để đảm bảo mua hàng của bạn trước khi sản phẩm hết hàng!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:15
 msgid "You have requested to join the waitlist for this item:"
-msgstr ""
+msgstr "Bạn đã yêu cầu tham gia danh sách chờ cho sản phẩm này:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:62
 msgid "Click the button below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
-msgstr ""
+msgstr "Nhấp vào nút bên dưới để xác nhận đăng ký của bạn. Sau khi xác nhận, chúng tôi sẽ thông báo cho bạn khi sản phẩm có hàng trở lại."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:66
 msgid "Confirm Subscription"
-msgstr ""
+msgstr "Xác nhận đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:70,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:26
 msgid "Please note, the confirmation period is 2 days."
-msgstr ""
+msgstr "Lưu ý, thời gian xác nhận là 2 ngày."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:77,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:65
 msgid "If you don't want to receive any further notifications, please %s"
-msgstr ""
+msgstr "Nếu bạn không muốn nhận thêm thông báo, vui lòng %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:78,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:66
 msgid "unsubscribe"
-msgstr ""
+msgstr "hủy đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
 msgid "You have been successfully added to the waitlist for the following item:"
-msgstr ""
+msgstr "Bạn đã được thêm thành công vào danh sách chờ cho sản phẩm sau:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:28,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
 msgid "Product:"
-msgstr ""
+msgstr "Sản phẩm:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:18
 msgid "Price:"
-msgstr ""
+msgstr "Giá:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:30
 msgid "Add to cart:"
-msgstr ""
+msgstr "Thêm vào giỏ hàng:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:19
 msgid "Product link:"
-msgstr ""
+msgstr "Liên kết sản phẩm:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:23
 msgid "Click the link below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
-msgstr ""
+msgstr "Nhấp vào liên kết dưới đây để xác nhận đăng ký của bạn. Sau khi xác nhận, chúng tôi sẽ thông báo cho bạn khi sản phẩm có hàng trở lại."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:32,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:25
 msgid "If you don't want to receive any further notifications, please unsubscribe by clicking on this link - %s"
-msgstr ""
+msgstr "Nếu bạn không muốn nhận thêm thông báo, vui lòng hủy đăng ký bằng cách nhấp vào liên kết này - %s"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:127
 msgid "API URL"
-msgstr ""
+msgstr "URL API"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:304
 msgid "More information on how to generate an API key for ActiveCampaign can be found %shere%s."
-msgstr ""
+msgstr "Thông tin thêm về cách tạo khóa API cho ActiveCampaign có thể được tìm thấy %stại đây%s."
 
 #: static/js/dashboard/helpers/useUpsellModal.js:18
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:111
 msgid "Business"
-msgstr ""
+msgstr "Doanh nghiệp"
 
 #: framework/helpers/exts-configs.php:377,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:4
@@ -1599,7 +1599,7 @@ msgstr "Khoảng cách trường"
 
 #: framework/features/blocks/about-me/options.php:21
 msgid "User Source"
-msgstr "Nguồn ngư��i dùng"
+msgstr "Nguồn người dùng"
 
 #: framework/features/blocks/about-me/options.php:26
 msgid "Dynamic"
@@ -2248,7 +2248,7 @@ msgstr "Nâng cấp lên bất kỳ gói pro nào và có quyền truy cập nga
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:61
 msgid "Upgrade to the business or agency plan and get instant access to this starter site and many other features."
-msgstr ""
+msgstr "Nâng cấp lên gói doanh nghiệp hoặc đại lý và nhận quyền truy cập ngay vào trang web mẫu này cùng với nhiều tính năng khác."
 
 #: static/js/dashboard/helpers/useProExtensionInFree.js:14
 msgid "This is a Pro extension"
@@ -2283,7 +2283,7 @@ msgstr "Nâng cấp lên bất kỳ gói Pro nào và có quyền truy cập nga
 
 #: static/js/dashboard/helpers/useUpsellModal.js:35
 msgid "Upgrade to the business or agency plan and get instant access to this and many other features."
-msgstr ""
+msgstr "Nâng cấp lên gói doanh nghiệp hoặc đại lý và nhận quyền truy cập ngay vào tính năng này cùng với nhiều tính năng khác."
 
 #: static/js/dashboard/NoTheme.js:31
 msgid "In order to take full advantage of all features it has to offer - please install and activate the Blocksy theme also."
@@ -2687,7 +2687,7 @@ msgstr "Hết hàng"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:540
 msgid "Display Variations Inline"
-msgstr "Hi��n thị biến thể nội tuyến"
+msgstr "Hiển thị biến thể nội tuyến"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:636,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:736,
@@ -3031,7 +3031,7 @@ msgstr "Loại nút"
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:80,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:727
 msgid "Button"
-msgstr "N��t bấm"
+msgstr "Nút bấm"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:72
 msgid "Modal Trigger"
@@ -4444,7 +4444,7 @@ msgstr "Đăng ký hoàn tất. Vui lòng kiểm tra email của bạn, sau đó
 #: framework/features/header/items/account/views/login.php:158,
 #: framework/features/header/items/account/views/login.php:335
 msgid "Dashboard"
-msgstr "Trang quản trị"
+msgstr "Bảng tổng quan"
 
 #: framework/dashboard.php:521
 msgid "You do not have sufficient permissions to access this page."
@@ -7539,7 +7539,7 @@ msgstr "Tất cả người dùng"
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:40
 msgid "Wishlist Page"
-msgstr ""
+msgstr "Trang danh sách yêu thích"
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:46
 msgid "The page you select here will display the wish list for your logged out users."
@@ -9258,7 +9258,7 @@ msgstr "Người tùy chỉnh"
 
 #: framework/extensions/newsletter-subscribe/config.php:6
 msgid "Easily capture new leads for your newsletter with the help of a widget, shortcode or even a block inserted on your pages or posts."
-msgstr "Dễ dàng tạo khách hàng tiềm năng mới cho bản tin của bạn với sự gi��p đỡ của một tiện ích, mã ngắn hoặc thậm chí một khối được chèn vào trang hoặc bài viết của bạn."
+msgstr "Dễ dàng tạo khách hàng tiềm năng mới cho bản tin của bạn với sự giúp đỡ của một tiện ích, mã ngắn hoặc thậm chí một khối được chèn vào trang hoặc bài viết của bạn."
 
 #: framework/extensions/newsletter-subscribe/customizer.php:4
 msgid "Subscribe Form"

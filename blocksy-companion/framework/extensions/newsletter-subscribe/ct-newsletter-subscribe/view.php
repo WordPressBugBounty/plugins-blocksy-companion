@@ -138,6 +138,10 @@ if ($provider_data['provider'] === 'mailerlite') {
 	$provider_data['provider'] .= ':' . $settings['list_id'];
 }
 
+if ($provider_data['provider'] === 'fluentcrm') {
+	$provider_data['provider'] .= ':' . $provider_data['list_id'];
+}
+
 $form_url = $provider_data['form_url'];
 $has_gdpr_fields = $provider_data['has_gdpr_fields'];
 
