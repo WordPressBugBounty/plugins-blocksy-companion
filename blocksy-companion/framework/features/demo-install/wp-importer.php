@@ -772,11 +772,9 @@ class Blocksy_WP_Import extends WP_Importer {
 				else
 					$author = (int) get_current_user_id();
 
-				$formatted_post_content = str_replace($this->base_url, site_url(), $post['post_content']);
-
 				$postdata = array(
 					'import_id' => $post['post_id'], 'post_author' => $author, 'post_date' => $post['post_date'],
-					'post_date_gmt' => $post['post_date_gmt'], 'post_content' => $formatted_post_content,
+					'post_date_gmt' => $post['post_date_gmt'], 'post_content' => $post['post_content'],
 					'post_excerpt' => $post['post_excerpt'], 'post_title' => $post['post_title'],
 					'post_status' => $post['status'], 'post_name' => $post['post_name'],
 					'comment_status' => $post['comment_status'], 'ping_status' => $post['ping_status'],

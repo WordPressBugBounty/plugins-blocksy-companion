@@ -4,20 +4,24 @@ namespace Blocksy;
 
 class ThemeIntegration {
 	public function __construct() {
-		add_action('wp_enqueue_scripts', function () {
-			if (! function_exists('get_plugin_data')){
-				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-			}
+		add_action(
+			'wp_enqueue_scripts',
+			function () {
+				if (! function_exists('get_plugin_data')){
+					require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+				}
 
-			$data = get_plugin_data(BLOCKSY__FILE__);
+				$data = get_plugin_data(BLOCKSY__FILE__);
 
-			if (is_admin()) return;
-
-			wp_register_script(
-				'blocksy-zxcvbn',
-				includes_url('/js/zxcvbn.min.js')
-			);
-		});
+				if (is_admin()) return;
+				
+				wp_register_script(
+					'blocksy-zxcvbn',
+					includes_url('/js/zxcvbn.min.js')
+				);
+			},
+			5
+		);
 
 		add_filter('blocksy:frontend:dynamic-js-chunks', function ($chunks) {
 			$render = new \Blocksy_Header_Builder_Render();

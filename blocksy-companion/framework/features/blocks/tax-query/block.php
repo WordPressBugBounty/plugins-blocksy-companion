@@ -285,6 +285,10 @@ class TaxQuery {
 			]
 		);
 
+		if (! taxonomy_exists($attributes['taxonomy'])) {
+			return [];
+		}
+
 		$ffiltered_include = [];
 		$filtered_exclude = [];
 
@@ -355,41 +359,47 @@ class TaxQuery {
 			$terms = array_slice($terms, 0, $attributes['limit']);
 		}
 
+		if (
+			is_wp_error($terms)
+			||
+			empty($terms)
+		) {
+			return [];
+		}
+
 		$terms_descriptors = [];
 
-		if ($terms) {
-			foreach ($terms as $term) {
-				$attachment = [];
+		foreach ($terms as $term) {
+			$attachment = [];
 
-				$id = get_term_meta($term->term_id, 'thumbnail_id');
+			$id = get_term_meta($term->term_id, 'thumbnail_id');
 
-				if (isset($id[0])) {
-					$attachment = [
-						'attachment_id' => $id[0],
-						'url' => wp_get_attachment_image_url($id[0], 'full')
-					];
-				}
-
-				$term_atts = get_term_meta(
-					$term->term_id,
-					'blocksy_taxonomy_meta_options'
-				);
-
-				if (empty($term_atts)) {
-					$term_atts = [[]];
-				}
-
-				$term_atts = $term_atts[0];
-
-				$maybe_icon = blocksy_akg('icon_image', $term_atts, '');
-				$maybe_image = blocksy_akg('image', $term_atts, '');
-
-				$terms_descriptors[] = [
-					'term_id' => $term->term_id,
-					'icon' => $maybe_icon,
-					'image' => $maybe_image,
+			if (isset($id[0])) {
+				$attachment = [
+					'attachment_id' => $id[0],
+					'url' => wp_get_attachment_image_url($id[0], 'full')
 				];
 			}
+
+			$term_atts = get_term_meta(
+				$term->term_id,
+				'blocksy_taxonomy_meta_options'
+			);
+
+			if (empty($term_atts)) {
+				$term_atts = [[]];
+			}
+
+			$term_atts = $term_atts[0];
+
+			$maybe_icon = blocksy_akg('icon_image', $term_atts, '');
+			$maybe_image = blocksy_akg('image', $term_atts, '');
+
+			$terms_descriptors[] = [
+				'term_id' => $term->term_id,
+				'icon' => $maybe_icon,
+				'image' => $maybe_image,
+			];
 		}
 
 		return $terms_descriptors;

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-09 14:30:39+0000\n"
+"PO-Revision-Date: 2024-10-30 15:59:18+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3496,7 +3496,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:442
 msgid "%s%% of customers recommend this product."
-msgstr ""
+msgstr "%s%% des clients recommandent ce produit"
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:604
 msgid "%s of %s found this review helpful"
@@ -3549,7 +3549,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:56
 msgid "Image Upload"
-msgstr ""
+msgstr "Image Téléversée"
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/view.php:78
 msgid "Color mode switch"

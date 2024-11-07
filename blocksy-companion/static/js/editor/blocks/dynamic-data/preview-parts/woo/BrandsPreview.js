@@ -26,7 +26,7 @@ const BrandsPreview = ({ product, attributes }) => {
 						return (
 							<span
 								key={brand.slug}
-								className="ct-media-container ct-product-brand">
+								className="ct-media-container">
 								<img src={brand.image.url} alt={brand.name} />
 							</span>
 						)

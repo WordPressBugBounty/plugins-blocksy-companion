@@ -12,7 +12,9 @@ class Capabilities {
 	private $wp_capabilities = [
 		'dashboard' => 'manage_options',
 		'custom_post_type' => 'manage_options',
-		'conditions' => 'manage_options'
+		'conditions' => 'manage_options',
+
+		'ext_code_snippets_fields' => 'edit_posts'
 	];
 
 	public function __construct() {

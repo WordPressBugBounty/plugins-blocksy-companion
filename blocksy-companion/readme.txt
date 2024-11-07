@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.75
+Stable tag: 2.0.76
 
 == Description ==
 
@@ -52,6 +52,12 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.76: 2024-11-07
+- Improvement: Account modal - better integration with SecuPress plugin
+- Improvement: Make sure uploaded SVG's receive the correct sizes for ratio calculations
+- Improvement: Newsletter subscribe extension - deprecate JSONP and use the provided API for Mailchimp integration
+- Improvement: Starter sites installation - proper URL mapping
+
 2.0.75: 2024-10-24
 - Improvement: General fixes and improvements
 

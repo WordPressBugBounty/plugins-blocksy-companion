@@ -138,6 +138,10 @@ const SiteExport = ({ allPlans, allCategories }) => {
 						...data.demo,
 					}
 
+					if (finalDemo.builder.toLowerCase() === 'elementor') {
+						finalDemo.elementor_experiment_container = true
+					}
+
 					console.log('Blocksy:Dashboard:DemoInstall:exported', {
 						remoteDemo,
 						finalDemo,

@@ -75,7 +75,7 @@ const ListPicker = ({ listId, provider, apiKey, apiUrl, onChange }) => {
 	}
 
 	useEffect(() => {
-		if (!apiKey) {
+		if (!apiKey && provider !== 'fluentcrm') {
 			setLists([])
 			return
 		}

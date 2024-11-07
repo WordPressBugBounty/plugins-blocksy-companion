@@ -137,7 +137,11 @@ class ConditionsManager {
 			$args['filter'] = 'all';
 		}
 
-		if ($args['filter'] === 'all') {
+		if (
+			$args['filter'] === 'all'
+			||
+			$args['filter'] === 'product_tabs'
+		) {
 			$sections[] = 'user-auth';
 		}
 		

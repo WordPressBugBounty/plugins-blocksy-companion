@@ -495,10 +495,6 @@ class Query {
 			'post_status' => 'publish'
 		];
 
-		if ($attributes['offset'] !== 0) {
-			$query_args['offset'] = $attributes['offset'];
-		}
-
 		if ($attributes['sticky_posts'] === 'exclude') {
 			// $query_args['ignore_sticky_posts'] = true;
 			$query_args['post__not_in'] = get_option('sticky_posts');
@@ -516,6 +512,19 @@ class Query {
 		if ($attributes['has_pagination'] === 'yes') {
 			$pagination_data = $this->get_pagination_descriptor($attributes);
 			$query_args['paged'] = $pagination_data['value'];
+		}
+
+		if ($attributes['offset'] !== 0) {
+			$current_page = 1;
+
+			if ($attributes['has_pagination'] === 'yes') {
+				$current_page = $query_args['paged'];
+				$current_page = max( 1, $current_page );
+			}
+
+			$per_page = $attributes['limit'];
+			$offset_start = $attributes['offset'];
+			$query_args['offset'] = ( $current_page - 1 ) * $per_page + $offset_start;
 		}
 
 		$to_include = [

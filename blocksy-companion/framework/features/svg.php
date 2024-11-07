@@ -43,6 +43,18 @@ class SvgHandling {
 		});
 
 		add_filter(
+			'wp_get_attachment_metadata',
+			[$this, 'filter_get_attachment_metadata'],
+			10, 2
+		);
+
+		add_filter(
+			'wp_update_attachment_metadata',
+			[$this, 'filter_get_attachment_metadata'],
+			10, 2
+		);
+
+		add_filter(
 			'wp_get_attachment_image_src',
 			function ($image, $attachment_id, $size, $icon) {
 				if (! isset($attachment_id)) {
@@ -51,29 +63,65 @@ class SvgHandling {
 
 				$mime = get_post_mime_type($attachment_id);
 
-				if ('image/svg+xml' === $mime) {
-					$default_height = 100;
-					$default_width = 100;
+				if (
+					'image/svg+xml' === $mime
+					&&
+					$image[1] === 1
+					&&
+					$image[2] === 1
+				) {
+					$dimensions = $this->get_dimensions_for($attachment_id);
 
-					$maybe_file = get_attached_file($attachment_id);
-
-					if ($maybe_file) {
-						$dimensions = $this->svg_dimensions($maybe_file);
-
-						if ($dimensions) {
-							$default_height = $dimensions['height'];
-							$default_width = $dimensions['width'];
-						}
-					}
-
-					$image[2] = $default_height;
-					$image[1] = $default_width;
+					$image[2] = $dimensions['height'];
+					$image[1] = $dimensions['width'];
 				}
 
 				return $image;
 			},
 			10, 4
 		);
+	}
+
+	public function filter_get_attachment_metadata($data, $attachment_id) {
+		$mime = get_post_mime_type($attachment_id);
+
+		if (
+			'image/svg+xml' === $mime
+			&&
+			(
+				! isset($data['width'])
+				||
+				! isset($data['height'])
+			)
+		) {
+			$dimensions = $this->get_dimensions_for($attachment_id);
+
+			$data['width'] = $dimensions['width'];
+			$data['height'] = $dimensions['height'];
+		}
+
+		return $data;
+	}
+
+	public function get_dimensions_for($attachment_id) {
+		$height = 100;
+		$width = 100;
+
+		$maybe_file = get_attached_file($attachment_id);
+
+		if ($maybe_file) {
+			$dimensions = $this->svg_dimensions($maybe_file);
+
+			if ($dimensions) {
+				$height = round($dimensions['height']);
+				$width = round($dimensions['width']);
+			}
+		}
+
+		return [
+			'height' => $height,
+			'width' => $width
+		];
 	}
 
 	public function svg_dimensions($svg) {
@@ -93,7 +141,9 @@ class SvgHandling {
 			$svg = @simplexml_load_string($svg);
 
 			if ($svg) {
-				$attributes = $svg->attributes();
+				foreach ($svg->attributes() as $key => $value) {
+					$attributes->{$key} = strval($value);
+				}
 			}
 		}
 
@@ -140,7 +190,6 @@ class SvgHandling {
 
 			xml_parser_free($xml);
 		}
-
 
 		$width = 0;
 		$height = 0;

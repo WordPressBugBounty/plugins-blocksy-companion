@@ -241,13 +241,33 @@ class DynamicData {
 			}
 		}
 
-		return blocksy_render_view(
+		$post_id = get_the_ID();
+		$maybe_special_post_id = blocksy_get_special_post_id('local');
+
+		$old_post = null;
+
+		if ($maybe_special_post_id && $post_id !== $maybe_special_post_id) {
+			global $post;
+			$old_post = $post;
+
+			$post = get_post($maybe_special_post_id);
+			setup_postdata($post);
+		}
+
+		$content = blocksy_render_view(
 			dirname(__FILE__) . '/view.php',
 			[
 				'attributes' => $attributes,
 				'block_instance' => $this
 			]
 		);
+
+		if ($old_post !== null) {
+			wp_reset_postdata();
+			$post = $old_post;
+		}
+
+		return $content;
 	}
 
 	public function get_dynamic_styles_for() {

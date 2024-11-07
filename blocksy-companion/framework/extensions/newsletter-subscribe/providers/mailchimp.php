@@ -117,5 +117,77 @@ class MailchimpProvider extends Provider {
 			'provider' => 'mailchimp'
 		];
 	}
+
+	public function subscribe_form($args = []) {
+		$args = wp_parse_args($args, [
+			'email' => '',
+			'name' => '',
+		]);
+
+		$settings = $this->get_settings();
+
+		$curl = curl_init();
+
+		$api_key = $settings['api_key'];
+
+		$region = explode('-', $api_key);
+
+		if (strpos($region[1], '.') !== false) {
+			return 'api_key_invalid';
+		}
+
+		curl_setopt_array($curl, array(
+			CURLOPT_URL => 'https://' . $region[1] . '.api.mailchimp.com/3.0/lists/' . $settings['list_id'] . '/members/',
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "POST",
+			CURLOPT_POSTFIELDS => json_encode([
+				'email_address' => $args['email'],
+				'first_name' => $args['name'],
+				'status' => 'subscribed'
+			]),
+			CURLOPT_USERPWD => 'user:' . $settings['api_key'],
+			CURLOPT_HTTPHEADER => array(
+				"content-type: application/json; charset=utf-8"
+			),
+		));
+
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+
+		curl_close($curl);
+
+		if ($err) {
+			return [
+				'result' => 'no',
+				'error' => $err
+			];
+		} else {
+			$response = json_decode($response, true);
+			
+			if (
+				isset($response['status'])
+				&&
+				$response['status'] === 400
+			) {
+				return [
+					'result' => 'no',
+					'message' => blocksy_safe_sprintf(
+						__('%s is already a list member.', 'blocksy-companion'),
+						$args['email']
+					)
+				];
+			}
+
+			return [
+				'result' => 'yes',
+				'message' => __('Thank you for subscribing to our newsletter!', 'blocksy-companion'),
+				'res' => $response
+			];
+		}
+	}
 }
 

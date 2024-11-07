@@ -81,7 +81,11 @@ if (! function_exists('blc_get_ext')) {
 	return;
 }
 
-if (! blc_get_ext('post-types-extra')->dynamic_data) {
+if (
+	! blc_get_ext('post-types-extra')
+	||
+	! blc_get_ext('post-types-extra')->dynamic_data
+) {
 	return;
 }
 

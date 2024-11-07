@@ -50,6 +50,8 @@ class AccountAuth {
 	}
 
 	public function blc_implement_user_lostpassword() {
+		do_action('blocksy:account:user-flow:before-lostpassword');
+		
 		ob_start();
 		require_once ABSPATH . 'wp-login.php';
 		$res = ob_get_clean();
@@ -140,6 +142,8 @@ class AccountAuth {
 	}
 
 	public function blc_implement_user_registration() {
+		do_action('blocksy:account:user-flow:before-registration');
+
 		ob_start();
 		require_once ABSPATH . 'wp-login.php';
 		$res = ob_get_clean();
@@ -279,6 +283,8 @@ class AccountAuth {
 	}
 
 	public function blc_implement_user_login() {
+		do_action('blocksy:account:user-flow:before-login');
+
 		add_filter(
 			'login_redirect',
 			function ($redirect_to, $requested_redirect_to, $user) {
