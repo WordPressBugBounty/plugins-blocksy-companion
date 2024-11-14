@@ -348,8 +348,6 @@ class Dashboard {
 			return;
 		}
 
-		$data = get_plugin_data(BLOCKSY__FILE__);
-
 		$deps = apply_filters('blocksy-dashboard-scripts-dependencies', [
 			'wp-i18n',
 			'ct-events',
@@ -361,7 +359,7 @@ class Dashboard {
 				'blocksy-dashboard-scripts',
 				BLOCKSY_URL . 'static/bundle/dashboard.js',
 				$deps,
-				$data['Version'],
+				blc_get_version(),
 				false
 			);
 		} else {
@@ -377,7 +375,7 @@ class Dashboard {
 					'wp-i18n',
 					'wp-util'
 				],
-				$data['Version'],
+				blc_get_version(),
 				false
 			);
 
@@ -432,7 +430,7 @@ class Dashboard {
 			'blocksy-dashboard-styles',
 			BLOCKSY_URL . 'static/bundle/dashboard.min.css',
 			['wp-components'],
-			$data['Version']
+			blc_get_version()
 		);
 	}
 
@@ -454,13 +452,11 @@ class Dashboard {
 			&&
 			$blocksy_data['is_correct_theme']
 		) {
-			$data = get_plugin_data(BLOCKSY__FILE__);
-
 			wp_enqueue_style(
 				'blocksy-dashboard-styles',
 				BLOCKSY_URL . 'static/bundle/dashboard.min.css',
 				[],
-				$data['Version']
+				blc_get_version()
 			);
 
 			wp_enqueue_script(
@@ -474,7 +470,7 @@ class Dashboard {
 					'wp-date',
 					'wp-i18n'
 				],
-				$data['Version'],
+				blc_get_version(),
 				false
 			);
 
@@ -492,8 +488,6 @@ class Dashboard {
 		if (! current_user_can(blc_get_capabilities()->get_wp_capability_by('dashboard'))) {
 			return;
 		}
-
-		$data = get_plugin_data(BLOCKSY__FILE__);
 
 		$options = [
 			'title' => __('Blocksy', 'blocksy-companion'),

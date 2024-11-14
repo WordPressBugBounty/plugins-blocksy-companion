@@ -36,7 +36,9 @@ class Plugin {
 
 	private $is_blocksy = '__NOT_SET__';
 	public $is_blocksy_data = null;
-	private $desired_blocksy_version = '2.0.76-beta1';
+	private $desired_blocksy_version = '2.0.77-beta1';
+
+	private $request_uri = '';
 
 	/**
 	 * Instance.
@@ -92,17 +94,11 @@ class Plugin {
 		add_action(
 			'admin_enqueue_scripts',
 			function () {
-				if (!function_exists('get_plugin_data')) {
-					require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-				}
-
-				$data = get_plugin_data(BLOCKSY__FILE__);
-
 				wp_enqueue_style(
 					'blocksy-styles',
 					BLOCKSY_URL . 'static/bundle/options.min.css',
 					[],
-					$data['Version']
+					blc_get_version()
 				);
 
 				$current_screen = get_current_screen();
@@ -130,6 +126,10 @@ class Plugin {
 	 * @access private
 	 */
 	public function early_init_with_blocksy_theme() {
+		add_filter('blocksy:current-url:request-uri', function () {
+			return $this->request_uri;
+		});
+
 		if (
 			blc_can_use_premium_code()
 			&&
@@ -182,6 +182,13 @@ class Plugin {
 		require_once BLOCKSY_PATH . '/framework/helpers/helpers.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/exts.php';
 
+		// Some plugins override the REQUEST_URI server variable and we need to
+		// persist the original value for use within the blocksy_current_url()
+		// helper function.
+		//
+		// Mainly caused by TranslatePress Business SEO pack.
+		$this->request_uri = $_SERVER['REQUEST_URI'];
+
 		add_filter(
 			'extra_theme_headers',
 			function ($extra) {
@@ -204,16 +211,10 @@ class Plugin {
 	}
 
 	public function check_if_blocksy_is_activated() {
-		if (! function_exists('get_plugin_data')) {
-			require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-		}
-
 		$is_cli = defined('WP_CLI') && WP_CLI;
 
 		if ($this->is_blocksy === '__NOT_SET__') {
 			$theme = wp_get_theme(get_template());
-
-			$data = get_plugin_data(BLOCKSY__FILE__);
 
 			if ($theme->parent() && $theme->parent()->exists()) {
 				$theme = $theme->parent();
@@ -234,7 +235,7 @@ class Plugin {
 
 			if (! empty($maybe_minimum_companion_version)) {
 				$is_companion_version_ok = version_compare(
-					$data['Version'],
+					blc_get_version(),
 					$maybe_minimum_companion_version
 				) > -1;
 			}
@@ -342,13 +343,7 @@ class Plugin {
 	}
 
 	public function enqueue_static() {
-		if (! function_exists('get_plugin_data')) {
-			require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-		}
-
 		global $wp_customize;
-
-		$data = get_plugin_data(BLOCKSY__FILE__);
 
 		$deps = ['ct-options-scripts'];
 
@@ -362,7 +357,7 @@ class Plugin {
 			'blocksy-admin-scripts',
 			BLOCKSY_URL . 'static/bundle/options.js',
 			$deps,
-			$data['Version'],
+			blc_get_version(),
 			true
 		);
 

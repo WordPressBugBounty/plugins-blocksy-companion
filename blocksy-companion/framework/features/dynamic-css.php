@@ -255,15 +255,7 @@ class DynamicCss {
 
 		if ($wp_filesystem) {
 			if ($wp_filesystem->method !== 'direct') {
-				if (
-					is_wp_error($wp_filesystem->errors)
-					&&
-					$wp_filesystem->errors->get_error_code()
-				) {
-					return true;
-				} else {
-					return $wp_filesystem->method === 'direct';
-				}
+				return false;
 			} else {
 				return true;
 			}

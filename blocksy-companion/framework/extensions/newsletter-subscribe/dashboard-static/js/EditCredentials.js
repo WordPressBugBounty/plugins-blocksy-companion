@@ -371,7 +371,8 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 			<button
 				className="ct-button-primary"
 				disabled={
-					(!apiKey && provider !== 'mailpoet') ||
+					(!apiKey &&
+						!['mailpoet', 'fluentcrm'].includes(provider)) ||
 					!listId ||
 					isLoading ||
 					(!apiUrl && provider === 'activecampaign')

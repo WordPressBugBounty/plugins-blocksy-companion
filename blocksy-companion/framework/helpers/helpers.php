@@ -1,5 +1,20 @@
 <?php
 
+function blc_get_version() {
+	if (! function_exists('get_plugin_data')) {
+		require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+	}
+
+	// Prevent early translation call by setting $translate to false.
+	$plugin_data = get_plugin_data(
+		BLOCKSY__FILE__,
+		false,
+		/* $translate */ false
+	);
+
+	return $plugin_data['Version'];
+}
+
 function blc_get_capabilities() {
 	static $capabilities = null;
 
@@ -311,11 +326,7 @@ function blc_get_jed_locale_data($domain) {
 		$locale[$domain][$entry->key()] = $entry->translations;
 	}
 
-	if (! function_exists('blocksy_get_json_translation_files')) {
-		return $locale[$domain];
-	}
-
-	foreach (blocksy_get_json_translation_files('blocksy-companion') as $file_path) {
+	foreach (blc_get_json_translation_files('blocksy-companion') as $file_path) {
 		$parsed_json = json_decode(
 			call_user_func(
 				'file' . '_get_contents',
@@ -364,4 +375,37 @@ function blc_get_variables_from_file(
 	}
 
 	return $_extract_variables;
+}
+
+function blc_get_json_translation_files($domain) {
+	$cached_mofiles = [];
+
+	$locations = [
+		WP_LANG_DIR . '/themes',
+		WP_LANG_DIR . '/plugins'
+	];
+
+	foreach ($locations as $location) {
+		$mofiles = glob($location . '/*.json');
+
+		if (! $mofiles) {
+			continue;
+		}
+
+		$cached_mofiles = array_merge($cached_mofiles, $mofiles);
+	}
+
+	$locale = determine_locale();
+
+	$result = [];
+
+	foreach ($cached_mofiles as $single_file) {
+		if (strpos($single_file, $locale) === false) {
+			continue;
+		}
+
+		$result[] = $single_file;
+	}
+
+	return $result;
 }

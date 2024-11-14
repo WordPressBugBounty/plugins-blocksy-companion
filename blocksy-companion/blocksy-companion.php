@@ -3,7 +3,7 @@
 /*
 Plugin Name: Blocksy Companion
 Description: This plugin is the companion for the Blocksy theme, it runs and adds its enhacements only if the Blocksy theme is installed and active.
-Version: 2.0.76
+Version: 2.0.77
 Author: CreativeThemes
 Author URI: https://creativethemes.com
 Text Domain: blocksy-companion
@@ -87,14 +87,6 @@ if ( function_exists( 'blc_fs' ) || class_exists( '\\Blocksy\\Plugin' ) ) {
     define( 'BLOCKSY_PLUGIN_BASE', plugin_basename( BLOCKSY__FILE__ ) );
     define( 'BLOCKSY_PATH', plugin_dir_path( BLOCKSY__FILE__ ) );
     define( 'BLOCKSY_URL', plugin_dir_url( BLOCKSY__FILE__ ) );
-    add_action( 'init', function () {
-        /**
-         * Load Blocksy textdomain.
-         *
-         * Load gettext translate for Blocksy text domain.
-         */
-        load_plugin_textdomain( 'blocksy-companion', false, dirname( BLOCKSY_PLUGIN_BASE ) . '/languages' );
-    } );
     if ( !version_compare( PHP_VERSION, '7.0', '>=' ) ) {
         add_action( 'admin_notices', 'blc_fail_php_version' );
     } elseif ( !version_compare( get_bloginfo( 'version' ), '5.0', '>=' ) ) {
