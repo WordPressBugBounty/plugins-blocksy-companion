@@ -124,14 +124,6 @@ class ExtensionsManager {
 	private function is_dashboard_page() {
 		global $pagenow;
 
-		if (
-			isset($_SERVER['HTTP_REFERER'])
-			&&
-			strpos($_SERVER['HTTP_REFERER'], 'ct-dashboard') !== false
-		) {
-			return true;
-		}
-
 		$is_ct_settings =
 			// 'themes.php' === $pagenow &&
 			isset( $_GET['page'] ) && 'ct-dashboard' === $_GET['page'];
@@ -313,8 +305,13 @@ class ExtensionsManager {
 
 		$maybe_config = null;
 
-		if (isset($this->get_preliminary_exts_info()[$id])) {
-			$maybe_config = $this->get_preliminary_exts_info()[$id];
+		$preliminary_config = blc_exts_get_preliminary_config(
+			null,
+			['only_billing_data' => true]
+		);
+
+		if (isset($preliminary_config[$id])) {
+			$maybe_config = $preliminary_config[$id];
 		}
 
 		if (

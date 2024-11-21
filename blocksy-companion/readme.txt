@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.77
+Stable tag: 2.0.78
 
 == Description ==
 
@@ -52,6 +52,9 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.78: 2024-11-21
+- Improvement: Improve handling of global CSS file generation when no direct WP file system is used
+
 2.0.77: 2024-11-14
 - Improvement: Smarter handling of translations in JS files
 

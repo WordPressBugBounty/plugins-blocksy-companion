@@ -8852,7 +8852,7 @@ msgstr "1 天"
 
 #: framework/extensions/cookies-consent/customizer.php:50
 msgid "One week"
-msgstr "1 周"
+msgstr "1 ��"
 
 #: framework/extensions/cookies-consent/customizer.php:51
 msgid "One month"
