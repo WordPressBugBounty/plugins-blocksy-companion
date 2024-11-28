@@ -219,86 +219,85 @@ const DemoToInstall = ({ location, navigate }) => {
 											duration: 150,
 									  }
 							}}>
-							{(stepName) => (props) =>
-								(
-									<Fragment>
-										{stepName === 'modify_demo' && (
-											<ModifyDemo
-												demoConfiguration={
-													demoConfiguration
-												}
-												nextStep={() => {
-													setCurrentConfigurationStep(
-														Math.min(
-															currentConfigurationStep +
-																1,
-															configurationSteps.length -
-																1
-														)
+							{(props, stepName) => (
+								<Fragment>
+									{stepName === 'modify_demo' && (
+										<ModifyDemo
+											demoConfiguration={
+												demoConfiguration
+											}
+											nextStep={() => {
+												setCurrentConfigurationStep(
+													Math.min(
+														currentConfigurationStep +
+															1,
+														configurationSteps.length -
+															1
 													)
-												}}
-												style={props}
-											/>
-										)}
+												)
+											}}
+											style={props}
+										/>
+									)}
 
-										{stepName === 'child_theme' && (
-											<ChildTheme
-												style={props}
-												demoConfiguration={
-													demoConfiguration
-												}
-												setDemoConfiguration={
-													setDemoConfiguration
-												}
-											/>
-										)}
+									{stepName === 'child_theme' && (
+										<ChildTheme
+											style={props}
+											demoConfiguration={
+												demoConfiguration
+											}
+											setDemoConfiguration={
+												setDemoConfiguration
+											}
+										/>
+									)}
 
-										{stepName === 'plugins' && (
-											<Plugins
-												demoConfiguration={
-													demoConfiguration
-												}
-												style={props}
-												setDemoConfiguration={
-													setDemoConfiguration
-												}
-											/>
-										)}
+									{stepName === 'plugins' && (
+										<Plugins
+											demoConfiguration={
+												demoConfiguration
+											}
+											style={props}
+											setDemoConfiguration={
+												setDemoConfiguration
+											}
+										/>
+									)}
 
-										{stepName === 'builder' && (
-											<PickBuilder
-												style={props}
-												demoConfiguration={
-													demoConfiguration
-												}
-												setDemoConfiguration={
-													setDemoConfiguration
-												}
-											/>
-										)}
+									{stepName === 'builder' && (
+										<PickBuilder
+											style={props}
+											demoConfiguration={
+												demoConfiguration
+											}
+											setDemoConfiguration={
+												setDemoConfiguration
+											}
+										/>
+									)}
 
-										{stepName === 'content' && (
-											<Content
-												style={props}
-												demoConfiguration={
-													demoConfiguration
-												}
-												setDemoConfiguration={
-													setDemoConfiguration
-												}
-											/>
-										)}
+									{stepName === 'content' && (
+										<Content
+											style={props}
+											demoConfiguration={
+												demoConfiguration
+											}
+											setDemoConfiguration={
+												setDemoConfiguration
+											}
+										/>
+									)}
 
-										{stepName === 'installer' && (
-											<DemoInstaller
-												style={props}
-												demoConfiguration={
-													demoConfiguration
-												}
-											/>
-										)}
-									</Fragment>
-								)}
+									{stepName === 'installer' && (
+										<DemoInstaller
+											style={props}
+											demoConfiguration={
+												demoConfiguration
+											}
+										/>
+									)}
+								</Fragment>
+							)}
 						</Transition>
 					</div>
 

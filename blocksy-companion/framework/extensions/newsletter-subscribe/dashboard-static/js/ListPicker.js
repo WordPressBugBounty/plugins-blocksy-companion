@@ -75,7 +75,7 @@ const ListPicker = ({ listId, provider, apiKey, apiUrl, onChange }) => {
 	}
 
 	useEffect(() => {
-		if (!apiKey && provider !== 'fluentcrm') {
+		if (!apiKey && !['mailpoet', 'fluentcrm'].includes(provider)) {
 			setLists([])
 			return
 		}

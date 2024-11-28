@@ -46,9 +46,9 @@ const Extensions = ({ navigate }) => {
 								duration: 300,
 						  }
 				}}>
-				{(isLoading) => {
+				{(props, isLoading) => {
 					if (isLoading) {
-						return (props) => (
+						return (
 							<animated.p
 								style={props}
 								className="ct-loading-text">

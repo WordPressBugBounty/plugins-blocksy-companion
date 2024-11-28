@@ -12,6 +12,8 @@ import classnames from 'classnames'
 import { DemosContext } from '../../DemoInstall'
 import Checkbox from '../../../../helpers/Checkbox'
 
+import { animated } from 'blocksy-options'
+
 export const getPluginsMap = (plugins) => ({
 	gutenberg: 'Gutenberg',
 	'stackable-ultimate-gutenberg-blocks': 'Stackable - Gutenberg Blocks',
@@ -53,7 +55,7 @@ const Plugins = ({ demoConfiguration, setDemoConfiguration, style }) => {
 	)
 
 	return (
-		<div style={style}>
+		<animated.div style={style}>
 			<div className="ct-demo-plugins">
 				<i className="ct-demo-icon">
 					<svg width="40" height="40" viewBox="0 0 40 40">
@@ -112,7 +114,7 @@ const Plugins = ({ demoConfiguration, setDemoConfiguration, style }) => {
 					))}
 				</div>
 			</div>
-		</div>
+		</animated.div>
 	)
 }
 

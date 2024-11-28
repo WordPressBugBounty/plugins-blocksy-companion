@@ -12,6 +12,8 @@ import classnames from 'classnames'
 import { DemosContext } from '../../DemoInstall'
 import { getNameForPlugin } from './Plugins'
 
+import { animated } from 'blocksy-options'
+
 const PickBuilder = ({ demoConfiguration, setDemoConfiguration, style }) => {
 	const { currentDemo, demos_list, pluginsStatus, setCurrentDemo } =
 		useContext(DemosContext)
@@ -23,7 +25,7 @@ const PickBuilder = ({ demoConfiguration, setDemoConfiguration, style }) => {
 	)
 
 	return (
-		<div style={style}>
+		<animated.div style={style}>
 			{demosCollection.length > 1 && (
 				<div className="ct-demo-builder">
 					<i className="ct-demo-icon">
@@ -166,7 +168,7 @@ const PickBuilder = ({ demoConfiguration, setDemoConfiguration, style }) => {
 					</ul>
 				</div>
 			)}
-		</div>
+		</animated.div>
 	)
 }
 

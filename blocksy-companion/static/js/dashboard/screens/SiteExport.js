@@ -172,7 +172,7 @@ const SiteExport = ({ allPlans, allCategories }) => {
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"
-					fill-rule="evenodd"
+					fillRule="evenodd"
 					fill="currentColor">
 					<path d="M20 15v5H4v-5h1.5v3.5h6V6.8l-4 4-1-1.1L12.2 4l6.3 5.7-1 1.1L13 6.7v11.8h5.5V15H20z" />
 				</svg>

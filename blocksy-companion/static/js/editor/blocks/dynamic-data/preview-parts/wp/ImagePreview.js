@@ -14,10 +14,10 @@ function getMediaSourceUrlBySizeSlug(media, slug) {
 }
 
 const VideoIndicator = () => (
-	<span class="ct-video-indicator">
+	<span className="ct-video-indicator">
 		<svg width="40" height="40" viewBox="0 0 40 40" fill="#fff">
 			<path
-				class="ct-play-path"
+				className="ct-play-path"
 				d="M20,0C8.9,0,0,8.9,0,20s8.9,20,20,20s20-9,20-20S31,0,20,0z M16,29V11l12,9L16,29z"></path>
 		</svg>
 	</span>
@@ -45,16 +45,11 @@ const ImagePreview = ({
 	const borderProps = useBorderProps(attributes)
 
 	const blockProps = useBlockProps({
-		className: classnames(
-			'ct-dynamic-media wp-block-image',
-			{
-				[`align${imageAlign}`]: imageAlign,
-			},
-			borderProps.className
-		),
+		className: classnames('ct-dynamic-media', {
+			[`align${imageAlign}`]: imageAlign,
+		}),
 
 		style: {
-			...borderProps.style,
 			aspectRatio,
 			width,
 			height,
@@ -108,16 +103,16 @@ const ImagePreview = ({
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 60 60"
 						preserveAspectRatio="none"
-						class="components-placeholder__illustration"
+						className="components-placeholder__illustration"
 						aria-hidden="true"
 						focusable="false"
 						style={{
-							'min-height': '200px',
+							minHeight: '200px',
 							height: !!aspectRatio && '100%',
 							width: !!aspectRatio && '100%',
 						}}>
 						<path
-							vector-effect="non-scaling-stroke"
+							vectorEffect="non-scaling-stroke"
 							d="M60 60 0 0"></path>
 					</svg>
 				</div>
@@ -127,7 +122,9 @@ const ImagePreview = ({
 
 	let content = (
 		<img
+			className={borderProps.className}
 			style={{
+				...borderProps.style,
 				...imageStyles,
 			}}
 			src={maybeUrl}

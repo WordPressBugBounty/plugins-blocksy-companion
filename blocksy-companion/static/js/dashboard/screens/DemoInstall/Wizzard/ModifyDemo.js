@@ -14,6 +14,8 @@ import DashboardContext from '../../../DashboardContext'
 
 import { prepareUrl } from '../Installer/useInstaller'
 
+import { animated } from 'blocksy-options'
+
 const ModifyDemo = ({ style, nextStep }) => {
 	const { is_child_theme } = useContext(DashboardContext)
 	const {
@@ -126,7 +128,7 @@ const ModifyDemo = ({ style, nextStep }) => {
 	}
 
 	return (
-		<div className="ct-modify-demo" style={style}>
+		<animated.div className="ct-modify-demo" style={style}>
 			<i className="ct-demo-icon">
 				<svg width="36" height="36" viewBox="0 0 40 40">
 					<path
@@ -202,7 +204,7 @@ const ModifyDemo = ({ style, nextStep }) => {
 					</div>
 				</Fragment>
 			)}
-		</div>
+		</animated.div>
 	)
 }
 

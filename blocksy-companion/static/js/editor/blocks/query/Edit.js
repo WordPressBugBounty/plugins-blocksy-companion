@@ -16,7 +16,7 @@ import {
 import Preview from './Preview'
 import ColorsPanel from '../../components/ColorsPanel'
 
-import { OptionsPanel } from 'blocksy-options'
+import { OptionsPanel, mountFlexy } from 'blocksy-options'
 
 import { PanelBody } from '@wordpress/components'
 
@@ -60,6 +60,8 @@ const Edit = ({
 	const { postId, postType } = context
 
 	const navRef = useRef()
+
+	const [flexyInstance, setFlexyInstance] = useState(null)
 
 	const borderProps = useBorderProps(attributes)
 
@@ -166,7 +168,10 @@ const Edit = ({
 								options={{
 									post_type: {
 										type: 'ct-select',
-										label: __('Post Type', 'blocksy-companion'),
+										label: __(
+											'Post Type',
+											'blocksy-companion'
+										),
 										value: '',
 										defaultToFirstItem: false,
 										choices: postTypesSelectOptions,
@@ -181,10 +186,73 @@ const Edit = ({
 										max: 100,
 									},
 
-									has_pagination: {
+									has_slideshow: {
 										type: 'ct-switch',
-										label: __('Pagination', 'blocksy-companion'),
+										label: __(
+											'Slideshow',
+											'blocksy-companion'
+										),
 										value: '',
+									},
+
+									has_slideshow_condition: {
+										type: 'ct-condition',
+										condition: { has_slideshow: 'yes' },
+										options: {
+											has_slideshow_arrows: {
+												type: 'ct-switch',
+												label: __(
+													'Arrows',
+													'blocksy-companion'
+												),
+												value: '',
+											},
+
+											has_slideshow_autoplay: {
+												type: 'ct-switch',
+												label: __(
+													'Autoplay',
+													'blocksy-companion'
+												),
+												value: '',
+											},
+
+											has_slideshow_autoplay_condition: {
+												type: 'ct-condition',
+												condition: {
+													has_slideshow_autoplay:
+														'yes',
+												},
+												options: {
+													has_slideshow_autoplay_speed:
+														{
+															type: 'ct-number',
+															label: __(
+																'Autoplay Speed',
+																'blocksy-companion'
+															),
+															value: '',
+															min: 1,
+															max: 100,
+														},
+												},
+											},
+										},
+									},
+
+									has_pagination_condition: {
+										type: 'ct-condition',
+										condition: { has_slideshow: 'no' },
+										options: {
+											has_pagination: {
+												type: 'ct-switch',
+												label: __(
+													'Pagination',
+													'blocksy-companion'
+												),
+												value: '',
+											},
+										},
 									},
 								}}
 								value={attributes}

@@ -13,11 +13,13 @@ import { DemosContext } from '../../DemoInstall'
 import DashboardContext from '../../../DashboardContext'
 import Checkbox from '../../../../helpers/Checkbox'
 
+import { animated } from 'blocksy-options'
+
 const ChildTheme = ({ demoConfiguration, setDemoConfiguration, style }) => {
 	const { is_child_theme, child_theme_exists } = useContext(DashboardContext)
 
 	return (
-		<div className="ct-demo-child" style={style}>
+		<animated.div className="ct-demo-child" style={style}>
 			<i className="ct-demo-icon">
 				<svg width="40" height="40" viewBox="0 0 43 41.1">
 					<path
@@ -115,7 +117,7 @@ const ChildTheme = ({ demoConfiguration, setDemoConfiguration, style }) => {
 				target="_blank">
 				{__('Learn more about child themes', 'blocksy-companion')}
 			</a>
-		</div>
+		</animated.div>
 	)
 }
 

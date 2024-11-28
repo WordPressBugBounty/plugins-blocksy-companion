@@ -11,6 +11,8 @@ import { __, sprintf } from 'ct-i18n'
 import classnames from 'classnames'
 import Checkbox from '../../../../helpers/Checkbox'
 
+import { animated } from 'blocksy-options'
+
 const Content = ({
 	demoConfiguration,
 	setDemoConfiguration,
@@ -18,7 +20,7 @@ const Content = ({
 	style,
 }) => {
 	return (
-		<div style={style}>
+		<animated.div style={style}>
 			<div className="ct-demo-content">
 				<i className="ct-demo-icon">
 					<svg width="40" height="40" viewBox="0 0 40 40">
@@ -112,7 +114,7 @@ const Content = ({
 					</Checkbox>
 				</div>
 			</div>
-		</div>
+		</animated.div>
 	)
 }
 

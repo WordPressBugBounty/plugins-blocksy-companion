@@ -104,6 +104,26 @@
 			"type": "string",
 			"default": "// include | exclude | only",
 			"default": "include"
+		},
+
+		"has_slideshow": {
+			"type": "string",
+			"default": "no"
+		},
+
+		"has_slideshow_arrows": {
+			"type": "string",
+			"default": "yes"
+		},
+
+		"has_slideshow_autoplay": {
+			"type": "string",
+			"default": "no"
+		},
+
+		"has_slideshow_autoplay_speed": {
+			"type": "number",
+			"default": 3
 		}
 	},
 
@@ -153,6 +173,10 @@
 		"sticky_posts": "sticky_posts",
 		"orderby_custom": "orderby_custom",
 		"offset": "offset",
+		"has_slideshow": "has_slideshow",
+		"has_slideshow_arrows": "has_slideshow_arrows",
+		"has_slideshow_autoplay": "has_slideshow_autoplay",
+		"has_slideshow_autoplay_speed": "has_slideshow_autoplay_speed",
 		"has_pagination": "has_pagination",
 
 		"include_term_ids": "include_term_ids",

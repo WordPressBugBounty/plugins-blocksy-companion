@@ -91,10 +91,10 @@ const useExtsStatus = () => {
 			flushPermalinks()
 		}
 
-		setIsLoading(false)
-
 		setExtsStatus(data)
 		exts_status_cache = data
+
+		setIsLoading(false)
 
 		if (extension) {
 			return data[extension]

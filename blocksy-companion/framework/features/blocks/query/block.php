@@ -38,34 +38,44 @@ class Query {
 			}
 
 			$context = [
-				'post_id' => $body['previewedPostId']
+				'post_id' => $body['previewedPostId'],
+				'purpose' => 'editor'
 			];
 
 			$query = $this->get_query_for(
 				$body['attributes'],
 				$context
 			);
-			$prefix = $this->get_prefix_for($body['attributes']);
+
+			$attributes = self::get_attributes($body['attributes']);
+
+			$prefix = self::get_prefix_for($body['attributes']);
 
 			$pagination_data = $this->get_pagination_descriptor($body['attributes']);
 
-			wp_send_json_success([
+			$final_block_data = [
 				'taxonomies' => blocksy_get_taxonomies_for_cpt(
 					get_post_type($body['previewedPostId']),
 					['return_empty' => true]
 				),
 				'all_posts' => $query->get_posts(),
 				'post_types' => $all_post_types,
-				'block' => $this->render_block($body['attributes'], $context),
-				'dynamic_styles' => $this->get_dynamic_styles_for(
-					$body['attributes']
-				),
 				'pagination_output' => blocksy_display_posts_pagination([
 					'query' => $query,
 					'prefix' => $prefix,
 					'query_var' => $pagination_data['query_var']
 				])
-			]);
+			];
+
+			if (
+				isset($attributes['design'])
+				&&
+				$attributes['design'] === 'default'
+			) {
+				$final_block_data['customizer_preview'] = $this->render_block($body['attributes'], $context);
+			}
+
+			wp_send_json_success($final_block_data);
 		});
 
 		add_action('wp_ajax_blocksy_get_posts_block_patterns', function () {
@@ -100,89 +110,160 @@ class Query {
 
 		add_filter(
 			'render_block',
-			function ($block_content, $block) {
-
+			function ($block_content, $block, $instance) {
 				if ($block['blockName'] !== 'blocksy/post-template') {
 					return $block_content;
 				}
 
 				$processor = new \WP_HTML_Tag_Processor($block_content);
 
-				$is_grid_layout = isset($block['attrs']['layout']['type']) && $block['attrs']['layout']['type'] === 'grid';
-				$desktopColumns = isset($block['attrs']['layout']['columnCount']) ? $block['attrs']['layout']['columnCount'] : null;
-				$tabletColumns = isset($block['attrs']['tabletColumns']) ? $block['attrs']['tabletColumns'] : '2';
-				$mobileColumns = isset($block['attrs']['mobileColumns']) ? $block['attrs']['mobileColumns'] : '1';
+				$context = $instance->context;
 
-				$class = [];
+				$is_slideshow_layout = $context['has_slideshow'] === 'yes';
+				$layout = blocksy_akg('layout/type', $block['attrs'], 'default');
+				$is_grid_layout = $layout === 'grid';
 
-				if ($processor->next_tag('div')) {
-					$class = explode(' ', $processor->get_attribute('class'));
+				$processor->next_tag('div');
+
+				$class = ['ct-query-template-' . $layout];
+
+				if ($is_slideshow_layout) {
+					$class = ['ct-query-template', 'is-layout-slider'];
 				}
 
-				$unique_class = '';
-
-				foreach ($class as $class_name) {
-					if (strpos($class_name, 'wp-container-blocksy-post-template-is-layout-') === 0) {
-						$unique_class = $class_name;
-					}
+				if (
+					! $is_slideshow_layout
+					&&
+					$layout !== 'grid'
+				) {
+					$class[] = 'is-layout-flow';
 				}
-
-				$class = array_filter(
-					$class,
-					function ($class_name) {
-						return ! in_array(
-							$class_name,
-							[
-								'wp-block-post-template-is-layout-grid',
-								'wp-block-post-template-is-layout-flow'
-							]
-						);
-					}
-				);
 
 				$processor->set_attribute('class', implode(' ', $class));
 				$block_content = $processor->get_updated_html();
 
-				$alignmentStyles = [];
+				$css = new \Blocksy_Css_Injector();
+				$tablet_css = new \Blocksy_Css_Injector();
+				$mobile_css = new \Blocksy_Css_Injector();
+
+				$root_selector = ["[data-id='{$context['uniqueId']}']"];
 
 				if (
 					isset($block['attrs']['verticalAlignment'])
 					&&
 					$is_grid_layout
 				) {
+					$alignItems = 'center';
+
 					if ($block['attrs']['verticalAlignment'] === 'top') {
-						$alignmentStyles['align-items'] = 'flex-start;';
-					} elseif ($block['attrs']['verticalAlignment'] === 'bottom') {
-						$alignmentStyles['align-items'] = 'flex-end;';
-					} else {
-						$alignmentStyles['align-items'] = 'center';
+						$alignItems = 'flex-start';
+					}
+
+					if ($block['attrs']['verticalAlignment'] === 'bottom') {
+						$alignItems = 'flex-end';
+					}
+
+					$css->put(
+						blocksy_assemble_selector($root_selector),
+						'align-items: ' . $alignItems
+					);
+				}
+
+				$columns = [
+					'desktop' => 1,
+					'tablet' => 1,
+					'mobile' => 1
+				];
+
+				if ($is_grid_layout) {
+					$columns = [
+						'desktop' => blocksy_akg(
+							'columnCount',
+							$block['attrs']['layout'],
+							'3'
+						),
+						'tablet' => blocksy_akg(
+							'tabletColumns',
+							$block['attrs'],
+							'2'
+						),
+						'mobile' => blocksy_akg(
+							'mobileColumns',
+							$block['attrs'],
+							'1'
+						)
+					];
+				}
+
+				$gap = self::get_gap_value($block['attrs']);
+
+				if ($is_grid_layout) {
+					if (! empty($gap)) {
+						$css->put(
+							blocksy_assemble_selector($root_selector),
+							'--grid-columns-gap: ' . $gap
+						);
 					}
 				}
 
+				if (
+					! $is_grid_layout
+					&&
+					! empty($gap)
+					&&
+					! $is_slideshow_layout
+				) {
+					// DO WE REALLY NEED GAP HERE???
+
+					$css->put(
+						blocksy_assemble_selector(
+							blocksy_mutate_selector([
+								'selector' => $root_selector,
+								'operation' => 'suffix',
+								'to_add' => ':where(.is-layout-flow > *)'
+							])
+						),
+
+						'margin-block-end: ' . $gap
+					);
+				}
+
+				$this->get_grid_styles([
+					'css' => $css,
+					'tablet_css' => $tablet_css,
+					'mobile_css' => $mobile_css,
+
+					'root_selector' => $root_selector,
+
+					'is_slider' => $is_slideshow_layout,
+					'layout_type' => $is_grid_layout ? 'grid' : 'default',
+
+					'columns' => $columns
+				]);
+
 				wp_style_engine_get_stylesheet_from_css_rules(
-					[
-						[
-							'selector' => '.' . $unique_class . '.' . $unique_class,
-							'declarations' => array_merge(
-								$alignmentStyles,
-								$desktopColumns !== null ? [
-									'grid-template-columns' => "repeat(var(--ct-grid-columns, {$desktopColumns}), minmax(0, 1fr));",
-									'--ct-grid-columns-tablet' => $tabletColumns,
-									'--ct-grid-columns-mobile' => $mobileColumns,
-								] : []
-							)
-						]
-					],
+					array_merge(
+						$css->get_wp_style_engine_rules([
+							'device' => 'desktop'
+						]),
+						$tablet_css->get_wp_style_engine_rules([
+							'device' => 'tablet'
+						]),
+						$mobile_css->get_wp_style_engine_rules([
+							'device' => 'mobile'
+						])
+					),
 					[
 						'context'  => 'block-supports',
-						'prettify' => false
+						'prettify' => false,
+						'optimize' => true
 					]
 				);
 
 				return $block_content;
 			},
 			11,
-			2
+			3
 		);
 
 		register_block_type(
@@ -197,6 +278,10 @@ class Query {
 						$attributes['design'] === 'default'
 					) {
 						$content = $this->render_block($attributes);
+
+						if (empty($content)) {
+							return '';
+						}
 
 						$wrapper_attr = [];
 
@@ -213,21 +298,23 @@ class Query {
 						}
 
 						if (! empty($attributes['uniqueId'])) {
-							$wrapper_attr['data-id'] = substr($attributes['uniqueId'], 0, 3);
+							$wrapper_attr['data-id'] = $attributes['uniqueId'];
 						}
 
 						$wrapper_attributes = get_block_wrapper_attributes($wrapper_attr);
 
-						if (! empty($content)) {
-							return blocksy_html_tag(
-								'div',
-								$wrapper_attributes,
-								$this->render_block($attributes)
-							);
-						}
+						return blocksy_html_tag(
+							'div',
+							$wrapper_attributes,
+							$content
+						);
+					}
 
+					if (strpos($content, 'wp-block-blocksy-query"></div>') !== false) {
 						return '';
 					}
+
+					$inner_content = $block->inner_content;
 
 					$block_reader = new \WP_HTML_Tag_Processor($content);
 
@@ -240,7 +327,7 @@ class Query {
 					) {
 						$block_reader->set_attribute(
 							'data-id',
-							substr($attributes['uniqueId'], 0, 3)
+							$attributes['uniqueId']
 						);
 					}
 
@@ -262,32 +349,27 @@ class Query {
 					$attributes = wp_parse_args(
 						$attributes,
 						[
+							'desktopColumns' => '3',
 							'tabletColumns' => '2',
-							'mobileColumns' => '1'
+							'mobileColumns' => '1',
 						]
 					);
 
-					$content = '';
-					$is_grid_layout = isset($attributes['layout']['type']) && $attributes['layout']['type'] === 'grid';
+					$context = wp_parse_args(
+						$block->context,
+						[
+							'has_slideshow' => 'no',
+							'has_slideshow_arrows' => 'yes',
+							'has_slideshow_autoplay' => 'no',
+							'has_slideshow_autoplay_speed' => 3,
+						]
+					);
 
-					$classnames = 'entries';
-					// $classnames = '';
-
-					if ($is_grid_layout) {
-						$classnames .= ' ct-query-template-grid';
-					} else {
-						$classnames .= ' ct-query-template-list';
-					}
-
-					if (isset($attributes['style']['elements']['link']['color']['text'])) {
-						$classnames .= ' has-link-color';
-					}
-
-					$wrapper_attributes = get_block_wrapper_attributes([
-						'class' => trim($classnames)
-					]);
+					$is_slideshow_layout = $context['has_slideshow'] === 'yes';
 
 					$content = '';
+
+					$wrapper_attributes = get_block_wrapper_attributes();
 
 					while ($query->have_posts()) {
 						$query->the_post();
@@ -319,9 +401,72 @@ class Query {
 						remove_filter('render_block_context', $filter_block_context, 1);
 
 						// Wrap the render inner blocks in a `li` element with the appropriate post classes.
-						$post_classes = implode(' ', get_post_class('wp-block-post'));
+						$post_classes = implode(' ', get_post_class('wp-block-post is-layout-flow'));
 
-						$content .= '<article' . ' class="' . esc_attr($post_classes) . '">' . $block_content . '</article>';
+						$single_item = '<article' . ' class="' . esc_attr($post_classes) . '">' . $block_content . '</article>';
+
+						if ($is_slideshow_layout) {
+							$single_item = blocksy_html_tag(
+								'div',
+								[
+									'class' => 'flexy-item',
+								],
+								$single_item
+							);
+						}
+
+						$content .= $single_item;
+					}
+
+					if ($is_slideshow_layout) {
+						$arrows = '';
+
+						if ($context['has_slideshow_arrows'] === 'yes') {
+							$arrows = '<span class="flexy-arrow-prev" data-position="outside">
+								<svg width="16" height="10" fill="currentColor" viewBox="0 0 16 10">
+									<path d="M15.3 4.3h-13l2.8-3c.3-.3.3-.7 0-1-.3-.3-.6-.3-.9 0l-4 4.2-.2.2v.6c0 .1.1.2.2.2l4 4.2c.3.4.6.4.9 0 .3-.3.3-.7 0-1l-2.8-3h13c.2 0 .4-.1.5-.2s.2-.3.2-.5-.1-.4-.2-.5c-.1-.1-.3-.2-.5-.2z"></path>
+								</svg>
+							</span>
+
+							<span class="flexy-arrow-next" data-position="outside">
+								<svg width="16" height="10" fill="currentColor" viewBox="0 0 16 10">
+									<path d="M.2 4.5c-.1.1-.2.3-.2.5s.1.4.2.5c.1.1.3.2.5.2h13l-2.8 3c-.3.3-.3.7 0 1 .3.3.6.3.9 0l4-4.2.2-.2V5v-.3c0-.1-.1-.2-.2-.2l-4-4.2c-.3-.4-.6-.4-.9 0-.3.3-.3.7 0 1l2.8 3H.7c-.2 0-.4.1-.5.2z"></path>
+								</svg>
+							</span>';
+						}
+
+						$content = blocksy_html_tag(
+							'div',
+							array_merge(
+								[
+									'class' => 'flexy-container',
+									'data-flexy' => 'no',
+								],
+								$context['has_slideshow_autoplay'] === 'yes' ? ['data-autoplay' => $context['has_slideshow_autoplay_speed']] : []
+							),
+							blocksy_html_tag(
+								'div',
+								[
+									'class' => 'flexy'
+								],
+								blocksy_html_tag(
+									'div',
+									[
+										'class' => 'flexy-view',
+										'data-flexy-view' => 'boxed'
+									],
+									blocksy_html_tag(
+										'div',
+										[
+											'class' => 'flexy-items',
+											'data-height' => 'dynamic'
+										],
+										$content
+									)
+								) .
+								$arrows
+							)
+						);
 					}
 
 					/*
@@ -337,8 +482,12 @@ class Query {
 						$content
 					);
 
-					if (blocksy_akg('has_pagination', $block->context, 'no') === 'yes') {
-						$prefix = $this->get_prefix_for($block->context);
+					if (
+						blocksy_akg('has_pagination', $context, 'no') === 'yes'
+						&&
+						! $is_slideshow_layout
+					) {
+						$prefix = self::get_prefix_for($block->context);
 
 						$pagination_data = $this->get_pagination_descriptor($block->context);
 
@@ -380,10 +529,54 @@ class Query {
 		);
 	}
 
-	public function render_block($attributes, $context = []) {
-		$attributes = wp_parse_args(
+	// TODO: maybe move this to utils
+	private static function get_gap_value($attributes) {
+		if (! isset($attributes['style'])) {
+			return '';
+		}
+
+		$gap_value = '';
+
+		$gap_value = blocksy_akg('spacing', $attributes['style'], []);
+
+		if (! isset($gap_value['blockGap'])) {
+			return '';
+		}
+
+		$gap_value = $gap_value['blockGap'];
+
+		$combined_gap_value = '';
+		$gap_sides = is_array($gap_value) ? ['top', 'left'] : ['top'];
+
+		foreach ($gap_sides as $gap_side) {
+			$process_value = $gap_value;
+
+			if (is_array($gap_value)) {
+				$process_value = isset($gap_value[$gap_side]) ? $gap_value[$gap_side] : '';
+			}
+
+			if (
+				is_string($process_value)
+				&&
+				str_contains($process_value, 'var:preset|spacing|')
+			) {
+				$index_to_splice = strrpos($process_value, '|') + 1;
+				$slug            = _wp_to_kebab_case(substr($process_value, $index_to_splice));
+				$process_value   = "var(--wp--preset--spacing--$slug)";
+			}
+
+			$combined_gap_value .= "$process_value ";
+		}
+
+		return trim($combined_gap_value);
+	}
+
+	private static function get_attributes($attributes) {
+		return wp_parse_args(
 			$attributes,
 			[
+				'uniqueId' => '',
+
 				'post_type' => 'post',
 				'limit' => 5,
 
@@ -392,6 +585,12 @@ class Query {
 				// post_date | comment_count
 				'orderby' => 'post_date',
 				'order' => 'DESC',
+
+				// yes | no
+				'has_slideshow' => 'no',
+				'has_slideshow_arrows' => 'yes',
+				'has_slideshow_autoplay' => 'no',
+				'has_slideshow_autoplay_speed' => 3,
 
 				// yes | no
 				'has_pagination' => 'no',
@@ -403,14 +602,19 @@ class Query {
 				'no_results' => '404',
 
 				'class' => ''
-			]
+			],
 		);
+	}
 
-		$block_class = 'ct-posts-block';
+	public function render_block($attributes, $context = []) {
+		$context = wp_parse_args($context, [
+			'post_id' => get_the_ID(),
 
-		if (! empty($attributes['class'])) {
-			$block_class .= ' ' . esc_attr($attributes['class']);
-		}
+			// editor | frontend
+			'purpose' => 'frontend'
+		]);
+
+		$attributes = self::get_attributes($attributes);
 
 		$query = $this->get_query_for($attributes, $context);
 
@@ -418,9 +622,22 @@ class Query {
 			return;
 		}
 
-		$prefix = $this->get_prefix_for($attributes);
+		$prefix = self::get_prefix_for($attributes);
 
-		$result = '<div class="' . $block_class . '" data-prefix="' . $prefix . '">';
+		$block_atts = [
+			'class' => 'ct-posts-block',
+			'data-prefix' => $prefix
+		];
+
+		if ($attributes['has_slideshow'] === 'yes') {
+			$block_atts['class'] .= ' is-layout-slider';
+		}
+
+		if (! empty($attributes['class'])) {
+			$block_atts['class'] .= ' ' . esc_attr($attributes['class']);
+		}
+
+		$result = '';
 
 		global $wp_query;
 
@@ -437,10 +654,15 @@ class Query {
 		blocksy_render_archive_cards([
 			'prefix' => $prefix,
 			'query' => $query,
-			'has_pagination' => $attributes['has_pagination'] === 'yes',
+			'has_slideshow' => $attributes['has_slideshow'] === 'yes',
+			'has_slideshow_arrows' => $attributes['has_slideshow_arrows'] === 'yes',
+			'has_slideshow_autoplay' => $attributes['has_slideshow_autoplay'] === 'yes',
+			'has_slideshow_autoplay_speed' => $attributes['has_slideshow_autoplay_speed'],
+			'has_pagination' => $attributes['has_pagination'] === 'yes' && $attributes['has_slideshow'] !== 'yes',
 			'pagination_args' => [
 				'query_var' => $pagination_data['query_var'],
-			]
+			],
+			'render_no_posts' => false
 		]);
 
 		$result .= ob_get_clean();
@@ -451,37 +673,112 @@ class Query {
 			$wp_query = $prev_query;
 		}
 
-		$result .= '</div>';
+		$css = new \Blocksy_Css_Injector();
+		$tablet_css = new \Blocksy_Css_Injector();
+		$mobile_css = new \Blocksy_Css_Injector();
 
-		return $result;
+		if ($attributes['has_slideshow'] === 'yes') {
+			$structure = blocksy_get_theme_mod($prefix . '_structure', 'grid');
+
+			$grid_columns = blocksy_expand_responsive_value(
+				blocksy_get_theme_mod(
+					$prefix . '_columns',
+					[
+						'desktop' => 3,
+						'tablet' => 2,
+						'mobile' => 1
+					]
+				)
+			);
+
+			$this->get_grid_styles([
+				'css' => $css,
+				'tablet_css' => $tablet_css,
+				'mobile_css' => $mobile_css,
+
+				'root_selector' => ["[data-id='{$attributes['uniqueId']}']"],
+
+				'is_slider' => true,
+				'layout_type' => $structure === 'grid' ? 'grid' : 'default',
+
+				'columns' => $grid_columns
+			]);
+		}
+
+		$final_css = '';
+
+		if ($context['purpose'] === 'editor') {
+			$this->get_customizer_styles_for($attributes, [
+				'css' => $css,
+				'tablet_css' => $tablet_css,
+				'mobile_css' => $mobile_css
+			]);
+
+			$styles = [
+				'desktop' => '',
+				'tablet' => '',
+				'mobile' => ''
+			];
+
+			$styles['desktop'] .= $css->build_css_structure();
+			$styles['tablet'] .= $tablet_css->build_css_structure();
+			$styles['mobile'] .= $mobile_css->build_css_structure();
+
+			if (! empty($styles['desktop'])) {
+				$final_css .= $styles['desktop'];
+			}
+
+			if (! empty(trim($styles['tablet']))) {
+				$final_css .= '@media (max-width: 999.98px) {' . $styles['tablet'] . '}';
+			}
+
+			if (! empty(trim($styles['mobile']))) {
+				$final_css .= '@media (max-width: 689.98px) {' . $styles['mobile'] . '}';
+			}
+		}
+
+		if ($context['purpose'] === 'frontend') {
+			wp_style_engine_get_stylesheet_from_css_rules(
+				array_merge(
+					$css->get_wp_style_engine_rules([
+						'device' => 'desktop'
+					]),
+					$tablet_css->get_wp_style_engine_rules([
+						'device' => 'tablet'
+					]),
+					$mobile_css->get_wp_style_engine_rules([
+						'device' => 'mobile'
+					])
+				),
+				[
+					'context'  => 'block-supports',
+					'prettify' => false,
+					'optimize' => true
+				]
+			);
+		}
+
+		if (! empty($final_css)) {
+			$final_css = blocksy_html_tag(
+				'style',
+				[],
+				$final_css
+			);
+		}
+
+		if (empty($result)) {
+			return '';
+		}
+
+		return blocksy_html_tag(
+			'div',
+			$block_atts,
+			$result
+		) . $final_css;
 	}
 
 	public function get_query_for($attributes, $context = []) {
-		$attributes = wp_parse_args(
-			$attributes,
-			[
-				'post_type' => 'post',
-				'limit' => 5,
-				'offset' => 0,
-
-				// post_date | comment_count
-				'orderby' => 'post_date',
-				'order' => 'DESC',
-
-				// yes | no
-				'has_pagination' => 'no',
-
-				'sticky_posts' => 'include',
-
-				// 404 | skip
-				'no_results' => '404',
-
-				'include_term_ids' => [],
-				'exclude_term_ids' => [],
-
-				'class' => ''
-			]
-		);
+		$attributes = self::get_attributes($attributes);
 
 		$context = wp_parse_args($context, [
 			'post_id' => get_the_ID()
@@ -734,8 +1031,14 @@ class Query {
 		$q->is_home = true;
 	}
 
-	public function get_dynamic_styles_for($attributes) {
-		$prefix = $this->get_prefix_for($attributes);
+	public function get_customizer_styles_for($attributes, $args = []) {
+		$args = wp_parse_args($args, [
+			'css' => null,
+			'tablet_css' => null,
+			'mobile_css' => null
+		]);
+
+		$prefix = self::get_prefix_for($attributes);
 
 		$styles = [
 			'desktop' => '',
@@ -749,57 +1052,17 @@ class Query {
 
 		blocksy_theme_get_dynamic_styles([
 			'name' => 'global/posts-listing',
-			'css' => $css,
-			'mobile_css' => $mobile_css,
-			'tablet_css' => $tablet_css,
+			'css' => $args['css'],
+			'mobile_css' => $args['mobile_css'],
+			'tablet_css' => $args['tablet_css'],
 			'context' => 'global',
 			'chunk' => 'global',
-			'prefixes' => [ $prefix ]
+			'prefixes' => [$prefix]
 		]);
-
-		$styles['desktop'] .= $css->build_css_structure();
-		$styles['tablet'] .= $tablet_css->build_css_structure();
-		$styles['mobile'] .= $mobile_css->build_css_structure();
-
-		$final_css = '';
-
-		if (! empty($styles['desktop'])) {
-			$final_css .= $styles['desktop'];
-		}
-
-		if (! empty(trim($styles['tablet']))) {
-			$final_css .= '@media (max-width: 999.98px) {' . $styles['tablet'] . '}';
-		}
-
-		if (! empty(trim($styles['mobile']))) {
-			$final_css .= '@media (max-width: 689.98px) {' . $styles['mobile'] . '}';
-		}
-
-		return $final_css;
 	}
 
-	public function get_prefix_for($attributes) {
-		$attributes = wp_parse_args(
-			$attributes,
-			[
-				'post_type' => 'post',
-				'limit' => 5,
-
-				// post_date | comment_count
-				'orderby' => 'post_date',
-				'order' => 'DESC',
-
-				// yes | no
-				'has_pagination' => 'no',
-
-				'sticky_posts' => 'include',
-
-				// 404 | skip
-				'no_results' => '404',
-
-				'class' => ''
-			]
-		);
+	private static function get_prefix_for($attributes) {
+		$attributes = self::get_attributes($attributes);
 
 		$prefix = 'blog';
 
@@ -818,14 +1081,9 @@ class Query {
 
 	// ?query-1-page=2
 	public function get_pagination_descriptor($attributes) {
-		$attributes = wp_parse_args(
-			$attributes,
-			[
-				'uniqueId' => ''
-			]
-		);
+		$attributes = self::get_attributes($attributes);
 
-		$query_var = 'query-' . substr($attributes['uniqueId'], 0, 3);
+		$query_var = 'query-' . $attributes['uniqueId'];
 
 		$current_page = 1;
 
@@ -838,5 +1096,96 @@ class Query {
 			'value' => $current_page
 		];
 	}
-}
 
+	private function get_grid_styles($args = []) {
+		$args = wp_parse_args($args, [
+			'css' => null,
+			'tablet_css' => null,
+			'mobile_css' => null,
+
+			'root_selector' => '',
+
+			// default | grid
+			'layout_type' => 'default',
+
+			'columns' => [
+				'desktop' => 1,
+				'tablet' => 1,
+				'mobile' => 1
+			],
+
+			'is_slider' => false
+		]);
+
+		$css = $args['css'];
+		$tablet_css = $args['tablet_css'];
+		$mobile_css = $args['mobile_css'];
+
+		if ($args['layout_type'] === 'grid') {
+			$gridColumnsWidth = [
+				'desktop' => $args['columns']['desktop'],
+				'tablet' => $args['columns']['tablet'],
+				'mobile' => $args['columns']['mobile']
+			];
+
+			if ($args['is_slider']) {
+				$gridColumnsWidth['desktop'] = round(
+					100 / $gridColumnsWidth['desktop'],
+					2
+				) . '%';
+
+				$gridColumnsWidth['tablet'] = round(
+					100 / $gridColumnsWidth['tablet'],
+					2
+				) . '%';
+
+				$gridColumnsWidth['mobile'] = round(
+					100 / $gridColumnsWidth['mobile'],
+					2
+				) . '%';
+			}
+
+			blocksy_output_responsive([
+				'css' => $css,
+				'tablet_css' => $tablet_css,
+				'mobile_css' => $mobile_css,
+				'selector' => blocksy_assemble_selector($args['root_selector']),
+				'variableName' => 'grid-columns-width',
+				'value' => $gridColumnsWidth,
+				'unit' => ''
+			]);
+		}
+
+		if ($args['is_slider']) {
+			$selectors = [
+				'desktop' => '',
+				'tablet' => '',
+				'mobile' => ''
+			];
+
+			foreach ($selectors as $device => $selector) {
+				$selectors[$device] = blocksy_assemble_selector(
+					blocksy_mutate_selector([
+						'selector' => blocksy_mutate_selector([
+							'selector' => $args['root_selector'],
+							'operation' => 'suffix',
+							'to_add' => '[data-flexy*="no"]'
+						]),
+						'operation' => 'suffix',
+						'to_add' => '.flexy-item:nth-child(n + ' . (intval($args['columns'][$device]) + 1) . ')'
+					])
+				);
+			}
+
+			blocksy_output_responsive([
+				'css' => $css,
+				'tablet_css' => $tablet_css,
+				'mobile_css' => $mobile_css,
+				'selector' => $selectors,
+				'variableName' => 'height',
+				'variableType' => 'property',
+				'value' => '1'
+			]);
+		}
+	}
+}

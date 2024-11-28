@@ -118,10 +118,7 @@ if (empty($value)) {
 	return;
 }
 
-$classes = [
-	'wp-block-image'
-];
-
+$classes = [];
 $styles = [];
 
 if (! empty($attributes['width'])) {
@@ -132,7 +129,11 @@ if (! empty($attributes['height'])) {
 	$styles[] = 'height: ' . $attributes['height'] . ';';
 }
 
-if (! empty($attributes['aspectRatio'])) {
+if (
+	! empty($attributes['aspectRatio'])
+	&&
+	$aspectRatio !== 'auto'
+) {
 	$styles[] = 'aspect-ratio: ' . $aspectRatio . ';';
 }
 

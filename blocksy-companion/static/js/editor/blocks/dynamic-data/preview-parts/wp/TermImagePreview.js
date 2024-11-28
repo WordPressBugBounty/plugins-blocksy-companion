@@ -35,9 +35,7 @@ const TermImagePreview = ({
 	const borderProps = useBorderProps(attributes)
 
 	const blockProps = useBlockProps({
-		className: classnames(
-			'ct-dynamic-media wp-block-image',
-			{
+		className: classnames('ct-dynamic-media', {
 				[`align${imageAlign}`]: imageAlign,
 			},
 			borderProps.className

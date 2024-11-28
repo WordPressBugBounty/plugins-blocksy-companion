@@ -6,6 +6,7 @@ import { list, grid, desktop } from '@wordpress/icons'
 import classnames from 'classnames'
 import { useSelect } from '@wordpress/data'
 import { Spinner, ToolbarGroup, PanelBody } from '@wordpress/components'
+import { useFlexySlider } from '../../hooks/use-flexy-slider'
 
 import {
 	useInnerBlocksProps,
@@ -16,32 +17,53 @@ import {
 	useBlockProps,
 	store as blockEditorStore,
 	InspectorControls,
+	getSpacingPresetCssVar,
 } from '@wordpress/block-editor'
 
 import { useTaxBlockData } from '../tax-query/hooks/use-tax-block-data'
 import RangeControl from '../../components/RangeControl'
+import { SlideshowArrows } from '../post-template/Edit'
+import { getVariablesDefinitions } from './variables'
 
-const TEMPLATE = []
+import { getStylesForBlock } from '../../utils/css'
 
-function PostTemplateInnerBlocks() {
+const TEMPLATE = [
+	// ['core/post-title'],
+	// ['core/post-date'],
+	// ['core/post-excerpt'],
+]
+
+export function TaxTemplateInnerBlocks({ isSlideshow, elementDescriptor }) {
 	const innerBlocksProps = useInnerBlocksProps(
-		{ className: 'wp-block-post' },
+		{ className: 'wp-block-term is-layout-flow' },
 		{ template: TEMPLATE, __unstableDisableLayoutClassNames: true }
 	)
+
+	if (isSlideshow) {
+		const { className, ...attr } = elementDescriptor?.attr || {}
+
+		return (
+			<div className={classnames('flexy-item', className)} {...attr}>
+				<article {...innerBlocksProps} />
+			</div>
+		)
+	}
 
 	return <div {...innerBlocksProps} />
 }
 
-function PostTemplateBlockPreview({
+function TaxTemplateBlockPreview({
 	blocks,
 	blockContextId,
 	isHidden,
+	isSlideshow,
+	elementDescriptor,
 	setActiveBlockContextId,
 }) {
 	const blockPreviewProps = useBlockPreview({
 		blocks,
 		props: {
-			className: 'wp-block-post',
+			className: 'wp-block-term is-layout-flow',
 		},
 	})
 
@@ -49,8 +71,25 @@ function PostTemplateBlockPreview({
 		setActiveBlockContextId(blockContextId)
 	}
 
-	const style = {
-		display: isHidden ? 'none' : undefined,
+	if (isHidden) {
+		return null
+	}
+
+	if (isSlideshow) {
+		const { className, ...attr } = elementDescriptor?.attr || {}
+
+		return (
+			<div className={classnames('flexy-item', className)} {...attr}>
+				<div
+					tabIndex={0}
+					{...blockPreviewProps}
+					// eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role
+					role="button"
+					onClick={handleOnClick}
+					onKeyPress={handleOnClick}
+				/>
+			</div>
+		)
 	}
 
 	return (
@@ -61,17 +100,16 @@ function PostTemplateBlockPreview({
 			role="button"
 			onClick={handleOnClick}
 			onKeyPress={handleOnClick}
-			style={style}
 		/>
 	)
 }
 
-const MemoizedPostTemplateBlockPreview = memo(PostTemplateBlockPreview)
+export const MemoizedTaxTemplateBlockPreview = memo(TaxTemplateBlockPreview)
 
 const Edit = ({
 	clientId,
 
-	attributes: { layout, verticalAlignment },
+	attributes: { layout, verticalAlignment, style },
 	attributes,
 
 	setAttributes,
@@ -79,41 +117,41 @@ const Edit = ({
 	context,
 	__unstableLayoutClassNames,
 }) => {
-	const { postId } = context
+	const { postId, has_slideshow, has_slideshow_arrows, uniqueId } = context
 
 	const [activeBlockContextId, setActiveBlockContextId] = useState()
 
 	const { type: layoutType, columnCount = 3 } = layout || {}
 	const isGridLayout = layoutType === 'grid'
+	const isManualMode = columnCount !== null
+
+	const isSlideshow = has_slideshow === 'yes'
+
+	const blockStyles = getStylesForBlock(
+		getVariablesDefinitions({ attributes, context })
+	)
 
 	const blockProps = useBlockProps({
 		className: classnames(__unstableLayoutClassNames, {
-			'ct-query-template-grid': isGridLayout,
-			'ct-query-template-list': !isGridLayout,
+			'ct-query-template-grid': isGridLayout && !isSlideshow,
+			'ct-query-template-default': !isGridLayout && !isSlideshow,
+			'is-layout-flow': !isGridLayout && !isSlideshow,
+			'ct-query-template': isSlideshow,
+			'is-layout-slider': isSlideshow,
 		}),
-		style: isGridLayout
-			? {
-					'grid-template-columns': `repeat(var(--ct-grid-columns, ${columnCount}), minmax(0, 1fr))`,
-					'--ct-grid-columns-tablet': `${attributes.tabletColumns}`,
-					'--ct-grid-columns-mobile': `${attributes.mobileColumns}`,
-
-					...(verticalAlignment
-						? {
-								'align-items':
-									verticalAlignment === 'top'
-										? 'flex-start'
-										: verticalAlignment === 'bottom'
-										? 'flex-end'
-										: 'center',
-						  }
-						: {}),
-			  }
-			: {},
+		'data-id': uniqueId,
 	})
 
 	const { blockData } = useTaxBlockData({
 		attributes: context,
 		previewedPostId: postId,
+	})
+
+	const sliderDescriptor = useFlexySlider({
+		isSlideshow,
+		attributes,
+		context,
+		toWatch: blockData ? blockData.all_terms : {},
 	})
 
 	const { blocks } = useSelect(
@@ -165,6 +203,50 @@ const Edit = ({
 		},
 	]
 
+	const getItems = ({ isSlideshow, elementDescriptorForIndex }) => (
+		<>
+			{blockContexts.length === 0 && (
+				<p>{__('No results found.', 'blocksy')}</p>
+			)}
+
+			{blockContexts.length > 0 &&
+				blockContexts.map((blockContext, index) => (
+					<BlockContextProvider
+						key={blockContext.termId}
+						value={blockContext}>
+						{blockContext.termId ===
+						(activeBlockContextId || blockContexts[0]?.termId) ? (
+							<TaxTemplateInnerBlocks
+								isSlideshow={isSlideshow}
+								elementDescriptor={
+									elementDescriptorForIndex
+										? elementDescriptorForIndex(index)
+										: null
+								}
+							/>
+						) : null}
+
+						<MemoizedTaxTemplateBlockPreview
+							blocks={blocks}
+							blockContextId={blockContext.termId}
+							setActiveBlockContextId={setActiveBlockContextId}
+							isSlideshow={isSlideshow}
+							elementDescriptor={
+								elementDescriptorForIndex
+									? elementDescriptorForIndex(index)
+									: null
+							}
+							isHidden={
+								blockContext.termId ===
+								(activeBlockContextId ||
+									blockContexts[0]?.termId)
+							}
+						/>
+					</BlockContextProvider>
+				))}
+		</>
+	)
+
 	return (
 		<>
 			<BlockControls>
@@ -183,66 +265,73 @@ const Edit = ({
 
 			<InspectorControls>
 				{isGridLayout ? (
-					<>
-						<PanelBody>
-							<RangeControl
-								attributes={attributes}
-								label={__(
-									'Tablet Columns',
-									'blocksy-companion'
-								)}
-								onChange={(columns) =>
-									setAttributes({
-										tabletColumns: columns,
-									})
-								}
-								initialPosition={attributes?.tabletColumns}
-								value={attributes?.tabletColumns}
-							/>
-						</PanelBody>
-						<PanelBody>
-							<RangeControl
-								attributes={attributes}
-								label={__(
-									'Mobile Columns',
-									'blocksy-companion'
-								)}
-								onChange={(columns) =>
-									setAttributes({
-										mobileColumns: columns,
-									})
-								}
-								initialPosition={attributes?.mobileColumns}
-								value={attributes?.mobileColumns}
-							/>
-						</PanelBody>
-					</>
+					<PanelBody title="Layout" initialOpen>
+						<RangeControl
+							label={__('Desktop Columns', 'blocksy-companion')}
+							onChange={(columns) =>
+								setAttributes({
+									layout: {
+										...layout,
+										columnCount: columns,
+									},
+								})
+							}
+							value={columnCount}
+						/>
+
+						<RangeControl
+							label={__('Tablet Columns', 'blocksy-companion')}
+							onChange={(columns) =>
+								setAttributes({
+									tabletColumns: columns,
+								})
+							}
+							value={attributes?.tabletColumns}
+						/>
+
+						<RangeControl
+							label={__('Mobile Columns', 'blocksy-companion')}
+							onChange={(columns) =>
+								setAttributes({
+									mobileColumns: columns,
+								})
+							}
+							value={attributes?.mobileColumns}
+						/>
+					</PanelBody>
 				) : null}
 			</InspectorControls>
 
 			<div {...blockProps}>
-				{blockContexts.map((blockContext) => (
-					<BlockContextProvider
-						key={blockContext.termId}
-						value={blockContext}>
-						{blockContext.termId ===
-						(activeBlockContextId || blockContexts[0]?.termId) ? (
-							<PostTemplateInnerBlocks />
-						) : null}
-
-						<MemoizedPostTemplateBlockPreview
-							blocks={blocks}
-							blockContextId={blockContext.termId}
-							setActiveBlockContextId={setActiveBlockContextId}
-							isHidden={
-								blockContext.termId ===
-								(activeBlockContextId ||
-									blockContexts[0]?.termId)
-							}
-						/>
-					</BlockContextProvider>
-				))}
+				{!isSlideshow ? (
+					getItems({ isSlideshow })
+				) : (
+					<div
+						class="flexy-container"
+						data-flexy="no"
+						{...sliderDescriptor.flexyContainerAttr}>
+						<div class="flexy">
+							<div class="flexy-view" data-flexy-view="boxed">
+								<div class="flexy-items">
+									{getItems({
+										isSlideshow,
+										elementDescriptorForIndex:
+											sliderDescriptor.elementDescriptorForIndex,
+									})}
+								</div>
+							</div>
+							<SlideshowArrows
+								has_slideshow_arrows={
+									has_slideshow_arrows === 'yes'
+								}
+								sliderDescriptor={sliderDescriptor}
+							/>
+						</div>
+					</div>
+				)}
 			</div>
+
+			{blockStyles ? blockStyles : null}
 		</>
 	)
 }

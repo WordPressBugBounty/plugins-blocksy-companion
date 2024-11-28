@@ -224,6 +224,10 @@ if ($args['view'] === 'slider') {
 	echo blocksy_render_archive_cards([
 		'prefix' => $prefix,
 		'query' => $query,
+		'has_slideshow' => $args['has_slideshow'] === 'yes',
+		'has_slideshow_arrows' => $args['has_slideshow_arrows'] === 'yes',
+		'has_slideshow_autoplay' => $args['has_slideshow_autoplay'] === 'yes',
+		'has_slideshow_autoplay_speed' => $args['has_slideshow_autoplay_speed'],
 		'has_pagination' => $args['has_pagination'] === 'yes'
 	]);
 

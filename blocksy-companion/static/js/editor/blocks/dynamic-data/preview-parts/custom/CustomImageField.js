@@ -25,7 +25,7 @@ const CustomImageField = ({
 	postId,
 }) => {
 	const blockProps = useBlockProps({
-		className: classnames('ct-dynamic-media wp-block-image', {
+		className: classnames('ct-dynamic-media', {
 			[`align${imageAlign}`]: imageAlign,
 		}),
 
@@ -82,7 +82,7 @@ const CustomImageField = ({
 							width: !!aspectRatio && '100%',
 						}}>
 						<path
-							vector-effect="non-scaling-stroke"
+							vectorEffect="non-scaling-stroke"
 							d="M60 60 0 0"></path>
 					</svg>
 				</div>

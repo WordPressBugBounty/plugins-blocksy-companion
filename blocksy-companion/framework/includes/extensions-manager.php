@@ -250,8 +250,6 @@ class ExtensionsManager {
 				$this->register_extension_for($single_extension);
 			}
 		}
-
-		$this->register_fake_extensions();
 	}
 
 	private function register_fake_extensions() {
@@ -266,6 +264,10 @@ class ExtensionsManager {
 		$preliminary_info = $this->get_preliminary_exts_info();
 
 		foreach ($preliminary_info as $id => $info) {
+			if (isset($this->extensions[$id])) {
+				continue;
+			}
+
 			$this->extensions[$id] = [
 				'path' => null,
 				'__object' => null,

@@ -1,84 +1,46 @@
 import { useEffect, useState } from '@wordpress/element'
 
-import { getStableJsonKey } from 'ct-wordpress-helpers/get-stable-json-key'
-
-function getJsonFromUrl(url) {
-	if (!url) url = location.search
-	var query = url.substr(1)
-	var result = {}
-	query.split('&').forEach(function (part) {
-		var item = part.split('=')
-		result[item[0]] = decodeURIComponent(item[1])
-	})
-	return result
-}
-
-const cache = {}
+import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
 
 export const usePostsBlockData = ({ attributes, previewedPostId }) => {
 	const [blockData, setBlockData] = useState(null)
 
-	let [{ controller }, setAbortState] = useState({
-		controller: null,
-	})
-
 	useEffect(() => {
-		const input = {
-			attributes,
-			previewedPostId,
-		}
+		const queryString = new URLSearchParams(window.location.search)
 
-		const key = getStableJsonKey(input)
+		cachedFetch(
+			`${wp.ajax.settings.url}?action=blocksy_get_posts_block_data${
+				queryString.get('lang')
+					? '&lang=' + queryString.get('lang')
+					: ''
+			}`,
 
-		if (cache[key]) {
-			setBlockData(cache[key])
-		} else {
-			if (controller) {
-				controller.abort()
+			{
+				attributes,
+				previewedPostId,
+			},
+
+			{
+				// Abort intermediary requests.
+				fetcherName: `posts-block-data-${attributes.uniqueId}`,
+
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/json',
+				},
+
+				method: 'POST',
 			}
-
-			if ('AbortController' in window) {
-				controller = new AbortController()
-
-				setAbortState({
-					controller,
-				})
-			}
-
-			let qs = getJsonFromUrl(location.search)
-
-			fetch(
-				`${wp.ajax.settings.url}?action=blocksy_get_posts_block_data${
-					qs.lang ? '&lang=' + qs.lang : ''
-				}`,
-				{
-					headers: {
-						Accept: 'application/json',
-						'Content-Type': 'application/json',
-					},
-					method: 'POST',
-					signal: controller.signal,
-					body: JSON.stringify({
-						attributes,
-						previewedPostId,
-					}),
+		)
+			.then((response) => response.json())
+			.then(({ success, data }) => {
+				if (!success) {
+					return
 				}
-			)
-				.then((res) => res.json())
-				.then(({ success, data }) => {
-					if (!success) {
-						return
-					}
 
-					cache[key] = data
-
-					setAbortState({
-						controller: null,
-					})
-
-					setBlockData(data)
-				})
-		}
+				setBlockData(data)
+			})
+			.catch((e) => {})
 	}, [attributes, previewedPostId])
 
 	return {

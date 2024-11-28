@@ -126,9 +126,9 @@ const DemoInstall = ({ children, path, location }) => {
 								duration: 300,
 						  }
 				}}>
-				{(isLoading) => {
+				{(props, isLoading) => {
 					if (isLoading) {
-						return (props) => (
+						return (
 							<animated.p
 								style={props}
 								className="ct-loading-text">
@@ -172,7 +172,7 @@ const DemoInstall = ({ children, path, location }) => {
 					}
 
 					if (demo_error.isError) {
-						return (props) => (
+						return (
 							<animated.div style={props}>
 								{demo_error.reason ===
 									'ajax_request_failed' && (
@@ -222,7 +222,7 @@ const DemoInstall = ({ children, path, location }) => {
 						)
 					}
 
-					return (props) => (
+					return (
 						<animated.div style={props}>
 							<Fragment>
 								<DemosContext.Provider

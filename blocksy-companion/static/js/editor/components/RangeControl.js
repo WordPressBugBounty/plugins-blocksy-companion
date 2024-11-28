@@ -9,12 +9,9 @@ import {
 	RangeControl as NativeRangeControl,
 } from '@wordpress/components'
 
-const RangeControl = ({ label, onChange, initialPosition, value }) => {
+const RangeControl = ({ label, onChange, value }) => {
 	return (
-		<fieldset>
-			<BaseControl.VisualLabel as="legend">
-				{label}
-			</BaseControl.VisualLabel>
+		<BaseControl label={label}>
 			<Flex gap={4}>
 				<FlexItem isBlock>
 					<NumberControl
@@ -38,7 +35,7 @@ const RangeControl = ({ label, onChange, initialPosition, value }) => {
 					/>
 				</FlexItem>
 			</Flex>
-		</fieldset>
+		</BaseControl>
 	)
 }
 

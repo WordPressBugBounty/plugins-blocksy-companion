@@ -33,9 +33,8 @@ const Overlay = ({
 			from={{ opacity: 0, y: -10 }}
 			enter={{ opacity: 1, y: 0 }}
 			leave={{ opacity: 0, y: 10 }}>
-			{(items) =>
-				isVisible(items) &&
-				((props) => (
+			{(props, items) =>
+				isVisible(items) && (
 					<DialogOverlay
 						style={{ opacity: props.opacity }}
 						container={document.querySelector('#wpbody')}
@@ -54,7 +53,7 @@ const Overlay = ({
 							{render(items, props)}
 						</DialogContent>
 					</DialogOverlay>
-				))
+				)
 			}
 		</Transition>
 	)

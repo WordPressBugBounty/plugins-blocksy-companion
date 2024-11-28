@@ -121,7 +121,7 @@ const Preview = ({ attributes, setAttributes, buttonStyles }) => {
 				}}
 				placeholder="Search"
 				name="s"
-				autocomplete="off"
+				autoComplete="off"
 				title="Search for..."
 				aria-label="Search for..."
 			/>
@@ -175,16 +175,16 @@ const Preview = ({ attributes, setAttributes, buttonStyles }) => {
 								opacity="0.2"
 								fill="none"
 								stroke="currentColor"
-								stroke-miterlimit="10"
-								stroke-width="2"></circle>
+								strokeMiterlimit="10"
+								strokeWidth="2"></circle>
 
 							<path
 								d="m12,2c5.52,0,10,4.48,10,10"
 								fill="none"
 								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-miterlimit="10"
-								stroke-width="2">
+								strokeLinecap="round"
+								strokeMiterlimit="10"
+								strokeWidth="2">
 								<animateTransform
 									attributeName="transform"
 									attributeType="XML"

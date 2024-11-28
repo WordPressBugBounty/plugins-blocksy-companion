@@ -151,6 +151,12 @@ class ThemeIntegration {
 					'meta_key' => '',
 
 					// yes | no
+					'has_slideshow' => 'no',
+					'has_slideshow_arrows' => 'yes',
+					'has_slideshow__autoplay' => 'no',
+					'has_slideshow__autoplay_speed' => 3,
+
+					// yes | no
 					'has_pagination' => 'yes',
 
 					// yes | no

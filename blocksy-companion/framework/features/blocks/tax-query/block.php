@@ -15,15 +15,10 @@ class TaxQuery {
 				wp_send_json_error();
 			}
 
-			$query = $this->get_query_for($body['attributes']);
-
-			$prefix = $this->get_prefix_for($body['attributes']);
+			$all_terms = $this->get_terms_for($body['attributes']);
 
 			wp_send_json_success([
-				'all_terms' => $query,
-				'dynamic_styles' => $this->get_dynamic_styles_for(
-					$body['attributes']
-				),
+				'all_terms' => $all_terms
 			]);
 		});
 
@@ -61,18 +56,22 @@ class TaxQuery {
 			BLOCKSY_PATH . '/static/js/editor/blocks/tax-query/block.json',
 			[
 				'render_callback' => function ($attributes, $content, $block) {
+					if (strpos($content, 'wp-block-blocksy-tax-query"></div>') !== false) {
+						return '';
+					}
+
 					$block_reader = new \WP_HTML_Tag_Processor($content);
 
 					if (
 						$block_reader->next_tag([
-							'class_name' => 'wp-block-blocksy-query'
+							'class_name' => 'wp-block-blocksy-tax-query'
 						])
 						&&
 						! empty($attributes['uniqueId'])
 					) {
 						$block_reader->set_attribute(
 							'data-id',
-							substr($attributes['uniqueId'], 0, 3)
+							$attributes['uniqueId']
 						);
 					}
 
@@ -83,47 +82,43 @@ class TaxQuery {
 
 		add_filter(
 			'render_block',
-			function ($block_content, $block) {
+			function ($block_content, $block, $instance) {
 				if ($block['blockName'] !== 'blocksy/tax-template') {
 					return $block_content;
 				}
 
 				$processor = new \WP_HTML_Tag_Processor($block_content);
 
-				$is_grid_layout = isset($block['attrs']['layout']['type']) && $block['attrs']['layout']['type'] === 'grid';
-				$desktopColumns = isset($block['attrs']['layout']['columnCount']) ? $block['attrs']['layout']['columnCount'] : null;
-				$tabletColumns = isset($block['attrs']['tabletColumns']) ? $block['attrs']['tabletColumns'] : '2';
-				$mobileColumns = isset($block['attrs']['mobileColumns']) ? $block['attrs']['mobileColumns'] : '1';
+				$context = $instance->context;
 
-				$class = [];
+				$is_slideshow_layout = $context['has_slideshow'] === 'yes';
+				$layout = blocksy_akg('type', $block['attrs']['layout'], 'default');
+				$is_grid_layout = $layout === 'grid';
 
-				if ($processor->next_tag('div')) {
-					$class = explode(' ', $processor->get_attribute('class'));
-				}
+				$processor->next_tag('div');
 
-				$unique_class = '';
-
-				foreach ($class as $class_name) {
-					if (strpos($class_name, 'wp-container-blocksy-tax-template-is-layout-') === 0) {
-						$unique_class = $class_name;
-					}
-				}
-
-				$class = array_filter(
-					$class,
-					function ($class_name) {
-						return ! in_array(
-							$class_name,
-							[
-								'wp-block-tax-template-is-layout-grid',
-								'wp-block-tax-template-is-layout-flow'
-							]
-						);
-					}
+				$class = array_merge(
+					$is_slideshow_layout ? ['ct-query-template', 'is-layout-slider'] : ['ct-query-template-' . $layout],
 				);
+
+				if (
+					! $is_slideshow_layout
+					&&
+					$layout !== 'grid'
+				) {
+					$class[] = 'is-layout-flow';
+				}
+
+				$gap_value = self::get_gap_value($block['attrs']);
 
 				$processor->set_attribute('class', implode(' ', $class));
 				$block_content = $processor->get_updated_html();
+
+				$css = new \Blocksy_Css_Injector();
+				$tablet_css = new \Blocksy_Css_Injector();
+				$mobile_css = new \Blocksy_Css_Injector();
+
+				$root_selector = ["[data-id='{$context['uniqueId']}']"];
 
 				$alignmentStyles = [];
 
@@ -132,75 +127,157 @@ class TaxQuery {
 					&&
 					$is_grid_layout
 				) {
+					$alignItems = 'center';
+
 					if ($block['attrs']['verticalAlignment'] === 'top') {
-						$alignmentStyles['align-items'] = 'flex-start;';
-					} elseif ($block['attrs']['verticalAlignment'] === 'bottom') {
-						$alignmentStyles['align-items'] = 'flex-end;';
-					} else {
-						$alignmentStyles['align-items'] = 'center';
+						$alignItems = 'flex-start';
 					}
+
+					if ($block['attrs']['verticalAlignment'] === 'bottom') {
+						$alignItems = 'flex-end';
+					}
+
+					$css->put(
+						blocksy_assemble_selector($root_selector),
+						'align-items: ' . $alignItems
+					);
 				}
 
+				$columns = [
+					'desktop' => 1,
+					'tablet' => 1,
+					'mobile' => 1
+				];
+
+				$desktopColumns = blocksy_akg('columnCount', $block['attrs']['layout'], '3');
+				$tabletColumns = blocksy_akg('tabletColumns', $block['attrs'], '2');
+				$mobileColumns = blocksy_akg('mobileColumns', $block['attrs'], '1');
+
+				if ($is_grid_layout) {
+					$columns = [
+						'desktop' => blocksy_akg(
+							'columnCount',
+							$block['attrs']['layout'],
+							'3'
+						),
+						'tablet' => blocksy_akg(
+							'tabletColumns',
+							$block['attrs'],
+							'2'
+						),
+						'mobile' => blocksy_akg(
+							'mobileColumns',
+							$block['attrs'],
+							'1'
+						)
+					];
+				}
+
+				$gap = self::get_gap_value($block['attrs']);
+
+				if ($is_grid_layout && ! empty($gap)) {
+					$css->put(
+						blocksy_assemble_selector($root_selector),
+						'--grid-columns-gap: ' . $gap
+					);
+				}
+
+				if (
+					! $is_grid_layout
+					&&
+					! empty($gap)
+					&&
+					! $is_slideshow_layout
+				) {
+					// DO WE REALLY NEED GAP HERE???
+
+					$css->put(
+						blocksy_assemble_selector(
+							blocksy_mutate_selector([
+								'selector' => $root_selector,
+								'operation' => 'suffix',
+								'to_add' => ':where(.is-layout-flow > *)'
+							])
+						),
+
+						'margin-block-end: ' . $gap
+					);
+				}
+
+				$this->get_grid_styles([
+					'css' => $css,
+					'tablet_css' => $tablet_css,
+					'mobile_css' => $mobile_css,
+
+					'root_selector' => $root_selector,
+
+					'is_slider' => $is_slideshow_layout,
+					'layout_type' => $is_grid_layout ? 'grid' : 'default',
+
+					'columns' => $columns
+				]);
+
 				wp_style_engine_get_stylesheet_from_css_rules(
-					[
-						[
-							'selector' => '.' . $unique_class . '.' . $unique_class,
-							'declarations' => array_merge(
-								$alignmentStyles,
-								$desktopColumns !== null ? [
-									'grid-template-columns' => "repeat(var(--ct-grid-columns, {$desktopColumns}), minmax(0, 1fr));",
-									'--ct-grid-columns-tablet' => $tabletColumns,
-									'--ct-grid-columns-mobile' => $mobileColumns,
-								] : []
-							)
-						]
-					],
+					array_merge(
+						$css->get_wp_style_engine_rules([
+							'device' => 'desktop'
+						]),
+						$tablet_css->get_wp_style_engine_rules([
+							'device' => 'tablet'
+						]),
+						$mobile_css->get_wp_style_engine_rules([
+							'device' => 'mobile'
+						])
+					),
 					[
 						'context'  => 'block-supports',
-						'prettify' => false
+						'prettify' => false,
+						'optimize' => true
 					]
 				);
 
 				return $block_content;
 			},
 			11,
-			2
+			3
 		);
 
 		register_block_type(
 			BLOCKSY_PATH . '/static/js/editor/blocks/tax-template/block.json',
 			[
 				'render_callback' => function ($attributes, $content, $block) {
-					$query = $this->get_query_for($block->context);
+					$all_terms = $this->get_terms_for($block->context);
 
-					if (empty($query)) {
+					if (empty($all_terms)) {
 						return '';
 					}
 
 					$attributes = wp_parse_args(
 						$attributes,
 						[
+							'desktopColumns' => '3',
 							'tabletColumns' => '2',
-							'mobileColumns' => '1'
+							'mobileColumns' => '1',
 						]
 					);
 
+					$context = wp_parse_args(
+						$block->context,
+						[
+							'has_slideshow' => 'no',
+							'has_slideshow_arrows' => 'yes',
+							'has_slideshow_autoplay' => 'no',
+							'has_slideshow_autoplay_speed' => 3,
+						]
+					);
+
+					$is_slideshow_layout = $context['has_slideshow'] === 'yes';
+
 					$content = '';
-					$is_grid_layout = isset($attributes['layout']['type']) && $attributes['layout']['type'] === 'grid';
 
-					$classnames = '';
+					$wrapper_attributes = get_block_wrapper_attributes();
 
-					if ($is_grid_layout) {
-						$classnames .= ' ct-query-template-grid';
-					} else {
-						$classnames .= ' ct-query-template-list';
-					}
-
-					if (isset($attributes['style']['elements']['link']['color']['text'])) {
-						$classnames .= ' has-link-color';
-					}
-
-					foreach ($query as $term) {
+					foreach ($all_terms as $key => $term) {
 						$term_obj = get_term($term['term_id']);
 						$block_instance = $block->parsed_block;
 
@@ -217,22 +294,83 @@ class TaxQuery {
 							['dynamic' => false]
 						);
 
-						$content .= blocksy_html_tag(
+						$single_item = blocksy_html_tag(
 							'div',
 							[
-								'class' => 'wp-block-blocksy-tax',
+								'class' => 'wp-block-term is-layout-flow',
 							],
 							$block_content
 						);
 
+						if ($is_slideshow_layout) {
+							$single_item = blocksy_html_tag(
+								'div',
+								array_merge(
+									[
+										'class' => 'flexy-item',
+									],
+									$key === 0 ? ['data-item' => 'initial'] : []
+								),
+								$single_item
+							);
+						}
+
+						$content .= $single_item;
+
 						$blocksy_term_obj = null;
 					}
 
-					$wrapper_attributes = get_block_wrapper_attributes(array_merge(
-						[
-							'class' => trim($classnames)
-						]
-					));
+					if ($is_slideshow_layout) {
+						$arrows = '';
+
+						if ($context['has_slideshow_arrows'] === 'yes') {
+							$arrows = '<span class="flexy-arrow-prev" data-position="outside">
+								<svg width="16" height="10" fill="currentColor" viewBox="0 0 16 10">
+									<path d="M15.3 4.3h-13l2.8-3c.3-.3.3-.7 0-1-.3-.3-.6-.3-.9 0l-4 4.2-.2.2v.6c0 .1.1.2.2.2l4 4.2c.3.4.6.4.9 0 .3-.3.3-.7 0-1l-2.8-3h13c.2 0 .4-.1.5-.2s.2-.3.2-.5-.1-.4-.2-.5c-.1-.1-.3-.2-.5-.2z"></path>
+								</svg>
+							</span>
+
+							<span class="flexy-arrow-next" data-position="outside">
+								<svg width="16" height="10" fill="currentColor" viewBox="0 0 16 10">
+									<path d="M.2 4.5c-.1.1-.2.3-.2.5s.1.4.2.5c.1.1.3.2.5.2h13l-2.8 3c-.3.3-.3.7 0 1 .3.3.6.3.9 0l4-4.2.2-.2V5v-.3c0-.1-.1-.2-.2-.2l-4-4.2c-.3-.4-.6-.4-.9 0-.3.3-.3.7 0 1l2.8 3H.7c-.2 0-.4.1-.5.2z"></path>
+								</svg>
+							</span>';
+						}
+
+						$content = blocksy_html_tag(
+							'div',
+							array_merge(
+								[
+									'class' => 'flexy-container',
+									'data-flexy' => 'no',
+								],
+								$context['has_slideshow_autoplay'] === 'yes' ? [
+									'data-autoplay' => $context['has_slideshow_autoplay_speed']
+								] : []
+							),
+							blocksy_html_tag(
+								'div',
+								[
+									'class' => 'flexy'
+								],
+								blocksy_html_tag(
+									'div',
+									[
+										'class' => 'flexy-view',
+										'data-flexy-view' => 'boxed'
+									],
+									blocksy_html_tag(
+										'div',
+										[
+											'class' => 'flexy-items',
+										],
+										$content
+									)
+								) .
+								$arrows
+							)
+						);
+					}
 
 					$result = blocksy_safe_sprintf(
 						'<div %1$s>%2$s</div>',
@@ -270,10 +408,53 @@ class TaxQuery {
 		);
 	}
 
-	public function get_query_for($attributes) {
-		$attributes = wp_parse_args(
+	private static function get_gap_value($attributes) {
+		if (! isset($attributes['style'])) {
+			return '';
+		}
+
+		$gap_value = '';
+
+		$gap_value = blocksy_akg('spacing', $attributes['style'], []);
+
+		if (! isset($gap_value['blockGap'])) {
+			return '';
+		}
+
+		$gap_value = $gap_value['blockGap'];
+
+		$combined_gap_value = '';
+		$gap_sides = is_array($gap_value) ? ['top', 'left'] : ['top'];
+
+		foreach ($gap_sides as $gap_side) {
+			$process_value = $gap_value;
+
+			if (is_array($gap_value)) {
+				$process_value = isset($gap_value[$gap_side]) ? $gap_value[$gap_side] : '';
+			}
+
+			if (
+				is_string($process_value)
+				&&
+				str_contains($process_value, 'var:preset|spacing|')
+			) {
+				$index_to_splice = strrpos($process_value, '|') + 1;
+				$slug            = _wp_to_kebab_case(substr($process_value, $index_to_splice));
+				$process_value   = "var(--wp--preset--spacing--$slug)";
+			}
+
+			$combined_gap_value .= "$process_value ";
+		}
+
+		return trim($combined_gap_value);
+	}
+
+	private static function get_attributes($attributes) {
+		return wp_parse_args(
 			$attributes,
 			[
+				'uniqueId' => '',
+
 				'taxonomy' => 'category',
 				'limit' => 5,
 				'offset' => 0,
@@ -281,9 +462,19 @@ class TaxQuery {
 				'order' =>  'desc',
 				'include_term_ids' => [],
 				'exclude_term_ids' => [],
-				'class' => ''
-			]
+				'class' => '',
+
+				// yes | no
+				'has_slideshow' => 'no',
+				'has_slideshow_arrows' => 'yes',
+				'has_slideshow__autoplay' => 'no',
+				'has_slideshow__autoplay_speed' => 3,
+			],
 		);
+	}
+
+	public function get_terms_for($attributes) {
+		$attributes = self::get_attributes($attributes);
 
 		if (! taxonomy_exists($attributes['taxonomy'])) {
 			return [];
@@ -328,36 +519,35 @@ class TaxQuery {
 			}
 		}
 
-		$terms = get_terms(
-			array_merge(
-				[
-					'taxonomy' => $attributes['taxonomy'],
-					'orderby' => $attributes['orderby'],
-					'order' => $attributes['order'],
-					'offset' => $attributes['offset']
-				],
-				(
-					$attributes['orderby'] !== 'rand' ? [
-						'number' => $attributes['limit']
-					] : []
-				),
-				(
-					! empty($filtered_exclude) ? [
-						'exclude' => $filtered_exclude
-					] : []
-				),
-				(
-					! empty($filtered_include) ? [
-						'include' => $filtered_include
-					] : []
-				)
-			)
+		$terms_query_args = [
+			'taxonomy' => $attributes['taxonomy'],
+			'orderby' => $attributes['orderby'],
+			'order' => $attributes['order'],
+			'offset' => $attributes['offset'],
+			'number' => $attributes['limit']
+		];
+
+		if (! empty($filtered_exclude)) {
+			$terms_query_args['exclude'] = $filtered_exclude;
+		}
+
+		if (! empty($filtered_include)) {
+			$terms_query_args['include'] = $filtered_include;
+		}
+
+		add_filter(
+			'get_terms_orderby',
+			[$this, 'allow_random_order_by_in_term_query'],
+			10, 2
 		);
 
-		if ($attributes['orderby'] === 'rand') {
-			shuffle($terms);
-			$terms = array_slice($terms, 0, $attributes['limit']);
-		}
+		$terms = get_terms($terms_query_args);
+
+		remove_filter(
+			'get_terms_orderby',
+			[$this, 'allow_random_order_by_in_term_query'],
+			10, 2
+		);
 
 		if (
 			is_wp_error($terms)
@@ -405,76 +595,104 @@ class TaxQuery {
 		return $terms_descriptors;
 	}
 
-	public function get_dynamic_styles_for($attributes) {
-		$prefix = $this->get_prefix_for($attributes);
-
-		$styles = [
-			'desktop' => '',
-			'tablet' => '',
-			'mobile' => ''
-		];
-
-		$css = new \Blocksy_Css_Injector();
-		$tablet_css = new \Blocksy_Css_Injector();
-		$mobile_css = new \Blocksy_Css_Injector();
-
-		blocksy_theme_get_dynamic_styles([
-			'name' => 'global/posts-listing',
-			'css' => $css,
-			'mobile_css' => $mobile_css,
-			'tablet_css' => $tablet_css,
-			'context' => 'global',
-			'chunk' => 'global',
-			'prefixes' => [ $prefix ]
-		]);
-
-		$styles['desktop'] .= $css->build_css_structure();
-		$styles['tablet'] .= $tablet_css->build_css_structure();
-		$styles['mobile'] .= $mobile_css->build_css_structure();
-
-		$final_css = '';
-
-		if (! empty($styles['desktop'])) {
-			$final_css .= $styles['desktop'];
+	public function allow_random_order_by_in_term_query($orderby, $query) {
+		if ($query['orderby'] === 'rand') {
+			return 'RAND()';
 		}
 
-		if (! empty(trim($styles['tablet']))) {
-			$final_css .= '@media (max-width: 999.98px) {' . $styles['tablet'] . '}';
-		}
-
-		if (! empty(trim($styles['mobile']))) {
-			$final_css .= '@media (max-width: 689.98px) {' . $styles['mobile'] . '}';
-		}
-
-		return $final_css;
+		return $orderby;
 	}
 
-	public function get_prefix_for($attributes) {
-		$attributes = wp_parse_args(
-			$attributes,
-			[
-				'taxonomy' => 'category',
-				'limit' => 5,
-				'offset' => 0,
-				'orderby' => 'none',
-				'order' =>  'desc',
-				'class' => ''
-			]
-		);
+	private function get_grid_styles($args = []) {
+		$args = wp_parse_args($args, [
+			'css' => null,
+			'tablet_css' => null,
+			'mobile_css' => null,
 
-		$prefix = 'blog';
+			'root_selector' => '',
 
-		$custom_post_types = blocksy_manager()->post_types->get_supported_post_types();
+			// default | grid
+			'layout_type' => 'default',
 
-		$preferred_post_type = explode(',', $attributes['post_type'])[0];
+			'columns' => [
+				'desktop' => 1,
+				'tablet' => 1,
+				'mobile' => 1
+			],
 
-		foreach ($custom_post_types as $cpt) {
-			if ($cpt === $preferred_post_type) {
-				$prefix = $cpt . '_archive';
+			'is_slider' => false
+		]);
+
+		$css = $args['css'];
+		$tablet_css = $args['tablet_css'];
+		$mobile_css = $args['mobile_css'];
+
+		if ($args['layout_type'] === 'grid') {
+			$gridColumnsWidth = [
+				'desktop' => $args['columns']['desktop'],
+				'tablet' => $args['columns']['tablet'],
+				'mobile' => $args['columns']['mobile']
+			];
+
+			if ($args['is_slider']) {
+				$gridColumnsWidth['desktop'] = round(
+					100 / $gridColumnsWidth['desktop'],
+					2
+				) . '%';
+
+				$gridColumnsWidth['tablet'] = round(
+					100 / $gridColumnsWidth['tablet'],
+					2
+				) . '%';
+
+				$gridColumnsWidth['mobile'] = round(
+					100 / $gridColumnsWidth['mobile'],
+					2
+				) . '%';
 			}
+
+			blocksy_output_responsive([
+				'css' => $css,
+				'tablet_css' => $tablet_css,
+				'mobile_css' => $mobile_css,
+				'selector' => blocksy_assemble_selector($args['root_selector']),
+				'variableName' => 'grid-columns-width',
+				'value' => $gridColumnsWidth,
+				'unit' => ''
+			]);
 		}
 
-		return $prefix;
+		if ($args['is_slider']) {
+			$selectors = [
+				'desktop' => '',
+				'tablet' => '',
+				'mobile' => ''
+			];
+
+			foreach ($selectors as $device => $selector) {
+				$selectors[$device] = blocksy_assemble_selector(
+					blocksy_mutate_selector([
+						'selector' => blocksy_mutate_selector([
+							'selector' => $args['root_selector'],
+							'operation' => 'suffix',
+							'to_add' => '[data-flexy*="no"]'
+						]),
+						'operation' => 'suffix',
+						'to_add' => '.flexy-item:nth-child(n + ' . (intval($args['columns'][$device]) + 1) . ')'
+					])
+				);
+			}
+
+			blocksy_output_responsive([
+				'css' => $css,
+				'tablet_css' => $tablet_css,
+				'mobile_css' => $mobile_css,
+				'selector' => $selectors,
+				'variableName' => 'height',
+				'variableType' => 'property',
+				'value' => '1'
+			]);
+		}
 	}
 }
 

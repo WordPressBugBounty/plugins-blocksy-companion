@@ -3,6 +3,7 @@ import { getFirstLevelOptions } from 'blocksy-options'
 export const getAttributesFromOptions = (options) => {
 	return Object.entries(getFirstLevelOptions(options)).reduce((acc, item) => {
 		const blocksyType = item[1].type
+
 		let type = 'string'
 
 		if (blocksyType === 'ct-number') {
@@ -25,16 +26,6 @@ export const getAttributesFromOptions = (options) => {
 			type,
 			default: item[1].value,
 		}
-
-		return acc
-	}, {})
-}
-
-export const getDefaultsFromOptions = (options) => {
-	const attributes = getAttributesFromOptions(options)
-
-	return Object.entries(attributes).reduce((acc, item) => {
-		acc[item[0]] = item[1].default
 
 		return acc
 	}, {})

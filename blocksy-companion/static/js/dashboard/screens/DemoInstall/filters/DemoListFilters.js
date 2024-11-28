@@ -40,7 +40,6 @@ const DemoListFilters = () => {
 
 	return (
 		<div className="ct-demo-filters">
-
 			<DropdownMenu
 				className="ct-filter-trigger-categories"
 				menuProps={{
@@ -50,7 +49,7 @@ const DemoListFilters = () => {
 					<svg
 						aria-hidden="true"
 						viewBox="0 0 24 24"
-						fill-rule="evenodd"
+						fillRule="evenodd"
 						fill="currentColor">
 						<path d="M18 5.5h-3c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5V6c0-.3-.2-.5-.5-.5zm2 .5c0-1.1-.9-2-2-2h-3c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h3c1.1 0 2-.9 2-2V6zM9 14.5H6c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-3c0-.3-.2-.5-.5-.5zm2 .5c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h3c1.1 0 2-.9 2-2v-3zm4-.5h3c.3 0 .5.2.5.5v3c0 .3-.2.5-.5.5h-3c-.3 0-.5-.2-.5-.5v-3c0-.3.2-.5.5-.5zm3-1.5c1.1 0 2 .9 2 2v3c0 1.1-.9 2-2 2h-3c-1.1 0-2-.9-2-2v-3c0-1.1.9-2 2-2h3zM9 5.5H6c-.3 0-.5.2-.5.5v3c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5V6c0-.3-.2-.5-.5-.5zm2 .5c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h3c1.1 0 2-.9 2-2V6z" />
 					</svg>
@@ -102,7 +101,7 @@ const DemoListFilters = () => {
 					<svg
 						aria-hidden="true"
 						viewBox="0 0 24 24"
-						fill-rule="evenodd"
+						fillRule="evenodd"
 						fill="currentColor">
 						<path d="m17.3 19.8-5.2-2.7h-.2l-5.2 2.7 1-5.8c0-.1 0-.2-.1-.2l-4.2-4L9.2 9c.1 0 .2-.1.2-.1L12 3.6l2.6 5.2c0 .1.1.1.2.1l5.8.8-4.2 4.1c-.1.1-.1.1-.1.2l1 5.8zM12 15.6c.3 0 .6.1.8.2l2.5 1.3-.5-2.8c-.1-.6.1-1.1.5-1.5l2-2-2.8-.4c-.6-.1-1.1-.4-1.3-1L12 6.9l-1.2 2.5c-.3.5-.7.9-1.3 1l-2.8.4 2 2c.4.4.6 1 .5 1.5l-.5 2.8 2.5-1.3c.2-.1.5-.2.8-.2z" />
 					</svg>
@@ -144,7 +143,7 @@ const DemoListFilters = () => {
 					<svg
 						aria-hidden="true"
 						viewBox="0 0 24 24"
-						fill-rule="evenodd"
+						fillRule="evenodd"
 						fill="currentColor">
 						<path d="M18 4H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM6 5.5h12c.3 0 .5.2.5.5v3h-13V6c0-.3.2-.5.5-.5zM5.5 18v-7.5h3v8H6c-.3 0-.5-.2-.5-.5zm12.5.5h-8v-8h8.5V18c0 .3-.2.5-.5.5z" />
 					</svg>

@@ -251,6 +251,7 @@ class DynamicData {
 
 		if ($maybe_special_post_id && $post_id !== $maybe_special_post_id) {
 			global $post;
+
 			$old_post = $post;
 
 			$post = get_post($maybe_special_post_id);

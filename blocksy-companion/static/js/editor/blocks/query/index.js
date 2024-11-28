@@ -10,7 +10,10 @@ import metadata from './block.json'
 registerBlockType('blocksy/query', {
 	...metadata,
 	title: __('Advanced Posts', 'blocksy-companion'),
-	description: __('Create advanced queries based on your specified criterias.', 'blocksy-companion'),
+	description: __(
+		'Create advanced queries based on your specified criterias.',
+		'blocksy-companion'
+	),
 	icon: {
 		src: (
 			<svg
@@ -21,7 +24,10 @@ registerBlockType('blocksy/query', {
 				context="list-view"
 				aria-hidden="true"
 				focusable="false">
-				<path d="M5.5 18v-1c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v1c0 .3-.2.5-.5.5H6c-.3 0-.5-.2-.5-.5zm.5 2c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v1c0 1.1-.9 2-2 2H6zm-.5-9V6c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v5c0 .3-.2.5-.5.5H6c-.3 0-.5-.2-.5-.5zm.5 2c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v5c0 1.1-.9 2-2 2H6zm8.5 0v5c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-5c0-.3-.2-.5-.5-.5h-3c-.3 0-.5.2-.5.5zM13 18c0 1.1.9 2 2 2h3c1.1 0 2-.9 2-2v-5c0-1.1-.9-2-2-2h-3c-1.1 0-2 .9-2 2v5zm1.5-11V6c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v1c0 .3-.2.5-.5.5h-3c-.3 0-.5-.2-.5-.5zm.5 2c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v1c0 1.1-.9 2-2 2h-3z" fill-rule="evenodd"/>
+				<path
+					d="M5.5 18v-1c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v1c0 .3-.2.5-.5.5H6c-.3 0-.5-.2-.5-.5zm.5 2c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v1c0 1.1-.9 2-2 2H6zm-.5-9V6c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v5c0 .3-.2.5-.5.5H6c-.3 0-.5-.2-.5-.5zm.5 2c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v5c0 1.1-.9 2-2 2H6zm8.5 0v5c0 .3.2.5.5.5h3c.3 0 .5-.2.5-.5v-5c0-.3-.2-.5-.5-.5h-3c-.3 0-.5.2-.5.5zM13 18c0 1.1.9 2 2 2h3c1.1 0 2-.9 2-2v-5c0-1.1-.9-2-2-2h-3c-1.1 0-2 .9-2 2v5zm1.5-11V6c0-.3.2-.5.5-.5h3c.3 0 .5.2.5.5v1c0 .3-.2.5-.5.5h-3c-.3 0-.5-.2-.5-.5zm.5 2c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2v1c0 1.1-.9 2-2 2h-3z"
+					fillRule="evenodd"
+				/>
 			</svg>
 		),
 	},

@@ -17,7 +17,7 @@ const AvatarPreview = ({
 	attributes: { avatar_size, imageAlign, has_field_link },
 }) => {
 	const blockProps = useBlockProps({
-		className: classnames('ct-dynamic-media wp-block-image', {
+		className: classnames('ct-dynamic-media', {
 			[`align${imageAlign}`]: imageAlign,
 		}),
 

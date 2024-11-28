@@ -108,11 +108,7 @@ const Sidebar = ({ navigate, currentExtension, exts_status }) => {
 											active: !!__object,
 										})}
 										onClick={() => {
-											navigate(`/extensions/${name}`, {
-												state: {
-													hasNoChange: true,
-												},
-											})
+											navigate(`/extensions/${name}`)
 										}}>
 										{config.name}
 										<span data-tooltip-reveal="top">

@@ -55,9 +55,9 @@ const Extension = (props) => {
 								duration: 300,
 						  }
 				}}>
-				{(isLoading) => {
+				{(props, isLoading) => {
 					if (isLoading) {
-						return (props) => (
+						return (
 							<animated.p
 								style={props}
 								className="ct-loading-text">
@@ -100,7 +100,7 @@ const Extension = (props) => {
 						)
 					}
 
-					return (props) => (
+					return (
 						<animated.div style={props}>
 							<section className="ct-extensions-list">
 								<Sidebar

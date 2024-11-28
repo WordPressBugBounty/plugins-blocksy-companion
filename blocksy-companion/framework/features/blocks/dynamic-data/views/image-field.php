@@ -28,6 +28,18 @@ if (! empty(blocksy_akg('alt_text', $attributes, ''))) {
 	$img_attr['alt'] = blocksy_akg('alt_text', $attributes, '');
 }
 
+$border_result = get_block_core_post_featured_image_border_attributes(
+	$attributes
+);
+
+if (! empty($border_result['class'])) {
+	$img_attr['class'] = $border_result['class'];
+}
+
+if (! empty($border_result['style'])) {
+	$img_attr['style'] .= $border_result['style'];
+}
+
 $maybe_video = null;
 
 if ($video_thumbnail === 'yes') {
@@ -87,10 +99,7 @@ if ($field !== 'wp:featured_image') {
 
 }
 
-$classes = [
-	'wp-block-image'
-];
-
+$classes = [];
 $styles = [];
 
 if (! empty($attributes['width'])) {
@@ -101,7 +110,11 @@ if (! empty($attributes['height'])) {
 	$styles[] = 'height: ' . $attributes['height'] . ';';
 }
 
-if (! empty($attributes['aspectRatio'])) {
+if (
+	! empty($attributes['aspectRatio'])
+	&&
+	$aspectRatio !== 'auto'
+) {
 	$styles[] = 'aspect-ratio: ' . $aspectRatio . ';';
 }
 
@@ -111,18 +124,6 @@ if (! empty($attributes['imageAlign'])) {
 
 if (! empty($attributes['className'])) {
 	$classes[] = $attributes['className'];
-}
-
-$border_result = get_block_core_post_featured_image_border_attributes(
-	$attributes
-);
-
-if (! empty($border_result['class'])) {
-	$classes[] = $border_result['class'];
-}
-
-if (! empty($border_result['style'])) {
-	$styles[] = $border_result['style'];
 }
 
 $wrapper_attr = [

@@ -10,7 +10,7 @@
 	"supports": {
 		"reusable": false,
 		"html": false,
-		"layout": true,
+		"layout": false,
 		"spacing": {
 			"blockGap": {
 				"__experimentalDefault": "1.25em"
@@ -32,6 +32,9 @@
 		},
 		"verticalAlignment": {
 			"type": "string"
+		},
+		"layout": {
+			"type": "object"
 		}
 	},
 
@@ -43,6 +46,11 @@
 		"orderby",
 		"offset",
 		"include_term_ids",
-		"exclude_term_ids"
+		"exclude_term_ids",
+
+		"has_slideshow",
+		"has_slideshow_arrows",
+		"has_slideshow_autoplay",
+		"has_slideshow_autoplay_speed"
 	]
 }

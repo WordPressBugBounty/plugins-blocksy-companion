@@ -66,6 +66,26 @@
 		},
 		"customLinkHoverColor": {
 			"type": "string"
+		},
+
+		"has_slideshow": {
+			"type": "string",
+			"default": "no"
+		},
+
+		"has_slideshow_arrows": {
+			"type": "string",
+			"default": "yes"
+		},
+
+		"has_slideshow_autoplay": {
+			"type": "string",
+			"default": "no"
+		},
+
+		"has_slideshow_autoplay_speed": {
+			"type": "number",
+			"default": 3
 		}
 	},
 
@@ -115,6 +135,11 @@
 		"offset": "offset",
 
 		"include_term_ids": "include_term_ids",
-		"exclude_term_ids": "exclude_term_ids"
+		"exclude_term_ids": "exclude_term_ids",
+
+		"has_slideshow": "has_slideshow",
+		"has_slideshow_arrows": "has_slideshow_arrows",
+		"has_slideshow_autoplay": "has_slideshow_autoplay",
+		"has_slideshow_autoplay_speed": "has_slideshow_autoplay_speed"
 	}
 }

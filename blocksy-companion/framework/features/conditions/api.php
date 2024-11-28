@@ -149,9 +149,12 @@ class ConditionsManagerAPI {
 
 			$users = [];
 
-			foreach (get_users([
-				'number' => 2000
-			]) as $user) {
+			$user_query = new \WP_User_Query([
+				'number' => 2000,
+				'fields' => ['ID', 'user_nicename'],
+			]);
+
+			foreach ($user_query->get_results() as $user) {
 				$users[] = [
 					'id' => $user->ID,
 					'name' => $user->user_nicename
