@@ -182,17 +182,31 @@ class Query {
 							$block['attrs']['layout'],
 							'3'
 						),
+
 						'tablet' => blocksy_akg(
 							'tabletColumns',
 							$block['attrs'],
 							'2'
 						),
+
 						'mobile' => blocksy_akg(
 							'mobileColumns',
 							$block['attrs'],
 							'1'
 						)
 					];
+
+					if (! $columns['desktop']) {
+						$columns['desktop'] = 3;
+					}
+
+					if (! $columns['tablet']) {
+						$columns['tablet'] = 2;
+					}
+
+					if (! $columns['mobile']) {
+						$columns['mobile'] = 1;
+					}
 				}
 
 				$gap = self::get_gap_value($block['attrs']);
@@ -566,6 +580,10 @@ class Query {
 			}
 
 			$combined_gap_value .= "$process_value ";
+		}
+
+		if (trim($combined_gap_value) === '0') {
+			return '0px';
 		}
 
 		return trim($combined_gap_value);

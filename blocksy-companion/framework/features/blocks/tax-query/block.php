@@ -171,6 +171,18 @@ class TaxQuery {
 							'1'
 						)
 					];
+
+					if (! $columns['desktop']) {
+						$columns['desktop'] = 3;
+					}
+
+					if (! $columns['tablet']) {
+						$columns['tablet'] = 2;
+					}
+
+					if (! $columns['mobile']) {
+						$columns['mobile'] = 1;
+					}
 				}
 
 				$gap = self::get_gap_value($block['attrs']);
@@ -467,8 +479,8 @@ class TaxQuery {
 				// yes | no
 				'has_slideshow' => 'no',
 				'has_slideshow_arrows' => 'yes',
-				'has_slideshow__autoplay' => 'no',
-				'has_slideshow__autoplay_speed' => 3,
+				'has_slideshow_autoplay' => 'no',
+				'has_slideshow_autoplay_speed' => 3,
 			],
 		);
 	}

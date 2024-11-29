@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.79
+Stable tag: 2.0.80
 
 == Description ==
 
@@ -52,6 +52,11 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.80: 2024-11-29
+- Improvement: Advanced Posts block - make sure inner post template block spacing options is applied on frontend
+- Improvement: Advanced Taxonomies block - make sure the column adjustments option for tablet/mobile devices is applied correctly
+- Improvement: Correctly compute grid styles in Advanced Posts and Advanced taxonomies
+
 2.0.79: 2024-11-28
 - Improvement: Fetch only relevant user fields for the conditions module
 
