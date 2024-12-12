@@ -17,34 +17,28 @@ const CustomImageField = ({
 		width,
 		height,
 		imageAlign,
-		has_field_link,
 		image_hover_effect,
 		sizeSlug,
 	},
 
 	postId,
 }) => {
+	const borderProps = useBorderProps(attributes)
+
 	const blockProps = useBlockProps({
 		className: classnames('ct-dynamic-media', {
 			[`align${imageAlign}`]: imageAlign,
 		}),
 
 		style: {
-			aspectRatio,
 			width,
 			height,
 		},
-
-		...(image_hover_effect !== 'none'
-			? { 'data-hover': image_hover_effect }
-			: {}),
 	})
 
-	const borderProps = useBorderProps(attributes)
-	console.log(fieldData)
 	let maybeUrl = fieldData?.value?.url
 
-	if (fieldData?.value?.sizes[sizeSlug]) {
+	if (fieldData?.value?.sizes?.[sizeSlug]) {
 		if (typeof fieldData.value.sizes[sizeSlug] === 'string') {
 			maybeUrl = fieldData.value.sizes[sizeSlug]
 		} else {
@@ -53,11 +47,10 @@ const CustomImageField = ({
 	}
 
 	const imageStyles = {
-		...borderProps.style,
-
 		height: aspectRatio ? '100%' : height,
 		width: !!aspectRatio && '100%',
 		objectFit: !!(height || aspectRatio) && 'cover',
+		aspectRatio,
 	}
 
 	if (!maybeUrl || !postId) {
@@ -66,21 +59,16 @@ const CustomImageField = ({
 				<div
 					className="ct-dynamic-data-placeholder"
 					style={{
-						...imageStyles,
+						aspectRatio,
 					}}>
 					<svg
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 60 60"
 						preserveAspectRatio="none"
-						class="components-placeholder__illustration"
+						className="ct-dynamic-data-placeholder-illustration"
 						aria-hidden="true"
-						focusable="false"
-						style={{
-							'min-height': '200px',
-							height: !!aspectRatio && '100%',
-							width: !!aspectRatio && '100%',
-						}}>
+						focusable="false">
 						<path
 							vectorEffect="non-scaling-stroke"
 							d="M60 60 0 0"></path>
@@ -90,15 +78,31 @@ const CustomImageField = ({
 		)
 	}
 
+	const hasInnerContent = image_hover_effect !== 'none'
+
 	let content = (
 		<img
+			className={!hasInnerContent ? borderProps.className : ''}
 			style={{
+				...(!hasInnerContent ? borderProps.style : {}),
 				...imageStyles,
 			}}
 			src={maybeUrl}
-			className={borderProps.className}
 		/>
 	)
+
+	if (hasInnerContent) {
+		content = (
+			<span
+				data-hover={image_hover_effect}
+				className={`ct-dynamic-media-inner ${borderProps.className}`}
+				style={{
+					...borderProps.style,
+				}}>
+				{content}
+			</span>
+		)
+	}
 
 	return <figure {...blockProps}>{content}</figure>
 }

@@ -355,7 +355,8 @@ class DynamicData {
 				->retrieve_dynamic_data_fields([
 					'post_type' => $post_type,
 					'provider' => $provider,
-					'allow_images' => true
+					'allow_images' => true,
+					'post_id' => $post_id,
 				]);
 
 			if (empty($maybe_fields)) {

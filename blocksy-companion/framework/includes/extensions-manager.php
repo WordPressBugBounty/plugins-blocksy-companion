@@ -500,7 +500,13 @@ class ExtensionsManager {
 	}
 
 	private function get_activated_extensions() {
-		return get_option($this->get_option_name(), []);
+		$opt = get_option($this->get_option_name(), []);
+
+		if (! is_array($opt)) {
+			$opt = [];
+		}
+
+		return $opt;
 	}
 
 	private function perform_autoload($class) {

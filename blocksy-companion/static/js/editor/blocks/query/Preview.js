@@ -123,7 +123,7 @@ const Preview = ({ attributes, postId, uniqueId }) => {
 	}
 
 	if (!blockData.customizer_preview) {
-		return <p>{__('No results found.', 'blocksy')}</p>
+		return <p>{__('No results found.', 'blocksy-companion')}</p>
 	}
 
 	return (

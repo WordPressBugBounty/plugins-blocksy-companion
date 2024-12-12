@@ -9,18 +9,12 @@ import { Switch } from 'blocksy-options'
 
 import ConditionsWithRelation from './ConditionsManager/ConditionsWithRelation'
 
-import useConditionsData from './ConditionsManager/useConditionsData'
-
 export const ConditionsDataContext = createContext({
-	allTaxonomies: [],
 	allLanguages: [],
-	allUsers: [],
 	remoteConditions: [],
 })
 
-let allTaxonomiesCache = []
 let allLanguagesCache = []
-let allUsersCache = []
 let remoteConditionsCache = []
 
 const ConditionsManager = ({
@@ -29,9 +23,7 @@ const ConditionsManager = ({
 	filter = 'all',
 	addConditionButtonLabel,
 }) => {
-	const [allTaxonomies, setAllTaxonomies] = useState(allTaxonomiesCache)
 	const [allLanguages, setAllLanguages] = useState(allLanguagesCache)
-	const [allUsers, setAllUsers] = useState(allUsersCache)
 	const [remoteConditions, setRemoteConditions] = useState(
 		remoteConditionsCache
 	)
@@ -50,15 +42,9 @@ const ConditionsManager = ({
 			}
 		)
 			.then((r) => r.json())
-			.then(({ data: { taxonomies, languages, users, conditions } }) => {
-				setAllTaxonomies(taxonomies)
-				allTaxonomiesCache = taxonomies
-
+			.then(({ data: { languages, conditions } }) => {
 				setAllLanguages(languages)
 				allLanguagesCache = languages
-
-				setAllUsers(users)
-				allUsersCache = users
 
 				setRemoteConditions(conditions)
 				remoteConditionsCache = conditions
@@ -156,9 +142,7 @@ const ConditionsManager = ({
 	return (
 		<ConditionsDataContext.Provider
 			value={{
-				allTaxonomies,
 				allLanguages,
-				allUsers,
 				remoteConditions,
 				isAdvancedMode,
 			}}>

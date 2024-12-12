@@ -14,7 +14,10 @@ export const defaultAttributes = getAttributesFromOptions(options)
 registerBlockType('blocksy/dynamic-data', {
 	...metadata,
 	title: __('Dynamic Data', 'blocksy-companion'),
-	description: __('Fetch and display content from various sources.', 'blocksy-companion'),
+	description: __(
+		'Fetch and display content from various sources.',
+		'blocksy-companion'
+	),
 	attributes: {
 		...metadata.attributes,
 		...defaultAttributes,
@@ -95,6 +98,18 @@ registerBlockType('blocksy/dynamic-data', {
 
 		if (attributes.field === 'wp:term_image') {
 			return __('Dynamic Term Image', 'blocksy-companion')
+		}
+
+		if (attributes.field === 'wp:archive_image') {
+			return __('Dynamic Archive Image', 'blocksy-companion')
+		}
+
+		if (attributes.field === 'wp:archive_title') {
+			return __('Dynamic Archive Title', 'blocksy-companion')
+		}
+
+		if (attributes.field === 'wp:archive_description') {
+			return __('Dynamic Archive Description', 'blocksy-companion')
 		}
 
 		return __('Dynamic Data', 'blocksy-companion')

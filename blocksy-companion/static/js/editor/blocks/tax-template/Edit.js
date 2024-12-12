@@ -206,7 +206,7 @@ const Edit = ({
 	const getItems = ({ isSlideshow, elementDescriptorForIndex }) => (
 		<>
 			{blockContexts.length === 0 && (
-				<p>{__('No results found.', 'blocksy')}</p>
+				<p>{__('No results found.', 'blocksy-companion')}</p>
 			)}
 
 			{blockContexts.length > 0 &&

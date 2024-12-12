@@ -595,7 +595,7 @@ class TaxQuery {
 			$term_atts = $term_atts[0];
 
 			$maybe_icon = blocksy_akg('icon_image', $term_atts, '');
-			$maybe_image = blocksy_akg('image', $term_atts, '');
+			$maybe_image = blocksy_akg('image', $term_atts, $attachment);
 
 			$terms_descriptors[] = [
 				'term_id' => $term->term_id,

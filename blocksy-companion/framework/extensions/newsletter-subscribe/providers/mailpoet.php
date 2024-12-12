@@ -69,10 +69,7 @@ class MailPoetProvider extends Provider {
         try {
             $get_subscriber = $mailpoet_api->getSubscriber($subscriber['email']);
         } catch (\Exception $e) {
-            return [
-                'result' => 'no',
-                'message' => $e->getMessage()
-            ];
+            $get_subscriber = false;
         }
 
         try {

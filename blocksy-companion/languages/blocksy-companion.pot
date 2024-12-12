@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-29 16:39+0000\n"
+"POT-Creation-Date: 2024-12-12 20:33+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -21,12 +21,12 @@ msgstr ""
 "x-generator: babel-plugin-wp-i18n\n"
 
 #. translators: %s: PHP version
-#: blocksy-companion.php:169
+#: blocksy-companion.php:172
 msgid "Blocksy requires PHP version %s+, plugin is currently NOT RUNNING."
 msgstr ""
 
 #. translators: %s: WordPress version
-#: blocksy-companion.php:180
+#: blocksy-companion.php:183
 msgid ""
 "Blocksy requires WordPress version %s+. Because you are using an earlier "
 "version, the plugin is currently NOT RUNNING."
@@ -164,14 +164,14 @@ msgstr ""
 #: framework/features/conditions-manager.php:250,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:126
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:283
-#: static/js/options/ConditionsManager/SingleCondition.js:97
+#: static/js/options/ConditionsManager/SingleCondition.js:96
 msgid "Include"
 msgstr ""
 
 #: framework/features/conditions-manager.php:250,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:127
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:291
-#: static/js/options/ConditionsManager/SingleCondition.js:98
+#: static/js/options/ConditionsManager/SingleCondition.js:97
 msgid "Exclude"
 msgstr ""
 
@@ -338,8 +338,8 @@ msgid ""
 msgstr ""
 
 #: framework/helpers/exts-configs.php:142,
-#: framework/premium/extensions/post-types-extra/features/read-time/estimated-read-time.php:11,
-#: framework/premium/extensions/post-types-extra/features/read-time/estimated-read-time.php:68
+#: framework/premium/extensions/post-types-extra/features/read-time/estimated-read-time.php:36,
+#: framework/premium/extensions/post-types-extra/features/read-time/estimated-read-time.php:78
 msgid "Read Time"
 msgstr ""
 
@@ -350,7 +350,7 @@ msgid ""
 msgstr ""
 
 #: framework/helpers/exts-configs.php:149
-#: static/js/editor/blocks/dynamic-data/index.js:100
+#: static/js/editor/blocks/dynamic-data/index.js:115
 msgid "Dynamic Data"
 msgstr ""
 
@@ -968,7 +968,7 @@ msgstr ""
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:345,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:376,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:405,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1458,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1482,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:220,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:234,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:270,
@@ -1097,7 +1097,7 @@ msgstr ""
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:351,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:381,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:410,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1464,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1488,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:802,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:562,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:593,
@@ -1248,7 +1248,7 @@ msgstr ""
 #: framework/features/blocks/socials/options.php:14,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:676,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:181,
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:327,
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:335,
 #: framework/premium/features/premium-header/items/contacts/options.php:87,
 #: framework/premium/features/premium-header/items/contacts/options.php:132,
 #: framework/premium/features/premium-header/items/contacts/options.php:177,
@@ -1342,7 +1342,7 @@ msgstr ""
 #: framework/features/header/items/account/options.php:770,
 #: framework/premium/features/content-blocks/options/archive.php:75,
 #: framework/premium/features/content-blocks/options/hook.php:168,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:644,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:667,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:272,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:188,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:41,
@@ -1760,10 +1760,10 @@ msgstr ""
 #: framework/premium/features/content-blocks/content-block-layer.php:231,
 #: framework/premium/features/content-blocks/content-block-layer.php:281,
 #: framework/premium/extensions/woocommerce-extra/features/sku-layer.php:64,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:767,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:790,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:711,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:762,
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:339,
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:347,
 #: framework/premium/extensions/woocommerce-extra/features/share-box-layer/feature.php:204,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:202,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:251,
@@ -2137,8 +2137,7 @@ msgstr ""
 #: framework/features/header/items/account/options.php:404,
 #: framework/features/header/items/account/options.php:745,
 #: framework/features/header/items/account/options.php:785,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:721,
-#: framework/premium/extensions/post-types-extra/features/read-time/estimated-read-time.php:20,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:744,
 #: framework/premium/features/premium-header/items/contacts/options.php:114,
 #: framework/premium/features/premium-header/items/contacts/options.php:159,
 #: framework/premium/features/premium-header/items/contacts/options.php:204,
@@ -2870,7 +2869,7 @@ msgstr ""
 #: framework/extensions/newsletter-subscribe/providers/mailchimp.php:187,
 #: framework/extensions/newsletter-subscribe/providers/mailerlite-classic.php:104,
 #: framework/extensions/newsletter-subscribe/providers/mailerlite-new.php:123,
-#: framework/extensions/newsletter-subscribe/providers/mailpoet.php:93
+#: framework/extensions/newsletter-subscribe/providers/mailpoet.php:90
 msgid "Thank you for subscribing to our newsletter!"
 msgstr ""
 
@@ -3598,7 +3597,7 @@ msgid "Page ID"
 msgstr ""
 
 #: framework/features/conditions/rules/specific.php:20
-#: static/js/options/ConditionsManager/PostIdPicker.js:79
+#: static/js/options/ConditionsManager/SingleCondition.js:153
 msgid "Custom Post Type ID"
 msgstr ""
 
@@ -3755,7 +3754,7 @@ msgstr ""
 msgid "Dark Mode Color Palette"
 msgstr ""
 
-#: framework/premium/extensions/custom-fonts/extension.php:154
+#: framework/premium/extensions/custom-fonts/extension.php:158
 msgid "Custom Fonts"
 msgstr ""
 
@@ -4071,8 +4070,8 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:673,
 #: framework/premium/extensions/shortcuts/customizer.php:699,
 #: framework/premium/extensions/shortcuts/views/bar.php:55,
-#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:241,
-#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:245,
+#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:239,
+#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:243,
 #: framework/premium/extensions/woocommerce-extra/features/compare/helpers.php:110,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:36,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:494,
@@ -4689,7 +4688,7 @@ msgid "After related posts"
 msgstr ""
 
 #: framework/premium/features/content-blocks/hooks-manager.php:411,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:733
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:756
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:298
 msgid "Before"
 msgstr ""
@@ -4700,7 +4699,7 @@ msgid "Loop"
 msgstr ""
 
 #: framework/premium/features/content-blocks/hooks-manager.php:418,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:744
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:767
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:307
 msgid "After"
 msgstr ""
@@ -6332,40 +6331,40 @@ msgstr ""
 msgid "Color mode switch"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:683
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:706
 msgid "You have no %s fields declared for this custom post type."
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:695,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1429,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1440
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:718,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1453,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1464
 msgid "Field"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:707,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:730,
 #: framework/premium/features/premium-header/items/language-switcher/options/common.php:24,
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/options/status.php:22
 msgid "Label"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:756
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:779
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:319
 msgid "Fallback"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:783
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:806
 msgid "%s Field"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1413
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1437
 msgid "Custom Field"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1427
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1451
 msgid "%s %s Font"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1438
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:1462
 msgid "%s %s Color"
 msgstr ""
 
@@ -6435,7 +6434,7 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/read-time/estimated-read-time.php:114
+#: framework/premium/extensions/post-types-extra/features/read-time/estimated-read-time.php:124
 msgid "%s min"
 msgid_plural "%s mins"
 msgstr[0] ""
@@ -6910,15 +6909,15 @@ msgstr ""
 msgid "Quantity Input"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:228
+#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:226
 msgid "Compare Button"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:288
+#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:286
 msgid "Compare Products"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:294
+#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:292
 msgid "Close Compare Modal"
 msgstr ""
 
@@ -7323,32 +7322,32 @@ msgstr ""
 msgid "Arrows Visibility"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:110,
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:242
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:100,
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:250
 msgid "Days"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:111,
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:256
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:101,
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:264
 msgid "Hours"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:115,
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:270
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:105,
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:278
 msgid "Min"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:116,
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:284
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:106,
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:292
 msgid "Sec"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:298,
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:330
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:306,
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:338
 msgid "Hurry up! This sale ends in"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:324
+#: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:332
 msgid "Countdown Box"
 msgstr ""
 
@@ -8107,7 +8106,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/filter-presenter.php:109
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/Preview.js:63
-#: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/Preview.js:63
+#: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/Preview.js:67
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Preview.js:189
 msgid "Reset Filter"
 msgstr ""
@@ -8769,7 +8768,7 @@ msgid ""
 msgstr ""
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:127
-#: static/js/options/ConditionsManager/SingleCondition.js:95
+#: static/js/options/ConditionsManager/SingleCondition.js:94
 msgid "Select variation"
 msgstr ""
 
@@ -9537,13 +9536,8 @@ msgstr ""
 msgid "Select location"
 msgstr ""
 
-#: framework/premium/static/js/options/PreviewedPostsSelect.js:170
-#: static/js/options/ConditionsManager/PostIdPicker.js:68
-msgid "Type to search by ID or title..."
-msgstr ""
-
-#: framework/premium/static/js/options/PreviewedPostsSelect.js:174
-#: static/js/options/ConditionsManager/PostIdPicker.js:74
+#: framework/premium/static/js/options/PreviewedPostsSelect.js:117
+#: static/js/options/ConditionsManager/SingleCondition.js:148
 msgid "Select post"
 msgstr ""
 
@@ -10304,76 +10298,88 @@ msgstr ""
 msgid "Archive Description"
 msgstr ""
 
+#: static/js/editor/blocks/dynamic-data/index.js:100
+msgid "Dynamic Term Image"
+msgstr ""
+
+#: static/js/editor/blocks/dynamic-data/index.js:104
+msgid "Dynamic Archive Image"
+msgstr ""
+
+#: static/js/editor/blocks/dynamic-data/index.js:108
+msgid "Dynamic Archive Title"
+msgstr ""
+
+#: static/js/editor/blocks/dynamic-data/index.js:112
+msgid "Dynamic Archive Description"
+msgstr ""
+
 #: static/js/editor/blocks/dynamic-data/index.js:17
 msgid "Fetch and display content from various sources."
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:33
+#: static/js/editor/blocks/dynamic-data/index.js:36
 msgid "Dynamic Title"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:37
+#: static/js/editor/blocks/dynamic-data/index.js:40
 msgid "Dynamic Excerpt"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:41
+#: static/js/editor/blocks/dynamic-data/index.js:44
 msgid "Dynamic Post Date"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:45
+#: static/js/editor/blocks/dynamic-data/index.js:48
 msgid "Dynamic Comments"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:49
+#: static/js/editor/blocks/dynamic-data/index.js:52
 msgid "Dynamic Terms"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:53
+#: static/js/editor/blocks/dynamic-data/index.js:56
 msgid "Dynamic Author"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:57
+#: static/js/editor/blocks/dynamic-data/index.js:60
 msgid "Dynamic Featured Image"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:61
+#: static/js/editor/blocks/dynamic-data/index.js:64
 msgid "Dynamic Author Avatar"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:65
+#: static/js/editor/blocks/dynamic-data/index.js:68
 msgid "Dynamic Price"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:69
+#: static/js/editor/blocks/dynamic-data/index.js:72
 msgid "Dynamic Stock Status"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:73
+#: static/js/editor/blocks/dynamic-data/index.js:76
 msgid "Dynamic Brands"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:77
+#: static/js/editor/blocks/dynamic-data/index.js:80
 msgid "Dynamic SKU"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:81
+#: static/js/editor/blocks/dynamic-data/index.js:84
 msgid "Dynamic Rating"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:85
+#: static/js/editor/blocks/dynamic-data/index.js:88
 msgid "Dynamic Term Title"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:89
+#: static/js/editor/blocks/dynamic-data/index.js:92
 msgid "Dynamic Term Description"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/index.js:93
+#: static/js/editor/blocks/dynamic-data/index.js:96
 msgid "Dynamic Term Count"
-msgstr ""
-
-#: static/js/editor/blocks/dynamic-data/index.js:97
-msgid "Dynamic Term Image"
 msgstr ""
 
 #: static/js/editor/blocks/dynamic-data/preview-parts/woo/RatingPreview.js:13
@@ -10695,20 +10701,16 @@ msgid ""
 "please install and activate the latest version of Blocksy theme."
 msgstr ""
 
-#: static/js/options/ConditionsManager.js:207
+#: static/js/options/ConditionsManager.js:191
 msgid "Advanced Mode"
+msgstr ""
+
+#: static/js/options/ConditionsManager/EntityIdPicker.js:70
+msgid "Type to search by ID or title..."
 msgstr ""
 
 #: static/js/options/ConditionsManager/ExpireCondition.js:119
 msgid "The expiration date cannot be set earlier than the start date."
-msgstr ""
-
-#: static/js/options/ConditionsManager/PostIdPicker.js:76
-msgid "Select page"
-msgstr ""
-
-#: static/js/options/ConditionsManager/PostIdPicker.js:78
-msgid "Select product"
 msgstr ""
 
 #: static/js/options/ConditionsManager/ScheduleDate.js:149
@@ -10787,47 +10789,55 @@ msgstr ""
 msgid "Only weekdays"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:114
+#: static/js/options/ConditionsManager/SingleCondition.js:113
 msgid "Select rule"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:204
+#: static/js/options/ConditionsManager/SingleCondition.js:150
+msgid "Select page"
+msgstr ""
+
+#: static/js/options/ConditionsManager/SingleCondition.js:152
+msgid "Select product"
+msgstr ""
+
+#: static/js/options/ConditionsManager/SingleCondition.js:200
 msgid "Select taxonomy"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:236
+#: static/js/options/ConditionsManager/SingleCondition.js:221
 msgid "Select language"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:265
+#: static/js/options/ConditionsManager/SingleCondition.js:249
 msgid "Current user"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:292
+#: static/js/options/ConditionsManager/SingleCondition.js:266
 msgid "Select user"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:296
+#: static/js/options/ConditionsManager/SingleCondition.js:272
 msgid "All authors"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:325
+#: static/js/options/ConditionsManager/SingleCondition.js:293
 msgid "Select sub field"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:378
+#: static/js/options/ConditionsManager/SingleCondition.js:346
 msgid "Display based on referer domain"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:412
+#: static/js/options/ConditionsManager/SingleCondition.js:380
 msgid "Display if cookie is present"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:446
+#: static/js/options/ConditionsManager/SingleCondition.js:414
 msgid "Display if query string is present in URL"
 msgstr ""
 
-#: static/js/options/ConditionsManager/SingleCondition.js:482
+#: static/js/options/ConditionsManager/SingleCondition.js:450
 msgid "Select value"
 msgstr ""
 

@@ -4,33 +4,66 @@ if (! isset($term_id)) {
 	$term_id = null;
 }
 
-$aspectRatio = blocksy_akg('aspectRatio', $attributes, 'auto');
-$imageFit = blocksy_akg('imageFit', $attributes, 'cover');
-$imageSource = blocksy_akg('imageSource', $attributes, 'featured');
+$aspect_ratio = blocksy_akg('aspectRatio', $attributes, 'auto');
+$image_source = blocksy_akg('imageSource', $attributes, 'featured');
+$image_fit = blocksy_akg('imageFit', $attributes, 'cover');
 $height = blocksy_akg('height', $attributes, '');
 
 $lightbox = blocksy_akg('lightbox', $attributes, '');
-$image_hover_effect = blocksy_akg('image_hover_effect', $attributes, 'none');
+$image_hover_effect = blocksy_akg('image_hover_effect', $attributes, '');
+
+$has_field_link = blocksy_akg('has_field_link', $attributes, 'no');
+$alt_text = blocksy_akg('alt_text', $attributes, '');
 
 $img_atts = [
 	'style' => ''
 ];
 
+$wrapper_attr = [
+	'class' => 'ct-dynamic-media'
+];
+
+$link_attr = [];
+
+$classes = [];
+$styles = [];
+
+$border_result = get_block_core_post_featured_image_border_attributes(
+	$attributes
+);
+
 // Aspect aspectRatio with a height set needs to override the default width/height.
-if (! empty($aspectRatio)) {
+if (! empty($aspect_ratio)) {
 	$img_atts['style'] .= 'width:100%;height:100%;';
 } elseif (! empty($height) ) {
 	$img_atts['style'] .= "height:{$attributes['height']};";
 }
 
-$img_atts['style'] .= "object-fit: {$imageFit};";
+$img_atts['style'] .= "object-fit: {$image_fit};";
 
-if (! empty(blocksy_akg('alt_text', $attributes, ''))) {
-	$img_atts['alt'] = blocksy_akg('alt_text', $attributes, '');
+if (! empty($alt_text)) {
+	$img_atts['alt'] = $alt_text;
+}
+
+if (
+	! empty($attributes['aspectRatio'])
+	&&
+	$aspect_ratio !== 'auto'
+) {
+	$img_atts['style'] .= 'aspect-ratio: ' . $aspect_ratio . ';';
+}
+
+if ($image_hover_effect === 'none') {
+	if (! empty($border_result['class'])) {
+		$img_atts['class'] = $border_result['class'];
+	}
+
+	if (! empty($border_result['style'])) {
+		$img_atts['style'] .= $border_result['style'];
+	}
 }
 
 $attachment_id = null;
-$link_attr = [];
 
 if (! $term_id && is_archive()) {
 	$term_id = get_queried_object_id();
@@ -68,7 +101,7 @@ if ($term_id) {
 
 	$maybe_image = blocksy_akg('image', $term_atts[0], '');
 
-	if ($imageSource === 'icon') {
+	if ($image_source === 'icon') {
 		$maybe_image = blocksy_akg('icon_image', $term_atts[0], '');
 	}
 
@@ -106,20 +139,24 @@ if (empty($attachment_id)) {
 	return;
 }
 
-$value = blocksy_media([
-	'attachment_id' => $attachment_id,
-	'size' => blocksy_akg('sizeSlug', $attributes, 'full'),
-	'ratio' => $attributes['aspectRatio'],
-	'fit' => $imageFit,
-	'img_atts' => $img_atts
-]);
+// $value = blocksy_media([
+// 	'attachment_id' => $attachment_id,
+// 	'size' => blocksy_akg('sizeSlug', $attributes, 'full'),
+// 	'ratio' => $attributes['aspectRatio'],
+// 	'fit' => $image_fit,
+// 	'img_atts' => $img_atts
+// ]);
+
+$value = wp_get_attachment_image(
+	$attachment_id,
+	blocksy_akg('sizeSlug', $attributes, 'full'),
+	false,
+	$img_atts
+);
 
 if (empty($value)) {
 	return;
 }
-
-$classes = [];
-$styles = [];
 
 if (! empty($attributes['width'])) {
 	$styles[] = 'width: ' . $attributes['width'] . ';';
@@ -127,14 +164,6 @@ if (! empty($attributes['width'])) {
 
 if (! empty($attributes['height'])) {
 	$styles[] = 'height: ' . $attributes['height'] . ';';
-}
-
-if (
-	! empty($attributes['aspectRatio'])
-	&&
-	$aspectRatio !== 'auto'
-) {
-	$styles[] = 'aspect-ratio: ' . $aspectRatio . ';';
 }
 
 if (! empty($attributes['imageAlign'])) {
@@ -145,28 +174,30 @@ if (! empty($attributes['className'])) {
 	$classes[] = $attributes['className'];
 }
 
-$border_result = get_block_core_post_featured_image_border_attributes(
-	$attributes
-);
-
-if (! empty($border_result['class'])) {
-	$classes[] = $border_result['class'];
-}
-
-if (! empty($border_result['style'])) {
-	$styles[] = $border_result['style'];
-}
-
-$wrapper_attr = [
-	'class' => 'ct-dynamic-media'
-];
-
+$wrapper_attr['class'] .= ' ' . implode(' ', $classes);
 $wrapper_attr['style'] = implode(' ', $styles);
 
-$wrapper_attr['class'] .= ' ' . implode(' ', $classes);
-
 if ($image_hover_effect !== 'none') {
-	$wrapper_attr['data-hover'] = $image_hover_effect;
+	$span_styles = [];
+	$span_classes = ['ct-dynamic-media-inner'];
+
+	if (! empty($border_result['style'])) {
+		$span_styles[] = $border_result['style'];
+	}
+
+	if (! empty($border_result['class'])) {
+		$span_classes[] = $border_result['class'];
+	}
+
+	$value = blocksy_html_tag(
+		'span',
+		[
+			'data-hover' => $image_hover_effect,
+			'class' => implode(' ', $span_classes),
+			'style' => implode(' ', $span_styles)
+		],
+		$value
+	);
 }
 
 $tag_name = 'figure';

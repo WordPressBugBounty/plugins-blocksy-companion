@@ -2,13 +2,9 @@ import { useContext, useState, useEffect } from '@wordpress/element'
 import { ConditionsDataContext } from '../ConditionsManager'
 
 const useConditionsData = (condition = null) => {
-	const {
-		isAdvancedMode,
-		remoteConditions,
-		allTaxonomies,
-		allLanguages,
-		allUsers,
-	} = useContext(ConditionsDataContext)
+	const { isAdvancedMode, remoteConditions, allLanguages } = useContext(
+		ConditionsDataContext
+	)
 
 	let rulesToUse = remoteConditions
 
@@ -45,9 +41,7 @@ const useConditionsData = (condition = null) => {
 		isAdvancedMode,
 		allRules,
 		rulesToUse,
-		allTaxonomies,
 		allLanguages,
-		allUsers,
 	}
 }
 

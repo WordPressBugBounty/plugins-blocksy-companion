@@ -36,21 +36,13 @@ const TermImagePreview = ({
 
 	const blockProps = useBlockProps({
 		className: classnames('ct-dynamic-media', {
-				[`align${imageAlign}`]: imageAlign,
-			},
-			borderProps.className
-		),
+			[`align${imageAlign}`]: imageAlign,
+		}),
 
 		style: {
-			...borderProps.style,
-			aspectRatio,
 			width,
 			height,
 		},
-
-		...(image_hover_effect !== 'none'
-			? { 'data-hover': image_hover_effect }
-			: {}),
 	})
 
 	const maybeImageId =
@@ -79,6 +71,7 @@ const TermImagePreview = ({
 		height: aspectRatio ? '100%' : height,
 		width: !!aspectRatio && '100%',
 		objectFit: imageFit,
+		aspectRatio,
 	}
 
 	if (!maybeUrl) {
@@ -87,21 +80,16 @@ const TermImagePreview = ({
 				<div
 					className="ct-dynamic-data-placeholder"
 					style={{
-						...imageStyles,
+						aspectRatio,
 					}}>
 					<svg
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 60 60"
 						preserveAspectRatio="none"
-						class="components-placeholder__illustration"
+						className="ct-dynamic-data-placeholder-illustration"
 						aria-hidden="true"
-						focusable="false"
-						style={{
-							'min-height': '200px',
-							height: !!aspectRatio && '100%',
-							width: !!aspectRatio && '100%',
-						}}>
+						focusable="false">
 						<path
 							vector-effect="non-scaling-stroke"
 							d="M60 60 0 0"></path>
@@ -111,9 +99,13 @@ const TermImagePreview = ({
 		)
 	}
 
+	const hasInnerContent = image_hover_effect !== 'none'
+
 	let content = (
 		<img
+			className={!hasInnerContent ? borderProps.className : ''}
 			style={{
+				...(!hasInnerContent ? borderProps.style : {}),
 				...imageStyles,
 			}}
 			src={maybeUrl}
@@ -121,6 +113,19 @@ const TermImagePreview = ({
 			loading="lazy"
 		/>
 	)
+
+	if (hasInnerContent) {
+		content = (
+			<span
+				data-hover={image_hover_effect}
+				className={`ct-dynamic-media-inner ${borderProps.className}`}
+				style={{
+					...borderProps.style,
+				}}>
+				{content}
+			</span>
+		)
+	}
 
 	if (has_field_link && !isLoaded) {
 		content = <a href="#">{content}</a>

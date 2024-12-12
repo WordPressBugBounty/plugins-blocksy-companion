@@ -51,7 +51,7 @@ function blc_ext_newsletter_subscribe_form() {
 		$args['list_id'] = blocksy_get_theme_mod('newsletter_subscribe_list_id', '');
 	}
 
-	$args['class'] = 'ct-newsletter-subscribe-container ct-constrained-width ' . blocksy_visibility_classes(
+	$args['class'] = 'ct-newsletter-subscribe-container is-width-constrained ' . blocksy_visibility_classes(
 		blocksy_get_theme_mod('newsletter_subscribe_subscribe_visibility', [
 			'desktop' => true,
 			'tablet' => true,

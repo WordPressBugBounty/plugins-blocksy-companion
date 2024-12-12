@@ -3,7 +3,7 @@
 /*
 Plugin Name: Blocksy Companion
 Description: This plugin is the companion for the Blocksy theme, it runs and adds its enhacements only if the Blocksy theme is installed and active.
-Version: 2.0.80
+Version: 2.0.81
 Author: CreativeThemes
 Author URI: https://creativethemes.com
 Text Domain: blocksy-companion
@@ -41,7 +41,11 @@ if ( function_exists( 'blc_fs' ) || class_exists( '\\Blocksy\\Plugin' ) ) {
             require_once dirname( __FILE__ ) . '/freemius/start.php';
             $has_account = true;
             $instance = \Freemius::instance( 5115, 'blocksy-companion', true );
-            if ( in_array( 'white-label', get_option( 'blocksy_active_extensions', [] ) ) && ($instance->is_plan( 'agency' ) || $instance->is_plan( 'agency_v2' )) ) {
+            $blocksy_active_extensions = get_option( 'blocksy_active_extensions', [] );
+            if ( !is_array( $blocksy_active_extensions ) ) {
+                $blocksy_active_extensions = [];
+            }
+            if ( in_array( 'white-label', $blocksy_active_extensions ) && ($instance->is_plan( 'agency' ) || $instance->is_plan( 'agency_v2' )) ) {
                 $settings = apply_filters( 'blocksy:ext:white-label:settings', get_option( 'blocksy_ext_white_label_settings', [] ) );
                 if ( $settings && isset( $settings['hide_billing_account'] ) && $settings['hide_billing_account'] ) {
                     $has_account = false;

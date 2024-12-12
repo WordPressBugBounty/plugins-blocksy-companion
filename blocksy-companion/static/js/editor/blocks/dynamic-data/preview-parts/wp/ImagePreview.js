@@ -50,14 +50,9 @@ const ImagePreview = ({
 		}),
 
 		style: {
-			aspectRatio,
 			width,
 			height,
 		},
-
-		...(image_hover_effect !== 'none'
-			? { 'data-hover': image_hover_effect }
-			: {}),
 	})
 
 	const [featuredImage, setFeaturedImage] = useEntityProp(
@@ -88,6 +83,7 @@ const ImagePreview = ({
 		height: aspectRatio ? '100%' : height,
 		width: !!aspectRatio && '100%',
 		objectFit: imageFit,
+		aspectRatio,
 	}
 
 	if (!maybeUrl || !postId) {
@@ -96,21 +92,16 @@ const ImagePreview = ({
 				<div
 					className="ct-dynamic-data-placeholder"
 					style={{
-						...imageStyles,
+						aspectRatio,
 					}}>
 					<svg
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 60 60"
 						preserveAspectRatio="none"
-						className="components-placeholder__illustration"
+						className="ct-dynamic-data-placeholder-illustration"
 						aria-hidden="true"
-						focusable="false"
-						style={{
-							minHeight: '200px',
-							height: !!aspectRatio && '100%',
-							width: !!aspectRatio && '100%',
-						}}>
+						focusable="false">
 						<path
 							vectorEffect="non-scaling-stroke"
 							d="M60 60 0 0"></path>
@@ -120,11 +111,15 @@ const ImagePreview = ({
 		)
 	}
 
+	const hasInnerContent =
+		(media.has_video && videoThumbnail === 'yes') ||
+		image_hover_effect !== 'none'
+
 	let content = (
 		<img
-			className={borderProps.className}
+			className={!hasInnerContent ? borderProps.className : ''}
 			style={{
-				...borderProps.style,
+				...(!hasInnerContent ? borderProps.style : {}),
 				...imageStyles,
 			}}
 			src={maybeUrl}
@@ -132,6 +127,23 @@ const ImagePreview = ({
 			loading="lazy"
 		/>
 	)
+
+	if (hasInnerContent) {
+		content = (
+			<span
+				data-hover={image_hover_effect}
+				className={`ct-dynamic-media-inner ${borderProps.className}`}
+				style={{
+					...borderProps.style,
+				}}>
+				{content}
+
+				{media.has_video && videoThumbnail === 'yes' ? (
+					<VideoIndicator />
+				) : null}
+			</span>
+		)
+	}
 
 	if (
 		has_field_link &&
@@ -142,15 +154,7 @@ const ImagePreview = ({
 		content = <a href="#">{content}</a>
 	}
 
-	return (
-		<figure {...blockProps}>
-			{content}
-
-			{media.has_video && videoThumbnail === 'yes' ? (
-				<VideoIndicator />
-			) : null}
-		</figure>
-	)
+	return <figure {...blockProps}>{content}</figure>
 }
 
 export default ImagePreview
