@@ -1,17 +1,15 @@
 import { createElement, useState } from '@wordpress/element'
 import {
 	useBlockProps,
+	useInnerBlocksProps,
 	__experimentalUseBorderProps as useBorderProps,
 } from '@wordpress/block-editor'
 
 import classnames from 'classnames'
+import CoverPreview from './CoverPreview'
+import { getPositionClassName } from '../../utils'
 
-import { useSelect } from '@wordpress/data'
-import { useEntityProp, store as coreStore } from '@wordpress/core-data'
-
-function getMediaSourceUrlBySizeSlug(media, slug) {
-	return media?.media_details?.sizes?.[slug]?.source_url || media?.source_url
-}
+import { useBlockSupportsCustom } from '../../hooks/use-block-supports-custom'
 
 const VideoIndicator = () => (
 	<span className="ct-video-indicator">
@@ -24,7 +22,8 @@ const VideoIndicator = () => (
 )
 
 const ImagePreview = ({
-	postType,
+	media,
+	url,
 	postId,
 
 	attributes,
@@ -35,9 +34,14 @@ const ImagePreview = ({
 		height,
 		imageAlign,
 		has_field_link,
-		sizeSlug,
 		image_hover_effect,
 		videoThumbnail,
+		minimumHeight,
+		contentPosition,
+
+		// cover
+		viewType,
+		hasParallax,
 	},
 }) => {
 	const [isLoaded, setIsLoaded] = useState(false)
@@ -47,6 +51,12 @@ const ImagePreview = ({
 	const blockProps = useBlockProps({
 		className: classnames('ct-dynamic-media', {
 			[`align${imageAlign}`]: imageAlign,
+			'wp-block-cover': viewType === 'cover',
+			'has-parallax': viewType === 'cover' && hasParallax,
+			[getPositionClassName(contentPosition)]:
+				viewType === 'cover' && contentPosition,
+			'has-custom-content-position':
+				viewType === 'cover' && contentPosition,
 		}),
 
 		style: {
@@ -55,29 +65,15 @@ const ImagePreview = ({
 		},
 	})
 
-	const [featuredImage, setFeaturedImage] = useEntityProp(
-		'postType',
-		postType,
-		'featured_media',
-		postId
-	)
+	const uniqueClass = blockProps.className
+		.split(' ')
+		.find((c) => c.startsWith('wp-elements-'))
 
-	const { media } = useSelect(
-		(select) => {
-			const { getMedia } = select(coreStore)
-
-			return {
-				media:
-					featuredImage &&
-					getMedia(featuredImage, {
-						context: 'view',
-					}),
-			}
-		},
-		[featuredImage]
-	)
-
-	const maybeUrl = getMediaSourceUrlBySizeSlug(media, sizeSlug)
+	const previewData = useBlockSupportsCustom({
+		fieldType: 'image',
+		attributes,
+		uniqueClass,
+	})
 
 	const imageStyles = {
 		height: aspectRatio ? '100%' : height,
@@ -85,35 +81,84 @@ const ImagePreview = ({
 		objectFit: imageFit,
 		aspectRatio,
 	}
+	const {
+		allowCustomContentAndWideSize: isBoxedLayout,
+		contentSize,
+		wideSize,
+	} = attributes
+	const innerBlocksProps = useInnerBlocksProps(
+		{
+			className: classnames('wp-block-cover__inner-container', {
+				'is-layout-constrained': isBoxedLayout,
+				'wp-block-cover-is-layout-constrained': isBoxedLayout,
 
-	if (!maybeUrl || !postId) {
-		return (
-			<figure {...blockProps}>
-				<div
-					className="ct-dynamic-data-placeholder"
-					style={{
-						aspectRatio,
-					}}>
-					<svg
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 60 60"
-						preserveAspectRatio="none"
-						className="ct-dynamic-data-placeholder-illustration"
-						aria-hidden="true"
-						focusable="false">
-						<path
-							vectorEffect="non-scaling-stroke"
-							d="M60 60 0 0"></path>
-					</svg>
-				</div>
-			</figure>
-		)
-	}
+				'is-layout-flow': !isBoxedLayout,
+				'wp-block-cover-is-layout-flow': !isBoxedLayout,
+			}),
+		},
+		{
+			template: [
+				[
+					'core/paragraph',
+					{
+						align: 'center',
+						placeholder: 'Add text…',
+					},
+				],
+			],
+			templateInsertUpdatesSelection: false,
+		}
+	)
 
 	const hasInnerContent =
-		(media.has_video && videoThumbnail === 'yes') ||
+		(media?.has_video && videoThumbnail === 'yes') ||
 		image_hover_effect !== 'none'
+
+	if (viewType === 'cover') {
+		return (
+			<div
+				{...blockProps}
+				style={{
+					...(blockProps.style || {}),
+					...(borderProps.style || {}),
+
+					aspectRatio,
+					minHeight: minimumHeight,
+				}}
+				className={classnames(
+					blockProps.className,
+					borderProps.className,
+					previewData.className
+				)}>
+				<style>
+					{`
+							${
+								contentSize
+									? `#${blockProps.id} > .wp-block-cover__inner-container > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+										max-width: ${contentSize};
+									}`
+									: ''
+							}
+
+							${
+								wideSize
+									? `#${blockProps.id} > .wp-block-cover__inner-container > .alignwide {
+											max-width: ${wideSize};
+										}`
+									: ''
+							}
+						`}
+
+					{previewData.css}
+				</style>
+
+				<CoverPreview attributes={attributes} url={url} />
+				<span aria-hidden="true" class={`wp-block-cover__background`} />
+
+				<div {...innerBlocksProps} />
+			</div>
+		)
+	}
 
 	let content = (
 		<img
@@ -122,11 +167,37 @@ const ImagePreview = ({
 				...(!hasInnerContent ? borderProps.style : {}),
 				...imageStyles,
 			}}
-			src={maybeUrl}
+			src={url}
 			onLoad={() => setIsLoaded(true)}
 			loading="lazy"
 		/>
 	)
+
+	if (!url || !postId) {
+		content = (
+			<div
+				className={classnames('ct-dynamic-data-placeholder', {
+					[borderProps.className]: !hasInnerContent,
+				})}
+				style={{
+					...(!hasInnerContent ? borderProps.style : {}),
+					...imageStyles,
+				}}>
+				<svg
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 60 60"
+					preserveAspectRatio="none"
+					className="ct-dynamic-data-placeholder-illustration"
+					aria-hidden="true"
+					focusable="false">
+					<path
+						vectorEffect="non-scaling-stroke"
+						d="M60 60 0 0"></path>
+				</svg>
+			</div>
+		)
+	}
 
 	if (hasInnerContent) {
 		content = (
@@ -138,7 +209,7 @@ const ImagePreview = ({
 				}}>
 				{content}
 
-				{media.has_video && videoThumbnail === 'yes' ? (
+				{media?.has_video && videoThumbnail === 'yes' ? (
 					<VideoIndicator />
 				) : null}
 			</span>
@@ -146,15 +217,23 @@ const ImagePreview = ({
 	}
 
 	if (
-		has_field_link &&
-		!media.has_video &&
+		has_field_link === 'yes' &&
+		!media?.has_video &&
 		videoThumbnail !== 'yes' &&
 		!isLoaded
 	) {
 		content = <a href="#">{content}</a>
 	}
 
-	return <figure {...blockProps}>{content}</figure>
+	return (
+		<figure {...blockProps}>
+			{content}
+
+			{media?.has_video && videoThumbnail === 'yes' ? (
+				<VideoIndicator />
+			) : null}
+		</figure>
+	)
 }
 
 export default ImagePreview

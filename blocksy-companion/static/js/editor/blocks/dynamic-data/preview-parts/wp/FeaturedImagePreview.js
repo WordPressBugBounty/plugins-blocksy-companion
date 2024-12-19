@@ -1,23 +1,26 @@
 import { createElement } from '@wordpress/element'
+
 import { useSelect } from '@wordpress/data'
-import { store as coreStore } from '@wordpress/core-data'
+import { useEntityProp, store as coreStore } from '@wordpress/core-data'
 import ImagePreview from './ImagePreview'
 
 function getMediaSourceUrlBySizeSlug(media, slug) {
 	return media?.media_details?.sizes?.[slug]?.source_url || media?.source_url
 }
 
-const TermImagePreview = ({
-	termImage,
-	termIcon,
+const FeaturedImagePreview = ({
+	postType,
+	postId,
 
 	attributes,
-	attributes: { sizeSlug, imageSource },
+	attributes: { sizeSlug },
 }) => {
-	const maybeImageId =
-		imageSource === 'icon'
-			? termIcon?.attachment_id
-			: termImage?.attachment_id
+	const [featuredImage, setFeaturedImage] = useEntityProp(
+		'postType',
+		postType,
+		'featured_media',
+		postId
+	)
 
 	const { media } = useSelect(
 		(select) => {
@@ -25,18 +28,25 @@ const TermImagePreview = ({
 
 			return {
 				media:
-					maybeImageId &&
-					getMedia(maybeImageId, {
+					featuredImage &&
+					getMedia(featuredImage, {
 						context: 'view',
 					}),
 			}
 		},
-		[maybeImageId]
+		[featuredImage]
 	)
 
 	const maybeUrl = getMediaSourceUrlBySizeSlug(media, sizeSlug)
 
-	return <ImagePreview attributes={attributes} url={maybeUrl} postId />
+	return (
+		<ImagePreview
+			postId={postId}
+			attributes={attributes}
+			url={maybeUrl}
+			media={media}
+		/>
+	)
 }
 
-export default TermImagePreview
+export default FeaturedImagePreview

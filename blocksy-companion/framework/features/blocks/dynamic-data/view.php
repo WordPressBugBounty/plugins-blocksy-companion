@@ -26,7 +26,8 @@ if (strpos($field, 'wp:') === 0) {
 			dirname(__FILE__) . '/views/wp-field.php',
 			[
 				'attributes' => $attributes,
-				'field' => $field
+				'field' => $field,
+				'block' => $block
 			]
 		);
 	}
@@ -40,6 +41,7 @@ if (strpos($field, 'wp:') === 0) {
 				[
 					'attributes' => $attributes,
 					'field' => $field,
+					'content' => $content,
 					'term_id' => $blocksy_term_obj->term_id,
 				]
 			);
@@ -51,7 +53,8 @@ if (strpos($field, 'wp:') === 0) {
 			dirname(__FILE__) . '/views/archive-image-field.php',
 			[
 				'attributes' => $attributes,
-				'field' => $field
+				'field' => $field,
+				'content' => $content
 			]
 		);
 	}
@@ -61,7 +64,10 @@ if (strpos($field, 'wp:') === 0) {
 			dirname(__FILE__) . '/views/image-field.php',
 			[
 				'attributes' => $attributes,
-				'field' => $field
+				'field' => $field,
+				'content' => $content,
+				'attachment_id' => get_post_thumbnail_id(),
+				'url' => get_permalink()
 			]
 		);
 	}
@@ -118,7 +124,8 @@ if (
 		[
 			'attributes' => $attributes,
 			'field' => $field,
-			'value' => $field_render['value']['value']
+			// 'value' => $field_render['value']['value'],
+			'attachment_id' => $field_render['value']['value']['id']
 		]
 	);
 

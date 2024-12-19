@@ -13,26 +13,21 @@ import {
 	__experimentalToggleGroupControlOption as ToggleGroupControlOption,
 } from '@wordpress/components'
 import { useSetting } from '@wordpress/block-editor'
-import { useSelect } from '@wordpress/data'
-
-import { store as blockEditorStore } from '@wordpress/block-editor'
-
-const DEFAULT_SIZE = 'full'
+import Resolution from './Resolution'
 
 const DimensionControls = ({
 	clientId,
-	attributes: { aspectRatio, imageFit, width, height, sizeSlug },
+	attributes: {
+		aspectRatio,
+		imageFit,
+		width,
+		height,
+		sizeSlug,
+		viewType,
+		minimumHeight,
+	},
 	setAttributes,
 }) => {
-	const imageSizes = useSelect(
-		(select) => select(blockEditorStore).getSettings().imageSizes,
-		[]
-	)
-	const imageSizeOptions = imageSizes.map(({ name, slug }) => ({
-		value: slug,
-		label: name,
-	}))
-
 	const defaultUnits = ['px', '%', 'vw', 'em', 'rem']
 	const units = useCustomUnits({
 		availableUnits: useSetting('spacing.units') || defaultUnits,
@@ -54,13 +49,18 @@ const DimensionControls = ({
 
 	return (
 		<ToolsPanel
-			label={__('Image Settings', 'blocksy-companion')}
+			label={
+				viewType === 'cover'
+					? __('Block Settings', 'blocksy-companion')
+					: __('Image Settings', 'blocksy-companion')
+			}
 			resetAll={() => {
 				setAttributes({
 					aspectRatio: 'auto',
 					width: undefined,
 					height: undefined,
 					sizeSlug: undefined,
+					minimumHeight: undefined,
 				})
 			}}>
 			<ToolsPanelItem
@@ -117,107 +117,123 @@ const DimensionControls = ({
 				/>
 			</ToolsPanelItem>
 
-			<ToolsPanelItem
-				style={{
-					'grid-column': 'span 1 / auto',
-				}}
-				hasValue={() => !!width}
-				label={__('Width', 'blocksy-companion')}
-				onDeselect={() => setAttributes({ width: undefined })}
-				resetAllFilter={() => ({
-					width: undefined,
-				})}
-				isShownByDefault
-				key={clientId}>
-				<UnitControl
-					label={__('Width', 'blocksy-companion')}
-					labelPosition="top"
-					value={width || ''}
-					min={0}
-					onChange={(nextWidth) =>
-						onDimensionChange('width', nextWidth)
-					}
-					units={units}
-				/>
-			</ToolsPanelItem>
+			{viewType !== 'cover' ? (
+				<>
+					<ToolsPanelItem
+						style={{
+							'grid-column': 'span 1 / auto',
+						}}
+						hasValue={() => !!width}
+						label={__('Width', 'blocksy-companion')}
+						onDeselect={() => setAttributes({ width: undefined })}
+						resetAllFilter={() => ({
+							width: undefined,
+						})}
+						isShownByDefault
+						key={clientId}>
+						<UnitControl
+							label={__('Width', 'blocksy-companion')}
+							labelPosition="top"
+							value={width || ''}
+							min={0}
+							onChange={(nextWidth) =>
+								onDimensionChange('width', nextWidth)
+							}
+							units={units}
+						/>
+					</ToolsPanelItem>
 
-			<ToolsPanelItem
-				style={{
-					'grid-column': 'span 1 / auto',
-				}}
-				hasValue={() => !!height}
-				label={__('Height', 'blocksy-companion')}
-				onDeselect={() => setAttributes({ height: undefined })}
-				resetAllFilter={() => ({
-					height: undefined,
-				})}
-				isShownByDefault
-				key={clientId}>
-				<UnitControl
-					label={__('Height', 'blocksy-companion')}
-					labelPosition="top"
-					value={height || ''}
-					min={0}
-					onChange={(nextHeight) =>
-						onDimensionChange('height', nextHeight)
-					}
-					units={units}
-				/>
-			</ToolsPanelItem>
+					<ToolsPanelItem
+						style={{
+							'grid-column': 'span 1 / auto',
+						}}
+						hasValue={() => !!height}
+						label={__('Height', 'blocksy-companion')}
+						onDeselect={() => setAttributes({ height: undefined })}
+						resetAllFilter={() => ({
+							height: undefined,
+						})}
+						isShownByDefault
+						key={clientId}>
+						<UnitControl
+							label={__('Height', 'blocksy-companion')}
+							labelPosition="top"
+							value={height || ''}
+							min={0}
+							onChange={(nextHeight) =>
+								onDimensionChange('height', nextHeight)
+							}
+							units={units}
+						/>
+					</ToolsPanelItem>
 
-			<ToolsPanelItem
-				hasValue={() => !!imageFit}
-				label={__('Scale', 'blocksy-companion')}
-				onDeselect={() => setAttributes({ imageFit: undefined })}
-				resetAllFilter={() => ({
-					imageFit: 'cover',
-				})}
-				isShownByDefault
-				key={clientId}>
-				<ToggleGroupControl
-					label={__('Scale', 'blocksy-companion')}
-					value={imageFit}
-					isBlock
-					onChange={(nextImageFir) =>
-						setAttributes({ imageFit: nextImageFir })
-					}>
-					<ToggleGroupControlOption
-						key="cover"
-						value="cover"
-						label={__('Cover', 'blocksy-companion')}
-					/>
-					<ToggleGroupControlOption
-						key="contain"
-						value="contain"
-						label={__('Contain', 'blocksy-companion')}
-					/>
-				</ToggleGroupControl>
-			</ToolsPanelItem>
-
-			{!!imageSizeOptions.length && (
-				<ToolsPanelItem
-					hasValue={() => !!sizeSlug}
-					label={__('Resolution', 'blocksy-companion')}
-					onDeselect={() => setAttributes({ sizeSlug: undefined })}
-					resetAllFilter={() => ({
-						sizeSlug: undefined,
-					})}
-					isShownByDefault={false}
-					key={clientId}>
-					<SelectControl
-						__nextHasNoMarginBottom
-						label={__('Resolution', 'blocksy-companion')}
-						value={sizeSlug || DEFAULT_SIZE}
-						options={imageSizeOptions}
-						onChange={(nextSizeSlug) =>
-							setAttributes({ sizeSlug: nextSizeSlug })
+					<ToolsPanelItem
+						hasValue={() => !!imageFit}
+						label={__('Scale', 'blocksy-companion')}
+						onDeselect={() =>
+							setAttributes({ imageFit: undefined })
 						}
-						help={__(
-							'Select the size of the source image.',
-							'blocksy-companion'
-						)}
+						resetAllFilter={() => ({
+							imageFit: 'cover',
+						})}
+						isShownByDefault
+						key={clientId}>
+						<ToggleGroupControl
+							label={__('Scale', 'blocksy-companion')}
+							value={imageFit}
+							isBlock
+							onChange={(nextImageFir) =>
+								setAttributes({ imageFit: nextImageFir })
+							}>
+							<ToggleGroupControlOption
+								key="cover"
+								value="cover"
+								label={__('Cover', 'blocksy-companion')}
+							/>
+							<ToggleGroupControlOption
+								key="contain"
+								value="contain"
+								label={__('Contain', 'blocksy-companion')}
+							/>
+						</ToggleGroupControl>
+					</ToolsPanelItem>
+				</>
+			) : null}
+
+			{viewType === 'cover' ? (
+				<ToolsPanelItem
+					hasValue={() => !!minimumHeight}
+					label={__('Minimum height')}
+					onDeselect={() =>
+						setAttributes({
+							minimumHeight: undefined,
+						})
+					}
+					isShownByDefault>
+					<UnitControl
+						__next40pxDefaultSize
+						label={__('Minimum height')}
+						labelPosition="top"
+						value={minimumHeight || ''}
+						onChange={(nextHeight) => {
+							nextHeight =
+								0 > parseFloat(nextHeight) ? '0' : nextHeight
+							setAttributes({
+								minimumHeight: nextHeight,
+								aspectRatio: 'auto',
+							})
+						}}
+						units={units}
 					/>
 				</ToolsPanelItem>
+			) : (
+				<Resolution
+					sizeSlug={sizeSlug}
+					onChange={(nextSizeSlug) =>
+						setAttributes({ sizeSlug: nextSizeSlug })
+					}
+					clientId={clientId}
+				/>
 			)}
 		</ToolsPanel>
 	)

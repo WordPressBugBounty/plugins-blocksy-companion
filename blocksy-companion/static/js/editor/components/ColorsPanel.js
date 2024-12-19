@@ -9,8 +9,31 @@ import {
 	__experimentalToolsPanel as ToolsPanel,
 } from '@wordpress/components'
 
-const ColorsPanel = ({ label, resetAll, panelId, settings }) => {
+const ColorsPanel = ({
+	label,
+	resetAll,
+	panelId,
+	settings,
+	skipToolsPanel = false,
+	containerProps = {},
+}) => {
 	const colorGradientSettings = useMultipleOriginColorsAndGradients()
+
+	if (skipToolsPanel) {
+		return (
+			<ColorGradientSettingsDropdown
+				__experimentalIsRenderedInSidebar
+				__experimentalHasMultipleOrigins
+				__experimentalGroup="bg"
+				settings={settings}
+				panelId={panelId}
+				{...colorGradientSettings}
+				gradients={[]}
+				disableCustomGradients={true}
+				{...containerProps}
+			/>
+		)
+	}
 
 	return (
 		<ToolsPanel
@@ -31,6 +54,7 @@ const ColorsPanel = ({ label, resetAll, panelId, settings }) => {
 					{...colorGradientSettings}
 					gradients={[]}
 					disableCustomGradients={true}
+					{...containerProps}
 				/>
 			</div>
 		</ToolsPanel>

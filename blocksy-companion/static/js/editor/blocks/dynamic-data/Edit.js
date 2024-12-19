@@ -1,4 +1,5 @@
-import { useEffect, useMemo, createElement } from '@wordpress/element'
+import { createElement, useEffect, useMemo } from '@wordpress/element'
+import { withColors } from '@wordpress/block-editor'
 import { __ } from 'ct-i18n'
 
 import Preview from './Preview'
@@ -18,6 +19,9 @@ const Edit = ({
 	setAttributes,
 
 	context,
+
+	name,
+	__unstableParentLayout,
 }) => {
 	const { postType, taxonomy } = context
 
@@ -91,6 +95,9 @@ const Edit = ({
 				clientId={clientId}
 				fieldsDescriptor={fieldsDescriptor}
 				taxonomies={taxonomies}
+				{...context}
+				name={name}
+				__unstableParentLayout={__unstableParentLayout}
 			/>
 		</>
 	)

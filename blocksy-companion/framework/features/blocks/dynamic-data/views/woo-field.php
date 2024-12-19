@@ -78,7 +78,7 @@ if (! empty($border_result['class'])) {
 }
 
 if (! empty($border_result['style'])) {
-	$wrapper_attr['style'] = $border_result['style'];
+	$wrapper_attr['style'] .= $border_result['style'];
 }
 
 $wrapper_attr = get_block_wrapper_attributes($wrapper_attr);

@@ -150,20 +150,25 @@ $options = [
 	blocksy_rand_md5() => [
 		'type' => 'ct-condition',
 		'condition' => [
-			'field' => implode('|', [
-				'wp:title',
-				'wp:date',
-				'wp:author',
-				'wp:terms',
-				'wp:comments',
+			'any' => [
+				'field' => implode('|', [
+					'wp:title',
+					'wp:date',
+					'wp:author',
+					'wp:terms',
+					'wp:comments',
 
-				'wp:term_title',
-				'wp:term_image',
-				'wp:term_count',
+					'wp:term_title',
+					'wp:term_image',
+					'wp:term_count',
 
-				'wp:author_avatar',
-				'wp:featured_image',
-			])
+					'wp:author_avatar',
+				]),
+				'all' => [
+					'viewType' => 'default',
+					'field' => 'wp:featured_image',
+				]
+			]
 		],
 		'options' => [
 			'has_field_link' => [

@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.81
+Stable tag: 2.0.82
 
 == Description ==
 
@@ -52,6 +52,9 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.82: 2024-12-20
+- Improvement: General fixes and improvements
+
 2.0.81: 2024-12-12
 - Improvement: Advanced Search block - Correctly handle scroll on iOS
 

@@ -39,6 +39,8 @@ const Preview = ({
 		after,
 		fallback,
 	},
+
+	colors,
 }) => {
 	if (fieldDescriptor.provider === 'woo') {
 		return (
@@ -47,6 +49,7 @@ const Preview = ({
 				attributes={attributes}
 				postId={postId}
 				postType={postType}
+				colors={colors}
 			/>
 		)
 	}
@@ -63,6 +66,7 @@ const Preview = ({
 				taxonomy={taxonomy}
 				termImage={termImage}
 				termIcon={termIcon}
+				colors={colors}
 			/>
 		)
 	}
@@ -73,6 +77,7 @@ const Preview = ({
 			attributes={attributes}
 			postId={postId}
 			postType={postType}
+			colors={colors}
 		/>
 	)
 }

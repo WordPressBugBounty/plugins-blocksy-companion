@@ -19,20 +19,34 @@ import RatingPreview from './woo/RatingPreview'
 import SkuPreview from './woo/SkuPreview'
 import BrandsPreview from './woo/BrandsPreview'
 
+import { useBlockSupportsCustom } from '../hooks/use-block-supports-custom'
+
 const TextField = ({
 	fieldDescriptor,
 	attributes,
 	attributes: { align, tagName: TagName, before, after, fallback },
 	postId,
 	postType,
+
+	colors,
 }) => {
-	const { product, isLoading, ...da } =
+	const { product, isLoading } =
 		wc.wcBlocksSharedContext.useProductDataContext()
 
 	const blockProps = useBlockProps({
 		className: classnames('ct-dynamic-data', {
 			[`has-text-align-${align}`]: align,
 		}),
+	})
+
+	const uniqueClass = blockProps.className
+		.split(' ')
+		.find((c) => c.startsWith('wp-elements-'))
+
+	const previewData = useBlockSupportsCustom({
+		fieldType: 'text',
+		attributes,
+		uniqueClass,
 	})
 
 	const borderProps = useBorderProps(attributes)
@@ -63,6 +77,12 @@ const TextField = ({
 		Component = SkuPreview
 	}
 
+	let css = ''
+
+	if (previewData.css) {
+		css += previewData.css
+	}
+
 	if (Component) {
 		return (
 			<TagName
@@ -71,11 +91,14 @@ const TextField = ({
 				style={{
 					...(blockProps.style || {}),
 					...(borderProps.style || {}),
+					...(previewData.style || {}),
 				}}
 				className={classnames(
 					blockProps.className,
-					borderProps.className
+					borderProps.className,
+					previewData.className
 				)}>
+				{css && <style>{css}</style>}
 				{before}
 
 				<Component

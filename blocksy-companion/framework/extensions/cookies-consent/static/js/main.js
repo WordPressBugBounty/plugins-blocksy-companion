@@ -133,6 +133,14 @@ const initCookies = () => {
 		return
 	}
 
+	const drawerCanvas = document.querySelector(
+		'.ct-drawer-canvas[data-location="start"]'
+	)
+
+	if (!drawerCanvas) {
+		return
+	}
+
 	const body = new FormData()
 	body.append('action', 'blc_load_cookies_consent_data')
 
@@ -143,10 +151,6 @@ const initCookies = () => {
 		.then((r) => r.json())
 		.then(({ data }) => {
 			cookiesData = data
-
-			const drawerCanvas = document.querySelector(
-				'.ct-drawer-canvas[data-location="start"]'
-			)
 
 			loadStyle(ct_localizations.dynamic_styles.cookie_notification).then(
 				() => {

@@ -132,9 +132,46 @@
 		"imageSource": {
 			"type": "string",
 			"default": "featured"
+		},
+
+		"viewType": {
+			"type": "string",
+			"default": "default"
+		},
+
+		"backgroundColor": {
+			"type": "string"
+		},
+
+		"textColor": {
+			"type": "string"
+		},
+
+		"dimRatio": {
+			"type": "number",
+			"default": 50
+		},
+
+		"style": {
+			"type": "object",
+			"default": {
+				"elements": {
+					"overlay": {
+						"color": {
+							"background": "#000000"
+						}
+					}
+				}
+			}
 		}
 	},
 	"supports": {
+		"color": {
+			"text": false,
+			"background": false,
+			"__experimentalSkipSerialization": ["link", "heading", "button"]
+		},
+
 		"className": false,
 		"spacing": {
 			"margin": true,
@@ -156,16 +193,6 @@
 			},
 			"__experimentalSelector": "img, .block-editor-media-placeholder, .wp-block-post-featured-image__overlay",
 			"__experimentalSkipSerialization": true
-		},
-
-		"color": {
-			"gradients": true,
-			"link": true,
-			"__experimentalDefaultControls": {
-				"text": true,
-				"background": true,
-				"link": true
-			}
 		},
 
 		"typography": {

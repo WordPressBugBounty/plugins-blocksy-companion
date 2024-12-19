@@ -5,8 +5,11 @@ import { registerBlockType } from '@wordpress/blocks'
 import Edit from './Edit'
 
 import metadata from './block.json'
+import coverMetadata from './cover.json'
 
 import { getAttributesFromOptions, getOptionsForBlock } from 'blocksy-options'
+import { InnerBlocks } from '@wordpress/block-editor'
+import { colorsDefaults } from './colors'
 
 export const options = getOptionsForBlock('dynamic-data')
 export const defaultAttributes = getAttributesFromOptions(options)
@@ -20,7 +23,9 @@ registerBlockType('blocksy/dynamic-data', {
 	),
 	attributes: {
 		...metadata.attributes,
+		...coverMetadata.attributes,
 		...defaultAttributes,
+		...colorsDefaults,
 	},
 	icon: {
 		src: (
@@ -30,7 +35,7 @@ registerBlockType('blocksy/dynamic-data', {
 		),
 	},
 	edit: (props) => <Edit {...props} />,
-	save: () => null,
+	save: () => <InnerBlocks.Content />,
 	__experimentalLabel: (attributes) => {
 		if (attributes.field === 'wp:title') {
 			return __('Dynamic Title', 'blocksy-companion')

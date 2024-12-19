@@ -1,4 +1,4 @@
-import { createElement } from '@wordpress/element'
+import { Fragment, createElement, useMemo } from '@wordpress/element'
 
 import {
 	useBlockProps,
@@ -6,6 +6,7 @@ import {
 } from '@wordpress/block-editor'
 
 import classnames from 'classnames'
+import { useSettings } from '@wordpress/block-editor'
 
 import { __ } from 'ct-i18n'
 
@@ -19,6 +20,9 @@ import ImagePreview from './wp/ImagePreview'
 import AvatarPreview from './wp/AvatarPreview'
 import TermTextPreview from './wp/TermTextPreview'
 import TermImagePreview from './wp/TermImagePreview'
+import FeaturedImagePreview from './wp/FeaturedImagePreview'
+
+import { useBlockSupportsCustom } from '../hooks/use-block-supports-custom'
 
 const TextField = ({
 	fieldDescriptor,
@@ -36,6 +40,16 @@ const TextField = ({
 		className: classnames('ct-dynamic-data', {
 			[`has-text-align-${align}`]: align,
 		}),
+	})
+
+	const uniqueClass = blockProps.className
+		.split(' ')
+		.find((c) => c.startsWith('wp-elements-'))
+
+	const previewData = useBlockSupportsCustom({
+		fieldType: 'text',
+		attributes,
+		uniqueClass,
 	})
 
 	const borderProps = useBorderProps(attributes)
@@ -82,36 +96,50 @@ const TextField = ({
 		Component = AuthorPreview
 	}
 
+	let css = ''
+
+	if (fieldsDescriptor && fieldsDescriptor.dynamic_styles) {
+		css = fieldsDescriptor.dynamic_styles
+	}
+
+	if (previewData.css) {
+		css += previewData.css
+	}
+
 	if (Component) {
 		return (
-			<TagName
-				{...blockProps}
-				{...borderProps}
-				style={{
-					...(blockProps.style || {}),
-					...(borderProps.style || {}),
-				}}
-				className={classnames(
-					blockProps.className,
-					borderProps.className
-				)}>
-				{fieldsDescriptor && fieldsDescriptor.dynamic_styles && (
-					<style>{fieldsDescriptor.dynamic_styles}</style>
-				)}
-				{before}
+			<Fragment>
+				<TagName
+					{...blockProps}
+					{...borderProps}
+					style={{
+						...(blockProps.style || {}),
+						...(borderProps.style || {}),
 
-				<Component
-					attributes={attributes}
-					postId={postId}
-					postType={postType}
-					termId={termId}
-					taxonomy={taxonomy}
-					fallback={fallback}
-					fieldsDescriptor={fieldsDescriptor}
-				/>
+						...(previewData.style || {}),
+					}}
+					className={classnames(
+						blockProps.className,
+						borderProps.className,
+						previewData.className
+					)}>
+					{css && <style>{css}</style>}
 
-				{after}
-			</TagName>
+					{before}
+
+					<Component
+						attributes={attributes}
+						postId={postId}
+						postType={postType}
+						termId={termId}
+						taxonomy={taxonomy}
+						fallback={fallback}
+						fieldsDescriptor={fieldsDescriptor}
+					/>
+
+					{after}
+				</TagName>
+			</Fragment>
 		)
 	}
 
@@ -122,7 +150,7 @@ const WpFieldPreview = (props) => {
 	const { fieldDescriptor } = props
 
 	if (fieldDescriptor.id === 'featured_image') {
-		return <ImagePreview {...props} />
+		return <FeaturedImagePreview {...props} />
 	}
 
 	if (fieldDescriptor.id === 'author_avatar') {

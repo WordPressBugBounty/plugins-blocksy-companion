@@ -6,6 +6,12 @@ $value = '';
 
 $has_fallback = false;
 
+$has_field_link = blocksy_akg('has_field_link', $attributes, 'no') === 'yes';
+
+
+
+// blocksy_print($style_attrs);
+
 if ($field === 'wp:archive_title') {
 	$archive_title_renderer = new \Blocksy\ArchiveTitleRenderer([
 		'has_label' => false
@@ -48,7 +54,7 @@ if ($field === 'wp:archive_description') {
 if ($field === 'wp:title') {
 	$value = get_the_title();
 
-	if (blocksy_akg('has_field_link', $attributes, 'no') === 'yes') {
+	if ($has_field_link) {
 		$link_attr = [
 			'href' => get_permalink()
 		];
@@ -75,7 +81,7 @@ if ($field === 'wp:term_title') {
 	if (! empty($blocksy_term_obj)) {
 		$value = $blocksy_term_obj->name;
 
-		if (blocksy_akg('has_field_link', $attributes, 'no') === 'yes') {
+		if ($has_field_link) {
 			$link_attr = [
 				'href' => get_term_link($blocksy_term_obj)
 			];
@@ -103,7 +109,7 @@ if ($field === 'wp:term_count') {
 	if (! empty($blocksy_term_obj)) {
 		$value = $blocksy_term_obj->count;
 
-		if (blocksy_akg('has_field_link', $attributes, 'no') === 'yes') {
+		if ($has_field_link) {
 			$link_attr = [
 				'href' => get_term_link($blocksy_term_obj)
 			];
@@ -168,7 +174,7 @@ if ($field === 'wp:date') {
 		$value = get_the_modified_date($date_format);
 	}
 
-	if (blocksy_akg('has_field_link', $attributes, 'no') === 'yes') {
+	if ($has_field_link) {
 		$link_attr = [
 			'href' => get_permalink()
 		];
@@ -196,7 +202,7 @@ if ($field === 'wp:comments') {
 		blocksy_akg('multiple_text', $attributes, __('% comments', 'blocksy-companion'))
 	);
 
-	if (blocksy_akg('has_field_link', $attributes, 'no') === 'yes') {
+	if ($has_field_link) {
 		$value = blocksy_html_tag(
 			'a',
 			array_merge(
@@ -260,7 +266,7 @@ if ($field === 'wp:author') {
 	if (
 		! empty($value)
 		&&
-		blocksy_akg('has_field_link', $attributes, 'no') === 'yes'
+		$has_field_link
 	) {
 		$value = blocksy_html_tag(
 			'a',
@@ -319,7 +325,7 @@ if ($field === 'wp:terms') {
 			&&
 			! is_wp_error($terms)
 		) {
-			$terms = array_map(function ($term) use ($taxonomy, $attributes) {
+			$terms = array_map(function ($term) use ($taxonomy, $attributes, $has_field_link) {
 				$tagName = 'span';
 
 				$attrs = [];
@@ -342,7 +348,7 @@ if ($field === 'wp:terms') {
 					$attrs['class'] = implode(' ', $classes);
 				}
 
-				if (blocksy_akg('has_field_link', $attributes, 'no') === 'yes') {
+				if ($has_field_link) {
 					$tagName = 'a';
 
 					$attrs['href'] = get_term_link($term, $taxonomy);
@@ -389,13 +395,16 @@ if (! empty($value_before) && ! $has_fallback) {
 
 $tagName = blocksy_akg('tagName', $attributes, 'div');
 
-$classes = ['ct-dynamic-data'];
+$classes = [
+	'ct-dynamic-data'
+];
 
 if (! empty($attributes['align'])) {
 	$classes[] = 'has-text-align-' . $attributes['align'];
 }
 
 $wrapper_attr['class'] = implode(' ', $classes);
+$wrapper_attr['style'] = '';
 
 $border_result = get_block_core_post_featured_image_border_attributes(
 	$attributes
@@ -406,8 +415,12 @@ if (! empty($border_result['class'])) {
 }
 
 if (! empty($border_result['style'])) {
-	$wrapper_attr['style'] = $border_result['style'];
+	$wrapper_attr['style'] .= $border_result['style'];
 }
+
+$block_type = WP_Block_Type_Registry::get_instance()->get_registered('blocksy/dynamic-data');
+$block_type->supports['color'] = true;
+wp_apply_colors_support($block_type, $attributes);
 
 $wrapper_attr = get_block_wrapper_attributes($wrapper_attr);
 

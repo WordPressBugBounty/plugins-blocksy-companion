@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-11-05 15:52:21+0000\n"
+"PO-Revision-Date: 2024-12-13 06:38:52+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -304,7 +304,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:27
 msgid "Enter your email"
-msgstr ""
+msgstr "Introduce tu correo electrónico"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:40
 msgid "Join Waitlist"
@@ -3505,11 +3505,11 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:666,
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:44
 msgid "Review Title"
-msgstr ""
+msgstr "Título de la reseña"
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:694
 msgid "Upload Image (Optional)"
-msgstr ""
+msgstr "Subir imagen (Opcional)"
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:11
 msgid "Reviews Order"
