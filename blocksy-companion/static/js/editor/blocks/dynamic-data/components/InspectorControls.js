@@ -1,7 +1,13 @@
 import { createElement } from '@wordpress/element'
 import { __ } from 'ct-i18n'
 
-import { InspectorControls } from '@wordpress/block-editor'
+import {
+	InspectorControls,
+	// __experimentalUseGradient,
+	useSettings,
+	getGradientValueBySlug,
+	getGradientSlugByValue,
+} from '@wordpress/block-editor'
 import {
 	RangeControl,
 	PanelBody,
@@ -15,8 +21,6 @@ import { fieldIsImageLike } from '../utils'
 import DimensionControls from './Dimensions'
 import { CoverImageEdit } from './CoverImageControls'
 import ColorsPanel from '../../../components/ColorsPanel'
-
-import { colors as defaultColors } from '../colors'
 
 import { getValueFromVariable } from '@wordpress/block-editor/src/components/global-styles/utils'
 
@@ -118,11 +122,15 @@ const DynamicDataInspectorControls = ({
 	)
 
 	const setOverlayColor = (newColor) => {
+		// if (!newColor) {
+		// 	return
+		// }
+
 		onChange(
 			setImmutably(
 				value,
 				['elements', 'overlay', 'color', 'background'],
-				encodeColorValue(newColor || '#000000')
+				encodeColorValue(newColor)
 			)
 		)
 	}
@@ -157,7 +165,16 @@ const DynamicDataInspectorControls = ({
 		)
 	}
 
+	const gradients = [
+		...(settings.color?.gradients?.custom ?? []),
+		...(settings.color?.gradients?.theme ?? []),
+		...(settings.color?.gradients?.default ?? []),
+	]
+
 	const backgroundColor = decodeValue(value?.color?.background)
+	const gradientValue =
+		attributes.customGradient ||
+		getGradientValueBySlug(gradients, attributes.gradient)
 
 	const setBackgroundColor = (newColor) => {
 		const newValue = setImmutably(
@@ -179,6 +196,31 @@ const DynamicDataInspectorControls = ({
 		)
 	}
 
+	const setOverlayAttribute = (attributeName, value) => {
+		setAttributes({
+			// Clear all related attributes (only one should be set)
+			overlayColor: undefined,
+			customOverlayColor: undefined,
+			gradient: undefined,
+			customGradient: undefined,
+			[attributeName]: value,
+		})
+	}
+
+	const onGradientChange = (value) => {
+		// Do nothing for falsy values.
+		if (!value) {
+			return
+		}
+		const slug = getGradientSlugByValue(gradients, value)
+
+		if (slug) {
+			setOverlayAttribute('gradient', slug)
+		} else {
+			setOverlayAttribute('customGradient', value)
+		}
+	}
+
 	const colorsPanelSettings =
 		attributes.viewType === 'default' || !fieldIsImageLike(fieldDescriptor)
 			? [
@@ -186,9 +228,7 @@ const DynamicDataInspectorControls = ({
 						colorValue: textColor,
 						label: __('Text', 'blocksy-companion'),
 						enableAlpha: true,
-						onColorChange: (value) => {
-							setTextColor(value)
-						},
+						onColorChange: setTextColor,
 					},
 
 					{
@@ -196,7 +236,7 @@ const DynamicDataInspectorControls = ({
 
 						label: __('Background', 'blocksy-companion'),
 						enableAlpha: true,
-						onColorChange: (value) => setBackgroundColor(value),
+						onColorChange: setBackgroundColor,
 					},
 
 					...(attributes.has_field_link === 'yes'
@@ -205,9 +245,7 @@ const DynamicDataInspectorControls = ({
 									colorValue: linkColor,
 									label: __('Link', 'blocksy-companion'),
 									enableAlpha: true,
-									onColorChange: (value) => {
-										setLinkColor(value)
-									},
+									onColorChange: setLinkColor,
 								},
 
 								{
@@ -217,8 +255,7 @@ const DynamicDataInspectorControls = ({
 										'blocksy-companion'
 									),
 									enableAlpha: true,
-									onColorChange: (value) =>
-										setHoverLinkColor(value),
+									onColorChange: setHoverLinkColor,
 								},
 						  ]
 						: []),
@@ -226,9 +263,12 @@ const DynamicDataInspectorControls = ({
 			: [
 					{
 						colorValue: overlayColor,
+						// gradientValue,
 						label: __('Overlay', 'blocksy-companion'),
 						enableAlpha: true,
-						onColorChange: (value) => setOverlayColor(value),
+						onColorChange: setOverlayColor,
+						// onGradientChange: onGradientChange,
+						isShownByDefault: true,
 					},
 			  ]
 

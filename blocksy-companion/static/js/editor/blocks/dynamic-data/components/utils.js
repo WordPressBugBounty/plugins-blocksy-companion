@@ -592,3 +592,28 @@ export const useElementCss = (
 		styles,
 	}
 }
+
+export function getDuotonePresetFromColors(colors, duotonePalette) {
+	if (!colors || !Array.isArray(colors)) {
+		return
+	}
+
+	const preset = duotonePalette?.find((duotonePreset) => {
+		return duotonePreset?.colors?.every(
+			(val, index) => val === colors[index]
+		)
+	})
+
+	return preset ? `var:preset|duotone|${preset.slug}` : undefined
+}
+
+export function getColorsFromDuotonePreset(duotone, duotonePalette) {
+	if (!duotone) {
+		return
+	}
+	const preset = duotonePalette?.find(({ slug }) => {
+		return duotone === `var:preset|duotone|${slug}`
+	})
+
+	return preset ? preset.colors : undefined
+}

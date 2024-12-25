@@ -95,10 +95,16 @@ if (
 		);
 	}
 
-	do_action('register_form');
-	if (function_exists('WC')) {
+	$registration_strategy = \Blocksy\Plugin::instance()->account_auth->get_registration_strategy();
+
+	if ($registration_strategy === 'woocommerce') {
 		do_action('woocommerce_register_form');
 	}
+
+	if ($registration_strategy === 'wp') {
+		do_action('register_form');
+	}
+
 	?>
 
 	<?php if (!\Blocksy\Plugin::instance()->account_auth->get_registration_strategy() === 'woocommerce') { ?>
@@ -151,7 +157,7 @@ if (
 
 	<?php do_action('blocksy:account:modal:register:end'); ?>
 	<?php
-		if (function_exists('WC')) {
+		if ($registration_strategy === 'woocommerce') {
 			do_action('woocommerce_register_form_end');
 		}
 	?>

@@ -56,8 +56,6 @@ export const useBlockSupportsCustom = ({
 
 		const hasBackgroundValue = backgroundColor || style?.color?.background
 
-		console.log('here', { elementCssData })
-
 		return {
 			className: classnames(textClass, elementCssData.className, {
 				[backgroundClass]: !!backgroundClass,

@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.82
+Stable tag: 2.0.83
 
 == Description ==
 
@@ -52,6 +52,12 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.83: 2024-12-25
+- Improvement: Account modal header element - better integration with MailPoet plugin
+- Improvement: Advanced Taxonomy block - smarter check for layout type
+- Improvement: Dynamic data block - featured image cover type improvements
+- Improvement: Standalone Gutenberg plugin breaks Advanced Posts block grid layout
+
 2.0.82: 2024-12-20
 - Improvement: General fixes and improvements
 

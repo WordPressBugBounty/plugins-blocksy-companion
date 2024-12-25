@@ -27,10 +27,10 @@ const ColorsPanel = ({
 				__experimentalGroup="bg"
 				settings={settings}
 				panelId={panelId}
-				{...colorGradientSettings}
-				gradients={[]}
+				// gradients={[]}
 				disableCustomGradients={true}
 				{...containerProps}
+				{...colorGradientSettings}
 			/>
 		)
 	}
@@ -51,10 +51,10 @@ const ColorsPanel = ({
 					__experimentalGroup="bg"
 					settings={settings}
 					panelId={panelId}
-					{...colorGradientSettings}
-					gradients={[]}
+					// gradients={[]}
 					disableCustomGradients={true}
 					{...containerProps}
+					{...colorGradientSettings}
 				/>
 			</div>
 		</ToolsPanel>

@@ -104,7 +104,7 @@ $loggedin_label = blocksy_expand_responsive_value(
 $loggedin_label = do_shortcode(
 	blocksy_translate_dynamic(
 		$loggedin_label,
-		'header:' . $section_id . ':' . $item_id . ':loggedin_label'
+		$panel_type . ':' . $section_id . ':' . $item_id . ':loggedin_label'
 	)
 );
 
@@ -200,6 +200,13 @@ if ($loggedin_interaction_type === 'dropdown') {
 			continue;
 		}
 
+		if (isset($dropdown_row['label'])) {
+			$dropdown_row['label'] = blocksy_translate_dynamic(
+				$dropdown_row['label'],
+				$panel_type . ':' . $section_id . ':account:dropdown_items:' . $dropdown_row['id'] . ':label'
+			);
+		}
+
 		if ($dropdown_row['id'] === 'user_info') {
 			$user = wp_get_current_user();
 			$user_fistname = '';
@@ -246,14 +253,14 @@ if ($loggedin_interaction_type === 'dropdown') {
 				$message = blocksy_akg('account_user_info_additional_fields', $dropdown_row, '{user_email}');
 				$message = str_replace('{user_email}', $user->user_email, $message);
 				$message = str_replace('{user_name}', $user->display_name, $message);
-				
+
 				$user_role = '';
 
 				if (! empty($user->roles)) {
 					$user_role = reset($user->roles);
 
 					global $wp_roles;
-					$all_roles = $wp_roles->roles; 
+					$all_roles = $wp_roles->roles;
 
 					if (isset($all_roles[$user_role])) {
 						$user_role = $all_roles[$user_role]['name'];
@@ -578,12 +585,12 @@ if ($loggedin_interaction_type === 'dropdown') {
 						'attr' => [
 							'class' => 'menu-item'
 						],
-	
+
 						'link' => $url,
 						'link_attr' => [
 							'class' => 'ct-menu-link'
 						],
-	
+
 						'html' => do_shortcode(
 							blocksy_default_akg(
 								'label',

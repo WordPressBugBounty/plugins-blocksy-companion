@@ -1,8 +1,11 @@
-import { createElement, useState } from '@wordpress/element'
+import { createElement } from '@wordpress/element'
 import {
 	useBlockProps,
 	useInnerBlocksProps,
 	__experimentalUseBorderProps as useBorderProps,
+	useSettings,
+	getGradientValueBySlug,
+	__experimentalGetGradientClass,
 } from '@wordpress/block-editor'
 
 import classnames from 'classnames'
@@ -33,7 +36,7 @@ const ImagePreview = ({
 		width,
 		height,
 		imageAlign,
-		has_field_link,
+		// has_field_link,
 		image_hover_effect,
 		videoThumbnail,
 		minimumHeight,
@@ -42,11 +45,18 @@ const ImagePreview = ({
 		// cover
 		viewType,
 		hasParallax,
+
+		gradient,
+		customGradient,
 	},
 }) => {
-	const [isLoaded, setIsLoaded] = useState(false)
-
 	const borderProps = useBorderProps(attributes)
+
+	const [gradients] = useSettings('color.gradients', 'color.customGradient')
+	const gradientValue =
+		customGradient || getGradientValueBySlug(gradients, gradient)
+
+	const gradientClass = __experimentalGetGradientClass(gradient)
 
 	const blockProps = useBlockProps({
 		className: classnames('ct-dynamic-media', {
@@ -86,6 +96,7 @@ const ImagePreview = ({
 		contentSize,
 		wideSize,
 	} = attributes
+
 	const innerBlocksProps = useInnerBlocksProps(
 		{
 			className: classnames('wp-block-cover__inner-container', {
@@ -122,8 +133,10 @@ const ImagePreview = ({
 					...(blockProps.style || {}),
 					...(borderProps.style || {}),
 
-					aspectRatio,
-					minHeight: minimumHeight,
+					...(aspectRatio !== 'auto' ? { aspectRatio } : {}),
+					minHeight:
+						minimumHeight ||
+						(aspectRatio !== 'auto' ? 'unset' : undefined),
 				}}
 				className={classnames(
 					blockProps.className,
@@ -153,7 +166,17 @@ const ImagePreview = ({
 				</style>
 
 				<CoverPreview attributes={attributes} url={url} />
-				<span aria-hidden="true" class={`wp-block-cover__background`} />
+				<span
+					aria-hidden="true"
+					className={classnames('wp-block-cover__background', {
+						'wp-block-cover__gradient-background': !!gradientValue,
+						'has-background-gradient': !!gradientValue,
+						[gradientClass]: !!gradientClass,
+					})}
+					style={{
+						background: gradientValue,
+					}}
+				/>
 
 				<div {...innerBlocksProps} />
 			</div>
@@ -168,7 +191,6 @@ const ImagePreview = ({
 				...imageStyles,
 			}}
 			src={url}
-			onLoad={() => setIsLoaded(true)}
 			loading="lazy"
 		/>
 	)
@@ -214,15 +236,6 @@ const ImagePreview = ({
 				) : null}
 			</span>
 		)
-	}
-
-	if (
-		has_field_link === 'yes' &&
-		!media?.has_video &&
-		videoThumbnail !== 'yes' &&
-		!isLoaded
-	) {
-		content = <a href="#">{content}</a>
 	}
 
 	return (

@@ -92,7 +92,7 @@ class TaxQuery {
 				$context = $instance->context;
 
 				$is_slideshow_layout = $context['has_slideshow'] === 'yes';
-				$layout = blocksy_akg('type', $block['attrs']['layout'], 'default');
+				$layout = blocksy_akg('layout/type', $block['attrs'], 'default');
 				$is_grid_layout = $layout === 'grid';
 
 				$processor->next_tag('div');
@@ -149,7 +149,7 @@ class TaxQuery {
 					'mobile' => 1
 				];
 
-				$desktopColumns = blocksy_akg('columnCount', $block['attrs']['layout'], '3');
+				$desktopColumns = blocksy_akg('layout/columnCount', $block['attrs'], '3');
 				$tabletColumns = blocksy_akg('tabletColumns', $block['attrs'], '2');
 				$mobileColumns = blocksy_akg('mobileColumns', $block['attrs'], '1');
 
@@ -229,22 +229,25 @@ class TaxQuery {
 					'columns' => $columns
 				]);
 
-				wp_style_engine_get_stylesheet_from_css_rules(
-					array_merge(
-						$css->get_wp_style_engine_rules([
-							'device' => 'desktop'
-						]),
-						$tablet_css->get_wp_style_engine_rules([
-							'device' => 'tablet'
-						]),
-						$mobile_css->get_wp_style_engine_rules([
-							'device' => 'mobile'
-						])
-					),
+				blc_call_gutenberg_function(
+					'wp_style_engine_get_stylesheet_from_css_rules',
 					[
-						'context'  => 'block-supports',
-						'prettify' => false,
-						'optimize' => true
+						array_merge(
+							$css->get_wp_style_engine_rules([
+								'device' => 'desktop'
+							]),
+							$tablet_css->get_wp_style_engine_rules([
+								'device' => 'tablet'
+							]),
+							$mobile_css->get_wp_style_engine_rules([
+								'device' => 'mobile'
+							])
+						),
+						[
+							'context'  => 'block-supports',
+							'prettify' => false,
+							'optimize' => true
+						]
 					]
 				);
 
@@ -403,6 +406,7 @@ class TaxQuery {
 					'tax-layout-2',
 					'tax-layout-3',
 					'tax-layout-4',
+					'tax-layout-5',
 				];
 
 				foreach ($tax_block_patterns as $tax_block_pattern) {

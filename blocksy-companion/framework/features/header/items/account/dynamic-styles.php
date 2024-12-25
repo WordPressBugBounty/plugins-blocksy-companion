@@ -842,12 +842,8 @@ if ($loggedin_interaction_type === 'dropdown') {
 		'property' => 'theme-border-radius',
 		'value' => blocksy_default_akg(
 			'header_account_dropdown_radius', $atts,
-			blocksy_spacing_value([
-				'top' => '2px',
-				'left' => '2px',
-				'right' => '2px',
-				'bottom' => '2px',
-			])
-		)
+			blocksy_spacing_value()
+		),
+		'empty_value' => 2,
 	]);
 }

@@ -1,5 +1,21 @@
 <?php
 
+function blc_call_gutenberg_function($original_function_name, $args = []) {
+	$gutenberg_function_name = str_replace(
+		'wp_',
+		'gutenberg_',
+		$original_function_name
+	);
+
+	$function_to_call = $original_function_name;
+
+	if (function_exists($gutenberg_function_name)) {
+		$function_to_call = $gutenberg_function_name;
+	}
+
+	return call_user_func_array($function_to_call, $args);
+}
+
 function blc_get_version() {
 	if (! function_exists('get_plugin_data')) {
 		require_once(ABSPATH . 'wp-admin/includes/plugin.php');

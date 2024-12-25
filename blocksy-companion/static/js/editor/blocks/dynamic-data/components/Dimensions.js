@@ -112,7 +112,10 @@ const DimensionControls = ({
 						},
 					]}
 					onChange={(nextAspectRatio) =>
-						setAttributes({ aspectRatio: nextAspectRatio })
+						setAttributes({
+							aspectRatio: nextAspectRatio,
+							minimumHeight: undefined,
+						})
 					}
 				/>
 			</ToolsPanelItem>

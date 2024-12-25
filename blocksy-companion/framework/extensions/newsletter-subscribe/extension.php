@@ -209,6 +209,8 @@ class BlocksyExtensionNewsletterSubscribe {
 				'email_label' => __('Your email', 'blocksy-companion'),
 				'list_id' => '',
 				'class' => '',
+
+				'container_style' => 'default',
 			]);
 
 			$args['class'] =

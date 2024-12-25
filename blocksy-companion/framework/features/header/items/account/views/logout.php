@@ -7,7 +7,7 @@ $login_label = do_shortcode(
 			$atts,
 			__('Login', 'blocksy-companion')
 		),
-		'header:' . $section_id . ':' . $item_id . ':login_label'
+		$panel_type . ':' . $section_id . ':' . $item_id . ':login_label'
 	)
 );
 

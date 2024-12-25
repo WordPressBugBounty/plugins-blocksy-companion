@@ -543,6 +543,7 @@ ctEvents.on(
 					),
 					type: 'spacing',
 					variable: 'theme-border-radius',
+					emptyValue: 2,
 					responsive: true,
 				},
 			}

@@ -74,7 +74,9 @@ echo blocksy_render_view(
 		'icon' => $icon,
 		'device' => $device,
 		'current_user_id' => $current_user_id,
-		'section_id' => $section_id,
-		'item_id' => $item_id
+		'item_id' => $item_id,
+
+		'panel_type' => $panel_type,
+		'section_id' => $section_id
 	]
 );

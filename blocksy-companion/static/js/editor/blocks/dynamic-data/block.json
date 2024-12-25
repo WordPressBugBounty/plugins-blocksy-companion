@@ -169,7 +169,12 @@
 		"color": {
 			"text": false,
 			"background": false,
-			"__experimentalSkipSerialization": ["link", "heading", "button"]
+			"__experimentalSkipSerialization": [
+				"link",
+				"heading",
+				"button",
+				"gradients"
+			]
 		},
 
 		"className": false,

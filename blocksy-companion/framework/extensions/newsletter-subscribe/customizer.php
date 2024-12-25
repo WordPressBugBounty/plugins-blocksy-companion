@@ -409,12 +409,11 @@ $options = [
 					'type' => 'ct-spacing',
 					'divider' => 'top',
 					'setting' => [ 'transport' => 'postMessage' ],
-					'value' => blocksy_spacing_value([
-						'top' => '30px',
-						'left' => '30px',
-						'right' => '30px',
-						'bottom' => '30px',
-					]),
+					'value' => blocksy_spacing_value(),
+					'inputAttr' => [
+						'placeholder' => '30'
+					],
+					'min' => 0,
 					'responsive' => true
 				],
 
@@ -424,6 +423,7 @@ $options = [
 					'divider' => 'top',
 					'setting' => [ 'transport' => 'postMessage' ],
 					'value' => blocksy_spacing_value(),
+					'min' => 0,
 					'responsive' => true
 				],
 

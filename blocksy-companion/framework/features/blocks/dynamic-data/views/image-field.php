@@ -1,9 +1,5 @@
 <?php
 
-if (! $attachment_id) {
-	return;
-}
-
 $view_type = blocksy_akg('viewType', $attributes, 'default');
 
 if ($view_type === 'cover') {
@@ -17,6 +13,10 @@ if ($view_type === 'cover') {
 		]
 	);
 
+	return;
+}
+
+if (! $attachment_id) {
 	return;
 }
 

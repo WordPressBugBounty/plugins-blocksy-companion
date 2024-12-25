@@ -255,22 +255,25 @@ class Query {
 					'columns' => $columns
 				]);
 
-				wp_style_engine_get_stylesheet_from_css_rules(
-					array_merge(
-						$css->get_wp_style_engine_rules([
-							'device' => 'desktop'
-						]),
-						$tablet_css->get_wp_style_engine_rules([
-							'device' => 'tablet'
-						]),
-						$mobile_css->get_wp_style_engine_rules([
-							'device' => 'mobile'
-						])
-					),
+				blc_call_gutenberg_function(
+					'wp_style_engine_get_stylesheet_from_css_rules',
 					[
-						'context'  => 'block-supports',
-						'prettify' => false,
-						'optimize' => true
+						array_merge(
+							$css->get_wp_style_engine_rules([
+								'device' => 'desktop'
+							]),
+							$tablet_css->get_wp_style_engine_rules([
+								'device' => 'tablet'
+							]),
+							$mobile_css->get_wp_style_engine_rules([
+								'device' => 'mobile'
+							])
+						),
+						[
+							'context'  => 'block-supports',
+							'prettify' => false,
+							'optimize' => true
+						]
 					]
 				);
 
@@ -756,7 +759,7 @@ class Query {
 		}
 
 		if ($context['purpose'] === 'frontend') {
-			wp_style_engine_get_stylesheet_from_css_rules(
+			blc_call_gutenberg_function('wp_style_engine_get_stylesheet_from_css_rules', [
 				array_merge(
 					$css->get_wp_style_engine_rules([
 						'device' => 'desktop'
@@ -773,7 +776,7 @@ class Query {
 					'prettify' => false,
 					'optimize' => true
 				]
-			);
+			]);
 		}
 
 		if (! empty($final_css)) {

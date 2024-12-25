@@ -1,5 +1,17 @@
 <?php
 
+$POSITION_CLASSNAMES = [
+	'top left' => 'is-position-top-left',
+	'top center' => 'is-position-top-center',
+	'top right' => 'is-position-top-right',
+	'center left' => 'is-position-center-left',
+	'center center' => 'is-position-center-center',
+	'center right' => 'is-position-center-right',
+	'bottom left' => 'is-position-bottom-left',
+	'bottom center' => 'is-position-bottom-center',
+	'bottom right' => 'is-position-bottom-right',
+];
+
 $wrapper_attr = [
 	'class' => 'wp-block-cover ct-dynamic-cover',
 	'style' => ''
@@ -14,6 +26,15 @@ $is_repeated = blocksy_akg('isRepeated', $attributes, false);
 $allow_custom_content_and_wide_size = blocksy_akg('allowCustomContentAndWideSize', $attributes, true);
 
 $focal_point = blocksy_akg('focalPoint', $attributes, []);
+$content_position = blocksy_akg('contentPosition', $attributes, 'center center');
+
+if (
+	! empty($POSITION_CLASSNAMES[$content_position])
+	&&
+	$content_position !== 'center center'
+) {
+	$wrapper_attr['class'] .= ' has-custom-content-position ' . $POSITION_CLASSNAMES[$content_position];
+}
 
 $focal_point_result = '';
 
@@ -49,6 +70,7 @@ if (! empty($border_result['style'])) {
 
 if ($aspect_ratio !== 'auto') {
 	$wrapper_attr['style'] .= 'aspect-ratio: ' . $aspect_ratio . ';';
+	$minimum_height = 'unset';
 }
 
 if (! empty($minimum_height)) {
@@ -93,25 +115,47 @@ if (
 	$image_result = blocksy_html_tag(
 		'div',
 		[
-			'class' => 'wp-block-cover__image-background wp-image-{$attachment_id} has-parallax',
+			'class' => "wp-block-cover__image-background wp-image-{$attachment_id} has-parallax",
 			'style' => 'background-image: url(' . $attachment[0] . ');background-position: 50% 50%;'
 		],
 		''
 	);
 }
 
-$overlay_content = '';
-
 $overlay_classes = [
 	'wp-block-cover__background',
 ];
 
+$overlay_atts = [
+	'aria-hidden' => 'true',
+];
+
+// $custom_gradient = blocksy_akg('customGradient', $attributes, '');
+// $gradient = blocksy_akg('gradient', $attributes, '');
+
+// $gradient_value = ! empty($gradient) ? $gradient : $custom_gradient;
+
+// if (! empty($gradient_value)) {
+// 	$overlay_classes[] = 'has-background-gradient';
+// 	$overlay_classes[] = 'wp-block-cover__gradient-background';
+
+// 	if (!empty($gradient)) {
+// 		$gradientClass = "has-$gradient_value-gradient-background";
+
+// 		$overlay_classes[] = $gradientClass;
+// 	} else {
+// 		$overlay_atts['style'] = 'background-image: ' . $custom_gradient . ';';
+// 	}
+// }
+
 $overlay_content = blocksy_html_tag(
 	'span',
-	[
-		'class' => join(' ', $overlay_classes),
-		'aria-hidden' => 'true'
-	],
+	array_merge(
+		[
+			'class' => join(' ', $overlay_classes),
+		],
+		$overlay_atts
+	),
 	''
 );
 
@@ -132,39 +176,45 @@ $content_size = blocksy_akg('contentSize', $attributes, 0);
 $wide_size = blocksy_akg('wideSize', $attributes, 0);
 
 if (! empty($content_size)) {
-	wp_style_engine_get_stylesheet_from_css_rules(
+	blc_call_gutenberg_function(
+		'wp_style_engine_get_stylesheet_from_css_rules',
 		[
 			[
-				'selector' => '.' . join('.', $inner_classes) . ' > :where(:not(.alignleft):not(.alignright):not(.alignfull))',
-				'declarations' => [
-					'max-width' => $content_size,
-					'margin-left' => 'auto !important',
-					'margin-right' => 'auto !important'
+				[
+					'selector' => '.' . join('.', $inner_classes) . ' > :where(:not(.alignleft):not(.alignright):not(.alignfull))',
+					'declarations' => [
+						'max-width' => $content_size,
+						'margin-left' => 'auto !important',
+						'margin-right' => 'auto !important'
+					]
 				]
+			],
+			[
+				'context' => 'block-styles',
+				'prettify' => false,
+				'optimize' => true
 			]
-		],
-		[
-			'context' => 'block-styles',
-			'prettify' => false,
-			'optimize' => true
 		]
 	);
 }
 
 if (! empty($wide_size)) {
-	wp_style_engine_get_stylesheet_from_css_rules(
+	blc_call_gutenberg_function(
+		'wp_style_engine_get_stylesheet_from_css_rules',
 		[
 			[
-				'selector' => '.' . join('.', $inner_classes) . ' > .alignwide',
-				'declarations' => [
-					'max-width' => $wide_size,
+				[
+					'selector' => '.' . join('.', $inner_classes) . ' > .alignwide',
+					'declarations' => [
+						'max-width' => $wide_size,
+					]
 				]
+			],
+			[
+				'context' => 'block-styles',
+				'prettify' => false,
+				'optimize' => true
 			]
-		],
-		[
-			'context' => 'block-styles',
-			'prettify' => false,
-			'optimize' => true
 		]
 	);
 }

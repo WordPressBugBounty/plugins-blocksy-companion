@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-17 06:18:28+0000\n"
+"PO-Revision-Date: 2024-12-24 19:57:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2712,7 +2712,7 @@ msgstr "Форма образца"
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:135,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:189
 msgid "Round"
-msgstr "Круг"
+msgstr "Круглая"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:33,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:87,
@@ -2819,7 +2819,7 @@ msgstr "Закрыть окно таблицы размеров"
 
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/options.php:29
 msgid "Size Guide Display Conditions"
-msgstr "Ус��овия отображения таблицы размеров"
+msgstr "Условия отображения таблицы размеров"
 
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/options.php:30
 msgid "Choose where you want this size guide to be displayed."
@@ -3144,7 +3144,7 @@ msgstr "Способы доставки"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:265
 msgid "Thank you Page"
-msgstr "Страница благодарности"
+msgstr "Страница благодарност��"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:480,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:486
@@ -4406,7 +4406,7 @@ msgstr "Дополнительные возможности настройки �
 #: framework/helpers/exts-configs.php:227
 msgctxt "Extension Brand Name"
 msgid "Shop Extra"
-msgstr "Дополнительный функционал магазина"
+msgstr "Функционал магазина"
 
 #: framework/helpers/exts-configs.php:143
 msgid "Display the approximate reading time of an article, so that visitors know what to expect when starting to read the content."
@@ -5642,7 +5642,7 @@ msgstr "термины"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:91
 msgid "images"
-msgstr "изображения"
+msgstr "и��ображения"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:92
 msgid "posts"
@@ -10551,7 +10551,7 @@ msgstr "Регистрация"
 
 #: framework/helpers/exts-configs.php:60
 msgid "Connect your Adobe Fonts project and use the selected fonts throughout Blocksy and your favorite page builder."
-msgstr "Подключите свой проект Adobe Fonts и используйте выбранные шри��ты в теме сайта и конструкторе страниц."
+msgstr "Подключите свой проект Adobe Fonts и используйте выбранные шрифты в теме са��та и конструкторе страниц."
 
 #: framework/helpers/exts-configs.php:71
 msgid "Inject custom code snippets throughout your website. The extension works globally or on a per post/page basis."

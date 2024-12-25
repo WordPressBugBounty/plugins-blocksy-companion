@@ -109,6 +109,7 @@ ctEvents.on(
 				type: 'spacing',
 				variable: 'padding',
 				responsive: true,
+				emptyValue: 30,
 			},
 
 			newsletter_subscribe_container_border_radius: {

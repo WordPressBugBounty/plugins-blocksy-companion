@@ -74,7 +74,7 @@ const TermsPlaceholder = ({
 											{
 												tagName: 'h2',
 												field: 'wp:term_title',
-												has_title_link: 'yes',
+												has_field_link: 'yes',
 											},
 										],
 

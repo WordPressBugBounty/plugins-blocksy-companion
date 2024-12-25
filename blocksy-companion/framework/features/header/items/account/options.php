@@ -2034,12 +2034,11 @@ $options = [
 						'label' => __( 'Border Radius', 'blocksy-companion' ),
 						'type' => 'ct-spacing',
 						'divider' => 'top',
-						'value' => blocksy_spacing_value([
-							'top' => '2px',
-							'left' => '2px',
-							'right' => '2px',
-							'bottom' => '2px',
-						]),
+						'value' => blocksy_spacing_value(),
+						'inputAttr' => [
+							'placeholder' => '2'
+						],
+						'min' => 0,
 					],
 
 				],

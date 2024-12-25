@@ -47,6 +47,25 @@ class Dashboard {
 			5
 		);
 
+		if (defined('WP_FS__LOWEST_PRIORITY')) {
+			add_action(
+				'network_admin_menu',
+				function () {
+					global $menu;
+
+					foreach ($menu as $key => $item) {
+						if ($item[2] === 'ct-dashboard') {
+							$menu[$key][0] = __('Blocksy', 'blocksy-companion');
+							$menu[$key][3] = __('Blocksy', 'blocksy-companion');
+							$menu[$key][4] = "menu-top";
+							$menu[$key][6] = set_url_scheme($this->get_icon());
+						}
+					}
+				},
+				WP_FS__LOWEST_PRIORITY + 1
+			);
+		}
+
 		add_filter(
 			'blocksy:dashboard:redirect-after-activation',
 			function ($url) {
@@ -257,7 +276,8 @@ class Dashboard {
 					'is_anonymous' => false,
 					'connect_template' => '',
 					'retrieve_demos_data' => [],
-					'plugin_version' => $plugin_data['Version']
+					'plugin_version' => $plugin_data['Version'],
+					'is_multisite' => is_multisite()
 				];
 
 				if (function_exists('blc_fs')) {
@@ -295,7 +315,8 @@ class Dashboard {
 						'is_anonymous' => $is_anonymous,
 						'connect_template' => $connect_template,
 						'retrieve_demos_data' => $retrieve_demos_data,
-						'plugin_version' => $plugin_data['Version']
+						'plugin_version' => $plugin_data['Version'],
+						'is_multisite' => is_multisite()
 					];
 				}
 
@@ -484,6 +505,13 @@ class Dashboard {
 		}
 	}
 
+	public function get_icon() {
+		return apply_filters(
+			'blocksy:dashboard:icon-url',
+			'data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMzUgMzUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM1IDM1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGQ9Ik0yMS42LDIxLjNjMCwwLjYtMC41LDEuMS0xLjEsMS4xaC0zLjVsLTAuOS0yLjJoNC40QzIxLjEsMjAuMiwyMS42LDIwLjcsMjEuNiwyMS4zeiBNMjAuNiwxMy41aC00LjRsMC45LDIuMmgzLjUKCWMwLjYsMCwxLjEtMC41LDEuMS0xLjFDMjEuNiwxNCwyMS4xLDEzLjUsMjAuNiwxMy41eiBNMzUsMTcuNUMzNSwyNy4yLDI3LjIsMzUsMTcuNSwzNUM3LjgsMzUsMCwyNy4yLDAsMTcuNUMwLDcuOCw3LjgsMCwxNy41LDAKCUMyNy4yLDAsMzUsNy44LDM1LDE3LjV6IE0yNSwxNy45YzAuNy0wLjksMS4xLTIuMSwxLjEtMy40YzAtMS4yLTAuNC0yLjQtMS4xLTMuM2MtMS0xLjQtMi42LTIuMy00LjQtMi4zYzAsMC0wLjEsMC0wLjEsMHYwSDkuOQoJYy0wLjMsMC0wLjUsMC4zLTAuNCwwLjVsMi42LDYuMkg5LjljLTAuMywwLTAuNSwwLjMtMC40LDAuNUwxNCwyNi45aDYuNWMzLjEsMCw1LjYtMi41LDUuNi01LjZDMjYuMiwyMCwyNS44LDE4LjksMjUsMTcuOQoJQzI1LjEsMTcuOSwyNS4xLDE3LjksMjUsMTcuOXoiLz4KPC9zdmc+Cg=='
+		);
+	}
+
 	public function setup_framework_page() {
 		if (! current_user_can(blc_get_capabilities()->get_wp_capability_by('dashboard'))) {
 			return;
@@ -495,10 +523,7 @@ class Dashboard {
 			'permision' => blc_get_capabilities()->get_wp_capability_by('dashboard'),
 			'top-level-handle' => 'ct-dashboard',
 			'callback' => [$this, 'welcome_page_template'],
-			'icon-url' => apply_filters(
-				'blocksy:dashboard:icon-url',
-				'data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMzUgMzUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM1IDM1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxwYXRoIGQ9Ik0yMS42LDIxLjNjMCwwLjYtMC41LDEuMS0xLjEsMS4xaC0zLjVsLTAuOS0yLjJoNC40QzIxLjEsMjAuMiwyMS42LDIwLjcsMjEuNiwyMS4zeiBNMjAuNiwxMy41aC00LjRsMC45LDIuMmgzLjUKCWMwLjYsMCwxLjEtMC41LDEuMS0xLjFDMjEuNiwxNCwyMS4xLDEzLjUsMjAuNiwxMy41eiBNMzUsMTcuNUMzNSwyNy4yLDI3LjIsMzUsMTcuNSwzNUM3LjgsMzUsMCwyNy4yLDAsMTcuNUMwLDcuOCw3LjgsMCwxNy41LDAKCUMyNy4yLDAsMzUsNy44LDM1LDE3LjV6IE0yNSwxNy45YzAuNy0wLjksMS4xLTIuMSwxLjEtMy40YzAtMS4yLTAuNC0yLjQtMS4xLTMuM2MtMS0xLjQtMi42LTIuMy00LjQtMi4zYzAsMC0wLjEsMC0wLjEsMHYwSDkuOQoJYy0wLjMsMC0wLjUsMC4zLTAuNCwwLjVsMi42LDYuMkg5LjljLTAuMywwLTAuNSwwLjMtMC40LDAuNUwxNCwyNi45aDYuNWMzLjEsMCw1LjYtMi41LDUuNi01LjZDMjYuMiwyMCwyNS44LDE4LjksMjUsMTcuOQoJQzI1LjEsMTcuOSwyNS4xLDE3LjksMjUsMTcuOXoiLz4KPC9zdmc+Cg=='
-			),
+			'icon-url' => $this->get_icon(),
 			'position' => 2,
 		];
 

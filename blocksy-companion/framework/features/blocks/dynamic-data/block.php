@@ -281,10 +281,16 @@ class DynamicData {
 
 					// Process primary element type styles.
 					if ($element_style_object) {
-						wp_style_engine_get_styles($element_style_object, [
-							'selector' => $element_config['selector'],
-							'context' => 'block-supports',
-						]);
+						blc_call_gutenberg_function(
+							'wp_style_engine_get_styles',
+							[
+								$element_style_object,
+								[
+									'selector' => $element_config['selector'],
+									'context' => 'block-supports',
+								]
+							]
+						);
 
 						if (isset($element_config['additional_styles'])) {
 							\WP_Style_Engine::store_css_rule(
@@ -295,12 +301,14 @@ class DynamicData {
 						}
 
 						if (isset($element_style_object[':hover'])) {
-							wp_style_engine_get_styles(
-								$element_style_object[':hover'],
-								array(
-									'selector' => $element_config['hover_selector'],
-									'context'  => 'block-supports',
-								)
+							blc_call_gutenberg_function(
+								'wp_style_engine_get_styles',[
+									$element_style_object[':hover'],
+									[
+										'selector' => $element_config['hover_selector'],
+										'context' => 'block-supports',
+									]
+								]
 							);
 						}
 					}

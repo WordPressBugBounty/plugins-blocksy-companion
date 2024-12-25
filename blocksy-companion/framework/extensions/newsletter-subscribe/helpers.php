@@ -81,7 +81,9 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 		'name_label' => __('Your name', 'blocksy-companion'),
 		'email_label' => __('Your email', 'blocksy-companion'),
 		'list_id' => '',
-		'class' => ''
+		'class' => '',
+
+		'container_style' => 'default',
 	]);
 
 	$has_name = $args['has_name'] === 'yes';
@@ -133,7 +135,20 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 			class="ct-newsletter-subscribe-form"
 			<?php echo $skip_submit_output ?>>
 
-			<div class="ct-newsletter-subscribe-form-elements" data-columns="<?php echo $fields_number ?>">
+			<div
+				<?php
+					echo blocksy_attr_to_html(
+						array_merge(
+							[
+								'class' => 'ct-newsletter-subscribe-form-elements',
+								'data-columns' => $fields_number
+							],
+							$args['container_style'] !== 'default' ? [
+								'data-container' => $args['container_style']
+							] : []
+						)
+					)
+			?>>
 				<?php if ($has_name) { ?>
 					<input
 						type="text"

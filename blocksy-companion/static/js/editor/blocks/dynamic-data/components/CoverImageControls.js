@@ -6,7 +6,6 @@ import {
 	__experimentalToolsPanel as ToolsPanel,
 	__experimentalToolsPanelItem as ToolsPanelItem,
 } from '@wordpress/components'
-import { __experimentalUseGradient } from '@wordpress/block-editor'
 
 import { useSelect } from '@wordpress/data'
 import { useEntityProp, store as coreStore } from '@wordpress/core-data'

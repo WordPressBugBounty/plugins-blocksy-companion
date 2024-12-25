@@ -188,17 +188,31 @@ const Edit = ({
 		{
 			icon: list,
 			title: __('List view'),
-			onClick: () => setDisplayLayout({ type: 'default' }),
-			isActive: layoutType === 'default' || layoutType === 'constrained',
+			onClick: () => {
+				setAttributes({
+					layout: {
+						type: 'default',
+					},
+					tabletColumns: 2,
+					mobileColumns: 1,
+				})
+			},
+			isActive: !isGridLayout,
 		},
+
 		{
 			icon: grid,
 			title: __('Grid view'),
-			onClick: () =>
-				setDisplayLayout({
-					type: 'grid',
-					columnCount,
-				}),
+			onClick: () => {
+				setAttributes({
+					layout: {
+						type: 'grid',
+						columnCount: 3,
+					},
+					tabletColumns: 2,
+					mobileColumns: 1,
+				})
+			},
 			isActive: isGridLayout,
 		},
 	]

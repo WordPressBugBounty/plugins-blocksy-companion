@@ -185,13 +185,9 @@ blocksy_output_spacing([
 	'property' => 'padding',
 	'value' => blocksy_get_theme_mod(
 		'newsletter_subscribe_container_spacing',
-		blocksy_spacing_value([
-			'top' => '30px',
-			'left' => '30px',
-			'right' => '30px',
-			'bottom' => '30px',
-		])
-	)
+		blocksy_spacing_value()
+	),
+	'empty_value' => 30
 ]);
 
 blocksy_output_spacing([
