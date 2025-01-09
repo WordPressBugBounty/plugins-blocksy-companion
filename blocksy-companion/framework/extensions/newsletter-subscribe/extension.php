@@ -54,6 +54,14 @@ class BlocksyExtensionNewsletterSubscribe {
 			);
 		});
 
+		add_filter('do_shortcode_tag', function($output, $tag, $attr) {
+			if ('blocksy_newsletter_subscribe' === $tag) {
+				wp_enqueue_style('blocksy-block-newsletter-styles');
+			}
+			
+			return $output;
+		}, 10, 3);
+
 		add_filter(
 			'render_block',
 			function ($block_content, $block) {
@@ -86,21 +94,6 @@ class BlocksyExtensionNewsletterSubscribe {
 					['ct-main-styles'],
 					$data['Version']
 				);
-
-				$obj = get_queried_object();
-
-				if (
-					$obj
-					&&
-					! empty($obj->post_content)
-					&&
-					has_shortcode(
-						$obj->post_content,
-						'blocksy_newsletter_subscribe'
-					)
-				) {
-					wp_enqueue_style('blocksy-block-newsletter-styles');
-				}
 
 				if (
 					blocksy_get_theme_mod('newsletter_subscribe_single_post_enabled', 'yes') === 'yes'
@@ -211,6 +204,7 @@ class BlocksyExtensionNewsletterSubscribe {
 				'class' => '',
 
 				'container_style' => 'default',
+				'form_style' => 'inline',
 			]);
 
 			$args['class'] =

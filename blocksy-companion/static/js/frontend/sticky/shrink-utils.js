@@ -120,13 +120,25 @@ export const getRowStickyHeight = (el, hasBorder = true) => {
 
 		let stickyHeight = el.getBoundingClientRect().height - borderHeight
 
-		if (
-			Math.round(stickyHeight) !== Math.round(rowStickyHeight) ||
-			// case when content is forcing the initial height to be bigger
-			Math.round(rowStickyHeight) > Math.round(getRowInitialMinHeight(el))
-		) {
-			el.blcStickyHeight = el.getBoundingClientRect().height
-			return stickyHeight
+		const rowInitialMinHeight = getRowInitialMinHeight(el)
+
+		const hasLogoWithShrink =
+			el.querySelector('.site-logo-container') &&
+			parseFloat(
+				getComputedStyle(
+					el.querySelector('.site-logo-container')
+				).getPropertyValue('--logo-sticky-shrink') || 1
+			) < 1
+
+		if (!hasLogoWithShrink) {
+			if (
+				Math.round(stickyHeight) !== Math.round(rowStickyHeight) ||
+				// case when content is forcing the initial height to be bigger
+				Math.round(rowStickyHeight) > Math.round(rowInitialMinHeight)
+			) {
+				el.blcStickyHeight = el.getBoundingClientRect().height
+				return stickyHeight
+			}
 		}
 	}
 

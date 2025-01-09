@@ -1,13 +1,7 @@
 import { createElement } from '@wordpress/element'
 import { __ } from 'ct-i18n'
 
-import {
-	InspectorControls,
-	// __experimentalUseGradient,
-	useSettings,
-	getGradientValueBySlug,
-	getGradientSlugByValue,
-} from '@wordpress/block-editor'
+import { InspectorControls, useSettings } from '@wordpress/block-editor'
 import {
 	RangeControl,
 	PanelBody,
@@ -29,6 +23,7 @@ import {
 	styleToAttributes,
 	attributesToStyle,
 	useColorsPerOrigin,
+	useGradientsPerOrigin,
 } from './utils'
 
 export function setImmutably(object, path, value) {
@@ -50,6 +45,14 @@ export function setImmutably(object, path, value) {
 	prev[leaf] = value
 
 	return object
+}
+
+const computeValue = (attributes) => {
+	return attributesToStyle({
+		style: attributes.style,
+		textColor: attributes.textColor,
+		backgroundColor: attributes.backgroundColor,
+	})
 }
 
 const DynamicDataInspectorControls = ({
@@ -74,11 +77,7 @@ const DynamicDataInspectorControls = ({
 }) => {
 	const { replaceInnerBlocks } = useDispatch('core/block-editor')
 
-	const value = attributesToStyle({
-		style: attributes.style,
-		textColor: attributes.textColor,
-		backgroundColor: attributes.backgroundColor,
-	})
+	const value = computeValue(attributes)
 
 	const settings = useBlockSettings(name, __unstableParentLayout)
 
@@ -86,6 +85,8 @@ const DynamicDataInspectorControls = ({
 		getValueFromVariable({ settings }, '', rawValue)
 
 	const colors = useColorsPerOrigin(settings)
+
+	const gradients = useGradientsPerOrigin(settings)
 
 	const encodeColorValue = (colorValue) => {
 		const allColors = colors.flatMap(
@@ -95,6 +96,20 @@ const DynamicDataInspectorControls = ({
 		const colorObject = allColors.find(({ color }) => color === colorValue)
 
 		return colorObject ? 'var:preset|color|' + colorObject.slug : colorValue
+	}
+
+	const encodeGradientValue = (gradientValue) => {
+		const allGradients = gradients.flatMap(
+			({ gradients: originGradients }) => originGradients
+		)
+
+		const gradientObject = allGradients.find(
+			({ gradient }) => gradient === gradientValue
+		)
+
+		return gradientObject
+			? 'var:preset|gradient|' + gradientObject.slug
+			: gradientValue
 	}
 
 	const onChange = (newStyle) => {
@@ -121,18 +136,76 @@ const DynamicDataInspectorControls = ({
 		attributes?.style?.elements?.overlay?.color?.background
 	)
 
-	const setOverlayColor = (newColor) => {
-		// if (!newColor) {
-		// 	return
-		// }
+	const overlayGradient = decodeValue(
+		attributes?.style?.elements?.overlay?.color?.gradient
+	)
 
-		onChange(
-			setImmutably(
-				value,
-				['elements', 'overlay', 'color', 'background'],
-				encodeColorValue(newColor)
-			)
+	// Core does really a bad job of handling the color and gradient and they
+	// do it with two callback, which leads to race conditions. This is really,
+	// really bad.
+	//
+	// This is a workaround to handle the race condition.
+	// Ideally, we should implement our own version of
+	// __experimentalColorGradientSettingsDropdown.
+	//
+	// color | gradient
+	let currentCb = null
+
+	const setOverlayColor = (newColor) => {
+		if (!currentCb) {
+			currentCb = 'color'
+		}
+
+		// gradient was first. skipping color
+		if (currentCb === 'gradient') {
+			currentCb = null
+			return
+		}
+
+		let newValue = setImmutably(
+			value,
+			['elements', 'overlay', 'color', 'background'],
+			encodeColorValue(newColor)
 		)
+
+		// If we have a color, we should remove the gradient.
+		if (newColor) {
+			newValue = setImmutably(
+				newValue,
+				['elements', 'overlay', 'color', 'gradient'],
+				encodeGradientValue(undefined)
+			)
+		}
+
+		onChange(newValue)
+	}
+
+	const setOverlayGradient = (newGradient) => {
+		if (!currentCb) {
+			currentCb = 'gradient'
+		}
+
+		// color was first. skipping gradient
+		if (currentCb === 'color') {
+			return
+		}
+
+		let newValue = setImmutably(
+			value,
+			['elements', 'overlay', 'color', 'gradient'],
+			encodeGradientValue(newGradient)
+		)
+
+		// If we have a gradient, we should remove the color.
+		if (newGradient) {
+			newValue = setImmutably(
+				newValue,
+				['elements', 'overlay', 'color', 'background'],
+				encodeColorValue(undefined)
+			)
+		}
+
+		onChange(newValue)
 	}
 
 	const textColor = decodeValue(value?.color?.text)
@@ -165,16 +238,7 @@ const DynamicDataInspectorControls = ({
 		)
 	}
 
-	const gradients = [
-		...(settings.color?.gradients?.custom ?? []),
-		...(settings.color?.gradients?.theme ?? []),
-		...(settings.color?.gradients?.default ?? []),
-	]
-
 	const backgroundColor = decodeValue(value?.color?.background)
-	const gradientValue =
-		attributes.customGradient ||
-		getGradientValueBySlug(gradients, attributes.gradient)
 
 	const setBackgroundColor = (newColor) => {
 		const newValue = setImmutably(
@@ -194,31 +258,6 @@ const DynamicDataInspectorControls = ({
 				encodeColorValue(newColor)
 			)
 		)
-	}
-
-	const setOverlayAttribute = (attributeName, value) => {
-		setAttributes({
-			// Clear all related attributes (only one should be set)
-			overlayColor: undefined,
-			customOverlayColor: undefined,
-			gradient: undefined,
-			customGradient: undefined,
-			[attributeName]: value,
-		})
-	}
-
-	const onGradientChange = (value) => {
-		// Do nothing for falsy values.
-		if (!value) {
-			return
-		}
-		const slug = getGradientSlugByValue(gradients, value)
-
-		if (slug) {
-			setOverlayAttribute('gradient', slug)
-		} else {
-			setOverlayAttribute('customGradient', value)
-		}
 	}
 
 	const colorsPanelSettings =
@@ -262,13 +301,16 @@ const DynamicDataInspectorControls = ({
 			  ]
 			: [
 					{
-						colorValue: overlayColor,
-						// gradientValue,
+						colorValue: overlayGradient ? undefined : overlayColor,
+						gradientValue: overlayGradient,
 						label: __('Overlay', 'blocksy-companion'),
 						enableAlpha: true,
 						onColorChange: setOverlayColor,
-						// onGradientChange: onGradientChange,
+						onGradientChange: (newValue) => {
+							setOverlayGradient(newValue)
+						},
 						isShownByDefault: true,
+						clearable: true,
 					},
 			  ]
 

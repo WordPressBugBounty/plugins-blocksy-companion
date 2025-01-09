@@ -11,7 +11,7 @@ $pattern = [
 
 	<!-- wp:blocksy/dynamic-data {"tagName":"h5","field":"wp:term_title","align":"center","has_field_link":"yes","style":{"spacing":{"margin":{"bottom":"0px"}}}} /-->
 
-	<!-- wp:blocksy/dynamic-data {"field":"wp:term_count","after":" categories","align":"center"} /-->
+	<!-- wp:blocksy/dynamic-data {"field":"wp:term_count","after":" items","align":"center"} /-->
 	<!-- /wp:blocksy/tax-template --></div>
 	<!-- /wp:blocksy/tax-query -->'
 ];

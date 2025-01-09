@@ -15,7 +15,7 @@ $pattern = [
 	<!-- wp:column {"verticalAlignment":"center","width":"66.66%"} -->
 	<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:66.66%"><!-- wp:blocksy/dynamic-data {"tagName":"h5","field":"wp:term_title","style":{"spacing":{"margin":{"bottom":"0px"}}},"has_field_link":"yes"} /-->
 
-	<!-- wp:blocksy/dynamic-data {"field":"wp:term_count","after":" categories"} /--></div>
+	<!-- wp:blocksy/dynamic-data {"field":"wp:term_count","after":" items"} /--></div>
 	<!-- /wp:column --></div>
 	<!-- /wp:columns -->
 	<!-- /wp:blocksy/tax-template --></div>

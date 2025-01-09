@@ -1,7 +1,7 @@
-import { createElement, memo, useState, RawHTML } from '@wordpress/element'
+import { createElement, memo, useState } from '@wordpress/element'
 import { __ } from 'ct-i18n'
 
-import { list, grid, desktop } from '@wordpress/icons'
+import { list, grid } from '@wordpress/icons'
 
 import classnames from 'classnames'
 import { useSelect } from '@wordpress/data'
@@ -17,7 +17,6 @@ import {
 	useBlockProps,
 	store as blockEditorStore,
 	InspectorControls,
-	getSpacingPresetCssVar,
 } from '@wordpress/block-editor'
 
 import { useTaxBlockData } from '../tax-query/hooks/use-tax-block-data'

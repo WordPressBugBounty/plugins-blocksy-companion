@@ -41,6 +41,7 @@
 	"usesContext": [
 		"uniqueId",
 		"taxonomy",
+		"level",
 		"limit",
 		"order",
 		"orderby",

@@ -55,6 +55,7 @@ const Edit = ({
 		attributes,
 		setAttributes,
 		clientId,
+		blockType: 'blocksy/query',
 	})
 
 	const { postId, postType } = context

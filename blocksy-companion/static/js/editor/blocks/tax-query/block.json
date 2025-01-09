@@ -14,6 +14,11 @@
 			"default": "category"
 		},
 
+		"level": {
+			"type": "string",
+			"default": "all"
+		},
+
 		"limit": {
 			"type": "number",
 			"default": 5
@@ -129,6 +134,7 @@
 	"providesContext": {
 		"uniqueId": "uniqueId",
 		"taxonomy": "taxonomy",
+		"level": "level",
 		"limit": "limit",
 		"order": "order",
 		"orderby": "orderby",

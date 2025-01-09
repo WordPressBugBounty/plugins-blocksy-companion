@@ -12,7 +12,10 @@ class DemoInstallOptionsExport {
 
 			// TranslatePress
 			'trp_settings',
-			'trp_advanced_settings'
+			'trp_advanced_settings',
+
+			// Elementor
+			'elementor_cpt_support'
 		];
 	}
 

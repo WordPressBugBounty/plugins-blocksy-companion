@@ -84,6 +84,7 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 		'class' => '',
 
 		'container_style' => 'default',
+		'form_style' => 'inline'
 	]);
 
 	$has_name = $args['has_name'] === 'yes';
@@ -141,10 +142,12 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 						array_merge(
 							[
 								'class' => 'ct-newsletter-subscribe-form-elements',
-								'data-columns' => $fields_number
 							],
 							$args['container_style'] !== 'default' ? [
 								'data-container' => $args['container_style']
+							] : [],
+							$args['form_style'] === 'inline' ? [
+								'data-columns' => $fields_number
 							] : []
 						)
 					)

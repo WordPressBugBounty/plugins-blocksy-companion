@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.83
+Stable tag: 2.0.84
 
 == Description ==
 
@@ -52,6 +52,12 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.84: 2025-01-09
+- Improvement: Demo importer - make sure Elementor "Post Types" option is exported properly
+- Improvement: Demo importer - properly regenerate taxonomies css file after demo install
+- Improvement: Properly install and activate Blocksy theme from dashboard notice in a multi site context
+- Improvement: Sticky header - better calculation for shrink row and logo functionality
+
 2.0.83: 2024-12-25
 - Improvement: Account modal header element - better integration with MailPoet plugin
 - Improvement: Advanced Taxonomy block - smarter check for layout type

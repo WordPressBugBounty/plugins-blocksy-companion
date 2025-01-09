@@ -16,6 +16,16 @@ function blc_call_gutenberg_function($original_function_name, $args = []) {
 	return call_user_func_array($function_to_call, $args);
 }
 
+function blc_get_gutenberg_class($class_name) {
+	$gutenberg_class_name = $class_name . '_Gutenberg';
+
+	if (class_exists($gutenberg_class_name)) {
+		return $gutenberg_class_name;
+	}
+
+	return $class_name;
+}
+
 function blc_get_version() {
 	if (! function_exists('get_plugin_data')) {
 		require_once(ABSPATH . 'wp-admin/includes/plugin.php');

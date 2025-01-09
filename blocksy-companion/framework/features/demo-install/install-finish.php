@@ -37,10 +37,6 @@ class DemoInstallFinalActions {
 			$fluentFormActivation->migrate();
 		}
 
-		do_action('customize_save_after');
-		do_action('blocksy:dynamic-css:refresh-caches');
-		do_action('blocksy:cache-manager:purge-all');
-
 		if (class_exists('WC_REST_System_Status_Tools_V2_Controller')) {
 			if (! defined('WP_CLI')) {
 				define('WP_CLI', true);
@@ -87,6 +83,12 @@ class DemoInstallFinalActions {
 		$this->update_counts_for_all_terms();
 
 		$this->patch_attachment_ids_in_mods();
+
+		do_action('customize_save_after');
+		do_action('blocksy:dynamic-css:refresh-caches');
+		do_action('blocksy:cache-manager:purge-all');
+
+		do_action('blocksy:demo-install:finish');
 
 		if ($this->is_ajax_request) {
 			wp_send_json_success();

@@ -25,6 +25,7 @@ const TermsInspectorControls = ({
 				setAttributes={setAttributes}
 				resetAll={() => {
 					setAttributes({
+						level: 'all',
 						offset: 0,
 						orderby: 'none',
 						order: 'desc',
@@ -202,6 +203,73 @@ const TermsInspectorControls = ({
 															key: 'ASC',
 															value: __(
 																'Ascending',
+																'blocksy-companion'
+															),
+														},
+													],
+												},
+											}}
+											value={attributes}
+											hasRevertButton={false}
+										/>
+									)
+								},
+							},
+
+							{
+								label: __('Level', 'blocksy-companion'),
+
+								hasValue: () => {
+									return attributes.level !== 'all'
+								},
+
+								reset: () => {
+									setAttributes({
+										level: 'all',
+									})
+								},
+
+								render: () => {
+									return (
+										<OptionsPanel
+											purpose="gutenberg"
+											onChange={(
+												optionId,
+												optionValue
+											) => {
+												setAttributes({
+													[optionId]: optionValue,
+												})
+											}}
+											options={{
+												level: {
+													type: 'ct-select',
+													label: __(
+														'Level',
+														'blocksy-companion'
+													),
+													value: '',
+													choices: [
+														{
+															key: 'all',
+															value: __(
+																'All Taxonomies',
+																'blocksy-companion'
+															),
+														},
+
+														{
+															key: 'parent',
+															value: __(
+																'Only Parent Taxonomies',
+																'blocksy-companion'
+															),
+														},
+
+														{
+															key: 'relevant',
+															value: __(
+																'Relevant Taxonomies',
 																'blocksy-companion'
 															),
 														},

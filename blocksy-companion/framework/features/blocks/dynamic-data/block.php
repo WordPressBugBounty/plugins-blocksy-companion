@@ -293,7 +293,7 @@ class DynamicData {
 						);
 
 						if (isset($element_config['additional_styles'])) {
-							\WP_Style_Engine::store_css_rule(
+							blc_get_gutenberg_class('\WP_Style_Engine')::store_css_rule(
 								'block-supports',
 								$element_config['selector'],
 								$element_config['additional_styles']

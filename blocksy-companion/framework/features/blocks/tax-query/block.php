@@ -294,6 +294,19 @@ class TaxQuery {
 
 					foreach ($all_terms as $key => $term) {
 						$term_obj = get_term($term['term_id']);
+
+						if (! $term_obj) {
+							continue;
+						}
+
+						$all_terms = get_terms([
+							'taxonomy' => $term_obj->taxonomy,
+							'hide_empty' => false,
+							'include' => [$term_obj->term_id]
+						]);
+
+						$term_obj->count = $all_terms[0]->count;
+						
 						$block_instance = $block->parsed_block;
 
 						// Set the block name to one that does not correspond to an existing registered block.
@@ -472,6 +485,8 @@ class TaxQuery {
 				'uniqueId' => '',
 
 				'taxonomy' => 'category',
+				// all | parent | relevant
+				'level' => 'all',
 				'limit' => 5,
 				'offset' => 0,
 				'orderby' => 'none',
@@ -542,6 +557,26 @@ class TaxQuery {
 			'offset' => $attributes['offset'],
 			'number' => $attributes['limit']
 		];
+
+		if (
+			$attributes['level'] === 'parent'
+			||
+			$attributes['level'] === 'relevant'
+		) {
+			$terms_query_args['parent'] = 0;
+		}
+
+		if ($attributes['level'] === 'relevant') {
+			$current_term = get_queried_object();
+
+			if (
+				$current_term
+				&&
+				$current_term instanceof \WP_Term
+			) {
+				$terms_query_args['parent'] = $current_term->term_id;
+			}
+		}
 
 		if (! empty($filtered_exclude)) {
 			$terms_query_args['exclude'] = $filtered_exclude;

@@ -1,4 +1,4 @@
-# Copyright (C) 2024 blocksy-companion
+# Copyright (C) 2025 blocksy-companion
 # This file is distributed under the same license as the blocksy-companion package.
 #, fuzzy
 msgid ""
@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-12-25 19:55+0000\n"
+"POT-Creation-Date: 2025-01-09 16:54+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -43,12 +43,12 @@ msgid "Dashboard"
 msgstr ""
 
 #: framework/dashboard.php:58, framework/dashboard.php:59,
-#: framework/dashboard.php:521, framework/dashboard.php:522,
+#: framework/dashboard.php:547, framework/dashboard.php:548,
 #: framework/extensions/product-reviews/extension.php:619
 msgid "Blocksy"
 msgstr ""
 
-#: framework/dashboard.php:563
+#: framework/dashboard.php:589
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
@@ -735,7 +735,7 @@ msgstr ""
 #: framework/premium/extensions/local-google-fonts/dashboard-static/js/SingleFont.js:111
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:104
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:43
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:38
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:39
 msgid "General"
 msgstr ""
 
@@ -1247,7 +1247,7 @@ msgstr ""
 #: framework/features/blocks/contact-info/options.php:397,
 #: framework/features/blocks/contact-info/options.php:460,
 #: framework/features/blocks/socials/options.php:14,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:676,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:683,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:181,
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:335,
 #: framework/premium/features/premium-header/items/contacts/options.php:87,
@@ -1376,7 +1376,7 @@ msgid "Name Label"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/customizer.php:119,
-#: framework/extensions/newsletter-subscribe/extension.php:208,
+#: framework/extensions/newsletter-subscribe/extension.php:201,
 #: framework/extensions/newsletter-subscribe/helpers.php:37,
 #: framework/extensions/newsletter-subscribe/helpers.php:81,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:122,
@@ -1390,7 +1390,7 @@ msgid "Mail Label"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/customizer.php:130,
-#: framework/extensions/newsletter-subscribe/extension.php:209,
+#: framework/extensions/newsletter-subscribe/extension.php:202,
 #: framework/extensions/newsletter-subscribe/helpers.php:41,
 #: framework/extensions/newsletter-subscribe/helpers.php:82
 msgid "Your email"
@@ -1403,7 +1403,7 @@ msgid "Button Label"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/customizer.php:139,
-#: framework/extensions/newsletter-subscribe/extension.php:203,
+#: framework/extensions/newsletter-subscribe/extension.php:196,
 #: framework/extensions/newsletter-subscribe/helpers.php:31,
 #: framework/extensions/newsletter-subscribe/helpers.php:76,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:143,
@@ -1693,7 +1693,7 @@ msgstr ""
 msgid "Container Border Radius"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/extension.php:155
+#: framework/extensions/newsletter-subscribe/extension.php:148
 msgid "Disable Subscribe Form"
 msgstr ""
 
@@ -1701,11 +1701,11 @@ msgstr ""
 msgid "Enter your email address below to subscribe to our newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:157
+#: framework/extensions/newsletter-subscribe/helpers.php:160
 msgid "First name"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:162
+#: framework/extensions/newsletter-subscribe/helpers.php:165
 msgid "Email address"
 msgstr ""
 
@@ -1762,8 +1762,8 @@ msgstr ""
 #: framework/premium/features/content-blocks/content-block-layer.php:281,
 #: framework/premium/extensions/woocommerce-extra/features/sku-layer.php:64,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:790,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:711,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:762,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:718,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:769,
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:347,
 #: framework/premium/extensions/woocommerce-extra/features/share-box-layer/feature.php:204,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:202,
@@ -2081,8 +2081,8 @@ msgstr ""
 #: framework/extensions/trending/customizer.php:42
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:186
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/TaxonomySelector.js:23
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:353
-#: static/js/editor/blocks/tax-query/Edit.js:156
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:395
+#: static/js/editor/blocks/tax-query/Edit.js:157
 msgid "Taxonomy"
 msgstr ""
 
@@ -2155,7 +2155,7 @@ msgstr ""
 
 #: framework/extensions/trending/customizer.php:273,
 #: framework/extensions/trending/customizer.php:287
-#: static/js/editor/blocks/query/Edit.js:171
+#: static/js/editor/blocks/query/Edit.js:172
 msgid "Post Type"
 msgstr ""
 
@@ -2493,7 +2493,7 @@ msgstr ""
 
 #: framework/features/header/header-options.php:84
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:73
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:68
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:69
 msgid "Offset"
 msgstr ""
 
@@ -2525,7 +2525,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:480,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:512,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:542
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:237
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:276
 msgid "Background"
 msgstr ""
 
@@ -2793,7 +2793,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:547
 #: static/js/editor/blocks/breadcrumbs/Edit.js:54
 #: static/js/editor/blocks/contact-info/Edit.js:107
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:229
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:268
 msgid "Text"
 msgstr ""
 
@@ -2850,7 +2850,7 @@ msgstr ""
 #: framework/features/blocks/about-me/options.php:58,
 #: framework/features/header/items/account/options.php:578,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:191
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:128
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:129
 msgid "Name"
 msgstr ""
 
@@ -2919,15 +2919,15 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:175,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:190,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:190
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:383
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:425
 msgid "Image"
 msgstr ""
 
 #: framework/features/blocks/about-me/options.php:53,
-#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:96,
-#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:106,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:903,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:913,
+#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:109,
+#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:119,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:910,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:920,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:72
 msgid "Select Image"
 msgstr ""
@@ -3056,7 +3056,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:97,
 #: framework/premium/features/premium-header/items/contacts/options.php:451
 #: framework/premium/static/js/blocks/ContentBlock.js:57
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:459
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:501
 msgid "None"
 msgstr ""
 
@@ -3939,7 +3939,7 @@ msgid "Link Hover/Active"
 msgstr ""
 
 #: framework/premium/extensions/mega-menu/options.php:629,
-#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:149
+#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:162
 msgid "Background Hover"
 msgstr ""
 
@@ -4696,7 +4696,7 @@ msgstr ""
 
 #: framework/premium/features/content-blocks/hooks-manager.php:411,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:756
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:563
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:605
 msgid "Before"
 msgstr ""
 
@@ -4707,7 +4707,7 @@ msgstr ""
 
 #: framework/premium/features/content-blocks/hooks-manager.php:418,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:767
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:572
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:614
 msgid "After"
 msgstr ""
 
@@ -5265,7 +5265,7 @@ msgstr ""
 #: framework/premium/features/media-video/options.php:128
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/RenderOptions.js:129
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:194
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:338
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:380
 msgid "Cover"
 msgstr ""
 
@@ -5543,7 +5543,7 @@ msgstr ""
 
 #: framework/features/header/items/account/options.php:619,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:32
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:246
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:285
 msgid "Link"
 msgstr ""
 
@@ -5657,7 +5657,7 @@ msgid "Dropdown Options"
 msgstr ""
 
 #: framework/features/header/items/account/options.php:1927,
-#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:134,
+#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:147,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:628,
 #: framework/premium/features/premium-header/items/contacts/options.php:635,
 #: framework/premium/features/premium-header/items/contacts/options.php:676,
@@ -5672,7 +5672,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/contacts/options.php:726
 #: static/js/editor/blocks/breadcrumbs/Edit.js:66
 #: static/js/editor/blocks/contact-info/Edit.js:123
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:253
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:292
 msgid "Link Hover"
 msgstr ""
 
@@ -6362,7 +6362,7 @@ msgid "Label"
 msgstr ""
 
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:779
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:584
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:626
 msgid "Fallback"
 msgstr ""
 
@@ -6476,8 +6476,8 @@ msgstr ""
 #: framework/premium/extensions/post-types-extra/features/related-slideshow/feature.php:91,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:345,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:75
-#: static/js/editor/blocks/query/Edit.js:213
-#: static/js/editor/blocks/tax-query/Edit.js:198
+#: static/js/editor/blocks/query/Edit.js:214
+#: static/js/editor/blocks/tax-query/Edit.js:199
 msgid "Autoplay"
 msgstr ""
 
@@ -6495,26 +6495,26 @@ msgid ""
 "cycling an item."
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:92,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:897
+#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:105,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:904
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:75
 msgid "Featured Image"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:100,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:907
+#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:113,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:914
 msgid "Featured Icon/Logo"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:110
+#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:123
 msgid "Accent Color"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:139
+#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:152
 msgid "Text Hover"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:144
+#: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:157
 msgid "Background Initial"
 msgstr ""
 
@@ -6805,48 +6805,48 @@ msgstr ""
 msgid "Blocksy Brands"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:107
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:114
 msgid "Product brands base"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:119
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:126
 msgid "brand"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:570,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:602
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:577,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:609
 msgid "About Brands"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:571,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:604
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:578,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:611
 msgid "About %s"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:628,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:672,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:734,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:801,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:812,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:635,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:679,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:741,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:808,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:819,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:574
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:146
 msgid "Brands"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:631,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:687,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:738
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:522
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:638,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:694,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:745
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:564
 msgid "Logo Size"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:643,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:699,
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:750
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:650,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:706,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:757
 msgid "Logos Gap"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:656,
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:663,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:172,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:190,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:208,
@@ -6859,43 +6859,43 @@ msgstr ""
 msgid "Sticky Row"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:802
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:809
 msgid "Brand"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:803
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:810
 msgid "Search Brands"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:804
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:811
 msgid "All Brands"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:805
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:812
 msgid "Parent Brand"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:806
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:813
 msgid "Parent Brand:"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:807
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:814
 msgid "View Brand"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:808
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:815
 msgid "Edit Brand"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:809
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:816
 msgid "Update Brand"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:810
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:817
 msgid "Add New Brand"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:811
+#: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:818
 msgid "New Brand Name"
 msgstr ""
 
@@ -7756,8 +7756,8 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:795,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:834,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:908
-#: static/js/editor/blocks/query/Edit.js:183
-#: static/js/editor/blocks/tax-query/Edit.js:168
+#: static/js/editor/blocks/query/Edit.js:184
+#: static/js/editor/blocks/tax-query/Edit.js:169
 msgid "Limit"
 msgstr ""
 
@@ -7843,7 +7843,7 @@ msgid "Dual Color"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:28
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:642
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:684
 msgid "Colors"
 msgstr ""
 
@@ -8122,12 +8122,12 @@ msgstr ""
 msgid "Active Filters Label"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/filter-presenter.php:74
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/filter-presenter.php:78
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Preview.js:36
 msgid "Find by %s"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/filter-presenter.php:109
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/filter-presenter.php:113
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/Preview.js:63
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/Preview.js:69
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Preview.js:189
@@ -8573,7 +8573,7 @@ msgstr ""
 #: framework/extensions/newsletter-subscribe/admin-static/js/ListPicker.js:14
 #: framework/extensions/newsletter-subscribe/admin-static/js/ListPicker/Implementation.js:72
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:382
-#: static/js/dashboard/NoTheme.js:64
+#: static/js/dashboard/NoTheme.js:83
 #: static/js/dashboard/screens/SiteExport.js:314
 #: static/js/notifications/VersionMismatchNotice.js:110
 msgid "Loading..."
@@ -9609,24 +9609,24 @@ msgstr ""
 msgid "Extensions"
 msgstr ""
 
-#: static/js/dashboard/NoTheme.js:18
+#: static/js/dashboard/NoTheme.js:36
 msgid "Action Required - Install Blocksy Theme"
 msgstr ""
 
-#: static/js/dashboard/NoTheme.js:24
+#: static/js/dashboard/NoTheme.js:42
 msgid ""
 "Blocksy Companion is the complementary plugin to Blocksy theme. It adds a "
 "bunch of great features to the theme and acts as an unlocker for the Blocksy "
 "Pro package."
 msgstr ""
 
-#: static/js/dashboard/NoTheme.js:31
+#: static/js/dashboard/NoTheme.js:49
 msgid ""
 "In order to take full advantage of all features it has to offer - please "
 "install and activate the Blocksy theme also."
 msgstr ""
 
-#: static/js/dashboard/NoTheme.js:65
+#: static/js/dashboard/NoTheme.js:84
 msgid "Install and activate the Blocksy theme"
 msgstr ""
 
@@ -10211,71 +10211,71 @@ msgstr ""
 msgid "3:2"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:267
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:306
 msgid "Overlay"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:305
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:347
 msgid "Content Source"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:311
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:353
 msgid "Search for field"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:325
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:367
 msgid "View Type"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:374
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:416
 msgid "Image Source"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:387
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:429
 msgid "Icon/Logo"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:426
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:468
 msgid "Expand on click"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:439
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:481
 msgid "Video thumbnail"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:449
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:491
 msgid "Image Hover Effect"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:463
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:505
 msgid "Zoom In"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:467
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:509
 msgid "Zoom Out"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:503
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:545
 msgid "Image size"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:536
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:578
 msgid "Logo Gap"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:588
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:630
 msgid "Custom field fallback"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:676
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:718
 msgid "Overlay opacity"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:698
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:740
 msgid "Term additional class"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:705
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:747
 msgid "Additional class for term items. Useful for styling."
 msgstr ""
 
@@ -10474,33 +10474,33 @@ msgid "Unknown"
 msgstr ""
 
 #: static/js/editor/blocks/post-template/Edit.js:259
-#: static/js/editor/blocks/tax-template/Edit.js:190
+#: static/js/editor/blocks/tax-template/Edit.js:189
 msgid "List view"
 msgstr ""
 
 #: static/js/editor/blocks/post-template/Edit.js:274
-#: static/js/editor/blocks/tax-template/Edit.js:205
+#: static/js/editor/blocks/tax-template/Edit.js:204
 msgid "Grid view"
 msgstr ""
 
 #: static/js/editor/blocks/post-template/Edit.js:292
 #: static/js/editor/blocks/query/Preview.js:126
-#: static/js/editor/blocks/tax-template/Edit.js:223
+#: static/js/editor/blocks/tax-template/Edit.js:222
 msgid "No results found."
 msgstr ""
 
 #: static/js/editor/blocks/post-template/Edit.js:359
-#: static/js/editor/blocks/tax-template/Edit.js:284
+#: static/js/editor/blocks/tax-template/Edit.js:283
 msgid "Desktop Columns"
 msgstr ""
 
 #: static/js/editor/blocks/post-template/Edit.js:371
-#: static/js/editor/blocks/tax-template/Edit.js:297
+#: static/js/editor/blocks/tax-template/Edit.js:296
 msgid "Tablet Columns"
 msgstr ""
 
 #: static/js/editor/blocks/post-template/Edit.js:380
-#: static/js/editor/blocks/tax-template/Edit.js:307
+#: static/js/editor/blocks/tax-template/Edit.js:306
 msgid "Mobile Columns"
 msgstr ""
 
@@ -10508,37 +10508,37 @@ msgstr ""
 msgid "Post Template"
 msgstr ""
 
-#: static/js/editor/blocks/query/Edit.js:122
-#: static/js/editor/blocks/tax-query/Edit.js:123
+#: static/js/editor/blocks/query/Edit.js:123
+#: static/js/editor/blocks/tax-query/Edit.js:124
 msgid "Reset layout"
 msgstr ""
 
-#: static/js/editor/blocks/query/Edit.js:191
-#: static/js/editor/blocks/tax-query/Edit.js:176
+#: static/js/editor/blocks/query/Edit.js:192
+#: static/js/editor/blocks/tax-query/Edit.js:177
 msgid "Slideshow"
 msgstr ""
 
-#: static/js/editor/blocks/query/Edit.js:204
-#: static/js/editor/blocks/tax-query/Edit.js:189
+#: static/js/editor/blocks/query/Edit.js:205
+#: static/js/editor/blocks/tax-query/Edit.js:190
 msgid "Arrows"
 msgstr ""
 
-#: static/js/editor/blocks/query/Edit.js:230
-#: static/js/editor/blocks/tax-query/Edit.js:215
+#: static/js/editor/blocks/query/Edit.js:231
+#: static/js/editor/blocks/tax-query/Edit.js:216
 msgid "Autoplay Speed"
 msgstr ""
 
-#: static/js/editor/blocks/query/Edit.js:249
+#: static/js/editor/blocks/query/Edit.js:250
 msgid "Pagination"
 msgstr ""
 
-#: static/js/editor/blocks/query/Edit.js:276
-#: static/js/editor/blocks/tax-query/Edit.js:246
+#: static/js/editor/blocks/query/Edit.js:277
+#: static/js/editor/blocks/tax-query/Edit.js:247
 msgid "Block ID"
 msgstr ""
 
-#: static/js/editor/blocks/query/Edit.js:282
-#: static/js/editor/blocks/tax-query/Edit.js:252
+#: static/js/editor/blocks/query/Edit.js:283
+#: static/js/editor/blocks/tax-query/Edit.js:253
 msgid ""
 "Please look at the documentation for more information on why this is useful."
 msgstr ""
@@ -10554,7 +10554,7 @@ msgid "Search for patterns"
 msgstr ""
 
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:117
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:112
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:113
 msgid "Order by"
 msgstr ""
 
@@ -10567,7 +10567,7 @@ msgid "Most commented"
 msgstr ""
 
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:165
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:144
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:145
 msgid "Random"
 msgstr ""
 
@@ -10576,17 +10576,17 @@ msgid "Menu Order"
 msgstr ""
 
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:216
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:187
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:188
 msgid "Order"
 msgstr ""
 
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:224
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:195
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:196
 msgid "Descending"
 msgstr ""
 
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:232
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:203
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:204
 msgid "Ascending"
 msgstr ""
 
@@ -10599,7 +10599,7 @@ msgid "Only"
 msgstr ""
 
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:318
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:222
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:290
 msgid "Parameters"
 msgstr ""
 
@@ -10609,7 +10609,7 @@ msgid "Create Custom Layout"
 msgstr ""
 
 #: static/js/editor/blocks/query/edit/PostsPlaceholder.js:40
-#: static/js/editor/blocks/query/index.js:12
+#: static/js/editor/blocks/query/index.js:39
 msgid "Advanced Posts"
 msgstr ""
 
@@ -10639,7 +10639,7 @@ msgstr ""
 msgid "Related"
 msgstr ""
 
-#: static/js/editor/blocks/query/index.js:13
+#: static/js/editor/blocks/query/index.js:40
 #: static/js/editor/blocks/tax-query/index.js:13
 msgid "Create advanced queries based on your specified criterias."
 msgstr ""
@@ -10707,12 +10707,28 @@ msgstr ""
 msgid "Socials"
 msgstr ""
 
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:120
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:121
 msgid "ID"
 msgstr ""
 
-#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:136
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:137
 msgid "Count"
+msgstr ""
+
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:247
+msgid "Level"
+msgstr ""
+
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:255
+msgid "All Taxonomies"
+msgstr ""
+
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:263
+msgid "Only Parent Taxonomies"
+msgstr ""
+
+#: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:271
+msgid "Relevant Taxonomies"
 msgstr ""
 
 #: static/js/editor/blocks/tax-query/edit/TermsPlaceholder.js:40
@@ -11020,17 +11036,17 @@ msgstr ""
 msgid "Add Conditions"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/utils.js:439
+#: static/js/editor/blocks/dynamic-data/components/utils.js:482
 msgctxt "Indicates this palette comes from the theme."
 msgid "Theme"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/utils.js:452
+#: static/js/editor/blocks/dynamic-data/components/utils.js:495
 msgctxt "Indicates this palette comes from WordPress."
 msgid "Default"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/utils.js:461
+#: static/js/editor/blocks/dynamic-data/components/utils.js:504
 msgctxt "Indicates this palette is created by the user."
 msgid "Custom"
 msgstr ""

@@ -402,6 +402,31 @@ class Dashboard {
 
 			$slug = 'blocksy';
 
+			$theme_activate_url = null;
+			$theme_activate_url_multi_site = null;
+
+			if (current_user_can('switch_themes')) {
+				if (is_multisite()) {
+					$theme_activate_url_multi_site = add_query_arg(
+						[
+							'action' => 'enable',
+							'_wpnonce' => wp_create_nonce('enable-theme_' . $slug),
+							'theme' => $slug
+						],
+						network_admin_url('themes.php')
+					);
+				}
+
+				$theme_activate_url = add_query_arg(
+					[
+						'action' => 'activate',
+						'_wpnonce' => wp_create_nonce('switch-theme_' . $slug),
+						'stylesheet' => $slug,
+					],
+					admin_url('themes.php')
+				);
+			}
+
 			$localize_data = [
 				'themeIsInstalled' => (
 					!! wp_get_theme($slug)
@@ -409,7 +434,8 @@ class Dashboard {
 					! wp_get_theme($slug)->errors()
 				),
 				'updatesNonce' => wp_installing() ? '' : wp_create_nonce('updates'),
-				'activate'=> current_user_can('switch_themes') ? wp_nonce_url(admin_url('themes.php?action=activate&amp;stylesheet=' . $slug), 'switch-theme_' . $slug) : null
+				'activate_multi_site' => $theme_activate_url_multi_site,
+				'activate'=> $theme_activate_url
 			];
 
 			$blocksy_data = Plugin::instance()->is_blocksy_data;

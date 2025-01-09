@@ -12,47 +12,42 @@ export const getAttributes = () => {
 
 const shortenId = (clientId) => clientId.split('-')[0]
 
-export function getBlockDocumentRoot(props) {
-	const iframes = document.querySelectorAll(
-		'.edit-site-visual-editor__editor-canvas'
-	)
-	let _document = document
+function isDuplicate({ attributes, blockType }) {
+	const iframes = document.querySelectorAll('iframe')
 
-	// check for block editor iframes
-	for (let i = 0; i < iframes.length; i++) {
-		let block = iframes[i].contentDocument.getElementById(
-			'block-' + props.clientId
-		)
+	const allDocuments = [
+		document,
+		...Array.from(iframes).map((iframe) => iframe.contentDocument),
+	]
 
-		if (block !== null) {
-			_document = iframes[i].contentDocument
-			break
-		}
-	}
-
-	return _document
-}
-
-function isDuplicate(props) {
-	let output = false
-
-	const _document = getBlockDocumentRoot(props)
-	const elements = _document.querySelectorAll(
-		`[data-id="${props.attributes.uniqueId}"]`
-	)
+	const elements = allDocuments.flatMap((document) => {
+		return [
+			...document.querySelectorAll(
+				`[data-id="${attributes.uniqueId}"][data-type="${blockType}"]`
+			),
+		]
+	})
 
 	if (elements.length > 1) {
-		output = true
+		return true
 	}
 
-	return output
+	return false
 }
 
 // Add support for this, otherwise IDs will be duplicated on clone
 // https://github.com/WordPress/gutenberg/pull/38643
-export const useUniqueId = ({ attributes, clientId, setAttributes }) => {
+export const useUniqueId = ({
+	attributes,
+	clientId,
+	setAttributes,
+	blockType,
+}) => {
 	useEffect(() => {
-		if (!attributes.uniqueId || isDuplicate({ attributes, clientId })) {
+		if (
+			!attributes.uniqueId ||
+			isDuplicate({ attributes, clientId, blockType })
+		) {
 			setAttributes({
 				uniqueId: shortenId(clientId),
 			})

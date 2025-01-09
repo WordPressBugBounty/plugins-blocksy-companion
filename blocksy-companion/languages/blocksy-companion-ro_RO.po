@@ -33,7 +33,7 @@
 	<footer id="gp-footer" class="gp-footer">
 		<div class="gp-footer-credits">
 			<p class="gp-footer-copyright">&copy;
-				2024				<a href="https://translate.creativethemes.com/">Translate</a>
+				2025				<a href="https://translate.creativethemes.com/">Translate</a>
 			</p>
 
 			

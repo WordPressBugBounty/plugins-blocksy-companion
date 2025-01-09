@@ -130,24 +130,6 @@ $overlay_atts = [
 	'aria-hidden' => 'true',
 ];
 
-// $custom_gradient = blocksy_akg('customGradient', $attributes, '');
-// $gradient = blocksy_akg('gradient', $attributes, '');
-
-// $gradient_value = ! empty($gradient) ? $gradient : $custom_gradient;
-
-// if (! empty($gradient_value)) {
-// 	$overlay_classes[] = 'has-background-gradient';
-// 	$overlay_classes[] = 'wp-block-cover__gradient-background';
-
-// 	if (!empty($gradient)) {
-// 		$gradientClass = "has-$gradient_value-gradient-background";
-
-// 		$overlay_classes[] = $gradientClass;
-// 	} else {
-// 		$overlay_atts['style'] = 'background-image: ' . $custom_gradient . ';';
-// 	}
-// }
-
 $overlay_content = blocksy_html_tag(
 	'span',
 	array_merge(
