@@ -121,6 +121,18 @@ class CustomizerOptionsManager {
 
 			wp_send_json_success([]);
 		});
+
+		add_action('wp_ajax_blocksy_customizer_wipe_caches', function () {
+			if (! current_user_can('manage_options')) {
+				wp_send_json_error();
+			}
+
+			do_action('customize_save_after');
+			do_action('blocksy:dynamic-css:refresh-caches');
+			do_action('blocksy:cache-manager:purge-all');
+
+			wp_send_json_success([]);
+		});
 	}
 
 	private function get_data($theme_slug = null, $strategy = 'options') {

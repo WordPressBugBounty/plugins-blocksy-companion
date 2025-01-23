@@ -13,6 +13,16 @@ $loggedin_account_label_visibility = blocksy_akg(
 		'mobile' => false,
 	]
 );
+ 
+$loggedin_icon_visibility = blocksy_akg(
+	'loggedin_icon_visibility',
+	$atts,
+	[
+		'desktop' => true,
+		'tablet' => true,
+		'mobile' => true,
+	]
+);
 
 // Logged in
 $loggedin_interaction_type = blocksy_akg('loggedin_interaction_type', $atts, 'dropdown');
@@ -88,7 +98,7 @@ if ($loggedin_media === 'icon') {
 				),
 				'icon_container' => false,
 				'icon_html_atts' => [
-					'class' => 'ct-icon',
+					'class' => trim('ct-icon ' . blocksy_visibility_classes($loggedin_icon_visibility))
 				]
 			]);
 		}

@@ -133,7 +133,7 @@ class ConditionsManagerAPI {
 			$local_terms = array_map(function ($tax) {
 				return [
 					'id' => $tax->term_id,
-					'label' => $tax->name,
+					'label' => htmlspecialchars_decode($tax->name),
 					'group' => get_taxonomy($tax->taxonomy)->label,
 					'post_types' => get_taxonomy($tax->taxonomy)->object_type
 				];
@@ -162,7 +162,7 @@ class ConditionsManagerAPI {
 			if ($maybe_term) {
 				$terms[] = [
 					'id' => $maybe_term->term_id,
-					'label' => $maybe_term->name,
+					'label' => htmlspecialchars_decode($maybe_term->name),
 					'group' => get_taxonomy($maybe_term->taxonomy)->label,
 					'post_types' => get_taxonomy($maybe_term->taxonomy)->object_type
 				];
@@ -275,7 +275,7 @@ class ConditionsManagerAPI {
 		$posts_result = array_map(function ($post) {
 			return [
 				'id' => $post->ID,
-				'label' => $post->post_title,
+				'label' => htmlspecialchars_decode($post->post_title),
 				'post_type' => $post->post_type
 			];
 		}, $posts_result);

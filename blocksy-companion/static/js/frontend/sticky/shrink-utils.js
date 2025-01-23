@@ -52,10 +52,14 @@ export const getRowInitialMinHeight = (el) => {
 		}
 	}
 
+	const selectorsWithExpandedHeight = ['[data-items] > [data-id*="menu"]']
+
 	const selectors = [
 		'[data-items] > [data-id*="widget-area"]',
 		'[data-items] > [data-id*="content-block"]',
 		'[data-items] > [data-id*="text"]',
+
+		...selectorsWithExpandedHeight,
 	]
 
 	let maxHeight = selectors.reduce((acc, selector) => {

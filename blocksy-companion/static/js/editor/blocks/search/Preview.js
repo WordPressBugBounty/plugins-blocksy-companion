@@ -11,6 +11,7 @@ import { __ } from 'ct-i18n'
 
 import { Spinner } from '@wordpress/components'
 import useDynamicPreview from '../../hooks/useDynamicPreview'
+import cls from 'classnames'
 
 import { colors } from './colors'
 
@@ -38,6 +39,7 @@ const Preview = ({ attributes, setAttributes, buttonStyles }) => {
 		buttonPosition,
 		has_taxonomy_filter,
 		buttonUseText,
+		taxonomy_filter_visibility,
 	} = attributes
 
 	const maybeParts = useRef({
@@ -128,7 +130,12 @@ const Preview = ({ attributes, setAttributes, buttonStyles }) => {
 
 			<div className="ct-search-form-controls">
 				{has_taxonomy_filter === 'yes' ? (
-					<span className="ct-fake-select-container">
+					<span
+						className={cls('ct-fake-select-container', {
+							'ct-hidden-lg': !taxonomy_filter_visibility.desktop,
+							'ct-hidden-md': !taxonomy_filter_visibility.tablet,
+							'ct-hidden-sm': !taxonomy_filter_visibility.mobile,
+						})}>
 						<select className="ct-select-taxonomy" />
 						<RichText
 							tagName="span"

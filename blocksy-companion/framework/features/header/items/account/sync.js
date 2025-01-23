@@ -623,6 +623,17 @@ ctEvents.on('ct:header:sync:item:account', ({ optionId, optionValue }) => {
 		})
 	}
 
+	if (
+		optionId === 'loggedin_icon_visibility' ||
+		optionId === 'loggedout_icon_visibility'
+	) {
+		updateAndSaveEl(selector, (el) => {
+			;[...el.querySelectorAll('.ct-icon')].map((icon) => {
+				responsiveClassesFor(optionValue, icon)
+			})
+		})
+	}
+
 	if (optionId === 'loggedin_label') {
 		updateAndSaveEl(selector, (el) => {
 			;[...el.querySelectorAll('.ct-label')].map((label) => {

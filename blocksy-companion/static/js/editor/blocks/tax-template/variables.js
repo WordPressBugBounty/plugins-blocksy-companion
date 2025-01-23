@@ -64,6 +64,7 @@ export const getVariablesDefinitions = ({ attributes, context }) => {
 				selector: `[data-id='${uniqueId}']`,
 				variable: 'grid-columns-width',
 				unit: '',
+				responsive: true,
 			},
 
 			value: gridColumnsWidth,

@@ -306,7 +306,7 @@ class TaxQuery {
 						]);
 
 						$term_obj->count = $all_terms[0]->count;
-						
+
 						$block_instance = $block->parsed_block;
 
 						// Set the block name to one that does not correspond to an existing registered block.
@@ -325,7 +325,11 @@ class TaxQuery {
 						$single_item = blocksy_html_tag(
 							'div',
 							[
-								'class' => 'wp-block-term is-layout-flow',
+								'class' => implode(' ', [
+									'wp-block-term',
+									'is-layout-flow',
+									// 'ct-term-' . $term_obj->term_id
+								])
 							],
 							$block_content
 						);

@@ -21,6 +21,16 @@ $loggedout_account_label_visibility = blocksy_akg(
 	]
 );
 
+$loggedout_icon_visibility = blocksy_akg(
+	'loggedout_icon_visibility',
+	$atts,
+	[
+		'desktop' => true,
+		'tablet' => true,
+		'mobile' => true,
+	]
+);
+
 $link = '#account-modal';
 
 $login_account_action = blocksy_akg('login_account_action', $atts, 'modal');
@@ -73,6 +83,10 @@ if (blocksy_akg('logged_out_style', $atts, 'icon') === 'icon') {
 					$atts,
 					['icon' => 'blc blc-user']
 				),
+				'icon_container' => false,
+				'icon_html_atts' => [
+					'class' => trim('ct-icon ' . blocksy_visibility_classes($loggedin_icon_visibility))
+				]
 			]);
 		}
 

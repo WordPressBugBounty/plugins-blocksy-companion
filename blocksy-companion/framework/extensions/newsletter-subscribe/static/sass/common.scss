@@ -1,6 +1,7 @@
 .ct-newsletter-subscribe-form {
 	--theme-link-initial-color: var(--text-color, var(--theme-text-color));
 	--theme-button-min-height: var(--theme-form-field-height, 40px);
+	--theme-button-padding: 5px 20px;
 	--theme-button-border-radius: var(--theme-form-field-border-radius, 3px);
 
 	.ct-newsletter-subscribe-form-elements {

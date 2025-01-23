@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-13 06:38:33+0000\n"
+"PO-Revision-Date: 2025-01-14 07:49:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -8271,15 +8271,15 @@ msgstr ""
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:123
 msgid "Agency Details"
-msgstr ""
+msgstr "Details bureau"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:131
 msgid "Agency Name"
-msgstr ""
+msgstr "Naam bureau"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:159
 msgid "Agency URL"
-msgstr ""
+msgstr "URL bureau"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:187
 msgid "Agency Support/Contact Form URL"
@@ -8287,15 +8287,15 @@ msgstr ""
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:220
 msgid "Theme Details"
-msgstr ""
+msgstr "Themadetails"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:228
 msgid "Theme Name"
-msgstr ""
+msgstr "Themanaam"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:256
 msgid "Theme Description"
-msgstr ""
+msgstr "Themabeschrijving"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:286
 msgid "Theme Screenshot URL"
@@ -8372,12 +8372,12 @@ msgstr "Als deze optie is ingeschakeld, wordt de White Label-extensie verborgen.
 #: framework/premium/static/js/footer/CloneItem.js:66
 #: framework/premium/static/js/header/CloneItem.js:66
 msgid "Clone Item"
-msgstr ""
+msgstr "Kloon item"
 
 #: framework/premium/static/js/footer/CloneItem.js:90
 #: framework/premium/static/js/header/CloneItem.js:90
 msgid "Remove Item"
-msgstr ""
+msgstr "Verwijder item"
 
 #: framework/premium/static/js/footer/CreateFooter.js:107
 #: framework/premium/static/js/header/CreateHeader.js:106
@@ -8417,7 +8417,7 @@ msgstr ""
 
 #: framework/premium/static/js/footer/CreateFooter.js:72
 msgid "Footer name"
-msgstr ""
+msgstr "Footernaam"
 
 #: framework/premium/static/js/footer/EditConditions.js:100
 msgid "Add one or more conditions in order to display your footer."
@@ -8430,11 +8430,11 @@ msgstr ""
 
 #: framework/premium/static/js/footer/PanelsManager.js:169
 msgid "Remove footer"
-msgstr ""
+msgstr "Verwijder footer"
 
 #: framework/premium/static/js/footer/PanelsManager.js:193
 msgid "Remove Footer"
-msgstr ""
+msgstr "Verwijder footer"
 
 #: framework/premium/static/js/footer/PanelsManager.js:196
 msgid "You are about to remove a custom footer, are you sure you want to continue?"
@@ -8445,12 +8445,12 @@ msgstr ""
 #: static/js/header/PanelsManager.js:217
 #: static/js/options/CustomizerOptionsManager.js:463
 msgid "Cancel"
-msgstr ""
+msgstr "Annuleer"
 
 #: framework/premium/static/js/footer/PanelsManager.js:228
 #: static/js/header/PanelsManager.js:233
 msgid "Confirm"
-msgstr ""
+msgstr "Bevestig"
 
 #: framework/premium/static/js/footer/PanelsManager.js:68
 #: static/js/header/PanelsManager.js:74
@@ -8576,11 +8576,11 @@ msgstr "%s %s Taxonomie"
 
 #: framework/features/conditions/rules/basic.php:3
 msgid "Entire Website"
-msgstr ""
+msgstr "Gehele website"
 
 #: framework/features/conditions/rules/basic.php:57
 msgid "Basic"
-msgstr ""
+msgstr "Basis"
 
 #: framework/extensions/trending/customizer.php:4,
 #: framework/features/blocks/query/block.php:19,
@@ -8588,7 +8588,7 @@ msgstr ""
 #: framework/features/conditions/rules/posts.php:33,
 #: framework/premium/features/premium-header/items/search-input/options.php:4
 msgid "Posts"
-msgstr ""
+msgstr "Berichten"
 
 #: framework/features/conditions/rules/posts.php:27,
 #: framework/premium/features/content-blocks/hooks-manager.php:440,
@@ -8598,15 +8598,15 @@ msgstr ""
 #: framework/premium/features/content-blocks/hooks-manager.php:470,
 #: framework/premium/features/content-blocks/hooks-manager.php:478
 msgid "Single Post"
-msgstr ""
+msgstr "Enkele bericht"
 
 #: framework/features/conditions/rules/posts.php:15
 msgid "Post Categories"
-msgstr ""
+msgstr "Categorieën bericht"
 
 #: framework/features/conditions/rules/posts.php:20
 msgid "Post Tags"
-msgstr ""
+msgstr "Tags bericht"
 
 #: framework/features/blocks/search/options.php:7,
 #: framework/features/conditions/rules/pages.php:52,
@@ -8697,11 +8697,11 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/nothing_found.php:19,
 #: framework/premium/features/content-blocks/options/popup.php:25
 msgid "Other"
-msgstr ""
+msgstr "Overig"
 
 #: framework/features/conditions-manager.php:307
 msgid "Language"
-msgstr ""
+msgstr "Taal"
 
 #: framework/features/demo-install.php:98
 msgid "Your PHP installation doesn't have support for XML. Please install the <i>xml</i> or <i>simplexml</i> PHP extension in order to be able to install starter sites. You might need to contact your hosting provider to assist you in doing so."
@@ -8717,7 +8717,7 @@ msgstr ""
 
 #: framework/features/dynamic-css.php:54
 msgid "File"
-msgstr ""
+msgstr "Bestand"
 
 #: framework/features/dynamic-css.php:55,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:67,
@@ -8725,7 +8725,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:159
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:204
 msgid "Inline"
-msgstr ""
+msgstr "Inline"
 
 #: framework/features/google-analytics.php:69
 msgid "Google Analytics v4"
@@ -8843,23 +8843,23 @@ msgstr "Type 2"
 
 #: framework/extensions/cookies-consent/customizer.php:40
 msgid "Cookie period"
-msgstr ""
+msgstr "Bewaartijd cookie"
 
 #: framework/extensions/cookies-consent/customizer.php:48
 msgid "One hour"
-msgstr ""
+msgstr "Eén uur"
 
 #: framework/extensions/cookies-consent/customizer.php:49
 msgid "One day"
-msgstr ""
+msgstr "Eén dag"
 
 #: framework/extensions/cookies-consent/customizer.php:50
 msgid "One week"
-msgstr ""
+msgstr "Eén week"
 
 #: framework/extensions/cookies-consent/customizer.php:51
 msgid "One month"
-msgstr ""
+msgstr "Eén maand"
 
 #: framework/extensions/cookies-consent/customizer.php:52
 msgid "Three months"
@@ -8897,16 +8897,16 @@ msgstr "Voor altijd"
 #: framework/premium/features/premium-header/items/contacts/options.php:323,
 #: framework/premium/features/premium-header/items/contacts/options.php:368
 msgid "Content"
-msgstr ""
+msgstr "Content"
 
 #: framework/extensions/cookies-consent/customizer.php:64,
 #: framework/extensions/cookies-consent/helpers.php:7
 msgid "We use cookies to ensure that we give you the best experience on our website."
-msgstr ""
+msgstr "We gebruiken cookies om je de beste ervaring op onze website te geven."
 
 #: framework/features/blocks/search/options.php:58
 msgid "Button Text"
-msgstr ""
+msgstr "Knoptekst"
 
 #: framework/extensions/cookies-consent/customizer.php:80,
 #: framework/extensions/cookies-consent/helpers.php:10
@@ -9245,15 +9245,15 @@ msgstr "Maximale breedte"
 
 #: framework/extensions/cookies-consent/customizer.php:119
 msgid "I accept the %sPrivacy Policy%s*"
-msgstr ""
+msgstr "Ik accepteer het %sprivacybeleid%s*"
 
 #: framework/extensions/cookies-consent/customizer.php:123
 msgid "This text will appear under each comment form and subscribe form."
-msgstr ""
+msgstr "Deze tekst verschijnt onder elk reactie- en aanmeldformulier."
 
 #: framework/extensions/cookies-consent/helpers.php:55
 msgid "I accept the %sPrivacy Policy%s"
-msgstr ""
+msgstr "Ik accepteer het %sprivacybeleid%s"
 
 #: framework/features/blocks/about-me/options.php:128
 msgid "Customizer"
@@ -9743,7 +9743,7 @@ msgstr "E-mailadres"
 #: framework/extensions/product-reviews/extension.php:544,
 #: framework/extensions/product-reviews/extension.php:546
 msgid "Product Reviews"
-msgstr ""
+msgstr "Productreviews"
 
 #: framework/extensions/product-reviews/config.php:6
 msgid "This extension lets you easily create an affiliate marketing type of website by giving you options to create a personalized product review and use your affiliate links to direct your readers to the purchase page."
@@ -9810,7 +9810,7 @@ msgstr ""
 
 #: framework/extensions/product-reviews/extension.php:545
 msgid "Product Review"
-msgstr ""
+msgstr "Productreview"
 
 #: framework/extensions/product-reviews/extension.php:547
 msgid "Parent Product Review"
@@ -9818,7 +9818,7 @@ msgstr ""
 
 #: framework/extensions/product-reviews/extension.php:548
 msgid "All Reviews"
-msgstr ""
+msgstr "Alle reviews"
 
 #: framework/extensions/product-reviews/extension.php:549
 msgid "View Product Review"
@@ -10023,15 +10023,15 @@ msgstr ""
 #: framework/extensions/product-reviews/metabox.php:152,
 #: framework/extensions/product-reviews/views/single-top.php:162
 msgid "Read More"
-msgstr ""
+msgstr "Lees verder"
 
 #: framework/extensions/product-reviews/metabox.php:172
 msgid "Short Description"
-msgstr ""
+msgstr "Korte beschrijving"
 
 #: framework/extensions/product-reviews/metabox.php:187
 msgid "Scores"
-msgstr ""
+msgstr "Scores"
 
 #: framework/extensions/product-reviews/metabox.php:227
 msgid "Product specs"
@@ -10456,7 +10456,7 @@ msgstr "Rechts"
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:14
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/index.js:56
 msgid "Newsletter"
-msgstr ""
+msgstr "Nieuwsbrief"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:13,
 #: framework/features/blocks/contact-info/options.php:39,
@@ -10544,7 +10544,7 @@ msgstr ""
 
 #: framework/features/header/modal/register.php:112
 msgid "Register"
-msgstr ""
+msgstr "Registreer"
 
 #: framework/helpers/exts-configs.php:60
 msgid "Connect your Adobe Fonts project and use the selected fonts throughout Blocksy and your favorite page builder."

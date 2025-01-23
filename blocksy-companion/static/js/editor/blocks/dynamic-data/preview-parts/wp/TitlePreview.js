@@ -4,6 +4,7 @@ import { withSelect } from '@wordpress/data'
 import { __ } from 'ct-i18n'
 
 import { useEntityProp } from '@wordpress/core-data'
+import { toPlainText } from '../../utils'
 
 const TitlePreview = ({ attributes: { has_field_link }, postId, postType }) => {
 	const [rawTitle = '', setTitle, fullTitle] = useEntityProp(
@@ -24,12 +25,12 @@ const TitlePreview = ({ attributes: { has_field_link }, postId, postType }) => {
 	if (has_field_link === 'yes') {
 		return (
 			<a href="#" rel="noopener noreferrer">
-				{rawTitle}
+				{toPlainText(rawTitle)}
 			</a>
 		)
 	}
 
-	return rawTitle
+	return toPlainText(rawTitle)
 }
 
 export default TitlePreview

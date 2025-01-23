@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.84
+Stable tag: 2.0.85
 
 == Description ==
 
@@ -52,6 +52,10 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.85: 2025-01-23
+- Improvement: Properly generate the CSS file when copying customizer values from parent theme to child theme
+- Improvement: Sticky header - better calculation if margins have been set for specific elements
+
 2.0.84: 2025-01-09
 - Improvement: Demo importer - make sure Elementor "Post Types" option is exported properly
 - Improvement: Demo importer - properly regenerate taxonomies css file after demo install

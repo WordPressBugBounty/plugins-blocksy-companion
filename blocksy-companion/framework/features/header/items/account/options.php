@@ -513,6 +513,25 @@ $options = [
 								'responsive' => true,
 								'divider' => 'top',
 							],
+
+							'loggedin_icon_visibility' => [
+								'label' => __('Icon Visibility', 'blocksy-companion'),
+								'type' => 'ct-visibility',
+								'design' => 'block',
+								'divider' => 'top',
+								'allow_empty' => true,
+								'value' => blocksy_default_responsive_value([
+									'desktop' => true,
+									'tablet' => true,
+									'mobile' => true,
+								]),
+
+								'choices' => blocksy_ordered_keys([
+									'desktop' => __('Desktop', 'blocksy-companion'),
+									'tablet' => __('Tablet', 'blocksy-companion'),
+									'mobile' => __('Mobile', 'blocksy-companion'),
+								]),
+							],
 						],
 					],
 
@@ -520,7 +539,7 @@ $options = [
 						'label' => __('Label Visibility', 'blocksy-companion'),
 						'type' => 'ct-visibility',
 						'design' => 'block',
-						'divider' => 'top',
+						'divider' => 'top:full',
 						'allow_empty' => true,
 						'value' => blocksy_default_responsive_value([
 							'desktop' => false,
@@ -750,7 +769,8 @@ $options = [
 					blocksy_rand_md5() => [
 						'type' => 'ct-condition',
 						'condition' => ['logged_out_style' => 'icon'],
-						'options' => blc_site_has_feature()
+						'options' => [
+							blc_site_has_feature()
 							? [
 								'logged_out_icon_source' => [
 									'label' => __(
@@ -794,189 +814,128 @@ $options = [
 										],
 									],
 								],
+							] : [],
 
-								blocksy_rand_md5() => [
-									'type' => 'ct-condition',
-									'condition' => [
-										'logged_out_icon_source' => 'default',
-									],
-									'options' => [
-										'accountHeaderIcon' => [
-											'label' => false,
-											'type' => 'ct-image-picker',
-											'value' => 'type-1',
-											'attr' => [
-												'data-type' => 'background',
-												'data-columns' => '3',
-											],
-											'divider' => 'top',
-											'setting' => [
-												'transport' => 'postMessage',
-											],
-											'choices' => [
-												'type-1' => [
-													'src' => blocksy_image_picker_file(
-														'account-1'
-													),
-													'title' => __(
-														'Type 1',
-														'blocksy-companion'
-													),
-												],
-
-												'type-2' => [
-													'src' => blocksy_image_picker_file(
-														'account-2'
-													),
-													'title' => __(
-														'Type 2',
-														'blocksy-companion'
-													),
-												],
-
-												'type-3' => [
-													'src' => blocksy_image_picker_file(
-														'account-3'
-													),
-													'title' => __(
-														'Type 3',
-														'blocksy-companion'
-													),
-												],
-
-												'type-4' => [
-													'src' => blocksy_image_picker_file(
-														'account-4'
-													),
-													'title' => __(
-														'Type 4',
-														'blocksy-companion'
-													),
-												],
-
-												'type-5' => [
-													'src' => blocksy_image_picker_file(
-														'account-5'
-													),
-													'title' => __(
-														'Type 5',
-														'blocksy-companion'
-													),
-												],
-
-												'type-6' => [
-													'src' => blocksy_image_picker_file(
-														'account-6'
-													),
-													'title' => __(
-														'Type 6',
-														'blocksy-companion'
-													),
-												],
-											],
-										],
-									],
+							blocksy_rand_md5() => [
+								'type' => 'ct-condition',
+								'condition' => blc_site_has_feature()
+								? [
+									'logged_out_icon_source' => 'default',
+								]
+								: [
+									'logged_out_icon_source' =>
+										'! not_existing',
 								],
-
-								'accountHeaderIconSize' => [
-									'label' => __(
-										'Icon Size',
-										'blocksy-companion'
-									),
-									'type' => 'ct-slider',
-									'min' => 5,
-									'max' => 50,
-									'value' => 15,
-									'responsive' => true,
-									'divider' => 'top',
-								],
-							]
-							: [
-								'accountHeaderIcon' => [
-									'label' => false,
-									'type' => 'ct-image-picker',
-									'value' => 'type-1',
-									'attr' => [
-										'data-type' => 'background',
-										'data-columns' => '3',
-									],
-									'divider' => 'top',
-									'choices' => [
-										'type-1' => [
-											'src' => blocksy_image_picker_file(
-												'account-1'
-											),
-											'title' => __(
-												'Type 1',
-												'blocksy-companion'
-											),
+								'options' => [
+									'accountHeaderIcon' => [
+										'label' => false,
+										'type' => 'ct-image-picker',
+										'value' => 'type-1',
+										'attr' => [
+											'data-type' => 'background',
+											'data-columns' => '3',
 										],
-
-										'type-2' => [
-											'src' => blocksy_image_picker_file(
-												'account-2'
-											),
-											'title' => __(
-												'Type 2',
-												'blocksy-companion'
-											),
+										'divider' => 'top',
+										'setting' => [
+											'transport' => 'postMessage',
 										],
+										'choices' => [
+											'type-1' => [
+												'src' => blocksy_image_picker_file(
+													'account-1'
+												),
+												'title' => __(
+													'Type 1',
+													'blocksy-companion'
+												),
+											],
 
-										'type-3' => [
-											'src' => blocksy_image_picker_file(
-												'account-3'
-											),
-											'title' => __(
-												'Type 3',
-												'blocksy-companion'
-											),
-										],
+											'type-2' => [
+												'src' => blocksy_image_picker_file(
+													'account-2'
+												),
+												'title' => __(
+													'Type 2',
+													'blocksy-companion'
+												),
+											],
 
-										'type-4' => [
-											'src' => blocksy_image_picker_file(
-												'account-4'
-											),
-											'title' => __(
-												'Type 4',
-												'blocksy-companion'
-											),
-										],
+											'type-3' => [
+												'src' => blocksy_image_picker_file(
+													'account-3'
+												),
+												'title' => __(
+													'Type 3',
+													'blocksy-companion'
+												),
+											],
 
-										'type-5' => [
-											'src' => blocksy_image_picker_file(
-												'account-5'
-											),
-											'title' => __(
-												'Type 5',
-												'blocksy-companion'
-											),
-										],
+											'type-4' => [
+												'src' => blocksy_image_picker_file(
+													'account-4'
+												),
+												'title' => __(
+													'Type 4',
+													'blocksy-companion'
+												),
+											],
 
-										'type-6' => [
-											'src' => blocksy_image_picker_file(
-												'account-6'
-											),
-											'title' => __(
-												'Type 6',
-												'blocksy-companion'
-											),
+											'type-5' => [
+												'src' => blocksy_image_picker_file(
+													'account-5'
+												),
+												'title' => __(
+													'Type 5',
+													'blocksy-companion'
+												),
+											],
+
+											'type-6' => [
+												'src' => blocksy_image_picker_file(
+													'account-6'
+												),
+												'title' => __(
+													'Type 6',
+													'blocksy-companion'
+												),
+											],
 										],
 									],
-								],
-
-								'accountHeaderIconSize' => [
-									'label' => __(
-										'Icon Size',
-										'blocksy-companion'
-									),
-									'type' => 'ct-slider',
-									'min' => 5,
-									'max' => 50,
-									'value' => 15,
-									'responsive' => true,
-									'divider' => 'top',
 								],
 							],
+
+							'accountHeaderIconSize' => [
+								'label' => __(
+									'Icon Size',
+									'blocksy-companion'
+								),
+								'type' => 'ct-slider',
+								'min' => 5,
+								'max' => 50,
+								'value' => 15,
+								'responsive' => true,
+								'divider' => 'top',
+							],
+
+							'loggedout_icon_visibility' => [
+								'label' => __('Icon Visibility', 'blocksy-companion'),
+								'type' => 'ct-visibility',
+								'design' => 'block',
+								'divider' => 'top',
+								'allow_empty' => true,
+								'value' => blocksy_default_responsive_value([
+									'desktop' => true,
+									'tablet' => true,
+									'mobile' => true,
+								]),
+
+								'choices' => blocksy_ordered_keys([
+									'desktop' => __('Desktop', 'blocksy-companion'),
+									'tablet' => __('Tablet', 'blocksy-companion'),
+									'mobile' => __('Mobile', 'blocksy-companion'),
+								]),
+							],
+						]
 					],
 
 					'loggedout_account_label_visibility' => [

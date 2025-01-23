@@ -13,6 +13,26 @@ import classnames from 'classnames'
 
 import phpUnserialize from 'phpunserialize'
 
+const wipeCaches = () => {
+	return new Promise((resolve) => {
+		const body = new FormData()
+
+		body.append('action', 'blocksy_customizer_wipe_caches')
+		body.append('wp_customize', 'on')
+
+		fetch(window.ajaxurl, {
+			method: 'POST',
+			body,
+		}).then((response) => {
+			if (response.status === 200) {
+				response.json().then(({ success, data }) => {
+					resolve()
+				})
+			}
+		})
+	})
+}
+
 const CustomizerOptionsManager = () => {
 	const [futureConfig, setFutureConfig] = useState(null)
 	const [isCopyingOptions, setIsCopyingOptions] = useState(null)
@@ -366,7 +386,11 @@ const CustomizerOptionsManager = () => {
 													.json()
 													.then(
 														({ success, data }) => {
-															location.reload()
+															wipeCaches().then(
+																() => {
+																	location.reload()
+																}
+															)
 														}
 													)
 											}

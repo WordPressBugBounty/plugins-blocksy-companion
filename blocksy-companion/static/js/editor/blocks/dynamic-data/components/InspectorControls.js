@@ -51,7 +51,6 @@ const computeValue = (attributes) => {
 	return attributesToStyle({
 		style: attributes.style,
 		textColor: attributes.textColor,
-		backgroundColor: attributes.backgroundColor,
 	})
 }
 
@@ -238,18 +237,6 @@ const DynamicDataInspectorControls = ({
 		)
 	}
 
-	const backgroundColor = decodeValue(value?.color?.background)
-
-	const setBackgroundColor = (newColor) => {
-		const newValue = setImmutably(
-			value,
-			['color', 'background'],
-			encodeColorValue(newColor)
-		)
-
-		onChange(newValue)
-	}
-
 	const setHoverLinkColor = (newColor) => {
 		onChange(
 			setImmutably(
@@ -263,21 +250,6 @@ const DynamicDataInspectorControls = ({
 	const colorsPanelSettings =
 		attributes.viewType === 'default' || !fieldIsImageLike(fieldDescriptor)
 			? [
-					{
-						colorValue: textColor,
-						label: __('Text', 'blocksy-companion'),
-						enableAlpha: true,
-						onColorChange: setTextColor,
-					},
-
-					{
-						colorValue: backgroundColor,
-
-						label: __('Background', 'blocksy-companion'),
-						enableAlpha: true,
-						onColorChange: setBackgroundColor,
-					},
-
 					...(attributes.has_field_link === 'yes'
 						? [
 								{
@@ -297,7 +269,14 @@ const DynamicDataInspectorControls = ({
 									onColorChange: setHoverLinkColor,
 								},
 						  ]
-						: []),
+						: [
+								{
+									colorValue: textColor,
+									label: __('Text', 'blocksy-companion'),
+									enableAlpha: true,
+									onColorChange: setTextColor,
+								},
+						  ]),
 			  ]
 			: [
 					{
@@ -651,7 +630,6 @@ const DynamicDataInspectorControls = ({
 
 					if (fieldType === 'text') {
 						setTextColor()
-						setBackgroundColor()
 						setLinkColor()
 						setHoverLinkColor()
 
@@ -667,7 +645,6 @@ const DynamicDataInspectorControls = ({
 
 							setAttributes({
 								textColor: undefined,
-								backgroundColor: undefined,
 
 								style: newStyle,
 							})

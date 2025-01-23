@@ -32,9 +32,17 @@ const TEMPLATE = [
 	// ['core/post-excerpt'],
 ]
 
-export function TaxTemplateInnerBlocks({ isSlideshow, elementDescriptor }) {
+export function TaxTemplateInnerBlocks({
+	isSlideshow,
+	termId,
+	elementDescriptor,
+}) {
 	const innerBlocksProps = useInnerBlocksProps(
-		{ className: 'wp-block-term is-layout-flow' },
+		{
+			className: classnames('wp-block-term is-layout-flow', [
+				// `ct-term-${termId}`,
+			]),
+		},
 		{ template: TEMPLATE, __unstableDisableLayoutClassNames: true }
 	)
 
@@ -58,11 +66,14 @@ function TaxTemplateBlockPreview({
 	isSlideshow,
 	elementDescriptor,
 	setActiveBlockContextId,
+	termId,
 }) {
 	const blockPreviewProps = useBlockPreview({
 		blocks,
 		props: {
-			className: 'wp-block-term is-layout-flow',
+			className: classnames('wp-block-term is-layout-flow', [
+				// `ct-term-${termId}`,
+			]),
 		},
 	})
 
@@ -231,6 +242,7 @@ const Edit = ({
 						(activeBlockContextId || blockContexts[0]?.termId) ? (
 							<TaxTemplateInnerBlocks
 								isSlideshow={isSlideshow}
+								termId={blockContext.termId}
 								elementDescriptor={
 									elementDescriptorForIndex
 										? elementDescriptorForIndex(index)
@@ -244,6 +256,7 @@ const Edit = ({
 							blockContextId={blockContext.termId}
 							setActiveBlockContextId={setActiveBlockContextId}
 							isSlideshow={isSlideshow}
+							termId={blockContext.termId}
 							elementDescriptor={
 								elementDescriptorForIndex
 									? elementDescriptorForIndex(index)

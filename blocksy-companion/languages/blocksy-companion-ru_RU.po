@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-24 19:57:07+0000\n"
+"PO-Revision-Date: 2025-01-12 17:55:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3242,7 +3242,7 @@ msgstr "Атрибуты"
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:266,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:470
 msgid "Availability"
-msgstr "Доступность"
+msgstr "Наличие"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:469
 msgid "Modal Border Radius"
@@ -5642,7 +5642,7 @@ msgstr "термины"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:91
 msgid "images"
-msgstr "и��ображения"
+msgstr "изобр��жения"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:92
 msgid "posts"
@@ -6651,7 +6651,7 @@ msgstr "Начало модальной формы восстановления"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:548
 msgid "Lost password form modal end"
-msgstr "Конец модальной формы восстановления"
+msgstr "Конец модальной формы вос��тановления"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:556
 msgid "Before main content"
@@ -10551,7 +10551,7 @@ msgstr "Регистрация"
 
 #: framework/helpers/exts-configs.php:60
 msgid "Connect your Adobe Fonts project and use the selected fonts throughout Blocksy and your favorite page builder."
-msgstr "Подключите свой проект Adobe Fonts и используйте выбранные шрифты в теме са��та и конструкторе страниц."
+msgstr "Подключите свой проект Adobe Fonts и используйте выбранные шрифты в теме сайта и конструкторе страниц."
 
 #: framework/helpers/exts-configs.php:71
 msgid "Inject custom code snippets throughout your website. The extension works globally or on a per post/page basis."
