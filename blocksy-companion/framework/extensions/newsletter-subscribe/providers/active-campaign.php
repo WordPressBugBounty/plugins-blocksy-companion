@@ -8,7 +8,7 @@ class ActiveCampaignProvider extends Provider {
 		if (! $api_url) {
 			return 'api_url_invalid';
 		}
-		
+
 		if (! $api_key) {
 			return 'api_key_invalid';
 		}
@@ -21,8 +21,8 @@ class ActiveCampaignProvider extends Provider {
 					'accept' => 'application/json',
 				]
 			]
-		);		
-		
+		);
+
 		if (! is_wp_error($response)) {
 			if (200 !== wp_remote_retrieve_response_code($response)) {
 				return 'api_key_invalid';
@@ -57,6 +57,7 @@ class ActiveCampaignProvider extends Provider {
 		$args = wp_parse_args($args, [
 			'email' => '',
 			'name' => '',
+			'group' => ''
 		]);
 
 		$settings = $this->get_settings();
@@ -116,7 +117,7 @@ class ActiveCampaignProvider extends Provider {
 				CURLOPT_CUSTOMREQUEST => "POST",
 				CURLOPT_POSTFIELDS => json_encode([
 					"contactList" => [
-						"list" => $settings['list_id'],
+						"list" => $args['group'],
 						"contact" => $response['contact']['id'],
 						"status" => 1
 					]
@@ -140,7 +141,7 @@ class ActiveCampaignProvider extends Provider {
 				];
 			} else {
 				$response = json_decode($response, true);
-	
+
 				if (isset($response['errors'][0])) {
 					return [
 						'result' => 'no',

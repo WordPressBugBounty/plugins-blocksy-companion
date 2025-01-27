@@ -17,7 +17,9 @@ function isDuplicate({ attributes, blockType }) {
 
 	const allDocuments = [
 		document,
-		...Array.from(iframes).map((iframe) => iframe.contentDocument),
+		...Array.from(iframes)
+			.map((iframe) => iframe.contentDocument)
+			.filter((cD) => cD),
 	]
 
 	const elements = allDocuments.flatMap((document) => {

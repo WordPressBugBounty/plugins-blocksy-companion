@@ -129,18 +129,17 @@ $manager = \Blocksy\Extensions\NewsletterSubscribe\Provider::get_for_settings();
 // Button value
 $provider_data = $manager->get_form_url_and_gdpr_for($list_id);
 
-if (!$provider_data) {
+if (! $provider_data) {
 	return;
 }
 
-if ($provider_data['provider'] === 'mailerlite') {
-	$settings = $manager->get_settings();
-	$provider_data['provider'] .= ':' . $settings['list_id'];
+$settings = $manager->get_settings();
+
+if (! $list_id) {
+	$list_id = $settings['list_id'];
 }
 
-if ($provider_data['provider'] === 'fluentcrm') {
-	$provider_data['provider'] .= ':' . $provider_data['list_id'];
-}
+$provider_data['provider'] .= ':' . $list_id;
 
 $form_url = $provider_data['form_url'];
 $has_gdpr_fields = $provider_data['has_gdpr_fields'];

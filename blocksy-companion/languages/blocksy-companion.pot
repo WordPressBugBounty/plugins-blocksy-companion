@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-01-23 17:47+0000\n"
+"POT-Creation-Date: 2025-01-27 19:53+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -1255,7 +1255,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/contacts/options.php:268,
 #: framework/premium/features/premium-header/items/contacts/options.php:313,
 #: framework/premium/features/premium-header/items/contacts/options.php:358,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:231
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:270
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:45
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:125
 msgid "Title"
@@ -1272,7 +1272,7 @@ msgstr ""
 #: framework/features/blocks/dynamic-data/options.php:142,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:78,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:235,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:329
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:354
 msgid "Description"
 msgstr ""
 
@@ -1378,7 +1378,7 @@ msgstr ""
 #: framework/extensions/newsletter-subscribe/helpers.php:37,
 #: framework/extensions/newsletter-subscribe/helpers.php:81,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:122,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:151
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:150
 msgid "Your name"
 msgstr ""
 
@@ -1711,11 +1711,11 @@ msgstr ""
 msgid "Enter your email address below to subscribe to our newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:160
+#: framework/extensions/newsletter-subscribe/helpers.php:165
 msgid "First name"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:165
+#: framework/extensions/newsletter-subscribe/helpers.php:170
 msgid "Email address"
 msgstr ""
 
@@ -1913,7 +1913,7 @@ msgstr ""
 #: framework/extensions/product-reviews/helpers.php:30,
 #: framework/extensions/product-reviews/metabox.php:181,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:306,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:475
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:456
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:132
 msgid "Rating"
 msgstr ""
@@ -2846,7 +2846,7 @@ msgid "Fields Gap"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:137,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:156
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:155
 msgid "Your email *"
 msgstr ""
 
@@ -2855,7 +2855,7 @@ msgstr ""
 msgid "Newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:257,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:256,
 #: framework/features/blocks/about-me/options.php:58,
 #: framework/features/header/items/account/options.php:597,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:191
@@ -2863,7 +2863,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:266,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:265,
 #: framework/features/blocks/contact-info/options.php:391,
 #: framework/features/blocks/dynamic-data/options.php:143,
 #: framework/features/header/modal/register.php:47,
@@ -2876,13 +2876,13 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/providers/active-campaign.php:154,
+#: framework/extensions/newsletter-subscribe/providers/active-campaign.php:155,
 #: framework/extensions/newsletter-subscribe/providers/brevo.php:116,
 #: framework/extensions/newsletter-subscribe/providers/campaign-monitor.php:136,
-#: framework/extensions/newsletter-subscribe/providers/convertkit.php:97,
+#: framework/extensions/newsletter-subscribe/providers/convertkit.php:98,
 #: framework/extensions/newsletter-subscribe/providers/demo.php:40,
-#: framework/extensions/newsletter-subscribe/providers/fluent-crm.php:94,
-#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:187,
+#: framework/extensions/newsletter-subscribe/providers/fluent-crm.php:87,
+#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:188,
 #: framework/extensions/newsletter-subscribe/providers/mailerlite-classic.php:104,
 #: framework/extensions/newsletter-subscribe/providers/mailerlite-new.php:123,
 #: framework/extensions/newsletter-subscribe/providers/mailpoet.php:90
@@ -2893,7 +2893,7 @@ msgstr ""
 msgid "Demo List"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:179
+#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:180
 msgid "%s is already a list member."
 msgstr ""
 
@@ -2925,7 +2925,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:68,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:99,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:143,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:175,
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:222,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:190,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:190
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:404
@@ -5286,14 +5286,14 @@ msgid "%s Avatar"
 msgstr ""
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:25,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:562
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:409
 #: static/js/editor/blocks/dynamic-data/preview-parts/woo/StockPreview.js:6
 msgid "In Stock"
 msgstr ""
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:263,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:562,
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:409,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/includes/swatch-element-render.php:47,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:57
 #: static/js/editor/blocks/dynamic-data/preview-parts/woo/StockPreview.js:7
@@ -5696,7 +5696,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/sku-layer.php:60,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:324,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:515
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:391
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:140
 msgid "SKU"
 msgstr ""
@@ -6541,7 +6541,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:69,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:199,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:59,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:279,
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:298,
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:178,
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:208,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:53,
@@ -6828,7 +6828,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:741,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:808,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:819,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:574
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:664
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:146
 msgid "Brands"
 msgstr ""
@@ -6927,15 +6927,15 @@ msgstr ""
 msgid "Compare Button"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:279
+#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:272
 msgid "Compare products modal"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:287
+#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:280
 msgid "Compare Products"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:293
+#: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:286
 msgid "Close Compare Modal"
 msgstr ""
 
@@ -6971,12 +6971,12 @@ msgid "Compare Table Fields"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:217,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:304
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:326
 msgid "Add to Cart"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:342,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:551
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:419
 msgid "Availability"
 msgstr ""
 
@@ -7531,17 +7531,17 @@ msgstr ""
 msgid "Show if cart is empty"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:394,
+#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:396,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:176
 msgid "Congratulations! You got free shipping 🎉"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:371,
+#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:373,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:135
 msgid "Add {price} more to get free shipping!"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:384,
+#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:386,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:160
 msgid "Add {items} more items to get free shipping!"
 msgstr ""
@@ -8068,20 +8068,10 @@ msgid "Recently Viewed"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/bar.php:101,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:154,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:157,
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:168,
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:171,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/views/columns/product-remove-button.php:12
 msgid "Remove Product"
-msgstr ""
-
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:673,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/views/table-no-results.php:3,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:19
-msgid "Browse products"
-msgstr ""
-
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:676
-msgid "You don't have any products in your compare list yet."
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/status.php:147
@@ -8303,6 +8293,11 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:222
 msgid "Retry Send"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/views/table-no-results.php:3,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:19
+msgid "Browse products"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/views/table-no-results.php:6

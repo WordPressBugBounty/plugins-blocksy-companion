@@ -85,7 +85,7 @@ if (blocksy_akg('logged_out_style', $atts, 'icon') === 'icon') {
 				),
 				'icon_container' => false,
 				'icon_html_atts' => [
-					'class' => trim('ct-icon ' . blocksy_visibility_classes($loggedin_icon_visibility))
+					'class' => trim('ct-icon ' . blocksy_visibility_classes($loggedout_icon_visibility))
 				]
 			]);
 		}

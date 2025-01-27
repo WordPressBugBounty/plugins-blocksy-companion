@@ -4,7 +4,7 @@ namespace Blocksy\Extensions\NewsletterSubscribe;
 
 class ConvertKitProvider extends Provider {
 	public function fetch_lists($api_key, $api_url = '') {
-		
+
 		if (! $api_key) {
 			return 'api_key_invalid';
 		}
@@ -13,7 +13,7 @@ class ConvertKitProvider extends Provider {
 			'https://api.convertkit.com/v3/forms/?api_key=' . $api_key,
 			[]
 		);
-		
+
 		if (! is_wp_error($response)) {
 			if (200 !== wp_remote_retrieve_response_code($response)) {
 				return 'api_key_invalid';
@@ -48,6 +48,7 @@ class ConvertKitProvider extends Provider {
 		$args = wp_parse_args($args, [
 			'email' => '',
 			'name' => '',
+			'group' => '',
 		]);
 
 		$settings = $this->get_settings();
@@ -55,7 +56,7 @@ class ConvertKitProvider extends Provider {
 		$curl = curl_init();
 
 		curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://api.convertkit.com/v3/forms/' . $settings['list_id'] . '/subscribe',
+			CURLOPT_URL => 'https://api.convertkit.com/v3/forms/' . $args['group'] . '/subscribe',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => "",
 			CURLOPT_MAXREDIRS => 10,

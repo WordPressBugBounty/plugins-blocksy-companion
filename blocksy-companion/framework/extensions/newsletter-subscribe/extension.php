@@ -58,7 +58,7 @@ class BlocksyExtensionNewsletterSubscribe {
 			if ('blocksy_newsletter_subscribe' === $tag) {
 				wp_enqueue_style('blocksy-block-newsletter-styles');
 			}
-			
+
 			return $output;
 		}, 10, 3);
 

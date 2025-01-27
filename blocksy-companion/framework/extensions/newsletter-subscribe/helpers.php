@@ -96,10 +96,15 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 		return '';
 	}
 
-	if ($provider_data['provider'] !== 'mailchimp') {
-		$settings = $manager->get_settings();
-		$provider_data['provider'] .= ':' . $settings['list_id'];
+	$settings = $manager->get_settings();
+
+	$list_id = $settings['list_id'];
+
+	if (! empty($args['list_id'])) {
+		$list_id = $args['list_id'];
 	}
+
+	$provider_data['provider'] .= ':' . $list_id;
 
 	$form_url = $provider_data['form_url'];
 	$has_gdpr_fields = $provider_data['has_gdpr_fields'];

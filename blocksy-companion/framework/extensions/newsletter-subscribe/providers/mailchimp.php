@@ -122,6 +122,7 @@ class MailchimpProvider extends Provider {
 		$args = wp_parse_args($args, [
 			'email' => '',
 			'name' => '',
+			'group' => ''
 		]);
 
 		$settings = $this->get_settings();
@@ -137,7 +138,7 @@ class MailchimpProvider extends Provider {
 		}
 
 		curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://' . $region[1] . '.api.mailchimp.com/3.0/lists/' . $settings['list_id'] . '/members/',
+			CURLOPT_URL => 'https://' . $region[1] . '.api.mailchimp.com/3.0/lists/' . $args['group'] . '/members/',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => "",
 			CURLOPT_MAXREDIRS => 10,
@@ -167,7 +168,7 @@ class MailchimpProvider extends Provider {
 			];
 		} else {
 			$response = json_decode($response, true);
-			
+
 			if (
 				isset($response['status'])
 				&&
@@ -185,7 +186,7 @@ class MailchimpProvider extends Provider {
 			return [
 				'result' => 'yes',
 				'message' => __('Thank you for subscribing to our newsletter!', 'blocksy-companion'),
-				'res' => $response
+				'res' => $response,
 			];
 		}
 	}

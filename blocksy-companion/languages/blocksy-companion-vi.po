@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-14 04:34:59+0000\n"
+"PO-Revision-Date: 2025-01-26 00:07:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -7721,7 +7721,7 @@ msgstr "Chiều cao tối đa"
 #: framework/premium/features/content-blocks/options/popup.php:339,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:525
 msgid "Popup Animation"
-msgstr "Hoạt hình cửa sổ bật lên"
+msgstr "Hiệu ứng động cửa sổ bật lên"
 
 #: framework/premium/features/content-blocks/options/popup.php:345,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:531
@@ -7756,7 +7756,7 @@ msgstr "Trượt vào từ dưới"
 #: framework/premium/features/content-blocks/options/popup.php:355,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:542
 msgid "Animation Speed"
-msgstr "Tốc độ hoạt hình"
+msgstr "Tốc độ hiệu ứng động"
 
 #: framework/premium/features/content-blocks/options/popup.php:372,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:560
@@ -8256,7 +8256,7 @@ msgstr "Thêm một hoặc nhiều điều kiện để hiển thị thanh bên 
 
 #: framework/premium/extensions/sidebars/static/js/main.js:53
 msgid "Enter a name in the input below and hit the Create Sidebar button."
-msgstr "Nhập tên vào ô dưới đây và nhấn nút tạo thanh bên."
+msgstr "Nhập tên vào ô dư���i đây và nhấn nút tạo thanh bên."
 
 #: framework/premium/extensions/sidebars/static/js/main.js:60
 msgid "Sidebar name"
@@ -8702,7 +8702,7 @@ msgstr "Ngôn ngữ"
 
 #: framework/features/demo-install.php:98
 msgid "Your PHP installation doesn't have support for XML. Please install the <i>xml</i> or <i>simplexml</i> PHP extension in order to be able to install starter sites. You might need to contact your hosting provider to assist you in doing so."
-msgstr "Cài đặt PHP của bạn không có hỗ trợ cho XML. Vui lòng cài đặt phần mở rộng <i>xml</i> hoặc <i>simplexml</i> PHP để có thể c��i đặt mẫu web bắt đầu. Bạn có thể cần liên hệ với nhà cung cấp dịch vụ lưu trữ của mình để hỗ trợ bạn làm việc này."
+msgstr "Cài đặt PHP của bạn không có hỗ trợ cho XML. Vui lòng cài đặt phần mở rộng <i>xml</i> hoặc <i>simplexml</i> PHP để có thể cài đặt mẫu web bắt đầu. Bạn có thể cần liên hệ với nhà cung cấp dịch vụ lưu trữ của mình để hỗ trợ bạn làm việc này."
 
 #: framework/features/dynamic-css.php:48
 msgid "Dynamic CSS Output"
