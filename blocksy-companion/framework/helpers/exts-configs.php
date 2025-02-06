@@ -387,6 +387,15 @@ if (! $only_billing_data) {
 					'documentation' => 'https://creativethemes.com/blocksy/docs/woocommerce/waitlist/',
 					'customize' => admin_url('customize.php?ct_autofocus=woocommerce_general:has_product_waitlist_panel'),
 					'require_refresh' => true,
+				],
+
+				[
+					'id' => 'suggested-products',
+					'title' => __('Suggested Products', 'blocksy-companion'),
+					'description' => __('Display a curated list of recommended products based on customer selection to enhance their experience and increase conversion rates.', 'blocksy-companion'),
+					'documentation' => 'https://creativethemes.com/blocksy/docs/woocommerce/suggested-products/',
+					'customize' => admin_url('customize.php?ct_autofocus=woocommerce_general:has_suggested_products_panel'),
+					'require_refresh' => true,
 				]
 			],
 		]

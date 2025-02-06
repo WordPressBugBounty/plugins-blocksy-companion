@@ -44,7 +44,10 @@ export const getStylesForBlock = (variables, cssURLs = []) => {
 
 	let styles = result ? <style>{result}</style> : null
 
-	cssURLs = [ct_localizations.backend_dynamic_styles_urls.flexy]
+	cssURLs = [
+		(window.ct_localizations || window.ct_customizer_localizations)
+			.backend_dynamic_styles_urls.flexy,
+	]
 
 	return (
 		<Fragment>

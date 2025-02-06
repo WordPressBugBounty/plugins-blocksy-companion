@@ -113,18 +113,39 @@ if ($fill) {
 
 
 // v.2.0.74 migration
-$share_networks = blocksy_akg('share_networks', $atts, []);
+$share_networks = blocksy_akg(
+	'share_networks',
+	$atts,
+	[
+		[
+			'id' => 'facebook',
+			'enabled' => true,
+		],
+		[
+			'id' => 'twitter',
+			'enabled' => true,
+		],
+		[
+			'id' => 'pinterest',
+			'enabled' => true,
+		],
+		[
+			'id' => 'linkedin',
+			'enabled' => true,
+		]
+	]
+);
 
 if (empty($share_networks)) {
 	foreach ($atts as $key => $value) {
 		if ($value !== 'yes' && $value !== 'no') {
 			continue;
 		}
-	
+
 		if (strpos($key, 'share_') !== 0) {
 			continue;
 		}
-	
+
 		$share_networks[str_replace('share_', '', $key)] = [
 			'id' => str_replace('share_', '', $key),
 			'enabled' => $value === 'yes'

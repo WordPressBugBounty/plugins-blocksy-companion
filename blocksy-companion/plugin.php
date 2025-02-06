@@ -36,7 +36,7 @@ class Plugin {
 
 	private $is_blocksy = '__NOT_SET__';
 	public $is_blocksy_data = null;
-	private $desired_blocksy_version = '2.0.79-beta1';
+	private $desired_blocksy_version = '2.0.87-beta1';
 
 	private $request_uri = '';
 

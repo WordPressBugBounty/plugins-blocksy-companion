@@ -1,11 +1,11 @@
 === Blocksy Companion ===
 Tags: widget, widgets
-Requires at least: 5.2
+Requires at least: 6.5
 Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.86
+Stable tag: 2.0.87
 
 == Description ==
 
@@ -52,6 +52,9 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.87: 2025-02-06
+- Improvement: General fixes and improvements
+
 2.0.86: 2025-01-27
 - Improvement: Newsletter Subscribe - Better handling of Custom List ID in the newsletter subscribe block
 

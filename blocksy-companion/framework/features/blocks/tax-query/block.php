@@ -56,6 +56,10 @@ class TaxQuery {
 			BLOCKSY_PATH . '/static/js/editor/blocks/tax-query/block.json',
 			[
 				'render_callback' => function ($attributes, $content, $block) {
+					$border_result = get_block_core_post_featured_image_border_attributes(
+						$attributes
+					);
+					
 					if (strpos($content, 'wp-block-blocksy-tax-query"></div>') !== false) {
 						return '';
 					}
@@ -73,6 +77,17 @@ class TaxQuery {
 							'data-id',
 							$attributes['uniqueId']
 						);
+
+						if (! empty($border_result['class'])) {
+							$block_reader->add_class($border_result['class']);
+						}
+
+						if (! empty($border_result['style'])) {
+							$block_reader->set_attribute(
+								'style',
+								$border_result['style'] . $block_reader->get_attribute('style')
+							);
+						}
 					}
 
 					return $block_reader->get_updated_html();

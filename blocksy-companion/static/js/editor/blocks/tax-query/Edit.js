@@ -169,7 +169,7 @@ const Edit = ({
 										label: __('Limit', 'blocksy-companion'),
 										value: '',
 										min: 1,
-										max: 100,
+										max: 200,
 									},
 
 									has_slideshow: {

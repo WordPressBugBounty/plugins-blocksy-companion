@@ -8,9 +8,12 @@ import {
 	Fragment,
 } from '@wordpress/element'
 import { Dialog, DialogOverlay, DialogContent } from './reach/dialog'
-import { Transition } from 'blocksy-options'
+import { Transition, animated } from 'blocksy-options'
 import { __ } from 'ct-i18n'
 import classnames from 'classnames'
+
+const AnimatedDialogOverlay = animated(DialogOverlay)
+const AnimatedDialogContent = animated(DialogContent)
 
 const defaultIsVisible = (i) => !!i
 
@@ -35,14 +38,16 @@ const Overlay = ({
 			leave={{ opacity: 0, y: 10 }}>
 			{(props, items) =>
 				isVisible(items) && (
-					<DialogOverlay
+					<AnimatedDialogOverlay
 						style={{ opacity: props.opacity }}
 						container={document.querySelector('#wpbody')}
 						onDismiss={() => onDismiss()}>
-						<DialogContent
+						<AnimatedDialogContent
 							className={classnames('ct-admin-modal', className)}
 							style={{
-								transform: `translate3d(0px, ${props.y}px, 0px)`,
+								transform: props.y.to(
+									(y) => `translate3d(0px, ${y}px, 0px)`
+								),
 							}}>
 							<button
 								className="close-button"
@@ -51,8 +56,8 @@ const Overlay = ({
 							</button>
 
 							{render(items, props)}
-						</DialogContent>
-					</DialogOverlay>
+						</AnimatedDialogContent>
+					</AnimatedDialogOverlay>
 				)
 			}
 		</Transition>
