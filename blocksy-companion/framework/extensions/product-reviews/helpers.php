@@ -28,7 +28,7 @@ function blocksy_get_product_review_overall_score($post_id = null) {
 
 	$output .= '<span class="ct-score-label">';
 	$output .= __('Rating', 'blocksy-companion');
-	$output .= ':</span>';
+	$output .= ': </span>';
 
 	$output .= '<span class="ct-average-score">' . $avg_score . '/5</span>';
 

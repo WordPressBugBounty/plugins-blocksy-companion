@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-17 18:35:35+0000\n"
+"PO-Revision-Date: 2025-02-13 13:42:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2912,7 +2912,7 @@ msgstr "Gratulacje! Otrzymałeś darmową wysyłkę 🎉"
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:359,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:135
 msgid "Add {price} more to get free shipping!"
-msgstr "Dodaj {cena} więcej, aby otrzymać darmową wysyłkę!"
+msgstr "Dodaj {price} więcej, aby otrzymać darmową wysyłkę!"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:15
 msgid "Show In Cart Page"

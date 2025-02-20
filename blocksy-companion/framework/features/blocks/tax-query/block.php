@@ -298,6 +298,7 @@ class TaxQuery {
 							'has_slideshow_arrows' => 'yes',
 							'has_slideshow_autoplay' => 'no',
 							'has_slideshow_autoplay_speed' => 3,
+							'hide_empty' => 'yes',
 						]
 					);
 
@@ -316,7 +317,7 @@ class TaxQuery {
 
 						$all_terms = get_terms([
 							'taxonomy' => $term_obj->taxonomy,
-							'hide_empty' => false,
+							'hide_empty' => $context['hide_empty'] === 'yes',
 							'include' => [$term_obj->term_id]
 						]);
 
@@ -507,6 +508,7 @@ class TaxQuery {
 				// all | parent | relevant
 				'level' => 'all',
 				'limit' => 5,
+				'hide_empty' => 'yes',
 				'offset' => 0,
 				'orderby' => 'none',
 				'order' =>  'desc',
@@ -574,7 +576,8 @@ class TaxQuery {
 			'orderby' => $attributes['orderby'],
 			'order' => $attributes['order'],
 			'offset' => $attributes['offset'],
-			'number' => $attributes['limit']
+			'number' => $attributes['limit'],
+			'hide_empty' => $attributes['hide_empty'] === 'yes',
 		];
 
 		if (

@@ -97,9 +97,9 @@
 			--theme-button-shadow: none;
 			--theme-button-transform: none;
 
-			@include media-breakpoint-down (xs) {
-				flex: 1;
-			}
+			// @include media-breakpoint-down (xs) {
+			// 	flex: 1;
+			// }
 		}
 	}
 

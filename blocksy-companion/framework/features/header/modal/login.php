@@ -13,6 +13,8 @@ if (! $forgot_password_inline) {
 	$forgot_pass_class .= '-static';
 }
 
+$login_field_name = is_account_page() ? 'username' : 'log';
+
 ?>
 
 <form name="loginform" id="loginform" class="login" action="#" method="post">
@@ -21,7 +23,7 @@ if (! $forgot_password_inline) {
 
 	<p>
 		<label for="user_login"><?php echo __('Username or Email Address', 'blocksy-companion') ?></label>
-		<input type="text" name="log" id="user_login" class="input" value="" size="20" autocomplete="username" autocapitalize="off">
+		<input type="text" name="<?php echo $login_field_name; ?>" id="user_login" class="input" value="" size="20" autocomplete="username" autocapitalize="off">
 	</p>
 
 	<p>

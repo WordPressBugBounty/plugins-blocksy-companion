@@ -26,6 +26,15 @@ $loggedin_icon_visibility = blocksy_akg(
 
 // Logged in
 $loggedin_interaction_type = blocksy_akg('loggedin_interaction_type', $atts, 'dropdown');
+
+if (
+	isset($row_id) && $row_id === 'offcanvas'
+	||
+	$device !== 'desktop'
+) {
+	$loggedin_interaction_type = 'link';
+}
+
 $account_link = blocksy_akg('account_link', $atts, 'profile');
 $dropdown_html = '';
 

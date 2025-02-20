@@ -31,6 +31,12 @@ export const maybeHandleLoginForm = (el) => {
 
 		let body = new FormData(maybeLogin)
 		body.append('redirect_to', location.href)
+		if (maybeLogin.querySelector('[name="username"]')) {
+			body.append(
+				'log',
+				maybeLogin.querySelector('[name="username"]').value
+			)
+		}
 
 		// let url = maybeLogin.action
 
@@ -65,7 +71,11 @@ export const maybeHandleLoginForm = (el) => {
 
 						if (res.login) {
 							if (res.two_factor_required) {
-								if ($('#wfls-prompt-overlay').length === 0) {
+								const wfltOverlay = maybeLogin.querySelector(
+									'#wfls-prompt-overlay'
+								)
+
+								if (!wfltOverlay) {
 									var overlay = $(
 										'<div id="wfls-prompt-overlay"></div>'
 									)

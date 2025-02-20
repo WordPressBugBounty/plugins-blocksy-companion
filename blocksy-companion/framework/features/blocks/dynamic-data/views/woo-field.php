@@ -81,6 +81,10 @@ if (! empty($border_result['style'])) {
 	$wrapper_attr['style'] .= $border_result['style'];
 }
 
+$block_type = WP_Block_Type_Registry::get_instance()->get_registered('blocksy/dynamic-data');
+$block_type->supports['color'] = true;
+wp_apply_colors_support($block_type, $attributes);
+
 $wrapper_attr = get_block_wrapper_attributes($wrapper_attr);
 
 echo blocksy_html_tag(
@@ -88,3 +92,4 @@ echo blocksy_html_tag(
 	$wrapper_attr,
 	$value
 );
+

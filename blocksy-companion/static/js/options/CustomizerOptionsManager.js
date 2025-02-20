@@ -216,7 +216,11 @@ const CustomizerOptionsManager = () => {
 													.json()
 													.then(
 														({ success, data }) => {
-															location.reload()
+															wipeCaches().then(
+																() => {
+																	location.reload()
+																}
+															)
 														}
 													)
 											}

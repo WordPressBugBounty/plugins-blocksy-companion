@@ -1,4 +1,4 @@
-import { createElement, render, useState } from '@wordpress/element'
+import { createElement, useState } from '@wordpress/element'
 import * as check from '@wordpress/element'
 import { __ } from 'ct-i18n'
 

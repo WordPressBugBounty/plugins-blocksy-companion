@@ -43,6 +43,7 @@
 		"taxonomy",
 		"level",
 		"limit",
+		"hide_empty",
 		"order",
 		"orderby",
 		"offset",
