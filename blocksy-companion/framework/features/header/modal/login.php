@@ -13,7 +13,11 @@ if (! $forgot_password_inline) {
 	$forgot_pass_class .= '-static';
 }
 
-$login_field_name = is_account_page() ? 'username' : 'log';
+$login_field_name = 'log';
+
+if (function_exists('is_account_page') && is_account_page()) {
+	$login_field_name = 'username';
+}
 
 ?>
 
