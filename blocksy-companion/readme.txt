@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.89
+Stable tag: 2.0.90
 
 == Description ==
 
@@ -52,6 +52,9 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.90: 2025-02-21
+- Improvement: General fixes and improvements
+
 2.0.89: 2025-02-20
 - Improvement: Properly check for is_account_page in account modal
 

@@ -8256,7 +8256,7 @@ msgstr "Thêm một hoặc nhiều điều kiện để hiển thị thanh bên 
 
 #: framework/premium/extensions/sidebars/static/js/main.js:53
 msgid "Enter a name in the input below and hit the Create Sidebar button."
-msgstr "Nhập tên vào ô dư���i đây và nhấn nút tạo thanh bên."
+msgstr "Nhập tên vào ô dưới đây và nhấn nút tạo thanh bên."
 
 #: framework/premium/extensions/sidebars/static/js/main.js:60
 msgid "Sidebar name"

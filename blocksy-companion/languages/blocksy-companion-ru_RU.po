@@ -6651,7 +6651,7 @@ msgstr "Начало модальной формы восстановления"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:548
 msgid "Lost password form modal end"
-msgstr "Конец модальной формы восстановления"
+msgstr "Конец модальной формы вос��тановления"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:556
 msgid "Before main content"
