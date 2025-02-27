@@ -2,7 +2,7 @@
 .ct-header-account-dropdown {
 	width: 250px;
 	color: var(--theme-text-color);
-	margin-top: var(--dropdown-top-offset, 15px);
+	margin-top: var(--sticky-state-dropdown-top-offset, var(--dropdown-top-offset, 15px));
 	padding-block: var(--menu-items-spacing, 10px);
 	box-shadow: var(--theme-box-shadow);
 	border-radius: var(--theme-border-radius, 2px);
@@ -26,7 +26,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: var(--dropdown-top-offset, 15px);
+		height: var(--sticky-state-dropdown-top-offset, var(--dropdown-top-offset, 15px));
 		transform: translateY(-100%);
 	}
 

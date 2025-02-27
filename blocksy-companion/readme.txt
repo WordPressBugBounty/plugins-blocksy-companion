@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.90
+Stable tag: 2.0.91
 
 == Description ==
 
@@ -52,6 +52,11 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.91: 2025-02-27
+- Improvement: Ability to change the order of first & last name in the account header element drop down
+- Improvement: Better integration with WPMobile app plugin
+- Improvement: Starter sites importer proper check for DOM PHP extension presence
+
 2.0.90: 2025-02-21
 - Improvement: General fixes and improvements
 

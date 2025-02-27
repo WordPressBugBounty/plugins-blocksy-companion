@@ -280,6 +280,29 @@ class Plugin {
 					$maybe_foreign_theme = $_REQUEST['theme'];
 				}
 
+				$is_wpappninja = isset($_REQUEST['wpappninja']);
+
+				if (
+					isset($_SERVER['HTTP_REFERER'])
+					&&
+					preg_match('#wpappninja_simul4#', $_SERVER['HTTP_REFERER'])
+				) {
+					$is_wpappninja = true;
+				}
+
+				// if WPMobile.App plugin is active and we're in the preview
+				if ($is_wpappninja && $is_correct_theme) {
+					$options = get_option('wpappninja');
+
+					if (! isset($options['wpappninja_main_theme'])) {
+						$options['wpappninja_main_theme'] = 'WPMobile.App';
+					}
+
+					if ($options['wpappninja_main_theme'] !== 'No theme') {
+						$is_correct_theme = false;
+					}
+				}
+
 				if ($is_correct_theme && $maybe_foreign_theme) {
 					$foreign_theme_obj = wp_get_theme($maybe_foreign_theme);
 

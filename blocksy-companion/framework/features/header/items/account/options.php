@@ -11,6 +11,34 @@ $layer_settings = [
 	'user_info' => [
 		'label' => __('User Info', 'blocksy-companion'),
 		'options' => [
+			'account_user_info_display_name' => [
+				'label' => __('User Name', 'blocksy-companion'),
+				'type' => 'text',
+				'value' => '{first_name} {last_name}',
+				'design' => 'block',
+				'desc' => __('Available fields: {first_name}, {last_name}, {user_name}', 'blocksy-companion'),
+				'sync' => [
+					'shouldSkip' => true,
+				],
+			],
+
+			'account_user_info_additional_fields' => [
+				'label' => __('Additional User Info', 'blocksy-companion'),
+				'type' => 'text',
+				'value' => '{user_email}',
+				'design' => 'block',
+				'desc' => __('Available fields: {user_email}, {user_name}, {user_role}', 'blocksy-companion'),
+				'sync' => [
+					'shouldSkip' => true,
+				],
+			],
+
+			'has_account_dropdown_avatar' => [
+				'label' => __('User Avatar', 'blocksy-companion'),
+				'type' => 'ct-switch',
+				'value' => 'yes',
+			],
+
 			'account_user_info_link' => [
 				'label' => __( 'Action Link', 'blocksy-companion' ),
 				'type' => 'ct-select',
@@ -43,23 +71,6 @@ $layer_settings = [
 					],
 
 				],
-			],
-
-			'account_user_info_additional_fields' => [
-				'label' => __('Additional User Info', 'blocksy-companion'),
-				'type' => 'text',
-				'value' => '{user_email}',
-				'design' => 'block',
-				'desc' => __('Available fields: {user_email}, {user_name}, {user_role}', 'blocksy-companion'),
-				'sync' => [
-					'shouldSkip' => true,
-				],
-			],
-
-			'has_account_dropdown_avatar' => [
-				'label' => __('User Avatar', 'blocksy-companion'),
-				'type' => 'ct-switch',
-				'value' => 'yes',
 			],
 		],
 	],
@@ -720,6 +731,38 @@ $options = [
 											'simple' => __( 'Simple', 'blocksy-companion' ),
 											'boxed' => __( 'Boxed Color', 'blocksy-companion' ),
 										],
+									],
+
+									'account_dropdown_top_offset' => [
+										'label' => __( 'Top Offset', 'blocksy-companion' ),
+										'type' => 'ct-slider',
+										'value' => 15,
+										'min' => -150,
+										'max' => 150,
+										'steps' => 'half',
+										'divider' => 'top',
+										'setting' => [ 'transport' => 'postMessage' ],
+									],
+
+									blocksy_rand_md5() => [
+										'type' => 'ct-condition',
+										'condition' => [
+											'builderSettings/has_sticky_header' => 'yes',
+										],
+										'options' => [
+
+											'sticky_state_account_dropdown_top_offset' => [
+												'label' => __( 'Top Offset (Sticky State)', 'blocksy-companion' ),
+												'type' => 'ct-slider',
+												'value' => 15,
+												'min' => -150,
+												'max' => 150,
+												'steps' => 'half',
+												'divider' => 'top',
+												'setting' => [ 'transport' => 'postMessage' ],
+											],
+
+										]
 									],
 								],
 							],

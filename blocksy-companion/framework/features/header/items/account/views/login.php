@@ -241,7 +241,11 @@ if ($loggedin_interaction_type === 'dropdown') {
 
 			$user_display_name =
 				!empty($user_firstname) || !empty($user_lastname)
-				? $user_firstname . ' ' . $user_lastname
+				? str_replace(
+					['{first_name}', '{last_name}', '{user_name}'],
+					[$user_firstname, $user_lastname, $user->display_name],
+					blocksy_akg('account_user_info_display_name', $dropdown_row, '{first_name} {last_name}')
+				)
 				: $user->display_name;
 
 			$image_html = '';

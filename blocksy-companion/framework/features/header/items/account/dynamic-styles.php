@@ -660,6 +660,39 @@ $loggedin_interaction_type = blocksy_akg( 'loggedin_interaction_type', $atts, 'd
 
 if ($loggedin_interaction_type === 'dropdown') {
 
+	$account_dropdown_top_offset = blocksy_akg( 'account_dropdown_top_offset', $atts, 15 );
+
+	$css->put(
+		blocksy_assemble_selector(
+			blocksy_mutate_selector([
+				'selector' => $root_selector,
+				'operation' => 'suffix',
+				'to_add' => '.ct-header-account-dropdown'
+			])
+		),
+		'--dropdown-top-offset: ' . $account_dropdown_top_offset . 'px'
+	);
+
+	if (isset($has_sticky_header) && $has_sticky_header) {
+
+		$sticky_state_account_dropdown_top_offset = blocksy_akg( 'sticky_state_account_dropdown_top_offset', $atts, 15 );
+
+		$css->put(
+			blocksy_assemble_selector(
+				blocksy_mutate_selector([
+					'selector' => blocksy_mutate_selector([
+						'selector' => $root_selector,
+						'operation' => 'suffix',
+						'to_add' => '.ct-header-account-dropdown'
+					]),
+					'operation' => 'between',
+					'to_add' => '[data-sticky*="yes"]'
+				])
+			),
+			'--sticky-state-dropdown-top-offset: ' . $sticky_state_account_dropdown_top_offset . 'px'
+		);
+	}
+
 	blocksy_output_font_css([
 		'font_value' => blocksy_akg( 'header_account_dropdown_font', $atts,
 			blocksy_typography_default_values([

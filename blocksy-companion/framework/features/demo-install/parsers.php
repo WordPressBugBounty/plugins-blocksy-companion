@@ -13,7 +13,7 @@
 class Blocksy_WXR_Parser {
 	function parse( $file ) {
 		// Attempt to use proper XML parsers first
-		if (extension_loaded('simplexml')) {
+		if (extension_loaded('simplexml') && class_exists('DOMDocument')) {
 			$parser = new Blocksy_WXR_Parser_SimpleXML;
 			$result = $parser->parse($file);
 

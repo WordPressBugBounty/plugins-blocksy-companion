@@ -409,6 +409,34 @@ ctEvents.on(
 				],
 
 				// interation type dropdown
+				account_dropdown_top_offset: {
+					selector: assembleSelector(
+						mutateSelector({
+							selector: getRootSelectorFor({ itemId }),
+							operation: 'suffix',
+							to_add: '.ct-header-account-dropdown',
+						})
+					),
+					variable: 'dropdown-top-offset',
+					unit: 'px',
+				},
+
+				sticky_state_account_dropdown_top_offset: {
+					selector: assembleSelector(
+						mutateSelector({
+							selector: mutateSelector({
+								selector: getRootSelectorFor({ itemId }),
+								operation: 'suffix',
+								to_add: '.ct-header-account-dropdown',
+							}),
+							operation: 'between',
+							to_add: '[data-sticky*="yes"]',
+						})
+					),
+					variable: 'sticky-state-dropdown-top-offset',
+					unit: 'px',
+				},
+				
 				...typographyOption({
 					id: 'header_account_dropdown_font',
 					selector: assembleSelector(
