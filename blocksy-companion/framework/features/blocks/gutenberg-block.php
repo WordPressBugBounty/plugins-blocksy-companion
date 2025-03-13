@@ -102,7 +102,7 @@ class GutenbergBlock {
 		) {
 			$options = blocksy_akg(
 				'options',
-				blocksy_get_variables_from_file(
+				blc_theme_functions()->blocksy_get_variables_from_file(
 					$options_file,
 					['options' => []]
 				)

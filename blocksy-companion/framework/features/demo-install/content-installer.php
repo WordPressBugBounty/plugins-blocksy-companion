@@ -288,7 +288,7 @@ class DemoInstallContentInstaller {
 			$header_builder->patch_header_value_for($wp_import->processed_terms);
 		}
 
-		$old_nav_menu_locations = blocksy_get_theme_mod('nav_menu_locations', []);
+		$old_nav_menu_locations = blc_theme_functions()->blocksy_get_theme_mod('nav_menu_locations', []);
 		$should_update_nav_menu_locations = false;
 
 		foreach ($old_nav_menu_locations as $location => $menu_id) {

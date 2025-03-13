@@ -1,5 +1,5 @@
 import { createElement, useEffect, useMemo } from '@wordpress/element'
-import { withColors } from '@wordpress/block-editor'
+import { useBlockProps } from '@wordpress/block-editor'
 import { __ } from 'ct-i18n'
 
 import Preview from './Preview'
@@ -65,11 +65,7 @@ const Edit = ({
 				field: 'wp:term_title',
 			})
 		}
-	}, [taxonomy, attributes.fiel])
-
-	if (!fieldDescriptor) {
-		return null
-	}
+	}, [taxonomy, attributes.field])
 
 	return (
 		<>

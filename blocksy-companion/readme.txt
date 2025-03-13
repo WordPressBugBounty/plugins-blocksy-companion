@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.91
+Stable tag: 2.0.92
 
 == Description ==
 
@@ -52,6 +52,13 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.92: 2025-03-13
+- Improvement: Account drop down custom link url string support
+- Improvement: Account header element - bring back the tablet/mobile dropdown functionality only for main header rows
+- Improvement: Mare sure Product Reviews archive star rating respect the horizontal alignment option
+- Improvement: Safer calling of theme functions in the companion plugin
+- Fix: Multiple Advanced Posts blocks on a single page, scoped by category, load incorrect posts when using pagination
+
 2.0.91: 2025-02-27
 - Improvement: Ability to change the order of first & last name in the account header element drop down
 - Improvement: Better integration with WPMobile app plugin

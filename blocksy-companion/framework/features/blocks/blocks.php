@@ -67,10 +67,10 @@ class Blocks {
 			);
 
 			$data = [
-				'breadcrumb_home_item' => blocksy_get_theme_mod('breadcrumb_home_item', 'text'),
-				'breadcrumb_home_text' => blocksy_get_theme_mod('breadcrumb_home_text', __('Home Page Text', 'blocksy-companion')),
-				'breadcrumb_separator' => blocksy_get_theme_mod('breadcrumb_separator', 'type-1'),
-				'breadcrumb_page_title' => blocksy_get_theme_mod('breadcrumb_page_title', 'yes') === 'yes',
+				'breadcrumb_home_item' => blc_theme_functions()->blocksy_get_theme_mod('breadcrumb_home_item', 'text'),
+				'breadcrumb_home_text' => blc_theme_functions()->blocksy_get_theme_mod('breadcrumb_home_text', __('Home Page Text', 'blocksy-companion')),
+				'breadcrumb_separator' => blc_theme_functions()->blocksy_get_theme_mod('breadcrumb_separator', 'type-1'),
+				'breadcrumb_page_title' => blc_theme_functions()->blocksy_get_theme_mod('breadcrumb_page_title', 'yes') === 'yes',
 			];
 
 			wp_localize_script(

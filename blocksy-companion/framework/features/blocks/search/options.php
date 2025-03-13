@@ -17,7 +17,11 @@ if (class_exists('WooCommerce')) {
 	$cpt_options['product'] = true;
 }
 
-$all_cpts = blocksy_manager()->post_types->get_supported_post_types();
+$all_cpts = [];
+
+if (blc_theme_functions()->blocksy_manager()) {
+	$all_cpts = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
+}
 
 if (function_exists('is_bbpress')) {
 	$all_cpts[] = 'forum';

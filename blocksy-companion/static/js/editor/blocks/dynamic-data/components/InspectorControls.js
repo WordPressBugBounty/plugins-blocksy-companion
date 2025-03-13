@@ -293,6 +293,61 @@ const DynamicDataInspectorControls = ({
 					},
 			  ]
 
+	if (!fieldDescriptor) {
+		return (
+			<InspectorControls>
+				<PanelBody>
+					<OptionsPanel
+						purpose="gutenberg"
+						onChange={(optionId, optionValue) => {
+							setAttributes({
+								[optionId]: optionValue,
+							})
+
+							if (optionId === 'viewType' && !overlayColor) {
+								setTimeout(() => {
+									setOverlayColor('#000000')
+								}, 50)
+							}
+
+							if (
+								optionId === 'viewType' ||
+								(optionId === 'field' &&
+									(!fieldIsImageLike(optionValue) ||
+										attributes.field ===
+											'wp:author_avatar'))
+							) {
+								replaceInnerBlocks(clientId, [], false)
+							}
+						}}
+						options={{
+							field: {
+								type: 'ct-select',
+								label: __(
+									'Content Source',
+									'blocksy-companion'
+								),
+								value: '',
+								search: true,
+								searchPlaceholder: __(
+									'Search for field',
+									'blocksy-companion'
+								),
+								defaultToFirstItem: false,
+								choices: fieldsChoices,
+								purpose: 'default',
+							},
+						}}
+						value={{
+							...attributes,
+						}}
+						hasRevertButton={false}
+					/>
+				</PanelBody>
+			</InspectorControls>
+		)
+	}
+
 	return (
 		<>
 			<InspectorControls>

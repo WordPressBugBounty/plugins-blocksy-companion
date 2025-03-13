@@ -288,12 +288,12 @@ class DemoInstallFinalActions {
 	}
 
 	public function update_counts_for_all_terms() {
-		if (! function_exists('blocksy_manager')) {
+		if (! blc_theme_functions()->blocksy_manager()) {
 			return;
 		}
 
 		$taxonomies = array_reduce(
-			blocksy_manager()->post_types->get_supported_post_types(),
+			blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types(),
 			function ($result, $item) {
 				return array_unique(array_merge(
 					$result,

@@ -1,7 +1,7 @@
 <?php
 
 function blc_ext_newsletter_subscribe_form() {
-	if (blocksy_get_theme_mod('newsletter_subscribe_single_post_enabled', 'yes') !== 'yes') {
+	if (blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_single_post_enabled', 'yes') !== 'yes') {
 		return '';
 	}
 
@@ -16,27 +16,27 @@ function blc_ext_newsletter_subscribe_form() {
 	}
 
 	$args = [
-		'title' => blocksy_get_theme_mod(
+		'title' => blc_theme_functions()->blocksy_get_theme_mod(
 			'newsletter_subscribe_title',
 			__('Newsletter Updates', 'blocksy-companion')
 		),
 
-		'description' => blocksy_get_theme_mod('newsletter_subscribe_text', __(
+		'description' => blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_text', __(
 			'Enter your email address below and subscribe to our newsletter',
 			'blocksy-companion'
 		)),
 
-		'button_text' => blocksy_get_theme_mod(
+		'button_text' => blc_theme_functions()->blocksy_get_theme_mod(
 			'newsletter_subscribe_button_text',
 			__('Subscribe', 'blocksy-companion')
 		),
-		'has_name' => blocksy_get_theme_mod('has_newsletter_subscribe_name', 'no'),
-		'name_required' => blocksy_get_theme_mod('newsletter_subscribe_name_required', 'no'),
-		'name_label' => blocksy_get_theme_mod(
+		'has_name' => blc_theme_functions()->blocksy_get_theme_mod('has_newsletter_subscribe_name', 'no'),
+		'name_required' => blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_name_required', 'no'),
+		'name_label' => blc_theme_functions()->blocksy_get_theme_mod(
 			'newsletter_subscribe_name_label',
 			__('Your name', 'blocksy-companion')
 		),
-		'email_label' => blocksy_get_theme_mod(
+		'email_label' => blc_theme_functions()->blocksy_get_theme_mod(
 			'newsletter_subscribe_mail_label',
 			__('Your email', 'blocksy-companion')
 		)
@@ -44,15 +44,15 @@ function blc_ext_newsletter_subscribe_form() {
 
 	$list_id = null;
 
-	if (blocksy_get_theme_mod(
+	if (blc_theme_functions()->blocksy_get_theme_mod(
 		'newsletter_subscribe_list_id_source',
 		'default'
 	) === 'custom') {
-		$args['list_id'] = blocksy_get_theme_mod('newsletter_subscribe_list_id', '');
+		$args['list_id'] = blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_list_id', '');
 	}
 
 	$args['class'] = 'ct-newsletter-subscribe-container is-width-constrained ' . blocksy_visibility_classes(
-		blocksy_get_theme_mod('newsletter_subscribe_subscribe_visibility', [
+		blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_subscribe_visibility', [
 			'desktop' => true,
 			'tablet' => true,
 			'mobile' => false,

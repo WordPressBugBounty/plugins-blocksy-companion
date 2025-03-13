@@ -34,7 +34,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 
 		$date_query = [];
 
-		$date_filter = blocksy_get_theme_mod('trending_block_filter', 'all_time');
+		$date_filter = blc_theme_functions()->blocksy_get_theme_mod('trending_block_filter', 'all_time');
 
 		if ($date_filter && 'all_time' !== $date_filter) {
 			$days = [
@@ -64,7 +64,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 			);
 		}
 
-		$post_type = blocksy_get_theme_mod('trending_block_post_type', 'post');
+		$post_type = blc_theme_functions()->blocksy_get_theme_mod('trending_block_post_type', 'post');
 
 		if (
 			(
@@ -78,7 +78,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 			$post_type = 'post';
 		}
 
-		$source = blocksy_get_theme_mod('trending_block_post_source', 'categories');
+		$source = blc_theme_functions()->blocksy_get_theme_mod('trending_block_post_source', 'categories');
 
 		$query_args = [
 			'post_type' => $post_type,
@@ -104,7 +104,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 				];
 			}
 
-			$trending_product_type = blocksy_get_theme_mod('trending_block_product_type', 'defualt');
+			$trending_product_type = blc_theme_functions()->blocksy_get_theme_mod('trending_block_product_type', 'defualt');
 
 			if ($trending_product_type === 'sale') {
 				$query_args['post__in'] = wc_get_product_ids_on_sale();
@@ -129,7 +129,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 				$cat_option_id = 'trending_block_' . $post_type . '_taxonomy';
 			}
 
-			$cat_id = blocksy_get_theme_mod($cat_option_id, 'all_categories');
+			$cat_id = blc_theme_functions()->blocksy_get_theme_mod($cat_option_id, 'all_categories');
 			$cat_id = (empty($cat_id) || 'all_categories' === $cat_id) ? '' : $cat_id;
 
 			if (! empty($cat_id)) {
@@ -148,7 +148,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 		}
 
 		if ($source === 'custom') {
-			$post_id = blocksy_get_theme_mod('trending_block_post_id', '');
+			$post_id = blc_theme_functions()->blocksy_get_theme_mod('trending_block_post_id', '');
 
 			$query_args['orderby'] = 'post__in';
 			$query_args['post__in'] = ['__INEXISTING__'];
@@ -193,7 +193,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 				$individual_entry['image'] = blocksy_media(
 					[
 						'attachment_id' => get_post_thumbnail_id(),
-						'size' => blocksy_get_theme_mod(
+						'size' => blc_theme_functions()->blocksy_get_theme_mod(
 							'trending_block_thumbnails_size',
 							'thumbnail'
 						),
@@ -206,8 +206,8 @@ if (! function_exists('blc_get_trending_posts_value')) {
 				);
 			}
 
-			$show_taxonomy = blocksy_get_theme_mod('trending_block_show_taxonomy', 'no') === 'yes';
-			$taxonomy_style = blocksy_get_theme_mod('trending_block_taxonomy_style', 'simple');
+			$show_taxonomy = blc_theme_functions()->blocksy_get_theme_mod('trending_block_show_taxonomy', 'no') === 'yes';
+			$taxonomy_style = blc_theme_functions()->blocksy_get_theme_mod('trending_block_taxonomy_style', 'simple');
 			$taxonomy_opt = blocksy_get_taxonomies_for_cpt(
 				$post_type,
 				['return_empty' => true]
@@ -222,7 +222,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 			) {
 				$taxonomy_option_id = 'trending_block_show_' . $post_type . '_taxonomy';
 
-				$taxonomy_to_show = blocksy_get_theme_mod(
+				$taxonomy_to_show = blc_theme_functions()->blocksy_get_theme_mod(
 					$taxonomy_option_id,
 					$post_type === 'product' ? 'product_cat' : array_keys($taxonomy_opt)[0]
 				);
@@ -234,7 +234,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 					&&
 					is_array($taxonomy_values)
 				) {
-					foreach ($taxonomy_values as $tax) {						
+					foreach ($taxonomy_values as $tax) {
 						$taxonomies_to_render[] = blocksy_html_tag(
 							'a',
 							[
@@ -244,7 +244,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 							$tax->name
 						);
 					}
-	
+
 					if (! empty($taxonomies_to_render)) {
 
 						$divider = '';
@@ -275,7 +275,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 				}
 			}
 
-			$trending_block_show_price = blocksy_get_theme_mod('trending_block_show_price', 'no') === 'yes';
+			$trending_block_show_price = blc_theme_functions()->blocksy_get_theme_mod('trending_block_show_price', 'no') === 'yes';
 
 			if (
 				$trending_block_show_price
@@ -329,7 +329,7 @@ function blc_get_trending_block($result = null) {
 	$class = 'ct-trending-block';
 
 	$class .= ' ' . blocksy_visibility_classes(
-		blocksy_get_theme_mod('trending_block_visibility', [
+		blc_theme_functions()->blocksy_get_theme_mod('trending_block_visibility', [
 			'desktop' => true,
 			'tablet' => true,
 			'mobile' => false,
@@ -345,9 +345,9 @@ function blc_get_trending_block($result = null) {
 		$attr['data-shortcut-location'] = 'trending_posts_ext';
 	}
 
-	$label_tag = blocksy_get_theme_mod('trending_block_label_tag', 'h3');
+	$label_tag = blc_theme_functions()->blocksy_get_theme_mod('trending_block_label_tag', 'h3');
 
-	$trending_label = blocksy_get_theme_mod(
+	$trending_label = blc_theme_functions()->blocksy_get_theme_mod(
 		'trending_block_label',
 		__('Trending now', 'blocksy-companion')
 	);
@@ -355,11 +355,11 @@ function blc_get_trending_block($result = null) {
 	$icon = '<svg width="13" height="13" viewBox="0 0 13 13" fill="currentColor"><path d="M13 5.8V9c0 .4-.2.6-.5.6s-.5-.2-.5-.5V7.2l-4.3 4.2c-.2.2-.6.2-.8 0L4.6 9.1.9 12.8c-.1.1-.2.2-.4.2s-.3-.1-.4-.2c-.2-.2-.2-.6 0-.8l4.1-4.1c.2-.2.6-.2.8 0l2.3 2.3 3.8-3.8H9.2c-.3 0-.5-.2-.5-.5s.2-.5.5-.5h3.4c.2 0 .3.1.4.2v.2z"/></svg>';
 
 	if (function_exists('blc_get_icon')) {
-		$icon_source = blocksy_get_theme_mod('trending_block_icon_source', 'default');
+		$icon_source = blc_theme_functions()->blocksy_get_theme_mod('trending_block_icon_source', 'default');
 
 		if ($icon_source === 'custom') {
 			$icon = blc_get_icon([
-				'icon_descriptor' => blocksy_get_theme_mod('trending_block_custom_icon', [
+				'icon_descriptor' => blc_theme_functions()->blocksy_get_theme_mod('trending_block_custom_icon', [
 					'icon' => 'fas fa-fire',
 				]),
 				'icon_container' => false,
@@ -378,7 +378,7 @@ function blc_get_trending_block($result = null) {
 		<div class="ct-container" <?php echo $data_page ?>>
 
 			<<?php echo $label_tag ?> class="ct-module-title">
-				<?php 
+				<?php
 					echo $trending_label;
 
 					/**
@@ -388,7 +388,7 @@ function blc_get_trending_block($result = null) {
 					 */
 					echo $icon;
 				?>
-				
+
 				<?php if (! $result['is_last_page']) { ?>
 					<span class="ct-slider-arrows">
 						<span class="ct-arrow-prev">

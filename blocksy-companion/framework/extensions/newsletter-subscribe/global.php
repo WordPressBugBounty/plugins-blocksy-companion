@@ -1,9 +1,9 @@
 <?php
 
-$forms_type =  blocksy_get_theme_mod('forms_type', 'classic-forms');
+$forms_type =  blc_theme_functions()->blocksy_get_theme_mod('forms_type', 'classic-forms');
 
 blocksy_output_colors([
-	'value' => blocksy_get_theme_mod('newsletter_subscribe_title_color'),
+	'value' => blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_title_color'),
 	'default' => [
 		'default' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
 	],
@@ -17,7 +17,7 @@ blocksy_output_colors([
 ]);
 
 blocksy_output_colors([
-	'value' => blocksy_get_theme_mod('newsletter_subscribe_content'),
+	'value' => blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_content'),
 	'default' => [
 		'default' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
 		'hover' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
@@ -37,7 +37,7 @@ blocksy_output_colors([
 ]);
 
 blocksy_output_colors([
-	'value' => blocksy_get_theme_mod('newsletter_subscribe_button'),
+	'value' => blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_button'),
 	'default' => [
 		'default' => [ 'color' => 'var(--theme-palette-color-1)' ],
 		'hover' => [ 'color' => 'var(--theme-palette-color-2)' ],
@@ -57,7 +57,7 @@ blocksy_output_colors([
 ]);
 
 blocksy_output_colors([
-	'value' => blocksy_get_theme_mod('newsletter_subscribe_input_font_color'),
+	'value' => blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_input_font_color'),
 	'default' => [
 		'default' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
 		'focus' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
@@ -77,7 +77,7 @@ blocksy_output_colors([
 ]);
 
 blocksy_output_colors([
-	'value' => blocksy_get_theme_mod('newsletter_subscribe_border_color'),
+	'value' => blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_border_color'),
 	'default' => [
 		'default' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
 		'focus' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
@@ -98,7 +98,7 @@ blocksy_output_colors([
 
 if ($forms_type !== 'classic-forms' || is_customize_preview()) {
 	blocksy_output_colors([
-		'value' => blocksy_get_theme_mod('newsletter_subscribe_input_background'),
+		'value' => blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_input_background'),
 		'default' => [
 			'default' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword() ],
 			'focus' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword() ],
@@ -123,7 +123,7 @@ blocksy_output_background_css([
 	'css' => $css,
 	'tablet_css' => $tablet_css,
 	'mobile_css' => $mobile_css,
-	'value' => blocksy_get_theme_mod(
+	'value' => blc_theme_functions()->blocksy_get_theme_mod(
 		'newsletter_subscribe_container_background',
 		blocksy_background_default_value([
 			'backgroundColor' => [
@@ -142,7 +142,7 @@ blocksy_output_border([
 	'mobile_css' => $mobile_css,
 	'selector' => '.ct-newsletter-subscribe-container',
 	'variableName' => 'newsletter-container-border',
-	'value' => blocksy_get_theme_mod('newsletter_subscribe_container_border'),
+	'value' => blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_container_border'),
 	'skip_none' => true,
 	'default' => [
 		'width' => 1,
@@ -160,7 +160,7 @@ blocksy_output_box_shadow([
 	'tablet_css' => $tablet_css,
 	'mobile_css' => $mobile_css,
 	'selector' => '.ct-newsletter-subscribe-container',
-	'value' => blocksy_get_theme_mod(
+	'value' => blc_theme_functions()->blocksy_get_theme_mod(
 		'newsletter_subscribe_shadow',
 		blocksy_box_shadow_value([
 			'enable' => true,
@@ -183,7 +183,7 @@ blocksy_output_spacing([
 	'mobile_css' => $mobile_css,
 	'selector' => '.ct-newsletter-subscribe-container',
 	'property' => 'padding',
-	'value' => blocksy_get_theme_mod(
+	'value' => blc_theme_functions()->blocksy_get_theme_mod(
 		'newsletter_subscribe_container_spacing',
 		blocksy_spacing_value()
 	),
@@ -196,7 +196,7 @@ blocksy_output_spacing([
 	'mobile_css' => $mobile_css,
 	'selector' => '.ct-newsletter-subscribe-container',
 	'property' => 'theme-border-radius',
-	'value' => blocksy_get_theme_mod(
+	'value' => blc_theme_functions()->blocksy_get_theme_mod(
 		'newsletter_subscribe_container_border_radius',
 		blocksy_spacing_value()
 	)

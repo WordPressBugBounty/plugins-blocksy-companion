@@ -51,6 +51,16 @@ function blc_get_capabilities() {
 	return $capabilities;
 }
 
+function blc_theme_functions() {
+	static $theme_functions = null;
+
+	if ($theme_functions === null) {
+		$theme_functions = new Blocksy\ThemeFunctions();
+	}
+
+	return $theme_functions;
+}
+
 function blc_can_use_premium_code() {
 	return !! class_exists('Blocksy\Premium');
 }
@@ -434,4 +444,20 @@ function blc_get_json_translation_files($domain) {
 	}
 
 	return $result;
+}
+
+function blc_debug_log($message, $object = null) {
+	if (
+		! defined('WP_DEBUG')
+		||
+		! WP_DEBUG
+	) {
+		return;
+	}
+
+	if (is_null($object)) {
+		error_log($message);
+	} else {
+		error_log($message . ': ' . print_r($object, true));
+	}
 }

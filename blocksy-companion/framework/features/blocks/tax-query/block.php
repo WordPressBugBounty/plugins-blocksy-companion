@@ -59,7 +59,7 @@ class TaxQuery {
 					$border_result = get_block_core_post_featured_image_border_attributes(
 						$attributes
 					);
-					
+
 					if (strpos($content, 'wp-block-blocksy-tax-query"></div>') !== false) {
 						return '';
 					}
@@ -443,7 +443,7 @@ class TaxQuery {
 				];
 
 				foreach ($tax_block_patterns as $tax_block_pattern) {
-					$pattern_data = blocksy_get_variables_from_file(
+					$pattern_data = blc_theme_functions()->blocksy_get_variables_from_file(
 						__DIR__ . '/block-patterns/' . $tax_block_pattern . '.php',
 						['pattern' => []]
 					);

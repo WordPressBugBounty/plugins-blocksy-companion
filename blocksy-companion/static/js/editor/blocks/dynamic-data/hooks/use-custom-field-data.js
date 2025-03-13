@@ -27,21 +27,19 @@ const useCustomFieldData = ({ postId, fieldDescriptor }) => {
 	}, [postId, fieldDescriptor.provider, fieldDescriptor.id])
 
 	useEffect(() => {
-		if (!fieldData[requestDescriptor.cacheKey]) {
-			cachedFetch(requestDescriptor.url, requestDescriptor.body)
-				.then((response) => response.json())
-				.then(({ success, data }) => {
-					if (!success) {
-						return
-					}
+		cachedFetch(requestDescriptor.url, requestDescriptor.body)
+			.then((response) => response.json())
+			.then(({ success, data }) => {
+				if (!success) {
+					return
+				}
 
-					setFieldData((prev) => ({
-						...prev,
-						[requestDescriptor.cacheKey]: data.field_data,
-					}))
-				})
-		}
-	}, [requestDescriptor, fieldData])
+				setFieldData((prev) => ({
+					...prev,
+					[requestDescriptor.cacheKey]: data.field_data,
+				}))
+			})
+	}, [requestDescriptor])
 
 	return {
 		fieldData: fieldData[requestDescriptor.cacheKey]

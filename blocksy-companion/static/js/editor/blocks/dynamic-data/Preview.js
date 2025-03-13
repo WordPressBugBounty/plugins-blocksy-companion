@@ -42,6 +42,14 @@ const Preview = ({
 
 	colors,
 }) => {
+	if (!fieldDescriptor) {
+		const blockProps = useBlockProps({
+			className: 'ct-block-notice components-notice is-warning',
+		})
+
+		return <div {...blockProps}>{__('Field not found', 'ct-blocks')}</div>
+	}
+
 	if (fieldDescriptor.provider === 'woo') {
 		return (
 			<WooFieldPreview

@@ -96,7 +96,10 @@ class BlocksyExtensionNewsletterSubscribe {
 				);
 
 				if (
-					blocksy_get_theme_mod('newsletter_subscribe_single_post_enabled', 'yes') === 'yes'
+					blc_theme_functions()->blocksy_get_theme_mod(
+						'newsletter_subscribe_single_post_enabled',
+						'yes'
+					) === 'yes'
 					&&
 					get_post_type() === 'post'
 				) {
@@ -230,7 +233,7 @@ class BlocksyExtensionNewsletterSubscribe {
 
 			$options = blocksy_akg(
 				'options',
-				blocksy_get_variables_from_file(
+				blc_theme_functions()->blocksy_get_variables_from_file(
 					$options_file,
 					['options' => []]
 				)

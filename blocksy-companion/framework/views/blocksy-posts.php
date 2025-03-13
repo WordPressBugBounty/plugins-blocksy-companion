@@ -186,7 +186,11 @@ if ($args['view'] === 'slider') {
 } else {
 	$prefix = 'blog';
 
-	$custom_post_types = blocksy_manager()->post_types->get_supported_post_types();
+	$custom_post_types = [];
+
+	if (blc_theme_functions()->blocksy_manager()) {
+		$custom_post_types = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
+	}
 
 	$preferred_post_type = explode(',', $args['post_type'])[0];
 

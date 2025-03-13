@@ -13,11 +13,11 @@ class HeaderAdditions {
 				'id' => 'header_placements_item:account',
 				'fallback_refresh' => false,
 				'container_inclusive' => true,
-				'selector' => 'header [data-id="account"]',
+				'selector' => '#main-container > header',
+				'loader_selector' => '[data-id="account"]',
 				'settings' => ['header_placements'],
 				'render_callback' => function () {
-					$header = new \Blocksy_Header_Builder_Render();
-					echo $header->render_single_item('account');
+					echo blocksy_manager()->header_builder->render();
 				}
 			];
 
@@ -62,7 +62,11 @@ class HeaderAdditions {
 		});
 
 		add_filter('blocksy:header:row-wrapper-attr', function ($attr, $row, $device) {
-			$current_section = blocksy_manager()->header_builder->get_current_section();
+			if (! blc_theme_functions()->blocksy_manager()) {
+				return $attr;
+			}
+
+			$current_section = blc_theme_functions()->blocksy_manager()->header_builder->get_current_section();
 
 			if (!isset($current_section['settings'])) {
 				$current_section['settings'] = [];
@@ -253,18 +257,22 @@ class HeaderAdditions {
 	}
 
 	public function current_screen_has_transparent($check_conditions = true, $current_section_id = null) {
+		if (! blc_theme_functions()->blocksy_manager()) {
+			return false;
+		}
+
 		if (
 			true
 			||
 			$this->has_transparent_header === '__DEFAULT__'
 			||
-			!$check_conditions
+			! $check_conditions
 		) {
-			$current_section = blocksy_manager()->header_builder->get_current_section(
+			$current_section = blc_theme_functions()->blocksy_manager()->header_builder->get_current_section(
 				$current_section_id
 			);
 
-			if (!isset($current_section['settings'])) {
+			if (! isset($current_section['settings'])) {
 				$current_section['settings'] = [];
 			}
 
@@ -357,12 +365,16 @@ class HeaderAdditions {
 		if (
 			$this->has_sticky_header !== '__DEFAULT__'
 			&&
-			!$section_id
+			! $section_id
 		) {
 			return $this->has_sticky_header;
 		}
 
-		$current_section = blocksy_manager()->header_builder->get_current_section(
+		if (! blc_theme_functions()->blocksy_manager()) {
+			return false;
+		}
+
+		$current_section = blc_theme_functions()->blocksy_manager()->header_builder->get_current_section(
 			$section_id
 		);
 
@@ -425,6 +437,10 @@ class HeaderAdditions {
 	}
 
 	public function patch_conditions($post_id, $old_post_id) {
+		if (! blc_theme_functions()->blocksy_manager()) {
+			return;
+		}
+
 		$conditions = $this->get_conditions();
 
 		foreach ($conditions as $index => $single_condition) {
@@ -457,7 +473,7 @@ class HeaderAdditions {
 
 		$this->set_conditions($conditions);
 
-		$section_value = blocksy_manager()->header_builder->get_section_value();
+		$section_value = blc_theme_functions()->blocksy_manager()->header_builder->get_section_value();
 
 		foreach ($section_value['sections'] as $index => $current_section) {
 			if (! isset($current_section['settings'])) {
@@ -499,7 +515,7 @@ class HeaderAdditions {
 	}
 
 	public function get_conditions() {
-		$option = blocksy_get_theme_mod('blocksy_premium_header_conditions', []);
+		$option = blc_theme_functions()->blocksy_get_theme_mod('blocksy_premium_header_conditions', []);
 
 		if (empty($option)) {
 			return [];

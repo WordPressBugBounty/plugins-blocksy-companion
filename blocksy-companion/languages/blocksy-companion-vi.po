@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-03 08:19:08+0000\n"
+"PO-Revision-Date: 2025-03-09 05:37:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -6909,7 +6909,7 @@ msgstr "Thanh toán WooCommerce"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:925
 msgid "Before my account"
-msgstr "Trước tài khoản của tôi"
+msgstr "Trước tài khoản"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:929
 msgid "Before account navigation"
@@ -6933,7 +6933,7 @@ msgstr "Bảng tổng quan tài khoản"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:949
 msgid "After my account"
-msgstr "Sau tài khoản của tôi"
+msgstr "Sau tài khoản"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:951,
 #: framework/features/header/items/account/options.php:169,
@@ -7238,7 +7238,7 @@ msgstr "Trang cá nhân"
 
 #: framework/features/header/items/account/options.php:5
 msgid "Dashboard Page"
-msgstr "Trang tổng quan"
+msgstr "Trang t��ng quan"
 
 #: framework/features/header/items/account/options.php:7,
 #: framework/features/header/items/account/options.php:36,
@@ -7332,7 +7332,7 @@ msgstr "Văn bản nhãn"
 #: framework/features/header/items/account/views/login.php:100,
 #: framework/features/header/items/account/views/login.php:472
 msgid "My Account"
-msgstr "Tài khoản của tôi"
+msgstr "Tài khoản"
 
 #: framework/features/header/items/account/options.php:1125,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:163,

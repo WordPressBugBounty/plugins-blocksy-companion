@@ -40,7 +40,7 @@ class GoogleAnalytics {
 	}
 
 	private function get_ga_4_code() {
-		$analytics_v4_id = blocksy_get_theme_mod('analytics_v4_id', '');
+		$analytics_v4_id = blc_theme_functions()->blocksy_get_theme_mod('analytics_v4_id', '');
 
 		if (empty($analytics_v4_id)) {
 			return '';
@@ -62,7 +62,7 @@ class GoogleAnalytics {
 		<?php
 		return ob_get_clean();
 	}
-	
+
 	public function generate_google_analytics_opts($options) {
 		$options[] = [
 			'analytics_v4_id' => [

@@ -4,7 +4,7 @@ if (! isset($root_selector)) {
 	$root_selector = ['.ct-header-account'];
 }
 
-$forms_type = blocksy_get_theme_mod('forms_type', 'classic-forms');
+$forms_type = blc_theme_functions()->blocksy_get_theme_mod('forms_type', 'classic-forms');
 
 // Icon size
 $accountHeaderIconSize = blocksy_akg( 'accountHeaderIconSize', $atts, 15 );

@@ -86,7 +86,11 @@ class ConditionsManagerAPI {
 	}
 
 	private function get_all_taxonomies($maybe_input) {
-		$cpts = blocksy_manager()->post_types->get_supported_post_types();
+		$cpts = [];
+
+		if (blc_theme_functions()->blocksy_manager()) {
+			$cpts = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
+		}
 
 		$cpts[] = 'post';
 		$cpts[] = 'page';
@@ -241,15 +245,23 @@ class ConditionsManagerAPI {
 
 		$initial_query_args_post_type = $query_args['post_type'];
 
-		if (strpos($initial_query_args_post_type, 'ct_cpt') !== false) {
-			$query_args['post_type'] = blocksy_manager()->post_types->get_all([
+		if (
+			strpos($initial_query_args_post_type, 'ct_cpt') !== false
+			&&
+			blc_theme_functions()->blocksy_manager()
+		) {
+			$query_args['post_type'] = blc_theme_functions()->blocksy_manager()->post_types->get_all([
 				'exclude_built_in' => true,
 				'exclude_woo' => true
 			]);
 		}
 
-		if (strpos($initial_query_args_post_type, 'ct_all_posts') !== false) {
-			$query_args['post_type'] = blocksy_manager()->post_types->get_all();
+		if (
+			strpos($initial_query_args_post_type, 'ct_all_posts') !== false
+			&&
+			blc_theme_functions()->blocksy_manager()
+		) {
+			$query_args['post_type'] = blc_theme_functions()->blocksy_manager()->post_types->get_all();
 		}
 
 		if (! is_array($query_args['post_type'])) {

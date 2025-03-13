@@ -14,7 +14,7 @@ class DynamicData {
 		add_filter('blocksy:gutenberg-blocks-data', function ($data) {
 			$options = blocksy_akg(
 				'options',
-				blocksy_get_variables_from_file(
+				blc_theme_functions()->blocksy_get_variables_from_file(
 					dirname(__FILE__) . '/options.php',
 					['options' => []]
 				)
@@ -62,7 +62,13 @@ class DynamicData {
 		add_action(
 			'wp_ajax_blocksy_blocks_retrieve_dynamic_data_descriptor',
 			function () {
-				if (! current_user_can('manage_options')) {
+				$blocksy_manager = blc_theme_functions()->blocksy_manager();
+
+				if (
+					! current_user_can('manage_options')
+					||
+					! $blocksy_manager
+				) {
 					wp_send_json_error();
 				}
 
@@ -70,7 +76,7 @@ class DynamicData {
 
 				// TODO: remove tmp override
 				if (! isset($data['post_id'])) {
-					$potential_post_types = blocksy_manager()->post_types->get_all();
+					$potential_post_types = $blocksy_manager->post_types->get_all();
 
 					$fields = [];
 

@@ -55,7 +55,7 @@ class BlocksyExtensionTrending {
 			$location = 'blocksy:template:after';
 
 			if (blc_site_has_feature()) {
-				$location = blocksy_get_theme_mod(
+				$location = blc_theme_functions()->blocksy_get_theme_mod(
 					'trending_block_location',
 					'blocksy:content:bottom'
 				);
@@ -67,7 +67,7 @@ class BlocksyExtensionTrending {
 				$location,
 				function () {
 					if (blc_site_has_feature()) {
-						$conditions = blocksy_get_theme_mod(
+						$conditions = blc_theme_functions()->blocksy_get_theme_mod(
 							'trending_block_conditions',
 							[
 								[

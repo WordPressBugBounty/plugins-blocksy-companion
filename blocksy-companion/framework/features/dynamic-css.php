@@ -99,7 +99,7 @@ class DynamicCss {
 	}
 
 	public function should_use_files() {
-		return blocksy_get_theme_mod('dynamic_css_file', 'file') === 'file';
+		return blc_theme_functions()->blocksy_get_theme_mod('dynamic_css_file', 'file') === 'file';
 	}
 
 	public function get_chunks() {

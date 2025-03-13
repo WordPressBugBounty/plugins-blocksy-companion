@@ -19,7 +19,11 @@ class Query {
 				'post' => __('Posts', 'blocksy-companion')
 			];
 
-			$post_types = blocksy_manager()->post_types->get_supported_post_types();
+			$post_types = [];
+
+			if (blc_theme_functions()->blocksy_manager()) {
+				$post_types = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
+			}
 
 			foreach ($post_types as $single_post_type) {
 				$post_type_object = get_post_type_object($single_post_type);
@@ -542,7 +546,7 @@ class Query {
 				];
 
 				foreach ($posts_block_patterns as $posts_block_pattern) {
-					$pattern_data = blocksy_get_variables_from_file(
+					$pattern_data = blc_theme_functions()->blocksy_get_variables_from_file(
 						__DIR__ . '/block-patterns/' . $posts_block_pattern . '.php',
 						['pattern' => []]
 					);
@@ -709,10 +713,10 @@ class Query {
 		$mobile_css = new \Blocksy_Css_Injector();
 
 		if ($attributes['has_slideshow'] === 'yes') {
-			$structure = blocksy_get_theme_mod($prefix . '_structure', 'grid');
+			$structure = blc_theme_functions()->blocksy_get_theme_mod($prefix . '_structure', 'grid');
 
 			$grid_columns = blocksy_expand_responsive_value(
-				blocksy_get_theme_mod(
+				blc_theme_functions()->blocksy_get_theme_mod(
 					$prefix . '_columns',
 					[
 						'desktop' => 3,
@@ -1097,7 +1101,11 @@ class Query {
 
 		$prefix = 'blog';
 
-		$custom_post_types = blocksy_manager()->post_types->get_supported_post_types();
+		$custom_post_types = [];
+
+		if (blc_theme_functions()->blocksy_manager()) {
+			$custom_post_types = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
+		}
 
 		$preferred_post_type = explode(',', $attributes['post_type'])[0];
 

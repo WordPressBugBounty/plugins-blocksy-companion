@@ -143,8 +143,8 @@ if (! empty($scores)) {
 	echo '</div>';
 }
 
-$has_read_more = blocksy_get_theme_mod($prefix . '_has_read_more', 'yes') === 'yes';
-$has_buy_now = blocksy_get_theme_mod($prefix . '_has_buy_now', 'yes') === 'yes';
+$has_read_more = blc_theme_functions()->blocksy_get_theme_mod($prefix . '_has_read_more', 'yes') === 'yes';
+$has_buy_now = blc_theme_functions()->blocksy_get_theme_mod($prefix . '_has_buy_now', 'yes') === 'yes';
 
 if ($has_read_more || $has_buy_now) {
 	echo '<div class="ct-product-actions-group">';

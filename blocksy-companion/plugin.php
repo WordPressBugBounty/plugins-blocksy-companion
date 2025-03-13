@@ -179,6 +179,7 @@ class Plugin {
 	 */
 	private function __construct() {
 		require_once BLOCKSY_PATH . '/framework/helpers/request.php';
+		require_once BLOCKSY_PATH . '/framework/helpers/theme-functions.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/helpers.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/exts.php';
 

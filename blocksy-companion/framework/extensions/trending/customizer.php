@@ -8,8 +8,8 @@ if (class_exists('WooCommerce')) {
 	$all_post_types['product'] = __('Products', 'blocksy-companion');
 }
 
-if (function_exists('blocksy_manager')) {
-	$post_types = blocksy_manager()->post_types->get_supported_post_types();
+if (blc_theme_functions()->blocksy_manager()) {
+	$post_types = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
 
 	foreach ($post_types as $single_post_type) {
 		$post_type_object = get_post_type_object($single_post_type);

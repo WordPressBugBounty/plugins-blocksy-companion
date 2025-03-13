@@ -157,9 +157,12 @@ $layer_settings = [
 				'type' => 'ct-select',
 				'value' => 'blocksy_location',
 				'view' => 'text',
-				'design' => 'inline',
+				'design' => 'block',
 				'setting' => [ 'transport' => 'postMessage' ],
 				'placeholder' => __('Select menu...', 'blocksy-companion'),
+				'responsive' => [
+					'tablet' => 'skip'
+				],
 				'choices' => blocksy_ordered_keys(blocksy_get_menus_items()),
 				'desc' => blc_safe_sprintf(
 					// translators: placeholder here means the actual URL.
@@ -643,8 +646,7 @@ $options = [
 
 					blocksy_rand_md5() => [
 						'type' => 'ct-condition',
-						'condition' => [ 
-							'wp_customizer_current_view' => 'desktop',
+						'condition' => [
 							'row' => '!offcanvas',
 						],
 						'options' => [
@@ -774,16 +776,9 @@ $options = [
 						'type' => 'ct-condition',
 						'condition' => [
 							'any' => [
-								'all' => [
-									'any' => [
-										'loggedin_interaction_type' => 'link',
-										'row' => 'offcanvas',
-									],
-									'wp_customizer_current_view' => 'desktop',
-								],
-								
-								'wp_customizer_current_view' => 'tablet|mobile',
-							]
+								'loggedin_interaction_type' => 'link',
+								'row' => 'offcanvas',
+							],
 						],
 						'options' => [
 							'account_link' => [

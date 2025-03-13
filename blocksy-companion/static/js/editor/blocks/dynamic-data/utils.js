@@ -18,6 +18,10 @@ export const getLabelForProvider = (provider) => {
 }
 
 export const fieldIsImageLike = (fieldDescriptor) => {
+	if (!fieldDescriptor) {
+		return false
+	}
+
 	if (fieldDescriptor.provider === 'wp') {
 		return (
 			fieldDescriptor.id === 'featured_image' ||
