@@ -2,9 +2,8 @@ import { createElement } from '@wordpress/element'
 import cls from 'classnames'
 
 import { __ } from 'ct-i18n'
-import { Select } from 'blocksy-options'
+import { Select, EntityIdPicker } from 'blocksy-options'
 import useConditionsData from './useConditionsData'
-import EntityIdPicker from './EntityIdPicker'
 
 import ExpireCondition from './ExpireCondition'
 import ScheduleDate from './ScheduleDate'
@@ -143,26 +142,28 @@ const SingleCondition = ({ className = '', condition, onRemove, onChange }) => {
 				condition.rule === 'product_ids' ||
 				condition.rule === 'page_ids') && (
 				<EntityIdPicker
-					placeholder={
-						condition.rule === 'post_ids'
-							? __('Select post', 'blocksy-companion')
-							: condition.rule === 'page_ids'
-							? __('Select page', 'blocksy-companion')
-							: condition.rule === 'product_ids'
-							? __('Select product', 'blocksy-companion')
-							: __('Custom Post Type ID', 'blocksy-companion')
-					}
-					entity="posts"
-					postType={
-						{
+					option={{
+						placeholder:
+							condition.rule === 'post_ids'
+								? __('Select post', 'blocksy-companion')
+								: condition.rule === 'page_ids'
+								? __('Select page', 'blocksy-companion')
+								: condition.rule === 'product_ids'
+								? __('Select product', 'blocksy-companion')
+								: __(
+										'Custom Post Type ID',
+										'blocksy-companion'
+								  ),
+						entity: 'posts',
+						postType: {
 							post_ids: 'post',
 							page_ids: 'page',
 							product_ids: 'product',
 							custom_post_type_ids: 'ct_cpt',
-						}[condition.rule]
-					}
+						}[condition.rule],
+					}}
 					value={(condition.payload || {}).post_id || ''}
-					onChange={({ id }) => {
+					onChange={(id) => {
 						onChange({
 							...condition,
 							payload: {
@@ -178,10 +179,12 @@ const SingleCondition = ({ className = '', condition, onRemove, onChange }) => {
 				condition.rule === 'post_with_taxonomy_ids' ||
 				condition.rule === 'card_post_with_taxonomy_ids') && (
 				<EntityIdPicker
-					placeholder={__('Select taxonomy', 'blocksy-companion')}
-					entity="taxonomies"
+					option={{
+						placeholder: __('Select taxonomy', 'blocksy-companion'),
+						entity: 'taxonomies',
+					}}
 					value={(condition.payload || {}).taxonomy_id || ''}
-					onChange={({ id }) => {
+					onChange={(id) => {
 						onChange({
 							...condition,
 							payload: {
@@ -197,11 +200,13 @@ const SingleCondition = ({ className = '', condition, onRemove, onChange }) => {
 				condition.rule === 'product_taxonomy_ids' ||
 				condition.rule === 'card_product_with_taxonomy_ids') && (
 				<EntityIdPicker
-					placeholder={__('Select taxonomy', 'blocksy-companion')}
-					entity="taxonomies"
-					postType="product"
+					option={{
+						placeholder: __('Select taxonomy', 'blocksy-companion'),
+						entity: 'taxonomies',
+						postType: 'product',
+					}}
 					value={(condition.payload || {}).taxonomy_id || ''}
-					onChange={({ id }) => {
+					onChange={(id) => {
 						onChange({
 							...condition,
 							payload: {
@@ -240,16 +245,18 @@ const SingleCondition = ({ className = '', condition, onRemove, onChange }) => {
 
 			{condition.rule === 'user_post_author_id' && (
 				<EntityIdPicker
-					placeholder={__('Select user', 'blocksy-companion')}
-					entity="users"
+					option={{
+						placeholder: __('Select user', 'blocksy-companion'),
+						entity: 'users',
+						additionOptions: [
+							{
+								key: 'current_user',
+								value: __('Current user', 'blocksy-companion'),
+							},
+						],
+					}}
 					value={(condition.payload || {}).user_id || ''}
-					additionOptions={[
-						{
-							key: 'current_user',
-							value: __('Current user', 'blocksy-companion'),
-						},
-					]}
-					onChange={({ id }) => {
+					onChange={(id) => {
 						onChange({
 							...condition,
 							payload: {
@@ -263,16 +270,18 @@ const SingleCondition = ({ className = '', condition, onRemove, onChange }) => {
 
 			{condition.rule === 'author' && (
 				<EntityIdPicker
-					placeholder={__('Select user', 'blocksy-companion')}
-					entity="users"
+					option={{
+						placeholder: __('Select user', 'blocksy-companion'),
+						entity: 'users',
+						additionOptions: [
+							{
+								key: 'all_users',
+								value: __('All authors', 'blocksy-companion'),
+							},
+						],
+					}}
 					value={(condition.payload || {}).user_id || 'all_users'}
-					additionOptions={[
-						{
-							key: 'all_users',
-							value: __('All authors', 'blocksy-companion'),
-						},
-					]}
-					onChange={({ id }) => {
+					onChange={(id) => {
 						onChange({
 							...condition,
 							payload: {

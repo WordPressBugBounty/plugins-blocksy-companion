@@ -5,7 +5,7 @@ import {
 	useBlockProps,
 	withColors,
 } from '@wordpress/block-editor'
-import { getOptionsForBlock } from '../../utils'
+import { getOptionsForBlock } from 'blocksy-options'
 import Preview from './Preview'
 import BasicEdit from '../../components/BasicEdit'
 import ColorsPanel from '../../components/ColorsPanel'

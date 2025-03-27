@@ -84,6 +84,7 @@ const Edit = ({
 				setAttributes={setAttributes}
 				options={options}
 			/>
+
 			<InspectorControls group="styles">
 				<ColorsPanel
 					label={__('Text Color', 'blocksy-companion')}
@@ -145,7 +146,10 @@ const Edit = ({
 					about_social_icons_color === 'default' &&
 					(about_social_icons_fill === 'solid' ? (
 						<ColorsPanel
-							label={__('Icons Background Color', 'blocksy-companion')}
+							label={__(
+								'Icons Background Color',
+								'blocksy-companion'
+							)}
 							resetAll={() => {
 								setBackgroundColor(colors.backgroundColor)
 								setBackgroundHoverColor(
@@ -176,7 +180,10 @@ const Edit = ({
 						/>
 					) : (
 						<ColorsPanel
-							label={__('Icons Border Color', 'blocksy-companion')}
+							label={__(
+								'Icons Border Color',
+								'blocksy-companion'
+							)}
 							resetAll={() => {
 								setBorderColor(colors.borderColor)
 								setBorderHoverColor(colors.borderHoverColor)

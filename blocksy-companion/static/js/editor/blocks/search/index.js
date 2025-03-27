@@ -3,7 +3,7 @@ import { createElement } from '@wordpress/element'
 import { __ } from 'ct-i18n'
 import { registerBlockType } from '@wordpress/blocks'
 
-import { getAttributesFromOptions, getOptionsForBlock } from '../../utils'
+import { getAttributesFromOptions, getOptionsForBlock } from 'blocksy-options'
 
 export const options = getOptionsForBlock('search')
 export const defaultAttributes = getAttributesFromOptions(options)
@@ -14,7 +14,10 @@ import Edit from './Edit'
 registerBlockType('blocksy/search', {
 	apiVersion: 3,
 	title: __('Advanced Search', 'blocksy-companion'),
-	description: __('Quickly find specific content on your site.', 'blocksy-companion'),
+	description: __(
+		'Quickly find specific content on your site.',
+		'blocksy-companion'
+	),
 	icon: {
 		src: (
 			<svg

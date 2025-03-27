@@ -936,8 +936,8 @@ class Blocksy_WP_Import extends WP_Importer {
 							$value = maybe_unserialize($meta['value']);
 						}
 
-						// add_post_meta($post_id, wp_slash($key), wp_slash_strings_only($value));
-						add_post_meta($post_id, wp_slash($key), $value);
+						// add_post_meta($post_id, wp_slash($key), wp_slash_strings_only($value), true);
+						add_post_meta($post_id, wp_slash($key), $value, true);
 
 						do_action('import_post_meta', $post_id, $key, $value);
 
@@ -1050,8 +1050,8 @@ class Blocksy_WP_Import extends WP_Importer {
 						$value = maybe_unserialize(wp_unslash($meta['value']));
 					}
 
-					// add_post_meta($post_id, wp_slash($key), wp_slash_strings_only($value));
-					add_post_meta($id, wp_slash($key), $value);
+					// add_post_meta($post_id, wp_slash($key), wp_slash_strings_only($value), true);
+					add_post_meta($id, wp_slash($key), $value, true);
 
 					do_action('import_post_meta', $id, $key, $value);
 				}
@@ -1079,6 +1079,7 @@ class Blocksy_WP_Import extends WP_Importer {
 			$url = rtrim( $this->base_url, '/' ) . $url;
 
 		$upload = $this->fetch_remote_file( $url, $post );
+
 		if ( is_wp_error( $upload ) )
 			return $upload;
 

@@ -5,7 +5,7 @@ import {
 	useBlockProps,
 	withColors,
 } from '@wordpress/block-editor'
-import { getOptionsForBlock } from '../../utils'
+import { getOptionsForBlock } from 'blocksy-options'
 import Preview from './Preview'
 import BasicEdit from '../../components/BasicEdit'
 import ColorsPanel from '../../components/ColorsPanel'
@@ -107,7 +107,10 @@ const Edit = ({
 					{social_type !== 'simple' &&
 						(social_icons_fill === 'solid' ? (
 							<ColorsPanel
-								label={__('Icons Background Colors', 'blocksy-companion')}
+								label={__(
+									'Icons Background Colors',
+									'blocksy-companion'
+								)}
 								resetAll={() => {
 									setBackgroundColor(colors.backgroundColor)
 									setBackgroundHoverColor(
@@ -119,7 +122,10 @@ const Edit = ({
 									{
 										colorValue: backgroundColor.color,
 										enableAlpha: true,
-										label: __('Initial', 'blocksy-companion'),
+										label: __(
+											'Initial',
+											'blocksy-companion'
+										),
 										onColorChange: (value) =>
 											setBackgroundColor(
 												value || colors.backgroundColor
@@ -139,7 +145,10 @@ const Edit = ({
 							/>
 						) : (
 							<ColorsPanel
-								label={__('Icons Border Colors', 'blocksy-companion')}
+								label={__(
+									'Icons Border Colors',
+									'blocksy-companion'
+								)}
 								resetAll={() => {
 									setBorderColor(colors.borderColor)
 									setBorderHoverColor(colors.borderHoverColor)
@@ -149,7 +158,10 @@ const Edit = ({
 									{
 										colorValue: borderColor.color,
 										enableAlpha: true,
-										label: __('Initial', 'blocksy-companion'),
+										label: __(
+											'Initial',
+											'blocksy-companion'
+										),
 										onColorChange: (value) =>
 											setBorderColor(
 												value || colors.borderColor

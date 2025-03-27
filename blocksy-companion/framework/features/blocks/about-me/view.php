@@ -48,9 +48,14 @@ $about_text = do_shortcode(
 );
 
 if ($about_source === 'from_wp') {
-	if (!$user_id) {
-		require_once dirname(__FILE__) . '/helpers.php';
-		$user_id = array_keys(blc_get_user_choices())[0];
+	if (! $user_id) {
+		if (blc_theme_functions()->blocksy_manager() !== \Blocksy\ThemeFunctions::$NON_EXISTING_FUNCTION) {
+			$user_id = blc_theme_functions()->blocksy_manager()
+				->entity_id_picker
+				->get_default_value([
+					'entity' => 'users'
+				]);
+		}
 	}
 
 	$image_output = blocksy_simple_image(

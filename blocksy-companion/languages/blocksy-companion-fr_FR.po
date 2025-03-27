@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-11 18:15:43+0000\n"
+"PO-Revision-Date: 2025-03-19 15:00:16+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,7 +72,7 @@ msgstr "WooCommerce : Ajouté au panier"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:294
 msgid "Upsell Products"
-msgstr ""
+msgstr "Produits ventes complémentaires"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:295
 msgid "Cross-sell Products"
@@ -210,7 +210,7 @@ msgstr "Votre abonnement à la liste d’attente a bien été confirmé."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
-msgstr ""
+msgstr "Recherche produits"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:14
 msgid "Export Subscribers"
@@ -247,7 +247,7 @@ msgstr "Est inscrit/inscrite"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:170
 msgid "Date created"
-msgstr ""
+msgstr "Date de création"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:8
 msgid "Waitlist - Back in Stock Notification"
@@ -267,7 +267,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
-msgstr ""
+msgstr "Liste d'attente - Confirmation de l'abonnement"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:9
 msgid "This email is sent when a user subscribes to a product stock alert and should confirm their subscription"
@@ -275,27 +275,27 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:10
 msgid "Confirm waitlist subscription"
-msgstr ""
+msgstr "Confirmer l'inscription sur la liste d'attente"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:11
 msgid "Get notified when {product_title} is back in stock"
-msgstr ""
+msgstr "Notification lorsque {product_title} est de nouveau en stock"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:8
 msgid "Waitlist - Subscription Confirmed"
-msgstr ""
+msgstr "Liste d'attente - Inscription confirmé"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:9
 msgid "This email is sent after a user confirmed the subscription to a product stock alert"
-msgstr ""
+msgstr "Cet e-mail est envoyé après que l'utilisateur a confirmé l'inscription à une alerte sur le stock produit."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:10
 msgid "Waitlist subscription confirmed"
-msgstr ""
+msgstr "Inscription sur liste d'attente confirmée"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr ""
+msgstr "Vous serez informé lorsque {product_title} est de nouveau en stock"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:35,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:139
@@ -648,7 +648,7 @@ msgstr "catégorie"
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/filter-presenter.php:108
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Preview.js:32
 msgid "Find by %s"
-msgstr ""
+msgstr "Recherche par %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:434
 msgid "Regenerate the product taxonomies lookup table"
@@ -749,24 +749,24 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:10
 msgid "Filter by Price Controls"
-msgstr ""
+msgstr "Filtrer par le contrôle des prix"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:106
 msgid "Filter by Price"
-msgstr ""
+msgstr "Filtrer par prix"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:11
 msgid "Widget for filtering the WooCommerce products by price."
-msgstr ""
+msgstr "Widget pour filtrer les produits WooCommerce par prix."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:58
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:473
 msgid "Show Tooltip"
-msgstr ""
+msgstr "Afficher l'infobulle"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:70
 msgid "Show Prices"
-msgstr ""
+msgstr "Afficher les prix"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Disabled.js:6
 msgid "Please select a valid taxonomy."
@@ -1949,7 +1949,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:87
 msgid "Product Price & Stock Visibility"
-msgstr ""
+msgstr "Prix des produits et visibilité des stocks"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:42
 msgid "Trigger Icon Type"
@@ -2007,7 +2007,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:372,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:160
 msgid "Add {items} more items to get free shipping!"
-msgstr ""
+msgstr "Ajoutez {items} articles supplémentaires pour bénéficier de la livraison gratuite !"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:52
 msgid "Count Criteria"
@@ -2034,7 +2034,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:90
 msgid "Amount of items the client has to buy in order to get free shipping."
-msgstr ""
+msgstr "Nombre d'articles que le client doit acheter pour bénéficier de la gratuité des frais de port."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:168
 msgid "You can use dynamic code tags such as {items} inside this option."
@@ -2835,7 +2835,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:76
 msgid "Amount the client has to reach in order to get free shipping."
-msgstr ""
+msgstr "Montant à atteindre pour bénéficier de la gratuité des frais de port."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:104
 msgid "The calculation method will be based on WooCommerce zones."
@@ -2856,7 +2856,7 @@ msgstr "Message par défaut"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:143
 msgid "You can use dynamic code tags such as {price} inside this option."
-msgstr ""
+msgstr "Vous pouvez utiliser des balises de code dynamique telles que {price} dans cette option."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:174
 msgid "Success Message"
@@ -2907,12 +2907,12 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:382,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:176
 msgid "Congratulations! You got free shipping 🎉"
-msgstr ""
+msgstr "Félicitations ! Vous avez bénéficié de la livraison gratuite 🎉"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:359,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:135
 msgid "Add {price} more to get free shipping!"
-msgstr ""
+msgstr "Ajoutez {prix} de plus pour bénéficier de la livraison gratuite !"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:15
 msgid "Show In Cart Page"
@@ -6243,11 +6243,11 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/extension.php:138
 msgid "Quick view price before"
-msgstr ""
+msgstr "Visualisation rapide du prix avant"
 
 #: framework/premium/extensions/woocommerce-extra/extension.php:143
 msgid "Quick view price after"
-msgstr ""
+msgstr "Visualisation rapide du prix après"
 
 #: framework/premium/extensions/woocommerce-extra/extension.php:148
 msgid "Quick view summary before"
@@ -6680,11 +6680,11 @@ msgstr ""
 
 #: framework/premium/features/content-blocks/hooks-manager.php:620
 msgid "Before shop loop item price"
-msgstr ""
+msgstr "Prix de l'article avant la boucle de magasin"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:625
 msgid "After shop loop item price"
-msgstr ""
+msgstr "Prix de l'article après la boucle de magasin"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:640
 msgid "After shop loop"

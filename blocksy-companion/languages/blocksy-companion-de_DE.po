@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-11-19 07:19:30+0000\n"
+"PO-Revision-Date: 2025-03-19 15:00:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -210,7 +210,7 @@ msgstr "Ihre Anmeldung für die Warteliste wurde erfolgreich bestätigt."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
-msgstr ""
+msgstr "Produkte suchen"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:14
 msgid "Export Subscribers"
@@ -648,7 +648,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/filter-presenter.php:108
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Preview.js:32
 msgid "Find by %s"
-msgstr ""
+msgstr "Suche nach %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:434
 msgid "Regenerate the product taxonomies lookup table"
@@ -749,15 +749,15 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:10
 msgid "Filter by Price Controls"
-msgstr ""
+msgstr "Nach Preiskontrollen filtern"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:106
 msgid "Filter by Price"
-msgstr ""
+msgstr "Nach Preis filtern"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:11
 msgid "Widget for filtering the WooCommerce products by price."
-msgstr ""
+msgstr "Widget zum Filtern der WooCommerce-Produkte nach Preis."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:58
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:473
@@ -766,7 +766,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:70
 msgid "Show Prices"
-msgstr ""
+msgstr "Preise anzeigen"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Disabled.js:6
 msgid "Please select a valid taxonomy."
@@ -1121,7 +1121,7 @@ msgstr ""
 
 #: static/js/editor/blocks/dynamic-data/index.js:65
 msgid "Dynamic Price"
-msgstr ""
+msgstr "Dynamischer Preis"
 
 #: static/js/editor/blocks/dynamic-data/index.js:69
 msgid "Dynamic Stock Status"
@@ -1314,7 +1314,7 @@ msgstr ""
 
 #: static/js/editor/blocks/search/Preview.js:24
 msgid "Select category"
-msgstr ""
+msgstr "Kategorie auswählen"
 
 #: static/js/editor/blocks/search/index.js:16
 msgid "Advanced Search"
@@ -1475,7 +1475,7 @@ msgstr ""
 
 #: framework/extensions/trending/customizer.php:409
 msgid "Show Product Price"
-msgstr ""
+msgstr "Produktpreis anzeigen"
 
 #: framework/extensions/trending/customizer.php:423
 msgid "Show Taxonomy"
@@ -1737,7 +1737,7 @@ msgstr ""
 #: framework/features/blocks/search/options.php:147,
 #: framework/features/blocks/search/view.php:265
 msgid "Select Category"
-msgstr ""
+msgstr "Kategorie auswählen"
 
 #: framework/features/blocks/search/options.php:175,
 #: framework/premium/features/premium-header/items/search-input/options.php:164
@@ -1949,7 +1949,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:87
 msgid "Product Price & Stock Visibility"
-msgstr ""
+msgstr "Sichtbarkeit von Produktpreisen und Lagerbeständen"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:42
 msgid "Trigger Icon Type"
@@ -2007,7 +2007,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:372,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:160
 msgid "Add {items} more items to get free shipping!"
-msgstr ""
+msgstr "Fügen Sie {items} weitere Artikel hinzu, um kostenlosen Versand zu erhalten!"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:52
 msgid "Count Criteria"
@@ -2022,7 +2022,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:34
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:128
 msgid "Price"
-msgstr ""
+msgstr "Preis"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:60
 msgid "Items"
@@ -2034,7 +2034,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:90
 msgid "Amount of items the client has to buy in order to get free shipping."
-msgstr ""
+msgstr "Anzahl der Artikel, die der Kunde kaufen muss, um kostenlosen Versand zu erhalten."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:168
 msgid "You can use dynamic code tags such as {items} inside this option."
@@ -2252,7 +2252,7 @@ msgstr ""
 
 #: static/js/dashboard/helpers/useProExtensionInFree.js:14
 msgid "This is a Pro extension"
-msgstr ""
+msgstr "Dies ist eine Pro-Erweiterung"
 
 #: static/js/dashboard/helpers/useUpsellModal.js:103
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:115
@@ -2262,7 +2262,7 @@ msgstr ""
 #: static/js/dashboard/helpers/useUpsellModal.js:11
 #: static/js/dashboard/screens/DemoInstall/filters/DemoListFilters.js:14
 msgid "Free"
-msgstr ""
+msgstr "Kostenlos"
 
 #: static/js/dashboard/helpers/useUpsellModal.js:122
 msgid "Compare Plans"
@@ -2835,7 +2835,7 @@ msgstr "Bevor dieses Produkt hinzugefügt werden kann, müssen Optionen selektie
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:76
 msgid "Amount the client has to reach in order to get free shipping."
-msgstr ""
+msgstr "Betrag, den der Kunde erreichen muss, um kostenlosen Versand zu erhalten."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:104
 msgid "The calculation method will be based on WooCommerce zones."
@@ -2856,7 +2856,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:143
 msgid "You can use dynamic code tags such as {price} inside this option."
-msgstr ""
+msgstr "Sie können dynamische Code-Tags wie {price} innerhalb dieser Option verwenden."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:174
 msgid "Success Message"
@@ -2907,12 +2907,12 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:382,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:176
 msgid "Congratulations! You got free shipping 🎉"
-msgstr ""
+msgstr "Herzlichen Glückwunsch! Sie haben kostenlosen Versand 🎉."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:359,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:135
 msgid "Add {price} more to get free shipping!"
-msgstr ""
+msgstr "Fügen Sie {price} mehr hinzu, um kostenlosen Versand zu erhalten!"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:15
 msgid "Show In Cart Page"
@@ -3064,13 +3064,13 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:442,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:168
 msgid "Price Font"
-msgstr ""
+msgstr "Preis Schrift"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:219,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:450,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:176
 msgid "Price Color"
-msgstr ""
+msgstr "Preis Farbe"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:219
 msgid "Add To Cart Button"
@@ -4337,7 +4337,7 @@ msgstr ""
 
 #: framework/helpers/exts-configs.php:331
 msgid "Add a visual cue that tells your visitors how much the cart total must be to be able to benefit of free shipping."
-msgstr ""
+msgstr "Fügen Sie einen visuellen Hinweis hinzu, der Ihren Besuchern mitteilt, wie hoch der Gesamtwert des Warenkorbs sein muss, um in den Genuss der kostenlosen Lieferung zu kommen."
 
 #: framework/helpers/exts-configs.php:278,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:4

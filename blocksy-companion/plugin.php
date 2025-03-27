@@ -36,7 +36,7 @@ class Plugin {
 
 	private $is_blocksy = '__NOT_SET__';
 	public $is_blocksy_data = null;
-	private $desired_blocksy_version = '2.0.87-beta1';
+	private $desired_blocksy_version = '2.0.93-beta1';
 
 	private $request_uri = '';
 
@@ -212,6 +212,11 @@ class Plugin {
 	}
 
 	public function check_if_blocksy_is_activated() {
+		add_filter(
+			'doing_it_wrong_trigger_error',
+			[$this, 'doing_it_wrong_trigger_error']
+		);
+
 		$is_cli = defined('WP_CLI') && WP_CLI;
 
 		if ($this->is_blocksy === '__NOT_SET__') {
@@ -363,7 +368,16 @@ class Plugin {
 			);
 		}
 
+		remove_filter(
+			'doing_it_wrong_trigger_error',
+			[$this, 'doing_it_wrong_trigger_error']
+		);
+
 		return !!$this->is_blocksy;
+	}
+
+	public function doing_it_wrong_trigger_error() {
+		return false;
 	}
 
 	public function enqueue_static() {

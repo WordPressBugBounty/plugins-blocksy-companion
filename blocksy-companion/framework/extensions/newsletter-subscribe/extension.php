@@ -226,23 +226,26 @@ class BlocksyExtensionNewsletterSubscribe {
 		add_action('init', [$this, 'blocksy_newsletter_block']);
 		add_action('enqueue_block_editor_assets', [$this, 'enqueue_admin']);
 
-		add_filter('blocksy:gutenberg-blocks-data', function ($data) {
-			$options_file =
-				BLOCKSY_PATH .
-				'framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php';
+		add_filter(
+			'blocksy:block-editor:localized_data',
+			function ($data) {
+				$options_file =
+					BLOCKSY_PATH .
+					'framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php';
 
-			$options = blocksy_akg(
-				'options',
-				blc_theme_functions()->blocksy_get_variables_from_file(
-					$options_file,
-					['options' => []]
-				)
-			);
+				$options = blocksy_akg(
+					'options',
+					blc_theme_functions()->blocksy_get_variables_from_file(
+						$options_file,
+						['options' => []]
+					)
+				);
 
-			$data['newsletter'] = $options;
+				$data['newsletter'] = $options;
 
-			return $data;
-		});
+				return $data;
+			}
+		);
 	}
 
 	public function render_block($attributes) {

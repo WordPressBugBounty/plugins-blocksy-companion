@@ -7,7 +7,16 @@
  * @package   Blocksy
  */
 
-require_once dirname(__FILE__) . '/helpers.php';
+$default_wp_user = '';
+
+if (blc_theme_functions()->blocksy_manager() !== \Blocksy\ThemeFunctions::$NON_EXISTING_FUNCTION) {
+	$default_wp_user = blc_theme_functions()->blocksy_manager()
+		->entity_id_picker
+		->get_default_value([
+			'entity' => 'users'
+		]);
+}
+
 
 $options = [
 	'title' => [
@@ -33,10 +42,11 @@ $options = [
 		'condition' => ['about_source' => 'from_wp'],
 		'options' => [
 			'wp_user' => [
-				'type' => 'ct-select',
+				'type' => 'ct-entity-picker',
 				'label' => __('User', 'blocksy-companion'),
-				'value' => array_keys(blc_get_user_choices())[0],
-				'choices' => blocksy_ordered_keys(blc_get_user_choices()),
+				'entity' => 'users',
+				'purpose' => 'default',
+				'value' => $default_wp_user,
 			],
 		],
 	],
@@ -81,6 +91,7 @@ $options = [
 		'label' => __('Image Size', 'blocksy-companion'),
 		'type' => 'ct-select',
 		'value' => 'small',
+		'purpose' => 'default',
 		'choices' => [
 			'small' => __('Small', 'blocksy-companion'),
 			'medium' => __('Medium', 'blocksy-companion'),

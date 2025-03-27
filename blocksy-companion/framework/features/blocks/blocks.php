@@ -15,18 +15,6 @@ class Blocks {
 	}
 
 	public function mount() {
-		register_block_pattern_category('blocksy', [
-			'label' => _x(
-				'Blocksy',
-				'Block pattern category',
-				'blocksy-companion'
-			),
-			'description' => __(
-				'Patterns that contain buttons and call to actions.',
-				'blocksy-companion'
-			),
-		]);
-
 		add_action('enqueue_block_editor_assets', function () {
 			if (! function_exists('get_plugin_data')) {
 				require_once(ABSPATH . 'wp-admin/includes/plugin.php');

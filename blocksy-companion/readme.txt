@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.92
+Stable tag: 2.0.93
 
 == Description ==
 
@@ -52,6 +52,11 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.93: 2025-03-27
+- Improvement: Functionality to import/export menus created with the Advanced Menu extension
+- Improvement: Make sure advanced search block respects the products taxonomy filter criteria option
+- Improvement: Optimize users search retrieval in conditions module on sites with a height amount of users
+
 2.0.92: 2025-03-13
 - Improvement: Account drop down custom link url string support
 - Improvement: Account header element - bring back the tablet/mobile dropdown functionality only for main header rows

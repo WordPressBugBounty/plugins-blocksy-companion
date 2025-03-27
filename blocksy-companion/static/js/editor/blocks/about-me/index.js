@@ -3,7 +3,7 @@ import { createElement } from '@wordpress/element'
 import { __ } from 'ct-i18n'
 import { registerBlockType } from '@wordpress/blocks'
 
-import { getAttributesFromOptions, getOptionsForBlock } from '../../utils'
+import { getAttributesFromOptions, getOptionsForBlock } from 'blocksy-options'
 import Edit from './Edit'
 import { colorsDefaults } from './colors'
 
@@ -40,7 +40,10 @@ registerBlockType('blocksy/about-me', {
 wp.blocks.registerBlockVariation('blocksy/widgets-wrapper', {
 	name: 'blocksy-about-me',
 	title: __('About Me', 'blocksy-companion'),
-	description: __('Showcase your personal information across your website.', 'blocksy-companion'),
+	description: __(
+		'Showcase your personal information across your website.',
+		'blocksy-companion'
+	),
 	attributes: {
 		heading: __('About Me', 'blocksy-companion'),
 		block: 'blocksy/about-me',

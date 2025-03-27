@@ -11,7 +11,7 @@ class DynamicData {
 			]
 		);
 
-		add_filter('blocksy:gutenberg-blocks-data', function ($data) {
+		add_filter('blocksy:block-editor:localized_data', function ($data) {
 			$options = blocksy_akg(
 				'options',
 				blc_theme_functions()->blocksy_get_variables_from_file(
@@ -21,6 +21,7 @@ class DynamicData {
 			);
 
 			$options_name = 'dynamic-data';
+
 			$data[$options_name] = $options;
 
 			return $data;

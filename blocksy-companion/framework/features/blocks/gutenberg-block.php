@@ -93,25 +93,26 @@ class GutenbergBlock {
 	public function localize_data() {
 		$options_file = $this->widget_path . '/options.php';
 
-		if (!file_exists($options_file)) {
+		if (! file_exists($options_file)) {
 			return;
 		}
 
-		add_filter('blocksy:gutenberg-blocks-data', function ($data) use (
-			$options_file
-		) {
-			$options = blocksy_akg(
-				'options',
-				blc_theme_functions()->blocksy_get_variables_from_file(
-					$options_file,
-					['options' => []]
-				)
-			);
+		add_filter(
+			'blocksy:block-editor:localized_data',
+			function ($data) use ($options_file) {
+				$options = blocksy_akg(
+					'options',
+					blc_theme_functions()->blocksy_get_variables_from_file(
+						$options_file,
+						['options' => []]
+					)
+				);
 
-			$options_name = str_replace('-', '_', $this->name);
-			$data[$options_name] = $options;
+				$options_name = str_replace('-', '_', $this->name);
+				$data[$options_name] = $options;
 
-			return $data;
-		});
+				return $data;
+			}
+		);
 	}
 }

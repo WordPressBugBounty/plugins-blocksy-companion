@@ -4896,7 +4896,7 @@ msgstr "Bố cục thẻ mặc định"
 
 #: framework/premium/features/content-blocks/options/archive.php:103
 msgid "Inherit card wrapper settings from Customizer (background color, spacing, shadow)."
-msgstr "Kế thừa cài đặt trình bao bọc thẻ từ Tùy biến (màu nền, khoảng cách, bóng)."
+msgstr "K�� thừa cài đặt trình bao bọc thẻ từ Tùy biến (màu nền, khoảng cách, bóng)."
 
 #: framework/premium/features/content-blocks/options/archive.php:53,
 #: framework/premium/features/content-blocks/options/hook.php:277,
@@ -7238,7 +7238,7 @@ msgstr "Trang cá nhân"
 
 #: framework/features/header/items/account/options.php:5
 msgid "Dashboard Page"
-msgstr "Trang t��ng quan"
+msgstr "Trang tổng quan"
 
 #: framework/features/header/items/account/options.php:7,
 #: framework/features/header/items/account/options.php:36,

@@ -20,6 +20,8 @@ namespace Blocksy;
 // If more functions will be called earlier than `after_setup_theme`, they
 // should be added here and should be only called through this proxy object.
 class ThemeFunctions {
+	public static $NON_EXISTING_FUNCTION = null;
+
 	public function __call($name, $arguments) {
 		if (function_exists($name)) {
 			return call_user_func_array($name, $arguments);
@@ -51,7 +53,8 @@ class ThemeFunctions {
 			}
 		}
 
-		return null;
+		// Every other function should handle the special case of the `null`.
+		return self::$NON_EXISTING_FUNCTION;
 	}
 }
 

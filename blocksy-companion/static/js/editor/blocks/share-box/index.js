@@ -3,7 +3,7 @@ import { createElement } from '@wordpress/element'
 import { __ } from 'ct-i18n'
 import { registerBlockType } from '@wordpress/blocks'
 
-import { getAttributesFromOptions, getOptionsForBlock } from '../../utils'
+import { getAttributesFromOptions, getOptionsForBlock } from 'blocksy-options'
 import Edit from './Edit'
 import { colorsDefaults } from './colors'
 

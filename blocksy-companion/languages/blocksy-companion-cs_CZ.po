@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-01-28 15:13:56+0000\n"
+"PO-Revision-Date: 2025-03-14 13:24:51+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3505,7 +3505,7 @@ msgstr "%s of %s považuje tuto recenzi za užitečnou"
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:666,
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:44
 msgid "Review Title"
-msgstr "Titulek recenze"
+msgstr "Nadpis recenze"
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:694
 msgid "Upload Image (Optional)"
@@ -9725,7 +9725,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:167
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:128
 msgid "Name"
-msgstr ""
+msgstr "Jméno"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:262,
 #: framework/features/blocks/contact-info/options.php:391,
@@ -9755,11 +9755,11 @@ msgstr ""
 #: framework/extensions/product-reviews/extension.php:318,
 #: framework/extensions/product-reviews/views/single-top.php:139
 msgid "Overall Score"
-msgstr ""
+msgstr "Celkové hodnocení"
 
 #: framework/extensions/product-reviews/extension.php:376
 msgid "Review Summary"
-msgstr ""
+msgstr "Shrnutí recenze"
 
 #: framework/extensions/product-reviews/extension.php:387
 msgid "Scores Box Width"
@@ -9860,23 +9860,23 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:100,
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/active-filters.php:190
 msgid "Categories"
-msgstr ""
+msgstr "Kategorie"
 
 #: framework/extensions/product-reviews/extension.php:591,
 #: framework/extensions/trending/customizer.php:36,
 #: framework/extensions/trending/customizer.php:117
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:88
 msgid "Category"
-msgstr ""
+msgstr "Kategorie"
 
 #: framework/extensions/product-reviews/extension.php:592
 msgid "Search Category"
-msgstr ""
+msgstr "Vyhledat kategorii"
 
 #: framework/extensions/product-reviews/extension.php:593
 #: static/js/dashboard/screens/DemoInstall/filters/DemoListFilters.js:88
 msgid "All Categories"
-msgstr ""
+msgstr "Všechny kategorie"
 
 #: framework/extensions/product-reviews/extension.php:594
 msgid "Parent Category"
@@ -9918,7 +9918,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:394
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:132
 msgid "Rating"
-msgstr ""
+msgstr "Hodnocení"
 
 #: framework/extensions/product-reviews/metabox.php:10
 msgid "Review Entity"
@@ -10034,21 +10034,21 @@ msgstr ""
 
 #: framework/extensions/product-reviews/metabox.php:187
 msgid "Scores"
-msgstr ""
+msgstr "Hodnocení"
 
 #: framework/extensions/product-reviews/metabox.php:227
 msgid "Product specs"
-msgstr ""
+msgstr "Specifikace"
 
 #: framework/extensions/product-reviews/metabox.php:252,
 #: framework/extensions/product-reviews/views/single-top.php:262
 msgid "Pros"
-msgstr ""
+msgstr "Výhody"
 
 #: framework/extensions/product-reviews/metabox.php:272,
 #: framework/extensions/product-reviews/views/single-top.php:285
 msgid "Cons"
-msgstr ""
+msgstr "Nevýhody"
 
 #: framework/extensions/trending/customizer.php:169
 msgid "Trending Posts"
@@ -10505,7 +10505,7 @@ msgstr ""
 
 #: framework/extensions/product-reviews/views/single-top.php:238
 msgid "Specs"
-msgstr ""
+msgstr "Specifikace"
 
 #: framework/extensions/newsletter-subscribe/helpers.php:147
 msgid "Email address"
