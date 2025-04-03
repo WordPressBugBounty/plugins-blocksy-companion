@@ -6,53 +6,7 @@ $search_through = blocksy_akg('search_through', $atts, [
 	'product' => true
 ]);
 
-$all_cpts = [];
-
-if (blc_theme_functions()->blocksy_manager()) {
-	$all_cpts = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
-}
-
-if (function_exists('is_bbpress')) {
-	$all_cpts[] = 'forum';
-	$all_cpts[] = 'topic';
-	$all_cpts[] = 'reply';
-}
-
-foreach ($all_cpts as $single_cpt) {
-	if (! isset($search_through[$single_cpt])) {
-		$search_through[$single_cpt] = false;
-	}
-}
-
-$post_type = [];
-
-foreach ($search_through as $single_post_type => $enabled) {
-	if (
-		! $enabled
-		||
-		! get_post_type_object($single_post_type)
-	) {
-		continue;
-	}
-
-	if (
-		$single_post_type !== 'post'
-		&&
-		$single_post_type !== 'page'
-		&&
-		$single_post_type !== 'product'
-		&&
-		! in_array($single_post_type, $all_cpts)
-	) {
-		continue;
-	}
-
-	$post_type[] = $single_post_type;
-}
-
-if (count(array_keys($search_through)) === count($post_type)) {
-	$post_type = [];
-}
+$post_type = blc_theme_functions()->blocksy_get_search_post_type($search_through);
 
 $class = 'ct-search-box';
 

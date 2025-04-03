@@ -3086,7 +3086,7 @@ msgstr "Przycisk strony produktu"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-badges/options.php:46
 msgid "How many days the products will be marked as \"New\" after creation."
-msgstr "Ile dni po utworzeniu produkty b��dą oznaczone jako \"Nowe\"."
+msgstr "Ile dni po utworzeniu produkty będą oznaczone jako \"Nowe\"."
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/feature.php:136,
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/feature.php:142

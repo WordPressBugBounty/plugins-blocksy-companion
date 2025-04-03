@@ -155,7 +155,7 @@ const SingleCondition = ({ className = '', condition, onRemove, onChange }) => {
 										'blocksy-companion'
 								  ),
 						entity: 'posts',
-						postType: {
+						post_type: {
 							post_ids: 'post',
 							page_ids: 'page',
 							product_ids: 'product',
@@ -203,7 +203,7 @@ const SingleCondition = ({ className = '', condition, onRemove, onChange }) => {
 					option={{
 						placeholder: __('Select taxonomy', 'blocksy-companion'),
 						entity: 'taxonomies',
-						postType: 'product',
+						post_type: 'product',
 					}}
 					value={(condition.payload || {}).taxonomy_id || ''}
 					onChange={(id) => {

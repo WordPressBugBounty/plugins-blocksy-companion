@@ -45,6 +45,8 @@ class Autoloader {
 			'ConditionsManagerAPI' => 'framework/features/conditions/api.php',
 			'ConditionsRulesResolver' => 'framework/features/conditions/rules-resolver.php',
 
+			'InlineStylesCollector' => 'framework/features/inline-styles-collector.php',
+
 			'Cli' => 'framework/cli.php',
 
 			'SvgHandling' => 'framework/features/svg.php',

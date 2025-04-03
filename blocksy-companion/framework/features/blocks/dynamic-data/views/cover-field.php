@@ -158,47 +158,40 @@ $content_size = blocksy_akg('contentSize', $attributes, 0);
 $wide_size = blocksy_akg('wideSize', $attributes, 0);
 
 if (! empty($content_size)) {
-	blc_call_gutenberg_function(
-		'wp_style_engine_get_stylesheet_from_css_rules',
-		[
-			[
-				[
-					'selector' => '.' . join('.', $inner_classes) . ' > :where(:not(.alignleft):not(.alignright):not(.alignfull))',
-					'declarations' => [
-						'max-width' => $content_size,
-						'margin-left' => 'auto !important',
-						'margin-right' => 'auto !important'
-					]
-				]
-			],
-			[
-				'context' => 'block-styles',
-				'prettify' => false,
-				'optimize' => true
-			]
-		]
+	$css = new \Blocksy_Css_Injector();
+	$selector = '.' . join('.', $inner_classes) . ' > :where(:not(.alignleft):not(.alignright):not(.alignfull))';
+
+	$css->put(
+		$selector,
+		'max-width: ' . $content_size
 	);
+
+	$css->put(
+		$selector,
+		'margin-left: auto !important'
+	);
+
+	$css->put(
+		$selector,
+		'margin-right: auto !important'
+	);
+
+	\Blocksy\Plugin::instance()->inline_styles_collector->add([
+		'css' => $css
+	]);
 }
 
 if (! empty($wide_size)) {
-	blc_call_gutenberg_function(
-		'wp_style_engine_get_stylesheet_from_css_rules',
-		[
-			[
-				[
-					'selector' => '.' . join('.', $inner_classes) . ' > .alignwide',
-					'declarations' => [
-						'max-width' => $wide_size,
-					]
-				]
-			],
-			[
-				'context' => 'block-styles',
-				'prettify' => false,
-				'optimize' => true
-			]
-		]
+	$css = new \Blocksy_Css_Injector();
+
+	$css->put(
+		'.' . join('.', $inner_classes) . ' > .alignwide',
+		'max-width: ' . $wide_size
 	);
+
+	\Blocksy\Plugin::instance()->inline_styles_collector->add([
+		'css' => $css
+	]);
 }
 
 $content = blocksy_html_tag(

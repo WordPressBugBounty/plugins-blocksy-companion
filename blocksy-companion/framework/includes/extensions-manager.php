@@ -197,7 +197,7 @@ class ExtensionsManager {
 			$class = $this->get_class_name_for($id);
 
 			// Init extension right away.
-			new $class;
+			$this->extensions[$id]['__object'] = new $class;
 		}
 
 		$activated[] = strtolower($id);

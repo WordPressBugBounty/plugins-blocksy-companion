@@ -2503,7 +2503,7 @@ msgstr "Способ оплаты"
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:85
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:43
 msgid "Cash on delivery"
-msgstr "Оплата при доста��ке"
+msgstr "Оплата при доставке"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:88
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:28
@@ -5642,7 +5642,7 @@ msgstr "термины"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:91
 msgid "images"
-msgstr "изображения"
+msgstr "из��бражения"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:92
 msgid "posts"
@@ -10551,7 +10551,7 @@ msgstr "Регистрация"
 
 #: framework/helpers/exts-configs.php:60
 msgid "Connect your Adobe Fonts project and use the selected fonts throughout Blocksy and your favorite page builder."
-msgstr "Подключите свой проект Adobe Fonts и используйте выбранные шрифты в теме сайта и конс��рукторе страниц."
+msgstr "Подключите свой проект Adobe Fonts и используйте выбранные шрифты в теме сайта и конструкторе страниц."
 
 #: framework/helpers/exts-configs.php:71
 msgid "Inject custom code snippets throughout your website. The extension works globally or on a per post/page basis."

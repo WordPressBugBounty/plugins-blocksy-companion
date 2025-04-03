@@ -34,6 +34,8 @@ class Plugin {
 	public $header = null;
 	public $account_auth = null;
 
+	public $inline_styles_collector = null;
+
 	private $is_blocksy = '__NOT_SET__';
 	public $is_blocksy_data = null;
 	private $desired_blocksy_version = '2.0.93-beta1';
@@ -155,6 +157,7 @@ class Plugin {
 		}
 
 		$this->dynamic_css = new DynamicCss();
+		$this->inline_styles_collector = new InlineStylesCollector();
 	}
 
 	/**
@@ -329,6 +332,20 @@ class Plugin {
 			if ($is_cli) {
 				$cli_config = \WP_CLI::get_config();
 
+				$should_skip_themes_wp_cli = false;
+
+				if (
+					isset($cli_config['skip-themes'])
+					&&
+					(
+						$cli_config['skip-themes'] === ''
+						||
+						strpos(strval($cli_config['skip-themes']), 'blocksy') !== false
+					)
+				) {
+					$should_skip_themes_wp_cli = true;
+				}
+
 				// Companion plugin can't run if themes are skipped in WP CLI
 				// config.
 				//
@@ -338,11 +355,7 @@ class Plugin {
 				// --skip-plugins=false and keep themes disabled.
 				// This causes the theme to be skipped and the companion plugin
 				// to run, which causes lots of issues in various environments.
-				if (
-					isset($cli_config['skip-themes'])
-					&&
-					$cli_config['skip-themes']
-				) {
+				if ($should_skip_themes_wp_cli) {
 					$is_correct_theme = false;
 					$is_correct_version = false;
 				}

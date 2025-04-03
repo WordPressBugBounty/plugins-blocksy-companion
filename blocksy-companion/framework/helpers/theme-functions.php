@@ -11,11 +11,12 @@ namespace Blocksy;
 // For the blocksy_get_theme_mod() function, the special handling of the null
 // value is not necessary.
 //
-// Right now, only two functions must be protected with this proxy:
+// Right now, only three functions must be protected with this proxy:
 //
 // - blocksy_get_theme_mod()
 // - blocksy_get_variables_from_file()
 // - blocksy_manager()
+// - blocksy_get_search_post_type()
 //
 // If more functions will be called earlier than `after_setup_theme`, they
 // should be added here and should be only called through this proxy object.
@@ -39,9 +40,13 @@ class ThemeFunctions {
 			'request' => $_REQUEST
 		]);
 
+		if ($name === 'blocksy_get_search_post_type') {
+			return [];
+		}
+
 		$functions_with_default = [
 			'blocksy_get_theme_mod',
-			'blocksy_get_variables_from_file'
+			'blocksy_get_variables_from_file',
 		];
 
 		// Special case for blocksy_get_theme_mod, when we know the default

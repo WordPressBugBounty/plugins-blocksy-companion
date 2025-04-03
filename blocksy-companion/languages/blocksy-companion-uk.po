@@ -5525,7 +5525,7 @@ msgstr "Встановлення"
 
 #: static/js/dashboard/screens/DemoInstall/components/Progress.js:34
 msgid "Please be patient and don't refresh this page, the import process may take a while, this also depends on your server."
-msgstr "Будьте терпляч�� і не оновлюйте цю сторінку, процес імпорту може зайняти деякий час, це також залежить від вашого сервера."
+msgstr "Будьте терплячі і не оновлюйте цю сторінку, процес імпорту може зайняти деякий час, це також залежить від вашого сервера."
 
 #: static/js/dashboard/screens/DemoInstall/DemoToInstall.js:306
 msgid "Back"
@@ -9750,7 +9750,7 @@ msgstr "Огляди товарів"
 
 #: framework/extensions/product-reviews/config.php:6
 msgid "This extension lets you easily create an affiliate marketing type of website by giving you options to create a personalized product review and use your affiliate links to direct your readers to the purchase page."
-msgstr "Це розширення дозволяє вам легко створити веб-сайт типу афілійованого маркетингу, надаючи вам можливість створити персоналізований огляд товару та використовувати свої партнерські посилання, щоб направити читачів на сторінку покупки."
+msgstr "Це розширення дозволяє вам ��егко створити веб-сайт типу афілійованого маркетингу, надаючи вам можливість створити персоналізований огляд товару та використовувати свої партнерські посилання, щоб направити читачів на сторінку покупки."
 
 #: framework/extensions/product-reviews/extension.php:318,
 #: framework/extensions/product-reviews/views/single-top.php:139

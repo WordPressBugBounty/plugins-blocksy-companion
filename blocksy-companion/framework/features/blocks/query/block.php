@@ -259,27 +259,11 @@ class Query {
 					'columns' => $columns
 				]);
 
-				blc_call_gutenberg_function(
-					'wp_style_engine_get_stylesheet_from_css_rules',
-					[
-						array_merge(
-							$css->get_wp_style_engine_rules([
-								'device' => 'desktop'
-							]),
-							$tablet_css->get_wp_style_engine_rules([
-								'device' => 'tablet'
-							]),
-							$mobile_css->get_wp_style_engine_rules([
-								'device' => 'mobile'
-							])
-						),
-						[
-							'context'  => 'block-supports',
-							'prettify' => false,
-							'optimize' => true
-						]
-					]
-				);
+				\Blocksy\Plugin::instance()->inline_styles_collector->add([
+					'css' => $css,
+					'tablet_css' => $tablet_css,
+					'mobile_css' => $mobile_css
+				]);
 
 				return $block_content;
 			},
@@ -773,23 +757,10 @@ class Query {
 		}
 
 		if ($context['purpose'] === 'frontend') {
-			blc_call_gutenberg_function('wp_style_engine_get_stylesheet_from_css_rules', [
-				array_merge(
-					$css->get_wp_style_engine_rules([
-						'device' => 'desktop'
-					]),
-					$tablet_css->get_wp_style_engine_rules([
-						'device' => 'tablet'
-					]),
-					$mobile_css->get_wp_style_engine_rules([
-						'device' => 'mobile'
-					])
-				),
-				[
-					'context'  => 'block-supports',
-					'prettify' => false,
-					'optimize' => true
-				]
+			\Blocksy\Plugin::instance()->inline_styles_collector->add([
+				'css' => $css,
+				'tablet_css' => $tablet_css,
+				'mobile_css' => $mobile_css
 			]);
 		}
 
