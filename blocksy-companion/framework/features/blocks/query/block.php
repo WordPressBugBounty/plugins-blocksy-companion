@@ -259,7 +259,7 @@ class Query {
 					'columns' => $columns
 				]);
 
-				\Blocksy\Plugin::instance()->inline_styles_collector->add([
+				$block_content .= \Blocksy\Plugin::instance()->inline_styles_collector->get_style_tag([
 					'css' => $css,
 					'tablet_css' => $tablet_css,
 					'mobile_css' => $mobile_css
@@ -724,53 +724,19 @@ class Query {
 			]);
 		}
 
-		$final_css = '';
-
 		if ($context['purpose'] === 'editor') {
 			$this->get_customizer_styles_for($attributes, [
 				'css' => $css,
 				'tablet_css' => $tablet_css,
 				'mobile_css' => $mobile_css
 			]);
-
-			$styles = [
-				'desktop' => '',
-				'tablet' => '',
-				'mobile' => ''
-			];
-
-			$styles['desktop'] .= $css->build_css_structure();
-			$styles['tablet'] .= $tablet_css->build_css_structure();
-			$styles['mobile'] .= $mobile_css->build_css_structure();
-
-			if (! empty($styles['desktop'])) {
-				$final_css .= $styles['desktop'];
-			}
-
-			if (! empty(trim($styles['tablet']))) {
-				$final_css .= '@media (max-width: 999.98px) {' . $styles['tablet'] . '}';
-			}
-
-			if (! empty(trim($styles['mobile']))) {
-				$final_css .= '@media (max-width: 689.98px) {' . $styles['mobile'] . '}';
-			}
 		}
 
-		if ($context['purpose'] === 'frontend') {
-			\Blocksy\Plugin::instance()->inline_styles_collector->add([
-				'css' => $css,
-				'tablet_css' => $tablet_css,
-				'mobile_css' => $mobile_css
-			]);
-		}
-
-		if (! empty($final_css)) {
-			$final_css = blocksy_html_tag(
-				'style',
-				[],
-				$final_css
-			);
-		}
+		$final_css = \Blocksy\Plugin::instance()->inline_styles_collector->get_style_tag([
+			'css' => $css,
+			'tablet_css' => $tablet_css,
+			'mobile_css' => $mobile_css
+		]);
 
 		if (empty($result)) {
 			return '';

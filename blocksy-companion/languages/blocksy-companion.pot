@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-04-03 16:43+0000\n"
+"POT-Creation-Date: 2025-04-04 14:44+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: "
@@ -1727,7 +1727,9 @@ msgstr ""
 msgid "First name"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:170
+#: framework/extensions/newsletter-subscribe/helpers.php:170,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:265,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:266
 msgid "Email address"
 msgstr ""
 
@@ -2876,19 +2878,6 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:265,
-#: framework/features/blocks/contact-info/options.php:391,
-#: framework/features/blocks/dynamic-data/options.php:143,
-#: framework/features/header/modal/register.php:47,
-#: framework/premium/extensions/shortcuts/customizer.php:136,
-#: framework/premium/extensions/shortcuts/customizer.php:162,
-#: framework/premium/extensions/shortcuts/views/bar.php:48,
-#: framework/premium/features/premium-header/items/contacts/options.php:308,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:192
-#: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:23
-msgid "Email"
-msgstr ""
-
 #: framework/extensions/newsletter-subscribe/providers/active-campaign.php:155,
 #: framework/extensions/newsletter-subscribe/providers/brevo.php:116,
 #: framework/extensions/newsletter-subscribe/providers/campaign-monitor.php:136,
@@ -3209,6 +3198,18 @@ msgstr ""
 #: framework/features/blocks/contact-info/options.php:335,
 #: framework/premium/features/premium-header/items/contacts/options.php:269
 msgid "Fax:"
+msgstr ""
+
+#: framework/features/blocks/contact-info/options.php:391,
+#: framework/features/blocks/dynamic-data/options.php:143,
+#: framework/features/header/modal/register.php:47,
+#: framework/premium/extensions/shortcuts/customizer.php:136,
+#: framework/premium/extensions/shortcuts/customizer.php:162,
+#: framework/premium/extensions/shortcuts/views/bar.php:48,
+#: framework/premium/features/premium-header/items/contacts/options.php:308,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:192
+#: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:23
+msgid "Email"
 msgstr ""
 
 #: framework/features/blocks/contact-info/options.php:398,
@@ -4252,31 +4253,31 @@ msgid ""
 "This extension requires the WooCommerce plugin to be installed and activated."
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/extension.php:129
+#: framework/premium/extensions/woocommerce-extra/extension.php:127
 msgid "Quick view title before"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/extension.php:134
+#: framework/premium/extensions/woocommerce-extra/extension.php:132
 msgid "Quick view title after"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/extension.php:139
+#: framework/premium/extensions/woocommerce-extra/extension.php:137
 msgid "Quick view price before"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/extension.php:144
+#: framework/premium/extensions/woocommerce-extra/extension.php:142
 msgid "Quick view price after"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/extension.php:149
+#: framework/premium/extensions/woocommerce-extra/extension.php:147
 msgid "Quick view summary before"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/extension.php:154
+#: framework/premium/extensions/woocommerce-extra/extension.php:152
 msgid "Quick view summary after"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/extension.php:391
+#: framework/premium/extensions/woocommerce-extra/extension.php:390
 msgid "Cart Page"
 msgstr ""
 
@@ -6665,11 +6666,11 @@ msgstr ""
 msgid "Close Icon Size"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/view.php:106
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/view.php:108
 msgid "Product succesfully added to your cart!"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/view.php:113
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/view.php:115
 msgid "Close Modal"
 msgstr ""
 

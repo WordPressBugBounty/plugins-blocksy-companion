@@ -262,7 +262,8 @@ foreach ($button_colors as $key => $value) {
 				type="email"
 				name="EMAIL"
 				placeholder="<?php esc_attr_e($email_label, 'blocksy-companion'); ?>"
-				title="<?php echo __('Email', 'blocksy-companion'); ?>"
+				title="<?php echo __('Email address', 'blocksy-companion'); ?>"
+				aria-label="<?php echo __('Email address', 'blocksy-companion'); ?>"
 				required>
 
 			<button class="wp-element-button" <?php echo ! empty($button_colors_css) ? 'style="' . esc_attr($button_colors_css) . '"' : '' ?>>

@@ -244,7 +244,7 @@ class TaxQuery {
 					'columns' => $columns
 				]);
 
-				\Blocksy\Plugin::instance()->inline_styles_collector->add([
+				$block_content .= \Blocksy\Plugin::instance()->inline_styles_collector->get_style_tag([
 					'css' => $css,
 					'tablet_css' => $tablet_css,
 					'mobile_css' => $mobile_css
