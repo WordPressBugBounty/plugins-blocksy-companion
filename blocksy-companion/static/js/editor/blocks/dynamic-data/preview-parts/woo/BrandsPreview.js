@@ -35,7 +35,7 @@ const BrandsPreview = ({ product, attributes }) => {
 					return (
 						<span
 							key={brand.slug}
-							dangerouslySetInnerHTML={{ __html: t.name }}
+							dangerouslySetInnerHTML={{ __html: brand.name }}
 						/>
 					)
 				})}

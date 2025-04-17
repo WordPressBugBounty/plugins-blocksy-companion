@@ -38,7 +38,7 @@ class Plugin {
 
 	private $is_blocksy = '__NOT_SET__';
 	public $is_blocksy_data = null;
-	private $desired_blocksy_version = '2.0.93-beta1';
+	private $desired_blocksy_version = '2.0.96-beta1';
 
 	private $request_uri = '';
 
@@ -334,16 +334,22 @@ class Plugin {
 
 				$should_skip_themes_wp_cli = false;
 
-				if (
-					isset($cli_config['skip-themes'])
-					&&
-					(
-						$cli_config['skip-themes'] === ''
-						||
-						strpos(strval($cli_config['skip-themes']), 'blocksy') !== false
-					)
-				) {
-					$should_skip_themes_wp_cli = true;
+				// Proper way to handle skip-themes
+				// https://github.com/wp-cli/wp-cli/blob/a9fabc07adf274274ba6bcc0f0e081f1fab1220b/php/utils-wp.php#L276
+				if (isset($cli_config['skip-themes'])) {
+					if ($cli_config['skip-themes'] === true) {
+						$should_skip_themes_wp_cli = true;
+					}
+
+					$skipped_themes_array = $cli_config['skip-themes'];
+
+					if (! is_array($skipped_themes_array)) {
+						$skipped_themes_array = explode(',', $skipped_themes_array);
+					}
+
+					if (in_array($name, array_filter($skipped_themes_array), true)) {
+						$should_skip_themes_wp_cli = true;
+					}
 				}
 
 				// Companion plugin can't run if themes are skipped in WP CLI

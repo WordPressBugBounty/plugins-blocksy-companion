@@ -17,6 +17,7 @@ namespace Blocksy;
 // - blocksy_get_variables_from_file()
 // - blocksy_manager()
 // - blocksy_get_search_post_type()
+// - blocksy_has_dynamic_css_in_frontend()
 //
 // If more functions will be called earlier than `after_setup_theme`, they
 // should be added here and should be only called through this proxy object.
@@ -39,6 +40,10 @@ class ThemeFunctions {
 			'backtrace' => $backtrace,
 			'request' => $_REQUEST
 		]);
+
+		if ($name === 'blocksy_has_dynamic_css_in_frontend') {
+			return false;
+		}
 
 		if ($name === 'blocksy_get_search_post_type') {
 			return [];

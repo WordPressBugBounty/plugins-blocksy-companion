@@ -133,12 +133,20 @@ const initCookies = () => {
 		return
 	}
 
-	const drawerCanvas = document.querySelector(
+	let drawerCanvas = document.querySelector(
 		'.ct-drawer-canvas[data-location="start"]'
 	)
 
 	if (!drawerCanvas) {
-		return
+		// create drawer canvas if it doesn't exist
+		const newCanvas = document.createElement('div')
+		newCanvas.classList.add('ct-drawer-canvas')
+		newCanvas.setAttribute('data-location', 'start')
+
+		document
+			.querySelector('#main-container')
+			.insertAdjacentElement('beforebegin', newCanvas)
+		drawerCanvas = newCanvas
 	}
 
 	const body = new FormData()

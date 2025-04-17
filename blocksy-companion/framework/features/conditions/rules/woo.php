@@ -5,7 +5,7 @@ $options = [];
 $has_woo = class_exists('WooCommerce');
 $woo_rules = [];
 
-$brands_enabled = taxonomy_exists('product_brands');
+$brands_enabled = taxonomy_exists('product_brand');
 
 if ($filter === 'all') {
 	$woo_rules = array_merge(

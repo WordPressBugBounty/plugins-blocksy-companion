@@ -117,7 +117,7 @@ class DynamicCss {
 			return;
 		}
 
-		if (defined('IFRAME_REQUEST') && IFRAME_REQUEST) {
+		if (! blc_theme_functions()->blocksy_has_dynamic_css_in_frontend()) {
 			return;
 		}
 

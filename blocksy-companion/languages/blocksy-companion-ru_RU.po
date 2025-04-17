@@ -1,3 +1,5 @@
+<br />
+<b>Notice</b>:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>glotpress</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in <b>/var/www/html/wp-includes/functions.php</b> on line <b>6121</b><br />
 # Translation of Blocksy Companion Pro in Russian
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
@@ -537,7 +539,7 @@ msgstr "Тень окна"
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:350,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:143
 msgid "Popup Border Radius"
-msgstr "Скругление углов"
+msgstr "Скр��гление углов"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:227
 msgid "Shipping Cost"
@@ -786,7 +788,7 @@ msgstr "Максимальная высота контейнера"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/TaxonomySelector.js:55
 msgid "Exclude Speciffic Items"
-msgstr "Исключить некоторые товары"
+msgstr "Исключ��ть некоторые товары"
 
 #: static/js/dashboard/VersionMismatch.js:62
 #: static/js/notifications/VersionMismatchNotice.js:74
@@ -795,7 +797,7 @@ msgstr "Обновить тему сейчас"
 
 #: static/js/dashboard/screens/DemoInstall.js:183
 msgid "Your site is misconfigured and AJAX requests are not reaching your backend. Please click %shere%s to find the common causes and possible solutions to this.<br> Error code - %s"
-msgstr "Ваш сайт неправильно настроен, и AJAX-запросы не доходят до вашего сервера. Нажмит�� %sсюда%s, чтобы узнать о наиболее распространенных причинах и возможных решениях этой проблемы. <br>Код ошибки - %s"
+msgstr "Ваш сайт неправильно настроен, и AJAX-запросы не доходят до вашего сервера. Нажмите %sсюда%s, чтобы узнать о наиболее распространенных причинах и возможных решениях этой проблемы. <br>Код ошибки - %s"
 
 #: static/js/dashboard/screens/DemoInstall.js:201
 msgid "Failed to retrieve starter sites list.<br> Error code - %s"
@@ -1255,7 +1257,7 @@ msgstr "Параметры"
 #: static/js/editor/blocks/query/edit/PostsPlaceholder.js:105
 #: static/js/editor/blocks/tax-query/edit/TermsPlaceholder.js:91
 msgid "Create Custom Layout"
-msgstr "Создание произвольного ма��ета"
+msgstr "Создание произвольного макета"
 
 #: static/js/editor/blocks/query/edit/PostsPlaceholder.js:37
 #: static/js/editor/blocks/query/index.js:12
@@ -1998,7 +2000,7 @@ msgstr "Видимость стрелок"
 
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/design-options.php:11
 msgid "Prev/Next Arrow"
-msgstr "Стрелки вп��рёд/назад"
+msgstr "Стрелки вперёд/назад"
 
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/design-options.php:41
 msgid "Prev/Next Background"
@@ -2136,7 +2138,7 @@ msgstr "Управление"
 
 #: static/js/dashboard/screens/Extensions/CurrentExtension.js:86
 msgid "Video Tutorial"
-msgstr "Видеоруководство"
+msgstr "Видеоруковод��тво"
 
 #: static/js/options/ConditionsManager.js:207
 msgid "Advanced Mode"
@@ -2806,7 +2808,7 @@ msgstr "Новая таблица размеров"
 
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:278
 msgid "View Size Guide"
-msgstr "Просмотр таблицы размеров"
+msgstr "Просм��тр таблицы размеров"
 
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:279
 msgid "Search Size Guides"
@@ -3131,7 +3133,7 @@ msgstr "Порядок вкладок"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/options.php:32
 msgid "Default tabs order: Description - 10, Additional Information - 20, Reviews - 30."
-msgstr "Порядок вкладок по умолчанию: описание - 10, доп. инфо - 20, отзывы - 30."
+msgstr "Порядок вкладок по умолчанию: описание - 10, доп. инфо - 20, о��зывы - 30."
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:106
 msgid "Payment Gateways"
@@ -3144,7 +3146,7 @@ msgstr "Способы доставки"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:265
 msgid "Thank you Page"
-msgstr "Страница благодарност��"
+msgstr "Страница благодарности"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:480,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:486
@@ -3484,7 +3486,7 @@ msgstr "Текст при наведении"
 
 #: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:144
 msgid "Background Initial"
-msgstr "Исходный фон"
+msgstr "Исходн��й фон"
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:376
 msgid "Star"
@@ -5642,7 +5644,7 @@ msgstr "термины"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:91
 msgid "images"
-msgstr "из��бражения"
+msgstr "изображения"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:92
 msgid "posts"
@@ -6242,7 +6244,7 @@ msgstr "Перед заголовком быстрого просмотра"
 
 #: framework/premium/extensions/woocommerce-extra/extension.php:133
 msgid "Quick view title after"
-msgstr "После заголовка быстрого просмотра"
+msgstr "После заголовка быст��ого просмотра"
 
 #: framework/premium/extensions/woocommerce-extra/extension.php:138
 msgid "Quick view price before"
@@ -6631,7 +6633,7 @@ msgstr "Конец модальной формы входа"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:513
 msgid "Register form start"
-msgstr "Начало формы регистрации"
+msgstr "На��ало формы регистрации"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:520
 msgid "Register form end"
@@ -8034,7 +8036,7 @@ msgstr "Настройки выпадающего списка"
 
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:70
 msgid "Dropdown Top Offset"
-msgstr "Смещение сверху выпадающего списка"
+msgstr "Смещение сверху вып��дающего списка"
 
 #: framework/premium/features/premium-header/items/search-input/config.php:4
 msgid "Search Box"
@@ -8354,7 +8356,7 @@ msgstr "Скрыть вкладку стартовых сайтов"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:810
 msgid "Hide Useful Plugins Tab"
-msgstr "Скрыть вкладку полезных плагинов"
+msgstr "Скрыть вкладк�� полезных плагинов"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:818
 msgid "Hide Changelog Tab"

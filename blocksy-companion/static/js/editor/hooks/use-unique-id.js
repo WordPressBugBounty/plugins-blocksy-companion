@@ -18,6 +18,10 @@ function isDuplicate({ attributes, blockType }) {
 	const allDocuments = [
 		document,
 		...Array.from(iframes)
+			.filter(
+				(iframe) =>
+					!iframe.closest('.block-editor-block-preview__container')
+			)
 			.map((iframe) => iframe.contentDocument)
 			.filter((cD) => cD),
 	]

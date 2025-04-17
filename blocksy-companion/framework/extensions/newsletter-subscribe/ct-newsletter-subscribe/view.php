@@ -254,6 +254,7 @@ foreach ($button_colors as $key => $value) {
 					name="FNAME"
 					placeholder="<?php echo esc_attr($name_label, 'blocksy-companion') . ($newsletter_subscribe_name_required ? ' *' : ''); ?>"
 					title="<?php echo __('Name', 'blocksy-companion'); ?>"
+					aria-label="<?php echo __('Name', 'blocksy-companion'); ?>"
 					<?php echo ($newsletter_subscribe_name_required ? 'required' : ''); ?>
 				>
 			<?php } ?>

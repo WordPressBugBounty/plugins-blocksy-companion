@@ -33,4 +33,13 @@ registerBlockType('blocksy/tax-query', {
 	},
 	edit: (props) => <Edit {...props} />,
 	save: () => <Save />,
+	deprecated: [
+		{
+			isEligible: ({ taxonomy }) => taxonomy === 'product_brands',
+
+			migrate: () => ({
+				taxonomy: 'product_brand',
+			}),
+		},
+	],
 })

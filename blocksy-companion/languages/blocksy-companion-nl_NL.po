@@ -1,8 +1,10 @@
+<br />
+<b>Notice</b>:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>glotpress</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in <b>/var/www/html/wp-includes/functions.php</b> on line <b>6121</b><br />
 # Translation of Blocksy Companion Pro in Dutch
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-01-14 07:49:30+0000\n"
+"PO-Revision-Date: 2025-04-14 11:00:08+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -40,7 +42,7 @@ msgstr "Klembord"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:193,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-account.php:67
 msgid "Waitlist"
-msgstr ""
+msgstr "Wachtlijst"
 
 #: framework/premium/extensions/shortcuts/customizer.php:895
 msgid "Tooltip Visibility"
@@ -84,7 +86,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:507
 msgid "Automatically close the panel when a filter option is selected."
-msgstr ""
+msgstr "Sluit het paneel automatisch wanneer een filteroptie is geselecteerd."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:15
 msgid "Form Type"
@@ -749,7 +751,7 @@ msgstr "Datum"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:10
 msgid "Filter by Price Controls"
-msgstr ""
+msgstr "Filter op prijscontroles"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:106
 msgid "Filter by Price"
@@ -1314,7 +1316,7 @@ msgstr ""
 
 #: static/js/editor/blocks/search/Preview.js:24
 msgid "Select category"
-msgstr ""
+msgstr "Selecteer categorie"
 
 #: static/js/editor/blocks/search/index.js:16
 msgid "Advanced Search"
@@ -2329,7 +2331,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/index.js:135
 msgid "Shop Filters"
-msgstr ""
+msgstr "Winkelfilters"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/index.js:10
 msgid "Widget for filtering the WooCommerce products loop by category, attribute or brand."
@@ -2393,11 +2395,11 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:233
 msgid "Multiple Selections"
-msgstr ""
+msgstr "Meerdere selecties"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:237
 msgid "Allow selecting multiple items in a filter."
-msgstr ""
+msgstr "Het selecteren van meerdere items in een filter toestaan."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:118
 msgid "Select attribute"
@@ -2463,7 +2465,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Disabled.js:7
 msgid "Please select a valid attribute."
-msgstr ""
+msgstr "Selecteer een geldig kenmerk."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/TaxonomySelector.js:41
 #: static/js/editor/blocks/query/edit/layers/useTaxonomiesLayers.js:130
@@ -2611,12 +2613,12 @@ msgstr ""
 #: framework/features/blocks/search/options.php:138,
 #: framework/premium/features/premium-header/items/search-input/options.php:132
 msgid "Taxonomy Filter"
-msgstr ""
+msgstr "Taxonomie filter"
 
 #: framework/features/blocks/search/options.php:156,
 #: framework/premium/features/premium-header/items/search-input/options.php:144
 msgid "Filter Visibility"
-msgstr ""
+msgstr "Zichtbaarheid filter"
 
 #: framework/premium/features/premium-header/items/search-input/options.php:795
 msgid "Input Border Radius"
@@ -2642,17 +2644,17 @@ msgstr "Op voorraad"
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/views/list-filter.php:109
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:198
 msgid "Active Filters"
-msgstr ""
+msgstr "Actieve filters"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/active-filters.php:22
 msgid "Active Filters Label"
-msgstr ""
+msgstr "Label actieve filters"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/views/inline-filter.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/views/list-filter.php:31
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:32
 msgid "Reset Filters"
-msgstr ""
+msgstr "Reset filters"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/filter-presenter.php:149,
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/price-filter.php:188
@@ -2954,7 +2956,7 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:477,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:4
 msgid "Filters Canvas"
-msgstr ""
+msgstr "Filters Canvas"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:177
 msgid "Panel Height"
@@ -4367,7 +4369,7 @@ msgstr ""
 #: framework/helpers/exts-configs.php:254,
 #: framework/premium/extensions/shortcuts/views/bar.php:54
 msgid "Filters"
-msgstr ""
+msgstr "Filters"
 
 #: framework/helpers/exts-configs.php:255
 msgid "Drill down the product list with new filtering widgets, an off canvas area for them and showing the active filters on the page."
@@ -4733,7 +4735,7 @@ msgstr ""
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:81
 msgid "Filter Source"
-msgstr ""
+msgstr "Filter Bron"
 
 #: framework/features/blocks/contact-info/options.php:590,
 #: framework/premium/features/premium-header/items/contacts/options.php:6
@@ -6231,7 +6233,7 @@ msgstr "Type 4"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/views/panel.php:61
 msgid "Available Filters"
-msgstr ""
+msgstr "Beschikbare filters"
 
 #: framework/premium/extensions/woocommerce-extra/extension.php:128
 msgid "Quick view title before"

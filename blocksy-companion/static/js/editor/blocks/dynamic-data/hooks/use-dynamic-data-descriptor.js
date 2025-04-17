@@ -117,7 +117,7 @@ const wooFields = (postType, taxonomies = []) => {
 	}
 
 	const hasBrands = (taxonomies || []).find(
-		({ slug }) => slug === 'product_brands'
+		({ slug }) => slug === 'product_brand'
 	)
 
 	return {

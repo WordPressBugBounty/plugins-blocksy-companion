@@ -1,8 +1,10 @@
+<br />
+<b>Notice</b>:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>glotpress</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in <b>/var/www/html/wp-includes/functions.php</b> on line <b>6121</b><br />
 # Translation of Blocksy Companion Pro in Norwegian
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-25 08:42:53+0000\n"
+"PO-Revision-Date: 2025-04-07 10:15:05+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,23 +15,23 @@ msgstr ""
 
 #: static/js/dashboard/helpers/useUpsellModal.js:88
 msgid "Business or Agency"
-msgstr ""
+msgstr "Bedrift eller byrå"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:482
 msgid "Select value"
-msgstr ""
+msgstr "Velg verdi"
 
 #: framework/helpers/exts-configs.php:385
 msgid "Product Waitlist"
-msgstr ""
+msgstr "Produktventeliste"
 
 #: framework/helpers/exts-configs.php:386
 msgid "Allow your customers to sign up for a waitlist for products that are out of stock and get notified when they are back in stock."
-msgstr ""
+msgstr "La kundene dine registrere seg på en venteliste for produkter som er utsolgt, og få beskjed når de er tilbake på lager."
 
 #: framework/features/blocks/share-box/options.php:103
 msgid "Clipboard"
-msgstr ""
+msgstr "Utklippstavle"
 
 #: framework/premium/extensions/shortcuts/customizer.php:609,
 #: framework/premium/extensions/shortcuts/customizer.php:635,
@@ -40,99 +42,99 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:193,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-account.php:67
 msgid "Waitlist"
-msgstr ""
+msgstr "Venteliste"
 
 #: framework/premium/extensions/shortcuts/customizer.php:895
 msgid "Tooltip Visibility"
-msgstr ""
+msgstr "Synlighet for verktøytips"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1351
 msgid "Container Backdrop Blur"
-msgstr ""
+msgstr "Uskarphet på beholderbakgrunn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:957
 msgid "Added to Cart: Before product"
-msgstr ""
+msgstr "Lagt i handlekurv: Før produkt"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:961
 msgid "Added to Cart: Before actions"
-msgstr ""
+msgstr "Lagt i handlekurv: Før handlinger"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:965
 msgid "Added to Cart: Before suggested products"
-msgstr ""
+msgstr "Lagt i handlekurv: Før foreslåtte produkter"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:969
 msgid "Added to Cart: After suggested products"
-msgstr ""
+msgstr "Lagt i handlekurv: Etter foreslåtte produkter"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:971
 msgid "WooCommerce: Added to Cart"
-msgstr ""
+msgstr "WooCommerce: Lagt i handlekurv"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:294
 msgid "Upsell Products"
-msgstr ""
+msgstr "Tilleggsprodukter"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:295
 msgid "Cross-sell Products"
-msgstr ""
+msgstr "Kryssalg-produkter"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:506
 msgid "Auto Close Panel"
-msgstr ""
+msgstr "Lukk panel automatisk"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:507
 msgid "Automatically close the panel when a filter option is selected."
-msgstr ""
+msgstr "Lukk panelet automatisk når et filteralternativ er valgt."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:15
 msgid "Form Type"
-msgstr ""
+msgstr "Skjematype"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:29
 msgid "Form Max Width"
-msgstr ""
+msgstr "Maksimal skjemabredde"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:41
 msgid "Enable For Backorders"
-msgstr ""
+msgstr "Aktiver for restordre"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:42
 msgid "Allow users to join the waitlist even if the product is on backorder."
-msgstr ""
+msgstr "Tillat brukere å bli med på ventelisten selv om produktet er på restordre."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:55
 msgid "Show Users Count"
-msgstr ""
+msgstr "Vis antall brukere"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:56
 msgid "Display a counter that reflects the current number of users on the waitlist."
-msgstr ""
+msgstr "Vis en teller som viser gjeldende antall brukere på ventelisten."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:69
 msgid "Logged In Users Only"
-msgstr ""
+msgstr "Kun innloggede brukere"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
-msgstr ""
+msgstr "Vis ventelistefunksjonen kun for brukere som er innlogget."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"
-msgstr ""
+msgstr "Bekreftelse på påmelding"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:84
 msgid "Specify which users should verify their waitlist subscription through email confirmation."
-msgstr ""
+msgstr "Angi hvilke brukere som må bekrefte ventelistepåmeldingen via e-post."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:107
 msgid "Waitlist Form Display Conditions"
-msgstr ""
+msgstr "Visningsbetingelser for ventelistskjema"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:108
 msgid "Choose where you want this Waitlist Form to be displayed."
-msgstr ""
+msgstr "Velg hvor du vil at dette ventelistskjemaet skal vises."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:160
 msgid "Message Font"
@@ -149,203 +151,203 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/table.php:40,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:46
 msgid "Actions"
-msgstr ""
+msgstr "Handlinger"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:96,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:200,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:221,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:282
 msgid "Invalid request"
-msgstr ""
+msgstr "Ugyldig forespørsel"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:106
 msgid "No waitlist found"
-msgstr ""
+msgstr "Ingen venteliste funnet"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:127,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:128,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:162
 msgid "Waitlists"
-msgstr ""
+msgstr "Ventelister"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:153
 msgid "Number of items per page"
-msgstr ""
+msgstr "Antall elementer per side"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:171
 msgid "Waitlist for %s"
-msgstr ""
+msgstr "Venteliste for %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:213
 msgid "Invalid email"
-msgstr ""
+msgstr "Ugyldig e-postadresse"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:229
 msgid "You are already on the waitlist"
-msgstr ""
+msgstr "Du er allerede på ventelisten"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:267
 msgid "You have been added to the waitlist"
-msgstr ""
+msgstr "Du har blitt lagt til på ventelisten"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:291
 msgid "You have been removed from the waitlist"
-msgstr ""
+msgstr "Du har blitt fjernet fra ventelisten"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:33
 msgid "%s %s joined the waitlist for this item."
-msgstr ""
+msgstr "%s %s ble med på ventelisten for dette produktet."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:243
 msgid "Waitlist Form"
-msgstr ""
+msgstr "Ventelisteskjema"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:78
 msgid "Your waitlist subscription has been successfully canceled."
-msgstr ""
+msgstr "Ventelistepåmeldingen din er blitt kansellert."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:117
 msgid "Your waitlist subscription has been successfully confirmed."
-msgstr ""
+msgstr "Ventelistepåmeldingen din er blitt bekreftet."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
-msgstr ""
+msgstr "Søk etter produkter"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:14
 msgid "Export Subscribers"
-msgstr ""
+msgstr "Eksporter abonnenter"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:63
 msgid "Guest"
-msgstr ""
+msgstr "Gjest"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:75
 msgid "Edit this customer"
-msgstr ""
+msgstr "Rediger denne kunden"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:76
 msgid "Edit"
-msgstr ""
+msgstr "Rediger"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:115,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:182
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:123
 msgid "View"
-msgstr ""
+msgstr "Vis"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:153
 msgid "%s ago"
-msgstr ""
+msgstr "for %s siden"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:169
 msgid "Is registered"
-msgstr ""
+msgstr "Er registrert"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:170
 msgid "Date created"
-msgstr ""
+msgstr "Opprettelsesdato"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:8
 msgid "Waitlist - Back in Stock Notification"
-msgstr ""
+msgstr "Venteliste – Varsling om på lager igjen"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:9
 msgid "This email is sent when a product is back in stock"
-msgstr ""
+msgstr "Denne e-posten sendes når et produkt er tilbake på lager"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:10
 msgid "A product you are waiting for is back in stock"
-msgstr ""
+msgstr "Et produkt du venter på er tilbake på lager"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr ""
+msgstr "Gode nyheter! Produktet du har ventet på er nå tilbake på lager!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
-msgstr ""
+msgstr "Venteliste – Bekreft påmelding"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:9
 msgid "This email is sent when a user subscribes to a product stock alert and should confirm their subscription"
-msgstr ""
+msgstr "Denne e-posten sendes når en bruker melder seg på et lager-varsel for et produkt og må bekrefte påmeldingen sin"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:10
 msgid "Confirm waitlist subscription"
-msgstr ""
+msgstr "Bekreft ventelistepåmelding"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:11
 msgid "Get notified when {product_title} is back in stock"
-msgstr ""
+msgstr "Få beskjed når {product_title} er tilbake på lager"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:8
 msgid "Waitlist - Subscription Confirmed"
-msgstr ""
+msgstr "Venteliste – Påmelding bekreftet"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:9
 msgid "This email is sent after a user confirmed the subscription to a product stock alert"
-msgstr ""
+msgstr "Denne e-posten sendes etter at en bruker har bekreftet påmeldingen til et lager-varsel for et produkt"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:10
 msgid "Waitlist subscription confirmed"
-msgstr ""
+msgstr "Ventelistepåmelding bekreftet"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr ""
+msgstr "Du vil få beskjed når {product_title} er tilbake på lager"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:35,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:139
 msgid "Customer"
-msgstr ""
+msgstr "Kunde"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:27
 msgid "Enter your email"
-msgstr ""
+msgstr "Skriv inn e-postadressen din"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:40
 msgid "Join Waitlist"
-msgstr ""
+msgstr "Bli med på ventelisten"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:53
 msgid "This product is currently sold out!"
-msgstr ""
+msgstr "Dette produktet er for øyeblikket utsolgt!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:61
 msgid "No worries! Please enter your e-mail address and we will promptly notify you as soon as the item is back in stock."
-msgstr ""
+msgstr "Ingen fare! Vennligst skriv inn e-postadressen din, så gir vi deg beskjed så snart produktet er tilbake på lager."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:69
 msgid "Great! You have been added to the waitlist for this product. Please check your inbox and confirm the subscription to this waitlist."
-msgstr ""
+msgstr "Flott! Du har blitt lagt til på ventelisten for dette produktet. Vennligst sjekk innboksen din og bekreft påmeldingen til ventelisten."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:97
 msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
-msgstr ""
+msgstr "Flott! Du har blitt lagt til på ventelisten for dette produktet. Du vil motta en e-post så snart produktet er tilbake på lager."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:151,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:86
 msgid "Unsubscribe"
-msgstr ""
+msgstr "Meld deg av"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:65
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:65
 msgid "No"
-msgstr ""
+msgstr "Nei"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:21
 msgid "You don't have any products in your waitlist yet."
-msgstr ""
+msgstr "Du har ingen produkter på ventelisten ennå."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:42
 msgid "Confirmed"
-msgstr ""
+msgstr "Bekreftet"
 
 #. translators: %s User name.
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:19,
@@ -355,77 +357,77 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:10,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:10
 msgid "Hi, %s!"
-msgstr ""
+msgstr "Hei, %s!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:19
 msgid "Great news! The %s from your waitlist is now back in stock!"
-msgstr ""
+msgstr "Gode nyheter! %s fra ventelisten din er nå tilbake på lager!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:42,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:24
 msgid "Click the link below to secure your purchase before it is gone!"
-msgstr ""
+msgstr "Klikk på lenken under for å sikre deg kjøpet før det blir utsolgt!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:15
 msgid "You have requested to join the waitlist for this item:"
-msgstr ""
+msgstr "Du har bedt om å bli med på ventelisten for dette produktet:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:62
 msgid "Click the button below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
-msgstr ""
+msgstr "Klikk på knappen under for å bekrefte påmeldingen din. Når den er bekreftet, vil vi gi deg beskjed når produktet er tilbake på lager."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:66
 msgid "Confirm Subscription"
-msgstr ""
+msgstr "Bekreft påmelding"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:70,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:26
 msgid "Please note, the confirmation period is 2 days."
-msgstr ""
+msgstr "Vær oppmerksom på at bekreftelsesperioden er 2 dager."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:77,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:65
 msgid "If you don't want to receive any further notifications, please %s"
-msgstr ""
+msgstr "Hvis du ikke ønsker å motta flere varsler, vennligst %s."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:78,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:66
 msgid "unsubscribe"
-msgstr ""
+msgstr "meld deg av"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
 msgid "You have been successfully added to the waitlist for the following item:"
-msgstr ""
+msgstr "Du har blitt lagt til på ventelisten for følgende produkt:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:28,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
 msgid "Product:"
-msgstr ""
+msgstr "Produkt:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:18
 msgid "Price:"
-msgstr ""
+msgstr "Pris:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:30
 msgid "Add to cart:"
-msgstr ""
+msgstr "Legg i handlekurv:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:19
 msgid "Product link:"
-msgstr ""
+msgstr "Produktlink:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:23
 msgid "Click the link below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
-msgstr ""
+msgstr "Klikk på lenken under for å bekrefte påmeldingen din. Når den er bekreftet, vil vi gi deg beskjed når produktet er tilbake på lager."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:32,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:25
 msgid "If you don't want to receive any further notifications, please unsubscribe by clicking on this link - %s"
-msgstr ""
+msgstr "Hvis du ikke ønsker å motta flere varsler, vennligst meld deg av ved å klikke på denne lenken - %s"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:127
 msgid "API URL"
@@ -433,25 +435,25 @@ msgstr ""
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:304
 msgid "More information on how to generate an API key for ActiveCampaign can be found %shere%s."
-msgstr ""
+msgstr "Mer informasjon om hvordan du genererer en API-nøkkel for ActiveCampaign kan finnes %shere%s."
 
 #: static/js/dashboard/helpers/useUpsellModal.js:18
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:111
 msgid "Business"
-msgstr ""
+msgstr "Bedrift"
 
 #: framework/helpers/exts-configs.php:377,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:4
 msgid "Added to Cart Popup"
-msgstr ""
+msgstr "Popup for lagt i handlekurv"
 
 #: framework/helpers/exts-configs.php:378
 msgid "Show a dynamic confirmation popup with product recommendations whenever items are added to the cart."
-msgstr ""
+msgstr "Vis en dynamisk bekreftelses-popup med produktanbefalinger hver gang varer legges til i handlekurven."
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
-msgstr ""
+msgstr "Utløse popup ved"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"

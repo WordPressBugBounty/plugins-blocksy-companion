@@ -39,9 +39,12 @@ if ($field === 'woo:rating') {
 }
 
 if ($field === 'woo:brands') {
-	ob_start();
-	do_action('blocksy:woocommerce:brands:layer', $attributes);
-	$value = ob_get_clean();
+	$value = blocksy_render_view(
+		dirname(__FILE__) . '/brands-grid.php',
+		[
+			'attributes' => $attributes
+		]
+	);
 }
 
 if (empty(trim($value))) {

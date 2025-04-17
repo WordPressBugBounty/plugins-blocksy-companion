@@ -271,7 +271,7 @@ class ConditionsRulesResolver {
 
 		if ($rule['rule'] === 'all_product_brands') {
 			if (function_exists('is_shop')) {
-				return is_tax('product_brands');
+				return is_tax('product_brand');
 			}
 		}
 

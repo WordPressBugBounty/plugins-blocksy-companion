@@ -483,6 +483,12 @@ class TaxQuery {
 	}
 
 	private static function get_attributes($attributes) {
+		// migrate to native brands
+		
+		if ($attributes['taxonomy'] === 'product_brands') {
+			$attributes['taxonomy'] = 'product_brand';
+		}
+
 		return wp_parse_args(
 			$attributes,
 			[
@@ -638,6 +644,15 @@ class TaxQuery {
 			}
 
 			$term_atts = $term_atts[0];
+
+			$maybe_image_id = isset($term->term_id) ? get_term_meta($term->term_id, 'thumbnail_id', true) : '';
+
+			if (! empty($maybe_image_id)) {
+				$term_atts['icon_image'] = [
+					'attachment_id' => $maybe_image_id,
+					'url' => wp_get_attachment_image_url($maybe_image_id, 'full')
+				];
+			}
 
 			$maybe_icon = blocksy_akg('icon_image', $term_atts, '');
 			$maybe_image = blocksy_akg('image', $term_atts, $attachment);
