@@ -1,5 +1,3 @@
-<br />
-<b>Notice</b>:  Function _load_textdomain_just_in_time was called <strong>incorrectly</strong>. Translation loading for the <code>glotpress</code> domain was triggered too early. This is usually an indicator for some code in the plugin or theme running too early. Translations should be loaded at the <code>init</code> action or later. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 6.7.0.) in <b>/var/www/html/wp-includes/functions.php</b> on line <b>6121</b><br />
 # Translation of Blocksy Companion Pro in Romanian
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
@@ -4280,7 +4278,7 @@ msgstr "Formulare conținut cookie"
 
 #: framework/helpers/exts-configs.php:362
 msgid "Better management for affiliate products with a few simple options that strengthen the external integration with these."
-msgstr "Management mai bun pentru produsele afiliate cu câteva opțiuni simple care întăresc integrarea externă."
+msgstr "Management mai bun pentru produsele afiliate cu câteva opțiuni simple care înt��resc integrarea externă."
 
 #: framework/helpers/exts-configs.php:295
 msgid "Custom Tabs"

@@ -347,7 +347,7 @@ class Plugin {
 						$skipped_themes_array = explode(',', $skipped_themes_array);
 					}
 
-					if (in_array($name, array_filter($skipped_themes_array), true)) {
+					if (in_array('blocksy', array_filter($skipped_themes_array), true)) {
 						$should_skip_themes_wp_cli = true;
 					}
 				}

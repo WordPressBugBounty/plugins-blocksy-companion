@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.96
+Stable tag: 2.0.97
 
 == Description ==
 
@@ -52,6 +52,9 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.97: 2025-04-24
+- Improvement: Correctly check for Blocksy theme presence in WP CLI context
+
 2.0.96: 2025-04-17
 - Improvement: Advanced Posts block - Better generation of unique ID to avoid clashes
 - Improvement: Correct handle skip-themes flag in WP CLI when detecting presence of Blocksy theme
