@@ -159,15 +159,17 @@ $options = [
 					'wp:comments',
 
 					'wp:term_title',
-					'wp:term_image',
 					'wp:term_count',
 
 					'wp:author_avatar',
 				]),
 				'all' => [
 					'viewType' => 'default',
-					'field' => 'wp:featured_image',
-				]
+					'field' => implode('|', [
+						'wp:featured_image',
+						'wp:term_image'
+					]),
+				],
 			]
 		],
 		'options' => [

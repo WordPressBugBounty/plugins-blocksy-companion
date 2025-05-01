@@ -3,6 +3,14 @@
 $view_type = blocksy_akg('viewType', $attributes, 'default');
 
 if ($view_type === 'cover') {
+	if (
+		! $attachment_id
+		&&
+		empty($content)
+	) {
+		return;
+	}
+
 	echo blocksy_render_view(
 		dirname(__FILE__) . '/cover-field.php',
 		[

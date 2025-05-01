@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-19 13:03:55+0000\n"
+"PO-Revision-Date: 2025-04-25 21:53:26+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -80,7 +80,7 @@ msgstr "Prodotti Vendita Incrociata"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:506
 msgid "Auto Close Panel"
-msgstr "Pannello Chiusura Automatica"
+msgstr "Chiudi automaticamente il pannello"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:507
 msgid "Automatically close the panel when a filter option is selected."
@@ -88,15 +88,15 @@ msgstr "Chiudere automaticamente il pannello quando si seleziona un'opzione di f
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:15
 msgid "Form Type"
-msgstr "Tipo Modello"
+msgstr "Tipo di modulo"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:29
 msgid "Form Max Width"
-msgstr "Larghezza Massima Modello"
+msgstr "Larghezza massima del modulo"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:41
 msgid "Enable For Backorders"
-msgstr "Abilita per Ordini Arretrati"
+msgstr "Abilita per gli ordini arretrati"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:42
 msgid "Allow users to join the waitlist even if the product is on backorder."
@@ -210,11 +210,11 @@ msgstr "La tua iscrizione alla lista d'attesa è stata confermata con successo."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
-msgstr "Cerca Prodotti"
+msgstr "Cerca prodotti"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:14
 msgid "Export Subscribers"
-msgstr "Esportare Iscritti"
+msgstr "Esporta gli iscritti"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:63
 msgid "Guest"
@@ -393,7 +393,7 @@ msgstr "Se non desideri più ricevere notifiche, ti preghiamo di %s"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:78,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:66
 msgid "unsubscribe"
-msgstr "annullare l'iscrizione"
+msgstr "annulla l'iscrizione"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
@@ -487,12 +487,12 @@ msgstr "Info Totale"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:264
 msgid "Suggested Products"
-msgstr "Prodotti Consigliati"
+msgstr "Prodotti consigliati"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:292,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/suggested-products.php:51
 msgid "Related Products"
-msgstr "Prodotti Correlati"
+msgstr "Prodotti correlati"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:293
 msgid "Recently Viewed Products"
@@ -753,7 +753,7 @@ msgstr "Filtra per Controllo Prezzo"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:106
 msgid "Filter by Price"
-msgstr "Filtra per Prezzo"
+msgstr "Filtra per prezzo"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:11
 msgid "Widget for filtering the WooCommerce products by price."
@@ -786,7 +786,7 @@ msgstr "Altezza Massima Contenitore"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/TaxonomySelector.js:55
 msgid "Exclude Speciffic Items"
-msgstr "Escludi Articoli Specifici"
+msgstr "Escludi articoli specifici"
 
 #: static/js/dashboard/VersionMismatch.js:62
 #: static/js/notifications/VersionMismatchNotice.js:74
@@ -815,7 +815,7 @@ msgstr "Piano richiesto"
 
 #: static/js/dashboard/screens/DemoInstall/filters/DemoListFilters.js:13
 msgid "All Plans"
-msgstr "Tutti i Piani"
+msgstr "Tutti i piani"
 
 #: static/js/dashboard/screens/DemoInstall/filters/DemoListFilters.js:15
 msgid "Pro"
@@ -823,7 +823,7 @@ msgstr "Pro"
 
 #: static/js/dashboard/screens/DemoInstall/filters/DemoListFilters.js:182
 msgid "All Builders"
-msgstr "Tutti i Costruttori"
+msgstr "Tutti i builder"
 
 #: static/js/dashboard/screens/DemoInstall/filters/DemoListFilters.js:206
 msgid "Search for a starter site..."
@@ -831,7 +831,7 @@ msgstr "Cerca uno sito starter..."
 
 #: static/js/dashboard/screens/SiteExport.js:176
 msgid "Export Site"
-msgstr "Esporta Sito"
+msgstr "Esporta sito"
 
 #: static/js/dashboard/screens/SiteExport.js:191
 msgid "Starter site"
@@ -855,7 +855,7 @@ msgstr "Sottopagina"
 
 #: static/js/editor/blocks/breadcrumbs/index.js:11
 msgid "Breadcrumbs"
-msgstr "Breadcrumbs"
+msgstr "Breadcrumb"
 
 #: static/js/editor/blocks/breadcrumbs/index.js:12
 msgid "Display navigational links, showing users their path within the site."
@@ -967,7 +967,7 @@ msgstr "Dimensione immagine"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:271
 msgid "Logo Gap"
-msgstr "Divario Logo"
+msgstr "Spaziatura logo"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:323
 msgid "Custom field fallback"
@@ -1467,23 +1467,23 @@ msgstr "In Vendita"
 
 #: framework/extensions/trending/customizer.php:308
 msgid "Top Rated"
-msgstr "Più Votati"
+msgstr "Più votati"
 
 #: framework/extensions/trending/customizer.php:309
 msgid "Best Sellers"
-msgstr "Più Venduti"
+msgstr "Più venduti"
 
 #: framework/extensions/trending/customizer.php:409
 msgid "Show Product Price"
-msgstr "Mostra Prezzo Prodotto"
+msgstr "Mostra prezzo del prodotto"
 
 #: framework/extensions/trending/customizer.php:423
 msgid "Show Taxonomy"
-msgstr "Mostra Tassonomia"
+msgstr "Mostra tassonomia"
 
 #: framework/extensions/trending/customizer.php:441
 msgid "Taxonomy Style"
-msgstr "Stile Tassonomia"
+msgstr "Stile tassonomia"
 
 #: framework/extensions/trending/customizer.php:450
 msgid "Underline"
@@ -1670,7 +1670,7 @@ msgstr "Inserisci una data o un'ora"
 #: framework/features/blocks/dynamic-data/options.php:97,
 #: framework/features/blocks/dynamic-data/views/wp-field.php:194
 msgid "No comments"
-msgstr "No commenti"
+msgstr "Nessun commento"
 
 #: framework/features/blocks/dynamic-data/options.php:102,
 #: framework/features/blocks/dynamic-data/options.php:103,
@@ -1696,7 +1696,7 @@ msgstr "Nickname"
 
 #: framework/features/blocks/dynamic-data/options.php:138
 msgid "Display Name"
-msgstr "Mostra Nome"
+msgstr "Visualizza nome"
 
 #: framework/features/blocks/dynamic-data/options.php:140
 msgid "First Name"
@@ -4415,7 +4415,7 @@ msgstr "Visualizza il tempo di lettura approssimativo di un articolo, in modo ch
 #: framework/helpers/exts-configs.php:149
 #: static/js/editor/blocks/dynamic-data/index.js:100
 msgid "Dynamic Data"
-msgstr "Data Dinamica"
+msgstr "Dati dinamici"
 
 #: framework/helpers/exts-configs.php:150
 msgid "Integrates custom fields solutions in the meta layers of a post and presents additional information."
@@ -7481,7 +7481,7 @@ msgstr "Etichetta"
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:728
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:319
 msgid "Fallback"
-msgstr "Ricaderci"
+msgstr "Alternativo"
 
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:755
 msgid "%s Field"
@@ -7922,7 +7922,7 @@ msgstr "Imbottitura Pulsante"
 
 #: framework/premium/extensions/post-types-extra/features/read-time/read-progress/customizer.php:4
 msgid "Read Progress"
-msgstr "Leggi Progresso"
+msgstr "Progresso di lettura"
 
 #: framework/premium/extensions/post-types-extra/features/read-time/read-progress/customizer.php:24
 msgid "Indicator Height"

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-07 10:15:09+0000\n"
+"PO-Revision-Date: 2025-04-24 23:06:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -4106,11 +4106,11 @@ msgstr ""
 
 #: framework/premium/features/local-gravatars.php:34
 msgid "Store Gravatars Locally"
-msgstr ""
+msgstr "Stocker les Gravatars localement"
 
 #: framework/premium/features/local-gravatars.php:39
 msgid "Store and load Gravatars locally for increased privacy and performance."
-msgstr ""
+msgstr "Stockez et chargez les Gravatars localement pour plus de confidentialité et de performance."
 
 #: framework/premium/features/premium-header.php:314,
 #: framework/premium/features/socials.php:13,
@@ -4794,11 +4794,11 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/view.php:45
 msgid "Close quick view"
-msgstr ""
+msgstr "Fermer la vue rapide"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/helpers.php:45
 msgid "Quick view toggle"
-msgstr ""
+msgstr "Ouvrir/fermer la vue rapide"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/helpers.php:32
 msgid "Quick view icon"
@@ -7782,15 +7782,15 @@ msgstr ""
 
 #: framework/premium/features/content-blocks/options/popup.php:129
 msgid "Scroll Direction"
-msgstr ""
+msgstr "Direction du défilement"
 
 #: framework/premium/features/content-blocks/options/popup.php:134
 msgid "Scroll Down"
-msgstr ""
+msgstr "Défilement bas"
 
 #: framework/premium/features/content-blocks/options/popup.php:135
 msgid "Scroll Up"
-msgstr ""
+msgstr "Défilement haut"
 
 #: framework/premium/features/content-blocks/options/popup.php:140
 msgid "Scroll Distance"
@@ -7918,7 +7918,7 @@ msgstr ""
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:284
 msgid "Button Padding"
-msgstr ""
+msgstr "Marge interne du bouton"
 
 #: framework/premium/extensions/post-types-extra/features/read-time/read-progress/customizer.php:4
 msgid "Read Progress"
@@ -7926,7 +7926,7 @@ msgstr "Progression de lecture"
 
 #: framework/premium/extensions/post-types-extra/features/read-time/read-progress/customizer.php:24
 msgid "Indicator Height"
-msgstr ""
+msgstr "Hauteur de l’indicateur"
 
 #: framework/premium/extensions/post-types-extra/features/read-time/read-progress/customizer.php:34
 msgid "Auto Hide"
@@ -8271,23 +8271,23 @@ msgstr "Avancé"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:123
 msgid "Agency Details"
-msgstr ""
+msgstr "Détails de l’agence"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:131
 msgid "Agency Name"
-msgstr ""
+msgstr "Nom de l’agence"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:159
 msgid "Agency URL"
-msgstr ""
+msgstr "URL de l’agence"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:187
 msgid "Agency Support/Contact Form URL"
-msgstr ""
+msgstr "URL du formulaire de support/contact de l'agence"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:220
 msgid "Theme Details"
-msgstr ""
+msgstr "Détails du thème"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:228
 msgid "Theme Name"
@@ -8299,7 +8299,7 @@ msgstr "Description du thème"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:286
 msgid "Theme Screenshot URL"
-msgstr ""
+msgstr "URL de la capture d’écran du thème"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:384
 msgid "You can insert the link to a self hosted image or upload one. The recommended image size is 1200px wide by 900px tall."

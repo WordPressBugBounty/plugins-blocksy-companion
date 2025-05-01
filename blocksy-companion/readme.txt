@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.97
+Stable tag: 2.0.98
 
 == Description ==
 
@@ -52,6 +52,9 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.98: 2025-05-01
+- Improvement: Advanced taxonomies block does not display anything if an image has not been assigned to a term
+
 2.0.97: 2025-04-24
 - Improvement: Correctly check for Blocksy theme presence in WP CLI context
 

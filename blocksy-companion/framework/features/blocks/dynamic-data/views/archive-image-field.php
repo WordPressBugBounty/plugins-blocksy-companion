@@ -58,10 +58,6 @@ if ($term_id) {
 	}
 }
 
-if (empty($attachment_id)) {
-	return;
-}
-
 echo blocksy_render_view(
 	dirname(__FILE__) . '/image-field.php',
 	[
