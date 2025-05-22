@@ -108,16 +108,105 @@ if (! function_exists('blc_get_trending_posts_value')) {
 
 			if ($trending_product_type === 'sale') {
 				$query_args['post__in'] = wc_get_product_ids_on_sale();
+				$date_query = [];
 			}
 
 			if ($trending_product_type === 'best') {
-				$query_args['meta_key'] = 'total_sales';
+				if ($date_filter && 'all_time' !== $date_filter) {
+					global $wpdb;
+
+					$values = [];
+
+					if (isset($date_query['after'])) {
+						$date_after = date('Y-m-d', strtotime(
+							$date_query['after']['year'] . '-' .
+							$date_query['after']['month'] . '-' .
+							$date_query['after']['days']
+						));
+
+						$date_after = gmdate('Y-m-d H:i:s', strtotime($date_after));
+						$values[] = $date_after;
+					}
+
+					$sql = "
+						SELECT 
+							product_id,
+						SUM(qty) AS total_qty
+						FROM (
+							SELECT 
+								o.ID AS order_id,
+								MAX(CASE WHEN lmeta.meta_key = '_product_id' THEN lmeta.meta_value END) AS product_id,
+								MAX(CASE WHEN lmeta.meta_key = '_qty' THEN lmeta.meta_value END) AS qty
+							FROM {$wpdb->prefix}wc_orders o
+							JOIN {$wpdb->prefix}woocommerce_order_items l ON o.ID = l.order_id
+							JOIN {$wpdb->prefix}woocommerce_order_itemmeta lmeta ON l.order_item_id = lmeta.order_item_id
+							WHERE
+								o.date_created_gmt >= %s
+							GROUP BY l.order_item_id
+						) AS product_data
+						WHERE product_id IS NOT NULL AND qty IS NOT NULL
+						GROUP BY product_id
+						ORDER BY total_qty DESC
+					";
+
+					$sql_prepared = $wpdb->prepare($sql, ...$values);
+					$results = $wpdb->get_results($sql_prepared, ARRAY_A);
+
+					$identifiers = [];
+					foreach ($results as $row) {
+						$product_id = (int) $row['product_id'];
+						$total_qty = (int) $row['total_qty'];
+						$identifiers[$product_id] = $total_qty;
+					}
+
+					arsort($identifiers);
+	
+					$query_args['post__in'] = array_keys($identifiers);
+					$query_args['orderby'] = 'post__in';
+					$date_query = [];
+				} else {
+					$query_args['meta_key'] = 'total_sales';
+					$query_args['orderby'] = 'meta_value_num';
+					$query_args['order'] = 'DESC';
+				}
 			}
 
 			if ($trending_product_type === 'rating') {
-				$query_args['meta_key'] = '_wc_average_rating';
-				$query_args['orderby'] = 'meta_value_num';
-				$query_args['order'] = 'DESC';
+				$reviews_args = [
+					'status' => 'approve', 
+					'post_status' => 'publish', 
+					'post_type' => 'product',
+					'date_query' => $date_query,
+				];
+
+				$reviews = get_comments($reviews_args);
+				$identifiers = [];
+
+				
+				foreach ($reviews as $review) {
+
+					if (! isset($identifiers[$review->comment_post_ID])) {
+						$identifiers[$review->comment_post_ID] = [
+							'count' => 0,
+							'rating' => 0
+						];
+					}
+
+					$rating = get_comment_meta($review->comment_ID, 'rating', true);
+					$identifiers[$review->comment_post_ID]['count']++;
+					$identifiers[$review->comment_post_ID]['rating'] += intval($rating);
+				}
+
+				$identifiers = array_filter($identifiers, function($item) {
+					return $item['count'] > 0;
+				});
+				$identifiers = array_map(function($item) {
+					return $item['rating'] / $item['count'];
+				}, $identifiers);
+				arsort($identifiers);
+
+				$query_args['post__in'] = array_keys($identifiers);
+				$date_query = [];
 			}
 		}
 
@@ -165,7 +254,15 @@ if (! function_exists('blc_get_trending_posts_value')) {
 			$query_args
 		));
 
-		if (! $query->have_posts()) {
+		if (
+			! $query->have_posts()
+			||
+			(
+				isset($query_args['post__in'])
+				&&
+				empty($query_args['post__in'])
+			)
+		) {
 			return [
 				'posts' => [],
 				'is_last_page' => false

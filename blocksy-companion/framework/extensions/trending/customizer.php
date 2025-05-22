@@ -371,29 +371,35 @@ $options = [
 								],
 
 								[
-									'trending_block_filter' => [
-										'label' => __( 'Trending From', 'blocksy-companion' ),
-										'type' => 'ct-select',
-										'value' => 'all_time',
-										'view' => 'text',
-										'design' => 'inline',
-										'setting' => [ 'transport' => 'postMessage' ],
-										'choices' => blocksy_ordered_keys(
-											[
-												'all_time' => __( 'All Time', 'blocksy-companion' ),
-												'last_24_hours' => __( 'Last 24 Hours', 'blocksy-companion' ),
-												'last_7_days' => __( 'Last 7 Days', 'blocksy-companion' ),
-												'last_month' => __( 'Last Month', 'blocksy-companion' ),
-											]
-										),
+									blocksy_rand_md5() => [
+										'type' => 'ct-condition',
+										'condition' => ['trending_block_product_type' => '!sale'],
+										'options' => [
+											'trending_block_filter' => [
+												'label' => __( 'Trending From', 'blocksy-companion' ),
+												'type' => 'ct-select',
+												'value' => 'all_time',
+												'view' => 'text',
+												'design' => 'inline',
+												'setting' => [ 'transport' => 'postMessage' ],
+												'choices' => blocksy_ordered_keys(
+													[
+														'all_time' => __( 'All Time', 'blocksy-companion' ),
+														'last_24_hours' => __( 'Last 24 Hours', 'blocksy-companion' ),
+														'last_7_days' => __( 'Last 7 Days', 'blocksy-companion' ),
+														'last_month' => __( 'Last Month', 'blocksy-companion' ),
+													]
+												),
 
-										'sync' => [
-											'selector' => '.ct-trending-block',
-											'render' => function () {
-												echo blc_get_trending_block();
-											}
-										],
-									],
+												'sync' => [
+													'selector' => '.ct-trending-block',
+													'render' => function () {
+														echo blc_get_trending_block();
+													}
+												],
+											],
+										]
+									]
 								],
 
 								blocksy_rand_md5() => [

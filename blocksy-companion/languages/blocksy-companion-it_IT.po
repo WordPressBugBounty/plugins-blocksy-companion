@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-25 21:53:26+0000\n"
+"PO-Revision-Date: 2025-05-21 07:45:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,7 +48,7 @@ msgstr "Visibilità tooltip"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1351
 msgid "Container Backdrop Blur"
-msgstr "Sfocatura Sfondo Contenitore"
+msgstr "Sfocatura sfondo contenitore"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:957
 msgid "Added to Cart: Before product"
@@ -120,7 +120,7 @@ msgstr "Mostra la funzione lista d'attesa esclusivamente agli utenti che hanno e
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"
-msgstr "Sottoscrizione Confermata"
+msgstr "Sottoscrizione confermata"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:84
 msgid "Specify which users should verify their waitlist subscription through email confirmation."
@@ -144,7 +144,7 @@ msgstr "Colore del messaggio"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:225
 msgid "Container Padding"
-msgstr "Imbottitura Contenitore"
+msgstr "Spaziatura interna del contenitore"
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/table.php:40,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:46
@@ -198,7 +198,7 @@ msgstr "%s %s è in lista di attesa per questo articolo."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:243
 msgid "Waitlist Form"
-msgstr "Form lista di attesa"
+msgstr "Modulo lista di attesa"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:78
 msgid "Your waitlist subscription has been successfully canceled."
@@ -324,7 +324,7 @@ msgstr "Ottimo! Sei stato aggiunto alla lista d'attesa per questo prodotto. Cont
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:97
 msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
-msgstr "Ottimo! Sei stato aggiunto alla lista d'attesa per questo prodotto. Riceverai un'e-mail non appena l'articolo tornerà disponibile."
+msgstr "Ottimo! Sei stato aggiunto alla lista d'attesa per questo prodotto. Riceverai una email non appena l'articolo tornerà disponibile."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:151,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:86
@@ -443,7 +443,7 @@ msgstr "Business"
 #: framework/helpers/exts-configs.php:377,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:4
 msgid "Added to Cart Popup"
-msgstr "Aggiunto al Carrello Popup"
+msgstr "Popup di aggiunta al carrello"
 
 #: framework/helpers/exts-configs.php:378
 msgid "Show a dynamic confirmation popup with product recommendations whenever items are added to the cart."
@@ -455,11 +455,11 @@ msgstr "Attiva il Popup"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"
-msgstr "Pagina Prodotto"
+msgstr "Pagina del prodotto"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:91
 msgid "Description Length"
-msgstr "Lunghezza Descrizione"
+msgstr "Lunghezza della descrizione"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:102
 msgid "Cart Button"
@@ -475,7 +475,7 @@ msgstr "Pulsante Continua Shopping"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:140
 msgid "Shipping Info"
-msgstr "Info Spedizione"
+msgstr "Info spedizione"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:149
 msgid "Tax Info"
@@ -483,7 +483,7 @@ msgstr "Info Tassa"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:158
 msgid "Total Info"
-msgstr "Info Totale"
+msgstr "Info totale"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:264
 msgid "Suggested Products"
@@ -545,7 +545,7 @@ msgstr "Costo Spedizione"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:236
 msgid "Tax Amount"
-msgstr "Importo Tossa"
+msgstr "Importo tassa"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:245
 msgid "Cart Total"
@@ -1089,51 +1089,51 @@ msgstr "Recupera e visualizza contenuti da varie fonti."
 
 #: static/js/editor/blocks/dynamic-data/index.js:33
 msgid "Dynamic Title"
-msgstr "Titolo Dinamico"
+msgstr "Titolo dinamico"
 
 #: static/js/editor/blocks/dynamic-data/index.js:37
 msgid "Dynamic Excerpt"
-msgstr "Estratto Dinamico"
+msgstr "Estratto dinamico"
 
 #: static/js/editor/blocks/dynamic-data/index.js:41
 msgid "Dynamic Post Date"
-msgstr "Data Articolo Dinamica"
+msgstr "Data articolo dinamica"
 
 #: static/js/editor/blocks/dynamic-data/index.js:45
 msgid "Dynamic Comments"
-msgstr "Commenti Dinamici"
+msgstr "Commenti dinamici"
 
 #: static/js/editor/blocks/dynamic-data/index.js:49
 msgid "Dynamic Terms"
-msgstr "Termini Dinamici"
+msgstr "Termini dinamici"
 
 #: static/js/editor/blocks/dynamic-data/index.js:53
 msgid "Dynamic Author"
-msgstr "Autore Dinamico"
+msgstr "Autore dinamico"
 
 #: static/js/editor/blocks/dynamic-data/index.js:57
 msgid "Dynamic Featured Image"
-msgstr "Immagine in Evidenza Dinamica"
+msgstr "Immagine in evidenza dinamica"
 
 #: static/js/editor/blocks/dynamic-data/index.js:61
 msgid "Dynamic Author Avatar"
-msgstr "Avatar Autore Dinamica"
+msgstr "Avatar autore dinamico"
 
 #: static/js/editor/blocks/dynamic-data/index.js:65
 msgid "Dynamic Price"
-msgstr "Prezzo Dinamico"
+msgstr "Prezzo dinamico"
 
 #: static/js/editor/blocks/dynamic-data/index.js:69
 msgid "Dynamic Stock Status"
-msgstr "Stato Scorte Dinamico"
+msgstr "Stato scorte dinamico"
 
 #: static/js/editor/blocks/dynamic-data/index.js:73
 msgid "Dynamic Brands"
-msgstr "Brend Dinamico"
+msgstr "Brand dinamici"
 
 #: static/js/editor/blocks/dynamic-data/index.js:77
 msgid "Dynamic SKU"
-msgstr "SKU Dinamico"
+msgstr "SKU dinamico"
 
 #: static/js/editor/blocks/dynamic-data/index.js:81
 msgid "Dynamic Rating"
@@ -1318,7 +1318,7 @@ msgstr "Seleziona categoria"
 
 #: static/js/editor/blocks/search/index.js:16
 msgid "Advanced Search"
-msgstr "Ricerca Avanzata"
+msgstr "Ricerca avanzata"
 
 #: static/js/editor/blocks/search/index.js:17
 msgid "Quickly find specific content on your site."
@@ -2932,7 +2932,7 @@ msgstr "Metodo di Calcolo"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:69
 msgid "Goal Amount"
-msgstr "Importo Obbiettivo"
+msgstr "Importo obiettivo"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/feature.php:126
 msgid "Automatically scroll page to top after user interaction."

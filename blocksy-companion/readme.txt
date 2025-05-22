@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.98
+Stable tag: 2.0.99
 
 == Description ==
 
@@ -52,6 +52,11 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.0.99: 2025-05-22
+- Improvement: Advanced Search block - make sure the additional CSS classes are outputted in frontend
+- Improvement: Sticky header - don't include hidden rows in the calculation
+- Improvement: Trending posts/products - make sure the "Product Status" option work properly when used with "Trending From" option
+
 2.0.98: 2025-05-01
 - Improvement: Advanced taxonomies block does not display anything if an image has not been assigned to a term
 

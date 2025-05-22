@@ -8,6 +8,11 @@ export const getRowInitialMinHeight = (el) => {
 	const elComp = getComputedStyle(el)
 	let containerStyles = getComputedStyle(el.firstElementChild)
 
+	// If row is not visible, return 0
+	if (elComp.display === 'none') {
+		return 0
+	}
+
 	let borderHeight =
 		parseFloat(elComp.borderTopWidth) +
 		parseFloat(elComp.borderBottomWidth) +

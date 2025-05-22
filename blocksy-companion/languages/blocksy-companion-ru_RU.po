@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-24 18:25:32+0000\n"
+"PO-Revision-Date: 2025-05-15 19:06:22+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -782,7 +782,7 @@ msgstr "Отображение поля поиска"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:496
 msgid "Container Maximum Height"
-msgstr "Максимальная высота контейнера"
+msgstr "Макс. высота контейнера"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/TaxonomySelector.js:55
 msgid "Exclude Speciffic Items"
@@ -795,7 +795,7 @@ msgstr "Обновить тему сейчас"
 
 #: static/js/dashboard/screens/DemoInstall.js:183
 msgid "Your site is misconfigured and AJAX requests are not reaching your backend. Please click %shere%s to find the common causes and possible solutions to this.<br> Error code - %s"
-msgstr "Ваш сайт неправильно настроен, и AJAX-запросы не доходят до вашего сервера. Нажмит�� %sсюда%s, чтобы узнать о наиболее распространенных причинах и возможных решениях этой проблемы. <br>Код ошибки - %s"
+msgstr "Ваш сайт неправильно настроен, и AJAX-запросы не доходят до вашего сервера. Нажмите %sсюда%s, чтобы узнать о наиболее распространенных причинах и возможных решениях этой проблемы. <br>Код ошибки - %s"
 
 #: static/js/dashboard/screens/DemoInstall.js:201
 msgid "Failed to retrieve starter sites list.<br> Error code - %s"
@@ -1255,7 +1255,7 @@ msgstr "Параметры"
 #: static/js/editor/blocks/query/edit/PostsPlaceholder.js:105
 #: static/js/editor/blocks/tax-query/edit/TermsPlaceholder.js:91
 msgid "Create Custom Layout"
-msgstr "Создание произвольного ма��ета"
+msgstr "Создание произвольного макета"
 
 #: static/js/editor/blocks/query/edit/PostsPlaceholder.js:37
 #: static/js/editor/blocks/query/index.js:12
@@ -1998,7 +1998,7 @@ msgstr "Видимость стрелок"
 
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/design-options.php:11
 msgid "Prev/Next Arrow"
-msgstr "Стрелки вп��рёд/назад"
+msgstr "Стрелки вперёд/наз��д"
 
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/design-options.php:41
 msgid "Prev/Next Background"
@@ -3144,7 +3144,7 @@ msgstr "Способы доставки"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:265
 msgid "Thank you Page"
-msgstr "Страница благодарност��"
+msgstr "Страница благодарности"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:480,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:486
@@ -5415,7 +5415,7 @@ msgstr "Включая"
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:291
 #: static/js/options/ConditionsManager/SingleCondition.js:98
 msgid "Exclude"
-msgstr "Исключая"
+msgstr "Исключить"
 
 #: framework/premium/static/js/options/PreviewedPostsSelect.js:170
 #: static/js/options/ConditionsManager/PostIdPicker.js:68
@@ -5642,7 +5642,7 @@ msgstr "термины"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:91
 msgid "images"
-msgstr "из��бражения"
+msgstr "изображения"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:92
 msgid "posts"
@@ -6985,11 +6985,11 @@ msgstr "До номера заголовка"
 
 #: static/js/editor/blocks/about-me/index.js:45
 msgid "About Me"
-msgstr "Обо мне"
+msgstr "О себе"
 
 #: framework/features/blocks/about-me/options.php:16
 msgid "About me"
-msgstr "Обо мне"
+msgstr "О себе"
 
 #: framework/features/blocks/about-me/options.php:49,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:31,
@@ -10551,7 +10551,7 @@ msgstr "Регистрация"
 
 #: framework/helpers/exts-configs.php:60
 msgid "Connect your Adobe Fonts project and use the selected fonts throughout Blocksy and your favorite page builder."
-msgstr "Подключите свой проект Adobe Fonts и используйте выбранные шрифты в теме сайта и конструкторе страниц."
+msgstr "Подключите свой проект Adobe Fonts и используйте выбранные шрифты в теме сайта и конструкто��е страниц."
 
 #: framework/helpers/exts-configs.php:71
 msgid "Inject custom code snippets throughout your website. The extension works globally or on a per post/page basis."

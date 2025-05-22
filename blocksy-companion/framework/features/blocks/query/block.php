@@ -851,55 +851,47 @@ class Query {
 				];
 			}
 
-			if (
-				$term_descriptor['strategy'] === 'related'
-				&&
-				$context['post_id']
-			) {
-				$post = get_post($context['post_id']);
-
-				$current_post_type = get_post_type($post);
-
-				if ($current_post_type !== $attributes['post_type']) {
-					continue;
-				}
-
-				$all_taxonomies = get_the_terms($post->ID, $term_slug);
-
-				if (! $all_taxonomies || is_wp_error($all_taxonomies)) {
-					continue;
-				}
-
+			if ($term_descriptor['strategy'] === 'related') {
 				$all_taxonomy_ids = [];
 
-				foreach ($all_taxonomies as $current_taxonomy) {
-					if (! isset($current_taxonomy->term_id)) {
-						continue;
+				if ($context['post_id']) {
+					$post = get_post($context['post_id']);
+
+					$current_post_type = get_post_type($post);
+
+					if ($current_post_type === $attributes['post_type']) {
+						$all_taxonomies = get_the_terms($post->ID, $term_slug);
+
+						if ($all_taxonomies && ! is_wp_error($all_taxonomies)) {
+							foreach ($all_taxonomies as $current_taxonomy) {
+								if (! isset($current_taxonomy->term_id)) {
+									continue;
+								}
+
+								$current_term_id = $current_taxonomy->term_id;
+
+								if (function_exists('pll_get_term')) {
+									$current_lang = blocksy_get_current_language();
+									$current_term_id = pll_get_term($current_term_id, $current_lang);
+								}
+
+								if (! $current_term_id) {
+									continue;
+								}
+
+								$all_taxonomy_ids[] = $current_term_id;
+							}
+						}
 					}
-
-					$current_term_id = $current_taxonomy->term_id;
-
-					if (function_exists('pll_get_term')) {
-						$current_lang = blocksy_get_current_language();
-						$current_term_id = pll_get_term($current_term_id, $current_lang);
-					}
-
-					if (! $current_term_id) {
-						continue;
-					}
-
-					$all_taxonomy_ids[] = $current_term_id;
 				}
 
 				$query_args['post__not_in'] = [$post->ID];
 
-				if (! empty($all_taxonomy_ids)) {
-					$to_include[] = [
-						'field' => 'term_id',
-						'taxonomy' => $term_slug,
-						'terms' => $all_taxonomy_ids
-					];
-				}
+				$to_include[] = [
+					'field' => 'term_id',
+					'taxonomy' => $term_slug,
+					'terms' => $all_taxonomy_ids
+				];
 			}
 		}
 
@@ -968,7 +960,6 @@ class Query {
 		}
 
 		$query_args['tax_query'] = $tax_query;
-
 
 		if ($attributes['sticky_posts'] === 'include') {
 			add_action('pre_get_posts', [$this, 'pre_get_posts']);
