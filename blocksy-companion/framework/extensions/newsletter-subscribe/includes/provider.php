@@ -49,6 +49,10 @@ class Provider {
 			return new FluentCRMProvider();
 		}
 
+		if ($provider === 'emailoctopus') {
+			return new EmailOctopusProvider();
+		}
+
 		return new MailerliteClassicProvider();
 	}
 

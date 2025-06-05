@@ -53,7 +53,7 @@ class BlocksyExtensionNewsletterSubscribePreBoot {
 
 			[
 				'key' => 'brevo',
-				'value' => 'Brevo (Sendinblue)',
+				'value' => 'Brevo',
 			],
 
 			[
@@ -69,6 +69,11 @@ class BlocksyExtensionNewsletterSubscribePreBoot {
 			[
 				'key' => 'activecampaign',
 				'value' => 'Active Campaign',
+			],
+
+			[
+				'key' => 'emailoctopus',
+				'value' => 'EmailOctopus',
 			]
 		];
 

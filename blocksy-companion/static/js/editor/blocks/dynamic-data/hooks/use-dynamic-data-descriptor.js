@@ -139,6 +139,10 @@ const wooFields = (postType, taxonomies = []) => {
 				id: 'sku',
 				label: __('SKU', 'blocksy-companion'),
 			},
+			{
+				id: 'attributes',
+				label: __('Attributes', 'blocksy-companion'),
+			},
 			...(hasBrands
 				? [
 						{

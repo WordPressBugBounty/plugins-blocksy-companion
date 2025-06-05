@@ -8702,7 +8702,7 @@ msgstr "Ngôn ngữ"
 
 #: framework/features/demo-install.php:98
 msgid "Your PHP installation doesn't have support for XML. Please install the <i>xml</i> or <i>simplexml</i> PHP extension in order to be able to install starter sites. You might need to contact your hosting provider to assist you in doing so."
-msgstr "Cài đặt PHP của bạn không có hỗ trợ cho XML. Vui lòng cài đặt phần mở rộng <i>xml</i> hoặc <i>simplexml</i> PHP để có thể cài đặt mẫu web b���t đầu. Bạn có thể cần liên hệ với nhà cung cấp dịch vụ lưu trữ của mình để hỗ trợ bạn làm việc này."
+msgstr "Cài đặt PHP của bạn không có hỗ trợ cho XML. Vui lòng cài đặt phần mở rộng <i>xml</i> hoặc <i>simplexml</i> PHP để có thể cài đặt mẫu web bắt đầu. Bạn có thể cần liên hệ với nhà cung cấp dịch vụ lưu trữ của mình để hỗ trợ bạn làm việc này."
 
 #: framework/features/dynamic-css.php:48
 msgid "Dynamic CSS Output"
@@ -10134,7 +10134,7 @@ msgstr "Tháng trước"
 #: framework/features/header/items/account/options.php:1053,
 #: framework/features/header/items/account/views/logout.php:8
 msgid "Login"
-msgstr "Đăng nhập"
+msgstr "Đ��ng nhập"
 
 #: framework/features/header/account-modal.php:41
 msgid "Sign Up"

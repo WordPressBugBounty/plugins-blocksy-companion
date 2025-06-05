@@ -77,6 +77,10 @@ registerBlockType('blocksy/dynamic-data', {
 			return __('Dynamic Stock Status', 'blocksy-companion')
 		}
 
+		if (attributes.field === 'woo:attributes') {
+			return __('Dynamic Attributes', 'blocksy-companion')
+		}
+
 		if (attributes.field === 'woo:brands') {
 			return __('Dynamic Brands', 'blocksy-companion')
 		}

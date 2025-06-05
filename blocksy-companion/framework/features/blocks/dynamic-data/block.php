@@ -211,6 +211,68 @@ class DynamicData {
 					]);
 				}
 
+				if (
+					$data['field_provider'] === 'woo'
+					&&
+					$data['field_id'] === 'attributes'
+				) {
+					if (
+						! $data['post_id']
+						||
+						! $data['attribute']
+					) {
+						wp_send_json_error();
+					}
+
+					$product = wc_get_product($data['post_id']);
+
+					if (! $product) {
+						wp_send_json_error();
+					}
+
+					$attributes = $product->get_attributes();
+					$taxonomy_name = wc_attribute_taxonomy_name($data['attribute']);
+
+					if (
+						! $attributes
+						||
+						! isset($attributes[sanitize_title($taxonomy_name)])
+					) {
+						wp_send_json_error();
+					}
+
+					$attribute = $attributes[sanitize_title($taxonomy_name)];
+
+					
+
+					if (! $attribute) {
+						wp_send_json_error();
+					}
+
+					$terms = $attribute->get_terms();
+					$terms_result = [];
+
+					if ($terms) {
+						foreach ($terms as $term) {
+
+							$terms_result[] = [
+								'term_id' => $term->term_id,
+								'name' => $term->name,
+								'slug' => $term->slug,
+								
+							];
+
+							
+						}
+					}
+
+					wp_send_json_success([
+						'post_id' => $data['post_id'],
+						'post_type' => $post_type,
+						'field_data' => $terms_result
+					]);
+				}
+
 				$maybe_ext = blc_get_ext('post-types-extra');
 
 				if (! $maybe_ext || ! $maybe_ext->dynamic_data) {

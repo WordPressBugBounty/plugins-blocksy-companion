@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.0.99
+Stable tag: 2.1.0
 
 == Description ==
 
@@ -52,6 +52,13 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.0: 2025-06-05
+- Improvement: Breadcrumbs block - make sure the editor preview respects the context
+- Improvement: Newsletter subscribe - integration with Email Octopus
+- Improvement: Render HTML tags for the "Dynamic Data" block in the editor preview for before/after options
+- Improvement: SVG dimensions feature failsafe on attachments with broken meta
+- Improvement: Support for product attributes in the dynamic data block
+
 2.0.99: 2025-05-22
 - Improvement: Advanced Search block - make sure the additional CSS classes are outputted in frontend
 - Improvement: Sticky header - don't include hidden rows in the calculation

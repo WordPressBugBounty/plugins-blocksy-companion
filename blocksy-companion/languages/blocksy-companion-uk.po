@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-26 07:49:32+0000\n"
+"PO-Revision-Date: 2025-05-29 05:49:52+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -408,7 +408,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:18
 msgid "Price:"
-msgstr ""
+msgstr "Ціна:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:30
 msgid "Add to cart:"
@@ -871,15 +871,15 @@ msgstr ""
 
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:102
 msgid "9:16"
-msgstr ""
+msgstr "9:16"
 
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:106
 msgid "3:4"
-msgstr ""
+msgstr "3:4"
 
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:110
 msgid "2:3"
-msgstr ""
+msgstr "2:3"
 
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:133
 msgid "Width"
@@ -915,15 +915,15 @@ msgstr ""
 
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:90
 msgid "16:9"
-msgstr ""
+msgstr "16:9"
 
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:94
 msgid "4:3"
-msgstr ""
+msgstr "4:3"
 
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:98
 msgid "3:2"
-msgstr ""
+msgstr "3:2"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:100
 msgid "Icon/Logo"
@@ -9750,7 +9750,7 @@ msgstr "Огляди товарів"
 
 #: framework/extensions/product-reviews/config.php:6
 msgid "This extension lets you easily create an affiliate marketing type of website by giving you options to create a personalized product review and use your affiliate links to direct your readers to the purchase page."
-msgstr "Це розширення дозволяє вам легко створити веб-сайт типу афілійованого маркетингу, надаючи вам можливість створити персоналізований огляд товару та використовувати свої партнерські посилання, щоб направити читачів на сторінку покупки."
+msgstr "Це розширен��я дозволяє вам легко створити веб-сайт типу афілійованого маркетингу, надаючи вам можливість створити персоналізований огляд товару та використовувати свої партнерські посилання, щоб направити читачів на сторінку покупки."
 
 #: framework/extensions/product-reviews/extension.php:318,
 #: framework/extensions/product-reviews/views/single-top.php:139

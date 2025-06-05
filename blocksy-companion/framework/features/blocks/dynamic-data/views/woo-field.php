@@ -47,6 +47,61 @@ if ($field === 'woo:brands') {
 	);
 }
 
+if ($field === 'woo:attributes') {
+	$attribute = blocksy_akg('attribute', $attributes, '');
+
+	$taxonomy_name = wc_attribute_taxonomy_name($attribute);
+	$taxonomy_hr_name = $attribute;
+
+	if (taxonomy_exists($taxonomy_name)) {
+		$labels = get_taxonomy_labels(get_taxonomy($taxonomy_name));
+
+		if (isset($labels->singular_name)) {
+			$taxonomy_hr_name = $labels->singular_name;
+		}
+	}
+
+	$attributes_tax = $product->get_attributes();
+
+	if (isset($attributes_tax[sanitize_title($taxonomy_name)])) {
+		$attribute = $attributes_tax[sanitize_title($taxonomy_name)];
+	$value = '';
+
+	if (! empty($attribute)) {
+		$values = [];
+
+		if ( $attribute->is_taxonomy() ) {
+			$attribute_taxonomy = $attribute->get_taxonomy_object();
+			$attribute_values = wc_get_product_terms( $product->get_id(), $attribute->get_name(), array( 'fields' => 'all' ) );
+
+			foreach ( $attribute_values as $attribute_value ) {
+
+				$value_name = esc_html( $attribute_value->name );
+
+				if ( $attribute_taxonomy->attribute_public ) {
+					$values[] = $value_name;
+				} else {
+					$values[] = $value_name;
+				}
+			}
+		} else {
+			$values = $attribute->get_options();
+
+			foreach ( $values as &$value ) {
+				$value = make_clickable( esc_html( $value ) );
+			}
+		}
+
+		if (! empty($values)) {
+			$value = implode(
+				preg_replace('/ /', "\u{00A0}", blocksy_akg('separator', $attributes, ', ')),
+				$values
+			);
+		}
+	}
+	}
+}
+
 if (empty(trim($value))) {
 	return;
 }

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-14 11:00:08+0000\n"
+"PO-Revision-Date: 2025-05-29 05:49:57+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,11 +21,11 @@ msgstr "Selecteer waarde"
 
 #: framework/helpers/exts-configs.php:385
 msgid "Product Waitlist"
-msgstr ""
+msgstr "Productwachtlijst"
 
 #: framework/helpers/exts-configs.php:386
 msgid "Allow your customers to sign up for a waitlist for products that are out of stock and get notified when they are back in stock."
-msgstr ""
+msgstr "Laat uw klanten zich aanmelden voor een wachtlijst voor producten die niet op voorraad zijn. U ontvangt dan een melding wanneer ze weer op voorraad zijn."
 
 #: framework/features/blocks/share-box/options.php:103
 msgid "Clipboard"
@@ -52,23 +52,23 @@ msgstr ""
 
 #: framework/premium/features/content-blocks/hooks-manager.php:957
 msgid "Added to Cart: Before product"
-msgstr ""
+msgstr "Toegevoegd aan winkelwagen: Voor product"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:961
 msgid "Added to Cart: Before actions"
-msgstr ""
+msgstr "Toegevoegd aan winkelwagen: Voor acties"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:965
 msgid "Added to Cart: Before suggested products"
-msgstr ""
+msgstr "Toegevoegd aan winkelwagen: Voor aanbevolen producten"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:969
 msgid "Added to Cart: After suggested products"
-msgstr ""
+msgstr "Toegevoegd aan winkelwagen: Na aanbevolen producten"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:971
 msgid "WooCommerce: Added to Cart"
-msgstr ""
+msgstr "WooCommerce: toegevoegd aan winkelwagen"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:294
 msgid "Upsell Products"
@@ -120,7 +120,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"
-msgstr ""
+msgstr "Bevestiging van inschrijving"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:84
 msgid "Specify which users should verify their waitlist subscription through email confirmation."
@@ -140,7 +140,7 @@ msgstr "Lettertype bericht"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:168
 msgid "Message Color"
-msgstr ""
+msgstr "Kleur bericht"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:225
 msgid "Container Padding"
@@ -149,40 +149,40 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/table.php:40,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:46
 msgid "Actions"
-msgstr ""
+msgstr "Acties"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:96,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:200,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:221,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:282
 msgid "Invalid request"
-msgstr ""
+msgstr "Ongeldig verzoek"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:106
 msgid "No waitlist found"
-msgstr ""
+msgstr "Geen wachtlijst gevonden"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:127,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:128,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:162
 msgid "Waitlists"
-msgstr ""
+msgstr "Wachtlijsten"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:153
 msgid "Number of items per page"
-msgstr ""
+msgstr "Aantal items per pagina"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:171
 msgid "Waitlist for %s"
-msgstr ""
+msgstr "Wachtlijst voor %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:213
 msgid "Invalid email"
-msgstr ""
+msgstr "Ongeldige e-mailadres"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:229
 msgid "You are already on the waitlist"
-msgstr ""
+msgstr "Je bent al ingeschreven voor de wachtlijst"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:267
 msgid "You have been added to the waitlist"
@@ -210,15 +210,15 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
-msgstr ""
+msgstr "Zoek producten"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:14
 msgid "Export Subscribers"
-msgstr ""
+msgstr "Exporteer abonnees"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:63
 msgid "Guest"
-msgstr ""
+msgstr "Gast"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:75
 msgid "Edit this customer"
@@ -235,35 +235,35 @@ msgstr "Verwijder"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:123
 msgid "View"
-msgstr ""
+msgstr "Bekijk"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:153
 msgid "%s ago"
-msgstr ""
+msgstr "%s geleden"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:169
 msgid "Is registered"
-msgstr ""
+msgstr "Is geregistreerd"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:170
 msgid "Date created"
-msgstr ""
+msgstr "Aanmaakdatum"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:8
 msgid "Waitlist - Back in Stock Notification"
-msgstr ""
+msgstr "Wachtlijst – Terug op voorraad-melding"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:9
 msgid "This email is sent when a product is back in stock"
-msgstr ""
+msgstr "Deze e-mail wordt verzonden zodra een product weer op voorraad is"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:10
 msgid "A product you are waiting for is back in stock"
-msgstr ""
+msgstr "Een product waar je op wacht is weer op voorraad"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr ""
+msgstr "Goed nieuws! Het product waar je op hebt gewacht is nu weer op voorraad!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
@@ -378,7 +378,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:66
 msgid "Confirm Subscription"
-msgstr ""
+msgstr "Bevestig inschrijving"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:70,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:26
@@ -408,7 +408,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:18
 msgid "Price:"
-msgstr ""
+msgstr "Prijs:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:30
 msgid "Add to cart:"
@@ -416,7 +416,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:19
 msgid "Product link:"
-msgstr ""
+msgstr "Productlink:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:23
 msgid "Click the link below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
@@ -8141,7 +8141,7 @@ msgstr ""
 
 #: framework/extensions/product-reviews/static/js/ProductReviews.js:22
 msgid "Product Reviews Settings"
-msgstr ""
+msgstr "Instellingen productreviews"
 
 #: framework/extensions/product-reviews/static/js/ProductReviews.js:25
 msgid "Configure the slugs for single and category pages of the product review custom post type."
@@ -9893,7 +9893,7 @@ msgstr "Werk categorie bij"
 
 #: framework/extensions/product-reviews/extension.php:598
 msgid "Add New Category"
-msgstr ""
+msgstr "Voeg nieuwe categorie toe"
 
 #: framework/extensions/product-reviews/extension.php:599
 msgid "New Category Name"
@@ -9919,7 +9919,7 @@ msgstr "Beoordeling"
 
 #: framework/extensions/product-reviews/metabox.php:10
 msgid "Review Entity"
-msgstr ""
+msgstr "Review-entiteit"
 
 #: framework/extensions/product-reviews/metabox.php:18,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/table.php:39,
@@ -9977,7 +9977,7 @@ msgstr "Organisatie"
 
 #: framework/extensions/product-reviews/metabox.php:38
 msgid "More info about review entity and how to choose the right one can be found %shere%s."
-msgstr ""
+msgstr "Meer info over review-entiteiten en hoe je de juiste kiest, vind je %shier%s."
 
 #: framework/extensions/product-reviews/metabox.php:69
 msgid "Product Price"
@@ -10040,20 +10040,20 @@ msgstr ""
 #: framework/extensions/product-reviews/metabox.php:252,
 #: framework/extensions/product-reviews/views/single-top.php:262
 msgid "Pros"
-msgstr ""
+msgstr "Voordelen"
 
 #: framework/extensions/product-reviews/metabox.php:272,
 #: framework/extensions/product-reviews/views/single-top.php:285
 msgid "Cons"
-msgstr ""
+msgstr "Nadelen"
 
 #: framework/extensions/trending/customizer.php:169
 msgid "Trending Posts"
-msgstr ""
+msgstr "Populaire berichten"
 
 #: framework/extensions/trending/config.php:6
 msgid "Highlight your most popular posts or products based on the number of comments or reviews they have gotten in the specified period of time."
-msgstr ""
+msgstr "Laat je populairste berichten of producten zien op basis van het aantal reacties of reviews in een opgegeven periode."
 
 #: framework/extensions/trending/customizer.php:8,
 #: framework/features/blocks/search/options.php:16,
@@ -10300,16 +10300,16 @@ msgstr ""
 
 #: framework/premium/features/content-blocks/admin-ui.php:383
 msgid "Down"
-msgstr ""
+msgstr "Omlaag"
 
 #: framework/premium/features/content-blocks/admin-ui.php:384
 msgid "Up"
-msgstr ""
+msgstr "Omhoog"
 
 #: framework/premium/features/content-blocks.php:193,
 #: framework/premium/features/content-blocks.php:199
 msgid "Content Blocks"
-msgstr ""
+msgstr "Content blocks"
 
 #: framework/premium/features/content-blocks.php:194,
 #: framework/premium/extensions/mega-menu/options.php:346,
@@ -10319,7 +10319,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/content-block/config.php:4
 #: framework/premium/static/js/blocks/ContentBlock.js:78
 msgid "Content Block"
-msgstr ""
+msgstr "Content block"
 
 #: framework/premium/features/content-blocks.php:195,
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/feature.php:138,
@@ -10330,25 +10330,25 @@ msgstr "Voeg nieuwe toe"
 
 #: framework/premium/features/content-blocks.php:196
 msgid "Add New Content Block"
-msgstr ""
+msgstr "Voeg nieuw content block toe"
 
 #: framework/premium/features/content-blocks.php:197
 #: framework/premium/static/js/blocks/ContentBlock.js:89
 msgid "Edit Content Block"
-msgstr ""
+msgstr "Wijzig content block"
 
 #: framework/premium/features/content-blocks.php:198
 #: framework/premium/static/js/hooks/CreateHook.js:33
 msgid "New Content Block"
-msgstr ""
+msgstr "Nieuw content block"
 
 #: framework/premium/features/content-blocks.php:200
 msgid "View Content Block"
-msgstr ""
+msgstr "Bekijk content block"
 
 #: framework/premium/features/content-blocks.php:201
 msgid "Search Content Blocks"
-msgstr ""
+msgstr "Zoek content blocks"
 
 #: framework/premium/features/content-blocks.php:202,
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/feature.php:145,
@@ -10429,7 +10429,7 @@ msgstr "Pictogramgrootte"
 #: framework/premium/features/premium-header.php:289,
 #: framework/premium/extensions/mega-menu/options.php:509
 msgid "Icon Position"
-msgstr ""
+msgstr "Positie pictogram"
 
 #: framework/premium/features/premium-header.php:296,
 #: framework/premium/extensions/mega-menu/options.php:516,
@@ -10562,15 +10562,15 @@ msgstr ""
 
 #: framework/helpers/exts-configs.php:97
 msgid "Upload an unlimited number of custom fonts or variable fonts and use them throughout Blocksy and your favorite page builder."
-msgstr ""
+msgstr "Upload onbeperkt aangepaste of variabele lettertypen en gebruik ze in Blocksy en je favoriete pagebuilder."
 
 #: framework/helpers/exts-configs.php:109
 msgid "Serve your chosen Google Fonts from your own web server. This will increase the loading speed and makes sure your website complies with the privacy regulations."
-msgstr ""
+msgstr "Host je gekozen Google Fonts zelf op je webserver. Dit versnelt het laden van je website en zorgt voor naleving van de privacyregels."
 
 #: framework/helpers/exts-configs.php:124
 msgid "Create beautiful personalised menus that set your website apart from the others. Add icons and badges to your entries and even add Content Blocks inside your dropdowns."
-msgstr ""
+msgstr "Maak aangepaste menu’s die je website laten opvallen. Voeg pictogrammen, badges en Content Blocks toe aan je dropdowns voor een unieke uitstraling."
 
 #: framework/premium/extensions/mega-menu/extension.php:160
 msgid "Menu Item Settings"

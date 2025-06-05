@@ -22,4 +22,5 @@ registerBlockType('blocksy/breadcrumbs', {
 	},
 	edit: (props) => <Edit {...props} />,
 	save: () => null,
+	usesContext: ['postId', 'postType'],
 })

@@ -12,6 +12,7 @@ $autoload = [
 	'DemoProvider' => 'providers/demo.php',
 	'MailPoetProvider' => 'providers/mailpoet.php',
 	'ActiveCampaignProvider' => 'providers/active-campaign.php',
+	'EmailOctopusProvider' => 'providers/emailoctopus.php',
 	'FluentCRMProvider' => 'providers/fluent-crm.php',
 ];
 

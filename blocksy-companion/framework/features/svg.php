@@ -88,6 +88,8 @@ class SvgHandling {
 		if (
 			'image/svg+xml' === $mime
 			&&
+			is_array($data)
+			&&
 			(
 				! isset($data['width'])
 				||

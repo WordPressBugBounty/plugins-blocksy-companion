@@ -1,5 +1,15 @@
 <?php
 
+$tax_choices = [];
+
+if (class_exists('woocommerce')) {
+	$attribute_taxonomies = wc_get_attribute_taxonomies();
+	
+	foreach ($attribute_taxonomies as $tax) {
+		$tax_choices[$tax->attribute_name] = $tax->attribute_label;
+	}
+}
+
 $options = [
 	blocksy_rand_md5() => [
 		'type' => 'ct-condition',
@@ -113,7 +123,22 @@ $options = [
 
 	blocksy_rand_md5() => [
 		'type' => 'ct-condition',
-		'condition' => ['field' => 'wp:terms'],
+		'condition' => ['field' => 'woo:attributes'],
+		'options' => [
+			'attribute' => [
+				'label' => __('Attribute', 'blocksy-companion'),
+				'type' => 'ct-select',
+				'value' => '',
+				'design' => 'inline',
+				'setting' => [ 'transport' => 'postMessage' ],
+				'choices' => blocksy_ordered_keys($tax_choices),
+			]
+		]
+	],
+
+	blocksy_rand_md5() => [
+		'type' => 'ct-condition',
+		'condition' => ['field' => 'wp:terms|woo:attributes'],
 		'options' => [
 			'separator' => [
 				'type' => 'text',

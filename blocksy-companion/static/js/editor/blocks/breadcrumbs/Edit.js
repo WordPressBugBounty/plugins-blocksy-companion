@@ -8,6 +8,7 @@ import {
 } from '@wordpress/block-editor'
 import Preview from './Preview'
 import ColorsPanel from '../../components/ColorsPanel'
+import useBreadcrumbsDataDescriptor from './use-breadcrumbs-data-descriptor'
 
 const Edit = ({
 	clientId,
@@ -18,7 +19,14 @@ const Edit = ({
 	linkHoverColor,
 	setLinkHoverColor,
 	className,
+
+	context: { postId, postType },
 }) => {
+	const { breadcrumbs } = useBreadcrumbsDataDescriptor({
+		postId,
+		postType,
+	})
+
 	const navRef = useRef()
 
 	const blockProps = useBlockProps({
@@ -37,7 +45,7 @@ const Edit = ({
 	return (
 		<>
 			<div {...blockProps}>
-				<Preview />
+				<Preview {...{ breadcrumbs, postId, postType }} />
 				<InspectorControls group="styles">
 					<ColorsPanel
 						label={__('Text Color', 'blocksy-companion')}

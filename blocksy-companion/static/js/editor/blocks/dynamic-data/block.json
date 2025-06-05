@@ -94,6 +94,11 @@
 			"default": ""
 		},
 
+		"attribute": {
+			"type": "string",
+			"default": ""
+		},
+
 		"lightbox": {
 			"type": "string",
 			"default": "no"

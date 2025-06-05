@@ -56,7 +56,7 @@ if (blocksy_akg('logged_out_style', $atts, 'icon') !== 'none') {
 
 echo '<div ' . blocksy_attr_to_html($attr) . '>';
 
-echo '<a href="' . $link . '" class="ct-account-item" ' . $data_label_attr . ' aria-label="' .  $login_label . '">';
+echo '<a href="' . $link . '" class="ct-account-item" ' . $data_label_attr . ' aria-controls="account-modal" aria-label="' .  $login_label . '">';
 
 if (! empty($login_label)) {
 	echo '<span class="' . trim('ct-label ' . blocksy_visibility_classes(

@@ -1,4 +1,10 @@
-import { Fragment, createElement, useMemo, useRef } from '@wordpress/element'
+import {
+	Fragment,
+	createElement,
+	useEffect,
+	useState,
+	useRef,
+} from '@wordpress/element'
 
 import {
 	useBlockProps,
@@ -6,7 +12,6 @@ import {
 } from '@wordpress/block-editor'
 
 import classnames from 'classnames'
-import { useSettings } from '@wordpress/block-editor'
 
 import { __ } from 'ct-i18n'
 
@@ -23,7 +28,8 @@ import TermImagePreview from './wp/TermImagePreview'
 import FeaturedImagePreview from './wp/FeaturedImagePreview'
 
 import { useBlockSupportsCustom } from '../hooks/use-block-supports-custom'
-import { useEffect } from 'react'
+
+import ContentWithBeforeAndAfter from '../components/ContentWithBeforeAndAfter'
 
 const TextField = ({
 	fieldDescriptor,
@@ -37,7 +43,10 @@ const TextField = ({
 	termId,
 	taxonomy,
 }) => {
+	const [isLoading, setIsLoading] = useState(false)
+
 	const ref = useRef(null)
+	const shadowMutationRef = useRef(null)
 
 	const blockProps = useBlockProps({
 		className: classnames('ct-dynamic-data', {
@@ -57,61 +66,6 @@ const TextField = ({
 	})
 
 	const borderProps = useBorderProps(attributes)
-
-	useEffect(() => {
-		if (ref.current) {
-			const shadowNode = ref.current.querySelector(
-				'.ct-dynamic-shadow-node'
-			)
-			const styleTag = ref.current.querySelector('style')
-
-			const clonedStyle = styleTag?.cloneNode(true)
-			const clonedShadowNode = shadowNode?.cloneNode(true)
-
-			const nodesToRemove = Array.from(ref.current.childNodes).filter(
-				(node) => node !== shadowNode
-			)
-			nodesToRemove.forEach((node) => {
-				ref.current.removeChild(node)
-			})
-
-			const wrapperContainer = document.createElement('div')
-			wrapperContainer.innerHTML =
-				before + '<div id="inject-here"></div>' + after
-
-			const injectTarget = wrapperContainer.querySelector('#inject-here')
-			if (injectTarget && clonedShadowNode) {
-				injectTarget.replaceWith(...clonedShadowNode.childNodes)
-			}
-
-			if (clonedStyle) ref.current.appendChild(clonedStyle)
-			ref.current.append(...wrapperContainer.childNodes)
-
-			// // Create containers for before and after
-			// const beforeContainer = document.createElement('div')
-			// beforeContainer.innerHTML = before
-
-			// const afterContainer = document.createElement('div')
-			// afterContainer.innerHTML = after
-
-			// // Append in desired order
-			// if (clonedStyle) ref.current.appendChild(clonedStyle)
-			// ref.current.append(...beforeContainer.childNodes)
-			// if (clonedShadowNode)
-			// 	ref.current.append(...clonedShadowNode.childNodes)
-			// ref.current.append(...afterContainer.childNodes)
-		}
-	}, [
-		fieldDescriptor,
-		fieldsDescriptor,
-
-		attributes,
-		postId,
-		postType,
-
-		termId,
-		taxonomy,
-	])
 
 	let Component = null
 
@@ -184,11 +138,7 @@ const TextField = ({
 					)}>
 					{css && <style>{css}</style>}
 
-					<div
-						className="ct-dynamic-shadow-node"
-						style={{
-							display: 'none',
-						}}>
+					<ContentWithBeforeAndAfter before={before} after={after}>
 						<Component
 							attributes={attributes}
 							postId={postId}
@@ -198,7 +148,7 @@ const TextField = ({
 							fallback={fallback}
 							fieldsDescriptor={fieldsDescriptor}
 						/>
-					</div>
+					</ContentWithBeforeAndAfter>
 				</TagName>
 			</Fragment>
 		)

@@ -170,7 +170,19 @@ if (
 		$classes[] = 'ct-simplified-player';
 	}
 
-	if (blocksy_akg('media_video_autoplay', $maybe_video, 'no') === 'yes') {
+	$new_default_based_on_old_value = blocksy_akg(
+		'media_video_autoplay',
+		$maybe_video,
+		'no'
+	) === 'yes' ? 'autoplay' : 'click';
+
+	if (
+		blocksy_akg(
+			'media_video_event',
+			$maybe_video,
+			$new_default_based_on_old_value
+		) === 'autoplay'
+	) {
 		$wrapper_attr['data-state'] = 'autoplay';
 	}
 }
