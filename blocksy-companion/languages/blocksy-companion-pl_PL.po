@@ -324,7 +324,7 @@ msgstr "Super! Zostałeś dodany do listy oczekujących na ten produkt. Sprawdź
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:97
 msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
-msgstr "Udało się! Zostałeś dodany do listy oczekujących na ten produkt. Otrzymasz wiadomość e-mail, gdy tylko produkt będzie dostępny."
+msgstr "Udało się! Zostałeś dodany do listy oczekujących na ten produkt. Otrzymasz wiadomoś�� e-mail, gdy tylko produkt będzie dostępny."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:151,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:86
@@ -2099,7 +2099,7 @@ msgstr "Limit"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:876
 msgid "Set how many terms you want to display in each attribute."
-msgstr "Określ, ile terminów ma być wyświetlanych w każdym atrybucie."
+msgstr "Określ, ile terminów ma być wyświetlanych w ka��dym atrybucie."
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:179,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:462
@@ -4270,7 +4270,7 @@ msgstr "Zaawansowane recenzje"
 
 #: framework/helpers/exts-configs.php:323
 msgid "Enhance your WooCommerce reviews with rich content, images and a thumbs up system that help your shoppers find the perfect product."
-msgstr "Wzbogać swoje recenzje WooCommerce o bogate treści, obrazy i system kciuków w górę, które pomogą kupującym znaleźć idealny produkt."
+msgstr "Wzbogać swoje recenzje WooCommerce o bogate treści, obrazy i system kciuków w górę, które pomogą kupującym znale��ć idealny produkt."
 
 #: framework/extensions/cookies-consent/customizer.php:112
 msgid "Forms Cookies Content"

@@ -3,8 +3,8 @@
 $link_options = [
 	'profile' => __('Profile Page', 'blocksy-companion'),
 	'dashboard' => __('Dashboard Page', 'blocksy-companion'),
-	'logout' => __('Logout', 'blocksy-companion'),
 	'custom' => __('Custom Link', 'blocksy-companion'),
+	'logout' => __('Logout Action', 'blocksy-companion'),
 ];
 
 $layer_settings = [
@@ -290,13 +290,13 @@ if (function_exists('blc_get_content_blocks')) {
 }
 
 $logout_link_options = [
-	'modal' => __('Modal', 'blocksy-companion'),
-	'custom' => __('Custom Link', 'blocksy-companion'),
+	'modal' => __('Open Login Modal', 'blocksy-companion'),
+	'custom' => __('Open Custom Link', 'blocksy-companion'),
 ];
 
 if (class_exists('WooCommerce')) {
-	$link_options['woocommerce_account'] = __('WooCommerce Account', 'blocksy-companion');
-	$logout_link_options['woocommerce_account'] = __('WooCommerce Account', 'blocksy-companion');
+	$link_options['woocommerce_account'] = __('Open WooCommerce Account Page', 'blocksy-companion');
+	$logout_link_options['woocommerce_account'] = __('Open WooCommerce Account Page', 'blocksy-companion');
 }
 
 $options = [
@@ -659,7 +659,7 @@ $options = [
 								'value' => 'dropdown',
 								'choices' => [
 									'dropdown' => __('Dropdown', 'blocksy-companion'),
-									'link' => __('Link', 'blocksy-companion'),
+									'link' => __('Link to Page', 'blocksy-companion'),
 								],
 							],
 
@@ -782,11 +782,12 @@ $options = [
 						],
 						'options' => [
 							'account_link' => [
-								'label' => __('Link To', 'blocksy-companion'),
+								'label' => __('Page ', 'blocksy-companion'),
+								'label' => false,
 								'type' => 'ct-select',
 								'value' => 'profile',
 								'view' => 'text',
-								'design' => 'inline',
+								// 'design' => 'inline',
 								'choices' => blocksy_ordered_keys(
 									$link_options
 								),
@@ -797,12 +798,11 @@ $options = [
 								'condition' => ['account_link' => 'custom'],
 								'options' => [
 									'account_custom_page' => [
-										'label' => __(
-											'Custom Page Link',
-											'blocksy-companion'
-										),
+										'label' => __('Custom Page Link', 'blocksy-companion'),
+										'label' => false,
 										'type' => 'text',
-										'design' => 'inline',
+										// 'design' => 'inline',
+										'attr' => [ 'placeholder' => '#' ],
 										'disableRevertButton' => true,
 										'value' => '',
 									],
@@ -1083,7 +1083,7 @@ $options = [
 						'type' => 'ct-select',
 						'value' => 'modal',
 						'view' => 'text',
-						'design' => 'inline',
+						// 'design' => 'inline',
 						'divider' => 'top:full',
 						'choices' => blocksy_ordered_keys($logout_link_options),
 					],
@@ -1098,7 +1098,7 @@ $options = [
 									'blocksy-companion'
 								),
 								'type' => 'text',
-								'design' => 'inline',
+								// 'design' => 'inline',
 								'disableRevertButton' => true,
 								'value' => '',
 							],

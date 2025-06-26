@@ -14,6 +14,8 @@ import {
 import { clearShrinkCache } from './sticky/shrink-handle-middle-row'
 import { clearLogoShrinkCache } from './sticky/shrink-handle-logo'
 
+import { computeStartPositionForRowConfiguration } from './sticky/start-position'
+
 export const setTransparencyFor = (deviceContainer, value = 'yes') => {
 	Array.from(
 		deviceContainer.querySelectorAll('[data-row][data-transparent-row]')
@@ -77,6 +79,10 @@ if (window.wp && wp.customize && wp.customize.selectiveRefresh) {
 }
 
 const getStartPositionFor = (stickyContainer) => {
+	if (cachedStartPosition) {
+		return cachedStartPosition
+	}
+
 	if (
 		stickyContainer.dataset.sticky.indexOf('shrink') === -1 &&
 		stickyContainer.dataset.sticky.indexOf('auto-hide') === -1
@@ -123,32 +129,52 @@ const getStartPositionFor = (stickyContainer) => {
 		maybeDynamicOffset +
 		(parseFloat(bodyComp.getPropertyValue('--theme-frame-size')) || 0)
 
-	if (
-		row.parentNode.children.length === 1 ||
-		row.parentNode.children[0].classList.contains('ct-sticky-container')
-	) {
-		return stickyOffset > 0
-			? stickyOffset - maybeDynamicOffset
-			: stickyOffset
+	const rowConfiguration = Array.from(row.parentNode.children)
+		.filter(
+			(el) =>
+				el.dataset.row || el.classList.contains('ct-sticky-container')
+		)
+		.map((el) => {
+			if (el.classList.contains('ct-sticky-container')) {
+				return {
+					sticky: true,
+				}
+			}
+
+			return {
+				height: el.getBoundingClientRect().height,
+			}
+		})
+
+	const actualStartPositionForRows =
+		computeStartPositionForRowConfiguration(rowConfiguration)
+
+	let finalResult = actualStartPositionForRows + stickyOffset
+
+	finalResult =
+		finalResult > 0 ? finalResult - maybeDynamicOffset : finalResult
+
+	let shouldWriteCache = true
+
+	// Dont write cache until store notice is visible. Sometimes the store notice
+	// appears too late and the sticky header is not positioned correctly.
+	//
+	// https://github.com/Creative-Themes/blocksy/issues/4617
+	const maybeStoreNotice = document.querySelector('.woocommerce-store-notice')
+
+	if (maybeStoreNotice) {
+		shouldWriteCache = false
+
+		if (maybeStoreNotice.offsetHeight > 0) {
+			shouldWriteCache = true
+		}
 	}
 
-	let finalResult = Array.from(row.parentNode.children)
-		.reduce((result, el, index) => {
-			if (result.indexOf(0) > -1 || !el.dataset.row) {
-				return [...result, 0]
-			} else {
-				return [
-					...result,
+	if (shouldWriteCache) {
+		cachedStartPosition = finalResult
+	}
 
-					el.classList.contains('ct-sticky-container')
-						? 0
-						: el.getBoundingClientRect().height,
-				]
-			}
-		}, [])
-		.reduce((sum, height) => sum + height, stickyOffset)
-
-	return finalResult > 0 ? finalResult - maybeDynamicOffset : finalResult
+	return finalResult
 }
 
 let prevScrollY = null
@@ -196,12 +222,7 @@ const compute = () => {
 		stickyContainer.parentNode.style.height = `${containerInitialHeight}px`
 	}
 
-	let startPosition = cachedStartPosition
-
-	if (startPosition === null) {
-		startPosition = getStartPositionFor(stickyContainer, {})
-		cachedStartPosition = startPosition
-	}
+	let startPosition = getStartPositionFor(stickyContainer, {})
 
 	let headerInitialHeight = cachedHeaderInitialHeight
 

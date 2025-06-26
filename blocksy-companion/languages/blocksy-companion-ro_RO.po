@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-17 07:14:37+0000\n"
+"PO-Revision-Date: 2025-06-24 13:15:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +21,7 @@ msgstr "Selecteaza valoarea"
 
 #: framework/helpers/exts-configs.php:385
 msgid "Product Waitlist"
-msgstr "Lista de asteptare produs"
+msgstr "Lista de așteptare produs"
 
 #: framework/helpers/exts-configs.php:386
 msgid "Allow your customers to sign up for a waitlist for products that are out of stock and get notified when they are back in stock."
@@ -40,7 +40,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:193,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-account.php:67
 msgid "Waitlist"
-msgstr "Lista de asteptare."
+msgstr "Lista de așteptare"
 
 #: framework/premium/extensions/shortcuts/customizer.php:895
 msgid "Tooltip Visibility"
@@ -243,7 +243,7 @@ msgstr "Acum %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:169
 msgid "Is registered"
-msgstr "Este inregistrat"
+msgstr "Este înregistrat"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:170
 msgid "Date created"
@@ -370,11 +370,11 @@ msgstr "Click pe linkul de mai jos pentru a-ti asigura achizitia înainte ca pro
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:15
 msgid "You have requested to join the waitlist for this item:"
-msgstr "Ai solicitat să te alaturi listei de asteptare pentru acest articol:"
+msgstr "Ai solicitat să te alături listei de așteptare pentru acest articol:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:62
 msgid "Click the button below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
-msgstr "Click pe butonul de mai jos pentru a-ti confirma abonarea. Odata confirmata, te vom anunta cand produsul va reveni în stoc."
+msgstr "Click pe butonul de mai jos pentru a-ți confirma abonarea. Odată confirmata, te vom anunța când produsul va reveni în stoc."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:66
 msgid "Confirm Subscription"
@@ -4278,7 +4278,7 @@ msgstr "Formulare conținut cookie"
 
 #: framework/helpers/exts-configs.php:362
 msgid "Better management for affiliate products with a few simple options that strengthen the external integration with these."
-msgstr "Management mai bun pentru produsele afiliate cu câteva opțiuni simple care înt��resc integrarea externă."
+msgstr "Management mai bun pentru produsele afiliate cu câteva opțiuni simple care întăresc integrarea externă."
 
 #: framework/helpers/exts-configs.php:295
 msgid "Custom Tabs"
@@ -4850,7 +4850,7 @@ msgstr "După descriere"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:226
 msgid "After breadcrumbs"
-msgstr "După firimituri"
+msgstr "Dup�� firimituri"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:630
 msgid "Before shop loop item actions"

@@ -48,6 +48,11 @@ class Autoloader {
 			'InlineStylesCollector' => 'framework/features/inline-styles-collector.php',
 
 			'Cli' => 'framework/cli.php',
+			'DemoCli' => 'framework/cli/demo.php',
+			'ToolCli' => 'framework/cli/tool.php',
+			'LicenseCli' => 'framework/cli/license.php',
+			'ExtensionCli' => 'framework/cli/extension.php',
+			'WidgetsCli' => 'framework/cli/widgets.php',
 
 			'SvgHandling' => 'framework/features/svg.php',
 			'DynamicCss' => 'framework/features/dynamic-css.php',
@@ -170,3 +175,4 @@ class Autoloader {
 		}
 	}
 }
+

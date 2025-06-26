@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-28 04:35:16+0000\n"
+"PO-Revision-Date: 2025-06-15 13:04:36+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #: static/js/dashboard/helpers/useUpsellModal.js:88
 msgid "Business or Agency"
-msgstr "Doanh nghiệp hoặc đại lý"
+msgstr "Doanh nghiệp ho���c đại lý"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:482
 msgid "Select value"
@@ -1949,7 +1949,7 @@ msgstr "Hiển thị hình ảnh sản phẩm"
 
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:87
 msgid "Product Price & Stock Visibility"
-msgstr "Hiển th�� giá & kho sản phẩm"
+msgstr "Hiển thị giá & kho sản phẩm"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:42
 msgid "Trigger Icon Type"
@@ -2512,7 +2512,7 @@ msgstr "Tổng cộng"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:8
 msgid "Order number"
-msgstr "Số đơn hàng"
+msgstr "Số ��ơn hàng"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/index.js:108
 msgid "Customer Details"
@@ -2674,7 +2674,7 @@ msgstr "Tên ngắn"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:245
 msgid "Sorry, this product is unavailable. Please choose a different combination."
-msgstr "Xin lỗi, sản phẩm này không có sẵn. Vui lòng chọn một sự kết hợp khác."
+msgstr "Xin lỗi, s��n phẩm này không có sẵn. Vui lòng chọn một sự kết hợp khác."
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:246,
@@ -4644,7 +4644,7 @@ msgstr "Đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:39
 msgid "WP body open"
-msgstr "WP body open"
+msgstr "Mở thân trang WP"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:340
 msgid "Before related posts"
@@ -10134,7 +10134,7 @@ msgstr "Tháng trước"
 #: framework/features/header/items/account/options.php:1053,
 #: framework/features/header/items/account/views/logout.php:8
 msgid "Login"
-msgstr "Đ��ng nhập"
+msgstr "Đăng nhập"
 
 #: framework/features/header/account-modal.php:41
 msgid "Sign Up"
@@ -10555,7 +10555,7 @@ msgstr "Chèn code snippet trên toàn bộ trang web của bạn. Tiện ích m
 #: framework/premium/extensions/code-snippets/extension.php:97,
 #: framework/premium/extensions/code-snippets/extension.php:142
 msgid "After body open scripts"
-msgstr "Mở script sau body"
+msgstr "Mở mã script sau thân trang"
 
 #: framework/helpers/exts-configs.php:97
 msgid "Upload an unlimited number of custom fonts or variable fonts and use them throughout Blocksy and your favorite page builder."

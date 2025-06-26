@@ -116,7 +116,7 @@ msgstr "Только авторизованным"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
-msgstr "Отображение опции списка ожидания исключительно для пользователей, которые вошли в систему."
+msgstr "Отображение опц��и списка ожидания исключительно для пользователей, которые вошли в систему."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"
@@ -1059,7 +1059,7 @@ msgstr "Изображение объекта"
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:36
 #: static/js/editor/blocks/dynamic-data/preview-parts/wp/TermTextPreview.js:10
 msgid "Term Count"
-msgstr "Счётчик объекта"
+msgstr "Счё��чик объекта"
 
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:50
 msgid "Excerpt"
@@ -1998,7 +1998,7 @@ msgstr "Видимость стрелок"
 
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/design-options.php:11
 msgid "Prev/Next Arrow"
-msgstr "Стрелки вперёд/наз��д"
+msgstr "Стрелки вперёд/назад"
 
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/design-options.php:41
 msgid "Prev/Next Background"
@@ -2341,7 +2341,7 @@ msgstr "Вставьте определённый блок контента в �
 
 #: framework/premium/static/js/hooks/CreateHook.js:156
 msgid "Nothing Found Template"
-msgstr "Шаблон отсутствия результатов"
+msgstr "Шаблон о��сутствия результатов"
 
 #: framework/premium/static/js/hooks/CreateHook.js:164
 msgid "Maintenance Template"
@@ -3500,7 +3500,7 @@ msgstr "%s %% пользователей рекомендуют этот тов�
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:604
 msgid "%s of %s found this review helpful"
-msgstr "%s из %s сочли этот отзыв полезным"
+msgstr "%s из %s сочли этот о��зыв полезным"
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:666,
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:44
@@ -4040,7 +4040,7 @@ msgstr "Ничего не найдено"
 
 #: framework/premium/features/content-blocks/admin-ui.php:270
 msgid "Maintenance"
-msgstr "Техобслуживание"
+msgstr "Техобслуживан��е"
 
 #: framework/premium/features/content-blocks/admin-ui.php:374
 msgid "On click to element"
@@ -4354,7 +4354,7 @@ msgstr "Блок публикации в соцсетях"
 
 #: framework/helpers/exts-configs.php:347
 msgid "Enable social sharing abilities for products available on the site, letting even more users discover your great shop selection."
-msgstr "Возможность публикации информации о товарах, доступных на сайте, в соцсетях, что позволит еще большему количеству пользователей ознакомиться с ассортиментом магазина."
+msgstr "Возможность публикации информации о товарах, доступных на сайте, в соцсетях, что позволит еще большему количеству п��льзователей ознакомиться с ассортиментом магазина."
 
 #: framework/helpers/exts-configs.php:338
 msgid "Advanced Gallery"
@@ -4419,7 +4419,7 @@ msgstr "Динамические данные"
 
 #: framework/helpers/exts-configs.php:150
 msgid "Integrates custom fields solutions in the meta layers of a post and presents additional information."
-msgstr "Интеграция пользовательских полей в мета-слои записи и предоставление дополнительной информации."
+msgstr "Интеграция пользовательских полей в мета-слои записи и предоставление дополнит��льной информации."
 
 #. translators: This is a brand name. Preferably to not be translated
 #: framework/helpers/exts-configs.php:83
@@ -7402,7 +7402,7 @@ msgstr "Стандартный режим"
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:318,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:442
 msgid "Transparent State"
-msgstr "Режим прозрачности"
+msgstr "Режим про��рачности"
 
 #: framework/features/header/header-options.php:227,
 #: framework/features/header/items/account/options.php:1161,
@@ -10551,7 +10551,7 @@ msgstr "Регистрация"
 
 #: framework/helpers/exts-configs.php:60
 msgid "Connect your Adobe Fonts project and use the selected fonts throughout Blocksy and your favorite page builder."
-msgstr "Подключите свой проект Adobe Fonts и используйте выбранные шрифты в теме сайта и конструкто��е страниц."
+msgstr "Подключите свой проект Adobe Fonts и используйте выбранные шрифты в теме сайта и конструкторе страниц."
 
 #: framework/helpers/exts-configs.php:71
 msgid "Inject custom code snippets throughout your website. The extension works globally or on a per post/page basis."

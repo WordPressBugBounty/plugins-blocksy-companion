@@ -1204,7 +1204,7 @@ msgstr ""
 #: static/js/editor/blocks/query/Edit.js:214
 #: static/js/editor/blocks/tax-query/Edit.js:195
 msgid "Please look at the documentation for more information on why this is useful."
-msgstr "Consulte a documentaç��o para obter mais informações sobre a sua utilidade."
+msgstr "Consulte a documentação para obter mais informações sobre a sua utilidade."
 
 #: static/js/editor/blocks/query/edit/PatternSelectionModal.js:82
 #: static/js/editor/blocks/tax-query/edit/PatternSelectionModal.js:68

@@ -3024,7 +3024,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:25
 msgid "Buttons Type"
-msgstr "نوع دکمه‌��ا"
+msgstr "نوع دکمه‌ها"
 
 #: framework/extensions/trending/customizer.php:449,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:33,
@@ -4429,7 +4429,7 @@ msgstr "دکمه تعویض حالت رنگ"
 
 #: framework/helpers/exts-configs.php:84
 msgid "Add a dark colour scheme and switch to your website, which will make it pleasant to look at in low light environments."
-msgstr "ی�� نما و دکمه‌ی تعویض رنگ تیره را به وب‌سایت شما اضافه می‌کند که آن را برای دیدن در محیط‌های کم‌نور مناسب می‌کند."
+msgstr "یک نما و دکمه‌ی تعویض رنگ تیره را به وب‌سایت شما اضافه می‌کند که آن را برای دیدن در محیط‌های کم‌نور مناسب می‌کند."
 
 #. translators: 1: link open 2: link close
 #: framework/features/account-auth.php:253
@@ -5534,7 +5534,7 @@ msgstr "نصب"
 
 #: static/js/dashboard/screens/DemoInstall/DemoToInstall.js:347
 msgid "Next"
-msgstr "بعدی"
+msgstr "ب��دی"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:182
 msgid "Import"
@@ -5712,7 +5712,7 @@ msgstr "نصب تمیز"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:106
 msgid "This option will remove the previous imported content and will perform a fresh and clean install."
-msgstr "این گزینه محتوای و��رد شده‌ی قبلی را حذف کرده و یک نصب تمیز و تازه انجام می‌دهد."
+msgstr "این گزینه محتوای وارد شده‌ی قبلی را حذف کرده و یک نصب تمیز و تازه انجام می‌دهد."
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ModifyDemo.js:147
 msgid "This starter site is already installed"
