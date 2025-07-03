@@ -863,7 +863,8 @@ if ($loggedin_interaction_type === 'dropdown') {
 				blocksy_html_tag(
 					'span',
 					[
-						'class' => trim('ct-label ' . blocksy_visibility_classes($loggedin_account_label_visibility))
+						'class' => trim('ct-label ' . blocksy_visibility_classes($loggedin_account_label_visibility)),
+						'aria-hidden' => 'true',
 					],
 					$loggedin_label
 				) : ''

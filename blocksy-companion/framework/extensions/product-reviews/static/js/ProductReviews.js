@@ -7,18 +7,20 @@ import {
 } from '@wordpress/element'
 import ctEvents from 'ct-events'
 
-import { OptionsPanel } from 'blocksy-options'
+import { OptionsPanel, Overlay } from 'blocksy-options'
 import nanoid from 'nanoid'
 
 import classnames from 'classnames'
 import { __, sprintf } from 'ct-i18n'
-import Overlay from '../../../../../static/js/helpers/Overlay'
 
 const ProductReviews = ({ setExtsStatus, extension, onExtsSync }) => {
 	const [settings, setSettings] = useState(null)
 
 	return (
-		<div className={classnames('ct-extension-options ct-product-reviews-options')}>
+		<div
+			className={classnames(
+				'ct-extension-options ct-product-reviews-options'
+			)}>
 			<h4>{__('Product Reviews Settings', 'blocksy-companion')}</h4>
 
 			<p className="ct-modal-description">

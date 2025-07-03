@@ -5631,7 +5631,7 @@ msgstr "alap widgetek visszaállítása"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:89
 msgid "users"
-msgstr "felhasználó"
+msgstr "felhaszn��ló"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:90
 msgid "terms"
@@ -8902,7 +8902,7 @@ msgstr "Tartalom"
 #: framework/extensions/cookies-consent/customizer.php:64,
 #: framework/extensions/cookies-consent/helpers.php:7
 msgid "We use cookies to ensure that we give you the best experience on our website."
-msgstr "Cookie-kat használunk annak érdekében, hogy a legjobb ��lményt nyújtsuk Önnek a weboldalunkon."
+msgstr "Cookie-kat használunk annak érdekében, hogy a legjobb élményt nyújtsuk Önnek a weboldalunkon."
 
 #: framework/features/blocks/search/options.php:58
 msgid "Button Text"

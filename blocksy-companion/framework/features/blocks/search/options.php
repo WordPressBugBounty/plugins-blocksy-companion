@@ -29,6 +29,10 @@ if (function_exists('is_bbpress')) {
 	$all_cpts[] = 'reply';
 }
 
+if (class_exists('Tribe__Events__Main')) {
+	$all_cpts[] = 'tribe_events';
+}
+
 foreach ($all_cpts as $single_cpt) {
 	if (get_post_type_object($single_cpt)) {
 		$cpt_choices[$single_cpt] = get_post_type_labels(

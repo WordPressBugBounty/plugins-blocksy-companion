@@ -5534,7 +5534,7 @@ msgstr "نصب"
 
 #: static/js/dashboard/screens/DemoInstall/DemoToInstall.js:347
 msgid "Next"
-msgstr "ب��دی"
+msgstr "بعدی"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:182
 msgid "Import"

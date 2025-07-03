@@ -61,7 +61,7 @@ echo '<a href="' . $link . '" class="ct-account-item" ' . $data_label_attr . ' a
 if (! empty($login_label)) {
 	echo '<span class="' . trim('ct-label ' . blocksy_visibility_classes(
 		$loggedout_account_label_visibility
-	)) . '">';
+	)) . '" aria-hidden="true">';
 
 	echo $login_label;
 

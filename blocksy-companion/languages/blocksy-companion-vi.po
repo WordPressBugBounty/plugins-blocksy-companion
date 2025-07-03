@@ -2512,7 +2512,7 @@ msgstr "Tổng cộng"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:8
 msgid "Order number"
-msgstr "Số ��ơn hàng"
+msgstr "Số đơn hàng"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/index.js:108
 msgid "Customer Details"
@@ -2674,7 +2674,7 @@ msgstr "Tên ngắn"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:245
 msgid "Sorry, this product is unavailable. Please choose a different combination."
-msgstr "Xin lỗi, s��n phẩm này không có sẵn. Vui lòng chọn một sự kết hợp khác."
+msgstr "Xin l���i, sản phẩm này không có sẵn. Vui lòng chọn một sự kết hợp khác."
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:246,
@@ -9701,7 +9701,7 @@ msgstr "Viền Container"
 #: framework/extensions/newsletter-subscribe/customizer.php:408,
 #: framework/extensions/trending/customizer.php:919
 msgid "Container Inner Spacing"
-msgstr "Khoảng cách trong vùng chứa"
+msgstr "Kho���ng cách trong vùng chứa"
 
 #: framework/extensions/newsletter-subscribe/customizer.php:422,
 #: framework/premium/extensions/shortcuts/customizer.php:1368,

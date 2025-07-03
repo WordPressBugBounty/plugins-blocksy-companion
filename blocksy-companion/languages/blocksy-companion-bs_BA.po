@@ -1374,7 +1374,7 @@ msgstr "Započnite s uzorkom ili kreirajte prilagođeni izgled"
 
 #: static/js/editor/blocks/tax-template/index.js:13
 msgid "Taxonomy Template"
-msgstr "Predložak taksonomije"
+msgstr "Predlo��ak taksonomije"
 
 #: static/js/editor/blocks/widgets-wrapper/Edit.js:81
 msgid "Expandable Container"
@@ -2108,7 +2108,7 @@ msgstr "Miješane varijante"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:233
 msgid "Generate Variation URL"
-msgstr "Generiši URL varijacije"
+msgstr "Generi��i URL varijacije"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:239
 msgid "Generate a shareable single product page URL with pre-selected variation attributes."

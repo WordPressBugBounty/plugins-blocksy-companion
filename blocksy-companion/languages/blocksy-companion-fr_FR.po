@@ -429,7 +429,7 @@ msgstr ""
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:127
 msgid "API URL"
-msgstr "URL de l��API"
+msgstr "URL de l’API"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:304
 msgid "More information on how to generate an API key for ActiveCampaign can be found %shere%s."

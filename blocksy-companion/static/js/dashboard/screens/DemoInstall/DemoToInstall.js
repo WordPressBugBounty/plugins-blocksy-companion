@@ -7,15 +7,8 @@ import {
 	createContext,
 	Fragment,
 } from '@wordpress/element'
-import {
-	Dialog,
-	DialogOverlay,
-	DialogContent,
-} from '../../../helpers/reach/dialog'
 
-import Overlay from '../../../helpers/Overlay'
-
-import { Transition } from 'blocksy-options'
+import { Transition, Overlay } from 'blocksy-options'
 import { __ } from 'ct-i18n'
 import cn from 'classnames'
 import DashboardContext from '../../DashboardContext'

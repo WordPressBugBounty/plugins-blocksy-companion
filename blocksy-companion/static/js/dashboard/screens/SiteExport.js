@@ -9,7 +9,7 @@ import { __ } from 'ct-i18n'
 import classnames from 'classnames'
 import useActivationAction from '../helpers/useActivationAction'
 import fileSaver from 'file-saver'
-import Overlay from '../../helpers/Overlay'
+import { Overlay } from 'blocksy-options'
 
 import { getPluginsMap } from './DemoInstall/Wizzard/Plugins'
 

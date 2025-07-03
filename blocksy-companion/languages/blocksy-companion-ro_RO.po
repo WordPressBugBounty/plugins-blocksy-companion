@@ -4850,7 +4850,7 @@ msgstr "După descriere"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:226
 msgid "After breadcrumbs"
-msgstr "Dup�� firimituri"
+msgstr "După firimituri"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:630
 msgid "Before shop loop item actions"

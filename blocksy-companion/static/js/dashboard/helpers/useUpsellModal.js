@@ -4,7 +4,7 @@ import {
 	useState,
 	Fragment,
 } from '@wordpress/element'
-import Overlay from '../../helpers/Overlay'
+import { Overlay } from 'blocksy-options'
 import { __, sprintf } from 'ct-i18n'
 
 const plans = {
@@ -85,10 +85,7 @@ const useUpsellModal = ({
 							<span>Required plan</span>
 
 							<h2 className="ct-modal-title">
-								{__(
-									'Business or Agency',
-									'blocksy-companion'
-								)}
+								{__('Business or Agency', 'blocksy-companion')}
 							</h2>
 
 							<p>{professional.description}</p>

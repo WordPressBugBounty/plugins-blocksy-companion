@@ -314,11 +314,7 @@ function blc_get_jed_locale_data($domain) {
 		$locale[$domain]['']['plural_forms'] = $translations->headers['Plural-Forms'];
 	}
 
-	foreach ($translations->entries as $msgid => $entry) {
-		$locale[$domain][$entry->key()] = $entry->translations;
-	}
-
-	foreach (blc_get_json_translation_files('blocksy-companion') as $file_path) {
+	foreach (blc_get_json_translation_files($domain) as $file_path) {
 		$parsed_json = json_decode(
 			call_user_func(
 				'file' . '_get_contents',
@@ -342,6 +338,10 @@ function blc_get_jed_locale_data($domain) {
 
 			$locale[$domain][$msgid] = $entry;
 		}
+	}
+
+	foreach ($translations->entries as $msgid => $entry) {
+		$locale[$domain][$entry->key()] = [$translations->translate($entry->key())];
 	}
 
 	return $locale[$domain];
