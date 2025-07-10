@@ -3588,7 +3588,7 @@ msgstr "Autoodtwarzanie"
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:356,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:91
 msgid "Delay (Seconds)"
-msgstr "Opó��nienie (w sekundach)"
+msgstr "Opóźnienie (w sekundach)"
 
 #: framework/premium/extensions/post-types-extra/features/related-slideshow/feature.php:113,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:357,
@@ -4270,7 +4270,7 @@ msgstr "Zaawansowane recenzje"
 
 #: framework/helpers/exts-configs.php:323
 msgid "Enhance your WooCommerce reviews with rich content, images and a thumbs up system that help your shoppers find the perfect product."
-msgstr "Wzbogać swoje recenzje WooCommerce o bogate treści, obrazy i system kciuków w górę, które pomogą kupującym znaleźć idealny produkt."
+msgstr "Wzbogać swoje recenzje WooCommerce o bogate treści, obrazy i system kciuków w górę, które pomogą kupującym znale��ć idealny produkt."
 
 #: framework/extensions/cookies-consent/customizer.php:112
 msgid "Forms Cookies Content"
@@ -7737,7 +7737,7 @@ msgstr "Pojawianie / Znikanie"
 #: framework/premium/features/content-blocks/options/popup.php:346,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:532
 msgid "Zoom in zoom out"
-msgstr "Przybli��enie / Oddalenie"
+msgstr "Przybliżenie / Oddalenie"
 
 #: framework/premium/features/content-blocks/options/popup.php:347,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:533

@@ -55,8 +55,33 @@ $img_attr = [
 	'style' => ''
 ];
 
+$aria_label = get_the_title();
+
+if (
+	$attributes['field'] === 'wp:term_image'
+	||
+	$attributes['field'] === 'wp:archive_image'
+) {
+	global $blocksy_term_obj;
+
+	if (! empty($blocksy_term_obj)) {
+		$aria_label = $blocksy_term_obj->name;
+	}
+
+	$maybe_term_obj = get_queried_object();
+	
+	if (
+		! empty($maybe_term_obj)
+		&&
+		! empty($maybe_term_obj->name)
+	) {
+		$aria_label = $maybe_term_obj->name;
+	}
+}
+
 $wrapper_attr = [
-	'class' => 'ct-dynamic-media'
+	'class' => 'ct-dynamic-media',
+	'aria-label' => wp_strip_all_tags($aria_label),
 ];
 
 $link_attr = [];

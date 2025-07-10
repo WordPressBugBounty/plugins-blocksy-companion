@@ -263,7 +263,7 @@ msgstr "Товар, который вы ждёте, снова в наличии
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr "Хорошие новости! Товар, который вы так долго ждали, снова в наличии!"
+msgstr "Хорошие новости! Товар, который вы та�� долго ждали, снова в наличии!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
@@ -345,7 +345,7 @@ msgstr "В вашем списке ожидания пока нет ни одн�
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:42
 msgid "Confirmed"
-msgstr "Подтверждено"
+msgstr "Подтв��рждено"
 
 #. translators: %s User name.
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:19,
@@ -420,7 +420,7 @@ msgstr "Ссылка на товар:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:23
 msgid "Click the link below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
-msgstr "Нажмите на ссылку ниже, чтобы подтвердить подписку. После п��дтверждения вы получите уведомление, когда товар снова появится на складе."
+msgstr "Нажмите на ссылку ниже, чтобы подтвердить подписку. После подтверждения вы получите уведомление, когда товар снова появится на складе."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:32,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:25
@@ -951,7 +951,7 @@ msgstr "Отъезд"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:202
 msgid "Alternative Text"
-msgstr "Альтернативный текст"
+msgstr "Альтернатив��ый текст"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:215
 msgid "Describe the purpose of the image."
@@ -1059,7 +1059,7 @@ msgstr "Изображение объекта"
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:36
 #: static/js/editor/blocks/dynamic-data/preview-parts/wp/TermTextPreview.js:10
 msgid "Term Count"
-msgstr "Счё��чик объекта"
+msgstr "Счётчик объекта"
 
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:50
 msgid "Excerpt"
@@ -1502,7 +1502,7 @@ msgstr "Шрифт таксономии"
 #: framework/extensions/trending/customizer.php:708,
 #: framework/extensions/trending/customizer.php:748
 msgid "Taxonomies Font Color"
-msgstr "Цвет шриф��а таксономий"
+msgstr "Цвет шрифта таксономий"
 
 #: framework/extensions/trending/customizer.php:780
 msgid "Taxonomies Button Color"
@@ -1595,7 +1595,7 @@ msgstr "Нет виджетов для установки."
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:98
 msgid "Fields Gap"
-msgstr "О��ступ полей"
+msgstr "Отступ полей"
 
 #: framework/features/blocks/about-me/options.php:21
 msgid "User Source"
@@ -1903,7 +1903,7 @@ msgstr "Эффект при наведении"
 
 #: framework/features/header/items/account/options.php:727
 msgid "Boxed Color"
-msgstr "Цве�� блока"
+msgstr "Цвет блока"
 
 #: framework/features/header/items/account/options.php:1945
 msgid "Link Active"
@@ -3594,7 +3594,7 @@ msgstr "Задержка (в секундах)"
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:357,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:92
 msgid "Specify the amount of time (in seconds) to delay between automatically cycling an item."
-msgstr "Промежуток времени задержки (в секундах) между циклами автоматического воспр��изведения файла."
+msgstr "Промежуток времени задержки (в секундах) между циклами автоматического воспроизведения файла."
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:140
 msgid "Choose the default color mode that a user will see when it visits your site."
@@ -4040,7 +4040,7 @@ msgstr "Ничего не найдено"
 
 #: framework/premium/features/content-blocks/admin-ui.php:270
 msgid "Maintenance"
-msgstr "Техобслуживание"
+msgstr "Техобслуживан��е"
 
 #: framework/premium/features/content-blocks/admin-ui.php:374
 msgid "On click to element"
@@ -4110,7 +4110,7 @@ msgstr "Локальные Gravatar'ы"
 
 #: framework/premium/features/local-gravatars.php:39
 msgid "Store and load Gravatars locally for increased privacy and performance."
-msgstr "Хранение и загрузка Gravatar'ов локал��но для повышения уровней конфиденциальности и производительности."
+msgstr "Хранение и загрузка Gravatar'ов локально для повышения уровней конфиденциальности и производительности."
 
 #: framework/premium/features/premium-header.php:314,
 #: framework/premium/features/socials.php:13,
@@ -4354,7 +4354,7 @@ msgstr "Блок публикации в соцсетях"
 
 #: framework/helpers/exts-configs.php:347
 msgid "Enable social sharing abilities for products available on the site, letting even more users discover your great shop selection."
-msgstr "Возможность публикации информации о товарах, доступных на сайте, в соцсетях, что позволит еще большему количеству пользователей ознакомиться с ассортиментом магазина."
+msgstr "Возможность публикации информации о товарах, доступных на сайте, в соцсетях, что позволит еще большему количеству поль��ователей ознакомиться с ассортиментом магазина."
 
 #: framework/helpers/exts-configs.php:338
 msgid "Advanced Gallery"
@@ -4362,7 +4362,7 @@ msgstr "Расширенная галерея"
 
 #: framework/helpers/exts-configs.php:247
 msgid "Preview the available products and let your users make quick and informative decisions about their purchase."
-msgstr "Просмотр доступных товаров и помощь клиентам быстро и легко принимать особнованные ре��ения об их покупке."
+msgstr "Просмотр доступных товаров и помощь клиентам быстро и легко принимать особнованные решения об их покупке."
 
 #: framework/helpers/exts-configs.php:254,
 #: framework/premium/extensions/shortcuts/views/bar.php:54
@@ -4419,7 +4419,7 @@ msgstr "Динамические данные"
 
 #: framework/helpers/exts-configs.php:150
 msgid "Integrates custom fields solutions in the meta layers of a post and presents additional information."
-msgstr "Интеграция пользовательских полей в мета-слои записи и предоставление дополнительной информации."
+msgstr "Интеграция пользовательских полей в мета-слои записи и предоставление дополнитель��ой информации."
 
 #. translators: This is a brand name. Preferably to not be translated
 #: framework/helpers/exts-configs.php:83
@@ -7402,7 +7402,7 @@ msgstr "Стандартный режим"
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:318,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:442
 msgid "Transparent State"
-msgstr "Режим прозра��ности"
+msgstr "Режим про��рачности"
 
 #: framework/features/header/header-options.php:227,
 #: framework/features/header/items/account/options.php:1161,
@@ -8050,7 +8050,7 @@ msgstr "Текст-заполнитель"
 
 #: framework/premium/features/premium-header/items/search-input/options.php:55
 msgid "Input Maximum Width"
-msgstr "Максимальная ширина по��я"
+msgstr "Максимальная ширина поля"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:87,
 #: framework/features/blocks/search/options.php:70,

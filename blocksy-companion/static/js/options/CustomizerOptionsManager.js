@@ -13,6 +13,15 @@ import classnames from 'classnames'
 
 import phpUnserialize from 'phpunserialize'
 
+const safePhpUnserialize = (data) => {
+	const fixed = data.replace(/s:(\d+):"(.*?)";/gs, (_, len, str) => {
+		const actualLength = Buffer.byteLength(str, 'utf8')
+		return `s:${actualLength}:"${str}";`
+	})
+
+	return phpUnserialize(fixed)
+}
+
 const wipeCaches = () => {
 	return new Promise((resolve) => {
 		const body = new FormData()
@@ -194,6 +203,10 @@ const CustomizerOptionsManager = () => {
 								reader.readAsText(futureConfig, 'UTF-8')
 
 								reader.onload = function (evt) {
+									const unserialized = safePhpUnserialize(
+										evt.target.result
+									)
+
 									try {
 										fetch(
 											`${window.ajaxurl}?action=blocksy_customizer_import&wp_customize=on&nonce=${ct_customizer_localizations.customizer_reset_none}`,
@@ -205,9 +218,7 @@ const CustomizerOptionsManager = () => {
 														'application/json',
 												},
 												body: JSON.stringify(
-													phpUnserialize(
-														evt.target.result
-													)
+													unserialized
 												),
 											}
 										).then((response) => {

@@ -5463,7 +5463,7 @@ msgstr "你將要從你的父佈景主題複製所有的設定至子佈景主題
 
 #: static/js/options/CustomizerOptionsManager.js:327
 msgid "You are about to copy all the settings from your child theme into the parent theme. Are you sure you want to continue?"
-msgstr "你將要從你的子佈景主題複製��有的設定至父佈景主題，你確定要繼續嗎？"
+msgstr "你將要從你的子佈景主題複製所有的設定至父佈景主題，你確定要繼續嗎？"
 
 #: static/js/options/CustomizerOptionsManager.js:376
 msgid "Yes, I am sure"
@@ -5608,7 +5608,7 @@ msgstr "啟用必要擴充功能"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:58
 msgid "removing previously installed posts"
-msgstr "移除先前安裝的文章"
+msgstr "移除先前��裝的文章"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:62
 msgid "removing previously installed taxonomies"
