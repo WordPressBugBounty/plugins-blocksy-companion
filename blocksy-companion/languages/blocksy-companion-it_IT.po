@@ -4860,7 +4860,7 @@ msgstr "Dopo le azioni degli elementi in ciclo contino del negozio"
 
 #. translators: placeholder here means the actual URL.
 #: framework/features/blocks/socials/options.php:24
-msgid "Configure the social links in Customizer ➝ General ➝ %sSocial Network Accounts%s."
+msgid "Configure the social links in Customizer ➝ General �� %sSocial Network Accounts%s."
 msgstr "Configura social links in Personalizza ➝ Generale ➝ %sSocial Network Accounts%s."
 
 #: framework/features/header/items/account/options.php:306

@@ -32,15 +32,18 @@ $loggedout_icon_visibility = blocksy_akg(
 );
 
 $link = '#account-modal';
+$aria_controls = 'aria-controls="account-modal"';
 
 $login_account_action = blocksy_akg('login_account_action', $atts, 'modal');
 
 if ($login_account_action === 'custom') {
 	$link = do_shortcode(blocksy_akg('loggedout_account_custom_page', $atts, ''));
+	$aria_controls = '';
 }
 
 if ($login_account_action === 'woocommerce_account') {
 	$link = get_permalink(get_option('woocommerce_myaccount_page_id'));
+	$aria_controls = '';
 }
 
 $loggedout_label_position = blocksy_expand_responsive_value(
@@ -56,7 +59,7 @@ if (blocksy_akg('logged_out_style', $atts, 'icon') !== 'none') {
 
 echo '<div ' . blocksy_attr_to_html($attr) . '>';
 
-echo '<a href="' . $link . '" class="ct-account-item" ' . $data_label_attr . ' aria-controls="account-modal" aria-label="' .  $login_label . '">';
+echo '<a href="' . $link . '" class="ct-account-item" ' . $data_label_attr . ' ' . $aria_controls . ' aria-label="' .  $login_label . '">';
 
 if (! empty($login_label)) {
 	echo '<span class="' . trim('ct-label ' . blocksy_visibility_classes(

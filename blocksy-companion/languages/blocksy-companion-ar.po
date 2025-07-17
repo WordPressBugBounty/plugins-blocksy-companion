@@ -8135,7 +8135,7 @@ msgstr ""
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:184
 msgid "API Key"
-msgstr "��فتاح API"
+msgstr "مفتاح API"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:363
 #: framework/extensions/product-reviews/static/js/ProductReviews.js:94

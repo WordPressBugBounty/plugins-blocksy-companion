@@ -19,6 +19,8 @@ const getAuthorFiledValue = (author, author_field) => {
 			return author?.last_name || ''
 		case 'description':
 			return author?.description || ''
+		case 'user_url':
+			return author?.url || ''
 		default:
 			break
 	}

@@ -249,6 +249,14 @@ if ($field === 'wp:author') {
 		}
 	}
 
+	if ($author_field === 'user_url') {
+		$value = blocksy_get_the_author_meta('user_url', $author_id);
+
+		if (! empty($value)) {
+			$overide_link = $value;
+		}
+	}
+
 	if ($author_field === 'nicename') {
 		$value = blocksy_get_the_author_meta('nickname', $author_id);
 	}

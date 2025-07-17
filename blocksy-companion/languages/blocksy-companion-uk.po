@@ -5715,7 +5715,7 @@ msgstr "Чисте встановлення"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:106
 msgid "This option will remove the previous imported content and will perform a fresh and clean install."
-msgstr "Ця опція видалить попередній імпортований вміст і вико��ає свіжу та чисту установку."
+msgstr "Ця опція видалить попередній імпортований вміст і виконає свіжу та чисту установку."
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ModifyDemo.js:147
 msgid "This starter site is already installed"
@@ -10531,7 +10531,7 @@ msgstr "Увійти"
 #: framework/features/header/modal/login.php:23,
 #: framework/features/header/modal/lostpassword.php:5
 msgid "Username or Email Address"
-msgstr "Ім'я к��ристувача або електронна адреса"
+msgstr "Ім'я користувача або електронна адреса"
 
 #: framework/features/header/modal/lostpassword.php:13
 msgid "Get New Password"

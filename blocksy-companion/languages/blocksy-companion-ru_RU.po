@@ -132,7 +132,7 @@ msgstr "Отображение формы предзаказа"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:108
 msgid "Choose where you want this Waitlist Form to be displayed."
-msgstr "Где нужно отображать форму включения в список ожидания."
+msgstr "Где нужно отображать форму включения в спи��ок ожидания."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:160
 msgid "Message Font"
@@ -263,7 +263,7 @@ msgstr "Товар, который вы ждёте, снова в наличии
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr "Хорошие новости! Товар, который вы та�� долго ждали, снова в наличии!"
+msgstr "Хорошие новости! Товар, который вы так долго ждали, снова в наличии!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
@@ -345,7 +345,7 @@ msgstr "В вашем списке ожидания пока нет ни одн�
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:42
 msgid "Confirmed"
-msgstr "Подтв��рждено"
+msgstr "Подтверждено"
 
 #. translators: %s User name.
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:19,
@@ -374,7 +374,7 @@ msgstr "Вы подали заявку на включение в список �
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:62
 msgid "Click the button below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
-msgstr "Нажмите на кнопку ниже, чтобы подтвердить подписку. После подтверждения вы получите уведомление, когда товар снова появится на складе."
+msgstr "Нажмите на кнопку ниже, чтобы подтвердить подписку. После подтверждения вы получите уведомление, когда товар с��ова появится на складе."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:66
 msgid "Confirm Subscription"
@@ -951,7 +951,7 @@ msgstr "Отъезд"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:202
 msgid "Alternative Text"
-msgstr "Альтернатив��ый текст"
+msgstr "Альтернативный текст"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:215
 msgid "Describe the purpose of the image."
@@ -1059,7 +1059,7 @@ msgstr "Изображение объекта"
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:36
 #: static/js/editor/blocks/dynamic-data/preview-parts/wp/TermTextPreview.js:10
 msgid "Term Count"
-msgstr "Счётчик объекта"
+msgstr "Счё��чик объекта"
 
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:50
 msgid "Excerpt"
@@ -1670,7 +1670,7 @@ msgstr "Введите дату или время"
 #: framework/features/blocks/dynamic-data/options.php:97,
 #: framework/features/blocks/dynamic-data/views/wp-field.php:194
 msgid "No comments"
-msgstr "Комментариев нет"
+msgstr "Комме��тариев нет"
 
 #: framework/features/blocks/dynamic-data/options.php:102,
 #: framework/features/blocks/dynamic-data/options.php:103,
@@ -2341,7 +2341,7 @@ msgstr "Вставьте определённый блок контента в �
 
 #: framework/premium/static/js/hooks/CreateHook.js:156
 msgid "Nothing Found Template"
-msgstr "Шаблон о��сутствия результатов"
+msgstr "Шаблон отсутствия результатов"
 
 #: framework/premium/static/js/hooks/CreateHook.js:164
 msgid "Maintenance Template"
@@ -3153,7 +3153,7 @@ msgstr "Страницы благодарности"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:481
 msgid "Thank You Page"
-msgstr "Страница благодарности"
+msgstr "С��раница благодарности"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:483
 msgid "Add New Thank You Page"
@@ -4040,7 +4040,7 @@ msgstr "Ничего не найдено"
 
 #: framework/premium/features/content-blocks/admin-ui.php:270
 msgid "Maintenance"
-msgstr "Техобслуживан��е"
+msgstr "Техобслуживание"
 
 #: framework/premium/features/content-blocks/admin-ui.php:374
 msgid "On click to element"
@@ -4354,7 +4354,7 @@ msgstr "Блок публикации в соцсетях"
 
 #: framework/helpers/exts-configs.php:347
 msgid "Enable social sharing abilities for products available on the site, letting even more users discover your great shop selection."
-msgstr "Возможность публикации информации о товарах, доступных на сайте, в соцсетях, что позволит еще большему количеству поль��ователей ознакомиться с ассортиментом магазина."
+msgstr "Возможность публикации информации о товарах, доступных на сайте, в соцсетях, что позволит еще большему количеству пользователей ознакомиться с ассортиментом магазина."
 
 #: framework/helpers/exts-configs.php:338
 msgid "Advanced Gallery"
@@ -4419,7 +4419,7 @@ msgstr "Динамические данные"
 
 #: framework/helpers/exts-configs.php:150
 msgid "Integrates custom fields solutions in the meta layers of a post and presents additional information."
-msgstr "Интеграция пользовательских полей в мета-слои записи и предоставление дополнитель��ой информации."
+msgstr "Интеграция пользовательских полей в мета-слои записи и предоставление дополнительной информации."
 
 #. translators: This is a brand name. Preferably to not be translated
 #: framework/helpers/exts-configs.php:83
@@ -7402,7 +7402,7 @@ msgstr "Стандартный режим"
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:318,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:442
 msgid "Transparent State"
-msgstr "Режим про��рачности"
+msgstr "Режим прозрачности"
 
 #: framework/features/header/header-options.php:227,
 #: framework/features/header/items/account/options.php:1161,
@@ -10555,7 +10555,7 @@ msgstr "Подключите свой проект Adobe Fonts и использ
 
 #: framework/helpers/exts-configs.php:71
 msgid "Inject custom code snippets throughout your website. The extension works globally or on a per post/page basis."
-msgstr "Внедрение произвольных фрагментов кода в веб-сайт. Расширение работает глобально или отдельно для каждой записи/страницы."
+msgstr "Внедрение произвольных фрагментов кода в веб-сайт. Расш��рение работает глобально или отдельно для каждой записи/страницы."
 
 #: framework/premium/extensions/code-snippets/extension.php:42,
 #: framework/premium/extensions/code-snippets/extension.php:97,

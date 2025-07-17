@@ -1586,7 +1586,7 @@ msgstr "Aucune extension à installer."
 
 #: framework/features/demo-install/widgets-import.php:36
 msgid "Sorry, you don't have permission to install widgets."
-msgstr "D��solé, vous n’avez pas les droits nécessaires pour installer des widgets."
+msgstr "Désolé, vous n’avez pas les droits nécessaires pour installer des widgets."
 
 #: framework/features/demo-install/widgets-import.php:79,
 #: framework/features/demo-install/widgets-import.php:73
@@ -2385,7 +2385,7 @@ msgstr "Liste"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:387
 msgid "Image Aspect Ratio"
-msgstr "Proportion de taille de l’image"
+msgstr "Proportion de taille de l���image"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:408
 msgid "Image Max width"

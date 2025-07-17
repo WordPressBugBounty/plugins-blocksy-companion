@@ -5359,7 +5359,7 @@ msgstr "需要協助或建議?"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:21
 msgid "Got a question or need help with the theme? You can always submit a support ticket or ask for help in our friendly Facebook community."
-msgstr "使用佈景有問題或是需要一些協助嗎?你隨時可以提交支援單或在我們友善的 Facebook 社群尋求協助."
+msgstr "使用佈景有問題或是需要一些協助嗎?���隨時可以提交支援單或在我們友善的 Facebook 社群尋求協助."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:33
 msgid "Submit a Support Ticket"
@@ -5608,7 +5608,7 @@ msgstr "啟用必要擴充功能"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:58
 msgid "removing previously installed posts"
-msgstr "移除先前��裝的文章"
+msgstr "移除先前安裝的文章"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:62
 msgid "removing previously installed taxonomies"
@@ -6334,7 +6334,7 @@ msgstr "面板揭示"
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:131,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:39
 msgid "Left Side"
-msgstr "���側"
+msgstr "左側"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:132,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:40

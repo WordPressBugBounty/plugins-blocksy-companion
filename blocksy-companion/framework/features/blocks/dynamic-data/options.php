@@ -166,6 +166,7 @@ $options = [
 						'last_name' => __('Last Name', 'blocksy-companion'),
 						'description' => __('Description', 'blocksy-companion'),
 						'email' => __('Email', 'blocksy-companion'),
+						'user_url' => __('Website', 'blocksy-companion'),
 					]
 				),
 			]
@@ -206,7 +207,22 @@ $options = [
 					],
 
 					__('Link to author page', 'blocksy-companion') => [
-						'field' => 'wp:author|wp:author_avatar'
+						'field' => 'wp:author_avatar'
+					],
+
+					__('Link to author page', 'blocksy-companion') => [
+						'field' => 'wp:author',
+						'author_field' => 'display_name|nicename|first_name|last_name|description'
+					],
+
+					__('Link to email', 'blocksy-companion') => [
+						'field' => 'wp:author',
+						'author_field' => 'email'
+					],
+
+					__('Link to website', 'blocksy-companion') => [
+						'field' => 'wp:author',
+						'author_field' => 'user_url'
 					],
 
 					__('Link to term page', 'blocksy-companion') => [

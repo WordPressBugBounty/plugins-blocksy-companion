@@ -4850,7 +4850,7 @@ msgstr "După descriere"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:226
 msgid "After breadcrumbs"
-msgstr "După firimituri"
+msgstr "Dup�� firimituri"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:630
 msgid "Before shop loop item actions"
@@ -5047,7 +5047,7 @@ msgstr "Meniu mobil 2"
 #: framework/extensions/newsletter-subscribe/providers/mailerlite-new.php:123,
 #: framework/extensions/newsletter-subscribe/providers/mailpoet.php:93
 msgid "Thank you for subscribing to our newsletter!"
-msgstr "Vă mulțumim c�� v-ați abonat la newsletter-ul nostru!"
+msgstr "Vă mulțumim că v-ați abonat la newsletter-ul nostru!"
 
 #. translators: This is a brand name. Preferably to not be translated
 #: framework/helpers/exts-configs.php:59
@@ -8464,7 +8464,7 @@ msgstr "Editează condițiile"
 #. translators: %s: PHP version
 #: blocksy-companion.php:182
 msgid "Blocksy requires PHP version %s+, plugin is currently NOT RUNNING."
-msgstr "Blocksy necesită versiunea PHP %s+, pluginul nu rulează în prezent."
+msgstr "Blocksy necesită versiunea PHP %s+, pluginul nu ruleaz�� în prezent."
 
 #. translators: %s: WordPress version
 #: blocksy-companion.php:193

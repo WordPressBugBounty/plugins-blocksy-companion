@@ -40,7 +40,7 @@ msgstr "Bộ nhớ tạm"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:193,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-account.php:67
 msgid "Waitlist"
-msgstr "Danh sách ch���"
+msgstr "Danh sách chờ"
 
 #: framework/premium/extensions/shortcuts/customizer.php:895
 msgid "Tooltip Visibility"
@@ -2674,7 +2674,7 @@ msgstr "Tên ngắn"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:245
 msgid "Sorry, this product is unavailable. Please choose a different combination."
-msgstr "Xin lỗi, sản phẩm này không có sẵn. Vui lòng chọn một sự kết hợp khác."
+msgstr "Xin lỗi, s��n phẩm này không có sẵn. Vui lòng chọn một sự kết hợp khác."
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:246,

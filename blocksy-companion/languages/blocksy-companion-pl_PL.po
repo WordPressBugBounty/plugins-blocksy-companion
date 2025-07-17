@@ -7737,7 +7737,7 @@ msgstr "Pojawianie / Znikanie"
 #: framework/premium/features/content-blocks/options/popup.php:346,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:532
 msgid "Zoom in zoom out"
-msgstr "Przybliżenie / Oddalenie"
+msgstr "Przybli��enie / Oddalenie"
 
 #: framework/premium/features/content-blocks/options/popup.php:347,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:533
