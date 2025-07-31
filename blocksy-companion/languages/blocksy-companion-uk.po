@@ -8744,7 +8744,7 @@ msgstr "Мета-дані OpenGraph"
 
 #: framework/features/opengraph-meta-data.php:17
 msgid "Enable the OpenGraph rich meta data features for your website."
-msgstr "Увімкніть для свого веб-сайту багатофункціональні метадані OpenGraph."
+msgstr "Увімкні��ь для свого веб-сайту багатофункціональні метадані OpenGraph."
 
 #: framework/features/opengraph-meta-data.php:26
 msgid "Facebook Page URL"
@@ -10531,7 +10531,7 @@ msgstr "Увійти"
 #: framework/features/header/modal/login.php:23,
 #: framework/features/header/modal/lostpassword.php:5
 msgid "Username or Email Address"
-msgstr "Ім'я користувача або електронна адреса"
+msgstr "І��'я користувача або електронна адреса"
 
 #: framework/features/header/modal/lostpassword.php:13
 msgid "Get New Password"

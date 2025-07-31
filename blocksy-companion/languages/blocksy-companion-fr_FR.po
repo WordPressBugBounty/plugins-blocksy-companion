@@ -2385,7 +2385,7 @@ msgstr "Liste"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:387
 msgid "Image Aspect Ratio"
-msgstr "Proportion de taille de l���image"
+msgstr "Proportion de taille de l’image"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:408
 msgid "Image Max width"

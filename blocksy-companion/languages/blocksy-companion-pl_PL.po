@@ -2099,7 +2099,7 @@ msgstr "Limit"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:876
 msgid "Set how many terms you want to display in each attribute."
-msgstr "Określ, ile terminów ma być wyświetlanych w każdym atrybucie."
+msgstr "Określ, ile terminów ma być wyświetlanych w ka��dym atrybucie."
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:179,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:462
@@ -4270,7 +4270,7 @@ msgstr "Zaawansowane recenzje"
 
 #: framework/helpers/exts-configs.php:323
 msgid "Enhance your WooCommerce reviews with rich content, images and a thumbs up system that help your shoppers find the perfect product."
-msgstr "Wzbogać swoje recenzje WooCommerce o bogate treści, obrazy i system kciuków w górę, które pomogą kupującym znale��ć idealny produkt."
+msgstr "Wzbogać swoje recenzje WooCommerce o bogate treści, obrazy i system kciuków w górę, które pomogą kupującym znaleźć idealny produkt."
 
 #: framework/extensions/cookies-consent/customizer.php:112
 msgid "Forms Cookies Content"
@@ -7737,7 +7737,7 @@ msgstr "Pojawianie / Znikanie"
 #: framework/premium/features/content-blocks/options/popup.php:346,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:532
 msgid "Zoom in zoom out"
-msgstr "Przybli��enie / Oddalenie"
+msgstr "Przybliżenie / Oddalenie"
 
 #: framework/premium/features/content-blocks/options/popup.php:347,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:533
@@ -8118,7 +8118,7 @@ msgstr "Wybierz listę..."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:218
 msgid "More information on how to generate an API key for Mailchimp can be found %shere%s."
-msgstr "Więcej informacji na temat generowania klucza API dla Mailchimp można znaleźć %stutaj%s."
+msgstr "Wi��cej informacji na temat generowania klucza API dla Mailchimp można znaleźć %stutaj%s."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:286
 msgid "More information on how to generate an API key for ConvertKit can be found %shere%s."

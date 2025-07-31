@@ -5276,7 +5276,7 @@ msgstr "Vælg typen af din indholdsblok, og placer den på den ønskede placerin
 
 #: framework/premium/static/js/hooks/CreateHook.js:108
 msgid "Select template type..."
-msgstr "V��lg skabelontype..."
+msgstr "Vælg skabelontype..."
 
 #: framework/premium/features/content-blocks/admin-ui.php:262
 #: framework/premium/static/js/hooks/CreateHook.js:68

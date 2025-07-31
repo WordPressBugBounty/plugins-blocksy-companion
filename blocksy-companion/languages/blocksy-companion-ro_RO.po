@@ -4850,7 +4850,7 @@ msgstr "După descriere"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:226
 msgid "After breadcrumbs"
-msgstr "Dup�� firimituri"
+msgstr "După firimituri"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:630
 msgid "Before shop loop item actions"
@@ -8464,7 +8464,7 @@ msgstr "Editează condițiile"
 #. translators: %s: PHP version
 #: blocksy-companion.php:182
 msgid "Blocksy requires PHP version %s+, plugin is currently NOT RUNNING."
-msgstr "Blocksy necesită versiunea PHP %s+, pluginul nu ruleaz�� în prezent."
+msgstr "Blocksy necesită versiunea PHP %s+, pluginul nu rulează în prezent."
 
 #. translators: %s: WordPress version
 #: blocksy-companion.php:193
