@@ -2099,7 +2099,7 @@ msgstr "Limit"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:876
 msgid "Set how many terms you want to display in each attribute."
-msgstr "Określ, ile terminów ma być wyświetlanych w ka��dym atrybucie."
+msgstr "Określ, ile terminów ma być wyświetlanych w każdym atrybucie."
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:179,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:462
@@ -8118,7 +8118,7 @@ msgstr "Wybierz listę..."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:218
 msgid "More information on how to generate an API key for Mailchimp can be found %shere%s."
-msgstr "Wi��cej informacji na temat generowania klucza API dla Mailchimp można znaleźć %stutaj%s."
+msgstr "Więcej informacji na temat generowania klucza API dla Mailchimp można znaleźć %stutaj%s."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:286
 msgid "More information on how to generate an API key for ConvertKit can be found %shere%s."

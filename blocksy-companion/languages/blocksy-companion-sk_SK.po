@@ -5308,7 +5308,7 @@ msgstr "Odstrániť ikonu"
 
 #: framework/premium/static/js/options/IconPicker.js:161
 msgid "Select"
-msgstr "Vybra��"
+msgstr "Vybrať"
 
 #: framework/premium/static/js/options/IconPicker/Modal.js:148
 msgid "Upload Icon"

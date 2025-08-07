@@ -75,6 +75,16 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 		setIsLoading(false)
 	}
 
+	const providerMap = {
+		mailerlite: 'mailerlite-new',
+		convertkit: 'convertkit-new',
+	}
+
+	const transformedProvider =
+		Object.keys(providerMap).find((p) => provider.includes(p)) || provider
+
+	const value = providerMap[transformedProvider] || provider
+
 	return (
 		<div
 			className={classnames(
@@ -86,7 +96,8 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 				className="ct-newsletter-credentials"
 				data-columns={
 					provider.indexOf('mailerlite') > -1 ||
-					provider === 'activecampaign'
+					provider === 'activecampaign' ||
+					provider.indexOf('convertkit') > -1
 						? 4
 						: ['mailpoet', 'fluentcrm'].includes(provider)
 						? 2
@@ -96,7 +107,6 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 					<label>{__('Provider', 'blocksy-companion')}</label>
 					<Select
 						onChange={(copy) => {
-							console.log(copy, extension.data.providers)
 							if (!isPro && !freeProviders.includes(copy)) {
 								setProvider(copy)
 								setTimeout(() => {
@@ -115,11 +125,7 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 							),
 							choices: extension.data.providers,
 						}}
-						value={
-							provider.indexOf('mailerlite') > -1
-								? 'mailerlite-new'
-								: provider
-						}
+						value={value}
 					/>
 				</section>
 
@@ -169,6 +175,43 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 							}}
 							value={
 								provider === 'mailerlite-new'
+									? 'new'
+									: 'classic'
+							}
+						/>
+					</section>
+				)}
+
+				{provider.indexOf('convertkit') > -1 && (
+					<section>
+						<label>{__('API Version', 'blocksy-companion')}</label>
+						<Select
+							onChange={(copy) => {
+								setProvider(
+									copy === 'new'
+										? 'convertkit-new'
+										: 'convertkit'
+								)
+							}}
+							option={{
+								placeholder: __(
+									'Pick Mailing Service',
+									'blocksy-companion'
+								),
+								choices: [
+									{
+										key: 'new',
+										value: 'New (v4)',
+									},
+
+									{
+										key: 'classic',
+										value: 'Classic (v3)',
+									},
+								],
+							}}
+							value={
+								provider === 'convertkit-new'
 									? 'new'
 									: 'classic'
 							}
@@ -279,17 +322,17 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 				)}
 
 			{ctDashboardLocalizations.plugin_data.is_pro &&
-				provider === 'convertkit' && (
+				provider.indexOf('convertkit') > -1 && (
 					<span
 						className="ct-option-description"
 						dangerouslySetInnerHTML={{
 							__html: sprintf(
 								__(
-									'More information on how to generate an API key for ConvertKit can be found %shere%s.',
+									'More information on how to generate an API key for Kit (ConvertKit) can be found %shere%s.',
 									'blocksy-companion'
 								),
 
-								'<a target="_blank" href="https://developers.convertkit.com/#api-basics">',
+								'<a target="_blank" href="https://developers.kit.com/welcome#api-basics">',
 								'</a>'
 							),
 						}}

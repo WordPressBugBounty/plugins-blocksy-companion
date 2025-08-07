@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.5
+Stable tag: 2.1.6
 
 == Description ==
 
@@ -52,6 +52,9 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.6: 2025-08-07
+- Improvement: Newsletter subscribe - update the Kit (ConvertKit) integration to work with latest API version
+
 2.1.5: 2025-07-31
 - Improvement: Sticky header - ensure animation speed is always greater than zero
 

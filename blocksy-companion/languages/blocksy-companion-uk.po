@@ -549,7 +549,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:245
 msgid "Cart Total"
-msgstr "Загальна сума"
+msgstr "Загал��на сума"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:24
 msgid "View Cart"
@@ -5715,7 +5715,7 @@ msgstr "Чисте встановлення"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:106
 msgid "This option will remove the previous imported content and will perform a fresh and clean install."
-msgstr "Ця опція видалить попередній імпортований вміст і виконає свіжу та чисту установку."
+msgstr "Ця опція видалить попередній імпортований вміст і вико��ає свіжу та чисту установку."
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ModifyDemo.js:147
 msgid "This starter site is already installed"
@@ -8744,7 +8744,7 @@ msgstr "Мета-дані OpenGraph"
 
 #: framework/features/opengraph-meta-data.php:17
 msgid "Enable the OpenGraph rich meta data features for your website."
-msgstr "Увімкні��ь для свого веб-сайту багатофункціональні метадані OpenGraph."
+msgstr "Увімкніть для свого веб-сайту багатофункціональні метадані OpenGraph."
 
 #: framework/features/opengraph-meta-data.php:26
 msgid "Facebook Page URL"

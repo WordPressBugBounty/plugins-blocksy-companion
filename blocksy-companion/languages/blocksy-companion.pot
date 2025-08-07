@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-31 16:54+0000\n"
+"POT-Creation-Date: 2025-08-07 14:11+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -716,7 +716,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:55,
 #: framework/premium/features/content-blocks/options/archive.php:122,
 #: framework/premium/features/content-blocks/options/header.php:73,
-#: framework/premium/features/content-blocks/options/hook.php:206,
+#: framework/premium/features/content-blocks/options/hook.php:205,
 #: framework/premium/features/content-blocks/options/maintenance.php:52,
 #: framework/premium/features/content-blocks/options/nothing_found.php:73,
 #: framework/premium/features/content-blocks/options/popup.php:30,
@@ -892,7 +892,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:119,
 #: framework/premium/features/content-blocks/options/archive.php:196,
 #: framework/premium/features/content-blocks/options/header.php:137,
-#: framework/premium/features/content-blocks/options/hook.php:270,
+#: framework/premium/features/content-blocks/options/hook.php:269,
 #: framework/premium/features/content-blocks/options/maintenance.php:116,
 #: framework/premium/features/content-blocks/options/nothing_found.php:137,
 #: framework/premium/features/content-blocks/options/popup.php:501,
@@ -1329,7 +1329,7 @@ msgstr ""
 #: framework/features/blocks/contact-info/options.php:490,
 #: framework/features/header/items/account/options.php:399,
 #: framework/features/header/items/account/options.php:850,
-#: framework/premium/features/content-blocks/options/hook.php:190,
+#: framework/premium/features/content-blocks/options/hook.php:189,
 #: framework/premium/extensions/post-types-extra/features/related-slideshow/feature.php:19,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:12,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:17,
@@ -1362,7 +1362,7 @@ msgstr ""
 #: framework/features/header/items/account/options.php:403,
 #: framework/features/header/items/account/options.php:854,
 #: framework/premium/features/content-blocks/options/archive.php:75,
-#: framework/premium/features/content-blocks/options/hook.php:192,
+#: framework/premium/features/content-blocks/options/hook.php:191,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:671,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:272,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:188,
@@ -1376,7 +1376,7 @@ msgstr ""
 
 #: framework/extensions/newsletter-subscribe/customizer.php:61,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:50
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:200
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:243
 msgid "List ID"
 msgstr ""
 
@@ -1446,7 +1446,7 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:713,
 #: framework/premium/extensions/shortcuts/customizer.php:1000,
 #: framework/premium/features/content-blocks/options/header.php:167,
-#: framework/premium/features/content-blocks/options/hook.php:324,
+#: framework/premium/features/content-blocks/options/hook.php:323,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:155,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:508,
 #: framework/premium/extensions/post-types-extra/features/read-time/read-progress/customizer.php:43
@@ -1479,7 +1479,7 @@ msgstr ""
 #: framework/features/header/items/account/options.php:997,
 #: framework/features/header/items/account/options.php:1018,
 #: framework/premium/features/content-blocks/options/header.php:178,
-#: framework/premium/features/content-blocks/options/hook.php:335,
+#: framework/premium/features/content-blocks/options/hook.php:334,
 #: framework/premium/features/content-blocks/options/popup.php:490,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:70,
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:168,
@@ -1532,7 +1532,7 @@ msgstr ""
 #: framework/features/header/items/account/options.php:1019,
 #: framework/features/header/items/account/options.php:2091,
 #: framework/premium/features/content-blocks/options/header.php:179,
-#: framework/premium/features/content-blocks/options/hook.php:336,
+#: framework/premium/features/content-blocks/options/hook.php:335,
 #: framework/premium/features/content-blocks/options/popup.php:491,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:71,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:452,
@@ -1595,7 +1595,7 @@ msgstr ""
 #: framework/features/header/items/account/options.php:1020,
 #: framework/features/header/items/account/options.php:2092,
 #: framework/premium/features/content-blocks/options/header.php:180,
-#: framework/premium/features/content-blocks/options/hook.php:337,
+#: framework/premium/features/content-blocks/options/hook.php:336,
 #: framework/premium/features/content-blocks/options/popup.php:492,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:72,
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:453,
@@ -2853,7 +2853,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:85,
 #: framework/premium/features/content-blocks/options/archive.php:162,
 #: framework/premium/features/content-blocks/options/header.php:103,
-#: framework/premium/features/content-blocks/options/hook.php:236,
+#: framework/premium/features/content-blocks/options/hook.php:235,
 #: framework/premium/features/content-blocks/options/maintenance.php:82,
 #: framework/premium/features/content-blocks/options/nothing_found.php:103,
 #: framework/premium/features/content-blocks/options/single.php:94,
@@ -2893,6 +2893,7 @@ msgstr ""
 #: framework/extensions/newsletter-subscribe/providers/active-campaign.php:155,
 #: framework/extensions/newsletter-subscribe/providers/brevo.php:116,
 #: framework/extensions/newsletter-subscribe/providers/campaign-monitor.php:136,
+#: framework/extensions/newsletter-subscribe/providers/convertkit-new.php:141,
 #: framework/extensions/newsletter-subscribe/providers/convertkit.php:98,
 #: framework/extensions/newsletter-subscribe/providers/demo.php:40,
 #: framework/extensions/newsletter-subscribe/providers/emailoctopus.php:102,
@@ -3072,7 +3073,7 @@ msgstr ""
 #: framework/features/header/items/account/options.php:829,
 #: framework/premium/features/content-blocks/options/hook.php:9,
 #: framework/premium/features/content-blocks/options/hook.php:77,
-#: framework/premium/features/content-blocks/options/hook.php:191,
+#: framework/premium/features/content-blocks/options/hook.php:190,
 #: framework/premium/features/content-blocks/options/popup.php:75,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/select.php:23,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:97,
@@ -3939,7 +3940,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:111,
 #: framework/premium/features/content-blocks/options/archive.php:188,
 #: framework/premium/features/content-blocks/options/header.php:129,
-#: framework/premium/features/content-blocks/options/hook.php:262,
+#: framework/premium/features/content-blocks/options/hook.php:261,
 #: framework/premium/features/content-blocks/options/maintenance.php:108,
 #: framework/premium/features/content-blocks/options/nothing_found.php:129,
 #: framework/premium/features/content-blocks/options/single.php:120
@@ -5824,7 +5825,7 @@ msgstr ""
 
 #: framework/premium/features/content-blocks/options/404.php:33,
 #: framework/premium/features/content-blocks/options/header.php:55,
-#: framework/premium/features/content-blocks/options/hook.php:183,
+#: framework/premium/features/content-blocks/options/hook.php:182,
 #: framework/premium/features/content-blocks/options/maintenance.php:30,
 #: framework/premium/features/content-blocks/options/nothing_found.php:51,
 #: framework/premium/features/content-blocks/options/popup.php:41
@@ -5842,7 +5843,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:65,
 #: framework/premium/features/content-blocks/options/archive.php:132,
 #: framework/premium/features/content-blocks/options/header.php:83,
-#: framework/premium/features/content-blocks/options/hook.php:216,
+#: framework/premium/features/content-blocks/options/hook.php:215,
 #: framework/premium/features/content-blocks/options/maintenance.php:62,
 #: framework/premium/features/content-blocks/options/nothing_found.php:83,
 #: framework/premium/features/content-blocks/options/single.php:64
@@ -5852,7 +5853,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:70,
 #: framework/premium/features/content-blocks/options/archive.php:137,
 #: framework/premium/features/content-blocks/options/header.php:88,
-#: framework/premium/features/content-blocks/options/hook.php:221,
+#: framework/premium/features/content-blocks/options/hook.php:220,
 #: framework/premium/features/content-blocks/options/maintenance.php:67,
 #: framework/premium/features/content-blocks/options/nothing_found.php:88,
 #: framework/premium/features/content-blocks/options/single.php:69
@@ -5862,7 +5863,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:76,
 #: framework/premium/features/content-blocks/options/archive.php:153,
 #: framework/premium/features/content-blocks/options/header.php:94,
-#: framework/premium/features/content-blocks/options/hook.php:227,
+#: framework/premium/features/content-blocks/options/hook.php:226,
 #: framework/premium/features/content-blocks/options/maintenance.php:73,
 #: framework/premium/features/content-blocks/options/nothing_found.php:94,
 #: framework/premium/features/content-blocks/options/single.php:85
@@ -5872,7 +5873,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:84,
 #: framework/premium/features/content-blocks/options/archive.php:161,
 #: framework/premium/features/content-blocks/options/header.php:102,
-#: framework/premium/features/content-blocks/options/hook.php:235,
+#: framework/premium/features/content-blocks/options/hook.php:234,
 #: framework/premium/features/content-blocks/options/maintenance.php:81,
 #: framework/premium/features/content-blocks/options/nothing_found.php:102,
 #: framework/premium/features/content-blocks/options/single.php:93
@@ -5882,7 +5883,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:90,
 #: framework/premium/features/content-blocks/options/archive.php:167,
 #: framework/premium/features/content-blocks/options/header.php:108,
-#: framework/premium/features/content-blocks/options/hook.php:241,
+#: framework/premium/features/content-blocks/options/hook.php:240,
 #: framework/premium/features/content-blocks/options/maintenance.php:87,
 #: framework/premium/features/content-blocks/options/nothing_found.php:108
 msgid "Content Area Vertical Spacing"
@@ -5891,7 +5892,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:102,
 #: framework/premium/features/content-blocks/options/archive.php:179,
 #: framework/premium/features/content-blocks/options/header.php:120,
-#: framework/premium/features/content-blocks/options/hook.php:253,
+#: framework/premium/features/content-blocks/options/hook.php:252,
 #: framework/premium/features/content-blocks/options/maintenance.php:99,
 #: framework/premium/features/content-blocks/options/nothing_found.php:120,
 #: framework/premium/features/content-blocks/options/single.php:111
@@ -5901,7 +5902,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:105,
 #: framework/premium/features/content-blocks/options/archive.php:182,
 #: framework/premium/features/content-blocks/options/header.php:123,
-#: framework/premium/features/content-blocks/options/hook.php:256,
+#: framework/premium/features/content-blocks/options/hook.php:255,
 #: framework/premium/features/content-blocks/options/maintenance.php:102,
 #: framework/premium/features/content-blocks/options/nothing_found.php:123,
 #: framework/premium/features/content-blocks/options/single.php:114
@@ -5911,7 +5912,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/options/404.php:108,
 #: framework/premium/features/content-blocks/options/archive.php:185,
 #: framework/premium/features/content-blocks/options/header.php:126,
-#: framework/premium/features/content-blocks/options/hook.php:259,
+#: framework/premium/features/content-blocks/options/hook.php:258,
 #: framework/premium/features/content-blocks/options/maintenance.php:105,
 #: framework/premium/features/content-blocks/options/nothing_found.php:126,
 #: framework/premium/features/content-blocks/options/single.php:117
@@ -5951,7 +5952,7 @@ msgid "Full Page"
 msgstr ""
 
 #: framework/premium/features/content-blocks/options/archive.php:53,
-#: framework/premium/features/content-blocks/options/hook.php:301,
+#: framework/premium/features/content-blocks/options/hook.php:300,
 #: framework/premium/features/content-blocks/options/popup.php:467,
 #: framework/premium/features/content-blocks/options/single.php:151
 msgid "Dynamic Content Preview"
@@ -6027,10 +6028,18 @@ msgstr ""
 msgid "Repeat"
 msgstr ""
 
-#: framework/premium/features/content-blocks/options/hook.php:307
+#: framework/premium/features/content-blocks/options/hook.php:306
 msgid ""
 "Select a post/page to preview it's content inside the editor while building "
 "the hook."
+msgstr ""
+
+#: framework/premium/features/content-blocks/options/hook.php:344
+msgid "Separate multiple classes with spaces."
+msgstr ""
+
+#: framework/premium/features/content-blocks/options/hook.php:352
+msgid "Separate multiple attributes with spaces."
 msgstr ""
 
 #: framework/premium/features/content-blocks/options/maintenance.php:15
@@ -8701,7 +8710,7 @@ msgstr ""
 
 #: framework/extensions/newsletter-subscribe/admin-static/js/ListPicker.js:14
 #: framework/extensions/newsletter-subscribe/admin-static/js/ListPicker/Implementation.js:72
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:400
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:443
 #: static/js/dashboard/NoTheme.js:83
 #: static/js/dashboard/screens/SiteExport.js:314
 #: static/js/notifications/VersionMismatchNotice.js:110
@@ -8734,29 +8743,33 @@ msgstr ""
 msgid "Newsletter Controls"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:128
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:107
+msgid "Provider"
+msgstr ""
+
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:134
 msgid "API URL"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:144
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:187
 msgid "API Version"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:154
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:197
 msgid "Pick Mailing Service"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:185
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:228
 msgid "API Key"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:219
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:262
 msgid ""
 "More information on how to generate an API key for Mailchimp can be found "
 "%shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:237
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:280
 msgid ""
 "More information on how to generate an API key for Mailerlite can be found "
 "%shere%s. Please note that it is required at least one group to be created "
@@ -8764,53 +8777,53 @@ msgid ""
 "group %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:255
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:298
 msgid ""
 "This provider is used only for testing purposes. It doesnt register any real "
 "subscribers."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:269
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:312
 msgid ""
 "More information on how to generate an API key for Brevo can be found "
 "%shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:287
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:330
 msgid ""
-"More information on how to generate an API key for ConvertKit can be found "
-"%shere%s."
+"More information on how to generate an API key for Kit (ConvertKit) can be "
+"found %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:305
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:348
 msgid ""
 "More information on how to generate an API key for ActiveCampaign can be "
 "found %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:323
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:366
 msgid ""
 "More information on how to generate an API key for Campaign Monitor can be "
 "found %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:341
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:384
 msgid ""
 "More information on how to generate an API key for EmailOctopus can be found "
 "%shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:359
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:402
 msgid ""
 "More information on how to create a list in MailPoet can be found %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:377
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:420
 msgid ""
 "More information on how to create a list in fluentcrm can be found %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:401
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:444
 #: framework/extensions/product-reviews/static/js/ProductReviews.js:96
 #: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:291
 #: framework/premium/extensions/sidebars/static/js/SettingsManager.js:110
@@ -8820,12 +8833,8 @@ msgstr ""
 msgid "Save Settings"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:83
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:93
 msgid "Connect Newsletter Provider"
-msgstr ""
-
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:96
-msgid "Provider"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/ListPicker.js:91

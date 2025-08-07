@@ -62,8 +62,8 @@ class BlocksyExtensionNewsletterSubscribePreBoot {
 			],
 
 			[
-				'key' => 'convertkit',
-				'value' => 'ConvertKit',
+				'key' => 'convertkit-new',
+				'value' => 'Kit (ConvertKit)',
 			],
 
 			[

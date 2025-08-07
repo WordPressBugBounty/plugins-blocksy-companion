@@ -417,3 +417,33 @@ function blc_debug_log($message, $object = null) {
 		error_log($message . ': ' . print_r($object, true));
 	}
 }
+
+// TODO: maybe automatically expand class
+function blc_parse_attributes_string($input) {
+	$result = [];
+
+	preg_match_all(
+		'/([a-zA-Z0-9_-]+)=([\'"])(.*?)\2/',
+		$input,
+		$matches,
+		PREG_SET_ORDER
+	);
+
+	foreach ($matches as $match) {
+		$result[$match[1]] = $match[3];
+	}
+
+	$stripped = preg_replace('/([a-zA-Z0-9_-]+)=([\'"])(.*?)\2/', '', $input);
+
+	$stripped = preg_replace('/([a-zA-Z0-9_-]+)=([^\s]+)/', '', $stripped);
+
+	preg_match_all('/\b([a-zA-Z0-9_-]+)\b/', $stripped, $boolMatches);
+
+	foreach ($boolMatches[1] as $key) {
+		if (! array_key_exists($key, $result)) {
+			$result[$key] = '';
+		}
+	}
+
+	return $result;
+}

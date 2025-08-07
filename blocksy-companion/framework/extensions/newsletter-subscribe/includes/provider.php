@@ -33,6 +33,10 @@ class Provider {
 			return new ConvertKitProvider();
 		}
 
+		if ($provider === 'convertkit-new') {
+			return new ConvertKitNewProvider();
+		}
+
 		if ($provider === 'demo') {
 			return new DemoProvider();
 		}
