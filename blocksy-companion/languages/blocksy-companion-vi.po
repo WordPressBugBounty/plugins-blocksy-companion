@@ -13,7 +13,7 @@ msgstr ""
 
 #: static/js/dashboard/helpers/useUpsellModal.js:88
 msgid "Business or Agency"
-msgstr "Doanh nghiệp hoặc đại lý"
+msgstr "Doanh nghiệp ho���c đại lý"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:482
 msgid "Select value"
@@ -40,7 +40,7 @@ msgstr "Bộ nhớ tạm"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:193,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-account.php:67
 msgid "Waitlist"
-msgstr "Danh sách ch���"
+msgstr "Danh sách chờ"
 
 #: framework/premium/extensions/shortcuts/customizer.php:895
 msgid "Tooltip Visibility"
@@ -124,7 +124,7 @@ msgstr "Xác nhận đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:84
 msgid "Specify which users should verify their waitlist subscription through email confirmation."
-msgstr "Chỉ định người dùng cần xác nhận ��ăng ký danh sách chờ thông qua email."
+msgstr "Chỉ định người dùng cần xác nhận đăng ký danh sách chờ thông qua email."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:107
 msgid "Waitlist Form Display Conditions"
@@ -412,7 +412,7 @@ msgstr "Giá:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:30
 msgid "Add to cart:"
-msgstr "Thêm vào giỏ hàng:"
+msgstr "Thêm vào giỏ h��ng:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:19
 msgid "Product link:"
@@ -2674,7 +2674,7 @@ msgstr "Tên ngắn"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:245
 msgid "Sorry, this product is unavailable. Please choose a different combination."
-msgstr "Xin lỗi, sản phẩm này không có sẵn. Vui lòng chọn một sự kết hợp khác."
+msgstr "Xin lỗi, s��n phẩm này không có sẵn. Vui lòng chọn một sự kết hợp khác."
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:246,
@@ -3750,7 +3750,7 @@ msgstr "Bộ chọn lớp nút"
 #: framework/premium/features/content-blocks/options/hook.php:41,
 #: framework/premium/features/content-blocks/options/nothing_found.php:35
 msgid "Choose where you want this content block to be displayed."
-msgstr "Chọn nơi bạn muốn hiển thị khối nội dung này."
+msgstr "Chọn nơi bạn muốn hiển thị khối n���i dung này."
 
 #: framework/premium/features/content-blocks/options/hook.php:283
 msgid "Select a post/page to preview it's content inside the editor while building the hook."
@@ -3980,7 +3980,7 @@ msgstr "Trước Album ảnh sản phẩm đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:710
 msgid "After single product gallery"
-msgstr "Sau Album ảnh s��n phẩm đơn"
+msgstr "Sau Album ảnh sản phẩm đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:715
 msgid "Before single product \"Add to cart\" button"

@@ -451,7 +451,7 @@ msgstr "Prikaži dinamični skočni prozor s preporukama proizvoda svaki put kad
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
-msgstr "Okida�� za skočni prozor"
+msgstr "Okidač za skočni prozor"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"
@@ -1374,7 +1374,7 @@ msgstr "Započnite s uzorkom ili kreirajte prilagođeni izgled"
 
 #: static/js/editor/blocks/tax-template/index.js:13
 msgid "Taxonomy Template"
-msgstr "Predlo��ak taksonomije"
+msgstr "Predložak taksonomije"
 
 #: static/js/editor/blocks/widgets-wrapper/Edit.js:81
 msgid "Expandable Container"

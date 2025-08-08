@@ -4371,7 +4371,7 @@ msgstr "篩選條件"
 
 #: framework/helpers/exts-configs.php:255
 msgid "Drill down the product list with new filtering widgets, an off canvas area for them and showing the active filters on the page."
-msgstr "透過新款篩選器小工��和側邊滑動式區域，並在頁面上顯示已啟用的篩選條件，深入探索商品清單。"
+msgstr "透過新款篩選器小工具和側邊滑動式區域，並在頁面上顯示已啟用的篩選條件，深入探索商品清單。"
 
 #: framework/helpers/exts-configs.php:263
 msgid "A set of features that lets you create easily your dream products wishlists and share them with friends and family."
@@ -5359,7 +5359,7 @@ msgstr "需要協助或建議?"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:21
 msgid "Got a question or need help with the theme? You can always submit a support ticket or ask for help in our friendly Facebook community."
-msgstr "使用佈景有問題或是需要一些協助嗎?你隨時可以提交支援單或在我們友善的 Facebook 社群尋求協助."
+msgstr "使用佈景有問題或是需要一些協助嗎?���隨時可以提交支援單或在我們友善的 Facebook 社群尋求協助."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:33
 msgid "Submit a Support Ticket"
@@ -5463,7 +5463,7 @@ msgstr "你將要從你的父佈景主題複製所有的設定至子佈景主題
 
 #: static/js/options/CustomizerOptionsManager.js:327
 msgid "You are about to copy all the settings from your child theme into the parent theme. Are you sure you want to continue?"
-msgstr "你將要從你的子佈景主題複製��有的設定至父佈景主題，你確定要繼續嗎？"
+msgstr "你將要從你的子佈景主題複製所有的設定至父佈景主題，你確定要繼續嗎？"
 
 #: static/js/options/CustomizerOptionsManager.js:376
 msgid "Yes, I am sure"
@@ -5693,7 +5693,7 @@ msgstr "安裝子佈景主題"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ChildTheme.js:98
 msgid "Activate Child Theme"
-msgstr "啟用子佈景主題"
+msgstr "啟用子佈景主��"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:56
 msgid "Import Content"
