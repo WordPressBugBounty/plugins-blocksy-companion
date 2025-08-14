@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-23 13:23:52+0000\n"
+"PO-Revision-Date: 2025-08-11 06:16:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,19 +13,19 @@ msgstr ""
 
 #: static/js/dashboard/helpers/useUpsellModal.js:88
 msgid "Business or Agency"
-msgstr ""
+msgstr "شركة أو وكالة"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:482
 msgid "Select value"
-msgstr ""
+msgstr "أختر القيمة"
 
 #: framework/helpers/exts-configs.php:385
 msgid "Product Waitlist"
-msgstr ""
+msgstr "قائمة انتظار المنتج"
 
 #: framework/helpers/exts-configs.php:386
 msgid "Allow your customers to sign up for a waitlist for products that are out of stock and get notified when they are back in stock."
-msgstr ""
+msgstr "اسمح لعملائك بالتسجيل في قائمة انتظار للمنتجات التي نفدت من المخزون والحصول على إشعار عندما تعود إلى المخزون."
 
 #: framework/features/blocks/share-box/options.php:103
 msgid "Clipboard"
@@ -8135,7 +8135,7 @@ msgstr ""
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:184
 msgid "API Key"
-msgstr "��فتاح API"
+msgstr "مفتاح API"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:363
 #: framework/extensions/product-reviews/static/js/ProductReviews.js:94

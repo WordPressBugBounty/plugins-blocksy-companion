@@ -4317,7 +4317,7 @@ msgstr "Blagovne znamke izdelkov"
 
 #: framework/helpers/exts-configs.php:287
 msgid "Categorise products by brands and show their logo in archive or single page so users could discover more about their makers."
-msgstr "Razvrstite izdelke po blagovnih znamkah in prikažite njihov logotip v arhivih ali posameznih straneh izdelkov, da jih uporabniki la��je odkrijejo."
+msgstr "Razvrstite izdelke po blagovnih znamkah in prikažite njihov logotip v arhivih ali posameznih straneh izdelkov, da jih uporabniki lažje odkrijejo."
 
 #: framework/helpers/exts-configs.php:361
 msgid "Affiliate Product Links"

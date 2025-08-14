@@ -116,7 +116,7 @@ msgstr "Только авторизованным"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
-msgstr "Отображение опции списка ожидания исключительно для пользователей, которые вошли в систему."
+msgstr "Отображение опц��и списка ожидания исключительно для пользователей, которые вошли в систему."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"
@@ -295,12 +295,12 @@ msgstr "Предзаказ подтверждён"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr "Вы будете уведомлены, когда {product_title} снова появится на складе."
+msgstr "Вы будете уведомлены, ко��да {product_title} снова появится на складе."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:35,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:139
 msgid "Customer"
-msgstr "Пок��патель"
+msgstr "Покупатель"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:27
 msgid "Enter your email"
@@ -320,7 +320,7 @@ msgstr "Введите свой Email, чтобы получить уведом�
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:69
 msgid "Great! You have been added to the waitlist for this product. Please check your inbox and confirm the subscription to this waitlist."
-msgstr "Вы были добавлены в список ожидания этого товара. Проверьте свой почтовый ящик и подтвердите своё включение в с��исок ожидания."
+msgstr "Вы были добавлены в список ожидания этого товара. Проверьте свой почтовый ящик и подтвердите своё включение в список ожидания."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:97
 msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
@@ -360,7 +360,7 @@ msgstr "Привет, %s!"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:19
 msgid "Great news! The %s from your waitlist is now back in stock!"
-msgstr "Отличные новости! %s из вашего списка ожидани�� теперь снова в наличии!"
+msgstr "Отличные новости! %s из вашего списка ожидания теперь снова в наличии!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:42,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:24
@@ -451,7 +451,7 @@ msgstr "Отображение всплывающего окна динамич�
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
-msgstr "Вкл. триггер о��на"
+msgstr "Вкл. триггер окна"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"
@@ -483,7 +483,7 @@ msgstr "Информация о налогах"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:158
 msgid "Total Info"
-msgstr "И��оговая инфо"
+msgstr "Итоговая инфо"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:264
 msgid "Suggested Products"
@@ -504,7 +504,7 @@ msgstr "Тип карточки товара"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:382
 msgid "Products Visibility"
-msgstr "Видимость товаров"
+msgstr "Видимость то��аров"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:516
 msgid "Popup Options"
@@ -951,7 +951,7 @@ msgstr "Отъезд"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:202
 msgid "Alternative Text"
-msgstr "Альтернативный текст"
+msgstr "Альтернатив��ый текст"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:215
 msgid "Describe the purpose of the image."
@@ -1059,7 +1059,7 @@ msgstr "Изображение объекта"
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:36
 #: static/js/editor/blocks/dynamic-data/preview-parts/wp/TermTextPreview.js:10
 msgid "Term Count"
-msgstr "Счё��чик объекта"
+msgstr "Счётчик объекта"
 
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:50
 msgid "Excerpt"
@@ -3500,7 +3500,7 @@ msgstr "%s %% пользователей рекомендуют этот тов�
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:604
 msgid "%s of %s found this review helpful"
-msgstr "%s из %s сочли этот отзыв полезным"
+msgstr "%s из %s сочли этот о��зыв полезным"
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:666,
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:44
@@ -3594,7 +3594,7 @@ msgstr "Задержка (в секундах)"
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:357,
 #: framework/premium/extensions/woocommerce-extra/features/related-slideshow/general-options.php:92
 msgid "Specify the amount of time (in seconds) to delay between automatically cycling an item."
-msgstr "Промежуток времени задержки (в секундах) между циклами автоматического воспро��зведения файла."
+msgstr "Промежуток времени задержки (в секундах) между циклами автоматического воспроизведения файла."
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:140
 msgid "Choose the default color mode that a user will see when it visits your site."
@@ -4110,7 +4110,7 @@ msgstr "Локальные Gravatar'ы"
 
 #: framework/premium/features/local-gravatars.php:39
 msgid "Store and load Gravatars locally for increased privacy and performance."
-msgstr "Хранение и загрузка Gravatar'ов локал��но для повышения уровней конфиденциальности и производительности."
+msgstr "Хранение и загрузка Gravatar'ов локально для повышения уровней конфиденциальности и производительности."
 
 #: framework/premium/features/premium-header.php:314,
 #: framework/premium/features/socials.php:13,
@@ -4362,7 +4362,7 @@ msgstr "Расширенная галерея"
 
 #: framework/helpers/exts-configs.php:247
 msgid "Preview the available products and let your users make quick and informative decisions about their purchase."
-msgstr "Просмотр доступных товаров и помощь клиентам быстро и легко принимать особнованные ре��ения об их покупке."
+msgstr "Просмотр доступных товаров и помощь клиентам быстро и легко принимать особнованные решения об их покупке."
 
 #: framework/helpers/exts-configs.php:254,
 #: framework/premium/extensions/shortcuts/views/bar.php:54
@@ -6258,7 +6258,7 @@ msgstr "До обзора быстрого просмотра"
 
 #: framework/premium/extensions/woocommerce-extra/extension.php:153
 msgid "Quick view summary after"
-msgstr "После обзора быстрого просмо��ра"
+msgstr "После обзора быстрого просмотра"
 
 #: framework/helpers/exts-configs.php:238,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:4
@@ -6647,7 +6647,7 @@ msgstr "Конец модальной формы регистрации"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:541
 msgid "Lost password form modal start"
-msgstr "Начало модальной формы восстановления"
+msgstr "Начало модаль��ой формы восстановления"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:548
 msgid "Lost password form modal end"
@@ -7701,7 +7701,7 @@ msgstr "Маленький размер"
 #: framework/premium/features/content-blocks/options/popup.php:391,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:581
 msgid "Medium Size"
-msgstr "Средний размер"
+msgstr "Сред��ий размер"
 
 #: framework/premium/features/content-blocks/options/popup.php:392,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:582

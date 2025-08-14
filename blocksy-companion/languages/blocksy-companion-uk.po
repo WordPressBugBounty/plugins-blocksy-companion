@@ -5715,7 +5715,7 @@ msgstr "Чисте встановлення"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:106
 msgid "This option will remove the previous imported content and will perform a fresh and clean install."
-msgstr "Ця опція видалить попередній імпортований вміст і вико��ає свіжу та чисту установку."
+msgstr "Ця опція видалить попередній імпортований вміст і виконає свіжу та чисту установку."
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ModifyDemo.js:147
 msgid "This starter site is already installed"
@@ -8744,7 +8744,7 @@ msgstr "Мета-дані OpenGraph"
 
 #: framework/features/opengraph-meta-data.php:17
 msgid "Enable the OpenGraph rich meta data features for your website."
-msgstr "Ув��мкніть для свого веб-сайту багатофункціональні метадані OpenGraph."
+msgstr "Увімкніть для свого веб-сайту багатофункціональні метадані OpenGraph."
 
 #: framework/features/opengraph-meta-data.php:26
 msgid "Facebook Page URL"
@@ -10156,7 +10156,7 @@ msgstr "Функціонал Закріплення"
 
 #: framework/features/header/header-options.php:37
 msgid "Only Main Row"
-msgstr "Лише основн��й рядок"
+msgstr "Лише основний р��док"
 
 #: framework/features/header/header-options.php:42
 msgid "Top & Main Row"
@@ -10531,7 +10531,7 @@ msgstr "Увійти"
 #: framework/features/header/modal/login.php:23,
 #: framework/features/header/modal/lostpassword.php:5
 msgid "Username or Email Address"
-msgstr "Ім'я користувача або електронна адреса"
+msgstr "Ім'я к��ристувача або електронна адреса"
 
 #: framework/features/header/modal/lostpassword.php:13
 msgid "Get New Password"

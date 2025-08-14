@@ -46,9 +46,9 @@ const Preview = ({ attributes, buttonStyles, setAttributes }) => {
 							type="text"
 							name="FNAME"
 							title="Name"
-							value={`${newsletter_subscribe_name_label} ${
+							value={`${newsletter_subscribe_name_label}${
 								newsletter_subscribe_name_required === 'yes'
-									? '*'
+									? ' *'
 									: ''
 							}`}
 							onChange={(e) => {

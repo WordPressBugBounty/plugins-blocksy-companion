@@ -5712,7 +5712,7 @@ msgstr "Instalação do zero"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:106
 msgid "This option will remove the previous imported content and will perform a fresh and clean install."
-msgstr "Esta opção irá remover o conteúdo importado anteriormente e fazer um recarregamento e instalação do zero."
+msgstr "Esta opção irá remover o conte��do importado anteriormente e fazer um recarregamento e instalação do zero."
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ModifyDemo.js:147
 msgid "This starter site is already installed"

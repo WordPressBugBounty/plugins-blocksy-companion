@@ -298,6 +298,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 						'tag_name' => 'a',
 						'html_atts' => [
 							'href' => esc_url(get_permalink()),
+							'aria-label' => wp_strip_all_tags(get_the_title()),
 						],
 					]
 				);
