@@ -4308,7 +4308,7 @@ msgstr "Páginas de agradecimento personalizadas"
 
 #: framework/helpers/exts-configs.php:279
 msgid "Catch the attention of your clients by showcasing your product variations as colour, image or button swatches."
-msgstr "Chame a atenção dos seus clientes apresentando as variações dos seus produtos como amostras de cores, imagens ou bot��es."
+msgstr "Chame a atenção dos seus clientes apresentando as variações dos seus produtos como amostras de cores, imagens ou botões."
 
 #: framework/helpers/exts-configs.php:286,
 #: framework/features/conditions/rules/woo.php:42

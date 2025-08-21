@@ -9,13 +9,25 @@ import Downshift from 'downshift'
 import { __ } from 'ct-i18n'
 import classnames from 'classnames'
 
-const ListPicker = ({ listId, provider, apiKey, apiUrl, onChange }) => {
+const ListPicker = ({
+	listId,
+	provider,
+	apiKey,
+	apiUrl,
+	onChange,
+	onListsLoading,
+}) => {
 	const [lists, setLists] = useState([])
 	const [isLoadingLists, setListsLoading] = useState(false)
 
 	let [{ controller }, setAbortState] = useState({
 		controller: null,
 	})
+
+	const setListsWithPropagation = (lists) => {
+		setLists(lists)
+		onListsLoading(lists.length)
+	}
 
 	const maybeFetchLists = async () => {
 		if (controller) {
@@ -57,7 +69,7 @@ const ListPicker = ({ listId, provider, apiKey, apiUrl, onChange }) => {
 				if (body.success) {
 					if (body.data.result !== 'api_key_invalid') {
 						setListsLoading(false)
-						setLists(
+						setListsWithPropagation(
 							body.data.result.map((list) => ({
 								...list,
 								id: list.id.toString(),
@@ -70,13 +82,13 @@ const ListPicker = ({ listId, provider, apiKey, apiUrl, onChange }) => {
 			}
 		} catch (e) {}
 
-		setLists([])
+		setListsWithPropagation([])
 		setListsLoading(false)
 	}
 
 	useEffect(() => {
 		if (!apiKey && !['mailpoet', 'fluentcrm'].includes(provider)) {
-			setLists([])
+			setListsWithPropagation([])
 			return
 		}
 

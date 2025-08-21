@@ -5598,7 +5598,7 @@ msgstr "instalarea widgeturilor demo"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:42
 msgid "downloading demo options"
-msgstr "descărcarea opțiunilor demo"
+msgstr "desc��rcarea opțiunilor demo"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:46
 msgid "importing images from customizer"

@@ -295,7 +295,7 @@ msgstr "Ventelistepåmelding bekreftet"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr "Du vil få beskjed når {product_title} er tilbake på lager"
+msgstr "Du vil f�� beskjed når {product_title} er tilbake på lager"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:35,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:139

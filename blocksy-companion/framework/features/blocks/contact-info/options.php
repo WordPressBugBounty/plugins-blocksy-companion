@@ -269,7 +269,7 @@ $options = [
 						'title' => [
 							'type' => 'text',
 							'label' => __('Title', 'blocksy-companion'),
-							'value' => __('Opening hours', 'blocksy-companion'),
+							'value' => __('Opening hours:', 'blocksy-companion'),
 							'design' => 'block',
 						],
 

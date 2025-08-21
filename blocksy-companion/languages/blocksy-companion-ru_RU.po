@@ -112,11 +112,11 @@ msgstr "Отображение счётчика, отражающего теку
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:69
 msgid "Logged In Users Only"
-msgstr "Только авторизованным"
+msgstr "Толь��о авторизованным"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
-msgstr "Отображение опц��и списка ожидания исключительно для пользователей, которые вошли в систему."
+msgstr "Отображение опции списка ожидания исключительно для пользователей, которые вошли в систему."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"
@@ -132,7 +132,7 @@ msgstr "Отображение формы предзаказа"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:108
 msgid "Choose where you want this Waitlist Form to be displayed."
-msgstr "Где нужно отображать форму включения в список ожидания."
+msgstr "Где н��жно отображать форму включения в список ожидания."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:160
 msgid "Message Font"
@@ -206,7 +206,7 @@ msgstr "Ваша предзаказ был успешно отменён."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:117
 msgid "Your waitlist subscription has been successfully confirmed."
-msgstr "Ваша предзаказ подтверждён."
+msgstr "Ваша предзаказ подтверждё��."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
@@ -295,7 +295,7 @@ msgstr "Предзаказ подтверждён"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr "Вы будете уведомлены, ко��да {product_title} снова появится на складе."
+msgstr "Вы будете уведомлены, когда {product_title} снова появится на складе."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:35,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:139
@@ -360,7 +360,7 @@ msgstr "Привет, %s!"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:19
 msgid "Great news! The %s from your waitlist is now back in stock!"
-msgstr "Отличные новости! %s из вашего списка ожидания теперь снова в наличии!"
+msgstr "Отличные новости! %s из вашего списка ожидания ��еперь снова в наличии!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:42,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:24
@@ -412,7 +412,7 @@ msgstr "Цена:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:30
 msgid "Add to cart:"
-msgstr "Добавить в корзину:"
+msgstr "Добавить в корз��ну:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:19
 msgid "Product link:"
@@ -504,7 +504,7 @@ msgstr "Тип карточки товара"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:382
 msgid "Products Visibility"
-msgstr "Видимость то��аров"
+msgstr "Видимость товаров"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:516
 msgid "Popup Options"
@@ -1915,7 +1915,7 @@ msgstr "Задержка при закрытии"
 
 #: framework/premium/features/content-blocks/options/popup.php:269
 msgid "Set the close delay time (in seconds) after the form submit action is detected."
-msgstr "Установка времени задержки закрытия (в секундах) после отправки формы."
+msgstr "Установка времени задержки закрытия (в секундах) после отп��авки формы."
 
 #: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:100,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:813
@@ -3500,7 +3500,7 @@ msgstr "%s %% пользователей рекомендуют этот тов�
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:604
 msgid "%s of %s found this review helpful"
-msgstr "%s из %s сочли этот о��зыв полезным"
+msgstr "%s из %s сочли этот отзыв полезным"
 
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/feature.php:666,
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:44
@@ -4300,7 +4300,7 @@ msgstr "Таблица размеров"
 
 #: framework/helpers/exts-configs.php:305
 msgid "Show a size chart guide so that your visitors can pick the right size for them when ordering a product."
-msgstr "Отображение памятки, помогающей посетителям выбрать подходящий размер при заказе товара."
+msgstr "Отображение памятки, помогающей посетителям выбрать подходящий размер при заказе то��ара."
 
 #: framework/helpers/exts-configs.php:313
 msgid "Custom Thank You Pages"
@@ -6258,7 +6258,7 @@ msgstr "До обзора быстрого просмотра"
 
 #: framework/premium/extensions/woocommerce-extra/extension.php:153
 msgid "Quick view summary after"
-msgstr "После обзора быстрого просмотра"
+msgstr "После обзора быстрого просмотр��"
 
 #: framework/helpers/exts-configs.php:238,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:4
@@ -6647,7 +6647,7 @@ msgstr "Конец модальной формы регистрации"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:541
 msgid "Lost password form modal start"
-msgstr "Начало модаль��ой формы восстановления"
+msgstr "Начало модальной формы восстановления"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:548
 msgid "Lost password form modal end"
@@ -7402,7 +7402,7 @@ msgstr "Стандартный режим"
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:318,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:442
 msgid "Transparent State"
-msgstr "Режим про��рачности"
+msgstr "Режим прозра��ности"
 
 #: framework/features/header/header-options.php:227,
 #: framework/features/header/items/account/options.php:1161,
@@ -7701,7 +7701,7 @@ msgstr "Маленький размер"
 #: framework/premium/features/content-blocks/options/popup.php:391,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:581
 msgid "Medium Size"
-msgstr "Сред��ий размер"
+msgstr "Средний размер"
 
 #: framework/premium/features/content-blocks/options/popup.php:392,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:582
@@ -8050,7 +8050,7 @@ msgstr "Текст-заполнитель"
 
 #: framework/premium/features/premium-header/items/search-input/options.php:55
 msgid "Input Maximum Width"
-msgstr "Максимальная ширина по��я"
+msgstr "Максимальная ширина поля"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:87,
 #: framework/features/blocks/search/options.php:70,

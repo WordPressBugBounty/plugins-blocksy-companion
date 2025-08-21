@@ -271,7 +271,7 @@ msgstr "Liste d'attente - Confirmation de l'abonnement"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:9
 msgid "This email is sent when a user subscribes to a product stock alert and should confirm their subscription"
-msgstr "Cet e-mail est envoyé lorsqu’un utilisateur s’abonne �� une alerte de stock de produit et doit confirmer son abonnement."
+msgstr "Cet e-mail est envoyé lorsqu’un utilisateur s’abonne à une alerte de stock de produit et doit confirmer son abonnement."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:10
 msgid "Confirm waitlist subscription"

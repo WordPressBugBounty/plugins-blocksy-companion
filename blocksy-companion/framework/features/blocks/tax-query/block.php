@@ -633,16 +633,7 @@ class TaxQuery {
 				];
 			}
 
-			$term_atts = get_term_meta(
-				$term->term_id,
-				'blocksy_taxonomy_meta_options'
-			);
-
-			if (empty($term_atts)) {
-				$term_atts = [[]];
-			}
-
-			$term_atts = $term_atts[0];
+			$term_atts = blocksy_get_taxonomy_options($term->term_id);
 
 			$maybe_image_id = isset($term->term_id) ? get_term_meta($term->term_id, 'thumbnail_id', true) : '';
 

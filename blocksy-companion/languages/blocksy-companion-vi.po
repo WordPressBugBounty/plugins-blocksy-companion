@@ -13,7 +13,7 @@ msgstr ""
 
 #: static/js/dashboard/helpers/useUpsellModal.js:88
 msgid "Business or Agency"
-msgstr "Doanh nghiệp hoặc đại lý"
+msgstr "Doanh nghiệp ho���c đại lý"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:482
 msgid "Select value"
@@ -3750,7 +3750,7 @@ msgstr "Bộ chọn lớp nút"
 #: framework/premium/features/content-blocks/options/hook.php:41,
 #: framework/premium/features/content-blocks/options/nothing_found.php:35
 msgid "Choose where you want this content block to be displayed."
-msgstr "Chọn nơi bạn muốn hiển thị khối n���i dung này."
+msgstr "Chọn nơi bạn muốn hiển thị khối nội dung này."
 
 #: framework/premium/features/content-blocks/options/hook.php:283
 msgid "Select a post/page to preview it's content inside the editor while building the hook."
@@ -4261,7 +4261,7 @@ msgstr "Không có bài viết để tạo bản sao"
 
 #: framework/helpers/exts-configs.php:314
 msgid "Create a customized order “Thank You” page for your customers, giving them a personalized experience."
-msgstr "Tạo một trang “Cảm ơn” đơn hàng tùy chỉnh cho khách hàng của bạn, mang lại cho h��� một trải nghiệm cá nhân hóa."
+msgstr "Tạo một trang “Cảm ơn” đơn hàng tùy chỉnh cho khách hàng của bạn, mang lại cho họ một trải nghiệm cá nhân hóa."
 
 #: framework/helpers/exts-configs.php:322,
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:5

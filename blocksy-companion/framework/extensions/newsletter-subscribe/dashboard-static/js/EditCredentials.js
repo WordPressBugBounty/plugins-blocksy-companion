@@ -20,6 +20,7 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 	const [apiKey, setApiKey] = useState(extension.data.api_key)
 	const [apiUrl, setApiUrl] = useState(extension.data.api_url)
 	const [listId, setListId] = useState(extension.data.list_id)
+	const [hasList, setHasList] = useState(false)
 	const [isLoading, setIsLoading] = useState(false)
 
 	const { isPro, showNotice, content } = useProExtensionInFree(extension, {
@@ -248,6 +249,9 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 								provider={provider}
 								apiUrl={apiUrl}
 								apiKey={apiKey}
+								onListsLoading={(listsLength) =>
+									setHasList(!!listsLength)
+								}
 							/>
 						</section>
 					</Fragment>
@@ -435,6 +439,7 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 					(!apiKey &&
 						!['mailpoet', 'fluentcrm'].includes(provider)) ||
 					!listId ||
+					!hasList ||
 					isLoading ||
 					(!apiUrl && provider === 'activecampaign')
 				}

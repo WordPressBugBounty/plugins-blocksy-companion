@@ -124,7 +124,7 @@ msgstr "Potrditev naročnine"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:84
 msgid "Specify which users should verify their waitlist subscription through email confirmation."
-msgstr "Določite, kateri uporabniki morajo potrditi svojo naročnino na seznam čakanja prek e-pošte."
+msgstr "Določite, kateri uporabniki morajo potrditi svojo naročnino na seznam ��akanja prek e-pošte."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:107
 msgid "Waitlist Form Display Conditions"

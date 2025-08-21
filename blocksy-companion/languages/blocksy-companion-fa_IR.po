@@ -2317,7 +2317,7 @@ msgstr "نمایش شمارنده"
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:82
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:526
 msgid "Show Reset Button"
-msgstr "نما��ش دکمه‌ی بازنشانی"
+msgstr "نمایش دکمه‌ی بازنشانی"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:168
 msgid "Show or hide reset filter button."

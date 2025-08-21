@@ -68,15 +68,12 @@ class ToolCli {
 	 * ## OPTIONS
 	 *
 	 * <tool>
-	 * : The tool to run.
-	 * ---
-	 * options:
-	 *   - regenerate_dynamic_css
-	 * ---
+	 * : The tool to run. Use 'wp blocksy tool list' to see available tools.
 	 *
 	 * ## EXAMPLES
 	 *
 	 *     wp blocksy tool run regenerate_dynamic_css
+	 *     wp blocksy tool run regenerate_taxonomies_lookup
 	 *
 	 * @subcommand run
 	 */
