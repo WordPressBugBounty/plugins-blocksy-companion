@@ -5359,7 +5359,7 @@ msgstr "需要協助或建議?"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:21
 msgid "Got a question or need help with the theme? You can always submit a support ticket or ask for help in our friendly Facebook community."
-msgstr "使用佈景有問題或是需要一些協助嗎?你隨時可以提交支援單或在我們友善的 Facebook 社群尋求協助."
+msgstr "使用佈景有問題或是需要一些協助嗎?���隨時可以提交支援單或在我們友善的 Facebook 社群尋求協助."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:33
 msgid "Submit a Support Ticket"
@@ -5693,7 +5693,7 @@ msgstr "安裝子佈景主題"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ChildTheme.js:98
 msgid "Activate Child Theme"
-msgstr "啟用子佈景主題"
+msgstr "啟用子佈景主��"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:56
 msgid "Import Content"
@@ -6076,7 +6076,7 @@ msgstr "標籤可見度"
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:122,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:123
 msgid "Label Position"
-msgstr "標籤位置"
+msgstr "���籤位置"
 
 #: framework/premium/extensions/shortcuts/customizer.php:888,
 #: framework/premium/features/content-blocks/hooks-manager.php:477,

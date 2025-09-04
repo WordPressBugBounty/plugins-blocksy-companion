@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.9
+Stable tag: 2.1.10
 
 == Description ==
 
@@ -52,6 +52,10 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.10: 2025-09-04
+- Improvement: Check for file existence in header elements that support SVG upload
+- Improvement: Don't load outdated polyfills in the JS files served in modern browsers
+
 2.1.9: 2025-08-21
 - Improvement: General fixes and improvements
 

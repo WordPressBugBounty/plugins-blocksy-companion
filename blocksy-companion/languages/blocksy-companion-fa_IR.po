@@ -5534,7 +5534,7 @@ msgstr "نصب"
 
 #: static/js/dashboard/screens/DemoInstall/DemoToInstall.js:347
 msgid "Next"
-msgstr "بعدی"
+msgstr "ب��دی"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:182
 msgid "Import"
@@ -8525,7 +8525,7 @@ msgstr "یوتیوب"
 #: framework/theme-integration.php:230,
 #: framework/premium/features/media-video/options.php:15
 msgid "Vimeo"
-msgstr "ویمئو"
+msgstr "ویم��و"
 
 #: framework/theme-integration.php:231,
 #: framework/features/blocks/share-box/options.php:55

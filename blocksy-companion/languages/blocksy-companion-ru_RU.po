@@ -112,7 +112,7 @@ msgstr "Отображение счётчика, отражающего теку
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:69
 msgid "Logged In Users Only"
-msgstr "Толь��о авторизованным"
+msgstr "Только авторизованным"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
@@ -132,7 +132,7 @@ msgstr "Отображение формы предзаказа"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:108
 msgid "Choose where you want this Waitlist Form to be displayed."
-msgstr "Где н��жно отображать форму включения в список ожидания."
+msgstr "Где нужно отображать форму включения в список ожидания."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:160
 msgid "Message Font"
@@ -206,7 +206,7 @@ msgstr "Ваша предзаказ был успешно отменён."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:117
 msgid "Your waitlist subscription has been successfully confirmed."
-msgstr "Ваша предзаказ подтверждё��."
+msgstr "Ваша предзаказ подтверждён."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
@@ -360,7 +360,7 @@ msgstr "Привет, %s!"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:19
 msgid "Great news! The %s from your waitlist is now back in stock!"
-msgstr "Отличные новости! %s из вашего списка ожидания ��еперь снова в наличии!"
+msgstr "Отличные новости! %s из вашего списка ожидания теперь снова в наличии!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:42,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:24
@@ -412,7 +412,7 @@ msgstr "Цена:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:30
 msgid "Add to cart:"
-msgstr "Добавить в корз��ну:"
+msgstr "Добавить в корзину:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:19
 msgid "Product link:"
@@ -951,7 +951,7 @@ msgstr "Отъезд"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:202
 msgid "Alternative Text"
-msgstr "Альтернатив��ый текст"
+msgstr "Альтернативный текст"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:215
 msgid "Describe the purpose of the image."
@@ -1059,7 +1059,7 @@ msgstr "Изображение объекта"
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:36
 #: static/js/editor/blocks/dynamic-data/preview-parts/wp/TermTextPreview.js:10
 msgid "Term Count"
-msgstr "Счётчик объекта"
+msgstr "Счё��чик объекта"
 
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:50
 msgid "Excerpt"
@@ -1502,7 +1502,7 @@ msgstr "Шрифт таксономии"
 #: framework/extensions/trending/customizer.php:708,
 #: framework/extensions/trending/customizer.php:748
 msgid "Taxonomies Font Color"
-msgstr "Цвет шрифта таксономий"
+msgstr "Цвет шриф��а таксономий"
 
 #: framework/extensions/trending/customizer.php:780
 msgid "Taxonomies Button Color"
@@ -1595,7 +1595,7 @@ msgstr "Нет виджетов для установки."
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:98
 msgid "Fields Gap"
-msgstr "Отступ полей"
+msgstr "О��ступ полей"
 
 #: framework/features/blocks/about-me/options.php:21
 msgid "User Source"
@@ -1915,7 +1915,7 @@ msgstr "Задержка при закрытии"
 
 #: framework/premium/features/content-blocks/options/popup.php:269
 msgid "Set the close delay time (in seconds) after the form submit action is detected."
-msgstr "Установка времени задержки закрытия (в секундах) после отп��авки формы."
+msgstr "Установка времени задержки закрытия (в секундах) после отправки формы."
 
 #: framework/premium/extensions/post-types-extra/features/taxonomies-customization/feature.php:100,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:813
@@ -4300,7 +4300,7 @@ msgstr "Таблица размеров"
 
 #: framework/helpers/exts-configs.php:305
 msgid "Show a size chart guide so that your visitors can pick the right size for them when ordering a product."
-msgstr "Отображение памятки, помогающей посетителям выбрать подходящий размер при заказе то��ара."
+msgstr "Отображение памятки, помогающей посетителям выбрать подходящий размер при заказе товара."
 
 #: framework/helpers/exts-configs.php:313
 msgid "Custom Thank You Pages"
@@ -6258,7 +6258,7 @@ msgstr "До обзора быстрого просмотра"
 
 #: framework/premium/extensions/woocommerce-extra/extension.php:153
 msgid "Quick view summary after"
-msgstr "После обзора быстрого просмотр��"
+msgstr "После обзора быстрого просмотра"
 
 #: framework/helpers/exts-configs.php:238,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:4
@@ -6647,7 +6647,7 @@ msgstr "Конец модальной формы регистрации"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:541
 msgid "Lost password form modal start"
-msgstr "Начало модальной формы восстановления"
+msgstr "Начало мо��аль��ой формы восстановления"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:548
 msgid "Lost password form modal end"
@@ -7402,7 +7402,7 @@ msgstr "Стандартный режим"
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:318,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:442
 msgid "Transparent State"
-msgstr "Режим прозра��ности"
+msgstr "Р����им прозрачности"
 
 #: framework/features/header/header-options.php:227,
 #: framework/features/header/items/account/options.php:1161,

@@ -6203,7 +6203,7 @@ msgstr "Sostituisci il marchio di Blocksy con il tuo. Nascondi facilmente le inf
 
 #: framework/helpers/exts-configs.php:228
 msgid "Make the shopping experience better for your visitors! Add features such as Product Quick View, Wishlist functionality and a Floating Add to Cart button. Customize the single product gallery/slider and the layout."
-msgstr "Rendi migliore l'esperienza di acquisto per i tuoi visitatori! Aggiungi funzionalit�� come la visualizzazione rapida del prodotto, la funzionalità della lista dei desideri e un pulsante mobile Aggiungi al carrello. Personalizza la gallery/slider del singolo prodotto e il layout."
+msgstr "Rendi migliore l'esperienza di acquisto per i tuoi visitatori! Aggiungi funzionalità come la visualizzazione rapida del prodotto, la funzionalità della lista dei desideri e un pulsante mobile Aggiungi al carrello. Personalizza la gallery/slider del singolo prodotto e il layout."
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/feature.php:14
 msgid "Quick View Button"

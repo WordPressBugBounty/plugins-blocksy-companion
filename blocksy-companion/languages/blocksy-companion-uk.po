@@ -549,7 +549,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:245
 msgid "Cart Total"
-msgstr "Загальна сума"
+msgstr "Загал��на сума"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:24
 msgid "View Cart"
@@ -10156,7 +10156,7 @@ msgstr "Функціонал Закріплення"
 
 #: framework/features/header/header-options.php:37
 msgid "Only Main Row"
-msgstr "Лише основний ряд��к"
+msgstr "Лише основний рядок"
 
 #: framework/features/header/header-options.php:42
 msgid "Top & Main Row"
@@ -10531,7 +10531,7 @@ msgstr "Увійти"
 #: framework/features/header/modal/login.php:23,
 #: framework/features/header/modal/lostpassword.php:5
 msgid "Username or Email Address"
-msgstr "І��'я користувача або електронна адреса"
+msgstr "Ім'я користувача або електронна адреса"
 
 #: framework/features/header/modal/lostpassword.php:13
 msgid "Get New Password"
