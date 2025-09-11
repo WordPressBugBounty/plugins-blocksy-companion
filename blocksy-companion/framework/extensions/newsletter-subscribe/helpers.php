@@ -132,7 +132,7 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 
 		<?php if ($args['has_description'] && ! empty($args['description'])) { ?>
 			<p>
-				<?php echo $args['description'] ?>
+				<?php echo wp_kses_post($args['description']) ?>
 			</p>
 		<?php } ?>
 

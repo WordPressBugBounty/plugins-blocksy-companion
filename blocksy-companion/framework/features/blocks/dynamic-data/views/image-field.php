@@ -69,7 +69,7 @@ if (
 	}
 
 	$maybe_term_obj = get_queried_object();
-	
+
 	if (
 		! empty($maybe_term_obj)
 		&&

@@ -483,7 +483,7 @@ class TaxQuery {
 
 	private static function get_attributes($attributes) {
 		// migrate to native brands
-		
+
 		if ($attributes['taxonomy'] === 'product_brands') {
 			$attributes['taxonomy'] = 'product_brand';
 		}
@@ -570,6 +570,16 @@ class TaxQuery {
 		];
 
 		if (
+			$terms_query_args['orderby'] === 'none'
+			&&
+			$terms_query_args['taxonomy'] === 'product_cat'
+		) {
+			$terms_query_args['orderby'] = 'meta_value_num';
+			$terms_query_args['meta_key'] = 'order';
+			$terms_query_args['order'] = 'ASC';
+		}
+
+		if (
 			$attributes['level'] === 'parent'
 			||
 			$attributes['level'] === 'relevant'
@@ -603,7 +613,13 @@ class TaxQuery {
 			10, 2
 		);
 
-		$terms = get_terms($terms_query_args);
+		$terms = get_terms(
+			apply_filters(
+				'blocksy:general:blocks:tax-query:args',
+				$terms_query_args,
+				$attributes
+			)
+		);
 
 		remove_filter(
 			'get_terms_orderby',

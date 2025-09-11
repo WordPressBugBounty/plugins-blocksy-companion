@@ -14,8 +14,6 @@ const CustomTextField = ({
 	attributes,
 	attributes: { align, tagName: TagName, before, after, fallback },
 	fieldData,
-
-	colors,
 }) => {
 	const blockProps = useBlockProps({
 		className: classnames('ct-dynamic-data', {

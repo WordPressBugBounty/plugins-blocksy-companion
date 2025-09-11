@@ -1,23 +1,20 @@
-import { useState, useEffect } from '@wordpress/element'
+import { useState, useEffect, useMemo } from '@wordpress/element'
 import { __ } from 'ct-i18n'
 import { getOptionsForBlock } from 'blocksy-options'
 import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
 
-import { getLabelForProvider } from '../utils'
 import { useTaxonomies } from '../../query/edit/utils/utils'
+
+import { useFieldsContext } from './use-fields-context'
 
 const options = getOptionsForBlock('dynamic-data')
 
 const wpFields = (args = {}) => {
-	const { termId } = args
-
-	const isContentBlock = document.body.classList.contains(
-		'post-type-ct_content_block'
-	)
+	const { fieldsContext } = args
 
 	let fields = []
 
-	if (termId) {
+	if (fieldsContext.type === 'term') {
 		fields = [
 			{
 				id: 'term_title',
@@ -38,7 +35,7 @@ const wpFields = (args = {}) => {
 		]
 	}
 
-	if (!termId) {
+	if (fieldsContext.type === 'all' || fieldsContext.type === 'post') {
 		fields = [
 			{
 				id: 'title',
@@ -82,7 +79,7 @@ const wpFields = (args = {}) => {
 		]
 	}
 
-	if (!termId && isContentBlock) {
+	if (fieldsContext.type === 'all') {
 		fields = [
 			...fields,
 
@@ -105,14 +102,27 @@ const wpFields = (args = {}) => {
 
 	return {
 		provider: 'wp',
+		provider_label: 'WordPress',
 		fields,
 	}
 }
 
-const wooFields = (postType, taxonomies = []) => {
+const wooFields = ({ fieldsContext, taxonomies = [] }) => {
 	const hasWoo = typeof window.wc !== 'undefined'
 
-	if (!hasWoo || postType !== 'product') {
+	if (!hasWoo) {
+		return null
+	}
+
+	const shouldHaveWooFields =
+		// Single product picked
+		(fieldsContext.type === 'post' &&
+			fieldsContext.entity_type === 'product') ||
+		// Product tab or size guide picked
+		(fieldsContext.type === 'post_type' &&
+			fieldsContext.post_type === 'product')
+
+	if (!shouldHaveWooFields) {
 		return null
 	}
 
@@ -122,6 +132,8 @@ const wooFields = (postType, taxonomies = []) => {
 
 	return {
 		provider: 'woo',
+		provider_label: 'WooCommerce',
+
 		fields: [
 			{
 				id: 'price',
@@ -156,30 +168,42 @@ const wooFields = (postType, taxonomies = []) => {
 }
 
 const useDynamicDataDescriptor = ({ postId, postType, termId, taxonomy }) => {
-	const taxonomies = useTaxonomies(postType)
-
 	const [additionalFields, setAdditionalFields] = useState([])
+	const [fullDescriptorLoaded, setFullDescriptorLoaded] = useState(false)
 
-	useEffect(() => {
-		if (postId && !termId) {
-			cachedFetch(
-				`${wp.ajax.settings.url}?action=blocksy_blocks_retrieve_dynamic_data_descriptor`,
-				{
-					post_id: postId,
-				}
-			)
-				.then((response) => response.json())
-				.then(({ success, data }) => {
-					setAdditionalFields(data.fields)
-				})
-		}
-	}, [postId, termId])
+	const fieldsContext = useFieldsContext({ postId, postType, termId })
 
-	const fieldsDescriptor = {
-		fields: [wpFields({ termId })],
+	let postTypeForTaxonomies = postType
+
+	if (fieldsContext.type === 'post_type' && fieldsContext.post_type) {
+		postTypeForTaxonomies = fieldsContext.post_type
 	}
 
-	const maybeWooFields = wooFields(postType, taxonomies)
+	if (fieldsContext.type === 'post' && fieldsContext.entity_type) {
+		postTypeForTaxonomies = fieldsContext.entity_type
+	}
+
+	const taxonomies = useTaxonomies(postTypeForTaxonomies)
+
+	useEffect(() => {
+		cachedFetch(
+			`${wp.ajax.settings.url}?action=blocksy_blocks_retrieve_dynamic_data_descriptor`,
+			{
+				context: fieldsContext,
+			}
+		)
+			.then((response) => response.json())
+			.then(({ success, data }) => {
+				setAdditionalFields(data.fields)
+				setFullDescriptorLoaded(true)
+			})
+	}, [fieldsContext])
+
+	const fieldsDescriptor = {
+		fields: [wpFields({ fieldsContext })],
+	}
+
+	const maybeWooFields = wooFields({ fieldsContext, taxonomies })
 
 	if (maybeWooFields) {
 		fieldsDescriptor.fields.push(maybeWooFields)
@@ -193,6 +217,7 @@ const useDynamicDataDescriptor = ({ postId, postType, termId, taxonomy }) => {
 	}
 
 	return {
+		fullDescriptorLoaded,
 		fieldsDescriptor,
 		options,
 		fieldsChoices: fieldsDescriptor.fields.reduce(
@@ -210,7 +235,7 @@ const useDynamicDataDescriptor = ({ postId, postType, termId, taxonomy }) => {
 						return taxonomies && taxonomies.length > 0
 					})
 					.map((field) => ({
-						group: getLabelForProvider(currentProvider.provider),
+						group: currentProvider.provider_label,
 						key: `${currentProvider.provider}:${field.id}`,
 						value: field.label,
 					})),

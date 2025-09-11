@@ -1,22 +1,6 @@
 import { __unstableStripHTML as stripHTML } from '@wordpress/dom'
 import { __ } from 'ct-i18n'
 
-export const getLabelForProvider = (provider) => {
-	return (
-		{
-			wp: 'WordPress',
-			woo: 'WooCommerce',
-			acf: 'ACF',
-			metabox: 'MetaBox',
-			custom: __('Custom', 'blocksy-companion'),
-			toolset: 'Toolset',
-			jetengine: 'Jet Engine',
-			pods: 'Pods',
-			acpt: 'ACPT',
-		}[provider] || __('Unknown', 'blocksy-companion')
-	)
-}
-
 export const fieldIsImageLike = (fieldDescriptor) => {
 	if (!fieldDescriptor) {
 		return false

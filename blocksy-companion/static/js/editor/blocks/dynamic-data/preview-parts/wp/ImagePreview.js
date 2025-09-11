@@ -27,7 +27,6 @@ const VideoIndicator = () => (
 const ImagePreview = ({
 	media,
 	url,
-	postId,
 
 	attributes,
 	attributes: {
@@ -195,7 +194,7 @@ const ImagePreview = ({
 		/>
 	)
 
-	if (!url || !postId) {
+	if (!url) {
 		content = (
 			<div
 				className={classnames('ct-dynamic-data-placeholder', {

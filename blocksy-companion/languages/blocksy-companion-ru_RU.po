@@ -112,7 +112,7 @@ msgstr "Отображение счётчика, отражающего теку
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:69
 msgid "Logged In Users Only"
-msgstr "Только авторизованным"
+msgstr "Тол��ко авторизованным"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
@@ -132,7 +132,7 @@ msgstr "Отображение формы предзаказа"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:108
 msgid "Choose where you want this Waitlist Form to be displayed."
-msgstr "Где нужно отображать форму включения в список ожидания."
+msgstr "Где ��ужно отображать форму включения в список ожидания."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:160
 msgid "Message Font"
@@ -206,7 +206,7 @@ msgstr "Ваша предзаказ был успешно отменён."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:117
 msgid "Your waitlist subscription has been successfully confirmed."
-msgstr "Ваша предзаказ подтверждён."
+msgstr "Ваша предзаказ подтвержд��н."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:11
 msgid "Search Products"
@@ -412,7 +412,7 @@ msgstr "Цена:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:30
 msgid "Add to cart:"
-msgstr "Добавить в корзину:"
+msgstr "Добавить в кор��ину:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:19
 msgid "Product link:"
@@ -951,7 +951,7 @@ msgstr "Отъезд"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:202
 msgid "Alternative Text"
-msgstr "Альтернативный текст"
+msgstr "Альтернатив��ый текст"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:215
 msgid "Describe the purpose of the image."
@@ -1059,7 +1059,7 @@ msgstr "Изображение объекта"
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:36
 #: static/js/editor/blocks/dynamic-data/preview-parts/wp/TermTextPreview.js:10
 msgid "Term Count"
-msgstr "Счё��чик объекта"
+msgstr "Счётчик объекта"
 
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:50
 msgid "Excerpt"
@@ -1502,7 +1502,7 @@ msgstr "Шрифт таксономии"
 #: framework/extensions/trending/customizer.php:708,
 #: framework/extensions/trending/customizer.php:748
 msgid "Taxonomies Font Color"
-msgstr "Цвет шриф��а таксономий"
+msgstr "Цвет шрифта таксономий"
 
 #: framework/extensions/trending/customizer.php:780
 msgid "Taxonomies Button Color"
@@ -1595,7 +1595,7 @@ msgstr "Нет виджетов для установки."
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:98
 msgid "Fields Gap"
-msgstr "О��ступ полей"
+msgstr "Отступ полей"
 
 #: framework/features/blocks/about-me/options.php:21
 msgid "User Source"
@@ -6258,7 +6258,7 @@ msgstr "До обзора быстрого просмотра"
 
 #: framework/premium/extensions/woocommerce-extra/extension.php:153
 msgid "Quick view summary after"
-msgstr "После обзора быстрого просмотра"
+msgstr "После обзора быстрого просмотр��"
 
 #: framework/helpers/exts-configs.php:238,
 #: framework/premium/extensions/woocommerce-extra/features/floating-cart/options.php:4
@@ -6647,7 +6647,7 @@ msgstr "Конец модальной формы регистрации"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:541
 msgid "Lost password form modal start"
-msgstr "Начало мо��аль��ой формы восстановления"
+msgstr "Начало модальной формы восстановления"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:548
 msgid "Lost password form modal end"
@@ -7402,7 +7402,7 @@ msgstr "Стандартный режим"
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:318,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:442
 msgid "Transparent State"
-msgstr "Р����им прозрачности"
+msgstr "Режим прозрачности"
 
 #: framework/features/header/header-options.php:227,
 #: framework/features/header/items/account/options.php:1161,
@@ -8050,7 +8050,7 @@ msgstr "Текст-заполнитель"
 
 #: framework/premium/features/premium-header/items/search-input/options.php:55
 msgid "Input Maximum Width"
-msgstr "Максимальная ширина поля"
+msgstr "Максимальная ширина ��оля"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:87,
 #: framework/features/blocks/search/options.php:70,

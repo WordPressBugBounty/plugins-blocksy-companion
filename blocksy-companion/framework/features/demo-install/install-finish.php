@@ -101,11 +101,11 @@ class DemoInstallFinalActions {
 	public function replace_urls() {
 		$current_demo = Plugin::instance()->demo->get_current_demo();
 
-		if (! $current_demo) {
-			return;
-		}
-
-		if (! isset($current_demo['demo'])) {
+		if (
+			! $current_demo
+			||
+			! isset($current_demo['demo'])
+		) {
 			return;
 		}
 
@@ -123,17 +123,22 @@ class DemoInstallFinalActions {
 			'builder' => $builder
 		]);
 
-		if (! $demo_content) {
-			return;
-		}
-
-		if (! isset($demo_content['url'])) {
+		if (
+			! $demo_content
+			||
+			! isset($demo_content['url'])
+		) {
 			return;
 		}
 
 		$from = $demo_content['url'];
-
 		$to = get_site_url();
+
+		$from = trim($from);
+		$to = trim($to);
+
+		$from = rtrim($from, '/');
+		$to = rtrim($to, '/');
 
 		$wp_uploads = wp_upload_dir();
 
@@ -141,9 +146,6 @@ class DemoInstallFinalActions {
 			$from .= '/wp-content/uploads';
 			$to = $wp_uploads['baseurl'];
 		}
-
-		$from = trim($from);
-		$to = trim($to);
 
 		if (
 			! filter_var($from, FILTER_VALIDATE_URL)

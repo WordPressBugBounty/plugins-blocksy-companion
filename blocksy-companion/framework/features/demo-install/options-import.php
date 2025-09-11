@@ -2,6 +2,7 @@
 
 namespace Blocksy;
 
+
 class DemoInstallOptionsInstaller {
 	protected $demo_name = null;
 
@@ -92,6 +93,14 @@ class DemoInstallOptionsInstaller {
 
 	public function import_options($options, $demo_content = null) {
 		global $wp_customize;
+
+		if (! $wp_customize) {
+			$_REQUEST['wp_customize'] = 'on';
+
+			_wp_customize_include();
+
+			$wp_customize->wp_loaded();
+		}
 
 		do_action('customize_save', $wp_customize);
 

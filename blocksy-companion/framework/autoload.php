@@ -83,6 +83,9 @@ class Autoloader {
 			'Editor\\Blocks\\Query' => 'framework/features/blocks/query/block.php',
 			'Editor\\Blocks\\TaxQuery' => 'framework/features/blocks/tax-query/block.php',
 			'Editor\\Blocks\\DynamicData' => 'framework/features/blocks/dynamic-data/block.php',
+			'Editor\\Blocks\\DynamicDataAPI' => 'framework/features/blocks/dynamic-data/includes/api.php',
+
+			'Companion\\WordPressActionsManager' => 'framework/includes/trait-wordpress-actions-manager.php',
 
 			/**
 			 * No namespace

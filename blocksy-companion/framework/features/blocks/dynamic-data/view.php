@@ -99,35 +99,36 @@ if (
 
 $field_descriptor = explode(':', $field);
 
+if (count($field_descriptor) < 2) {
+	return;
+}
+
 $field_render = blc_get_ext('post-types-extra')
 	->dynamic_data
-	->get_field_to_render([
-		'id' => $field_descriptor[0] . '_field',
-		'field' => $field_descriptor[1]
-	], [
-		'allow_images' => true
-	]);
+	->custom_fields_manager
+	->render_field(
+		$field_descriptor[1],
+		[
+			'provider' => $field_descriptor[0],
+			'allow_images' => true
+		]
+	);
 
 if (! $field_render) {
 	return;
 }
 
-if (
-	is_array($field_render['value'])
-	&&
-	isset($field_render['value']['type'])
-	&&
-	$field_render['value']['type'] === 'image'
-) {
-	echo blocksy_render_view(
-		dirname(__FILE__) . '/views/image-field.php',
-		[
-			'attributes' => $attributes,
-			'field' => $field,
-			// 'value' => $field_render['value']['value'],
-			'attachment_id' => $field_render['value']['value']['id']
-		]
-	);
+if ($field_render['type'] === \Blocksy\Extensions\PostTypesExtra\CustomField::$TYPE_IMAGE) {
+	if (isset($field_render['value']['id'])) {
+		echo blocksy_render_view(
+			dirname(__FILE__) . '/views/image-field.php',
+			[
+				'attributes' => $attributes,
+				'field' => $field,
+				'attachment_id' => $field_render['value']['id']
+			]
+		);
+	}
 
 	return;
 }

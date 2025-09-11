@@ -1586,7 +1586,7 @@ msgstr "Aucune extension à installer."
 
 #: framework/features/demo-install/widgets-import.php:36
 msgid "Sorry, you don't have permission to install widgets."
-msgstr "Désolé, vous n’avez pas les droits nécessaires pour installer des widgets."
+msgstr "D��solé, vous n’avez pas les droits nécessaires pour installer des widgets."
 
 #: framework/features/demo-install/widgets-import.php:79,
 #: framework/features/demo-install/widgets-import.php:73

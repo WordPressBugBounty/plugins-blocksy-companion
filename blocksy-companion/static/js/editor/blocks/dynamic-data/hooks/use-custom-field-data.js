@@ -7,15 +7,17 @@ import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
 // other than custom fields.
 //
 // Potentially, termId can also be provided to get term data.
-const useCustomFieldData = ({ postId, fieldDescriptor }) => {
+const useCustomFieldData = ({ fieldsContext, fieldDescriptor }) => {
 	const [fieldData, setFieldData] = useState({})
-	const { provider, id, attributes, ...rest } = fieldDescriptor
 
 	const requestDescriptor = useMemo(() => {
+		const { provider, id, attributes, ...rest } = fieldDescriptor
+
 		const url = `${wp.ajax.settings.url}?action=blocksy_dynamic_data_block_custom_field_data`
 
 		const body = {
-			post_id: postId,
+			context: fieldsContext,
+
 			field_provider: provider,
 			field_id: id,
 
@@ -28,7 +30,7 @@ const useCustomFieldData = ({ postId, fieldDescriptor }) => {
 			body,
 			cacheKey: getStableJsonKey({ ...body, url }),
 		}
-	}, [postId, provider, id, attributes])
+	}, [fieldsContext, fieldDescriptor])
 
 	useEffect(() => {
 		cachedFetch(requestDescriptor.url, requestDescriptor.body)
@@ -45,10 +47,14 @@ const useCustomFieldData = ({ postId, fieldDescriptor }) => {
 			})
 	}, [requestDescriptor])
 
+	let fieldDataResult = null
+
+	if (fieldData[requestDescriptor.cacheKey]) {
+		fieldDataResult = fieldData[requestDescriptor.cacheKey]
+	}
+
 	return {
-		fieldData: fieldData[requestDescriptor.cacheKey]
-			? fieldData[requestDescriptor.cacheKey]
-			: null,
+		fieldData: fieldDataResult,
 	}
 }
 

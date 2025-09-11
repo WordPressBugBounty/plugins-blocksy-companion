@@ -11,7 +11,7 @@ namespace Blocksy;
 // For the blocksy_get_theme_mod() function, the special handling of the null
 // value is not necessary.
 //
-// Right now, only three functions must be protected with this proxy:
+// Right now, only five functions must be protected with this proxy:
 //
 // - blocksy_get_theme_mod()
 // - blocksy_get_variables_from_file()

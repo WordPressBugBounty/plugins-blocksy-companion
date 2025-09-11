@@ -210,8 +210,10 @@ class BlocksyExtensionNewsletterSubscribe {
 				'form_style' => 'inline',
 			]);
 
-			$args['class'] =
-				'ct-newsletter-subscribe-shortcode ' . $args['class'];
+			$args['class'] = implode(' ', [
+				'ct-newsletter-subscribe-shortcode',
+				$args['class']
+			]);
 
 			return blc_ext_newsletter_subscribe_output_form($args);
 		});

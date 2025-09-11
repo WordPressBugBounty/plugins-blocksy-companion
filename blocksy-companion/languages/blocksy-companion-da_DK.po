@@ -10552,7 +10552,7 @@ msgstr "Forbind dit Adobe Fonts-projekt, og brug de valgte skrifttyper i hele Bl
 
 #: framework/helpers/exts-configs.php:71
 msgid "Inject custom code snippets throughout your website. The extension works globally or on a per post/page basis."
-msgstr "Indsæt brugerdefinerede kodestykker på hele dit websted. Udvidelsen fungerer globalt eller per indl��g/side."
+msgstr "Indsæt brugerdefinerede kodestykker på hele dit websted. Udvidelsen fungerer globalt eller per indlæg/side."
 
 #: framework/premium/extensions/code-snippets/extension.php:42,
 #: framework/premium/extensions/code-snippets/extension.php:97,

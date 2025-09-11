@@ -6628,7 +6628,7 @@ msgstr "Fim da janela modal do formulário de início de sessão"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:513
 msgid "Register form start"
-msgstr "Fim do formulário de registo"
+msgstr "Fim do formul��rio de registo"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:520
 msgid "Register form end"

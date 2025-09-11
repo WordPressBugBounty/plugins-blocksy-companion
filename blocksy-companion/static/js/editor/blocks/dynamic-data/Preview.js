@@ -20,11 +20,16 @@ const Preview = ({
 	fieldDescriptor,
 	fieldsDescriptor,
 
+	isFieldMissing,
+
 	postId,
 	postType,
 
 	termId,
 	taxonomy,
+
+	fieldsContext,
+
 	termIcon,
 	termImage,
 
@@ -42,12 +47,21 @@ const Preview = ({
 
 	colors,
 }) => {
-	if (!fieldDescriptor) {
+	if (isFieldMissing) {
 		const blockProps = useBlockProps({
 			className: 'ct-block-notice components-notice is-warning',
 		})
 
-		return <div {...blockProps}>{__('Field not found', 'ct-blocks')}</div>
+		return (
+			<div {...blockProps}>
+				{__('Field not found', 'blocksy-companion')}
+			</div>
+		)
+	}
+
+	// Likely the descriptor is still loading
+	if (!fieldDescriptor) {
+		return null
 	}
 
 	if (fieldDescriptor.provider === 'woo') {
@@ -82,10 +96,8 @@ const Preview = ({
 	return (
 		<CustomFieldPreview
 			fieldDescriptor={fieldDescriptor}
+			fieldsContext={fieldsContext}
 			attributes={attributes}
-			postId={postId}
-			postType={postType}
-			colors={colors}
 		/>
 	)
 }

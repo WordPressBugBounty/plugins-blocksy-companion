@@ -6,11 +6,15 @@ import CustomImageField from './custom/CustomImageField'
 
 const CustomFieldPreview = ({
 	fieldDescriptor,
-	postId,
-	postType,
+
+	fieldsContext,
+
 	attributes,
 }) => {
-	const { fieldData } = useCustomFieldData({ postId, fieldDescriptor })
+	const { fieldData } = useCustomFieldData({
+		fieldDescriptor,
+		fieldsContext,
+	})
 
 	if (fieldDescriptor.type === 'image') {
 		return (
@@ -18,7 +22,6 @@ const CustomFieldPreview = ({
 				fieldData={fieldData}
 				fieldDescriptor={fieldDescriptor}
 				attributes={attributes}
-				postId={postId}
 			/>
 		)
 	}
@@ -28,7 +31,6 @@ const CustomFieldPreview = ({
 			fieldData={fieldData}
 			fieldDescriptor={fieldDescriptor}
 			attributes={attributes}
-			postId={postId}
 		/>
 	)
 }
