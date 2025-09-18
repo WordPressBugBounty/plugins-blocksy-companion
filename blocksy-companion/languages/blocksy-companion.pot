@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-09-11 19:13+0000\n"
+"POT-Creation-Date: 2025-09-18 16:00+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -1364,7 +1364,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:272,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:188,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:41,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:891,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:890,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/providers/custom.php:13,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:18,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:18
@@ -1804,7 +1804,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:213,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:260,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:283,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:910,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:909,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:281
 msgid "Bottom Spacing"
 msgstr ""
@@ -2269,7 +2269,7 @@ msgstr ""
 #: framework/extensions/trending/customizer.php:455,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:33,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:80,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:837
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:836
 msgid "Button"
 msgstr ""
 
@@ -2944,7 +2944,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:142,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:81,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:839,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:838,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:68,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:99,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:143,
@@ -5807,7 +5807,7 @@ msgstr ""
 msgid "Dark Mode Logo"
 msgstr ""
 
-#: framework/premium/extensions/shortcuts/views/bar.php:524
+#: framework/premium/extensions/shortcuts/views/bar.php:526
 msgid "Shortcuts bar"
 msgstr ""
 
@@ -6581,7 +6581,7 @@ msgstr ""
 
 #: framework/premium/extensions/post-types-extra/features/filtering/helpers.php:191,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:271,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:890
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:889
 #: static/js/editor/blocks/query/edit/layers/useTaxonomiesLayers.js:65
 msgid "All"
 msgstr ""
@@ -7789,8 +7789,8 @@ msgid "Display Variations Inline"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:666,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:846,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:881
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:845,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:880
 msgid "Swatches"
 msgstr ""
 
@@ -7802,18 +7802,18 @@ msgstr ""
 msgid "Swatches saved"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:838,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:837,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:24,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:46,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:142
 msgid "Color"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:840
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:839
 msgid "Mixed"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:865
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:864
 msgid "Custom Attributes"
 msgstr ""
 
@@ -8492,7 +8492,7 @@ msgid "+%s More"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/views/table-no-results.php:6
-msgid "You don't have any products in your wish list yet."
+msgid "You don't have any products in your wishlist yet."
 msgstr ""
 
 #: framework/premium/features/premium-header/items/language-switcher/options/common.php:11
@@ -9607,7 +9607,7 @@ msgstr ""
 #: framework/premium/static/js/footer/PanelsManager.js:212
 #: framework/premium/static/js/hooks/CodeEditor.js:189
 #: static/js/header/PanelsManager.js:217
-#: static/js/options/CustomizerOptionsManager.js:502
+#: static/js/options/CustomizerOptionsManager.js:493
 msgid "Cancel"
 msgstr ""
 
@@ -10276,8 +10276,8 @@ msgstr ""
 msgid "Search for a starter site..."
 msgstr ""
 
-#: static/js/dashboard/screens/Extension.js:95
-#: static/js/dashboard/screens/Extensions.js:86
+#: static/js/dashboard/screens/Extension.js:90
+#: static/js/dashboard/screens/Extensions.js:81
 msgid "Loading Extensions Status..."
 msgstr ""
 
@@ -11187,83 +11187,83 @@ msgstr ""
 msgid "Select value"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:116
+#: static/js/options/CustomizerOptionsManager.js:107
 msgid "Export Options"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:119
+#: static/js/options/CustomizerOptionsManager.js:110
 msgid "Easily export the theme customizer settings."
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:136
+#: static/js/options/CustomizerOptionsManager.js:127
 msgid "Export Customizations"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:142
+#: static/js/options/CustomizerOptionsManager.js:133
 msgid "Import Options"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:145
+#: static/js/options/CustomizerOptionsManager.js:136
 msgid "Easily import the theme customizer settings."
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:169
+#: static/js/options/CustomizerOptionsManager.js:160
 msgid "Click or drop to upload a file..."
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:274
+#: static/js/options/CustomizerOptionsManager.js:265
 msgid "Import Customizations"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:284
+#: static/js/options/CustomizerOptionsManager.js:275
 msgid "Copy Options"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:287
+#: static/js/options/CustomizerOptionsManager.js:278
 msgid "Copy and import your customizations from parent or child theme."
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:343
+#: static/js/options/CustomizerOptionsManager.js:334
 msgid "Copy From Parent Theme"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:349
+#: static/js/options/CustomizerOptionsManager.js:340
 msgid "Copy From Child Theme"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:356
+#: static/js/options/CustomizerOptionsManager.js:347
 msgid ""
 "You are about to copy all the settings from your parent theme into the child "
 "theme. Are you sure you want to continue?"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:362
+#: static/js/options/CustomizerOptionsManager.js:353
 msgid ""
 "You are about to copy all the settings from your child theme into the parent "
 "theme. Are you sure you want to continue?"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:415
+#: static/js/options/CustomizerOptionsManager.js:406
 msgid "Yes, I am sure"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:429
+#: static/js/options/CustomizerOptionsManager.js:420
 msgid "Export Settings"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:433
+#: static/js/options/CustomizerOptionsManager.js:424
 msgid "Choose what set of settings you want to export."
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:478
+#: static/js/options/CustomizerOptionsManager.js:469
 msgid "Customizer settings"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:482
+#: static/js/options/CustomizerOptionsManager.js:473
 msgid "Widgets settings"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:575
+#: static/js/options/CustomizerOptionsManager.js:566
 msgid "Export"
 msgstr ""
 

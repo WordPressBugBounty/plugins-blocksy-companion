@@ -11,16 +11,7 @@ import { Overlay } from 'blocksy-options'
 
 import classnames from 'classnames'
 
-import phpUnserialize from 'phpunserialize'
-
-const safePhpUnserialize = (data) => {
-	const fixed = data.replace(/s:(\d+):"(.*?)";/gs, (_, len, str) => {
-		const actualLength = Buffer.byteLength(str, 'utf8')
-		return `s:${actualLength}:"${str}";`
-	})
-
-	return phpUnserialize(fixed)
-}
+import { safePhpUnserialize } from './utils'
 
 const wipeCaches = () => {
 	return new Promise((resolve) => {

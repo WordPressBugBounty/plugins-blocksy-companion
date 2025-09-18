@@ -5047,7 +5047,7 @@ msgstr "Meniu mobil 2"
 #: framework/extensions/newsletter-subscribe/providers/mailerlite-new.php:123,
 #: framework/extensions/newsletter-subscribe/providers/mailpoet.php:93
 msgid "Thank you for subscribing to our newsletter!"
-msgstr "Vă mulțumim că v-ați abonat la newsletter-ul nostru!"
+msgstr "Vă mulțumim c�� v-ați abonat la newsletter-ul nostru!"
 
 #. translators: This is a brand name. Preferably to not be translated
 #: framework/helpers/exts-configs.php:59

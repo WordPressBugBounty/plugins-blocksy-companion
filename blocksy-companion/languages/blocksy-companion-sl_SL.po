@@ -76,7 +76,7 @@ msgstr "Dodatna prodaja izdelkov"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:295
 msgid "Cross-sell Products"
-msgstr "Križna prodaja izdelkov"
+msgstr "Kri��na prodaja izdelkov"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:506
 msgid "Auto Close Panel"
@@ -4317,7 +4317,7 @@ msgstr "Blagovne znamke izdelkov"
 
 #: framework/helpers/exts-configs.php:287
 msgid "Categorise products by brands and show their logo in archive or single page so users could discover more about their makers."
-msgstr "Razvrstite izdelke po blagovnih znamkah in prikažite njihov logotip v arhivih ali posameznih straneh izdelkov, da jih uporabniki lažje odkrijejo."
+msgstr "Razvrstite izdelke po blagovnih znamkah in prikažite njihov logotip v arhivih ali posameznih straneh izdelkov, da jih uporabniki la��je odkrijejo."
 
 #: framework/helpers/exts-configs.php:361
 msgid "Affiliate Product Links"

@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.12
+Stable tag: 2.1.13
 
 == Description ==
 
@@ -52,6 +52,10 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.13: 2025-09-18
+- Improvement: Make sure the demo importer is importing the custom fonts correctly
+- Improvement: Options Import - Safer parsing of import files to handle multiline strings with quotes inside
+
 2.1.12: 2025-09-11
 - Improvement: General fixes and improvements
 

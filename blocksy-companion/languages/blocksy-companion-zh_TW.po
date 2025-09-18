@@ -5359,7 +5359,7 @@ msgstr "需要協助或建議?"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:21
 msgid "Got a question or need help with the theme? You can always submit a support ticket or ask for help in our friendly Facebook community."
-msgstr "使用佈景有問題或是需要一些協助嗎?���隨時可以提交支援單或在我們友善的 Facebook 社群尋求協助."
+msgstr "使用佈景有問題或是需要一些協助嗎?你隨時可以提交支援單或在我們友善的 Facebook 社群尋求協助."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:33
 msgid "Submit a Support Ticket"

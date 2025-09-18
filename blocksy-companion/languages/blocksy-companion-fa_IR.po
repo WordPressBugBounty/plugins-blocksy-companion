@@ -2287,7 +2287,7 @@ msgstr ""
 
 #: static/js/dashboard/NoTheme.js:31
 msgid "In order to take full advantage of all features it has to offer - please install and activate the Blocksy theme also."
-msgstr "به منظور بهره‌مندی کامل از تمام ویژگ��‌ها باید پوسته‌ی Blocky را نیز نصب و فعال کنید."
+msgstr "به منظور بهره‌مندی کامل از تمام ویژگی‌ها باید پوسته‌ی Blocky را نیز نصب و فعال کنید."
 
 #: static/js/dashboard/NoTheme.js:65
 msgid "Install and activate the Blocksy theme"
@@ -4532,7 +4532,7 @@ msgstr "بعد از پابرگ"
 
 #: framework/extensions/trending/customizer.php:555
 msgid "After Header"
-msgstr "بعد از سربرگ"
+msgstr "��عد از سربرگ"
 
 #: framework/extensions/trending/customizer.php:572
 msgid "Trending Block Display Conditions"

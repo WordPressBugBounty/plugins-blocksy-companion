@@ -8,6 +8,9 @@ class DemoInstallOptionsExport {
 			'blocksy_ext_mailchimp_credentials',
 			'blocksy_ext_post_types_extra_settings',
 			'blocksy_ext_woocommerce_extra_settings',
+			'blocksy_ext_custom_fonts_settings',
+			'blocksy_ext_local_google_fonts_settings',
+			'blocksy_ext_adobe_typekit_settings',
 			'blocksy_active_extensions',
 
 			// TranslatePress

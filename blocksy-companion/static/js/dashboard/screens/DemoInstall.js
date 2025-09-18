@@ -116,13 +116,13 @@ const DemoInstall = ({ children, path, location }) => {
 				from={{ opacity: 0 }}
 				enter={[{ opacity: 1 }]}
 				leave={[{ opacity: 0 }]}
+				initial={null}
 				config={(key, phase) => {
 					return phase === 'leave'
 						? {
 								duration: 300,
 						  }
 						: {
-								delay: 300,
 								duration: 300,
 						  }
 				}}>
