@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.13
+Stable tag: 2.1.14
 
 == Description ==
 
@@ -52,6 +52,14 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.14: 2025-09-25
+- Improvement: Demo importer - better handling of importer UI state when the import process is finished
+- Improvement: Demo importer - correctly import `WP WXR` when other instances of WordPress importer are present
+- Improvement: Dynamic data block - proper detection for MetaBox fields
+- Improvement: Dynamic data block - properly detect context when block is placed inside widget area
+- Improvement: Properly load slider styles when Advanced Posts in used in Elementor template through a shortcode
+- Fix: Advanced posts block - skip non-existing taxonomies in `include_term_ids` check
+
 2.1.13: 2025-09-18
 - Improvement: Make sure the demo importer is importing the custom fonts correctly
 - Improvement: Options Import - Safer parsing of import files to handle multiline strings with quotes inside

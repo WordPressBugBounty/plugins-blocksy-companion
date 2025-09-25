@@ -187,6 +187,8 @@ const DemoToInstall = ({ location, navigate }) => {
 					stepName === 'installer' || stepName === 'modify_demo',
 			})}
 			onDismiss={() => {
+				setCurrentConfigurationStep(0)
+
 				if (stepName === 'installer' && !installerBlockingReleased) {
 					return
 				}

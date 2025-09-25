@@ -804,7 +804,11 @@ class Query {
 		];
 
 		foreach ($attributes['include_term_ids'] as $term_slug => $term_descriptor) {
-			if ($term_descriptor['strategy'] === 'all') {
+			if (
+				$term_descriptor['strategy'] === 'all'
+				||
+				! taxonomy_exists($term_slug)
+			) {
 				continue;
 			}
 
@@ -838,6 +842,10 @@ class Query {
 
 						$term = get_term_by('id', $current_term_id, $term_slug);
 
+						if (! $term) {
+							continue;
+						}
+						
 						$internal_term_slug = $term->slug;
 					}
 

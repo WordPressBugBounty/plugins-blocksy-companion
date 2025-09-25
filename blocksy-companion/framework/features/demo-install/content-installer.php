@@ -35,7 +35,6 @@ class DemoInstallContentInstaller {
 
 		if (class_exists('\Astra_Sites')) {
 			$astra_sites_instance = \Astra_Sites::get_instance();
-			$elementor_integration = \AstraSites\Elementor\Astra_Sites_Compatibility_Elementor::get_instance();
 
 			remove_filter(
 				'wp_import_post_data_processed',
@@ -44,19 +43,27 @@ class DemoInstallContentInstaller {
 			);
 
 			if (
-				defined('ELEMENTOR_VERSION')
+				class_exists('\Elementor\Plugin')
 				&&
-				version_compare(ELEMENTOR_VERSION, '3.0.0', '>=')
+				class_exists('\AstraSites\Elementor\Astra_Sites_Compatibility_Elementor')
 			) {
-				add_filter(
-					'wp_import_post_meta',
-					array('Elementor\Compatibility', 'on_wp_import_post_meta')
-				);
+				$elementor_integration = \AstraSites\Elementor\Astra_Sites_Compatibility_Elementor::get_instance();
 
-				remove_filter(
-					'wp_import_post_meta',
-					array($elementor_integration, 'on_wp_import_post_meta')
-				);
+				if (
+					defined('ELEMENTOR_VERSION')
+					&&
+					version_compare(ELEMENTOR_VERSION, '3.0.0', '>=')
+				) {
+					add_filter(
+						'wp_import_post_meta',
+						array('Elementor\Compatibility', 'on_wp_import_post_meta')
+					);
+
+					remove_filter(
+						'wp_import_post_meta',
+						array($elementor_integration, 'on_wp_import_post_meta')
+					);
+				}
 			}
 		}
 

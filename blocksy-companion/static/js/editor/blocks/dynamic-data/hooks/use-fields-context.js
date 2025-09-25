@@ -8,16 +8,21 @@ const computeContext = ({ termId, postId, postType }) => {
 		'ct_size_guide',
 	]
 
-	const currentPostType = [...document.body.classList]
-		.find((c) => c.startsWith('post-type-'))
-		.replace('post-type-', '')
-
-	// Maybe make detection based on PreviewedPostsSelect.js presence
-	const isSpecialPostType = specialPostTypes.includes(currentPostType)
+	const currentPostType = (
+		[...document.body.classList].find((c) => c.startsWith('post-type-')) ||
+		''
+	).replace('post-type-', '')
 
 	let context = {
 		type: 'all',
 	}
+
+	if (!currentPostType) {
+		return context
+	}
+
+	// Maybe make detection based on PreviewedPostsSelect.js presence
+	const isSpecialPostType = specialPostTypes.includes(currentPostType)
 
 	if (postId) {
 		context = {
