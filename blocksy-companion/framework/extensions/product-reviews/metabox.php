@@ -35,8 +35,9 @@ $options = [
 					]
 				),
 				'desc' => blc_safe_sprintf(
+					// translators: %1$s and %2$s are HTML tags.
 					__(
-						'More info about review entity and how to choose the right one can be found %shere%s.',
+						'More info about review entity and how to choose the right one can be found %1$shere%2$s.',
 						'blocksy-companion'
 					),
 					'<a href="https://developers.google.com/search/blog/2019/09/making-review-rich-results-more-helpful" target="_blank">',

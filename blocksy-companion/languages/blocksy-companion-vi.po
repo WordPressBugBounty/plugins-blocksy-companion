@@ -2307,7 +2307,7 @@ msgstr "Chọn danh mục"
 
 #: framework/features/blocks/dynamic-data/options.php:268
 msgid "Terms accent color"
-msgstr "Màu sắc nhấn mạnh thuật ng��"
+msgstr "Màu sắc nhấn mạnh thuật ngữ"
 
 #: framework/features/blocks/dynamic-data/options.php:251
 msgid "Link Rel"
@@ -4652,7 +4652,7 @@ msgstr "Gửi bình luận thất bại"
 
 #: framework/extensions/cookies-consent/extension.php:105
 msgid "Please accept the Privacy Policy in order to comment."
-msgstr "Vui lòng chấp nh��n Chính Sách Bảo Mật để bình luận."
+msgstr "Vui lòng chấp nhận Chính Sách Bảo Mật để bình luận."
 
 #: framework/extensions/cookies-consent/customizer.php:266
 msgid "Decline Button"
@@ -4808,7 +4808,7 @@ msgstr "Tùy chỉnh phân loại"
 
 #: framework/helpers/exts-configs.php:157
 msgid "Let your guests easily filter the posts by their category or tags taxonomy terms, instantly drilling down the listings."
-msgstr "Cho phép khách của bạn dễ dàng lọc các bài viết theo danh mục hoặc từ khóa của họ, ngay lập tức lọc thông tin."
+msgstr "Cho phép khách của bạn dễ dàng lọc các bài viết theo danh mục hoặc từ kh��a của họ, ngay lập tức lọc thông tin."
 
 #: framework/helpers/exts-configs.php:150
 msgid "Integrates custom fields solutions in the meta layers of a post and presents additional information."
@@ -5082,7 +5082,7 @@ msgstr "Tệp lệnh đầu trang"
 
 #: framework/features/header/modal/register.php:76
 msgid "A link to set a new password will be sent to your email address."
-msgstr "Một liên kết để đặt mật khẩu mới sẽ được gửi đến địa chỉ email của bạn."
+msgstr "Một liên kết để đặt mật khẩu m���i sẽ được gửi đến địa chỉ email của bạn."
 
 #: framework/premium/features/content-blocks/admin-ui.php:708
 msgid "Show WooCommerce Hooks"

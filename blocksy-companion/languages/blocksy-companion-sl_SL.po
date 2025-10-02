@@ -8007,7 +8007,7 @@ msgstr "Konec modalnega prijavnega obrazca"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:506
 msgid "Login form modal start"
-msgstr "Začetek modalnega prijavnega obrazca"
+msgstr "Za��etek modalnega prijavnega obrazca"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:499
 msgid "Login form end"

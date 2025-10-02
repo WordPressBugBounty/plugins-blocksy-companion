@@ -14,6 +14,14 @@ class CustomizerOptionsManager {
 		});
 
 		add_action('wp_ajax_blocksy_customizer_export', function () {
+			if (! isset($_REQUEST['nonce'])) {
+				wp_send_json_error();
+			}
+
+			if (! wp_verify_nonce(sanitize_key($_REQUEST['nonce']), 'ct-customizer-reset')) {
+				wp_send_json_error();
+			}
+
 			if (! current_user_can('manage_options')) {
 				wp_send_json_error();
 			}
@@ -22,8 +30,10 @@ class CustomizerOptionsManager {
 				wp_send_json_error();
 			}
 
+			$strategy = sanitize_text_field(wp_unslash($_POST['strategy']));
+
 			wp_send_json_success([
-				'data' => serialize($this->get_data(null, $_POST['strategy'])),
+				'data' => serialize($this->get_data(null, $strategy)),
 				'site_url' => get_site_url()
 			]);
 		});
@@ -37,7 +47,7 @@ class CustomizerOptionsManager {
 				wp_send_json_error();
 			}
 
-			if (! wp_verify_nonce($_REQUEST['nonce'], 'ct-customizer-reset')) {
+			if (! wp_verify_nonce(sanitize_key($_REQUEST['nonce']), 'ct-customizer-reset')) {
 				wp_send_json_error();
 			}
 
@@ -79,13 +89,22 @@ class CustomizerOptionsManager {
 				wp_send_json_error();
 			}
 
+			if (! isset($_REQUEST['nonce'])) {
+				wp_send_json_error();
+			}
+
+			if (! wp_verify_nonce(sanitize_key($_REQUEST['nonce']), 'ct-customizer-reset')) {
+				wp_send_json_error();
+			}
+
 			if (! isset($_POST['strategy'])) {
 				wp_send_json_error();
 			}
 
 			$theme_for_data = get_option('stylesheet');
+			$strategy = sanitize_text_field(wp_unslash($_POST['strategy']));
 
-			if ($_POST['strategy'] === 'parent') {
+			if ($strategy === 'parent') {
 				foreach (wp_get_themes() as $id => $theme) {
 					if (! $theme->parent()) {
 						continue;
@@ -97,7 +116,7 @@ class CustomizerOptionsManager {
 				}
 			}
 
-			if ($_POST['strategy'] === 'child') {
+			if ($strategy === 'child') {
 				foreach (wp_get_themes() as $id => $theme) {
 					if (! $theme->parent()) {
 						continue;

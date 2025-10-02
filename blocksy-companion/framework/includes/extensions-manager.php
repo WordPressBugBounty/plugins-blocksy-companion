@@ -58,9 +58,14 @@ class ExtensionsManager {
 					$this->is_dashboard_page()
 					||
 					(
+						// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 						isset($_REQUEST['action'])
 						&&
-						strpos($_REQUEST['action'], 'blocksy') !== false
+						strpos(
+							// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+							sanitize_text_field(wp_unslash($_REQUEST['action'])),
+							'blocksy'
+						) !== false
 					)
 				) {
 					$this->do_extensions_preboot();
@@ -126,7 +131,8 @@ class ExtensionsManager {
 
 		$is_ct_settings =
 			// 'themes.php' === $pagenow &&
-			isset( $_GET['page'] ) && 'ct-dashboard' === $_GET['page'];
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			isset($_GET['page']) && 'ct-dashboard' === $_GET['page'];
 
 		return $is_ct_settings;
 	}

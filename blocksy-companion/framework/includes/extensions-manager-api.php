@@ -73,9 +73,15 @@ class ExtensionsManagerApi {
 
 		$this->check_capability('edit_theme_options');
 
+		if (! isset($_POST['ext'])) {
+			wp_send_json_error();
+		}
+
+		$extension = sanitize_text_field(wp_unslash($_POST['ext']));
+
 		$manager = Plugin::instance()->extensions;
 
-		$manager->activate_extension($this->get_extension_from_request());
+		$manager->activate_extension($extension);
 
 		wp_send_json_success();
 	}
@@ -87,9 +93,15 @@ class ExtensionsManagerApi {
 
 		$this->check_capability('edit_theme_options');
 
+		if (! isset($_POST['ext'])) {
+			wp_send_json_error();
+		}
+
+		$extension = sanitize_text_field(wp_unslash($_POST['ext']));
+
 		$manager = Plugin::instance()->extensions;
 
-		$manager->deactivate_extension($this->get_extension_from_request());
+		$manager->deactivate_extension($extension);
 
 		wp_send_json_success();
 	}
@@ -102,14 +114,6 @@ class ExtensionsManagerApi {
 		}
 
 		return true;
-	}
-
-	public function get_extension_from_request() {
-		if ( ! isset( $_POST['ext'] ) ) {
-			wp_send_json_error();
-		}
-
-		return addslashes($_POST['ext']);
 	}
 
 	public function attach_ajax_actions() {

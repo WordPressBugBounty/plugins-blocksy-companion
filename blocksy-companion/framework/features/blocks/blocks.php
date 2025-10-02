@@ -52,7 +52,8 @@ class Blocks {
 				'blocksy/gutenberg-blocks',
 				BLOCKSY_URL . '/static/bundle/blocks/blocks.js',
 				$deps,
-				$data['Version']
+				$data['Version'],
+				false
 			);
 		});
 
@@ -78,17 +79,33 @@ class Blocks {
 			if (
 				! current_user_can('edit_posts')
 				||
-				! isset($this->blocks[$_POST['block']])
+				// phpcs:ignore WordPress.Security.NonceVerification.Missing
+				! isset($_POST['block'])
+				||
+				// phpcs:ignore WordPress.Security.NonceVerification.Missing
+				! isset($_POST['attributes'])
 			) {
 				wp_send_json_error();
 			}
 
-			$gutenberg_block = $this->blocks[$_POST['block']];
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$block_name = sanitize_key($_POST['block']);
+
+			if (! isset($this->blocks[$block_name])) {
+				wp_send_json_error();
+			}
+
+			$gutenberg_block = $this->blocks[$block_name];
+
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+			$attributes = json_decode(wp_unslash($_POST['attributes']), true);
+
+			if (! is_array($attributes)) {
+				$attributes = [];
+			}
 
 			wp_send_json_success([
-				'content' => $gutenberg_block->render(
-					json_decode(wp_unslash($_POST['attributes']), true)
-				),
+				'content' => $gutenberg_block->render($attributes),
 			]);
 		});
 

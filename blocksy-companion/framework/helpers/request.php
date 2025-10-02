@@ -83,22 +83,30 @@ class CurlRequest {
 			return false;
 		}
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_init
 		$curl = curl_init($url);
 
 		if (! empty($args['user_agent'])) {
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
 			curl_setopt($curl, CURLOPT_USERAGENT, $args['user_agent']);
 		}
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
 		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
 		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_exec
 		$result = curl_exec($curl);
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_close
 		curl_close($curl);
 
 		if (! $result) {
 			return new \WP_Error(
 				'blocksy_request_remote_url_error:curl',
+				// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_error
 				curl_error($curl)
 			);
 		}
@@ -128,6 +136,7 @@ class RequestRemoteUrl {
 			$args['user_agent'] = 'WordPress/' . get_bloginfo('version') . '; ' . get_bloginfo('url');
 		}
 
+		// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
 		set_time_limit(300);
 
 		$result = null;

@@ -191,7 +191,7 @@ class Plugin {
 		// helper function.
 		//
 		// Mainly caused by TranslatePress Business SEO pack.
-		$this->request_uri = $_SERVER['REQUEST_URI'];
+		$this->request_uri = isset($_SERVER['REQUEST_URI']) ? sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'])) : '';
 
 		add_filter(
 			'extra_theme_headers',
@@ -215,6 +215,7 @@ class Plugin {
 	}
 
 	public function check_if_blocksy_is_activated() {
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
 		add_filter(
 			'doing_it_wrong_trigger_error',
 			[$this, 'doing_it_wrong_trigger_error']
@@ -265,7 +266,7 @@ class Plugin {
 					&&
 					! empty($_REQUEST['customize_theme'])
 				) {
-					$maybe_foreign_theme = $_REQUEST['customize_theme'];
+					$maybe_foreign_theme = sanitize_text_field(wp_unslash($_REQUEST['customize_theme']));
 				}
 
 				if (
@@ -273,10 +274,10 @@ class Plugin {
 					&&
 					! empty($_REQUEST['wp_theme_preview'])
 				) {
-					$maybe_foreign_theme = $_REQUEST['wp_theme_preview'];
+					$maybe_foreign_theme = sanitize_text_field(wp_unslash($_REQUEST['wp_theme_preview']));
 				}
 
-				$server_uri = $_SERVER['REQUEST_URI'];
+				$server_uri = isset($_SERVER['REQUEST_URI']) ? sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'])) : '';
 
 				// If previewing a theme in the customizer.
 				if (
@@ -284,9 +285,11 @@ class Plugin {
 					&&
 					! empty($_REQUEST['theme'])
 					&&
-					strpos($_SERVER['REQUEST_URI'], 'customize.php') !== false
+					isset($_SERVER['REQUEST_URI'])
+					&&
+					strpos(sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'])), 'customize.php') !== false
 				) {
-					$maybe_foreign_theme = $_REQUEST['theme'];
+					$maybe_foreign_theme = sanitize_text_field(wp_unslash($_REQUEST['theme']));
 				}
 
 				$is_wpappninja = isset($_REQUEST['wpappninja']);
@@ -294,7 +297,7 @@ class Plugin {
 				if (
 					isset($_SERVER['HTTP_REFERER'])
 					&&
-					preg_match('#wpappninja_simul4#', $_SERVER['HTTP_REFERER'])
+					preg_match('#wpappninja_simul4#', sanitize_text_field(wp_unslash($_SERVER['HTTP_REFERER'])))
 				) {
 					$is_wpappninja = true;
 				}
@@ -393,6 +396,7 @@ class Plugin {
 		);
 
 		return !!$this->is_blocksy;
+		// phpcs:enable WordPress.Security.NonceVerification.Recommended
 	}
 
 	public function doing_it_wrong_trigger_error() {

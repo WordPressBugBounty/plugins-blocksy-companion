@@ -8,10 +8,18 @@ class DemoInstallExport {
 			wp_send_json_error();
 		}
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if (! isset($_REQUEST['demoId'])) {
+			wp_send_json_error();
+		}
+
 		global $wp_customize;
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$demoId = sanitize_text_field($_REQUEST['demoId']);
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$builder = sanitize_text_field($_REQUEST['builder']);
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$plugins = sanitize_text_field($_REQUEST['plugins']);
 
 		$plugins = explode(',', preg_replace('/\s+/', '', $plugins));
@@ -38,7 +46,7 @@ class DemoInstallExport {
 			'content' => $content_data,
 
 			'pages_ids_options' => $options_data->export_pages_ids_options(),
-			'created_at' => date('d-m-Y'),
+			'created_at' => gmdate('d-m-Y'),
 
 			'builder' => $builder,
 			'plugins' => $plugins

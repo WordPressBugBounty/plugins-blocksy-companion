@@ -10,11 +10,13 @@ class DemoInstallPluginsUninstaller {
 			]);
 		}
 
-		if (! isset($_REQUEST['plugins']) || !$_REQUEST['plugins']) {
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if (empty($_REQUEST['plugins'])) {
 			wp_send_json_success();
 		}
 
-		$plugins = explode(':', $_REQUEST['plugins']);
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$plugins = explode(':', sanitize_text_field(wp_unslash($_REQUEST['plugins'])));
 
 		$plugins_manager = Plugin::instance()->demo->get_plugins_manager();
 

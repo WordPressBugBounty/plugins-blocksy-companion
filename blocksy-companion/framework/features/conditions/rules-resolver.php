@@ -178,7 +178,7 @@ class ConditionsRulesResolver {
 					];
 				}
 
-				$day = strtolower(date('l'));
+				$day = strtolower(gmdate('l'));
 
 				$day_matches = isset($days[$day]) && $days[$day];
 			}
@@ -497,8 +497,10 @@ class ConditionsRulesResolver {
 					$post_id = get_the_ID();
 				}
 
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 				if (wp_doing_ajax() && isset($_GET['product_id'])) {
-					$post_id = sanitize_text_field($_GET['product_id']);
+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+					$post_id = sanitize_text_field(wp_unslash($_GET['product_id']));
 				}
 
 				if (
@@ -544,8 +546,10 @@ class ConditionsRulesResolver {
 			) {
 				$post_id = get_the_ID();
 
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 				if (wp_doing_ajax() && isset($_GET['product_id'])) {
-					$post_id = sanitize_text_field($_GET['product_id']);
+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+					$post_id = sanitize_text_field(wp_unslash($_GET['product_id']));
 				}
 
 				return $this->match_taxonomy_in_rule_for($rule, $post_id);

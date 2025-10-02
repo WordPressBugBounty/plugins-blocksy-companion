@@ -71,8 +71,9 @@ class GoogleAnalytics {
 				'design' => 'block',
 				'value' => '',
 				'desc' => blc_safe_sprintf(
+					// translators: %1$s and %2$s are HTML tags for a link.
 					__(
-						'Link your Google Analytics 4 tracking ID. More info and instructions can be found %shere%s.',
+						'Link your Google Analytics 4 tracking ID. More info and instructions can be found %1$shere%2$s.',
 						'blocksy-companion'
 					),
 					'<a href="https://support.google.com/analytics/answer/9744165?hl=en" target="_blank">',

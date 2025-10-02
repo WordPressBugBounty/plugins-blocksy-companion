@@ -127,6 +127,7 @@ class MailchimpProvider extends Provider {
 
 		$settings = $this->get_settings();
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_init
 		$curl = curl_init();
 
 		$api_key = $settings['api_key'];
@@ -137,6 +138,7 @@ class MailchimpProvider extends Provider {
 			return 'api_key_invalid';
 		}
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt_array
 		curl_setopt_array($curl, array(
 			CURLOPT_URL => 'https://' . $region[1] . '.api.mailchimp.com/3.0/lists/' . $args['group'] . '/members/',
 			CURLOPT_RETURNTRANSFER => true,
@@ -156,9 +158,12 @@ class MailchimpProvider extends Provider {
 			),
 		));
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_exec
 		$response = curl_exec($curl);
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_error
 		$err = curl_error($curl);
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_close
 		curl_close($curl);
 
 		if ($err) {
@@ -177,6 +182,7 @@ class MailchimpProvider extends Provider {
 				return [
 					'result' => 'no',
 					'message' => blocksy_safe_sprintf(
+						// translators: %s is the email address
 						__('%s is already a list member.', 'blocksy-companion'),
 						$args['email']
 					)

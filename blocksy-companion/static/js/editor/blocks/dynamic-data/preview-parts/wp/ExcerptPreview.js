@@ -36,9 +36,9 @@ const ExcerptPreview = ({
 		strippedRenderedExcerpt(renderedContent)
 	).trim()
 
-	let trimmedExcerpt = rawOrRenderedExcerpt
-		.split(' ', excerpt_length)
-		.join(' ')
+	let trimmedExcerpt = !rawExcerpt
+		? rawOrRenderedExcerpt.split(' ', excerpt_length).join(' ')
+		: rawOrRenderedExcerpt
 
 	const maybeMore = trimmedExcerpt !== rawOrRenderedExcerpt ? '...' : ''
 

@@ -132,6 +132,7 @@ $options = [
 		'divider' => 'top:full',
 		'manageable' => true,
 		'desc' => blocksy_safe_sprintf(
+			// translators: %s is a link to the Customizer section.
 			__('You can configure social URLs in %s.', 'blocksy-companion'),
 			blocksy_safe_sprintf(
 				'<a href="%s" target="_blank">%s</a>',

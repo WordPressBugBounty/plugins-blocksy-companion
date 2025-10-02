@@ -22,12 +22,11 @@ class ConditionsManagerAPI {
 				'content_block_hook'
 			];
 
-			if (
-				$_REQUEST['filter']
-				&&
-				in_array($_REQUEST['filter'], $allowed_filters)
-			) {
-				$filter = $_REQUEST['filter'];
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$maybe_filter = isset($_REQUEST['filter']) ? sanitize_text_field(wp_unslash($_REQUEST['filter'])) : '';
+
+			if (in_array($maybe_filter, $allowed_filters)) {
+				$filter = $maybe_filter;
 			}
 
 			$languages = [];

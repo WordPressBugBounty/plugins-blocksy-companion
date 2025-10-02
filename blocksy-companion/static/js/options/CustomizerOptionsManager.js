@@ -383,10 +383,13 @@ const CustomizerOptionsManager = () => {
 									body.append('strategy', isCopyingOptions)
 
 									try {
-										fetch(window.ajaxurl, {
-											method: 'POST',
-											body,
-										}).then((response) => {
+										fetch(
+											`${window.ajaxurl}?nonce=${ct_customizer_localizations.customizer_reset_none}`,
+											{
+												method: 'POST',
+												body,
+											}
+										).then((response) => {
 											if (response.status === 200) {
 												response
 													.json()
@@ -513,10 +516,13 @@ const CustomizerOptionsManager = () => {
 									body.append('wp_customize', 'on')
 
 									try {
-										fetch(window.ajaxurl, {
-											method: 'POST',
-											body,
-										}).then((response) => {
+										fetch(
+											`${window.ajaxurl}?nonce=${ct_customizer_localizations.customizer_reset_none}`,
+											{
+												method: 'POST',
+												body,
+											}
+										).then((response) => {
 											if (response.status === 200) {
 												response
 													.json()

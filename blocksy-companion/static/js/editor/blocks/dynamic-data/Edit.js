@@ -101,6 +101,10 @@ const Edit = ({
 		return !maybeFieldDescriptor
 	}, [attributes.field, fieldDescriptor, fullDescriptorLoaded])
 
+	if (isFieldMissing) {
+		console.warn('Field is missing:', attributes.field)
+	}
+
 	useEffect(() => {
 		if (attributes.field === 'wp:title' && taxonomy) {
 			setAttributes({

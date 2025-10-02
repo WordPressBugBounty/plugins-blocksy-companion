@@ -19,6 +19,7 @@ class DemoInstallContentInstaller {
 			&&
 			$_REQUEST['demo_name']
 		) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$args['demo_name'] = $_REQUEST['demo_name'];
 		}
 
@@ -367,7 +368,14 @@ class DemoInstallContentInstaller {
 				}
 			}
 
-			$page = get_page_by_title($page_title);
+			$pages = get_posts([
+				'post_type' => 'page',
+				'title' => $page_title,
+				'post_status' => 'publish',
+				'numberposts' => 1
+			]);
+
+			$page = !empty($pages) ? $pages[0] : null;
 
 			if (isset($page) && $page->ID) {
 				update_option($option_id, $page->ID);

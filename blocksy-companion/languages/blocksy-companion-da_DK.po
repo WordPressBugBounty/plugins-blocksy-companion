@@ -789,7 +789,7 @@ msgstr "Denne e-mail sendes, efter en bruger har bekræftet sin tilmelding til e
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:8
 msgid "Waitlist - Subscription Confirmed"
-msgstr "Venteliste �� Tilmelding bekræftet"
+msgstr "Venteliste – Tilmelding bekræftet"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:11
 msgid "Get notified when {product_title} is back in stock"

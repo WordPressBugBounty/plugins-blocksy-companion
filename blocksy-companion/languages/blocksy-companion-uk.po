@@ -663,7 +663,7 @@ msgstr "Додати в кошик:"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:18
 msgid "Price:"
-msgstr "Цін��:"
+msgstr "Ціна:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:28,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
@@ -6016,7 +6016,7 @@ msgstr "Оберіть мову"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:204
 msgid "Select taxonomy"
-msgstr "Обрати таксономію"
+msgstr "��брати таксономію"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:112
 msgid "Select rule"

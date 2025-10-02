@@ -50,8 +50,8 @@ class Blocksy_WXR_Parser {
 				echo $error[0] . ':' . $error[1] . ' ' . esc_html( $error[2] );
 			}
 			echo '</pre>';
-			echo '<p><strong>' . __( 'There was an error when reading this WXR file', 'wordpress-importer' ) . '</strong><br />';
-			echo __( 'Details are shown above. The importer will now try again with a different parser...', 'wordpress-importer' ) . '</p>';
+			echo '<p><strong>' . __( 'There was an error when reading this WXR file', 'blocksy-companion' ) . '</strong><br />';
+			echo __( 'Details are shown above. The importer will now try again with a different parser...', 'blocksy-companion' ) . '</p>';
 		}
 
 		// use regular expressions if nothing else available or this is bad XML
@@ -94,7 +94,7 @@ class Blocksy_WXR_Parser_SimpleXML {
 		}
 
 		if ( ! $success || isset( $dom->doctype ) ) {
-			return new WP_Error( 'SimpleXML_parse_error', __( 'There was an error when reading this WXR file', 'wordpress-importer' ), libxml_get_errors() );
+			return new WP_Error( 'SimpleXML_parse_error', __( 'There was an error when reading this WXR file', 'blocksy-companion' ), libxml_get_errors() );
 		}
 
 		$xml = simplexml_import_dom( $dom );
@@ -102,16 +102,16 @@ class Blocksy_WXR_Parser_SimpleXML {
 
 		// halt if loading produces an error
 		if ( ! $xml )
-			return new WP_Error( 'SimpleXML_parse_error', __( 'There was an error when reading this WXR file', 'wordpress-importer' ), libxml_get_errors() );
+			return new WP_Error( 'SimpleXML_parse_error', __( 'There was an error when reading this WXR file', 'blocksy-companion' ), libxml_get_errors() );
 
 		$wxr_version = $xml->xpath('/rss/channel/wp:wxr_version');
 		if ( ! $wxr_version )
-			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', 'wordpress-importer' ) );
+			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', 'blocksy-companion' ) );
 
 		$wxr_version = (string) trim( $wxr_version[0] );
 		// confirm that we are dealing with the correct file format
 		if ( ! preg_match( '/^\d+\.\d+$/', $wxr_version ) )
-			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', 'wordpress-importer' ) );
+			return new WP_Error( 'WXR_parse_error', __( 'This does not appear to be a WXR file, missing/invalid WXR version number', 'blocksy-companion' ) );
 
 		$base_url = $xml->xpath('/rss/channel/wp:base_site_url');
 		$base_url = (string) trim( $base_url[0] );
@@ -370,7 +370,7 @@ class Blocksy_WXR_Parser_XML {
 				'WXR_parse_error',
 				__(
 					'This does not appear to be a WXR file, missing/invalid WXR version number',
-					'wordpress-importer'
+					'blocksy-companion'
 				)
 			);
 		}
@@ -587,7 +587,7 @@ class Blocksy_WXR_Parser_Regex {
 				'WXR_parse_error',
 				__(
 					'This does not appear to be a WXR file, missing/invalid WXR version number',
-					'wordpress-importer'
+					'blocksy-companion'
 				)
 			);
 		}

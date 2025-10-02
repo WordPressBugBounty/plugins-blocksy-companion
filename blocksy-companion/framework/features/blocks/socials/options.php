@@ -22,7 +22,7 @@ $options = [
 		'desc' => blocksy_safe_sprintf(
 			// translators: placeholder here means the actual URL.
 			__(
-				'Configure the social links in Customizer ➝ General ➝ %sSocial Network Accounts%s.',
+				'Configure the social links in Customizer ➝ General ➝ %1$sSocial Network Accounts%2$s.',
 				'blocksy-companion'
 			),
 			blocksy_safe_sprintf(

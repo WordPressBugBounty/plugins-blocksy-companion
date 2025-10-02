@@ -69,12 +69,16 @@ class DynamicCss {
 
 			if ($screen->base === 'plugins') {
 				if (
+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 					isset($_GET['activate-multi'])
 					||
+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 					isset($_GET['activate'])
 					||
+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 					isset($_GET['deactivate'])
 					||
+					// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 					isset($_GET['deactivate-multi'])
 				) {
 					$this->generate_css_files();

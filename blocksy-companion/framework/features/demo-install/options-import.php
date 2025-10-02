@@ -18,11 +18,14 @@ class DemoInstallOptionsInstaller {
 		if (
 			! $args['demo_name']
 			&&
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			isset($_REQUEST['demo_name'])
 			&&
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$_REQUEST['demo_name']
 		) {
-			$args['demo_name'] = $_REQUEST['demo_name'];
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$args['demo_name'] = sanitize_text_field(wp_unslash($_REQUEST['demo_name']));
 		}
 
 		$this->demo_name = $args['demo_name'];
@@ -236,6 +239,7 @@ class DemoInstallOptionsInstaller {
 							}
 							$settings = [
 								'form_id'  => $formId,
+								// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 								'meta_key' => $metaKey,
 								'value'    => $metaValue,
 							];

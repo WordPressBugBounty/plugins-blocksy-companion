@@ -245,16 +245,20 @@ foreach ($button_colors as $key => $value) {
 }
 
 ?>
+	<?php // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	<form <?php echo blocksy_attr_to_html($form_attrs); ?>>
 
-		<div class="ct-newsletter-subscribe-form-elements"  <?php echo blocksy_attr_to_html($container_atts); ?>>
+		<div class="ct-newsletter-subscribe-form-elements"  <?php 
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo blocksy_attr_to_html($container_atts); 
+		?>>
 			<?php if ($has_name) { ?>
 				<input
 					type="text"
 					name="FNAME"
 					placeholder="<?php echo esc_attr($name_label, 'blocksy-companion') . ($newsletter_subscribe_name_required ? ' *' : ''); ?>"
-					title="<?php echo __('Name', 'blocksy-companion'); ?>"
-					aria-label="<?php echo __('Name', 'blocksy-companion'); ?>"
+					title="<?php echo esc_attr__('Name', 'blocksy-companion'); ?>"
+					aria-label="<?php echo esc_attr__('Name', 'blocksy-companion'); ?>"
 					<?php echo ($newsletter_subscribe_name_required ? 'required' : ''); ?>
 				>
 			<?php } ?>
@@ -262,9 +266,9 @@ foreach ($button_colors as $key => $value) {
 			<input
 				type="email"
 				name="EMAIL"
-				placeholder="<?php esc_attr_e($email_label, 'blocksy-companion'); ?>"
-				title="<?php echo __('Email address', 'blocksy-companion'); ?>"
-				aria-label="<?php echo __('Email address', 'blocksy-companion'); ?>"
+				placeholder="<?php echo esc_attr($email_label); ?>"
+				title="<?php echo esc_attr__('Email address', 'blocksy-companion'); ?>"
+				aria-label="<?php echo esc_attr__('Email address', 'blocksy-companion'); ?>"
 				required>
 
 			<button class="wp-element-button" <?php echo ! empty($button_colors_css) ? 'style="' . esc_attr($button_colors_css) . '"' : '' ?>>
@@ -274,6 +278,7 @@ foreach ($button_colors as $key => $value) {
 
 		<?php
 			if (function_exists('blocksy_ext_cookies_checkbox')) {
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo blocksy_ext_cookies_checkbox('newsletter-subscribe');
 			}
 		?>

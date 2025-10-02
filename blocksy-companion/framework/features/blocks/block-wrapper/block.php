@@ -158,7 +158,8 @@ class BlockWrapper {
 			'blocksy/widgets-wrapper',
 			BLOCKSY_URL . '/static/bundle/blocks/widgets-wrapper.js',
 			['wp-blocks', 'wp-element', 'wp-block-editor'],
-			$data['Version']
+			$data['Version'],
+			false
 		);
 	}
 }

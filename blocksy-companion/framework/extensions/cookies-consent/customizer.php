@@ -116,7 +116,8 @@ $options = [
 							'label' => false,
 							'type' => 'wp-editor',
 							'value' => blc_safe_sprintf(
-								__('I accept the %sPrivacy Policy%s*', 'blocksy-companion'),
+								// translators: %1$s and %2$s are HTML tags for a link.
+								__('I accept the %1$sPrivacy Policy%2$s*', 'blocksy-companion'),
 								'<a href="' . get_privacy_policy_url() . '">',
 								'</a>'
 							),

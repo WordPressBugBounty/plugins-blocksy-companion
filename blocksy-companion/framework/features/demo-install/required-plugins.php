@@ -16,11 +16,14 @@ class DemoInstallPluginsInstaller {
 		if (
 			!$args['plugins']
 			&&
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			isset($_REQUEST['plugins'])
 			&&
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$_REQUEST['plugins']
 		) {
-			$args['plugins'] = $_REQUEST['plugins'];
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$args['plugins'] = sanitize_text_field(wp_unslash($_REQUEST['plugins']));
 		}
 
 		$this->plugins = $args['plugins'];

@@ -18,6 +18,7 @@ foreach ($custom_post_types as $custom_post_type) {
 		$cpts[] = [
 			'id' => 'post_type_single_' . $custom_post_type,
 			'title' => blc_safe_sprintf(
+				// translators: %s is the singular name of the custom post type.
 				__('%s Single', 'blocksy-companion'),
 				$post_type_object->labels->singular_name
 			)
@@ -28,6 +29,7 @@ foreach ($custom_post_types as $custom_post_type) {
 		$cpts[] = [
 			'id' => 'post_type_archive_' . $custom_post_type,
 			'title' => blc_safe_sprintf(
+				// translators: %s is the singular name of the custom post type.
 				__('%s Archive', 'blocksy-companion'),
 				$post_type_object->labels->singular_name
 			)
@@ -41,7 +43,8 @@ foreach ($custom_post_types as $custom_post_type) {
 			$cpts[] = [
 				'id' => 'post_type_taxonomy_' . $single_taxonomy,
 				'title' => blc_safe_sprintf(
-					__('%s %s Taxonomy', 'blocksy-companion'),
+					// translators: %1$s is the singular name of the custom post type, %2$s is the label of the taxonomy.
+					__('%1$s %2$s Taxonomy', 'blocksy-companion'),
 					$post_type_object->labels->singular_name,
 					get_taxonomy($single_taxonomy)->label
 				)

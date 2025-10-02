@@ -173,34 +173,50 @@ class BlocksyExtensionNewsletterSubscribePreBoot {
 	}
 
 	public function get_provider_from_request() {
+		if (! check_ajax_referer('ct-dashboard', 'nonce', false)) {
+			wp_send_json_error('nonce');
+		}
+
 		if (! isset($_POST['provider'])) {
 			wp_send_json_error();
 		}
 
-		return addslashes($_POST['provider']);
+		return sanitize_text_field(wp_unslash($_POST['provider']));
 	}
 
 	public function get_api_key_from_request() {
+		if (! check_ajax_referer('ct-dashboard', 'nonce', false)) {
+			wp_send_json_error('nonce');
+		}
+
 		if (! isset($_POST['api_key'])) {
 			wp_send_json_error();
 		}
 
-		return addslashes($_POST['api_key']);
+		return sanitize_text_field(wp_unslash($_POST['api_key']));
 	}
 
 	public function get_api_url_from_request() {
+		if (! check_ajax_referer('ct-dashboard', 'nonce', false)) {
+			wp_send_json_error('nonce');
+		}
+
 		if (! isset($_POST['api_url'])) {
 			wp_send_json_error();
 		}
 
-		return addslashes($_POST['api_url']);
+		return esc_url_raw(wp_unslash($_POST['api_url']));
 	}
 
 	public function get_list_id_from_request() {
+		if (! check_ajax_referer('ct-dashboard', 'nonce', false)) {
+			wp_send_json_error('nonce');
+		}
+
 		if (! isset($_POST['list_id'])) {
 			wp_send_json_error();
 		}
 
-		return addslashes($_POST['list_id']);
+		return sanitize_text_field(wp_unslash($_POST['list_id']));
 	}
 }

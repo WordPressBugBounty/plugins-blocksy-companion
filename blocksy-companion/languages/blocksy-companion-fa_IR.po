@@ -4102,7 +4102,7 @@ msgstr ""
 
 #: framework/premium/features/content-blocks/options/popup.php:451
 msgid "Always"
-msgstr "همی��ه"
+msgstr "همیشه"
 
 #: framework/premium/features/content-blocks/options/popup.php:450
 #: static/js/options/ConditionsManager/ScheduleDate.js:78
@@ -4768,7 +4768,7 @@ msgstr "نمایش مقایسه"
 
 #: framework/helpers/exts-configs.php:263
 msgid "A set of features that lets you create easily your dream products wishlists and share them with friends and family."
-msgstr "دسته���ای از امکانات که به شما اجازه می‌دهد به سادگی لیست علاقه‌مندی‌های محصول دلخواه خود را بسازید و آن‌ها را با دوستان و خانواده به اشتراک بگذارید."
+msgstr "دسته‌ای از امکانات که به شما اجازه می‌دهد به سادگی لیست علاقه‌مندی‌های محصول دلخواه خود را بسازید و آن‌ها را با دوستان و خانواده به اشتراک بگذارید."
 
 #: framework/helpers/exts-configs.php:255
 msgid "Drill down the product list with new filtering widgets, an off canvas area for them and showing the active filters on the page."
@@ -4862,7 +4862,7 @@ msgstr "پیشخوان"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:31
 msgid "Unfortunately, your hosting configuration doesn't meet the minimum requirements for importing a starter site."
-msgstr "متاسفانه، پیکربندی هاست شما حداقل الزامات برای وارد کر��ن یک سایت راه‌انداز را ندارد."
+msgstr "متاسفانه، پیکربندی هاست شما حداقل الزامات برای وارد کردن یک سایت راه‌انداز را ندارد."
 
 #: static/js/dashboard/screens/DemoInstall/components/Error.js:25
 msgid "Can't Import Starter Site"
@@ -5084,7 +5084,7 @@ msgstr ""
 
 #: framework/features/header/modal/register.php:76
 msgid "A link to set a new password will be sent to your email address."
-msgstr "یک پیوند برای تنظیم رمزعبور جدید برای ��ایانامه‌ی شما ارسال خواهد شد."
+msgstr "یک پیوند برای تنظیم رمزعبور جدید برای رایانامه‌ی شما ارسال خواهد شد."
 
 #: framework/premium/features/content-blocks/admin-ui.php:708
 msgid "Show WooCommerce Hooks"
@@ -5616,7 +5616,7 @@ msgstr "حساب شما با موفقیت ایجاد شده و یک رمزعبو
 
 #: framework/features/account-auth.php:230
 msgid "Your account was created successfully. Your login details have been sent to your email address. Please visit the %1$slogin page%2$s."
-msgstr "حساب شما با موفقیت ایجاد شد. جزئیات ورود شما به نشانی رایانامه‌ی شما ارسال شد. لطفا %1$sبرگه‌ی ��رود%2$s را مشاهده کنید."
+msgstr "حساب شما با موفقیت ایجاد شد. جزئیات ورود شما به نشانی رایانامه‌ی شما ارسال شد. لطفا %1$sبرگه‌ی ورود%2$s را مشاهده کنید."
 
 #. translators: 1: link open 2: link close
 #: framework/features/account-auth.php:108
@@ -9304,7 +9304,7 @@ msgstr "7 روز اخیر"
 
 #: framework/extensions/trending/customizer.php:388
 msgid "Last 24 Hours"
-msgstr "24 ساعت اخیر"
+msgstr "24 ساعت ��خیر"
 
 #: framework/extensions/trending/customizer.php:387
 msgid "All Time"

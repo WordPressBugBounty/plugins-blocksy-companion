@@ -355,7 +355,11 @@ $options = [
 											'type' => 'text',
 											'design' => 'inline',
 											'desc' => blc_safe_sprintf(
-												__('Separate posts ID by comma. How to find the %spost ID%s.', 'blocksy-companion'),
+												// translators: %1$s and %2$s are HTML tags
+												__(
+												  'Separate posts ID by comma. How to find the %1$spost ID%2$s.',
+												  'blocksy-companion'
+												),
 												'<a href="https://www.wpbeginner.com/beginners-guide/how-to-find-post-category-tag-comments-or-user-id-in-wordpress/" target="_blank">',
 												'</a>'
 											),

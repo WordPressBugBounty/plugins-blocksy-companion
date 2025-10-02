@@ -16,7 +16,8 @@ class BlocksyExtensionNewsletterSubscribe {
 				BLOCKSY_URL .
 					'framework/extensions/newsletter-subscribe/admin-static/bundle/main.js',
 				['ct-options-scripts'],
-				$data['Version']
+				$data['Version'],
+				false
 			);
 
 			wp_localize_script(
@@ -286,11 +287,19 @@ class BlocksyExtensionNewsletterSubscribe {
 			$deps[] = 'ct-options-scripts';
 		}
 
+		if (! function_exists('get_plugin_data')) {
+			require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+		}
+
+		$plugin_data = get_plugin_data(BLOCKSY__FILE__);
+
 		wp_enqueue_script(
 			'blocksy/newsletter',
 			BLOCKSY_URL .
 				'framework/extensions/newsletter-subscribe/admin-static/bundle/newsletter-block.js',
-				$deps
+			$deps,
+			$plugin_data['Version'],
+			false
 		);
 
 		$data = [
@@ -306,7 +315,9 @@ class BlocksyExtensionNewsletterSubscribe {
 		wp_register_style(
 			'blocksy/newsletter',
 			BLOCKSY_URL .
-				'framework/extensions/newsletter-subscribe/admin-static/bundle/admin.min.css'
+				'framework/extensions/newsletter-subscribe/admin-static/bundle/admin.min.css',
+			[],
+			$plugin_data['Version']
 		);
 	}
 
@@ -332,20 +343,26 @@ class BlocksyExtensionNewsletterSubscribe {
 	}
 
 	public function newsletter_subscribe_process_ajax_subscribe() {
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		if (!isset($_POST['EMAIL'])) {
 			wp_send_json_error();
 		}
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		if (!isset($_POST['GROUP'])) {
 			wp_send_json_error();
 		}
 
-		$email = $_POST['EMAIL'];
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		$email = sanitize_email(wp_unslash($_POST['EMAIL']));
 		$name = '';
-		$group = $_POST['GROUP'];
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		$group = sanitize_text_field(wp_unslash($_POST['GROUP']));
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		if (isset($_POST['FNAME'])) {
-			$name = $_POST['FNAME'];
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$name = sanitize_text_field(wp_unslash($_POST['FNAME']));
 		}
 
 		$manager = \Blocksy\Extensions\NewsletterSubscribe\Provider::get_for_settings();

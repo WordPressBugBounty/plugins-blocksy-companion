@@ -165,6 +165,7 @@ class DemoInstallFinalActions {
 		); // meta_value LIKE '[%' are json formatted
 		// @codingStandardsIgnoreEnd
 
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$option_keys = $wpdb->get_results(
 			$wpdb->prepare(
 				"SELECT option_name from {$wpdb->options} WHERE `option_value` LIKE %s;",
@@ -313,7 +314,7 @@ class DemoInstallFinalActions {
 				continue;
 			}
 
-			$terms = get_terms($taxonomy, ['hide_empty' => false]);
+			$terms = get_terms(['taxonomy' => $taxonomy, 'hide_empty' => false]);
 			$term_taxonomy_ids = wp_list_pluck($terms, 'term_taxonomy_id');
 
 			wp_update_term_count($term_taxonomy_ids, $taxonomy);

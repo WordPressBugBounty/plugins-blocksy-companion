@@ -756,7 +756,7 @@ msgstr "Вы были добавлены в список ожидания это
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:75
 msgid "No worries! Please enter your e-mail address and we will promptly notify you as soon as the item is back in stock."
-msgstr "Введите свой Email, чтобы получить уведомление когда товар появится на складе."
+msgstr "Введите свой Email, чтобы получить у��едомление когда товар появится на складе."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:67
 msgid "This product is currently sold out!"
@@ -781,7 +781,7 @@ msgstr "Вы будете уведомлены, когда {product_title} сн�
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:10
 msgid "Waitlist subscription confirmed"
-msgstr "П��едзаказ подтверждён"
+msgstr "Пре��заказ подтверждён"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:9
 msgid "This email is sent after a user confirmed the subscription to a product stock alert"
@@ -2933,7 +2933,7 @@ msgstr "Обзор заказа"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/index.js:112
 msgid "Display customer details section."
-msgstr "Отображен��е раздела информации о клиенте."
+msgstr "Отображение раздела информации о клиенте."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/index.js:108
 msgid "Customer Details"
@@ -3023,7 +3023,7 @@ msgstr "Предзагрузка наборов"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/VariableTab.js:30
 msgid "Upload only the %s.woff2%s or %s.ttf%s font file formats. Don't convert variable fonts by yourself. Ask the font provider to hand a correct file or the %svariable%s font won't work."
-msgstr "Загружайте только файлы шрифтов в форматах %s.woff2%s или %s.ttf%s. Не конвертируй��е вариативные шрифты самостоятельно. Попросите поставщика шрифтов предоставить правильный файл, иначе %svariable%s шрифта не будет работать."
+msgstr "Загружайте только файлы шрифтов в форматах %s.woff2%s или %s.ttf%s. Не конвертируйте вариативные шрифты самостоятельно. Попросите поставщика шрифтов предоставить правильный файл, иначе %svariable%s шрифта не будет работать."
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:375
 #: framework/premium/extensions/local-google-fonts/dashboard-static/js/SingleFont.js:116
@@ -3319,7 +3319,7 @@ msgstr "Новая таблица размеров"
 
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:300
 msgid "Edit Size Guide"
-msgstr "Править таблицу размеров"
+msgstr "Править таблицу р��змеров"
 
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/feature.php:299
 msgid "Add New Size Guide"
@@ -4436,7 +4436,7 @@ msgstr "Для этого расширения требуется установ
 
 #: framework/premium/extensions/sidebars/extension.php:185
 msgid "Remove Widget Area"
-msgstr "Удалить область в��джетов"
+msgstr "Удалить область виджетов"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1251
 msgid "Compare Badge Color"
@@ -4764,7 +4764,7 @@ msgstr "Сравнение товаров с помощью чёткой и ла
 
 #: framework/helpers/exts-configs.php:270
 msgid "Compare View"
-msgstr "Таблица сравнения"
+msgstr "Таблица сравнени��"
 
 #: framework/helpers/exts-configs.php:263
 msgid "A set of features that lets you create easily your dream products wishlists and share them with friends and family."
@@ -5102,7 +5102,7 @@ msgstr "Показать зацепы темы"
 
 #: framework/premium/features/content-blocks/admin-ui.php:698
 msgid "Hide Theme Hooks"
-msgstr "Спрятать зацепы темы"
+msgstr "Спрятат�� зацепы темы"
 
 #: framework/premium/features/content-blocks/admin-ui.php:642
 msgid "Show Hooks"
@@ -5725,7 +5725,7 @@ msgstr "Настоятельно рекомендуем установить д�
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ChildTheme.js:118
 msgid "Learn more about child themes"
-msgstr "Подроб��ее о дочерней теме"
+msgstr "Подробнее о дочерней теме"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ChildTheme.js:110
 msgid "You already have a child theme properly installed and activated. Move on."
@@ -8859,7 +8859,7 @@ msgstr "Настройки пункта меню"
 
 #: framework/helpers/exts-configs.php:124
 msgid "Create beautiful personalised menus that set your website apart from the others. Add icons and badges to your entries and even add Content Blocks inside your dropdowns."
-msgstr "Создавайте красивые меню, которые будут отличать ваш сайт от прочих. Добавляйте значки и метки к пунктам меню или даже добавляйте блоки контента в раскрывающиеся списки."
+msgstr "Создавайте красивые меню, которые будут отличать ваш сайт от прочих. Добавляйте значки и метки к пунктам меню или даже добавляйте блоки кон��ента в раскрывающиеся списки."
 
 #: framework/helpers/exts-configs.php:109
 msgid "Serve your chosen Google Fonts from your own web server. This will increase the loading speed and makes sure your website complies with the privacy regulations."
@@ -9622,7 +9622,7 @@ msgstr "Обзор родительского товара"
 
 #: framework/extensions/product-reviews/extension.php:545
 msgid "Product Review"
-msgstr "Обзор товара"
+msgstr "Обзор товар��"
 
 #: framework/extensions/product-reviews/extension.php:480
 msgid "Overll Score Background"

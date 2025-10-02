@@ -150,13 +150,15 @@ class DemoInstall {
 	}
 
 	public function demo_get_content_preliminary_data() {
-		if (! isset($_REQUEST['demo_name']) || !$_REQUEST['demo_name']) {
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if (! isset($_REQUEST['demo_name']) || ! $_REQUEST['demo_name']) {
 			wp_send_json_error([
 				'message' => __("No demo name provided.", 'blocksy-companion')
 			]);
 		}
 
-		$demo_name = explode(':', $_REQUEST['demo_name']);
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$demo_name = explode(':', sanitize_text_field(wp_unslash($_REQUEST['demo_name'])));
 
 		if (! isset($demo_name[1])) {
 			$demo_name[1] = '';

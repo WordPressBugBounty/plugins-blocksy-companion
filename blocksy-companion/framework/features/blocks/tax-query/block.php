@@ -569,14 +569,15 @@ class TaxQuery {
 			'hide_empty' => $attributes['hide_empty'] === 'yes',
 		];
 
+		// for product categories, if orderby is none, we want to let
+		// WooCommerce handle the ordering so we get the same order as
+		// set in the admin UI.
 		if (
 			$terms_query_args['orderby'] === 'none'
 			&&
 			$terms_query_args['taxonomy'] === 'product_cat'
 		) {
-			$terms_query_args['orderby'] = 'meta_value_num';
-			$terms_query_args['meta_key'] = 'order';
-			$terms_query_args['order'] = 'ASC';
+			unset($terms_query_args['orderby']);
 		}
 
 		if (
@@ -600,6 +601,7 @@ class TaxQuery {
 		}
 
 		if (! empty($filtered_exclude)) {
+			// phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
 			$terms_query_args['exclude'] = $filtered_exclude;
 		}
 

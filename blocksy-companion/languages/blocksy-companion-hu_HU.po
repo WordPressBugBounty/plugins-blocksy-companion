@@ -5662,7 +5662,7 @@ msgstr "Oldalszerkesztő kiválasztása"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ModifyDemo.js:57
 msgid "Deactivate demo plugins"
-msgstr "Demóbővítmények inaktiválása"
+msgstr "Demóbőv��tmények inaktiválása"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ModifyDemo.js:202
 msgid "Reinstall"
@@ -5888,7 +5888,7 @@ msgstr "Telepítés"
 
 #: static/js/dashboard/screens/DemoInstall.js:166
 msgid "Loading Starter Sites..."
-msgstr "Kezdő weboldalak betöltése..."
+msgstr "Kezdő weboldalak bet��ltése..."
 
 #: static/js/options/DisplayCondition.js:23
 msgid "Add one or more conditions to display the transparent header."

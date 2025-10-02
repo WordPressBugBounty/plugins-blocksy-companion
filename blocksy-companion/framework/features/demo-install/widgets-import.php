@@ -15,11 +15,14 @@ class DemoInstallWidgetsInstaller {
 		if (
 			!$args['demo_name']
 			&&
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			isset($_REQUEST['demo_name'])
 			&&
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			$_REQUEST['demo_name']
 		) {
-			$args['demo_name'] = $_REQUEST['demo_name'];
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$args['demo_name'] = sanitize_text_field(wp_unslash($_REQUEST['demo_name']));
 		}
 
 		$this->demo_name = $args['demo_name'];
@@ -204,6 +207,7 @@ class DemoInstallWidgetsInstaller {
 
 			$single_widget_instances = [];
 
+			// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 			$row = $wpdb->get_row(
 				$wpdb->prepare(
 					"SELECT option_value FROM $wpdb->options WHERE option_name = %s LIMIT 1",

@@ -765,6 +765,7 @@ class Query {
 
 		if ($attributes['sticky_posts'] === 'exclude') {
 			// $query_args['ignore_sticky_posts'] = true;
+			// phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_post__not_in
 			$query_args['post__not_in'] = get_option('sticky_posts');
 		}
 
@@ -893,6 +894,7 @@ class Query {
 					}
 				}
 
+				// phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_post__not_in
 				$query_args['post__not_in'] = [$post->ID];
 
 				$to_include[] = [
@@ -967,6 +969,7 @@ class Query {
 			$tax_query['relation'] = 'AND';
 		}
 
+		// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
 		$query_args['tax_query'] = $tax_query;
 
 		if ($attributes['sticky_posts'] === 'include') {
@@ -1061,8 +1064,10 @@ class Query {
 
 		$current_page = 1;
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		if (isset($_GET[$query_var])) {
-			$current_page = intval(sanitize_text_field($_GET[$query_var]));
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$current_page = intval(sanitize_text_field(wp_unslash($_GET[$query_var])));
 		}
 
 		return [

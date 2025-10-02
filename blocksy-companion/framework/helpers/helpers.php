@@ -77,7 +77,8 @@ function blc_site_has_feature($feature = 'base_pro') {
 function blc_maybe_is_ssl() {
 	// cloudflare
 	if (! empty($_SERVER['HTTP_CF_VISITOR'])) {
-		$cfo = json_decode($_SERVER['HTTP_CF_VISITOR']);
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$cfo = json_decode(wp_unslash($_SERVER['HTTP_CF_VISITOR']));
 
 		if (isset($cfo->scheme) && 'https' === $cfo->scheme) {
 			return true;
@@ -105,7 +106,7 @@ function blc_maybe_is_ssl() {
 // Don't use protocol relative URL, it's an anti pattern.
 // https://www.paulirish.com/2010/the-protocol-relative-url/
 function blc_normalize_site_url($url) {
-	$parsed_url = parse_url($url);
+	$parsed_url = wp_parse_url($url);
 
 	$protocol = 'http';
 
@@ -132,6 +133,7 @@ if (! function_exists('blc_load_xml_file')) {
 			'user_agent' => ''
 		]);
 
+		// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
 		set_time_limit(300);
 
 		if (ini_get('allow_url_fopen') && ini_get('allow_url_fopen') !== 'Off') {
@@ -154,17 +156,24 @@ if (! function_exists('blc_load_xml_file')) {
 				stream_context_create($context_options)
 			);
 		} else if (function_exists('curl_init')) {
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_init
 			$curl = curl_init($url);
 
 			if (! empty($args['user_agent'])) {
+				// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
 				curl_setopt($curl, CURLOPT_USERAGENT, $args['user_agent']);
 			}
 
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
 			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
 			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
 			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
 
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_exec
 			$result = curl_exec($curl);
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_close
 			curl_close($curl);
 
 			return $result;
@@ -190,9 +199,11 @@ function blc_stringify_url($parsed_url) {
 
 function blc_is_xhr() {
 	return (
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		isset($_REQUEST['blocksy_ajax'])
 		&&
-		strtolower($_REQUEST['blocksy_ajax']) === 'yes'
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		strtolower(sanitize_text_field(wp_unslash($_REQUEST['blocksy_ajax']))) === 'yes'
 	);
 }
 
@@ -202,6 +213,7 @@ function blc_get_option_from_db($option, $default = '') {
 
 		$suppress = $wpdb->suppress_errors();
 
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$row = $wpdb->get_row(
 			$wpdb->prepare(
 				"SELECT option_value FROM $wpdb->options WHERE option_name = %s LIMIT 1",
@@ -237,6 +249,7 @@ function blc_get_network_option_from_db($network_id, $option, $default = '') {
 
 		$suppress = $wpdb->suppress_errors();
 
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$row = $wpdb->get_row(
 			$wpdb->prepare(
 				"SELECT meta_value FROM $wpdb->sitemeta WHERE meta_key = %s AND site_id = %d",
@@ -265,6 +278,7 @@ function blc_safe_sprintf($format, ...$args) {
 	// We need to handle both.
 	// https://www.php.net/manual/en/function.vsprintf.php#refsect1-function.vsprintf-errors
 
+	// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler
 	set_error_handler(function () use (&$is_error) {
 		$is_error = true;
 	});
@@ -412,8 +426,10 @@ function blc_debug_log($message, $object = null) {
 	}
 
 	if (is_null($object)) {
+		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 		error_log($message);
 	} else {
+		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log, WordPress.PHP.DevelopmentFunctions.error_log_print_r
 		error_log($message . ': ' . print_r($object, true));
 	}
 }

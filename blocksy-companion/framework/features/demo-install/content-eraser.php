@@ -40,6 +40,7 @@ class DemoInstallContentEraser {
 	private function reset_previous_posts() {
 		global $wpdb;
 
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$post_ids = $wpdb->get_col(
 			"SELECT post_id FROM {$wpdb->postmeta} WHERE meta_key='blocksy_demos_imported_post'"
 		);
@@ -56,6 +57,7 @@ class DemoInstallContentEraser {
 	private function reset_previous_terms() {
 		global $wpdb;
 
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$term_ids = $wpdb->get_col(
 			"SELECT term_id FROM {$wpdb->termmeta} WHERE meta_key='blocksy_demos_imported_term'"
 		);
@@ -140,7 +142,7 @@ class DemoInstallContentEraser {
 	private function reset_menus() {
 		return;
 
-		$menus = get_terms('nav_menu', ['hide_empty' => false]);
+		$menus = get_terms(['taxonomy' => 'nav_menu', 'hide_empty' => false]);
 
 		foreach ($menus as $single_menu) {
 			if (! isset($single_menu->term_id)) {

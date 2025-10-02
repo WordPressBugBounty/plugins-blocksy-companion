@@ -165,8 +165,8 @@ $layer_settings = [
 				],
 				'choices' => blocksy_ordered_keys(blocksy_get_menus_items()),
 				'desc' => blc_safe_sprintf(
-					// translators: placeholder here means the actual URL.
-					__( 'Manage your menus in the %sMenus screen%s.', 'blocksy-companion' ),
+					// translators: %1$s and %2$s are HTML tags for a link.
+					__( 'Manage your menus in the %1$sMenus screen%2$s.', 'blocksy-companion' ),
 					blc_safe_sprintf(
 						'<a href="%s" target="_blank">',
 						admin_url('/nav-menus.php')
@@ -279,7 +279,7 @@ if (function_exists('blc_get_content_blocks')) {
 						'view' => 'text',
 						'search' => true,
 						'defaultToFirstItem' => false,
-						'placeholder' => __('None'),
+						'placeholder' => __('None', 'blocksy-companion'),
 						'choices' => blocksy_ordered_keys(
 							blc_get_content_blocks()
 						),
