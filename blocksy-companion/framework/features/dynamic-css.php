@@ -117,7 +117,11 @@ class DynamicCss {
 	}
 
 	public function enqueue_dynamic_css() {
-		if (is_admin()) {
+		if (
+			is_admin()
+			||
+			is_login()
+		) {
 			return;
 		}
 

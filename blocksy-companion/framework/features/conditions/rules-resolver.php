@@ -237,6 +237,14 @@ class ConditionsRulesResolver {
 			return is_tag();
 		}
 
+		if (strpos($rule['rule'], 'post_type_post_taxonomy_') !== false) {
+			return is_tax(str_replace(
+				'post_type_post_taxonomy_',
+				'',
+				$rule['rule']
+			));
+		}
+
 		if ($rule['rule'] === 'single_page') {
 			return is_singular('page');
 		}
@@ -273,6 +281,14 @@ class ConditionsRulesResolver {
 			if (function_exists('is_shop')) {
 				return is_tax('product_brand');
 			}
+		}
+
+		if (strpos($rule['rule'], 'post_type_product_taxonomy_') !== false) {
+			return is_tax(str_replace(
+				'post_type_product_taxonomy_',
+				'',
+				$rule['rule']
+			));
 		}
 
 		if ($rule['rule'] === 'all_product_attributes') {

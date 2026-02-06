@@ -6,12 +6,14 @@ trait WordPressActionsManager {
 	public function attach_hooks($args = []) {
 		if (! isset($this->actions) && ! isset($this->filters)) {
 			throw new \Error(
+				// phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped
 				'Please define $actions or $filters properties on the ' . get_class($this) . ' class.'
 			);
 		}
 
 		$args = wp_parse_args($args, [
 			'only' => [],
+			// phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
 			'exclude' => []
 		]);
 

@@ -84,6 +84,7 @@ class BlocksyExtensionTrending {
 						}
 					}
 
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo blc_get_trending_block($this->result);
 				},
 				50

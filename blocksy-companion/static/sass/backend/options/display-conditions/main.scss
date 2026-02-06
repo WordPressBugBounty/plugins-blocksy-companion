@@ -1,9 +1,9 @@
-@import 'modal';
+@use 'modal';
 
-@import 'condition-group';
-@import 'condition-relation';
-@import 'relation-group';
-@import 'hovered-indication';
+@use 'condition-group';
+@use 'condition-relation';
+@use 'relation-group';
+@use 'hovered-indication';
 
 .ct-display-conditions {
 	display: flex;

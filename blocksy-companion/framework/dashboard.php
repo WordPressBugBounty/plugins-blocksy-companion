@@ -87,7 +87,7 @@ class Dashboard {
 				&&
 				$blocksy_data['is_correct_theme']
 			) {
-				echo blocksy_render_view(
+				blocksy_render_view_e(
 					dirname(__FILE__) . '/views/theme-mismatch.php',
 					[
 						'is_theme_version_ok' => $blocksy_data['is_theme_version_ok'],
@@ -212,10 +212,7 @@ class Dashboard {
 			blc_fs()->add_action('connect/before', function () {
 				$path = dirname(__FILE__) . '/views/optin.php';
 
-				echo blocksy_render_view(
-					$path,
-					[]
-				);
+				blocksy_render_view_e($path, []);
 			});
 
 			blc_fs()->add_action('connect/after', function () {
@@ -358,7 +355,8 @@ class Dashboard {
 
 			if (intval(get_option('blc_activation_redirect', false)) === wp_get_current_user()->ID) {
 				delete_option('blc_activation_redirect');
-				exit(wp_redirect(admin_url('admin.php?page=ct-dashboard')));
+				wp_safe_redirect(admin_url('admin.php?page=ct-dashboard'));
+				exit;
 			}
 		});
 	}
@@ -570,6 +568,7 @@ class Dashboard {
 		if (is_network_admin()) {
 			$is_ct_settings =
 				// 'themes.php' === $pagenow &&
+				// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 				isset( $_GET['page'] ) && 'blocksy-companion' === $_GET['page'];
 
 			return $is_ct_settings;
@@ -577,6 +576,7 @@ class Dashboard {
 
 		$is_ct_settings =
 			// 'themes.php' === $pagenow &&
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			isset( $_GET['page'] ) && 'ct-dashboard' === $_GET['page'];
 
 		return $is_ct_settings;
@@ -613,5 +613,12 @@ if (! function_exists('blocksy_render_view')) {
 		require $file_path;
 
 		return ob_get_clean();
+	}
+}
+
+if (! function_exists('blocksy_render_view_e')) {
+	function blocksy_render_view_e($file_path, $view_variables = [], $default_value = '') {
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo blocksy_render_view($file_path, $view_variables, $default_value);
 	}
 }

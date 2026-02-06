@@ -88,5 +88,5 @@ if (empty($value)) {
 
 $wrapper_attr = get_block_wrapper_attributes($wrapper_attr);
 
-echo blocksy_html_tag('figure', $wrapper_attr, $value);
+blocksy_html_tag_e('figure', $wrapper_attr, $value);
 

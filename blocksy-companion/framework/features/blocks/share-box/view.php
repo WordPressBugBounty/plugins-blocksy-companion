@@ -94,7 +94,7 @@ if (empty($wrapper_attr['style'])) {
 	unset($wrapper_attr['style']);
 }
 
-echo '<div ' . blocksy_attr_to_html($wrapper_attr) . '>';
+blocksy_html_tag_e('div', $wrapper_attr, false);
 
 /**
  * blocksy_share_icons() function is already properly escaped.
@@ -156,6 +156,7 @@ if (empty($share_networks)) {
 $atts['share_networks'] = $share_networks;
 // v.2.0.74 migration
 
+// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 echo blocksy_get_social_share_box([
 	'type' => 'share',
 	'class' => '',

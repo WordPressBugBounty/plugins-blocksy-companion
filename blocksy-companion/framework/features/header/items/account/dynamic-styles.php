@@ -513,7 +513,7 @@ blocksy_output_colors([
 	],
 ]);
 
-if ($forms_type !== 'classic-forms' || is_customize_preview()) {
+if ($forms_type === 'classic-forms') {
 	blocksy_output_colors([
 		'value' => blocksy_akg('account_modal_form_background_color', $atts),
 		'default' => [

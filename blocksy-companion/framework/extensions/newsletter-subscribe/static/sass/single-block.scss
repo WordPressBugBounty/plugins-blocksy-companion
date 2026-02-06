@@ -1,3 +1,5 @@
+@use "../../../../../static/sass/frontend/common-frontend/functions";
+
 .ct-newsletter-subscribe-container {
 	margin-top: 60px;
 	padding: var(--padding, 30px);
@@ -14,7 +16,7 @@
 		text-align: center;
 		margin-inline: auto;
 
-		@include media-breakpoint-up(md) {
+		@include functions.media-breakpoint-up(md) {
 			width: 80%;
 		}
 

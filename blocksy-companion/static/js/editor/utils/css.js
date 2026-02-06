@@ -7,7 +7,7 @@ import {
 } from '@wordpress/element'
 
 import { syncHelpers } from 'blocksy-options'
-import nanoid from 'nanoid'
+import { nanoid } from 'nanoid'
 
 export const getStylesForBlock = (variables, cssURLs = []) => {
 	let result = ''

@@ -121,11 +121,21 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 		$fields_number = '3';
 	}
 
+	$html_args = [];
+	$html_args['class'] = trim($args['class']);
+
+	if (is_customize_preview()) {
+		$html_args['data-shortcut'] = 'border';
+
+		$prefix = blocksy_manager()->screen->get_prefix();
+		$html_args['data-shortcut-location'] = blocksy_first_level_deep_link($prefix) . ':newsletter_subscribe_single_post_enabled';
+	}
+
 	ob_start();
 
 	?>
 
-	<div class="<?php echo esc_attr(trim($args['class'])) ?>">
+	<div <?php blocksy_attr_to_html_e($html_args) ?>>
 		<?php if ($args['has_title']) { ?>
 			<h3><?php echo esc_html($args['title']) ?></h3>
 		<?php } ?>
@@ -143,8 +153,7 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 
 			<div
 				<?php
-					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					echo blocksy_attr_to_html(
+					blocksy_attr_to_html_e(
 						array_merge(
 							[
 								'class' => 'ct-newsletter-subscribe-form-elements',

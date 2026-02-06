@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from '@wordpress/element'
 
-import { getStableJsonKey } from 'ct-wordpress-helpers/get-stable-json-key'
-import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
+import { getStableJsonKey } from '@creative-themes/wordpress-helpers/get-stable-json-key'
+import cachedFetch from '@creative-themes/wordpress-helpers/cached-fetch'
 
 // TODO: maybe rename this hook to show that it can be used for something else
 // other than custom fields.
@@ -10,13 +10,14 @@ import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
 const useCustomFieldData = ({ fieldsContext, fieldDescriptor }) => {
 	const [fieldData, setFieldData] = useState({})
 
-	const requestDescriptor = useMemo(() => {
-		const { provider, id, attributes, ...rest } = fieldDescriptor
+	const { type, post_type, post_id } = fieldsContext
+	const { provider, id, attributes, ...rest } = fieldDescriptor
 
+	const requestDescriptor = useMemo(() => {
 		const url = `${wp.ajax.settings.url}?action=blocksy_dynamic_data_block_custom_field_data`
 
 		const body = {
-			context: fieldsContext,
+			context: { type, post_type, post_id },
 
 			field_provider: provider,
 			field_id: id,
@@ -30,7 +31,7 @@ const useCustomFieldData = ({ fieldsContext, fieldDescriptor }) => {
 			body,
 			cacheKey: getStableJsonKey({ ...body, url }),
 		}
-	}, [fieldsContext, fieldDescriptor])
+	}, [type, post_type, post_id, provider, id, attributes])
 
 	useEffect(() => {
 		cachedFetch(requestDescriptor.url, requestDescriptor.body)

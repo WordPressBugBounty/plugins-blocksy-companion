@@ -853,9 +853,9 @@ if ($loggedin_interaction_type === 'dropdown') {
 
 ?>
 
-<div <?php echo blocksy_attr_to_html($attr); ?>>
+<div <?php blocksy_attr_to_html_e($attr); ?>>
 	<?php
-		echo blocksy_html_tag(
+		blocksy_html_tag_e(
 			$link_tag_name,
 			$link_attr,
 			(
@@ -875,7 +875,8 @@ if ($loggedin_interaction_type === 'dropdown') {
 
 	<?php
 		if (!empty($dropdown_html)) {
- 			echo $dropdown_html;
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $dropdown_html;
  		}
 	?>
 

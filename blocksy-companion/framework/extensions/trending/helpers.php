@@ -5,11 +5,13 @@ add_action('wp_ajax_nopriv_blocksy_get_trending_posts', 'blc_get_trending_posts'
 
 if (! function_exists('blc_get_trending_posts')) {
 	function blc_get_trending_posts() {
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		if (! isset($_REQUEST['page'])) {
 			wp_send_json_error();
 		}
 
-		$page = intval(sanitize_text_field($_REQUEST['page']));
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$page = intval(sanitize_text_field(wp_unslash($_REQUEST['page'])));
 
 		if (! $page) {
 			wp_send_json_error();
@@ -51,14 +53,14 @@ if (! function_exists('blc_get_trending_posts_value')) {
 
 			$date_query = array(
 				'after' => [
-					'year' => date('Y', $time),
-					'month' => date('n', $time),
-					'days' => date('j', $time),
+					'year' => gmdate('Y', $time),
+					'month' => gmdate('n', $time),
+					'days' => gmdate('j', $time),
 				],
 				'before' => [
-					'year' => date('Y'),
-					'month' => date('n'),
-					'days' => date('j'),
+					'year' => gmdate('Y'),
+					'month' => gmdate('n'),
+					'days' => gmdate('j'),
 				],
 				'inclusive' => true,
 			);
@@ -92,6 +94,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 
 		if ($post_type === 'product') {
 			if (get_option('woocommerce_hide_out_of_stock_items') === 'yes') {
+				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
 				$query_args['meta_query'] = [
 					[
 						'key' => '_stock_status',
@@ -107,7 +110,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 			$trending_product_type = blc_theme_functions()->blocksy_get_theme_mod('trending_block_product_type', 'defualt');
 
 			if ($trending_product_type === 'sale') {
-				$query_args['post__in'] = wc_get_product_ids_on_sale();
+				$query_args['post__in'] = blc_get_product_ids_on_sale();
 				$date_query = [];
 			}
 
@@ -118,7 +121,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 					$values = [];
 
 					if (isset($date_query['after'])) {
-						$date_after = date('Y-m-d', strtotime(
+						$date_after = gmdate('Y-m-d', strtotime(
 							$date_query['after']['year'] . '-' .
 							$date_query['after']['month'] . '-' .
 							$date_query['after']['days']
@@ -129,11 +132,11 @@ if (! function_exists('blc_get_trending_posts_value')) {
 					}
 
 					$sql = "
-						SELECT 
+						SELECT
 							product_id,
 						SUM(qty) AS total_qty
 						FROM (
-							SELECT 
+							SELECT
 								o.ID AS order_id,
 								MAX(CASE WHEN lmeta.meta_key = '_product_id' THEN lmeta.meta_value END) AS product_id,
 								MAX(CASE WHEN lmeta.meta_key = '_qty' THEN lmeta.meta_value END) AS qty
@@ -149,7 +152,9 @@ if (! function_exists('blc_get_trending_posts_value')) {
 						ORDER BY total_qty DESC
 					";
 
+					// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.PreparedSQL.NotPrepared
 					$sql_prepared = $wpdb->prepare($sql, ...$values);
+					// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared
 					$results = $wpdb->get_results($sql_prepared, ARRAY_A);
 
 					$identifiers = [];
@@ -160,11 +165,12 @@ if (! function_exists('blc_get_trending_posts_value')) {
 					}
 
 					arsort($identifiers);
-	
+
 					$query_args['post__in'] = array_keys($identifiers);
 					$query_args['orderby'] = 'post__in';
 					$date_query = [];
 				} else {
+					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 					$query_args['meta_key'] = 'total_sales';
 					$query_args['orderby'] = 'meta_value_num';
 					$query_args['order'] = 'DESC';
@@ -173,8 +179,8 @@ if (! function_exists('blc_get_trending_posts_value')) {
 
 			if ($trending_product_type === 'rating') {
 				$reviews_args = [
-					'status' => 'approve', 
-					'post_status' => 'publish', 
+					'status' => 'approve',
+					'post_status' => 'publish',
 					'post_type' => 'product',
 					'date_query' => $date_query,
 				];
@@ -182,7 +188,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 				$reviews = get_comments($reviews_args);
 				$identifiers = [];
 
-				
+
 				foreach ($reviews as $review) {
 
 					if (! isset($identifiers[$review->comment_post_ID])) {
@@ -225,6 +231,7 @@ if (! function_exists('blc_get_trending_posts_value')) {
 				$terms = get_terms(['include' => $cat_id]);
 
 				if (! empty($terms)) {
+					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
 					$query_args['tax_query'] = [
 						[
 							'taxonomy' => $terms[0]->taxonomy,
@@ -472,11 +479,18 @@ function blc_get_trending_block($result = null) {
 
 	?>
 
-	<section <?php echo blocksy_attr_to_html($attr) ?>>
-		<div class="ct-container" <?php echo $data_page ?>>
+	<section <?php blocksy_attr_to_html_e($attr) ?>>
+		<div class="ct-container" <?php
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $data_page
+		?>>
 
-			<<?php echo $label_tag ?> class="ct-module-title">
+			<<?php
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo $label_tag
+			?> class="ct-module-title">
 				<?php
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo $trending_label;
 
 					/**
@@ -484,6 +498,7 @@ function blc_get_trending_block($result = null) {
 					 * The value used here escapes the value properly.
 					 * It contains an inline SVG, which is safe.
 					 */
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo $icon;
 				?>
 
@@ -502,11 +517,14 @@ function blc_get_trending_block($result = null) {
 						</span>
 					</span>
 				<?php } ?>
-			</<?php echo $label_tag ?>>
+			</<?php
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo $label_tag
+			?>>
 
 			<?php
 				foreach ($result['posts'] as $post) {
-					echo blocksy_html_tag(
+					blocksy_html_tag_e(
 						'div',
 						[
 							'class' => 'ct-trending-block-item'

@@ -396,6 +396,14 @@ if (! $only_billing_data) {
 					'documentation' => 'https://creativethemes.com/blocksy/docs/woocommerce/suggested-products/',
 					'customize' => admin_url('customize.php?ct_autofocus=woocommerce_general:has_suggested_products_panel'),
 					'require_refresh' => true,
+				],
+
+				[
+					'id' => 'cart-reserved-timer',
+					'title' => __('Cart Reserved Timer', 'blocksy-companion'),
+					'description' => __('Display a countdown timer for reserved cart items, encouraging users to complete their purchase before the timer expires.', 'blocksy-companion'),
+					'documentation' => 'https://creativethemes.com/blocksy/docs/woocommerce/cart-reserved-timer/',
+					'customize' => admin_url('customize.php?ct_autofocus=woocommerce_general:has_cart_reserved_timer_panel'),
 				]
 			],
 		]

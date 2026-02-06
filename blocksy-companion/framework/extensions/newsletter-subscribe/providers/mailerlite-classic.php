@@ -56,8 +56,10 @@ class MailerliteClassicProvider extends Provider {
 
 		$settings = $this->get_settings();
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_init
 		$curl = curl_init();
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt_array
 		curl_setopt_array($curl, array(
 			CURLOPT_URL => "https://api.mailerlite.com/api/v2/groups/" . $args['group'] . "/subscribers",
 			CURLOPT_RETURNTRANSFER => true,
@@ -76,9 +78,12 @@ class MailerliteClassicProvider extends Provider {
 			),
 		));
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_exec
 		$response = curl_exec($curl);
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_error
 		$err = curl_error($curl);
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_close
 		curl_close($curl);
 
 		if ($err) {

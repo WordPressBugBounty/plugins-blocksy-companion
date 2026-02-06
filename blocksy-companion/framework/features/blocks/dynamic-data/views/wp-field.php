@@ -7,14 +7,13 @@ $value = '';
 $has_fallback = false;
 
 $has_field_link = blocksy_akg('has_field_link', $attributes, 'no') === 'yes';
+$has_field_link_wrap_content = blocksy_akg('has_field_link_wrap_content', $attributes, 'no');
 
-
-
-// blocksy_print($style_attrs);
+$has_archive_prefix = blocksy_akg('has_archive_prefix', $attributes, 'no') === 'yes';
 
 if ($field === 'wp:archive_title') {
 	$archive_title_renderer = new \Blocksy\ArchiveTitleRenderer([
-		'has_label' => false
+		'has_label' => $has_archive_prefix
 	]);
 
 	$value = get_the_archive_title();
@@ -62,6 +61,8 @@ if ($field === 'wp:archive_description') {
 	}
 }
 
+$link_attr = [];
+
 if ($field === 'wp:title') {
 	$value = get_the_title();
 
@@ -82,7 +83,9 @@ if ($field === 'wp:title') {
 			);
 		}
 
-		$value = blocksy_html_tag('a', $link_attr, $value);
+		if ($has_field_link_wrap_content === 'no') {
+			$value = blocksy_html_tag('a', $link_attr, $value);
+		}
 	}
 }
 
@@ -109,7 +112,9 @@ if ($field === 'wp:term_title') {
 				);
 			}
 
-			$value = blocksy_html_tag('a', $link_attr, $value);
+			if ($has_field_link_wrap_content === 'no') {
+				$value = blocksy_html_tag('a', $link_attr, $value);
+			}
 		}
 	}
 }
@@ -137,7 +142,9 @@ if ($field === 'wp:term_count') {
 				);
 			}
 
-			$value = blocksy_html_tag('a', $link_attr, $value);
+			if ($has_field_link_wrap_content === 'no') {
+				$value = blocksy_html_tag('a', $link_attr, $value);
+			}
 		}
 	}
 }
@@ -202,7 +209,9 @@ if ($field === 'wp:date') {
 			);
 		}
 
-		$value = blocksy_html_tag('a', $link_attr, $value);
+		if ($has_field_link_wrap_content === 'no') {
+			$value = blocksy_html_tag('a', $link_attr, $value);
+		}
 	}
 }
 
@@ -236,7 +245,7 @@ if ($field === 'wp:comments') {
 }
 
 if ($field === 'wp:author') {
-	$author_id = get_post_field('post_author', get_the_ID());
+	$author_id = blocksy_get_author_id();
 	$author_field = blocksy_akg('author_field', $attributes, 'display_name');
 
 	$overide_link = '';
@@ -360,7 +369,7 @@ if ($field === 'wp:terms') {
 				$termClass = blocksy_akg('termClass', $attributes, '');
 
 				if (! empty($termClass)) {
-                    $classes[] = $termClass;
+					$classes[] = $termClass;
 				}
 
 				if (! empty($classes)) {
@@ -445,10 +454,14 @@ $block_type = WP_Block_Type_Registry::get_instance()->get_registered('blocksy/dy
 $block_type->supports['color'] = true;
 wp_apply_colors_support($block_type, $attributes);
 
+if (
+	$has_field_link_wrap_content === 'yes'
+	&&
+	$has_field_link
+) {
+	$value = blocksy_html_tag('a', $link_attr, $value);
+}
+
 $wrapper_attr = get_block_wrapper_attributes($wrapper_attr);
 
-echo blocksy_html_tag(
-	$tagName,
-	$wrapper_attr,
-	$value
-);
+blocksy_html_tag_e($tagName, $wrapper_attr, $value);

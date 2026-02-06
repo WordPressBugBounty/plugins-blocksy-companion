@@ -85,6 +85,7 @@ foreach ($all_post_types as $custom_post_type => $label) {
 				'sync' => [
 					'selector' => '.ct-trending-block',
 					'render' => function () {
+						// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 						echo blc_get_trending_block();
 					}
 				],
@@ -146,6 +147,7 @@ foreach ($all_post_types as $custom_post_type => $label) {
 					'sync' => [
 						'selector' => '.ct-trending-block',
 						'render' => function () {
+							// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							echo blc_get_trending_block();
 						}
 					],
@@ -204,6 +206,7 @@ $options = [
 									'sync' => [
 										'selector' => '.ct-trending-block',
 										'render' => function () {
+											// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 											echo blc_get_trending_block();
 										}
 									]
@@ -225,6 +228,7 @@ $options = [
 										'sync' => [
 											'selector' => '.ct-trending-block',
 											'render' => function () {
+												// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 												echo blc_get_trending_block();
 											}
 										],
@@ -260,6 +264,7 @@ $options = [
 												'sync' => [
 													'selector' => '.ct-trending-block',
 													'render' => function () {
+														// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 														echo blc_get_trending_block();
 													}
 												]
@@ -280,6 +285,7 @@ $options = [
 								'sync' => [
 									'selector' => '.ct-trending-block',
 									'render' => function () {
+										// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 										echo blc_get_trending_block();
 									}
 								],
@@ -312,6 +318,7 @@ $options = [
 										'sync' => [
 											'selector' => '.ct-trending-block',
 											'render' => function () {
+												// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 												echo blc_get_trending_block();
 											}
 										],
@@ -333,6 +340,7 @@ $options = [
 								'sync' => [
 									'selector' => '.ct-trending-block',
 									'render' => function () {
+										// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 										echo blc_get_trending_block();
 									}
 								],
@@ -366,6 +374,7 @@ $options = [
 											'sync' => [
 												'selector' => '.ct-trending-block',
 												'render' => function () {
+													// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 													echo blc_get_trending_block();
 												}
 											],
@@ -398,6 +407,7 @@ $options = [
 												'sync' => [
 													'selector' => '.ct-trending-block',
 													'render' => function () {
+														// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 														echo blc_get_trending_block();
 													}
 												],
@@ -421,6 +431,7 @@ $options = [
 											'sync' => [
 												'selector' => '.ct-trending-block',
 												'render' => function () {
+													// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 													echo blc_get_trending_block();
 												}
 											]
@@ -435,6 +446,7 @@ $options = [
 									'sync' => [
 										'selector' => '.ct-trending-block',
 										'render' => function () {
+											// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 											echo blc_get_trending_block();
 										}
 									]
@@ -464,6 +476,7 @@ $options = [
 											'selector' => '.ct-trending-block',
 											'loader_selector' => '.entry-meta',
 											'render' => function () {
+												// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 												echo blc_get_trending_block();
 											}
 										],
@@ -496,6 +509,7 @@ $options = [
 								'sync' => [
 									'selector' => '.ct-trending-block',
 									'render' => function () {
+										// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 										echo blc_get_trending_block();
 									}
 								],

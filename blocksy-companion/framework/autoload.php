@@ -82,6 +82,7 @@ class Autoloader {
 			'Editor\\Blocks\\BreadCrumbs' => 'framework/features/blocks/breadcrumbs/block.php',
 			'Editor\\Blocks\\Query' => 'framework/features/blocks/query/block.php',
 			'Editor\\Blocks\\TaxQuery' => 'framework/features/blocks/tax-query/block.php',
+			'Editor\\Blocks\\TermQueryPaginationAdapter' => 'framework/features/blocks/tax-query/term-query-adapter-pagination.php',
 			'Editor\\Blocks\\DynamicData' => 'framework/features/blocks/dynamic-data/block.php',
 			'Editor\\Blocks\\DynamicDataAPI' => 'framework/features/blocks/dynamic-data/includes/api.php',
 

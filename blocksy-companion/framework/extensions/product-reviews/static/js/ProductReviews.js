@@ -8,7 +8,7 @@ import {
 import ctEvents from 'ct-events'
 
 import { OptionsPanel, Overlay } from 'blocksy-options'
-import nanoid from 'nanoid'
+import { nanoid } from 'nanoid'
 
 import classnames from 'classnames'
 import { __, sprintf } from 'ct-i18n'

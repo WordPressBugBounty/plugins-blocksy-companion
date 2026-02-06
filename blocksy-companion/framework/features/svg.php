@@ -7,7 +7,7 @@ class SvgHandling {
 		add_filter(
 			'wp_handle_upload_prefilter',
 			function ($file) {
-				$extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+				$extension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
 
 				if ('svg' !== $extension) {
 					return $file;
@@ -19,7 +19,26 @@ class SvgHandling {
 
 				$svg_content = file_get_contents($file['tmp_name']);
 
-				// Sanitize the SVG content
+				$trimmed_content = trim($svg_content);
+
+				if (
+					strpos($trimmed_content, '<?xml') !== 0
+					&&
+					strpos($trimmed_content, '<svg') !== 0
+				) {
+					$file['error'] = __('This file does not appear to be a valid SVG file.', 'blocksy-companion');
+					return $file;
+				}
+
+				if (
+					stripos($svg_content, '<?php') !== false
+					||
+					stripos($svg_content, '<?=') !== false
+				) {
+					$file['error'] = __('SVG files cannot contain PHP code.', 'blocksy-companion');
+					return $file;
+				}
+
 				$sanitized_content = $this->cleanup_svg($svg_content);
 
 				file_put_contents($file['tmp_name'], $sanitized_content);
@@ -27,24 +46,6 @@ class SvgHandling {
 				return $file;
 			}
 		);
-
-		add_filter(
-			'wp_check_filetype_and_ext',
-			function ($data = null, $file = null, $filename = null, $mimes = null) {
-				if (strpos($filename, '.svg') !== false) {
-					$data['type'] = 'image/svg+xml';
-					$data['ext'] = 'svg';
-				}
-
-				return $data;
-			},
-			75, 4
-		);
-
-		add_filter('upload_mimes', function ($mimes) {
-			$mimes['svg'] = 'image/svg+xml';
-			return $mimes;
-		});
 
 		add_filter(
 			'wp_get_attachment_metadata',
@@ -84,6 +85,43 @@ class SvgHandling {
 			},
 			10, 4
 		);
+
+		$should_add_filter = true;
+
+		// Avoid adding the filter during image cropping to prevent issues with SVGs.
+		// WP can't locate editor for SVGs so it throws an error.
+		if (
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			isset($_REQUEST['action'])
+			&&
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$_REQUEST['action'] === 'crop-image'
+		) {
+			$should_add_filter = false;
+		}
+
+		if ($should_add_filter) {
+			add_filter('upload_mimes', [$this, 'upload_mimes']);
+			add_filter('wp_check_filetype_and_ext', [$this, 'wp_check_filetype_and_ext'], 75, 4);
+		}
+	}
+
+	public function wp_check_filetype_and_ext($data = null, $file = null, $filename = null, $mimes = null) {
+		$extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
+
+		// Only accept files with .svg as the final extension
+		// Reject files like test.svg.php, test.svg.jpg, etc.
+		if ($extension === 'svg') {
+			$data['type'] = 'image/svg+xml';
+			$data['ext'] = 'svg';
+		}
+
+		return $data;
+	}
+
+	public function upload_mimes($mimes) {
+		$mimes['svg'] = 'image/svg+xml';
+		return $mimes;
 	}
 
 	public function filter_get_attachment_metadata($data, $attachment_id) {
@@ -247,6 +285,10 @@ class SvgHandling {
 		require_once($base_path . '/Sanitizer.php');
 
 		$sanitizer = new \blocksy\enshrined\svgSanitize\Sanitizer();
+
+		// Remove <?xml tag from the SVG content to avoid html5
+		// validation issues when embedding SVGs inline.
+		$sanitizer->removeXMLTag(true);
 
 		return $sanitizer->sanitize($content);
 	}

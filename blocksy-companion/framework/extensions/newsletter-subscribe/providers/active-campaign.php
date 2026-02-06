@@ -62,8 +62,10 @@ class ActiveCampaignProvider extends Provider {
 
 		$settings = $this->get_settings();
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_init
 		$curl = curl_init();
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt_array
 		curl_setopt_array($curl, array(
 			CURLOPT_URL => "{$settings['api_url']}/api/3/contacts",
 			CURLOPT_RETURNTRANSFER => true,
@@ -85,9 +87,12 @@ class ActiveCampaignProvider extends Provider {
 			),
 		));
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_exec
 		$response = curl_exec($curl);
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_error
 		$err = curl_error($curl);
 
+		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_close
 		curl_close($curl);
 
 		if ($err) {
@@ -105,8 +110,10 @@ class ActiveCampaignProvider extends Provider {
 				];
 			}
 
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_init
 			$curl = curl_init();
 
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt_array
 			curl_setopt_array($curl, array(
 				CURLOPT_URL => "{$settings['api_url']}/api/3/contactLists",
 				CURLOPT_RETURNTRANSFER => true,
@@ -129,9 +136,12 @@ class ActiveCampaignProvider extends Provider {
 				),
 			));
 
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_exec
 			$response = curl_exec($curl);
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_error
 			$err = curl_error($curl);
 
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_close
 			curl_close($curl);
 
 			if ($err) {

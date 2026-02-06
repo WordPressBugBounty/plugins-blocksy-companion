@@ -66,7 +66,7 @@ class ExtensionCli {
 		$format = isset($assoc_args['format']) ? $assoc_args['format'] : 'table';
 
 		if ($format === 'ids') {
-			echo implode(' ', array_column($items, 'id'));
+			echo esc_html(implode(' ', array_column($items, 'id')));
 			return;
 		}
 

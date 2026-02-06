@@ -191,22 +191,32 @@ if (! empty($items_spacing)) {
 
 ?>
 
-<div <?php echo blocksy_attr_to_html($attr) ?>>
-	<?php echo $image_output; ?>
+<div <?php blocksy_attr_to_html_e($attr) ?>>
+	<?php
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $image_output;
+	?>
 
 	<div class="ct-about-me-name">
-		<span><?php echo $about_name; ?></span>
+		<span><?php
+			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo $about_name;
+		?></span>
 
 		<?php if ($about_source === 'from_wp') { ?>
-			<a href="<?php echo get_author_posts_url($user_id); ?>">
-				<?php echo __('View Profile', 'blocksy-companion'); ?>
+			<a href="<?php echo esc_url(get_author_posts_url($user_id)); ?>">
+				<?php echo esc_html__('View Profile', 'blocksy-companion'); ?>
 			</a>
 		<?php } ?>
 	</div>
 
-	<div class="ct-about-me-text"><?php echo $about_text; ?></div>
+	<div class="ct-about-me-text"><?php
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo $about_text;
+	?></div>
 
 	<?php
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo blocksy_social_icons(
 			blocksy_default_akg('about_socials', $atts, [
 				[

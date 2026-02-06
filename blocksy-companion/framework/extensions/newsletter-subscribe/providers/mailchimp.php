@@ -138,6 +138,10 @@ class MailchimpProvider extends Provider {
 			return 'api_key_invalid';
 		}
 
+		$name_parts = $this->maybe_split_name($args['name']);
+		$fname = $name_parts['first_name'];
+		$lname = $name_parts['last_name'];
+
 		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt_array
 		curl_setopt_array($curl, array(
 			CURLOPT_URL => 'https://' . $region[1] . '.api.mailchimp.com/3.0/lists/' . $args['group'] . '/members/',
@@ -149,8 +153,13 @@ class MailchimpProvider extends Provider {
 			CURLOPT_CUSTOMREQUEST => "POST",
 			CURLOPT_POSTFIELDS => json_encode([
 				'email_address' => $args['email'],
-				'first_name' => $args['name'],
-				'status' => 'subscribed'
+				'status' => 'subscribed',
+				'merge_fields' => array_merge(
+					[
+						'FNAME' => $fname						
+					],
+					(! empty($lname) ? [ 'LNAME' => $lname ] : [])
+				)
 			]),
 			CURLOPT_USERPWD => 'user:' . $settings['api_key'],
 			CURLOPT_HTTPHEADER => array(

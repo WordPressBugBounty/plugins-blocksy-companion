@@ -36,9 +36,11 @@ class Plugin {
 
 	public $inline_styles_collector = null;
 
+	public $blocks = null;
+
 	private $is_blocksy = '__NOT_SET__';
 	public $is_blocksy_data = null;
-	private $desired_blocksy_version = '2.0.96-beta1';
+	private $desired_blocksy_version = '2.1.16-dev1';
 
 	private $request_uri = '';
 
@@ -144,7 +146,7 @@ class Plugin {
 
 		$this->header = new HeaderAdditions();
 
-		new Editor\Blocks();
+		$this->blocks = new Editor\Blocks();
 
 		$this->feat_google_analytics = new GoogleAnalytics();
 		new OpenGraphMetaData();
@@ -185,13 +187,19 @@ class Plugin {
 		require_once BLOCKSY_PATH . '/framework/helpers/theme-functions.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/helpers.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/exts.php';
+		require_once BLOCKSY_PATH . '/framework/helpers/woo.php';
 
 		// Some plugins override the REQUEST_URI server variable and we need to
 		// persist the original value for use within the blocksy_current_url()
 		// helper function.
 		//
 		// Mainly caused by TranslatePress Business SEO pack.
-		$this->request_uri = isset($_SERVER['REQUEST_URI']) ? sanitize_text_field(wp_unslash($_SERVER['REQUEST_URI'])) : '';
+		//
+		// Important -- should not be escaped in order to preserve the original
+		// value.
+		//
+		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		$this->request_uri = isset($_SERVER['REQUEST_URI']) ? wp_unslash($_SERVER['REQUEST_URI']) : '';
 
 		add_filter(
 			'extra_theme_headers',
@@ -266,7 +274,13 @@ class Plugin {
 					&&
 					! empty($_REQUEST['customize_theme'])
 				) {
-					$maybe_foreign_theme = sanitize_text_field(wp_unslash($_REQUEST['customize_theme']));
+					// It's important to not sanitize this value here. We need
+					// the exact theme slug to compare it with the current one.
+					//
+					// We will not persist this value anywhere, so it's safe.
+					//
+					// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+					$maybe_foreign_theme = wp_unslash($_REQUEST['customize_theme']);
 				}
 
 				if (
@@ -274,6 +288,12 @@ class Plugin {
 					&&
 					! empty($_REQUEST['wp_theme_preview'])
 				) {
+					// It's important to not sanitize this value here. We need
+					// the exact theme slug to compare it with the current one.
+					//
+					// We will not persist this value anywhere, so it's safe.
+					//
+					// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 					$maybe_foreign_theme = sanitize_text_field(wp_unslash($_REQUEST['wp_theme_preview']));
 				}
 
@@ -365,6 +385,24 @@ class Plugin {
 				// This causes the theme to be skipped and the companion plugin
 				// to run, which causes lots of issues in various environments.
 				if ($should_skip_themes_wp_cli) {
+					$is_correct_theme = false;
+					$is_correct_version = false;
+				}
+			}
+
+			if (! function_exists('is_plugin_active')) {
+				include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+			}
+
+			if (is_plugin_active('breakdance/plugin.php')) {
+				$is_theme_disabled = (string) json_decode(
+					get_option('breakdance_is_theme_disabled', 'false'),
+					true
+				);
+
+				$is_theme_disabled = $is_theme_disabled === 'yes' || boolval($_GET['builder_preview'] ?? false);
+
+				if ($is_theme_disabled) {
 					$is_correct_theme = false;
 					$is_correct_version = false;
 				}

@@ -48,23 +48,20 @@ class MailPoetProvider extends Provider {
 
 		$mailpoet_api = \MailPoet\API\API::MP('v1');
 
-		$lname = '';
-		$fname = '';
-
-		if (! empty($args['name'])) {
-			$parts = explode(' ', $args['name']);
-
-			$lname = array_pop($parts);
-			$fname = implode(' ', $parts);
-		}
+		$name_parts = $this->maybe_split_name($args['name']);
+		$fname = $name_parts['first_name'];
+		$lname = $name_parts['last_name'];
 
 		$list_ids = [$args['group']];
 
 		$subscriber = [
 			'email' => $args['email'],
 			'first_name' => $fname,
-			'last_name' => $lname
 		];
+
+		if (! empty($lname)) {
+			$subscriber['last_name'] = $lname;
+		}
 
 		try {
 			$get_subscriber = $mailpoet_api->getSubscriber($subscriber['email']);

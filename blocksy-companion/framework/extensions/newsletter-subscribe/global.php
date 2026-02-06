@@ -96,7 +96,7 @@ blocksy_output_colors([
 	],
 ]);
 
-if ($forms_type !== 'classic-forms' || is_customize_preview()) {
+if ($forms_type === 'classic-forms') {
 	blocksy_output_colors([
 		'value' => blc_theme_functions()->blocksy_get_theme_mod('newsletter_subscribe_input_background'),
 		'default' => [

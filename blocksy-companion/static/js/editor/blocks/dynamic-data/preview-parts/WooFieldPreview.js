@@ -126,6 +126,7 @@ const WooFieldPreviewWithContext = ({
 						taxonomy={taxonomy}
 						fallback={fallback}
 						fieldsDescriptor={fieldsDescriptor}
+						product={product}
 					/>
 				</ContentWithBeforeAndAfter>
 			</TagName>

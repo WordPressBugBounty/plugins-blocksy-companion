@@ -9,18 +9,19 @@ class DemoInstallExport {
 		}
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		if (! isset($_REQUEST['demoId'])) {
+		$demoId = isset($_REQUEST['demoId']) ? sanitize_text_field(wp_unslash($_REQUEST['demoId'])) : '';
+
+		if ($demoId === '') {
 			wp_send_json_error();
 		}
 
 		global $wp_customize;
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$demoId = sanitize_text_field($_REQUEST['demoId']);
+		$builder = isset($_REQUEST['builder']) ? sanitize_text_field(wp_unslash($_REQUEST['builder'])) : '';
+
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$builder = sanitize_text_field($_REQUEST['builder']);
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		$plugins = sanitize_text_field($_REQUEST['plugins']);
+		$plugins = isset($_REQUEST['plugins']) ? sanitize_text_field(wp_unslash($_REQUEST['plugins'])) : '';
 
 		$plugins = explode(',', preg_replace('/\s+/', '', $plugins));
 
@@ -52,7 +53,7 @@ class DemoInstallExport {
 			'plugins' => $plugins
 		];
 
-		update_option( 'blocksy_ext_demos_exported_demo_data', [
+		update_option('blocksy_ext_demos_exported_demo_data', [
 			'demoId' => $demoId,
 			'builder' => $builder,
 			'plugins' => $plugins

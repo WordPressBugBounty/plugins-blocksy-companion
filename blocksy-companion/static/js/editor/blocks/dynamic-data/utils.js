@@ -18,6 +18,16 @@ export const fieldIsImageLike = (fieldDescriptor) => {
 	return fieldDescriptor.type === 'image'
 }
 
+export const fieldIsCustomField = (fieldDescriptor) => {
+	if (!fieldDescriptor) {
+		return false
+	}
+
+	return (
+		fieldDescriptor.provider !== 'wp' && fieldDescriptor.provider !== 'woo'
+	)
+}
+
 const POSITION_CLASSNAMES = {
 	'top left': 'is-position-top-left',
 	'top center': 'is-position-top-center',

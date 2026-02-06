@@ -20,48 +20,59 @@ $close_button_type = blocksy_akg('account_close_button_type', $atts, 'type-1');
 
 ?>
 
-<div id="account-modal" class="ct-panel" data-behaviour="modal" role="dialog" aria-label="<?php echo __('Account modal', 'blocksy-companion') ?>" inert>
-	<div class="ct-panel-actions">
-		<button class="ct-toggle-close" data-type="<?php echo $close_button_type ?>" aria-label="<?php echo __('Close account modal', 'blocksy-companion') ?>">
-			<svg class="ct-icon" width="12" height="12" viewBox="0 0 15 15">
-				<path d="M1 15a1 1 0 01-.71-.29 1 1 0 010-1.41l5.8-5.8-5.8-5.8A1 1 0 011.7.29l5.8 5.8 5.8-5.8a1 1 0 011.41 1.41l-5.8 5.8 5.8 5.8a1 1 0 01-1.41 1.41l-5.8-5.8-5.8 5.8A1 1 0 011 15z"/>
-			</svg>
-		</button>
-	</div>
+<template id="ct-account-modal-template">
+	<div id="account-modal" class="ct-panel" data-behaviour="modal" role="dialog" aria-label="<?php echo esc_attr__('Account modal', 'blocksy-companion') ?>" inert>
+		<div class="ct-panel-actions">
+			<button class="ct-toggle-close" data-type="<?php echo esc_attr($close_button_type) ?>" aria-label="<?php echo esc_attr__('Close account modal', 'blocksy-companion') ?>">
+				<svg class="ct-icon" width="12" height="12" viewBox="0 0 15 15">
+					<path d="M1 15a1 1 0 01-.71-.29 1 1 0 010-1.41l5.8-5.8-5.8-5.8A1 1 0 011.7.29l5.8 5.8 5.8-5.8a1 1 0 011.41 1.41l-5.8 5.8 5.8 5.8a1 1 0 01-1.41 1.41l-5.8-5.8-5.8 5.8A1 1 0 011 15z"/>
+				</svg>
+			</button>
+		</div>
 
-	<div class="ct-panel-content">
-		<div class="ct-account-modal">
-			<?php if (\Blocksy\Plugin::instance()->account_auth->get_registration_strategy()) { ?>
-				<ul>
-					<li class="active ct-login" tabindex="0">
-						<?php echo __('Login', 'blocksy-companion') ?>
-					</li>
-
-					<li class="ct-register" tabindex="0">
-						<?php echo __('Sign Up', 'blocksy-companion') ?>
-					</li>
-				</ul>
-			<?php } ?>
-
-			<div class="ct-account-forms">
-				<div class="ct-login-form active">
-					<?php echo $form_views['login'] ?>
-				</div>
-
+		<div class="ct-panel-content">
+			<div class="ct-account-modal">
 				<?php if (\Blocksy\Plugin::instance()->account_auth->get_registration_strategy()) { ?>
-					<div class="ct-register-form">
-						<?php echo $form_views['register'] ?>
-					</div>
+					<ul>
+						<li class="active ct-login" tabindex="0">
+							<?php echo esc_html__('Login', 'blocksy-companion') ?>
+						</li>
+
+						<li class="ct-register" tabindex="0">
+							<?php echo esc_html__('Sign Up', 'blocksy-companion') ?>
+						</li>
+					</ul>
 				<?php } ?>
 
-				<div class="ct-forgot-password-form">
-					<?php echo $form_views['lostpassword'] ?>
+				<div class="ct-account-forms">
+					<div class="ct-login-form active">
+						<?php
+							// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							echo $form_views['login'];
+						?>
+					</div>
 
-					<a href="#" class="ct-back-to-login ct-login">
-						← <?php echo __('Back to login', 'blocksy-companion') ?>
-					</a>
+					<?php if (\Blocksy\Plugin::instance()->account_auth->get_registration_strategy()) { ?>
+						<div class="ct-register-form">
+							<?php
+								// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+								echo $form_views['register'];
+							?>
+						</div>
+					<?php } ?>
+
+					<div class="ct-forgot-password-form">
+						<?php
+							// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+							echo $form_views['lostpassword'];
+						?>
+
+						<a href="#" class="ct-back-to-login ct-login">
+							← <?php echo esc_html__('Back to login', 'blocksy-companion') ?>
+						</a>
+					</div>
 				</div>
-            </div>
+			</div>
 		</div>
 	</div>
-</div>
+</template>

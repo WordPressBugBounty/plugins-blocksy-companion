@@ -128,7 +128,7 @@ $options = [
 			'attribute' => [
 				'label' => __('Attribute', 'blocksy-companion'),
 				'type' => 'ct-select',
-				'value' => '',
+				'value' => isset(array_keys($tax_choices)[0]) ? array_keys($tax_choices)[0] : '',
 				'design' => 'inline',
 				'setting' => [ 'transport' => 'postMessage' ],
 				'choices' => blocksy_ordered_keys($tax_choices),

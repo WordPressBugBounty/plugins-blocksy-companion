@@ -25,8 +25,13 @@ const Edit = ({
 }) => {
 	const { postType, taxonomy } = context
 
-	const { fieldsDescriptor, options, fieldsChoices, fullDescriptorLoaded } =
-		useDynamicDataDescriptor(context)
+	const {
+		fieldsDescriptor,
+		linkFieldsChoices,
+		options,
+		fieldsChoices,
+		fullDescriptorLoaded,
+	} = useDynamicDataDescriptor(context)
 
 	const taxonomies = useTaxonomies(postType)
 
@@ -140,6 +145,7 @@ const Edit = ({
 				fieldsChoices={fieldsChoices}
 				clientId={clientId}
 				fieldsDescriptor={fieldsDescriptor}
+				linkFieldsChoices={linkFieldsChoices}
 				taxonomies={taxonomies}
 				{...context}
 				name={name}

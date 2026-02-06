@@ -1,6 +1,6 @@
 import { useEffect, useState } from '@wordpress/element'
 
-import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
+import cachedFetch from '@creative-themes/wordpress-helpers/cached-fetch'
 
 export const usePostsBlockData = ({ attributes, previewedPostId }) => {
 	const [blockData, setBlockData] = useState(null)

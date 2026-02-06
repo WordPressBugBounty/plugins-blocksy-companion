@@ -3,7 +3,7 @@
 $field = blocksy_akg('field', $attributes, 'wp:title');
 
 if (strpos($field, 'woo:') === 0) {
-	echo blocksy_render_view(
+	blocksy_render_view_e(
 		dirname(__FILE__) . '/views/woo-field.php',
 		[
 			'attributes' => $attributes,
@@ -22,7 +22,7 @@ if (strpos($field, 'wp:') === 0) {
 		&&
 		$field !== 'wp:archive_image'
 	) {
-		echo blocksy_render_view(
+		blocksy_render_view_e(
 			dirname(__FILE__) . '/views/wp-field.php',
 			[
 				'attributes' => $attributes,
@@ -36,7 +36,7 @@ if (strpos($field, 'wp:') === 0) {
 		global $blocksy_term_obj;
 
 		if (isset($blocksy_term_obj)) {
-			echo blocksy_render_view(
+			blocksy_render_view_e(
 				dirname(__FILE__) . '/views/archive-image-field.php',
 				[
 					'attributes' => $attributes,
@@ -49,7 +49,7 @@ if (strpos($field, 'wp:') === 0) {
 	}
 
 	if ($field === 'wp:archive_image') {
-		echo blocksy_render_view(
+		blocksy_render_view_e(
 			dirname(__FILE__) . '/views/archive-image-field.php',
 			[
 				'attributes' => $attributes,
@@ -60,7 +60,7 @@ if (strpos($field, 'wp:') === 0) {
 	}
 
 	if ($field === 'wp:featured_image') {
-		echo blocksy_render_view(
+		blocksy_render_view_e(
 			dirname(__FILE__) . '/views/image-field.php',
 			[
 				'attributes' => $attributes,
@@ -73,7 +73,7 @@ if (strpos($field, 'wp:') === 0) {
 	}
 
 	if ($field === 'wp:author_avatar') {
-		echo blocksy_render_view(
+		blocksy_render_view_e(
 			dirname(__FILE__) . '/views/avatar-field.php',
 			[
 				'attributes' => $attributes,
@@ -120,7 +120,7 @@ if (! $field_render) {
 
 if ($field_render['type'] === \Blocksy\Extensions\PostTypesExtra\CustomField::$TYPE_IMAGE) {
 	if (isset($field_render['value']['id'])) {
-		echo blocksy_render_view(
+		blocksy_render_view_e(
 			dirname(__FILE__) . '/views/image-field.php',
 			[
 				'attributes' => $attributes,
@@ -133,7 +133,7 @@ if ($field_render['type'] === \Blocksy\Extensions\PostTypesExtra\CustomField::$T
 	return;
 }
 
-echo blocksy_render_view(
+blocksy_render_view_e(
 	dirname(__FILE__) . '/views/custom-text-field.php',
 	[
 		'attributes' => $attributes,

@@ -28,7 +28,16 @@ if (
 
 ?>
 
-<form name="registerform" id="registerform" class="<?php echo $class ?>" action="#" method="post" novalidate="novalidate">
+<form <?php
+	blocksy_attr_to_html_e([
+		'name' => 'registerform',
+		'id' => 'registerform',
+		'class' => $class,
+		'action' => '#',
+		'method' => 'post',
+		'novalidate' => 'novalidate'
+	]);
+?>>
 	<?php
 		if (function_exists('WC')) {
 			do_action('woocommerce_register_form_start');
@@ -38,22 +47,22 @@ if (
 
 	<?php if ($has_username) { ?>
 		<p>
-			<label for="user_login_register"><?php echo __('Username', 'blocksy-companion') ?></label>
+			<label for="user_login_register"><?php echo esc_html__('Username', 'blocksy-companion') ?></label>
 			<input type="text" name="user_login" id="user_login_register" class="input" value="" size="20" autocomplete="username" autocapitalize="off">
 		</p>
 	<?php } ?>
 
 	<p>
-		<label for="ct_user_email"><?php echo __('Email', 'blocksy-companion') ?></label>
+		<label for="ct_user_email"><?php echo esc_html__('Email', 'blocksy-companion') ?></label>
 		<input type="email" name="user_email" id="ct_user_email" class="input" value="" size="20" autocomplete="email">
 	</p>
 
 	<?php if ($has_password) { ?>
 		<p>
-			<label for="user_pass_register"><?php echo __('Password', 'blocksy-companion') ?></label>
-			<span class="<?php echo $password_class ?>">
+			<label for="user_pass_register"><?php echo esc_html__('Password', 'blocksy-companion') ?></label>
+			<span class="<?php echo esc_attr($password_class) ?>">
 				<?php
-					echo blocksy_html_tag(
+					blocksy_html_tag_e(
 						'input',
 						apply_filters('blocksy:account:modal:register:password:attr', [
 							'type' => 'password',
@@ -73,7 +82,7 @@ if (
 
 	<?php if (\Blocksy\Plugin::instance()->account_auth->get_registration_strategy() === 'woocommerce' && ! $has_password) { ?>
 		<p>
-			<?php echo __('A link to set a new password will be sent to your email address.', 'blocksy-companion') ?>
+			<?php echo esc_html__('A link to set a new password will be sent to your email address.', 'blocksy-companion') ?>
 		</p>
 	<?php } ?>
 
@@ -109,13 +118,13 @@ if (
 
 	<?php if (!\Blocksy\Plugin::instance()->account_auth->get_registration_strategy() === 'woocommerce') { ?>
 		<p id="reg_passmail">
-			<?php echo __('Registration confirmation will be emailed to you.', 'blocksy-companion') ?>
+			<?php echo esc_html__('Registration confirmation will be emailed to you.', 'blocksy-companion') ?>
 		</p>
 	<?php } ?>
 
 	<p>
 		<button class="ct-button ct-account-register-submit has-text-align-center" name="wp-submit">
-			<?php echo __('Register', 'blocksy-companion') ?>
+			<?php echo esc_html__('Register', 'blocksy-companion') ?>
 
 			<svg class="ct-button-loader" width="16" height="16" viewBox="0 0 24 24">
 				<circle cx="12" cy="12" r="10" opacity="0.2" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2.5"/>
@@ -140,7 +149,7 @@ if (
 				&&
 				function_exists('dokan')
 			) {
-				echo blocksy_html_tag(
+				blocksy_html_tag_e(
 					'input',
 					[
 						'type' => 'hidden',

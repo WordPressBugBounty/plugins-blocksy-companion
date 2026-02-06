@@ -22,10 +22,12 @@ $query_args = [
 ];
 
 if (! empty($args['meta_value'])) {
+	// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
 	$query_args['meta_value'] = $args['meta_value'];
 }
 
 if (! empty($args['meta_key'])) {
+	// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 	$query_args['meta_key'] = $args['meta_key'];
 }
 
@@ -109,15 +111,21 @@ if (
 		$tax_query = array_merge($to_exclude, $tax_query);
 	}
 
+	// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
 	$query_args['tax_query'] = $tax_query;
 }
 
+// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 if (isset($_GET['blocksy_term_id'])) {
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	$blocksy_term_id = intval($_GET['blocksy_term_id']);
+
+	// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_tax_query
 	$query_args['tax_query'] = [
 		[
 			'field' => 'term_id',
-			'terms' => esc_sql($_GET['blocksy_term_id']),
-			'taxonomy' => get_term($_GET['blocksy_term_id'])->taxonomy
+			'terms' => esc_sql($blocksy_term_id),
+			'taxonomy' => get_term($blocksy_term_id)->taxonomy
 		]
 	];
 }
@@ -133,6 +141,7 @@ if (! $query->have_posts() && $args['no_results'] === 'skip') {
 }
 
 if (! empty($content)) {
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo $content;
 }
 
@@ -167,6 +176,7 @@ if ($args['view'] === 'slider') {
 		$pills_container_attr['data-flexy'] .= ':paused';
 	}
 
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo blocksy_flexy(array_merge([
 		'class' => $shortcode_class,
 		'images' => $images,
@@ -200,6 +210,7 @@ if ($args['view'] === 'slider') {
 		}
 	}
 
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo '<div class="' . $shortcode_class . '" data-prefix="' . $prefix . '">';
 
 	if (
@@ -225,6 +236,7 @@ if ($args['view'] === 'slider') {
 
 	$wp_query = $query;
 
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo blocksy_render_archive_cards([
 		'prefix' => $prefix,
 		'query' => $query,

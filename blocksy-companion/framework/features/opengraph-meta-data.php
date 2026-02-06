@@ -37,7 +37,7 @@ class OpenGraphMetaData {
 							],
 
 							'opengraph_twitter_username' => [
-								'label' => __( 'Twitter Username', 'blocksy-companion' ),
+								'label' => __( 'X (Twitter) Username', 'blocksy-companion' ),
 								'type' => 'text',
 								'design' => 'inline',
 								'value' => ''
@@ -208,6 +208,7 @@ class OpenGraphMetaData {
 			$output .= $this->get_open_graph_tag('name', 'twitter:creator', trim($twitter_handle));
 		}
 
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo $output;
 	}
 

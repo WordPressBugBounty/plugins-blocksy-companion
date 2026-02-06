@@ -24,7 +24,7 @@ const AttributesPreview = ({
 		fieldDescriptor: {
 			provider: 'woo',
 			id: 'attributes',
-			attribute: req_attribute,
+			attributes,
 		},
 	})
 

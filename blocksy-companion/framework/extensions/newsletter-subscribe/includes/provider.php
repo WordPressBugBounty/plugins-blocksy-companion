@@ -57,6 +57,10 @@ class Provider {
 			return new EmailOctopusProvider();
 		}
 
+		if ($provider === 'klaviyo') {
+			return new KlaviyoProvider();
+		}
+
 		return new MailerliteClassicProvider();
 	}
 
@@ -112,6 +116,27 @@ class Provider {
 		}
 
 		return $can;
+	}
+
+	public function maybe_split_name($full_name) {
+		$lname = '';
+		$fname = '';
+
+		if (! empty($full_name)) {
+			$parts = explode(' ', $full_name);
+
+			if (count($parts) > 1) {
+				$lname = array_pop($parts);
+				$fname = implode(' ', $parts);
+			} else {
+				$fname = $full_name;
+			}
+		}
+
+		return [
+			'first_name' => $fname,
+			'last_name' => $lname,
+		];
 	}
 }
 

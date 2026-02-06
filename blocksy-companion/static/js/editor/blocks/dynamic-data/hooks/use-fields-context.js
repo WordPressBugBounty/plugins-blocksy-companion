@@ -8,21 +8,9 @@ const computeContext = ({ termId, postId, postType }) => {
 		'ct_size_guide',
 	]
 
-	const currentPostType = (
-		[...document.body.classList].find((c) => c.startsWith('post-type-')) ||
-		''
-	).replace('post-type-', '')
-
 	let context = {
 		type: 'all',
 	}
-
-	if (!currentPostType) {
-		return context
-	}
-
-	// Maybe make detection based on PreviewedPostsSelect.js presence
-	const isSpecialPostType = specialPostTypes.includes(currentPostType)
 
 	if (postId) {
 		context = {
@@ -32,20 +20,30 @@ const computeContext = ({ termId, postId, postType }) => {
 		}
 	}
 
-	// We should still use global context for special post types,
-	// with small exceptions.
-	const thereIsNoPostInContext =
-		isSpecialPostType && postType === currentPostType
+	const currentPostType = (
+		[...document.body.classList].find((c) => c.startsWith('post-type-')) ||
+		''
+	).replace('post-type-', '')
 
-	if (thereIsNoPostInContext) {
-		context = {
-			type: 'all',
-		}
+	if (currentPostType) {
+		// Maybe make detection based on PreviewedPostsSelect.js presence
+		const isSpecialPostType = specialPostTypes.includes(currentPostType)
 
-		if (postType === 'ct_product_tab' || postType === 'ct_size_guide') {
+		// We should still use global context for special post types,
+		// with small exceptions.
+		const thereIsNoPostInContext =
+			isSpecialPostType && postType === currentPostType
+
+		if (thereIsNoPostInContext) {
 			context = {
-				type: 'post_type',
-				post_type: 'product',
+				type: 'all',
+			}
+
+			if (postType === 'ct_product_tab' || postType === 'ct_size_guide') {
+				context = {
+					type: 'post_type',
+					post_type: 'product',
+				}
 			}
 		}
 	}

@@ -1,3 +1,5 @@
+@use "../../../../../static/sass/frontend/common-frontend/functions";
+
 .ct-product-hero {
 	
 	.ct-product-info {
@@ -8,11 +10,11 @@
 		border-top: 1px solid var(--theme-border-color);
 		padding-top: var(--theme-content-vertical-spacing, 60px);
 
-		@include media-breakpoint-up (lg) {
+		@include functions.media-breakpoint-up (lg) {
 			--grid-template-columns: 1.5fr 1fr 1fr;
 		}
 
-		@include media-breakpoint-only (md) {
+		@include functions.media-breakpoint-only (md) {
 			--grid-template-columns: 1fr 1fr;
 		}
 
@@ -32,7 +34,7 @@
 	}
 
 	.ct-specs {
-		@include media-breakpoint-only (md) {
+		@include functions.media-breakpoint-only (md) {
 			grid-column: 1/-1;
 		}
 
@@ -40,7 +42,7 @@
 			display: grid;
 			grid-column-gap: 40px;
 
-			@include media-breakpoint-up (md) {
+			@include functions.media-breakpoint-up (md) {
 				grid-template-columns: repeat(2, 1fr);
 			}
 		}

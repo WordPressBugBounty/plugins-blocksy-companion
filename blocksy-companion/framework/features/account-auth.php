@@ -4,6 +4,13 @@ namespace Blocksy;
 
 class AccountAuth {
 	public function __construct() {
+
+		add_filter('blocksy:general:ct-scripts-localizations', function ($data) {
+			$data['login_generic_error_msg'] = __('An unexpected error occurred. Please try again later.', 'blocksy-companion');
+
+			return $data;
+		});
+
 		add_action(
 			'wp_ajax_blc_implement_user_registration',
 			[$this, 'blc_implement_user_registration']
@@ -175,7 +182,7 @@ class AccountAuth {
 		}
 
 		if (isset($_POST['user_pass']) && is_string($_POST['user_pass'])) {
-			$user_pass = wp_unslash($_POST['user_pass']);
+			$user_pass = sanitize_text_field(wp_unslash($_POST['user_pass']));
 		}
 
 		if (

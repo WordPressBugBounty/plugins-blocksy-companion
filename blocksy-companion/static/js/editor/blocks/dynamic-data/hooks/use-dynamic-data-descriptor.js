@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from '@wordpress/element'
 import { __ } from 'ct-i18n'
 import { getOptionsForBlock } from 'blocksy-options'
-import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
+import cachedFetch from '@creative-themes/wordpress-helpers/cached-fetch'
 
 import { useTaxonomies } from '../../query/edit/utils/utils'
 
@@ -117,7 +117,7 @@ const wooFields = ({ fieldsContext, taxonomies = [] }) => {
 	const shouldHaveWooFields =
 		// Single product picked
 		(fieldsContext.type === 'post' &&
-			fieldsContext.entity_type === 'product') ||
+			fieldsContext.post_type === 'product') ||
 		// Product tab or size guide picked
 		(fieldsContext.type === 'post_type' &&
 			fieldsContext.post_type === 'product')
@@ -179,8 +179,8 @@ const useDynamicDataDescriptor = ({ postId, postType, termId, taxonomy }) => {
 		postTypeForTaxonomies = fieldsContext.post_type
 	}
 
-	if (fieldsContext.type === 'post' && fieldsContext.entity_type) {
-		postTypeForTaxonomies = fieldsContext.entity_type
+	if (fieldsContext.type === 'post' && fieldsContext.post_type) {
+		postTypeForTaxonomies = fieldsContext.post_type
 	}
 
 	const taxonomies = useTaxonomies(postTypeForTaxonomies)
@@ -216,9 +216,20 @@ const useDynamicDataDescriptor = ({ postId, postType, termId, taxonomy }) => {
 		]
 	}
 
+	const linkFieldsChoices = additionalFields.flatMap((p) =>
+		p.fields
+			.filter((f) => f.type === 'text')
+			.map((f) => ({
+				group: p.provider_label,
+				key: `${p.provider}:${f.id}`,
+				value: f.label,
+			}))
+	)
+
 	return {
 		fullDescriptorLoaded,
 		fieldsDescriptor,
+		linkFieldsChoices,
 		options,
 		fieldsChoices: fieldsDescriptor.fields.reduce(
 			(acc, currentProvider) => [

@@ -11,7 +11,10 @@
 		position: absolute;
 		inset: 0;
 	}
+}
 
+:is(.ct-demo-install, .ct-modify-demo) {
+	
 	svg path {
 		transform-origin: 50% 50%;
 		transform-box: fill-box;
@@ -54,11 +57,20 @@
 
 .ct-progress-info {
 	display: flex;
+	gap: 10px;
 	justify-content: space-between;
 	margin-top: 30px;
 	margin-bottom: 15px;
 	font-size: 13px;
 	opacity: 0.8;
+
+	.ct-progress-label {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		flex: 1;
+		text-align: start;
+	}
 }
 
 @keyframes spin {

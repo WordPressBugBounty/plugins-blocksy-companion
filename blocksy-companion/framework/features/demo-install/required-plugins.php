@@ -13,17 +13,11 @@ class DemoInstallPluginsInstaller {
 			'is_ajax_request' => true,
 		]);
 
-		if (
-			!$args['plugins']
-			&&
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			isset($_REQUEST['plugins'])
-			&&
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$_REQUEST['plugins']
-		) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$args['plugins'] = sanitize_text_field(wp_unslash($_REQUEST['plugins']));
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$request_plugins = isset($_REQUEST['plugins']) ? sanitize_text_field(wp_unslash($_REQUEST['plugins'])) : '';
+
+		if (! $args['plugins'] && $request_plugins !== '') {
+			$args['plugins'] = $request_plugins;
 		}
 
 		$this->plugins = $args['plugins'];
@@ -300,4 +294,3 @@ class DemoInstallPluginsInstaller {
 		WP_Filesystem();
 	}
 }
-

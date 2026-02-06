@@ -12,17 +12,11 @@ class DemoInstallWidgetsInstaller {
 			'is_ajax_request' => true,
 		]);
 
-		if (
-			!$args['demo_name']
-			&&
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			isset($_REQUEST['demo_name'])
-			&&
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$_REQUEST['demo_name']
-		) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$args['demo_name'] = sanitize_text_field(wp_unslash($_REQUEST['demo_name']));
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$request_demo_name = isset($_REQUEST['demo_name']) ? sanitize_text_field(wp_unslash($_REQUEST['demo_name'])) : '';
+
+		if (! $args['demo_name'] && $request_demo_name !== '') {
+			$args['demo_name'] = $request_demo_name;
 		}
 
 		$this->demo_name = $args['demo_name'];
@@ -274,4 +268,3 @@ class DemoInstallWidgetsInstaller {
 		return $available_widgets;
 	}
 }
-

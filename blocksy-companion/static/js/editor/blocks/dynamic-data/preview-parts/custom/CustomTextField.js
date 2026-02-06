@@ -12,7 +12,15 @@ import { useBlockSupportsCustom } from '../../hooks/use-block-supports-custom'
 const CustomTextField = ({
 	fieldDescriptor,
 	attributes,
-	attributes: { align, tagName: TagName, before, after, fallback },
+	attributes: {
+		align,
+		tagName: TagName,
+		before,
+		after,
+		fallback,
+		has_field_link,
+		has_field_link_wrap_content,
+	},
 	fieldData,
 }) => {
 	const blockProps = useBlockProps({
@@ -37,6 +45,10 @@ const CustomTextField = ({
 
 	let valueToRender = fieldData || ''
 
+	if (has_field_link === 'yes' && has_field_link_wrap_content === 'no') {
+		valueToRender = `<a href="#" rel="noopener noreferrer">${valueToRender}</a>`
+	}
+
 	if (!valueToRender) {
 		isFallback = true
 		valueToRender = fallback || `Dynamic data: ${fieldDescriptor?.label}`
@@ -44,6 +56,10 @@ const CustomTextField = ({
 
 	if (!isFallback && valueToRender && typeof valueToRender === 'string') {
 		valueToRender = before + valueToRender + after
+	}
+
+	if (has_field_link === 'yes' && has_field_link_wrap_content === 'yes') {
+		valueToRender = `<a href="#" rel="noopener noreferrer">${valueToRender}</a>`
 	}
 
 	let css = ''

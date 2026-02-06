@@ -3,6 +3,8 @@
 namespace Blocksy\Editor\Blocks;
 
 class Query {
+	private $current_wp_query = null;
+
 	public function __construct() {
 		add_action('wp_ajax_blocksy_get_posts_block_data', function () {
 			if (! current_user_can('edit_posts')) {
@@ -124,6 +126,7 @@ class Query {
 				$context = $instance->context;
 
 				$is_slideshow_layout = $context['has_slideshow'] === 'yes';
+				$has_item_link = blocksy_akg('has_item_link', $block['attrs'], 'no') === 'yes';
 				$layout = blocksy_akg('layout/type', $block['attrs'], 'default');
 				$is_grid_layout = $layout === 'grid';
 
@@ -141,6 +144,10 @@ class Query {
 					$layout !== 'grid'
 				) {
 					$class[] = 'is-layout-flow';
+				}
+
+				if ($has_item_link) {
+					$class []= 'ct-has-link-overlay';
 				}
 
 				$processor->set_attribute('class', implode(' ', $class));
@@ -238,7 +245,7 @@ class Query {
 							blocksy_mutate_selector([
 								'selector' => $root_selector,
 								'operation' => 'suffix',
-								'to_add' => ':where(.is-layout-flow > *)'
+								'to_add' => ':where(.wp-block-post)'
 							])
 						),
 
@@ -367,6 +374,8 @@ class Query {
 							'desktopColumns' => '3',
 							'tabletColumns' => '2',
 							'mobileColumns' => '1',
+
+							'has_item_link' => 'no'
 						]
 					);
 
@@ -385,6 +394,8 @@ class Query {
 					$content = '';
 
 					$wrapper_attributes = get_block_wrapper_attributes();
+
+					$this->current_wp_query = $query;
 
 					while ($query->have_posts()) {
 						$query->the_post();
@@ -418,7 +429,22 @@ class Query {
 						// Wrap the render inner blocks in a `li` element with the appropriate post classes.
 						$post_classes = implode(' ', get_post_class('wp-block-post is-layout-flow'));
 
-						$single_item = '<article' . ' class="' . esc_attr($post_classes) . '">' . $block_content . '</article>';
+						$link_html = '';
+
+						if ($attributes['has_item_link'] === 'yes') {
+							$link_attributes = [
+								'href' => get_permalink(),
+								'class' => 'ct-link-overlay',
+							];
+
+							$link_html = blocksy_html_tag(
+								'a',
+								$link_attributes,
+								''
+							);
+						}
+
+						$single_item = '<article' . ' class="' . esc_attr($post_classes) . '">' . $link_html . $block_content . '</article>';
 
 						if ($is_slideshow_layout) {
 							$single_item = blocksy_html_tag(
@@ -489,6 +515,8 @@ class Query {
 					 * Since we use two custom loops, it's safest to always restore.
 					 */
 					wp_reset_postdata();
+
+					$this->current_wp_query = null;
 
 					$result = blocksy_safe_sprintf(
 						'<div %1$s>%2$s</div>',
@@ -661,11 +689,14 @@ class Query {
 
 		$prev_query = $wp_query;
 
+		// Maybe we should actually replace the main query here always?
 		if (wp_doing_ajax()) {
 			$wp_query = $query;
 		}
 
 		$pagination_data = $this->get_pagination_descriptor($attributes);
+
+		$this->current_wp_query = $query;
 
 		ob_start();
 
@@ -687,6 +718,9 @@ class Query {
 
 		wp_reset_postdata();
 
+		$this->current_wp_query = null;
+
+		// Maybe we should actually replace the main query here always?
 		if (wp_doing_ajax()) {
 			$wp_query = $prev_query;
 		}
@@ -738,7 +772,7 @@ class Query {
 		]);
 
 		if (empty($result)) {
-			return '';
+			$result = __('No posts found.', 'blocksy-companion');
 		}
 
 		return blocksy_html_tag(
@@ -846,7 +880,7 @@ class Query {
 						if (! $term) {
 							continue;
 						}
-						
+
 						$internal_term_slug = $term->slug;
 					}
 
@@ -1166,5 +1200,11 @@ class Query {
 				'value' => '1'
 			]);
 		}
+	}
+
+	// This is an alternative to updating the global $wp_query. It allows
+	// reading current query from other places.
+	public function maybe_get_current_wp_query() {
+		return $this->current_wp_query;
 	}
 }

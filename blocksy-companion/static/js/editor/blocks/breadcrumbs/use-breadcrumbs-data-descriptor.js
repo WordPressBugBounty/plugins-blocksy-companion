@@ -6,7 +6,7 @@ import { store as coreStore } from '@wordpress/core-data'
 
 import { __ } from 'ct-i18n'
 
-import cachedFetch from 'ct-wordpress-helpers/cached-fetch'
+import cachedFetch from '@creative-themes/wordpress-helpers/cached-fetch'
 
 const useBreadcrumbsDataDescriptor = ({ postId, postType }) => {
 	const [breadcrumbs, setBreadcrumbs] = useState(null)

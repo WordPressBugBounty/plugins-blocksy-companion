@@ -17,8 +17,26 @@ class TaxQuery {
 
 			$all_terms = $this->get_terms_for($body['attributes']);
 
+			$pagination_output = '';
+
+			if (blocksy_akg('has_pagination', $body['attributes'], 'no') === 'yes') {
+				$term_query = $this->get_term_query($body['attributes']);
+
+				if ($term_query) {
+					$pagination_data = $this->get_pagination_descriptor($body['attributes']);
+					$prefix = self::get_prefix_for($body['attributes']);
+
+					$pagination_output = blocksy_display_posts_pagination([
+						'query' => $term_query,
+						'prefix' => $prefix,
+						'query_var' => $pagination_data['query_var']
+					]);
+				}
+			}
+
 			wp_send_json_success([
-				'all_terms' => $all_terms
+				'all_terms' => $all_terms,
+				'pagination_output' => $pagination_output
 			]);
 		});
 
@@ -107,6 +125,7 @@ class TaxQuery {
 				$context = $instance->context;
 
 				$is_slideshow_layout = $context['has_slideshow'] === 'yes';
+				$has_item_link = blocksy_akg('has_item_link', $block['attrs'], 'no') === 'yes';
 				$layout = blocksy_akg('layout/type', $block['attrs'], 'default');
 				$is_grid_layout = $layout === 'grid';
 
@@ -122,6 +141,10 @@ class TaxQuery {
 					$layout !== 'grid'
 				) {
 					$class[] = 'is-layout-flow';
+				}
+
+				if ($has_item_link) {
+					$class []= 'ct-has-link-overlay';
 				}
 
 				$gap_value = self::get_gap_value($block['attrs']);
@@ -223,7 +246,7 @@ class TaxQuery {
 							blocksy_mutate_selector([
 								'selector' => $root_selector,
 								'operation' => 'suffix',
-								'to_add' => ':where(.is-layout-flow > *)'
+								'to_add' => ':where(.wp-block-term)'
 							])
 						),
 
@@ -272,6 +295,8 @@ class TaxQuery {
 							'desktopColumns' => '3',
 							'tabletColumns' => '2',
 							'mobileColumns' => '1',
+
+							'has_item_link' => 'no'
 						]
 					);
 
@@ -283,6 +308,7 @@ class TaxQuery {
 							'has_slideshow_autoplay' => 'no',
 							'has_slideshow_autoplay_speed' => 3,
 							'hide_empty' => 'yes',
+							'has_pagination' => 'no',
 						]
 					);
 
@@ -322,6 +348,21 @@ class TaxQuery {
 							['dynamic' => false]
 						);
 
+						$link_html = '';
+
+						if ($attributes['has_item_link'] === 'yes') {
+							$link_attributes = [
+								'href' => get_term_link($term_obj),
+								'class' => 'ct-link-overlay',
+							];
+
+							$link_html = blocksy_html_tag(
+								'a',
+								$link_attributes,
+								''
+							);
+						}
+
 						$single_item = blocksy_html_tag(
 							'div',
 							[
@@ -331,6 +372,7 @@ class TaxQuery {
 									// 'ct-term-' . $term_obj->term_id
 								])
 							],
+							$link_html .
 							$block_content
 						);
 
@@ -409,6 +451,25 @@ class TaxQuery {
 						$content
 					);
 
+					if (
+						blocksy_akg('has_pagination', $context, 'no') === 'yes'
+						&&
+						! $is_slideshow_layout
+					) {
+						$term_query = $this->get_term_query($block->context);
+
+						if ($term_query) {
+							$pagination_data = $this->get_pagination_descriptor($block->context);
+							$prefix = self::get_prefix_for($block->context);
+
+							$result .= blocksy_display_posts_pagination([
+								'query' => $term_query,
+								'prefix' => $prefix,
+								'query_var' => $pagination_data['query_var']
+							]);
+						}
+					}
+
 					return $result;
 				},
 			]
@@ -483,7 +544,6 @@ class TaxQuery {
 
 	private static function get_attributes($attributes) {
 		// migrate to native brands
-
 		if ($attributes['taxonomy'] === 'product_brands') {
 			$attributes['taxonomy'] = 'product_brand';
 		}
@@ -510,18 +570,83 @@ class TaxQuery {
 				'has_slideshow_arrows' => 'yes',
 				'has_slideshow_autoplay' => 'no',
 				'has_slideshow_autoplay_speed' => 3,
+
+				// yes | no
+				'has_pagination' => 'no',
 			],
 		);
 	}
 
-	public function get_terms_for($attributes) {
+	private static function get_prefix_for($attributes) {
+		$attributes = self::get_attributes($attributes);
+
+		$prefix = 'blog';
+
+		$taxonomy = $attributes['taxonomy'];
+
+		if (! taxonomy_exists($taxonomy)) {
+			return $prefix;
+		}
+
+		$taxonomy_object = get_taxonomy($taxonomy);
+
+		if (! $taxonomy_object || empty($taxonomy_object->object_type)) {
+			return $prefix;
+		}
+
+		// Get the first post type this taxonomy is assigned to
+		$post_type = $taxonomy_object->object_type[0];
+
+		$custom_post_types = [];
+
+		if (blc_theme_functions()->blocksy_manager()) {
+			$custom_post_types = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
+		}
+
+		foreach ($custom_post_types as $cpt) {
+			if ($cpt === $post_type) {
+				$prefix = $cpt . '_archive';
+			}
+		}
+
+		if ($post_type === 'product') {
+			$prefix = 'woo_categories';
+		}
+
+		return $prefix;
+	}
+
+	// ?tax-query-{uniqueId}=2
+	public function get_pagination_descriptor($attributes) {
+		$attributes = self::get_attributes($attributes);
+
+		$query_var = 'tax-query-' . $attributes['uniqueId'];
+
+		$current_page = 1;
+
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		if (isset($_GET[$query_var])) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$current_page = intval(sanitize_text_field(wp_unslash($_GET[$query_var])));
+		}
+
+		return [
+			'query_var' => $query_var,
+			'value' => max(1, $current_page)
+		];
+	}
+
+	/**
+	 * Build term query args from block attributes.
+	 */
+	public function get_term_query_args($attributes) {
 		$attributes = self::get_attributes($attributes);
 
 		if (! taxonomy_exists($attributes['taxonomy'])) {
-			return [];
+			return null;
 		}
 
-		$ffiltered_include = [];
+		$filtered_include = [];
 		$filtered_exclude = [];
 
 		if (
@@ -609,19 +734,58 @@ class TaxQuery {
 			$terms_query_args['include'] = $filtered_include;
 		}
 
+		// Handle pagination offset
+		if ($attributes['has_pagination'] === 'yes') {
+			$pagination_data = $this->get_pagination_descriptor($attributes);
+			$current_page = $pagination_data['value'];
+			$per_page = $attributes['limit'];
+			$base_offset = $attributes['offset'];
+
+			$terms_query_args['offset'] = ($current_page - 1) * $per_page + $base_offset;
+		}
+
+		return apply_filters(
+			'blocksy:general:blocks:tax-query:args',
+			$terms_query_args,
+			$attributes
+		);
+	}
+
+	/**
+	 * Get term query with pagination adapter.
+	 * Returns a WP_Query-like object for use with pagination.
+	 */
+	public function get_term_query($attributes) {
+		$attributes = self::get_attributes($attributes);
+		$terms_query_args = $this->get_term_query_args($attributes);
+
+		if ($terms_query_args === null) {
+			return null;
+		}
+
+		$pagination_data = $this->get_pagination_descriptor($attributes);
+
+		return new TermQueryPaginationAdapter(
+			$terms_query_args,
+			$pagination_data['value']
+		);
+	}
+
+	public function get_terms_for($attributes) {
+		$attributes = self::get_attributes($attributes);
+		$terms_query_args = $this->get_term_query_args($attributes);
+
+		if ($terms_query_args === null) {
+			return [];
+		}
+
 		add_filter(
 			'get_terms_orderby',
 			[$this, 'allow_random_order_by_in_term_query'],
 			10, 2
 		);
 
-		$terms = get_terms(
-			apply_filters(
-				'blocksy:general:blocks:tax-query:args',
-				$terms_query_args,
-				$attributes
-			)
-		);
+		$terms = get_terms($terms_query_args);
 
 		remove_filter(
 			'get_terms_orderby',

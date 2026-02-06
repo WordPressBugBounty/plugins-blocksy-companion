@@ -98,7 +98,7 @@ $attr = array_merge(
 
 add_filter('blocksy:menu:has_animated_submenu', '__return_true', 10, 3);
 
-echo blocksy_render_view(
+blocksy_render_view_e(
 	dirname(__FILE__) . '/views/' . $path . '.php',
 	[
 		'atts' => $atts,

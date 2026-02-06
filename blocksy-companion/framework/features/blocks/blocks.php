@@ -5,6 +5,8 @@ namespace Blocksy\Editor;
 class Blocks {
 	private $blocks = [];
 
+	public $query = null;
+
 	public function __construct() {
 		// Mount at `after_setup_theme` to make sure the theme is loaded
 		add_action(
@@ -117,7 +119,7 @@ class Blocks {
 		new \Blocksy\Editor\Blocks\BlockWrapper();
 
 		new \Blocksy\Editor\Blocks\BreadCrumbs();
-		new \Blocksy\Editor\Blocks\Query();
+		$this->query = new \Blocksy\Editor\Blocks\Query();
 		new \Blocksy\Editor\Blocks\TaxQuery();
 		new \Blocksy\Editor\Blocks\DynamicData();
 	}

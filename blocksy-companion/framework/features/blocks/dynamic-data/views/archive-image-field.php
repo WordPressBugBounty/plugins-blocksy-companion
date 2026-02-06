@@ -58,7 +58,7 @@ if ($term_id) {
 	}
 }
 
-echo blocksy_render_view(
+blocksy_render_view_e(
 	dirname(__FILE__) . '/image-field.php',
 	[
 		'attributes' => $attributes,

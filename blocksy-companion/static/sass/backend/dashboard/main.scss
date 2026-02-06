@@ -1,7 +1,14 @@
-@import 'beta';
-@import 'activation-actions/main';
-@import 'demo-install/main';
+@use 'beta';
+@use 'activation-actions/main';
+@use 'demo-install/main' as demoInstall;
 
-@import 'extensions/main';
-@import '../../../../framework/extensions/**/dashboard-static/sass/main.scss';
-@import '../../../../framework/premium/extensions/**/dashboard-static/sass/main.scss';
+@use 'extensions/main' as extensions;
+
+@use '../../../../framework/extensions/newsletter-subscribe/dashboard-static/sass/main.scss' as newsletter;
+@use '../../../../framework/extensions/product-reviews/dashboard-static/sass/main.scss' as productReviews;
+
+@use '../../../../framework/premium/extensions/adobe-typekit/dashboard-static/sass/main.scss' as adobeTypekit;
+@use '../../../../framework/premium/extensions/custom-fonts/dashboard-static/sass/main.scss' as customFonts;
+@use '../../../../framework/premium/extensions/local-google-fonts/dashboard-static/sass/main.scss' as localGoogleFonts;
+@use '../../../../framework/premium/extensions/white-label/dashboard-static/sass/main.scss' as whiteLabel;
+

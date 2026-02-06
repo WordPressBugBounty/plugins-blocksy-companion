@@ -1,5 +1,7 @@
 <?php
 
+// phpcs:ignoreFile
+
 /**
  * WordPress eXtended RSS file parser implementations
  *

@@ -82,6 +82,7 @@ class BlocksyExtensionCookiesConsent {
 		add_action(
 			'pre_comment_on_post',
 			function ($post_id) {
+				// phpcs:ignore WordPress.Security.NonceVerification.Missing
 				$data = wp_unslash($_POST);
 
 				if (! isset($data['comment_post_ID'])) {
@@ -102,9 +103,10 @@ class BlocksyExtensionCookiesConsent {
 					$data['gdprconfirm'] !== 'on'
 				) {
 					wp_die(
-						'<p>' . __('Please accept the Privacy Policy in order to comment.', 'blocksy-companion') . '</p>',
-						__('Comment Submission Failure', 'blocksy-companion'),
+						'<p>' . esc_html__('Please accept the Privacy Policy in order to comment.', 'blocksy-companion') . '</p>',
+						esc_html__('Comment Submission Failure', 'blocksy-companion'),
 						array(
+							// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 							'response' => $data,
 							'back_link' => true,
 						)

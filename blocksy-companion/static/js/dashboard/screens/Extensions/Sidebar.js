@@ -98,29 +98,38 @@ const Sidebar = ({ navigate, currentExtension, exts_status }) => {
 
 						<ul>
 							{sortedExts.map(
-								({ name, config, status, __object }) => (
-									<li
-										key={name}
-										className={classnames({
-											selected:
-												currentExtension &&
-												currentExtension.name === name,
-											active: !!__object,
-										})}
-										onClick={() => {
-											navigate(`/extensions/${name}`)
-										}}>
-										{config.name}
-										<span data-tooltip-reveal="top">
-											<i className="ct-tooltip">
-												{__(
-													'Active',
-													'blocksy-companion'
-												)}
-											</i>
-										</span>
-									</li>
-								)
+								({ name, config, status, __object }) => {
+									let isActive = !!__object
+
+									if (config?.requirement?.check === false) {
+										isActive = false
+									}
+
+									return (
+										<li
+											key={name}
+											className={classnames({
+												selected:
+													currentExtension &&
+													currentExtension.name ===
+														name,
+												active: isActive,
+											})}
+											onClick={() => {
+												navigate(`/extensions/${name}`)
+											}}>
+											{config.name}
+											<span data-tooltip-reveal="top">
+												<i className="ct-tooltip">
+													{__(
+														'Active',
+														'blocksy-companion'
+													)}
+												</i>
+											</span>
+										</li>
+									)
+								}
 							)}
 						</ul>
 					</Fragment>

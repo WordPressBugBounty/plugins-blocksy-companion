@@ -94,7 +94,6 @@ class DynamicDataAPI {
 
 				$object = $this->compute_context_object($data['context']);
 
-
 				if (! $object) {
 					wp_send_json_success([
 						'field_data' => ''
@@ -116,7 +115,7 @@ class DynamicDataAPI {
 					&&
 					$data['field_id'] === 'attributes'
 				) {
-					if (! $data['attribute']) {
+					if (! isset($data['attributes']['attribute'])) {
 						wp_send_json_success([
 							'field_data' => []
 						]);
@@ -125,11 +124,10 @@ class DynamicDataAPI {
 					wp_send_json_success([
 						'field_data' => $this->render_woo_attributes_field(
 							$object,
-							$data['attribute']
+							$data['attributes']['attribute']
 						)
 					]);
 				}
-
 
 				wp_send_json_success([
 					'field_data' => $this->render_custom_field(
@@ -203,7 +201,7 @@ class DynamicDataAPI {
 		}
 
 		$attributes = $product->get_attributes();
-		$taxonomy_name = wc_attribute_taxonomy_name($data['attribute']);
+		$taxonomy_name = wc_attribute_taxonomy_name($attribute);
 
 		if (
 			! $attributes

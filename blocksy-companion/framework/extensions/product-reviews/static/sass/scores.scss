@@ -1,3 +1,5 @@
+@use "../../../../../static/sass/frontend/common-frontend/functions";
+
 .ct-product-hero {
 
 	.ct-product-scores {
@@ -7,7 +9,7 @@
 		margin: 0 auto;
 		max-width: var(--product-scores-width, 800px);
 
-		@include media-breakpoint-up (md) {
+		@include functions.media-breakpoint-up (md) {
 			grid-template-columns: 2fr 1fr;
 		}
 

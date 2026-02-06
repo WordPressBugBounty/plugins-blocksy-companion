@@ -74,6 +74,11 @@ class BlocksyExtensionNewsletterSubscribePreBoot {
 			[
 				'key' => 'emailoctopus',
 				'value' => 'EmailOctopus',
+			],
+
+			[
+				'key' => 'klaviyo',
+				'value' => 'Klaviyo',
 			]
 		];
 

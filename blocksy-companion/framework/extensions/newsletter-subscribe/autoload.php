@@ -15,5 +15,6 @@ $autoload = [
 	'ActiveCampaignProvider' => 'providers/active-campaign.php',
 	'EmailOctopusProvider' => 'providers/emailoctopus.php',
 	'FluentCRMProvider' => 'providers/fluent-crm.php',
+	'KlaviyoProvider' => 'providers/klaviyo.php',
 ];
 

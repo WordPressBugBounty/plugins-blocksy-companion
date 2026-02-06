@@ -44,7 +44,13 @@ class CacheResetManager {
 			$page_is_cached = \WP_Rocket\Buffer\Cache::can_generate_caching_files();
 		}
 
-		if (class_exists("\CF\API\Plugin")) {
+		// Cloudflare APO plugin - new namespace (v4.14.0+)
+		if (class_exists("\Cloudflare\APO\API\Plugin")) {
+			if (\Cloudflare\APO\API\Plugin::SETTING_PLUGIN_SPECIFIC_CACHE === "plugin_specific_cache") {
+				$page_is_cached = true;
+			}
+		} elseif (class_exists("\CF\API\Plugin")) {
+			// Cloudflare APO plugin - old namespace (deprecated, pre v4.14.0)
 			if (\CF\API\Plugin::SETTING_PLUGIN_SPECIFIC_CACHE === "plugin_specific_cache") {
 				$page_is_cached = true;
 			}

@@ -308,6 +308,24 @@ const EditCredentials = ({ extension, onCredentialsValidated }) => {
 			)}
 
 			{ctDashboardLocalizations.plugin_data.is_pro &&
+				provider === 'klaviyo' && (
+					<span
+						className="ct-option-description"
+						dangerouslySetInnerHTML={{
+							__html: sprintf(
+								__(
+									'More information on how to generate an API key for Klaviyo can be found %shere%s.',
+									'blocksy-companion'
+								),
+
+								'<a target="_blank" href="https://developers.klaviyo.com/en/reference/api_overview">',
+								'</a>'
+							),
+						}}
+					/>
+				)}
+
+			{ctDashboardLocalizations.plugin_data.is_pro &&
 				provider === 'brevo' && (
 					<span
 						className="ct-option-description"

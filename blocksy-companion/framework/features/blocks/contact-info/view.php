@@ -164,7 +164,7 @@ if (blocksy_default_akg('contacts_items_direction', $atts, 'column') === 'column
 	$style .= '--items-direction:' . blocksy_default_akg('contacts_items_direction', $atts, 'column') . ';';
 }
 
-echo blocksy_html_tag(
+blocksy_html_tag_e(
 	'div',
 	[
 		'class' => implode(' ', $classes),

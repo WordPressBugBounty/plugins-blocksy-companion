@@ -59,6 +59,7 @@ if (count($gallery_images) === 1) {
 		$image_href = $image_href[0];
 	}
 
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo blocksy_media([
 		'attachment_id' => $gallery_images[0],
 		'size' => 'full',
@@ -90,9 +91,11 @@ if (count($gallery_images) > 1) {
 		];
 	}
 
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo blocksy_flexy($args);
 }
 
+// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 echo blocksy_output_hero_section([
 	'type' => 'type-1'
 ]);
@@ -106,18 +109,19 @@ if (! empty($scores)) {
 
 	foreach ($scores as $single_score) {
 		echo '<li>';
-		echo '<span>' . $single_score['label'] . '</span>';
+		echo '<span>' . esc_html($single_score['label']) . '</span>';
 
 		echo '<div class="star-rating" role="img">';
 		$width = ((floatval($single_score['score']) / 5) * 100);
 
-		echo '<span style="width: ' . $width . '%;">Rated <strong class="rating">3</strong> out of 5</span>';
+		echo '<span style="width: ' . esc_attr($width) . '%;">Rated <strong class="rating">3</strong> out of 5</span>';
 		echo '</div>';
 		echo '</li>';
 	}
 
 	echo '</ul>';
 
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo '<div class="ct-overall-score" ' . blocksy_schema_org_definitions('reviewRating') . '>';
 
 	$avg_score = apply_filters(
@@ -128,15 +132,16 @@ if (! empty($scores)) {
 		$scores
 	);
 
-	echo '<span class="ct-average-score" ' . blocksy_schema_org_definitions('ratingValue') . '>' . $avg_score . '/5</span>';
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	echo '<span class="ct-average-score" ' . blocksy_schema_org_definitions('ratingValue') . '>' . esc_html($avg_score) . '/5</span>';
 
 	echo '<div class="star-rating" role="img">';
 	$width = ( ( $avg_score / 5 ) * 100 );
-	echo '<span style="width: ' . $width . '%;"></span>';
+	echo '<span style="width: ' . esc_attr($width) . '%;"></span>';
 	echo '</div>';
 
 	echo '<span class="ct-score-label">';
-	echo __('Overall Score', 'blocksy-companion');
+	echo esc_html__('Overall Score', 'blocksy-companion');
 	echo '</span>';
 	echo '</div>';
 
@@ -167,8 +172,8 @@ if ($has_read_more || $has_buy_now) {
 		&&
 		$has_read_more
 	) {
-		echo '<a href="#post-' . get_the_ID() . '" class="ct-button">';
-		echo $product_read_content_button_label;
+		echo '<a href="#post-' . esc_attr(get_the_ID()) . '" class="ct-button">';
+		echo esc_html($product_read_content_button_label);
 
 	/*
 	echo blc_get_icon([
@@ -188,7 +193,7 @@ if ($has_read_more || $has_buy_now) {
 		&&
 		$has_buy_now
 	) {
-		echo blocksy_html_tag(
+		blocksy_html_tag_e(
 			'a',
 			array_merge([
 				'href' => esc_url($product_link),
@@ -215,9 +220,11 @@ $product_cons = blocksy_akg('product_cons', $atts, []);
 $product_description = blocksy_akg('product_description', $atts, '');
 
 if (! empty($product_description)) {
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo '<div class="ct-product-description" ' . blocksy_schema_org_definitions('reviewBody') . '>';
 
 	echo '<div class="entry-content is-layout-flow">';
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo do_shortcode($product_description);
 	echo '</div>';
 
@@ -235,21 +242,21 @@ if (
 
 	if (! empty($product_specs)) {
 		echo '<div class="ct-specs">';
-		echo '<h5>' . __('Specs', 'blocksy-companion') . '</h5>';
+		echo '<h5>' . esc_html__('Specs', 'blocksy-companion') . '</h5>';
 
 		echo '<ul>';
 
 		foreach ($product_specs as $single_spec) {
 			echo '<li>';
-			echo blocksy_html_tag(
+			blocksy_html_tag_e(
 				'span',
 				[
 					'class' => 'ct-icon-container'
 				],
 				"<svg width='13' height='13' viewBox='0 0 13 13'><path d='M5.3 0l-.2 1.7c-.8.2-1.5.7-2.1 1.2l-1.5-.7-1.2 2 1.4 1c-.1.5-.2.9-.2 1.3s.1.8.2 1.2l-1.4 1 1.2 2 1.5-.6c.6.6 1.3 1 2.1 1.2l.2 1.7h2.3l.2-1.7c.8-.2 1.5-.6 2.1-1.2l1.6.7 1.2-2-1.4-1c.1-.4.2-.8.2-1.2s-.1-.8-.2-1.2l1.4-1-1.2-2-1.5.5c-.6-.6-1.3-1-2.1-1.2L7.7 0H5.3zm1.2 4.5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z'/></svg>"
 			);
-			echo '<b>' . blocksy_akg('label', $single_spec, '') . ': </b>';
-			echo blocksy_akg('value', $single_spec, '');
+			echo '<b>' . esc_html(blocksy_akg('label', $single_spec, '')) . ': </b>';
+			echo esc_html(blocksy_akg('value', $single_spec, ''));
 			echo '</li>';
 		}
 
@@ -258,21 +265,22 @@ if (
 	}
 
 	if (! empty($product_pros)) {
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '<div class="ct-product-review-pros" ' . blocksy_schema_org_definitions('positiveNotes') . '>';
-		echo '<h5>' . __('Pros', 'blocksy-companion') . '</h5>';
+		echo '<h5>' . esc_html__('Pros', 'blocksy-companion') . '</h5>';
 
 		echo '<ul>';
 
 		foreach ($product_pros as $single_pro) {
 			echo '<li>';
-			echo blocksy_html_tag(
+			blocksy_html_tag_e(
 				'span',
 				[
 					'class' => 'ct-icon-container'
 				],
 				"<svg width='13' height='13' viewBox='0 0 13 13'><path d='M6.4.3c-.3 0-.5.3-.6.5l-.6 1.7-1.7 2c-.3.3-.4.5-.4.9v6c0 .7.6 1.3 1.3 1.3h5.2c.5 0 1-.3 1.1-.7l2-4.4c.2-.3.3-.6.3-.8v-.6c0-.7-.6-1.3-1.3-1.3H7.2s.7-1.6.7-2.7c0-1-.7-1.6-1.2-1.7-.2-.2-.2-.2-.3-.2zM1 4.8c-.5 0-1 .4-1 1v5.9c0 .6.4 1 1 1s1-.4 1-1V5.8c-.1-.5-.5-1-1-1z'/></svg>"
 			);
-			echo blocksy_akg('label', $single_pro, '');
+			echo esc_html(blocksy_akg('label', $single_pro, ''));
 			echo '</li>';
 		}
 
@@ -281,21 +289,22 @@ if (
 	}
 
 	if (! empty($product_cons)) {
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '<div class="ct-product-review-cons" ' . blocksy_schema_org_definitions('negativeNotes') . '>';
-		echo '<h5>' . __('Cons', 'blocksy-companion') . '</h5>';
+		echo '<h5>' . esc_html__('Cons', 'blocksy-companion') . '</h5>';
 
 		echo '<ul>';
 
 		foreach ($product_cons as $single_cons) {
 			echo '<li>';
-			echo blocksy_html_tag(
+			blocksy_html_tag_e(
 				'span',
 				[
 					'class' => 'ct-icon-container'
 				],
 				"<svg width='13' height='13' viewBox='0 0 13 13'><path d='M6.6 12.6c.5-.2 1.2-.7 1.2-1.7 0-1.1-.7-2.7-.7-2.7h4.5c.7 0 1.3-.6 1.3-1.3v-.7c0-.3-.1-.5-.2-.8l-2-4.4c-.2-.4-.6-.7-1.1-.7H4.4c-.7 0-1.3.6-1.3 1.3v6c0 .3.1.6.3.9l1.7 2 .5 1.7c.1.3.3.5.6.5s.3 0 .4-.1zM1.9 7.2V1.4c0-.5-.4-1-1-1s-1 .3-1 1v5.9c0 .5.4 1 1 1s1-.6 1-1.1z'/></svg>"
 			);
-			echo blocksy_akg('label', $single_cons, '');
+			echo esc_html(blocksy_akg('label', $single_cons, ''));
 			echo '</li>';
 		}
 

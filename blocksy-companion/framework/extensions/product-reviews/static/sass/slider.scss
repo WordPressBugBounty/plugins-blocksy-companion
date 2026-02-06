@@ -1,3 +1,5 @@
+@use "../../../../../static/sass/frontend/common-frontend/functions";
+
 .ct-product-hero {
 
 	.flexy-container {
@@ -5,11 +7,11 @@
 	}
 
 	.flexy-pills {
-		@include media-breakpoint-down (md) {
+		@include functions.media-breakpoint-down (md) {
 			--thumbs-spacing: 10px;
 		}
 
-		@include media-breakpoint-up (lg) {
+		@include functions.media-breakpoint-up (lg) {
 			max-width: 70%;
 			margin: -8% auto 0 auto;
 

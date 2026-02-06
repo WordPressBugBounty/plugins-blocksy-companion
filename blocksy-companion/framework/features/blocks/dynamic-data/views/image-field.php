@@ -11,7 +11,7 @@ if ($view_type === 'cover') {
 		return;
 	}
 
-	echo blocksy_render_view(
+	blocksy_render_view_e(
 		dirname(__FILE__) . '/cover-field.php',
 		[
 			'attributes' => $attributes,
@@ -268,6 +268,7 @@ if (
 	&&
 	!$maybe_video
 ) {
+	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo block_core_image_render_lightbox(
 		blocksy_html_tag($tag_name, $wrapper_attr, $value),
 		[]
@@ -276,4 +277,4 @@ if (
 	return;
 }
 
-echo blocksy_html_tag($tag_name, $wrapper_attr, $value);
+blocksy_html_tag_e($tag_name, $wrapper_attr, $value);

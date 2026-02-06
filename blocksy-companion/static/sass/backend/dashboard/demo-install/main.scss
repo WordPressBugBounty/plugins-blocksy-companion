@@ -1,16 +1,14 @@
-@import '../../../../static/sass/frontend/common-frontend/functions';
-
-@import 'demo-filters';
-@import 'demo-list';
-@import 'install-steps';
-@import 'child-theme';
-@import 'builders';
-@import 'plugins';
-@import 'content';
-@import 'export';
-@import 'installer';
-@import 'modify-demo';
-@import 'demo-notification';
+@use 'demo-filters';
+@use 'demo-list';
+@use 'install-steps';
+@use 'child-theme';
+@use 'builders';
+@use 'plugins';
+@use 'content';
+@use 'export';
+@use 'installer';
+@use 'modify-demo';
+@use 'demo-notification';
 
 .ct-demos-list {
 	display: flex;

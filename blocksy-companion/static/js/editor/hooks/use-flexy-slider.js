@@ -1,6 +1,6 @@
 import { useRef, useEffect, memo, useState, RawHTML } from '@wordpress/element'
 import { mountFlexy } from 'blocksy-options'
-import { getStableJsonKey } from 'ct-wordpress-helpers/get-stable-json-key'
+import { getStableJsonKey } from '@creative-themes/wordpress-helpers/get-stable-json-key'
 
 export const useFlexySlider = ({
 	isSlideshow,

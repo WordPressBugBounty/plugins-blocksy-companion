@@ -14,6 +14,7 @@ class InlineStylesCollector {
 			return;
 		}
 
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '<style id="ct-main-styles-footer-inline-css">' . $this->css . '</style>';
 	}
 

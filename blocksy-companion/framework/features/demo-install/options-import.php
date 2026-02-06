@@ -2,7 +2,6 @@
 
 namespace Blocksy;
 
-
 class DemoInstallOptionsInstaller {
 	protected $demo_name = null;
 
@@ -15,17 +14,15 @@ class DemoInstallOptionsInstaller {
 			'is_ajax_request' => true,
 		]);
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$request_demo_name = isset($_REQUEST['demo_name']) ? sanitize_text_field(wp_unslash($_REQUEST['demo_name'])) : '';
+
 		if (
 			! $args['demo_name']
 			&&
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			isset($_REQUEST['demo_name'])
-			&&
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$_REQUEST['demo_name']
+			$request_demo_name !== ''
 		) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			$args['demo_name'] = sanitize_text_field(wp_unslash($_REQUEST['demo_name']));
+			$args['demo_name'] = $request_demo_name;
 		}
 
 		$this->demo_name = $args['demo_name'];
@@ -87,6 +84,7 @@ class DemoInstallOptionsInstaller {
 		}
 
 		$options = $demo_to_install['demo']['options'];
+
 		$this->import_options($options, $demo_to_install['demo']);
 
 		if ($this->is_ajax_request) {
@@ -110,6 +108,7 @@ class DemoInstallOptionsInstaller {
 		foreach ($options['mods'] as $key => $val) {
 			if ($key === 'sidebars_widgets') continue;
 			if ($key === 'custom_css_post_id') continue;
+
 			do_action('customize_save_' . $key, $wp_customize);
 			set_theme_mod($key, $val);
 		}
@@ -169,7 +168,6 @@ class DemoInstallOptionsInstaller {
 		) {
 			\FluentBooking\Database\DBMigrator::run(false);
 			\FluentBooking\Database\DBSeeder::run();
-
 
 			try {
 				$import_service = new \FluentBooking\App\Services\ImportService();
@@ -302,6 +300,55 @@ class DemoInstallOptionsInstaller {
 		}
 
 		if (
+			class_exists('\FluentSnippets\App\Model\Snippet')
+			&&
+			isset($options['fluent_snippets'])
+			&&
+			is_array($options['fluent_snippets'])
+		) {
+			$snippetModel = new \FluentSnippets\App\Model\Snippet();
+			$existingSnippets = $snippetModel->get();
+
+			$existingCodeHashes = [];
+			foreach ($existingSnippets as $existingSnippet) {
+				$existingCodeHashes[] = md5($existingSnippet['code']);
+			}
+
+			foreach ($options['fluent_snippets'] as $snippet) {
+				if (empty($snippet['code'])) {
+					continue;
+				}
+
+				$name = $snippet['info']['name'] ?? '';
+				if (! $name) {
+					continue;
+				}
+
+				$code = base64_decode($snippet['code']);
+				$codeHash = md5($code);
+
+				// Verify code hash
+				if ($codeHash !== $snippet['code_hash']) {
+					continue;
+				}
+
+				// Skip if snippet already exists
+				if (in_array($codeHash, $existingCodeHashes)) {
+					continue;
+				}
+
+				$meta = $snippet['info'];
+
+				$snippetModel->createSnippet($code, $meta);
+			}
+
+			// Rebuild snippet index cache
+			if (class_exists('\FluentSnippets\App\Helpers\Helper')) {
+				\FluentSnippets\App\Helpers\Helper::cacheSnippetIndex();
+			}
+		}
+
+		if (
 			function_exists('wp_update_custom_css_post')
 			&&
 			isset($options['wp_css'])
@@ -333,4 +380,3 @@ class DemoInstallOptionsInstaller {
 		}
 	}
 }
-

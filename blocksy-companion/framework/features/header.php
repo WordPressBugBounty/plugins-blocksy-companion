@@ -17,6 +17,7 @@ class HeaderAdditions {
 				'loader_selector' => '[data-id="account"]',
 				'settings' => ['header_placements'],
 				'render_callback' => function () {
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo blocksy_manager()->header_builder->render();
 				}
 			];
@@ -31,6 +32,7 @@ class HeaderAdditions {
 				'render_callback' => function () {
 					$elements = new \Blocksy_Header_Builder_Elements();
 
+					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					echo $elements->render_offcanvas([
 						'has_container' => false
 					]);
@@ -537,8 +539,10 @@ class HeaderAdditions {
 
 		$header_id = null;
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		if (isset($_REQUEST['header_id'])) {
-			$header_id = $_REQUEST['header_id'];
+			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			$header_id = sanitize_text_field(wp_unslash($_REQUEST['header_id']));
 		}
 
 		$render = new \Blocksy_Header_Builder_Render([

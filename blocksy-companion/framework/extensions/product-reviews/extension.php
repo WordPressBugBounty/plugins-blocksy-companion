@@ -35,18 +35,19 @@ class BlocksyExtensionProductReviews {
 					return;
 				}
 
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo '<div ' . $maybe_schema . '>';
-				echo '<meta itemprop="name" content="' . get_the_title() . '">';
+				echo '<meta itemprop="name" content="' . esc_attr(get_the_title()) . '">';
 				if (get_the_post_thumbnail_url()) {
-					echo '<meta itemprop="image" content="' . get_the_post_thumbnail_url() . '">';
+					echo '<meta itemprop="image" content="' . esc_url(get_the_post_thumbnail_url()) . '">';
 				}
 
 				$product_description = blocksy_akg('product_description', $atts, '');
 
 				if (! empty($product_description)) {
-					echo blocksy_html_tag('meta', [
+					blocksy_html_tag_e('meta', [
 						'itemprop' => 'description',
-						'content' => strip_tags($product_description)
+						'content' => wp_strip_all_tags($product_description)
 					]);
 				}
 
@@ -56,14 +57,14 @@ class BlocksyExtensionProductReviews {
 					$product_entity_price = blocksy_akg('product_entity_price', $atts, '');
 
 					if (! empty($product_entity_sku)) {
-						echo blocksy_html_tag('meta', [
+						blocksy_html_tag_e('meta', [
 							'itemprop' => 'sku',
 							'content' => $product_entity_sku
 						]);
 					}
 
 					if (! empty($product_entity_brand)) {
-						echo blocksy_html_tag(
+						blocksy_html_tag_e(
 							'div',
 							[
 								'itemprop' => 'brand',
@@ -142,7 +143,7 @@ class BlocksyExtensionProductReviews {
 						]);
 					}
 
-					echo blocksy_html_tag(
+					blocksy_html_tag_e(
 						'div',
 						[
 							'itemprop' => 'offers',
@@ -341,7 +342,7 @@ class BlocksyExtensionProductReviews {
 					return;
 				}
 
-				echo blocksy_render_view(
+				blocksy_render_view_e(
 					dirname(__FILE__) . '/views/single-top.php',
 					[]
 				);
@@ -635,6 +636,7 @@ class BlocksyExtensionProductReviews {
 				 * Note to code reviewers: This line doesn't need to be escaped.
 				 * Function blocksy_output_options_panel() used here escapes the value properly.
 				 */
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo blocksy_output_options_panel(
 					[
 						'options' => $options,
@@ -672,6 +674,7 @@ class BlocksyExtensionProductReviews {
 
 		if (isset($_POST['blocksy_product_review_options'][blocksy_post_name()])) {
 			$values = json_decode(
+				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 				wp_unslash($_POST['blocksy_product_review_options'][blocksy_post_name()]),
 				true
 			);
