@@ -153,6 +153,28 @@ class BlocksyExtensionProductReviews {
 						$offers_contents
 					);
 				}
+				
+				if ($product_review_entity === 'LocalBusiness') {
+					$local_business_address = blocksy_akg('local_business_address', $atts, '');
+
+					if (! empty($local_business_address)) {
+						blocksy_html_tag_e(
+							'div',
+							[
+								'itemprop' => 'address',
+								'itemscope' => '',
+								'itemtype' => 'https://schema.org/PostalAddress'
+							],
+							blocksy_html_tag(
+								'meta',
+								[
+									'itemprop' => 'streetAddress',
+									'content' => $local_business_address
+								]
+							)
+						);
+					}
+				}
 			}
 		);
 

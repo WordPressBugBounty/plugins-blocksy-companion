@@ -29,7 +29,7 @@ msgstr "Toutes les 12 heures"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/feature.php:417
 msgid "<p><strong>🔥 Hurry up! Your selected items are reserved for {time} minutes.</strong></p>"
-msgstr "<p><strong>🔥 Dépêchez-vous ! Les articles que vous avez sélectionnés sont réserv��s pendant {time} minutes.</strong></p>"
+msgstr "<p><strong>🔥 Dépêchez-vous ! Les articles que vous avez sélectionnés sont réservés pendant {time} minutes.</strong></p>"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:28
 msgid "Countdown Duration"

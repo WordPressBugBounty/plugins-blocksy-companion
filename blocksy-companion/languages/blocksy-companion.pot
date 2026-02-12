@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-01-30 14:56+0000\n"
+"POT-Creation-Date: 2026-02-12 17:07+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: framework/dashboard.php:58, framework/dashboard.php:59,
 #: framework/dashboard.php:545, framework/dashboard.php:546,
-#: framework/extensions/product-reviews/extension.php:620
+#: framework/extensions/product-reviews/extension.php:642
 msgid "Blocksy"
 msgstr ""
 
@@ -295,8 +295,8 @@ msgid ""
 msgstr ""
 
 #: framework/features/demo-install.php:159,
-#: framework/features/demo-install/content-installer.php:179,
-#: framework/features/demo-install/content-installer.php:175,
+#: framework/features/demo-install/content-installer.php:184,
+#: framework/features/demo-install/content-installer.php:180,
 #: framework/features/demo-install/demo-register.php:12
 msgid "No demo name provided."
 msgstr ""
@@ -835,7 +835,7 @@ msgstr ""
 
 #: framework/extensions/cookies-consent/customizer.php:15,
 #: framework/extensions/newsletter-subscribe/customizer.php:12,
-#: framework/extensions/product-reviews/extension.php:383,
+#: framework/extensions/product-reviews/extension.php:405,
 #: framework/extensions/product-reviews/metabox.php:6,
 #: framework/extensions/trending/customizer.php:175,
 #: framework/features/header/header-options.php:6,
@@ -1014,7 +1014,7 @@ msgstr ""
 
 #: framework/extensions/cookies-consent/customizer.php:143,
 #: framework/extensions/newsletter-subscribe/customizer.php:170,
-#: framework/extensions/product-reviews/extension.php:423,
+#: framework/extensions/product-reviews/extension.php:445,
 #: framework/extensions/trending/customizer.php:606,
 #: framework/features/header/header-options.php:222,
 #: framework/premium/extensions/mega-menu/options.php:584,
@@ -1891,15 +1891,15 @@ msgid ""
 "affiliate links to direct your readers to the purchase page."
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:257,
-#: framework/extensions/product-reviews/extension.php:428
+#: framework/extensions/product-reviews/extension.php:279,
+#: framework/extensions/product-reviews/extension.php:450
 msgid "Star Rating Color"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:275,
-#: framework/extensions/product-reviews/extension.php:445,
-#: framework/extensions/product-reviews/extension.php:473,
-#: framework/extensions/product-reviews/extension.php:494,
+#: framework/extensions/product-reviews/extension.php:297,
+#: framework/extensions/product-reviews/extension.php:467,
+#: framework/extensions/product-reviews/extension.php:495,
+#: framework/extensions/product-reviews/extension.php:516,
 #: framework/premium/extensions/mega-menu/options.php:882,
 #: framework/features/header/items/account/options.php:2008,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:225,
@@ -1916,17 +1916,17 @@ msgstr ""
 msgid "Active"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:281,
-#: framework/extensions/product-reviews/extension.php:451
+#: framework/extensions/product-reviews/extension.php:303,
+#: framework/extensions/product-reviews/extension.php:473
 msgid "Inactive"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:319,
+#: framework/extensions/product-reviews/extension.php:341,
 #: framework/extensions/product-reviews/views/single-top.php:144
 msgid "Overall Score"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:322,
+#: framework/extensions/product-reviews/extension.php:344,
 #: framework/premium/features/content-blocks/content-block-layer.php:231,
 #: framework/premium/features/content-blocks/content-block-layer.php:281,
 #: framework/premium/extensions/woocommerce-extra/features/attributes-layer.php:128,
@@ -1944,134 +1944,134 @@ msgstr ""
 msgid "Bottom Spacing"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:377
+#: framework/extensions/product-reviews/extension.php:399
 msgid "Review Summary"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:388
+#: framework/extensions/product-reviews/extension.php:410
 msgid "Scores Box Width"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:398
+#: framework/extensions/product-reviews/extension.php:420
 msgid "Read More Button"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:409
+#: framework/extensions/product-reviews/extension.php:431
 msgid "Buy Now Button"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:459
+#: framework/extensions/product-reviews/extension.php:481
 msgid "Overll Score Text"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:481
+#: framework/extensions/product-reviews/extension.php:503
 msgid "Overll Score Background"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:541,
-#: framework/extensions/product-reviews/extension.php:542,
-#: framework/extensions/product-reviews/extension.php:545,
-#: framework/extensions/product-reviews/extension.php:547
+#: framework/extensions/product-reviews/extension.php:563,
+#: framework/extensions/product-reviews/extension.php:564,
+#: framework/extensions/product-reviews/extension.php:567,
+#: framework/extensions/product-reviews/extension.php:569
 msgid "Product Reviews"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:546
+#: framework/extensions/product-reviews/extension.php:568
 msgid "Product Review"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:548
+#: framework/extensions/product-reviews/extension.php:570
 msgid "Parent Product Review"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:549
+#: framework/extensions/product-reviews/extension.php:571
 msgid "All Reviews"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:550
+#: framework/extensions/product-reviews/extension.php:572
 msgid "View Product Review"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:551
+#: framework/extensions/product-reviews/extension.php:573
 msgid "Add New Product Review"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:552
+#: framework/extensions/product-reviews/extension.php:574
 msgid "Add New Review"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:553
+#: framework/extensions/product-reviews/extension.php:575
 msgid "Edit Product Review"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:554
+#: framework/extensions/product-reviews/extension.php:576
 msgid "Update Product Review"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:555
+#: framework/extensions/product-reviews/extension.php:577
 msgid "Search Product Review"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:556
+#: framework/extensions/product-reviews/extension.php:578
 msgid "Not Found"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:557
+#: framework/extensions/product-reviews/extension.php:579
 msgid "Not found in Trash"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:591,
-#: framework/extensions/product-reviews/extension.php:601,
+#: framework/extensions/product-reviews/extension.php:613,
+#: framework/extensions/product-reviews/extension.php:623,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:100
 msgid "Categories"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:592,
+#: framework/extensions/product-reviews/extension.php:614,
 #: framework/extensions/trending/customizer.php:36,
 #: framework/extensions/trending/customizer.php:118
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:93
 msgid "Category"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:593
+#: framework/extensions/product-reviews/extension.php:615
 msgid "Search Category"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:594
+#: framework/extensions/product-reviews/extension.php:616
 #: static/js/dashboard/screens/DemoInstall/filters/DemoListFilters.js:87
 msgid "All Categories"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:595
+#: framework/extensions/product-reviews/extension.php:617
 msgid "Parent Category"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:596
+#: framework/extensions/product-reviews/extension.php:618
 msgid "Parent Category:"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:597
+#: framework/extensions/product-reviews/extension.php:619
 msgid "Edit Category"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:598
+#: framework/extensions/product-reviews/extension.php:620
 msgid "Update Category"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:599
+#: framework/extensions/product-reviews/extension.php:621
 msgid "Add New Category"
 msgstr ""
 
-#: framework/extensions/product-reviews/extension.php:600
+#: framework/extensions/product-reviews/extension.php:622
 msgid "New Category Name"
 msgstr ""
 
 #. translators: %s is the theme name.
-#: framework/extensions/product-reviews/extension.php:619
+#: framework/extensions/product-reviews/extension.php:641
 msgid "%s Settings"
 msgstr ""
 
 #: framework/extensions/product-reviews/helpers.php:30,
-#: framework/extensions/product-reviews/metabox.php:182,
+#: framework/extensions/product-reviews/metabox.php:197,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:307,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:471,
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/rating.php:161
@@ -2144,77 +2144,81 @@ msgid ""
 "%1$shere%2$s."
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:61
+#: framework/extensions/product-reviews/metabox.php:55
+msgid "Business Address"
+msgstr ""
+
+#: framework/extensions/product-reviews/metabox.php:76
 msgid ""
 "Please note that some of this information (price, sku, brand) won't be "
 "displayed on the front-end. It is solely used for Google's Schema.org markup."
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:70
+#: framework/extensions/product-reviews/metabox.php:85
 msgid "Product Price"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:77,
+#: framework/extensions/product-reviews/metabox.php:92,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:204
 msgid "Product SKU"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:84
+#: framework/extensions/product-reviews/metabox.php:99
 msgid "Product Brand"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:97
+#: framework/extensions/product-reviews/metabox.php:112
 msgid "Gallery"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:108
+#: framework/extensions/product-reviews/metabox.php:123
 msgid "Affiliate Button Label"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:110,
+#: framework/extensions/product-reviews/metabox.php:125,
 #: framework/extensions/product-reviews/views/single-top.php:161
 msgid "Buy Now"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:115
+#: framework/extensions/product-reviews/metabox.php:130
 msgid "Affiliate Link"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:121
+#: framework/extensions/product-reviews/metabox.php:136
 msgid "Open Link In New Tab"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:128
+#: framework/extensions/product-reviews/metabox.php:143
 msgid "Sponsored Attribute"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:151
+#: framework/extensions/product-reviews/metabox.php:166
 msgid "Read More Button Label"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:153,
+#: framework/extensions/product-reviews/metabox.php:168,
 #: framework/extensions/product-reviews/views/single-top.php:167
 msgid "Read More"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:173
+#: framework/extensions/product-reviews/metabox.php:188
 msgid "Short Description"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:188
+#: framework/extensions/product-reviews/metabox.php:203
 msgid "Scores"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:228
+#: framework/extensions/product-reviews/metabox.php:243
 msgid "Product specs"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:253,
+#: framework/extensions/product-reviews/metabox.php:268,
 #: framework/extensions/product-reviews/views/single-top.php:270
 msgid "Pros"
 msgstr ""
 
-#: framework/extensions/product-reviews/metabox.php:273,
+#: framework/extensions/product-reviews/metabox.php:288,
 #: framework/extensions/product-reviews/views/single-top.php:294
 msgid "Cons"
 msgstr ""
@@ -2538,22 +2542,22 @@ msgstr ""
 msgid "Invalid request. SSE Accept header required."
 msgstr ""
 
-#: framework/features/demo-install/content-installer.php:87
+#: framework/features/demo-install/content-installer.php:92
 msgid "Sorry, you don't have permission to install content."
 msgstr ""
 
-#: framework/features/demo-install/content-installer.php:207,
-#: framework/features/demo-install/content-installer.php:203
+#: framework/features/demo-install/content-installer.php:212,
+#: framework/features/demo-install/content-installer.php:208
 msgid "No demo data found."
 msgstr ""
 
 #. translators: %1$s and %2$s are HTML tags for a link.
-#: framework/features/demo-install/content-installer.php:343
+#: framework/features/demo-install/content-installer.php:348
 msgid "Importing %1$s: %2$s"
 msgstr ""
 
-#: framework/features/demo-install/content-installer.php:482,
-#: framework/features/demo-install/content-installer.php:478
+#: framework/features/demo-install/content-installer.php:487,
+#: framework/features/demo-install/content-installer.php:483
 msgid "No pages to assign."
 msgstr ""
 

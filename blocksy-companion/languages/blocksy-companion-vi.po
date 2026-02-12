@@ -386,7 +386,7 @@ msgstr "Vui lòng nhập ít nhất {0} ký tự."
 
 #: framework/theme-integration.php:101
 msgid "Please enter a value between {0} and {1} characters long."
-msgstr "Vui lòng nh��p giá trị có độ dài từ {0} đến {1} ký tự."
+msgstr "Vui lòng nhập giá trị có độ dài từ {0} đến {1} ký tự."
 
 #: framework/theme-integration.php:102
 msgid "Please enter a value between {0} and {1}."
@@ -1928,7 +1928,7 @@ msgstr "Tìm theo %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:500
 msgid "Regenerate the product taxonomies lookup table"
-msgstr "Tạo lại bảng tra cứu phân loại sản phẩm"
+msgstr "Tạo lại bảng tra c���u phân loại sản phẩm"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:501
 msgid "This tool will regenerate the product taxonomies lookup table data from existing product(s) data. This process may take a while."
@@ -2584,7 +2584,7 @@ msgstr "Điều khiển hộp chia sẻ"
 
 #: static/js/editor/blocks/share-box/index.js:50
 msgid "Share content on social media, boosting visibility & engagement."
-msgstr "Chia sẻ nội dung trên mạng xã hội, tăng tầm nhìn & sự tham gia."
+msgstr "Chia sẻ nội dung trên m��ng xã hội, tăng tầm nhìn & sự tham gia."
 
 #: static/js/editor/blocks/socials/index.js:15
 msgid "Socials Controls"

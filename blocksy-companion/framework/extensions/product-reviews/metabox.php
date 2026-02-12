@@ -47,6 +47,21 @@ $options = [
 
 			blocksy_rand_md5() => [
 				'type' => 'ct-condition',
+				'condition' => ['product_review_entity' => 'LocalBusiness'],
+				'options' => [
+
+					'local_business_address' => [
+						'type' => 'text',
+						'label' => __('Business Address', 'blocksy-companion'),
+						'design' => 'inline:start',
+						'value' => '',
+					],
+
+				]
+			],
+
+			blocksy_rand_md5() => [
+				'type' => 'ct-condition',
 				'condition' => ['product_review_entity' => 'Product'],
 				'options' => [
 

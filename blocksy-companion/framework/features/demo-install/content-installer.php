@@ -57,24 +57,29 @@ class DemoInstallContentInstaller {
 			if (
 				class_exists('\Elementor\Plugin')
 				&&
-				class_exists('\AstraSites\Elementor\Astra_Sites_Compatibility_Elementor')
+				defined('ELEMENTOR_VERSION')
+				&&
+				version_compare(ELEMENTOR_VERSION, '3.0.0', '>=')
 			) {
-				$elementor_integration = \AstraSites\Elementor\Astra_Sites_Compatibility_Elementor::get_instance();
+				add_filter(
+					'wp_import_post_meta',
+					['Elementor\Compatibility', 'on_wp_import_post_meta']
+				);
 
-				if (
-					defined('ELEMENTOR_VERSION')
-					&&
-					version_compare(ELEMENTOR_VERSION, '3.0.0', '>=')
-				) {
-					add_filter(
-						'wp_import_post_meta',
-						array('Elementor\Compatibility', 'on_wp_import_post_meta')
-					);
+				$compatibility_classes = [
+					'\AstraSites\Elementor\Astra_Sites_Compatibility_Elementor',
+					'\AI_Builder\Inc\Compatibility\Elementor\AI_Builder_Compatibility_Elementor',
+				];
 
-					remove_filter(
-						'wp_import_post_meta',
-						array($elementor_integration, 'on_wp_import_post_meta')
-					);
+				foreach ($compatibility_classes as $class) {
+					if (class_exists($class) && method_exists($class, 'get_instance')) {
+						$instance = $class::get_instance();
+
+						remove_filter(
+							'wp_import_post_meta',
+							[$instance, 'on_wp_import_post_meta']
+						);
+					}
 				}
 			}
 		}

@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.27
+Stable tag: 2.1.28
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,10 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.28: 2026-02-12
+- Improvement: Product Reviews - add "address" field option for "Local Business" entity type
+- Improvement: Starter sites importer - more reliable way of installing Elementor starter sites
+
 2.1.27: 2026-01-30
 - Improvement: Demo importer - correctly export and import ACF custom taxonomies
 - Improvement: Dynamic data image - make sure cover type styles are loaded on demand

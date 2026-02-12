@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-11-03 15:51:10+0000\n"
+"PO-Revision-Date: 2026-02-04 09:01:58+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -4186,7 +4186,7 @@ msgstr "Secunde"
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:310,
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:342
 msgid "Hurry up! This sale ends in"
-msgstr "Grăbește-te! Această ofertă se ��ncheie în"
+msgstr "Grăbește-te! Această ofertă se încheie în"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:336
 msgid "Countdown Box"
@@ -5647,7 +5647,7 @@ msgstr "Ascunde Hook-uri WooCommerce"
 
 #: framework/premium/features/content-blocks/admin-ui.php:826
 msgid "Show WooCommerce Hooks"
-msgstr "Afișează Hook-uri ale temei"
+msgstr "Afișează Hook-uri WooCommerce"
 
 #: framework/features/header/modal/register.php:85
 msgid "A link to set a new password will be sent to your email address."
