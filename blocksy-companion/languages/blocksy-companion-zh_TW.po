@@ -6896,7 +6896,7 @@ msgstr "標籤位置"
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:150,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:151
 msgid "Bottom"
-msgstr "下方"
+msgstr "���方"
 
 #: framework/premium/features/premium-header.php:295,
 #: framework/premium/extensions/mega-menu/options.php:482,

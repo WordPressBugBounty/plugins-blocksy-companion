@@ -5466,7 +5466,7 @@ msgstr ""
 
 #: framework/helpers/exts-configs.php:263
 msgid "A set of features that lets you create easily your dream products wishlists and share them with friends and family."
-msgstr "دسته‌ای از امکانات که به شما اجازه می‌دهد به سادگی لیست علاقه‌مندی‌��ای محصول دلخواه خود را بسازید و آن‌ها را با دوستان و خانواده به اشتراک بگذارید."
+msgstr "دسته‌ای از امکانات که به شما اجازه می‌دهد به سادگی لیست علاقه‌مندی‌های محصول دلخواه خود را بسازید و آن‌ها را با دوستان و خانواده به اشتراک بگذارید."
 
 #: framework/helpers/exts-configs.php:270
 msgid "Compare View"
@@ -6218,7 +6218,7 @@ msgstr ""
 
 #: framework/features/account-auth.php:237
 msgid "Your account was created successfully. Your login details have been sent to your email address. Please visit the %1$slogin page%2$s."
-msgstr "حساب شما با موفقیت ایجاد شد. جزئیات ورود شما به نشانی رایانامه‌ی شما ارسال شد. لطفا %1$sبرگه‌ی ورود%2$s را مشاهده کنید."
+msgstr "��ساب شما با موفقیت ایجاد شد. جزئیات ورود شما به نشانی رایانامه‌ی شما ارسال شد. لطفا %1$sبرگه‌ی ورود%2$s را مشاهده کنید."
 
 #: framework/features/account-auth.php:248
 msgid "Your account was created successfully and a password has been sent to your email address. Please visit the %1$slogin page%2$s."

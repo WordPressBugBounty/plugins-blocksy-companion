@@ -110,7 +110,7 @@ msgstr "Генерувати таблицю заново вручну"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:533
 msgid "This tool will abort the regenerate product taxonomies lookup table regeneration. After this is done the process can be either started over, or resumed to continue where it stopped."
-msgstr "Цей інструмент перерве регенерацію таблиці пошуку за таксономіями товарів. Після цього процес можна або запустити заново, або відновити з попереднього місц��."
+msgstr "Цей інструмент перерве регенерацію таблиці пошуку за таксономіями товарів. Після цього процес можна або запустити заново, або відновити з попереднього місця."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:63
 msgid "user"
@@ -142,7 +142,7 @@ msgstr "В наявності"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:217
 msgid "Subscribers"
-msgstr "Підписн��ки"
+msgstr "Підписники"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:224
 msgid "Pending entries"
@@ -290,7 +290,7 @@ msgstr "База знань"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:85
 msgid "Dive in with our documentation and learn tips and tricks about Blocksy and its components."
-msgstr "Ознакомьтесь с нашей документацией и получите советы и рекомендации по Blocksy и его компонентах."
+msgstr "Ознакомьтесь с нашей документацией и получите советы и реком��ндации по Blocksy и его компонентах."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:93
 msgid "View Documentation"
@@ -476,7 +476,7 @@ msgstr "Не вдалося знайти файл експорту за адре
 #. translators: %s is the WXR version number.
 #: framework/features/demo-install/wp-importer.php:282
 msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
-msgstr "Цей WXR-файл (версія %s) може не підтримуватися цією ве��сією імпортера. Розгляньте можливість оновлення."
+msgstr "Цей WXR-файл (версія %s) може не підтримуватися цією версією імпортера. Розгляньте можливість оновлення."
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
@@ -518,7 +518,7 @@ msgstr "як новий користувач:"
 
 #: framework/features/demo-install/wp-importer.php:402
 msgid "or create new user with login name:"
-msgstr "або створити нового користувача з ��м'ям:"
+msgstr "або створити нового користувача з ім'ям:"
 
 #: framework/features/demo-install/wp-importer.php:415
 msgid "or assign posts to an existing user:"
@@ -623,7 +623,7 @@ msgstr "Виберіть файл WXR (.xml) для завантаження, п
 #. translators: %1$s is the error message, %2$s is the line number
 #: framework/premium/features/code-editor.php:116
 msgid "Code execution has been canceled due to error: %1$s on line: %2$s"
-msgstr "Виконання ��оду було скасовано через помилку: %1$s у рядку: %2$s!"
+msgstr "Виконання коду було скасовано через помилку: %1$s у рядку: %2$s!"
 
 #. translators: %1$s is the post type name, %2$s is the post edit link
 #: framework/premium/features/code-editor.php:132
@@ -1032,7 +1032,7 @@ msgstr "При натисканні кнопки закриття"
 
 #: framework/premium/features/content-blocks/options/popup.php:313
 msgid "On ESC Button Press"
-msgstr "При натисканні кн��пки ESC"
+msgstr "При натисканні кнопки ESC"
 
 #: framework/premium/features/content-blocks/options/popup.php:325
 msgid "On Backdrop Click"
@@ -1113,7 +1113,7 @@ msgstr "Ліміт архіву"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:575
 msgid "Limit the number of swatches shown on archive pages."
-msgstr "Обмеження кількості зразків, що відображаються на сторінках архіву."
+msgstr "Обмеження кількості зразків, що відображаються на сторінках а��хіву."
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:579
 msgid "Product Page Limit"
@@ -1466,7 +1466,7 @@ msgstr "Ви додані до списку очікування"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
-msgstr "Ви видалені зі списку очікування"
+msgstr "Ви вида��ені зі списку очікування"
 
 #. translators: %1$s is the number of users, %2$s is the plural form
 #. (user/users)
@@ -1544,7 +1544,7 @@ msgstr "Товар, на який ви чекаєте, знову в наявн�
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr "Гарні новини! Товар, на який ви так довго чекали, знову в наявності!"
+msgstr "Гарні новини! Тов��р, на який ви так довго чекали, знову в наявності!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
@@ -1601,7 +1601,7 @@ msgstr "Введіть свою електронну адресу, щоб отр
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:83
 msgid "Great! You have been added to the waitlist for this product. Please check your inbox and confirm the subscription to this waitlist."
-msgstr "Ви були додані до списку очікування цього товару. Перевірте свою поштову скриньку та підтвердіть своє включення до списку очікування."
+msgstr "Ви були додані до списку очікування цього товару. Перевірте свою поштову скриньку та підтвердіть своє вкл��чення до списку очікування."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:111
 msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
@@ -1743,7 +1743,7 @@ msgstr "Відображення спливаючого вікна динамі�
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
-msgstr "Увімк. тригер вікна"
+msgstr "Увімк. т��игер вікна"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"
@@ -11508,7 +11508,7 @@ msgstr "Розсилка"
 #: static/js/editor/blocks/contact-info/Edit.js:107
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:276
 msgid "Text"
-msgstr "Текст"
+msgstr "Т��кст"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:19,
 #: framework/features/blocks/about-me/options.php:77

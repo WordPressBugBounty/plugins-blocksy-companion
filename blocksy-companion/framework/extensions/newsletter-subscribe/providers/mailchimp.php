@@ -60,7 +60,8 @@ class MailchimpProvider extends Provider {
 						$list['subscribe_url_long'] . '&c=callback'
 					),
 
-					'has_gdpr_fields' => $list['marketing_permissions']
+					'has_gdpr_fields' => $list['marketing_permissions'],
+					'double_optin' => $list['double_optin']
 				];
 			}, $body['lists']);
 		} else {
@@ -97,6 +98,7 @@ class MailchimpProvider extends Provider {
 			return [
 				'form_url' => $lists[0]['subscribe_url_long'],
 				'has_gdpr_fields' => $lists[0]['has_gdpr_fields'],
+				'double_optin' => $lists[0]['double_optin'],
 				'provider' => 'mailchimp'
 			];
 		}
@@ -106,6 +108,7 @@ class MailchimpProvider extends Provider {
 				return [
 					'form_url' => $single_list['subscribe_url_long'],
 					'has_gdpr_fields' => $single_list['has_gdpr_fields'],
+					'double_optin' => $single_list['double_optin'],
 					'provider' => 'mailchimp'
 				];
 			}
@@ -114,6 +117,7 @@ class MailchimpProvider extends Provider {
 		return [
 			'form_url' => $lists[0]['subscribe_url_long'],
 			'has_gdpr_fields' => $lists[0]['has_gdpr_fields'],
+			'double_optin' => $lists[0]['double_optin'],
 			'provider' => 'mailchimp'
 		];
 	}
@@ -122,7 +126,8 @@ class MailchimpProvider extends Provider {
 		$args = wp_parse_args($args, [
 			'email' => '',
 			'name' => '',
-			'group' => ''
+			'group' => '',
+			'double_optin' => false,
 		]);
 
 		$settings = $this->get_settings();
@@ -153,7 +158,7 @@ class MailchimpProvider extends Provider {
 			CURLOPT_CUSTOMREQUEST => "POST",
 			CURLOPT_POSTFIELDS => json_encode([
 				'email_address' => $args['email'],
-				'status' => 'subscribed',
+				'status' => $args['double_optin'] ? 'pending' : 'subscribed',
 				'merge_fields' => array_merge(
 					[
 						'FNAME' => $fname						
@@ -194,7 +199,8 @@ class MailchimpProvider extends Provider {
 						// translators: %s is the email address
 						__('%s is already a list member.', 'blocksy-companion'),
 						$args['email']
-					)
+					),
+					'res' => $response,
 				];
 			}
 

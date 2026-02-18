@@ -172,6 +172,7 @@ $provider_data['provider'] .= ':' . $list_id;
 
 $form_url = $provider_data['form_url'];
 $has_gdpr_fields = $provider_data['has_gdpr_fields'];
+$has_double_optin = $provider_data['double_optin'];
 
 $name_label = blocksy_default_akg(
 	'newsletter_subscribe_name_label',
@@ -228,6 +229,10 @@ $skip_submit_output = '';
 
 if ($has_gdpr_fields) {
 	$form_attrs['data-skip-submit'] = '';
+}
+
+if ($has_double_optin) {
+	$form_attrs['data-double-optin'] = '';
 }
 
 if (! empty($style) || ! empty($colors_css)) {

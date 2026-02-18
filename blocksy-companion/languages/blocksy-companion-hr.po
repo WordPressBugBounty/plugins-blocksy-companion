@@ -4351,7 +4351,7 @@ msgstr "Pregled stranice zahvale"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:499
 msgid "Search Thank You Pages"
-msgstr "Pretra��i stranice zahvale"
+msgstr "Pretraži stranice zahvale"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/options.php:78
 msgid "Payment Gateway"

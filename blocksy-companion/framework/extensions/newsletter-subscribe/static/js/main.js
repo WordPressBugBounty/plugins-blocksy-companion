@@ -10,6 +10,10 @@ const submitAjax = (form) => {
 	form.classList.remove('subscribe-error', 'subscribe-success')
 	form.classList.add('subscribe-loading')
 
+	if (form.hasAttribute('data-double-optin')) {
+		body.append('DOUBLE_OPTIN', '1')
+	}
+
 	fetch(ct_localizations.ajax_url, {
 		method: 'POST',
 		body,
@@ -19,7 +23,7 @@ const submitAjax = (form) => {
 			form.classList.remove('subscribe-loading')
 
 			form.classList.add(
-				data.result === 'no' ? 'subscribe-error' : 'subscribe-success'
+				data.result === 'no' ? 'subscribe-error' : 'subscribe-success',
 			)
 
 			form.querySelector('.ct-newsletter-subscribe-message').innerHTML =

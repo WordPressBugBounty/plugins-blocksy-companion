@@ -365,12 +365,20 @@ class BlocksyExtensionNewsletterSubscribe {
 			$name = sanitize_text_field(wp_unslash($_POST['FNAME']));
 		}
 
+		$double_optin = false;
+
+		if (isset($_POST['DOUBLE_OPTIN'])) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing
+			$double_optin = sanitize_text_field(wp_unslash($_POST['DOUBLE_OPTIN'])) === '1';
+		}
+
 		$manager = \Blocksy\Extensions\NewsletterSubscribe\Provider::get_for_settings();
 
 		$result = $manager->subscribe_form([
 			'email' => $email,
 			'name' => $name,
 			'group' => $group,
+			'double_optin' => $double_optin,
 		]);
 
 		wp_send_json_success($result);

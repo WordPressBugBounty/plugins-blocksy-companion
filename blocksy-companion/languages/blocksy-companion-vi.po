@@ -89,7 +89,7 @@ msgstr "Tối đa:"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:125
 msgid "Regenerating Taxonomies Data"
-msgstr "Đang tái tạo dữ liệu phân loại"
+msgstr "��ang tái tạo dữ liệu phân loại"
 
 #. translators: %s is replaced with the current progress percentage.
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:145
@@ -1928,7 +1928,7 @@ msgstr "Tìm theo %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:500
 msgid "Regenerate the product taxonomies lookup table"
-msgstr "Tạo lại bảng tra c���u phân loại sản phẩm"
+msgstr "Tạo lại bảng tra cứu phân loại sản phẩm"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:501
 msgid "This tool will regenerate the product taxonomies lookup table data from existing product(s) data. This process may take a while."
@@ -1936,7 +1936,7 @@ msgstr "Công cụ này sẽ tái tạo dữ liệu bảng tra cứu phân loạ
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:512
 msgid "Product taxonomies lookup table data is regenerating"
-msgstr "Dữ liệu bảng tra cứu phân loại sản phẩm đang được tái tạo"
+msgstr "Dữ liệu bảng tra cứu phân loại sản ph��m đang được tái tạo"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:525
 msgid "Regenerate"
@@ -2584,7 +2584,7 @@ msgstr "Điều khiển hộp chia sẻ"
 
 #: static/js/editor/blocks/share-box/index.js:50
 msgid "Share content on social media, boosting visibility & engagement."
-msgstr "Chia sẻ nội dung trên m��ng xã hội, tăng tầm nhìn & sự tham gia."
+msgstr "Chia sẻ nội dung trên mạng xã hội, tăng tầm nhìn & sự tham gia."
 
 #: static/js/editor/blocks/socials/index.js:15
 msgid "Socials Controls"
@@ -4735,7 +4735,7 @@ msgstr "Chỉ định lượng thời gian (tính bằng giây) để trì hoãn
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:140
 msgid "Choose the default color mode that a user will see when it visits your site."
-msgstr "Chọn chế độ màu mặc định mà người dùng sẽ thấy khi truy cập trang web của bạn."
+msgstr "Chọn chế độ màu mặc định mà người dùng sẽ th��y khi truy cập trang web của bạn."
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/config.php:4
 msgid "Color Switch"

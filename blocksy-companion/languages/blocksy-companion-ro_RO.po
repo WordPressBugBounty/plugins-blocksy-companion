@@ -5265,7 +5265,7 @@ msgstr "Dată și oră"
 
 #: framework/features/conditions/rules/date-time.php:9
 msgid "Range Date/Time"
-msgstr "Interval dată/oră"
+msgstr "Interval dată/or��"
 
 #: framework/features/conditions/rules/date-time.php:14
 #: static/js/options/ConditionsManager/ScheduleDate.js:143

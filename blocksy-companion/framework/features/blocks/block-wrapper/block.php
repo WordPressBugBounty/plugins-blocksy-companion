@@ -86,8 +86,10 @@ class BlockWrapper {
 								&&
 								$p->has_class('ct-filter-widget-wrapper')
 							) {
+								$is_expanded = $attributes['defaultExpanded'] || strpos($accordion_block_html, 'checked="checked"') !== false || strpos($accordion_block_html, 'class="active"') !== false;
+
 								$p->set_attribute('data-behaviour', 'drop-down');
-								$p->set_attribute('aria-hidden', $attributes['defaultExpanded'] ? 'false' : 'true');
+								$p->set_attribute('aria-hidden', $is_expanded ? 'false' : 'true');
 
 								break;
 							}
@@ -108,8 +110,10 @@ class BlockWrapper {
 							if (in_array($p->get_tag(), $header_tags, true)) {
 								$heading_tag = $p->get_tag();
 
+								$is_expanded = $attributes['defaultExpanded'] || strpos($accordion_block_html, 'checked="checked"') !== false || strpos($accordion_block_html, 'class="active"') !== false;
+
 								$p->add_class('ct-expandable-trigger');
-								$p->set_attribute('aria-expanded', $attributes['defaultExpanded'] ? 'true' : 'false');
+								$p->set_attribute('aria-expanded', $is_expanded ? 'true' : 'false');
 								$p->set_attribute('data-icon', 'arrow');
 
 								break;

@@ -108,11 +108,16 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 
 	$form_url = $provider_data['form_url'];
 	$has_gdpr_fields = $provider_data['has_gdpr_fields'];
+	$has_double_optin = $provider_data['double_optin'];
 
-	$skip_submit_output = '';
+	$additional_output = '';
 
 	if ($has_gdpr_fields) {
-		$skip_submit_output = 'data-skip-submit';
+		$additional_output = 'data-skip-submit';
+	}
+
+	if ($has_double_optin) {
+		$additional_output .= ' data-double-optin';
 	}
 
 	$fields_number = '2';
@@ -149,7 +154,7 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 		<form target="_blank" action="<?php echo esc_attr($form_url) ?>" method="post"
 			data-provider="<?php echo esc_attr($provider_data['provider']) ?>"
 			class="ct-newsletter-subscribe-form"
-			<?php echo wp_kses_post($skip_submit_output) ?>>
+			<?php echo wp_kses_post($additional_output) ?>>
 
 			<div
 				<?php

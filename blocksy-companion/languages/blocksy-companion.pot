@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-12 17:07+0000\n"
+"POT-Creation-Date: 2026-02-18 16:17+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -1532,7 +1532,7 @@ msgstr ""
 #: framework/extensions/newsletter-subscribe/helpers.php:37,
 #: framework/extensions/newsletter-subscribe/helpers.php:81,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:122,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:179
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:180
 msgid "Your name"
 msgstr ""
 
@@ -1868,13 +1868,13 @@ msgstr ""
 msgid "Enter your email address below to subscribe to our newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:175
+#: framework/extensions/newsletter-subscribe/helpers.php:180
 msgid "First name"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:180,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:297,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:298
+#: framework/extensions/newsletter-subscribe/helpers.php:185,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:302,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:303
 msgid "Email address"
 msgstr ""
 
@@ -3242,7 +3242,7 @@ msgid "Fields Gap"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:137,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:184
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:185
 msgid "Your email *"
 msgstr ""
 
@@ -3251,8 +3251,8 @@ msgstr ""
 msgid "Newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:287,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:288,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:292,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:293,
 #: framework/features/blocks/about-me/options.php:68,
 #: framework/features/header/items/account/options.php:611,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:244,
@@ -3270,7 +3270,7 @@ msgstr ""
 #: framework/extensions/newsletter-subscribe/providers/emailoctopus.php:107,
 #: framework/extensions/newsletter-subscribe/providers/fluent-crm.php:87,
 #: framework/extensions/newsletter-subscribe/providers/klaviyo.php:165,
-#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:203,
+#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:209,
 #: framework/extensions/newsletter-subscribe/providers/mailerlite-classic.php:109,
 #: framework/extensions/newsletter-subscribe/providers/mailerlite-new.php:133,
 #: framework/extensions/newsletter-subscribe/providers/mailpoet.php:87
@@ -3282,7 +3282,7 @@ msgid "Demo List"
 msgstr ""
 
 #. translators: %s is the email address
-#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:195
+#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:200
 msgid "%s is already a list member."
 msgstr ""
 
@@ -7409,7 +7409,7 @@ msgstr ""
 msgid "Every 12 Hours"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/feature.php:417,
+#: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/feature.php:475,
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:40
 msgid ""
 "<p><strong>🔥 Hurry up! Your selected items are in high demand!</"
@@ -8821,11 +8821,11 @@ msgstr ""
 msgid "Regenerate table manually"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:628
+#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:654
 msgid "Collapse"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:629
+#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:655
 msgid "Expand"
 msgstr ""
 

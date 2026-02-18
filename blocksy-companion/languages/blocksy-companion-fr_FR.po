@@ -475,7 +475,7 @@ msgstr "Le fichier d’exportation n’a pu être trouvé à <code>%s</code>. Ce
 #. translators: %s is the WXR version number.
 #: framework/features/demo-install/wp-importer.php:282
 msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
-msgstr "Ce fichier WXR (version %s) n’est peut-être pas pris en charge par cette version de l’outil d’importation. Veuillez procéder à une mise à jour."
+msgstr "Ce fichier WXR (version %s) n’est peut-��tre pas pris en charge par cette version de l’outil d’importation. Veuillez procéder à une mise à jour."
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
@@ -1211,7 +1211,7 @@ msgstr "4 étoiles"
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/rating.php:120
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/rating-filter/Preview.js:25
 msgid "5 stars"
-msgstr "5 étoiles"
+msgstr "5 ��toiles"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/status.php:147
 msgid "On sale"

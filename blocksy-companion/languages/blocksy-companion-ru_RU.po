@@ -102,7 +102,7 @@ msgstr "Подождите, пока будет обновлена таблиц�
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:175
 msgid "Why is the table being regenerated?"
-msgstr "Почем�� таблица генерируется заново?"
+msgstr "Почему таблица генерируется заново?"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:187
 msgid "Regenerate table manually"
@@ -238,7 +238,7 @@ msgstr "Сохранить параметры"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:34
 msgid "%s Content"
-msgstr "Содержим��е %s"
+msgstr "Содержимое %s"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:109
 msgid "Show Price Range Text"
@@ -266,7 +266,7 @@ msgstr "Сообщество в Facebook"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:35
 msgid "Share ideas, help others, ask questions and discuss your next project in our friendly community."
-msgstr "Делитесь идеями, помогайте другим, задавайте вопросы и обсуждайте свой следующий проект в нашем дружелюбном сообществе."
+msgstr "Делитесь идеями, помогайте другим, задавайте вопросы �� обсуждайте свой следующий проект в нашем дружелюбном сообществе."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:43
 msgid "Join Our Community"
@@ -344,7 +344,7 @@ msgstr "Это поле является обязательным"
 
 #: framework/theme-integration.php:90
 msgid "Please fix this field."
-msgstr "Исправьте содержимое этого поля."
+msgstr "Испра��ьте содержимое этого поля."
 
 #: framework/theme-integration.php:91
 msgid "Please enter a valid email address."
@@ -388,7 +388,7 @@ msgstr "Введите не менее {0} символов."
 
 #: framework/theme-integration.php:101
 msgid "Please enter a value between {0} and {1} characters long."
-msgstr "Введите от {0} до {1} ��имволов."
+msgstr "Введите от {0} до {1} символов."
 
 #: framework/theme-integration.php:102
 msgid "Please enter a value between {0} and {1}."
@@ -422,7 +422,7 @@ msgstr "Файлы SVG не должны содержать PHP-код."
 #: framework/helpers/exts-configs.php:403,
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:4
 msgid "Cart Reserved Timer"
-msgstr "Таймер корзин��"
+msgstr "Таймер корзины"
 
 #: framework/helpers/exts-configs.php:404
 msgid "Display a countdown timer for reserved cart items, encouraging users to complete their purchase before the timer expires."
@@ -481,7 +481,7 @@ msgstr "Данный WXR-файл (версия %s) может не поддер
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
 msgid "Failed to import author %s. Their posts will be attributed to the current user."
-msgstr "Не удалось импортировать автора %s. Его публикации будут приписаны к вашему профилю."
+msgstr "Не удалось импортировать автора %s. Его публикации будут приписаны к вашему про��илю."
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
@@ -557,7 +557,7 @@ msgstr "Не удалось импортировать %1$s %2$s"
 #. translators: %1$s is the post type name, %2$s is the post title.
 #: framework/features/demo-install/wp-importer.php:924
 msgid "Failed to import %1$s &#8220;%2$s&#8221;"
-msgstr "Не удалось импортировать %1$s &#8220;%2$s&#8221;"
+msgstr "Не удал��сь импортировать %1$s &#8220;%2$s&#8221;"
 
 #: framework/features/demo-install/wp-importer.php:833
 msgid "%1$s &#8220;%1$s&#8221; already exists."
@@ -588,7 +588,7 @@ msgstr "Удалённый сервер не ответил"
 #. message.
 #: framework/features/demo-install/wp-importer.php:1301
 msgid "Remote server returned error response %1$d %2$s"
-msgstr "Удалённый сервер вернул ответ об ошибке %1$d %2$s"
+msgstr "Уд��лённый сервер вернул ответ об ошибке %1$d %2$s"
 
 #: framework/features/demo-install/wp-importer.php:1322
 msgid "Remote file is incorrect size"
@@ -614,7 +614,7 @@ msgstr "Доступна новая версия этого импортера. 
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
-msgstr "Привет! Загрузите расширенный RSS-файл WordPress (WXR), и система импортирует записи, страницы, комментарии, пользо��ательские поля, рубрики и теги на этот сайт."
+msgstr "Привет! Загрузите расширенный RSS-файл WordPress (WXR), и система импортирует записи, страницы, комментарии, пользовательские поля, рубрики и теги на этот сайт."
 
 #: framework/features/demo-install/wp-importer.php:1490
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
@@ -749,7 +749,7 @@ msgstr "Фокусная точка"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:269
 msgid "Fixed background"
-msgstr "Фиксированный фон"
+msgstr "��иксированный фон"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:286
 msgid "Repeated background"
@@ -921,7 +921,7 @@ msgstr "Пауза при отведении курсора"
 
 #: framework/premium/features/media-video/options.php:91
 msgid "Automatically pauses the video when the user stops hovering."
-msgstr "Автоматически приостанавливать воспроизведение видео, когда пользователь уводит курсор."
+msgstr "Автоматически приостанавливать восп��оизведение видео, когда пользователь уводит курсор."
 
 #: framework/premium/features/media-video/video-import-export.php:113
 msgid "Blocksy Images Metadata"
@@ -1020,7 +1020,7 @@ msgstr "Количество дней до того, как модальное �
 
 #: framework/premium/features/content-blocks/options/popup.php:279
 msgid "Days before the popup relaunches after the additional close trigger is activated."
-msgstr "Дней до повторного запуска модального окна после активации дополнительного триггера закр��тия."
+msgstr "Дней до повторного запуска модального окна после активации дополнительного триггера закрытия."
 
 #: framework/premium/features/content-blocks/options/popup.php:295
 msgid "Close Actions"
@@ -1052,7 +1052,7 @@ msgstr "Задержка"
 
 #: framework/premium/features/content-blocks/options/popup.php:473
 msgid "Select a post/page to preview it's content inside the editor while building the popup."
-msgstr "Выберите запись/страницу для предпросмотра её содержимого в редакторе при создании модального окна."
+msgstr "Выберите запись/страни��у для предпросмотра её содержимого в редакторе при создании модального окна."
 
 #: framework/premium/features/content-blocks/options/popup.php:572
 msgid "Lock the page scroll while the popup is triggered/oppened."
@@ -1133,7 +1133,7 @@ msgstr "Система показа скрытых при превышении �
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:611
 msgid "Out of Stock Swatch Type"
-msgstr "Тип о��разца отсутствующего на складе"
+msgstr "Тип образца отсутствующего на складе"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:618
 msgid "Faded"
@@ -1327,7 +1327,7 @@ msgstr "Размытие фона контейнера"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:970
 msgid "Added to Cart: Before product"
-msgstr "Добавлено в корзину: перед товаром"
+msgstr "Добав��ено в корзину: перед товаром"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:974
 msgid "Added to Cart: Before actions"
@@ -1462,7 +1462,7 @@ msgstr "Вы уже включены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:303
 msgid "You have been added to the waitlist"
-msgstr "Вы добавлены в ��писок ожидания"
+msgstr "Вы добавлены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
@@ -2057,7 +2057,7 @@ msgstr "Исключить некоторые товары"
 
 #: static/js/dashboard/screens/DemoInstall.js:183
 msgid "Your site is misconfigured and AJAX requests are not reaching your backend. Please click %shere%s to find the common causes and possible solutions to this.<br> Error code - %s"
-msgstr "Ваш сайт неправильно настроен, и AJAX-запросы не доходят до вашего сервера. Нажмите %sсюда%s, чтобы узнать о наиболее распространенных причинах и возможных решениях этой проблемы. <br>Код ошибки - %s"
+msgstr "Ваш сайт неправильно настроен, и AJAX-запросы не доходят до вашего сервера. Нажмите %sсюда%s, чтобы узнать о наиболее распрост��аненных причинах и возможных решениях этой проблемы. <br>Код ошибки - %s"
 
 #: static/js/dashboard/screens/DemoInstall.js:201
 msgid "Failed to retrieve starter sites list.<br> Error code - %s"
@@ -2422,7 +2422,7 @@ msgstr "Вид сетки"
 #: static/js/editor/blocks/post-template/Edit.js:371
 #: static/js/editor/blocks/tax-template/Edit.js:309
 msgid "Tablet Columns"
-msgstr "Колонки п��аншета"
+msgstr "Колонки планшета"
 
 #: static/js/editor/blocks/post-template/Edit.js:380
 #: static/js/editor/blocks/tax-template/Edit.js:319
@@ -3429,7 +3429,7 @@ msgstr "Это профессиональный стартовый сайт"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:54
 msgid "Upgrade to any pro plan and get instant access to this starter site and many other features."
-msgstr "Перейдите на любой профессио��альный тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
+msgstr "Перейдите на любой профессиональный тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:61
 msgid "Upgrade to the business or agency plan and get instant access to this starter site and many other features."
@@ -3664,7 +3664,7 @@ msgstr "Адрес доставки"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:64
 msgid "Subtotal"
-msgstr "Под��тог"
+msgstr "Подытог"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:77
 msgid "Shipping"
@@ -4318,7 +4318,7 @@ msgstr "Платёжные шлюзы"
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:112,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/options.php:65
 msgid "Shipping Methods"
-msgstr "Спосо��ы доставки"
+msgstr "Способы доставки"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:276
 msgid "Thank you Page"
@@ -4415,7 +4415,7 @@ msgstr "Длина"
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:263
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:156
 msgid "Attributes"
-msgstr "��трибуты"
+msgstr "Атрибуты"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:343,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:434
@@ -4440,7 +4440,7 @@ msgstr "Условия отображения панели сравнения"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:536
 msgid "Add one or more conditions to display the Compare bar."
-msgstr "Добавьте условие (или несколько) для отображения панели сравнения."
+msgstr "Добавьте условие (или несколько) для отображения панели срав��ения."
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:549,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:223,
@@ -4541,7 +4541,7 @@ msgstr "Заголовок партнёрской ссылки"
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:57,
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:90
 msgid "Open Button Link In New Tab"
-msgstr "Открывать кнопкой ��овую вкладку"
+msgstr "Открывать кнопкой новую вкладку"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-page/options.php:14
 msgid "Quantity Auto Update"
@@ -5657,7 +5657,7 @@ msgstr "Ссылка для установки нового пароля буд�
 #: framework/premium/extensions/code-snippets/extension.php:98,
 #: framework/premium/extensions/code-snippets/extension.php:143
 msgid "Header scripts"
-msgstr "Скрипты в шапке"
+msgstr "Ск��ипты в шапке"
 
 #: framework/premium/extensions/code-snippets/extension.php:59,
 #: framework/premium/extensions/code-snippets/extension.php:120,
@@ -6470,7 +6470,7 @@ msgstr "Выберите язык"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:274
 msgid "Select user"
-msgstr "Выберите пользователя"
+msgstr "Выберите польз��вателя"
 
 #: static/js/options/ConditionsManager/SingleCondition.js:254
 msgid "Current user"
@@ -8462,7 +8462,7 @@ msgstr "Только внизу"
 
 #: framework/premium/features/content-blocks/options/hook.php:60
 msgid "Location & Priority"
-msgstr "Положение и приоритет"
+msgstr "Положение �� приоритет"
 
 #: framework/premium/features/content-blocks/options/hook.php:23,
 #: framework/premium/features/content-blocks/options/hook.php:100
@@ -8673,7 +8673,7 @@ msgstr "Фильтр записей"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:59
 msgid "Filtering Behavior"
-msgstr "П��ведение фильтрации"
+msgstr "Поведение фильтрации"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:67
 msgid "Instant Reload"
@@ -9021,7 +9021,7 @@ msgstr "Название шрифта"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:502
 msgid "Save Custom Font"
-msgstr "Сохранить п��льзовательский шрифт"
+msgstr "Сохранить пользовательский шрифт"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:80
 msgid "Add Variation"
@@ -10853,7 +10853,7 @@ msgstr "Просмотр обзора товара"
 
 #: framework/extensions/product-reviews/extension.php:551
 msgid "Add New Product Review"
-msgstr "Добавить обзор товара"
+msgstr "До��авить обзор товара"
 
 #: framework/extensions/product-reviews/extension.php:552
 msgid "Add New Review"
