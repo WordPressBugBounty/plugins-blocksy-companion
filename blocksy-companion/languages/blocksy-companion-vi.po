@@ -89,7 +89,7 @@ msgstr "Tối đa:"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:125
 msgid "Regenerating Taxonomies Data"
-msgstr "��ang tái tạo dữ liệu phân loại"
+msgstr "Đang tái tạo dữ liệu phân loại"
 
 #. translators: %s is replaced with the current progress percentage.
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:145
@@ -110,7 +110,7 @@ msgstr "Tái tạo bảng thủ công"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:533
 msgid "This tool will abort the regenerate product taxonomies lookup table regeneration. After this is done the process can be either started over, or resumed to continue where it stopped."
-msgstr "Công cụ này sẽ hủy bỏ quá trình tái tạo bảng tra cứu phân loại sản phẩm. Sau khi hủy, quy trình có thể được bắt đầu lại từ đầu hoặc tiếp tục từ điểm đã dừng."
+msgstr "Công cụ này sẽ hủy bỏ quá trình tái tạo bảng tra cứu phân loại s���n phẩm. Sau khi hủy, quy trình có thể được bắt đầu lại từ đầu hoặc tiếp tục từ điểm đã dừng."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:63
 msgid "user"
@@ -1261,7 +1261,7 @@ msgstr "Xem thêm thông tin về cách tạo danh sách trong FluentCRM %stại
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/AllFonts.js:123
 msgid "Modern Font Stack"
-msgstr "Bộ phông chữ hiện đại"
+msgstr "Bộ phông chữ hiện ��ại"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/CustomFonts.js:142
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:330
@@ -1474,7 +1474,7 @@ msgstr "%1$s %2$s đã tham gia danh sách chờ cho sản phẩm này."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:293
 msgid "Waitlist Form"
-msgstr "Biểu mẫu danh sách chờ"
+msgstr "Biểu mẫu danh sách ch��"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:85
 msgid "Your waitlist subscription has been successfully canceled."
@@ -1936,7 +1936,7 @@ msgstr "Công cụ này sẽ tái tạo dữ liệu bảng tra cứu phân loạ
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:512
 msgid "Product taxonomies lookup table data is regenerating"
-msgstr "Dữ liệu bảng tra cứu phân loại sản ph��m đang được tái tạo"
+msgstr "Dữ liệu bảng tra cứu phân loại sản phẩm đang được tái tạo"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:525
 msgid "Regenerate"
@@ -3307,7 +3307,7 @@ msgstr "Thêm điều kiện"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:68
 msgid "Upgrade to the agency plan and get instant access to this starter site and many other features."
-msgstr "Nâng cấp lên gói đại lý và có quyền truy cập ngay vào mẫu web bắt đầu này cùng nhiều tính năng khác."
+msgstr "Nâng cấp l��n gói đại lý và có quyền truy cập ngay vào mẫu web bắt đầu này cùng nhiều tính năng khác."
 
 #: static/js/dashboard/screens/Extensions/CurrentExtension.js:316
 msgid "Documentation"
@@ -4735,7 +4735,7 @@ msgstr "Chỉ định lượng thời gian (tính bằng giây) để trì hoãn
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:140
 msgid "Choose the default color mode that a user will see when it visits your site."
-msgstr "Chọn chế độ màu mặc định mà người dùng sẽ th��y khi truy cập trang web của bạn."
+msgstr "Chọn chế độ màu mặc định mà người dùng sẽ thấy khi truy cập trang web của bạn."
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/config.php:4
 msgid "Color Switch"
@@ -7527,7 +7527,7 @@ msgstr "Sau sản phẩm đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:696
 msgid "Before single product excerpt"
-msgstr "Trước đoạn trích sản phẩm đơn"
+msgstr "Trước đo���n trích sản phẩm đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:701
 msgid "After single product excerpt"

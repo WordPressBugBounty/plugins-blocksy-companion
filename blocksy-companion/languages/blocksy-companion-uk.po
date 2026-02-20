@@ -290,7 +290,7 @@ msgstr "База знань"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:85
 msgid "Dive in with our documentation and learn tips and tricks about Blocksy and its components."
-msgstr "Ознакомьтесь с нашей документацией и получите советы и реком��ндации по Blocksy и его компонентах."
+msgstr "Ознакомьтесь с нашей документацией и получите советы и рекомендации по Blocksy и его компонентах."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:93
 msgid "View Documentation"
@@ -298,7 +298,7 @@ msgstr "Переглянути документацію"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:401
 msgid "Enable field link"
-msgstr "Включити посилання поля"
+msgstr "Включити ��осилання поля"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:411
 msgid "Link Source"
@@ -1743,7 +1743,7 @@ msgstr "Відображення спливаючого вікна динамі�
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
-msgstr "Увімк. т��игер вікна"
+msgstr "Увімк. тригер вікна"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"
@@ -3672,7 +3672,7 @@ msgstr "Доставка"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:79
 msgid "Free shipping"
-msgstr "Безко��товна доставка"
+msgstr "Безкоштовна доставка"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:83
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:42
@@ -4229,7 +4229,7 @@ msgstr "Навігація по товарах"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:108
 msgid "Display next/previous buttons that will help to easily navigate through products."
-msgstr "Відображення кнопок наступний/попередній, які допомагають переміщатися між товарами."
+msgstr "Відображення кнопок наступний/попередній, які допомагають переміщатися між то��арами."
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:188,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:130,
@@ -6942,7 +6942,7 @@ msgstr "Умови відображення панелі ярликів"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1028
 msgid "Add one or more conditions to display the shortcuts bar."
-msgstr "Додайте одну або кілька умов для відображення панелі ярликів."
+msgstr "До��айте одну або кілька умов для відображення панелі ярликів."
 
 #: framework/premium/extensions/shortcuts/customizer.php:1052,
 #: framework/features/header/items/account/options.php:1918,
@@ -8051,7 +8051,7 @@ msgstr "Ви можете налаштувати соціальні URL-адре
 #: framework/features/blocks/socials/options.php:62,
 #: framework/premium/features/premium-header/items/contacts/options.php:405
 msgid "Open links in new tab"
-msgstr "Відкривати посилання в новій вкладці"
+msgstr "Відкривати посилання �� новій вкладці"
 
 #: framework/features/blocks/about-me/options.php:175,
 #: framework/features/blocks/contact-info/options.php:527,
@@ -11508,12 +11508,12 @@ msgstr "Розсилка"
 #: static/js/editor/blocks/contact-info/Edit.js:107
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:276
 msgid "Text"
-msgstr "Т��кст"
+msgstr "Текст"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:19,
 #: framework/features/blocks/about-me/options.php:77
 msgid "You can add here some arbitrary HTML code."
-msgstr "Сюди можна вставити довільний HTML-код."
+msgstr "Сюди мож��а вставити довільний HTML-код."
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:74
 msgid "Container Style"

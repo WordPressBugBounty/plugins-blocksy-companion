@@ -6,47 +6,107 @@ class KlaviyoProvider extends Provider {
 	public function __construct() {
 	}
 
-	public function fetch_lists($api_key, $api_url = '') {
-		$response = wp_remote_get(
-			'https://a.klaviyo.com/api/lists',
-			[
-				'timeout' => 2,
-				'headers' => [
-					'Authorization' => 'Klaviyo-API-Key ' . $api_key,
-					'accept' => 'application/json',
-					'revision' => '2025-10-15'
-				]
-			]
-		);
+	private function request($method, $path, $api_key, $body = null) {
+		$args = [
+			'timeout' => 30,
+			'method' => $method,
+			'headers' => [
+				'Authorization' => 'Klaviyo-API-Key ' . $api_key,
+				'accept' => 'application/vnd.api+json',
+				'content-type' => 'application/vnd.api+json',
+				'revision' => '2025-10-15',
+			],
+		];
 
-		if (! is_wp_error($response)) {
-			if (200 !== wp_remote_retrieve_response_code($response)) {
-				return 'api_key_invalid';
-			}
-
-			$body = json_decode(wp_remote_retrieve_body($response), true);
-
-			if (! $body) {
-				return 'api_key_invalid';
-			}
-
-			if (! isset($body['data'])) {
-				return 'api_key_invalid';
-			}
+		if (! is_null($body)) {
+			$args['body'] = wp_json_encode($body);
 		}
 
-		return array_map(function($list) {
+		$response = wp_remote_request(
+			'https://a.klaviyo.com/api/' . ltrim($path, '/'),
+			$args
+		);
+
+		if (is_wp_error($response)) {
 			return [
-				'name' => $list['attributes']['name'],
-				'id' => $list['id'],
+				'error' => $response->get_error_message(),
+				'code' => 0,
+				'body' => [],
 			];
-		}, $body['data']);
+		}
+
+		$decoded_body = json_decode(wp_remote_retrieve_body($response), true);
+
+		if (! is_array($decoded_body)) {
+			$decoded_body = [];
+		}
+
+		return [
+			'error' => null,
+			'code' => wp_remote_retrieve_response_code($response),
+			'body' => $decoded_body,
+		];
+	}
+
+	public function fetch_lists($api_key, $api_url = '') {
+		$response = $this->request('GET', 'lists', $api_key);
+
+		if ($response['error']) {
+			return 'api_key_invalid';
+		}
+
+		if (200 !== $response['code']) {
+			return 'api_key_invalid';
+		}
+
+		if (! isset($response['body']['data']) || ! is_array($response['body']['data'])) {
+			return 'api_key_invalid';
+		}
+
+		return array_map(function ($list) {
+			$attributes = isset($list['attributes']) ? $list['attributes'] : [];
+			$opt_in_process = isset($attributes['opt_in_process']) ? $attributes['opt_in_process'] : '';
+
+			return [
+				'name' => $attributes['name'],
+				'id' => $list['id'],
+				'double_optin' => $opt_in_process === 'double_opt_in',
+			];
+		}, $response['body']['data']);
 	}
 
 	public function get_form_url_and_gdpr_for($maybe_custom_list = null) {
+		$settings = $this->get_settings();
+
+		if (! isset($settings['api_key']) || ! $settings['api_key']) {
+			return false;
+		}
+
+		$lists = $this->fetch_lists($settings['api_key']);
+
+		if (! is_array($lists) || empty($lists)) {
+			return false;
+		}
+
+		if ($maybe_custom_list) {
+			$settings['list_id'] = $maybe_custom_list;
+		}
+
+		$selected_list = $lists[0];
+
+		if (! empty($settings['list_id'])) {
+			foreach ($lists as $single_list) {
+				if ($single_list['id'] === $settings['list_id']) {
+					$selected_list = $single_list;
+					break;
+				}
+			}
+		}
+
 		return [
 			'form_url' => '#',
 			'has_gdpr_fields' => false,
+			'double_optin' => isset($selected_list['double_optin']) ? $selected_list['double_optin'] : false,
 			'provider' => 'klaviyo'
 		];
 	}
@@ -55,7 +115,8 @@ class KlaviyoProvider extends Provider {
 		$args = wp_parse_args($args, [
 			'email' => '',
 			'name' => '',
-			'group' => ''
+			'group' => '',
+			'double_optin' => false,
 		]);
 
 		$settings = $this->get_settings();
@@ -64,106 +125,149 @@ class KlaviyoProvider extends Provider {
 		$fname = $name_parts['first_name'];
 		$lname = $name_parts['last_name'];
 
-		$list_ids = [$args['group']];
-
 		$subscriber = [
 			'email' => $args['email'],
-			'first_name' => $fname
 		];
+
+		if (! empty($fname)) {
+			$subscriber['first_name'] = $fname;
+		}
 
 		if (! empty($lname)) {
 			$subscriber['last_name'] = $lname;
 		}
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_init
-		$curl = curl_init();
+		if ($args['double_optin']) {
+			$doi_profile = [
+				'type' => 'profile',
+				'attributes' => [
+					'email' => $args['email'],
+					'subscriptions' => [
+						'email' => [
+							'marketing' => [
+								'consent' => 'SUBSCRIBED',
+							],
+						],
+					],
+				],
+			];
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt_array
-		curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://a.klaviyo.com/api/profile-import',
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_ENCODING => '',
-			CURLOPT_MAXREDIRS => 10,
-			CURLOPT_TIMEOUT => 2,
-			CURLOPT_FOLLOWLOCATION => true,
-			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-			CURLOPT_CUSTOMREQUEST => 'POST',
-			CURLOPT_POSTFIELDS => json_encode([
-				'data' => [
-					'type' => 'profile',
-					'attributes' => $subscriber,
+			$response = $this->request(
+				'POST',
+				'profile-subscription-bulk-create-jobs',
+				$settings['api_key'],
+				[
+					'data' => [
+						'type' => 'profile-subscription-bulk-create-job',
+						'attributes' => [
+							'custom_source' => 'Marketing Event',
+							'profiles' => [
+								'data' => [
+									$doi_profile,
+								],
+							],
+						],
+						'relationships' => [
+							'list' => [
+								'data' => [
+									'type' => 'list',
+									'id' => $args['group'],
+								],
+							],
+						],
+					],
 				]
-			]),
-			CURLOPT_HTTPHEADER => array(
-				'Authorization: Klaviyo-API-Key ' . $settings['api_key'],
-				'accept: application/vnd.api+json',
-				'content-type: application/vnd.api+json',
-				'revision: 2025-10-15'
-			),
-		));
+			);
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_exec
-		$response = curl_exec($curl);
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_error
-		$err = curl_error($curl);
+			if ($response['error'] || ! in_array($response['code'], [200, 201, 202], true)) {
+				return [
+					'result' => 'no',
+					'message' => NewsletterMessages::unable_to_subscribe(),
+					'error' => $response['error'],
+					'res' => $response['body'],
+				];
+			}
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_close
-		curl_close($curl);
+			// Best-effort profile sync for first/last name after DOI job was accepted.
+			// This is intentionally non-blocking for subscription flow.
+			if (! empty($fname) || ! empty($lname)) {
+				$this->request(
+					'POST',
+					'profile-import',
+					$settings['api_key'],
+					[
+						'data' => [
+							'type' => 'profile',
+							'attributes' => $subscriber,
+						],
+					]
+				);
+			}
 
-		if ($err) {
 			return [
-				'result' => 'no',
-				'error' => $err
+				'result' => 'yes',
+				'message' => NewsletterMessages::confirm_subscription(),
+				'res' => $response['body'],
 			];
 		}
 
-		$curl = curl_init();
+		$import_response = $this->request(
+			'POST',
+			'profile-import',
+			$settings['api_key'],
+			[
+				'data' => [
+					'type' => 'profile',
+					'attributes' => $subscriber,
+				],
+			]
+		);
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt_array
-		curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://a.klaviyo.com/api/lists/' . $args['group'] . '/relationships/profiles',
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_ENCODING => '',
-			CURLOPT_MAXREDIRS => 10,
-			CURLOPT_TIMEOUT => 2,
-			CURLOPT_FOLLOWLOCATION => true,
-			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-			CURLOPT_CUSTOMREQUEST => 'POST',
-			CURLOPT_POSTFIELDS => json_encode([
+		if ($import_response['error'] || ! in_array($import_response['code'], [200, 201, 202], true)) {
+			return [
+				'result' => 'no',
+				'message' => NewsletterMessages::unable_to_subscribe(),
+				'error' => $import_response['error'],
+				'res' => $import_response['body'],
+			];
+		}
+
+		$profile_id = $import_response['body']['data']['id'] ?? '';
+
+		if (! $profile_id) {
+			return [
+				'result' => 'no',
+				'message' => NewsletterMessages::unable_to_subscribe(),
+				'res' => $import_response['body'],
+			];
+		}
+
+		$list_response = $this->request(
+			'POST',
+			'lists/' . $args['group'] . '/relationships/profiles',
+			$settings['api_key'],
+			[
 				'data' => [
 					[
 						'type' => 'profile',
-						'id' => json_decode($response, true)['data']['id']
-					]
-				]
-			]),
-			CURLOPT_HTTPHEADER => array(
-				'Authorization: Klaviyo-API-Key ' . $settings['api_key'],
-				'accept: application/vnd.api+json',
-				'content-type: application/vnd.api+json',
-				'revision: 2025-10-15'
-			),
-		));
+						'id' => $profile_id,
+					],
+				],
+			]
+		);
 
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_exec
-		$response = curl_exec($curl);
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_error
-		$err = curl_error($curl);
-
-		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_close
-		curl_close($curl);
-
-		if ($err) {
+		if ($list_response['error'] || ! in_array($list_response['code'], [200, 201, 202, 204], true)) {
 			return [
 				'result' => 'no',
-				'error' => $err
+				'message' => NewsletterMessages::unable_to_subscribe(),
+				'error' => $list_response['error'],
+				'res' => $list_response['body'],
 			];
 		}
 
 		return [
 			'result' => 'yes',
-			'message' => __('Thank you for subscribing to our newsletter!', 'blocksy-companion')
+			'message' => NewsletterMessages::subscribed_successfully()
 		];
 	}
 }
-

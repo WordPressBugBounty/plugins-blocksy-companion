@@ -172,7 +172,7 @@ $provider_data['provider'] .= ':' . $list_id;
 
 $form_url = $provider_data['form_url'];
 $has_gdpr_fields = $provider_data['has_gdpr_fields'];
-$has_double_optin = $provider_data['double_optin'];
+$has_double_optin = isset($provider_data['double_optin']) ? $provider_data['double_optin'] : false;
 
 $name_label = blocksy_default_akg(
 	'newsletter_subscribe_name_label',

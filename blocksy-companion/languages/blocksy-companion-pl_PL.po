@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-01-05 14:10:18+0000\n"
+"PO-Revision-Date: 2026-02-19 13:53:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,79 +53,79 @@ msgstr "Wybierz warunki"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:622
 msgid "Select all"
-msgstr ""
+msgstr "Zaznacz wszystko"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:623
 msgid "Select none"
-msgstr ""
+msgstr "Nie wybieraj żadnej opcji"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:624
 msgid "Add new"
-msgstr ""
+msgstr "Dodaj nowy"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/order-details-block/order-view.php:56
 msgid "Order number:"
-msgstr ""
+msgstr "Numer zamówienia:"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/order-details-block/order-view.php:61
 msgid "Date:"
-msgstr ""
+msgstr "Data:"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/order-details-block/order-view.php:73
 msgid "Total:"
-msgstr ""
+msgstr "Razem:"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/order-details-block/order-view.php:79
 msgid "Payment method:"
-msgstr ""
+msgstr "Metoda płatności:"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:106
 msgid "Minimum:"
-msgstr ""
+msgstr "Minimum:"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:138
 msgid "Maximum:"
-msgstr ""
+msgstr "Maksymalnie:"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:125
 msgid "Regenerating Taxonomies Data"
-msgstr ""
+msgstr "Regenerowanie danych taksonomicznych"
 
 #. translators: %s is replaced with the current progress percentage.
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:145
 msgid "Progress <span>%s%%</span>"
-msgstr ""
+msgstr "Postęp <span>%s%%</span>"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:162
 msgid "Please wait until the WooCommerce product taxonomies lookup table is regenerated."
-msgstr ""
+msgstr "Poczekaj, aż tabela wyszukiwania taksonomii produktów WooCommerce zostanie ponownie wygenerowana."
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:175
 msgid "Why is the table being regenerated?"
-msgstr ""
+msgstr "Dlaczego tabela jest ponownie generowana?"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:187
 msgid "Regenerate table manually"
-msgstr ""
+msgstr "Regeneruj tabelę ręcznie"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:533
 msgid "This tool will abort the regenerate product taxonomies lookup table regeneration. After this is done the process can be either started over, or resumed to continue where it stopped."
-msgstr ""
+msgstr "To narzędzie przerwie proces regeneracji tabeli wyszukiwania taksonomii produktów. Po wykonaniu tej czynności proces można rozpocząć od nowa lub wznowić od miejsca, w którym został przerwany."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:63
 msgid "user"
 msgid_plural "users"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "użytkownik"
+msgstr[1] "użytkowników"
+msgstr[2] "użytkowników"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:67
 msgid "View Subscribers"
-msgstr ""
+msgstr "Wyświetl subskrybentów"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:87
 msgid "Edit this item"
-msgstr ""
+msgstr "Edytuj ten element"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:93,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:94

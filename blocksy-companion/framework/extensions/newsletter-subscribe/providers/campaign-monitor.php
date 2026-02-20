@@ -138,7 +138,7 @@ class CampaignMonitorProvider extends Provider {
 
 			return [
 				'result' => 'yes',
-				'message' => __('Thank you for subscribing to our newsletter!', 'blocksy-companion')
+				'message' => NewsletterMessages::subscribed_successfully()
 			];
 		}
 	}

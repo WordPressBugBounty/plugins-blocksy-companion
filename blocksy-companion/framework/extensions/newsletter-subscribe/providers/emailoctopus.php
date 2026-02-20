@@ -104,7 +104,7 @@ class EmailOctopusProvider extends Provider {
 		} else {
 			return [
 				'result' => 'yes',
-				'message' => __('Thank you for subscribing to our newsletter!', 'blocksy-companion'),
+				'message' => NewsletterMessages::subscribed_successfully(),
 				'res' => $response,
 			];
 		}

@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-18 16:17+0000\n"
+"POT-Creation-Date: 2026-02-20 18:53+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -3261,19 +3261,15 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/providers/active-campaign.php:165,
-#: framework/extensions/newsletter-subscribe/providers/brevo.php:117,
-#: framework/extensions/newsletter-subscribe/providers/campaign-monitor.php:141,
-#: framework/extensions/newsletter-subscribe/providers/convertkit-new.php:151,
-#: framework/extensions/newsletter-subscribe/providers/convertkit.php:103,
-#: framework/extensions/newsletter-subscribe/providers/demo.php:40,
-#: framework/extensions/newsletter-subscribe/providers/emailoctopus.php:107,
-#: framework/extensions/newsletter-subscribe/providers/fluent-crm.php:87,
-#: framework/extensions/newsletter-subscribe/providers/klaviyo.php:165,
-#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:209,
-#: framework/extensions/newsletter-subscribe/providers/mailerlite-classic.php:109,
-#: framework/extensions/newsletter-subscribe/providers/mailerlite-new.php:133,
-#: framework/extensions/newsletter-subscribe/providers/mailpoet.php:87
+#: framework/extensions/newsletter-subscribe/includes/messages.php:7
+msgid "Unable to subscribe. Please try again later."
+msgstr ""
+
+#: framework/extensions/newsletter-subscribe/includes/messages.php:11
+msgid "Please confirm your subscription from the email we sent you."
+msgstr ""
+
+#: framework/extensions/newsletter-subscribe/includes/messages.php:15
 msgid "Thank you for subscribing to our newsletter!"
 msgstr ""
 
@@ -3282,7 +3278,7 @@ msgid "Demo List"
 msgstr ""
 
 #. translators: %s is the email address
-#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:200
+#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:63
 msgid "%s is already a list member."
 msgstr ""
 

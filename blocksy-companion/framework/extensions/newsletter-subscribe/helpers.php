@@ -108,7 +108,7 @@ function blc_ext_newsletter_subscribe_output_form($args = []) {
 
 	$form_url = $provider_data['form_url'];
 	$has_gdpr_fields = $provider_data['has_gdpr_fields'];
-	$has_double_optin = $provider_data['double_optin'];
+	$has_double_optin = isset($provider_data['double_optin']) ? $provider_data['double_optin'] : false;
 
 	$additional_output = '';
 
