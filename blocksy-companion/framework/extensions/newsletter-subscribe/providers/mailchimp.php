@@ -11,7 +11,7 @@ class MailchimpProvider extends Provider {
 	}
 
 	private function is_compliance_status($status) {
-		return in_array($status, ['archived', 'unsubscribed', 'cleaned'], true);
+		return in_array($status, ['unsubscribed', 'cleaned'], true);
 	}
 
 	private function is_member_exists_error($response) {
@@ -41,15 +41,19 @@ class MailchimpProvider extends Provider {
 			return false;
 		}
 
+		$keywords = ['compliance', 'forgotten', 'resubscribe'];
+
 		foreach (['title', 'detail'] as $key) {
-			if (
-				isset($response[$key])
-				&&
-				is_string($response[$key])
-				&&
-				strpos(strtolower($response[$key]), 'compliance') !== false
-			) {
-				return true;
+			if (! isset($response[$key]) || ! is_string($response[$key])) {
+				continue;
+			}
+
+			$value = strtolower($response[$key]);
+
+			foreach ($keywords as $keyword) {
+				if (strpos($value, $keyword) !== false) {
+					return true;
+				}
 			}
 		}
 
@@ -66,6 +70,10 @@ class MailchimpProvider extends Provider {
 		}
 
 		if ($this->is_compliance_error($response)) {
+			if (isset($response['detail']) && is_string($response['detail'])) {
+				return $response['detail'];
+			}
+
 			return NewsletterMessages::confirm_subscription();
 		}
 
@@ -288,6 +296,11 @@ class MailchimpProvider extends Provider {
 			$target_status = 'pending';
 		}
 
+		if ($existing_status === 'archived') {
+			$target_status = 'subscribed';
+			$has_existing_member = false;
+		}
+
 		$request_body = [
 			'email_address' => $args['email'],
 			'status' => $target_status,
@@ -299,6 +312,14 @@ class MailchimpProvider extends Provider {
 				(! empty($lname) ? ['LNAME' => $lname] : [])
 			)
 		];
+
+		if ($has_existing_member && ! $this->is_compliance_status($existing_status) && $existing_status !== 'archived') {
+			return [
+				'result' => 'no',
+				'message' => NewsletterMessages::already_subscribed($args['email']),
+				'res' => $member_check['body'],
+			];
+		}
 
 		$subscribe_response = $this->request(
 			$api_key,
@@ -342,4 +363,5 @@ class MailchimpProvider extends Provider {
 			];
 		}
 	}
+
 }

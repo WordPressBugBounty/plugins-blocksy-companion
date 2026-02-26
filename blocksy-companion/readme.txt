@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 6.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.30
+Stable tag: 2.1.31
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,9 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.31: 2026-02-26
+- Improvement: Newsletter extension - better compatibility with MailChimp provider
+
 2.1.30: 2026-02-20
 - Improvement: Newsletter extension - apply the "double opt-in" functionality for Klaviyo and Mailerlite integration
 

@@ -102,7 +102,7 @@ msgstr "Подождите, пока будет обновлена таблиц�
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:175
 msgid "Why is the table being regenerated?"
-msgstr "Почем�� таблица генерируется заново?"
+msgstr "Поч��му таблица генерируется заново?"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:187
 msgid "Regenerate table manually"
@@ -238,7 +238,7 @@ msgstr "Сохранить параметры"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:34
 msgid "%s Content"
-msgstr "Содержим��е %s"
+msgstr "Содержимое %s"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:109
 msgid "Show Price Range Text"
@@ -254,7 +254,7 @@ msgstr "Поддержка"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:110
 msgid "If your questions have not been answered by documentation or video tutorials, drop us a line."
-msgstr "Если вы не нашли ответов на свои вопросы в документации или видеоуроках, напишите нам."
+msgstr "Если вы не нашли ответов на свои во��росы в документации или видеоуроках, напишите нам."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:115
 msgid "Submit a Ticket"
@@ -282,7 +282,7 @@ msgstr "Узнайте, как делать практически всё в Blo
 
 #: static/js/dashboard/helpers/SubmitSupport.js:68
 msgid "Watch Tutorials"
-msgstr "Смотреть уроки"
+msgstr "Смотр��ть уроки"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:82
 msgid "Knowledge Base"
@@ -380,7 +380,7 @@ msgstr "Введите то же значение ещё раз."
 
 #: framework/theme-integration.php:99
 msgid "Please enter no more than {0} characters."
-msgstr "Введите не более {0} симв��лов."
+msgstr "Введите не более {0} символов."
 
 #: framework/theme-integration.php:100
 msgid "Please enter at least {0} characters."
@@ -436,7 +436,7 @@ msgstr "Отображает простой баннер согласия, ин�
 #: framework/features/demo-install/parsers.php:99,
 #: framework/features/demo-install/parsers.php:107
 msgid "There was an error when reading this WXR file"
-msgstr "При чтении данного WXR-файла произ��шла ошибка!"
+msgstr "При чтении данного WXR-файла произошла ошибка!"
 
 #: framework/features/demo-install/parsers.php:56
 msgid "Details are shown above. The importer will now try again with a different parser..."
@@ -476,7 +476,7 @@ msgstr "Не удалось найти файл экспорта по адрес
 #. translators: %s is the WXR version number.
 #: framework/features/demo-install/wp-importer.php:282
 msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
-msgstr "Данный WXR-файл (версия %s) может не поддерживаться данной версией импортера. Рассмотрите возможность обн��вления."
+msgstr "Данный WXR-файл (версия %s) может не поддерживаться данной версией импортера. Рассмотрите возможность обновления."
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
@@ -1462,7 +1462,7 @@ msgstr "Вы уже включены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:303
 msgid "You have been added to the waitlist"
-msgstr "Вы добавлены в список ожидания"
+msgstr "Вы добавлены в ��писок ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
@@ -1576,7 +1576,7 @@ msgstr "Предзаказ подтверждён"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr "Вы будете уведом��ены, когда {product_title} снова появится на складе."
+msgstr "Вы будете уведомлены, когда {product_title} снова появится на складе."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:56,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:192
@@ -1659,7 +1659,7 @@ msgstr "Перейдите по ссылке ниже, чтобы оформит
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:30,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:15
 msgid "You have requested to join the waitlist for this item:"
-msgstr "Вы подали заявку на включение в список ожидания этого товара:"
+msgstr "Вы ��одали заявку на включение в список ожидания этого товара:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:66
 msgid "Click the button below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
@@ -1688,7 +1688,7 @@ msgstr "отписаться"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
 msgid "You have been successfully added to the waitlist for the following item:"
-msgstr "Вы добавлены в с��исок ожидания следующего товара:"
+msgstr "Вы добавлены в список ожидания следующего товара:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
@@ -1755,7 +1755,7 @@ msgstr "Длина описания"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:115
 msgid "Cart Button"
-msgstr "Кнопка к��рзины"
+msgstr "Кнопка корзины"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:125
 msgid "Checkout Button"
@@ -1846,7 +1846,7 @@ msgstr "Оформление"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:44
 msgid "Continue Shopping"
-msgstr "Продолжить по��упки"
+msgstr "Продолжить покупки"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:424
 msgid "More information on how to create a list in MailPoet can be found %shere%s."
@@ -4213,7 +4213,7 @@ msgstr "Кнопка"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:72
 msgid "Modal Trigger"
-msgstr "Триггер модального окна"
+msgstr "Триггер модального ��кна"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:82
 msgid "Card"
@@ -4318,7 +4318,7 @@ msgstr "Платёжные шлюзы"
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:112,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/options.php:65
 msgid "Shipping Methods"
-msgstr "Спосо��ы доставки"
+msgstr "Способы доставки"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:276
 msgid "Thank you Page"
@@ -4415,7 +4415,7 @@ msgstr "Длина"
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:263
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:156
 msgid "Attributes"
-msgstr "��трибуты"
+msgstr "Атрибуты"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:343,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:434

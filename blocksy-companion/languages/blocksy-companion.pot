@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-20 18:53+0000\n"
+"POT-Creation-Date: 2026-02-26 16:37+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -1499,7 +1499,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:273,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:188,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:41,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:904,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:922,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/providers/custom.php:13,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:18,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:18
@@ -1939,7 +1939,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:219,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:268,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:291,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:923,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:941,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:304
 msgid "Bottom Spacing"
 msgstr ""
@@ -2237,7 +2237,7 @@ msgid ""
 msgstr ""
 
 #: framework/extensions/trending/customizer.php:4,
-#: framework/features/blocks/query/block.php:21,
+#: framework/features/blocks/query/block.php:33,
 #: framework/features/blocks/search/options.php:6,
 #: framework/features/conditions/rules/posts.php:57,
 #: framework/premium/features/premium-header/items/search-input/options.php:4
@@ -2409,7 +2409,7 @@ msgstr ""
 #: framework/extensions/trending/customizer.php:471,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:33,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:80,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:850
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:868
 msgid "Button"
 msgstr ""
 
@@ -3273,13 +3273,14 @@ msgstr ""
 msgid "Thank you for subscribing to our newsletter!"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/providers/demo.php:16
-msgid "Demo List"
+#. translators: %s is the email address
+#: framework/extensions/newsletter-subscribe/includes/messages.php:21,
+#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:67
+msgid "%s is already a list member."
 msgstr ""
 
-#. translators: %s is the email address
-#: framework/extensions/newsletter-subscribe/providers/mailchimp.php:63
-msgid "%s is already a list member."
+#: framework/extensions/newsletter-subscribe/providers/demo.php:16
+msgid "Demo List"
 msgstr ""
 
 #: framework/extensions/product-reviews/views/single-top.php:245
@@ -3306,7 +3307,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:143,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:81,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:852,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:870,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:68,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:99,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:143,
@@ -3781,7 +3782,7 @@ msgstr ""
 msgid "Terms accent color"
 msgstr ""
 
-#: framework/features/blocks/query/block.php:775
+#: framework/features/blocks/query/block.php:801
 msgid "No posts found."
 msgstr ""
 
@@ -5796,7 +5797,7 @@ msgid "In Stock"
 msgstr ""
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:26,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:339,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:352,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:424,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/includes/swatch-element-render.php:47,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/product-mobile-actions.php:19,
@@ -6998,7 +6999,7 @@ msgstr ""
 
 #: framework/premium/extensions/post-types-extra/features/filtering/helpers.php:194,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:272,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:903
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:921
 #: static/js/editor/blocks/query/edit/layers/useTaxonomiesLayers.js:65
 msgid "All"
 msgstr ""
@@ -7970,20 +7971,20 @@ msgid "Quick View Button"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/feature.php:56,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:336
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:349
 msgid ""
 "Sorry, no products matched your selection. Please choose a different "
 "combination."
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/feature.php:57,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:337
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:350
 msgid ""
 "Please select some product options before adding this product to your cart."
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/feature.php:58,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:338
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:351
 msgid ""
 "Sorry, this product is unavailable. Please choose a different combination."
 msgstr ""
@@ -8262,52 +8263,52 @@ msgstr ""
 msgid "+{items} More"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:577
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:595
 msgid "Display Variations Inline"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:603
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:621
 msgid "Select terms"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:622
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:640
 msgid "Select all"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:623
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:641
 msgid "Select none"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:624
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:642
 msgid "Add new"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:675,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:859,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:894
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:693,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:877,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:912
 msgid "Swatches"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:726
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:744
 msgid "Swatches removed"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:733
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:751
 msgid "Swatches saved"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:851,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:869,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:24,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:46,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:142
 msgid "Color"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:853
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:871
 msgid "Mixed"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:878
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:896
 msgid "Custom Attributes"
 msgstr ""
 

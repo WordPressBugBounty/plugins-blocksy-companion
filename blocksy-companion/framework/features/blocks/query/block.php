@@ -5,6 +5,18 @@ namespace Blocksy\Editor\Blocks;
 class Query {
 	private $current_wp_query = null;
 
+	private function maybe_enqueue_pagination_styles() {
+		if (wp_style_is('ct-pagination-styles', 'registered')) {
+			wp_enqueue_style('ct-pagination-styles');
+		}
+	}
+
+	private function maybe_enqueue_entries_styles() {
+		if (wp_style_is('ct-entries-styles', 'registered')) {
+			wp_enqueue_style('ct-entries-styles');
+		}
+	}
+
 	public function __construct() {
 		add_action('wp_ajax_blocksy_get_posts_block_data', function () {
 			if (! current_user_can('edit_posts')) {
@@ -293,6 +305,8 @@ class Query {
 						&&
 						$attributes['design'] === 'default'
 					) {
+						$this->maybe_enqueue_entries_styles();
+
 						$content = $this->render_block($attributes);
 
 						if (empty($content)) {
@@ -529,6 +543,8 @@ class Query {
 						&&
 						! $is_slideshow_layout
 					) {
+						$this->maybe_enqueue_pagination_styles();
+
 						$prefix = self::get_prefix_for($block->context);
 
 						$pagination_data = $this->get_pagination_descriptor($block->context);
@@ -668,6 +684,8 @@ class Query {
 			return;
 		}
 
+		$this->maybe_enqueue_entries_styles();
+
 		$prefix = self::get_prefix_for($attributes);
 
 		$block_atts = [
@@ -699,6 +717,14 @@ class Query {
 		$this->current_wp_query = $query;
 
 		ob_start();
+
+		if (
+			$attributes['has_pagination'] === 'yes'
+			&&
+			$attributes['has_slideshow'] !== 'yes'
+		) {
+			$this->maybe_enqueue_pagination_styles();
+		}
 
 		blocksy_render_archive_cards([
 			'prefix' => $prefix,

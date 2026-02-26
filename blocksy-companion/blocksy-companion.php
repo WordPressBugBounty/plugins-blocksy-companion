@@ -3,7 +3,7 @@
 /*
 Plugin Name: Blocksy Companion
 Description: This plugin is the companion for the Blocksy theme, it runs and adds its enhacements only if the Blocksy theme is installed and active.
-Version: 2.1.30
+Version: 2.1.31
 Author: CreativeThemes
 Author URI: https://creativethemes.com
 Text Domain: blocksy-companion
@@ -54,16 +54,16 @@ if ( function_exists( 'blc_fs' ) || class_exists( '\\Blocksy\\Plugin' ) ) {
                 }
             }
             $blc_fs = fs_dynamic_init( array(
-                'id'             => '5115',
-                'slug'           => 'blocksy-companion',
-                'premium_slug'   => 'blocksy-companion-pro',
-                'type'           => 'plugin',
-                'public_key'     => 'pk_b00a5cbae90b2e948015a7d0710f5',
-                'premium_suffix' => 'PRO',
-                'is_premium'     => false,
-                'has_addons'     => false,
-                'has_paid_plans' => true,
-                'menu'           => ( true ? [
+                'id'               => '5115',
+                'slug'             => 'blocksy-companion',
+                'premium_slug'     => 'blocksy-companion-pro',
+                'type'             => 'plugin',
+                'public_key'       => 'pk_b00a5cbae90b2e948015a7d0710f5',
+                'premium_suffix'   => 'PRO',
+                'is_premium'       => false,
+                'has_addons'       => false,
+                'has_paid_plans'   => true,
+                'menu'             => ( true ? [
                     'slug'    => 'ct-dashboard',
                     'support' => false,
                     'contact' => false,
@@ -75,7 +75,8 @@ if ( function_exists( 'blc_fs' ) || class_exists( '\\Blocksy\\Plugin' ) ) {
                     'pricing' => false,
                     'account' => false,
                 ] ),
-                'is_live'        => true,
+                'is_live'          => true,
+                'is_org_compliant' => true,
             ) );
             function blc_fs() {
                 global $blc_fs;

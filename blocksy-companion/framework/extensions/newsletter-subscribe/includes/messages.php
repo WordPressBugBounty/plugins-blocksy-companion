@@ -14,4 +14,12 @@ class NewsletterMessages {
 	public static function subscribed_successfully() {
 		return __('Thank you for subscribing to our newsletter!', 'blocksy-companion');
 	}
+
+	public static function already_subscribed($email = '') {
+		return blocksy_safe_sprintf(
+			// translators: %s is the email address
+			__('%s is already a list member.', 'blocksy-companion'),
+			$email
+		);
+	}
 }

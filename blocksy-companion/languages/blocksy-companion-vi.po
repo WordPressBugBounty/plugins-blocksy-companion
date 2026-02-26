@@ -110,7 +110,7 @@ msgstr "Tái tạo bảng thủ công"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:533
 msgid "This tool will abort the regenerate product taxonomies lookup table regeneration. After this is done the process can be either started over, or resumed to continue where it stopped."
-msgstr "Công cụ này sẽ hủy bỏ quá trình tái tạo bảng tra cứu phân loại s���n phẩm. Sau khi hủy, quy trình có thể được bắt đầu lại từ đầu hoặc tiếp tục từ điểm đã dừng."
+msgstr "Công cụ này sẽ hủy bỏ quá trình tái tạo bảng tra cứu phân loại sản phẩm. Sau khi hủy, quy trình có thể được bắt đầu lại từ đầu hoặc tiếp tục từ điểm đã dừng."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:63
 msgid "user"
@@ -200,7 +200,7 @@ msgstr "Tab Plugin hữu ích"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:36
 msgid "Changelog Tab"
-msgstr "Tab Nhật ký thay đổi"
+msgstr "Tab Nhật ký thay ��ổi"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:41
 msgid "Extension Documentation Link"
@@ -533,7 +533,7 @@ msgstr "- Chọn -"
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:476
 msgid "Failed to create new user for %s. Their posts will be attributed to the current user."
-msgstr "Không thể tạo người dùng mới cho %s. Các bài viết của họ sẽ được gán cho người dùng hiện tại."
+msgstr "Không thể tạo người dùng mới cho %s. Các bài viết của họ sẽ được gán cho người d��ng hiện tại."
 
 #. translators: %s is the category slug.
 #: framework/features/demo-install/wp-importer.php:540
@@ -3307,7 +3307,7 @@ msgstr "Thêm điều kiện"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:68
 msgid "Upgrade to the agency plan and get instant access to this starter site and many other features."
-msgstr "Nâng cấp l��n gói đại lý và có quyền truy cập ngay vào mẫu web bắt đầu này cùng nhiều tính năng khác."
+msgstr "Nâng cấp lên gói đại lý và có quyền truy cập ngay vào mẫu web bắt đầu này cùng nhiều tính năng khác."
 
 #: static/js/dashboard/screens/Extensions/CurrentExtension.js:316
 msgid "Documentation"
@@ -3701,7 +3701,7 @@ msgstr "Hiển thị phần chi tiết khách hàng."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/index.js:71
 msgid "Order Overview"
-msgstr "Tổng quan đơn hàng"
+msgstr "Tổng quan ��ơn hàng"
 
 #: framework/premium/extensions/adobe-typekit/dashboard-static/js/AdobeTypekit.js:89
 msgid "Once you insert your %sProject ID%s and click the \"Fetch Fonts\" button, your fonts will become available in all theme’s typography options."
@@ -7527,7 +7527,7 @@ msgstr "Sau sản phẩm đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:696
 msgid "Before single product excerpt"
-msgstr "Trước đo���n trích sản phẩm đơn"
+msgstr "Trước đoạn trích sản phẩm đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:701
 msgid "After single product excerpt"
