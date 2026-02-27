@@ -110,7 +110,7 @@ msgstr "Régénérer la table manuellement"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:533
 msgid "This tool will abort the regenerate product taxonomies lookup table regeneration. After this is done the process can be either started over, or resumed to continue where it stopped."
-msgstr "Cet outil va interrompre la régénération de la table de recherche des taxonomies de produits. Une fois cette opération effectuée, le processus pourra être relanc�� depuis le début ou repris à l'endroit où il s'est arrêté."
+msgstr "Cet outil va interrompre la régénération de la table de recherche des taxonomies de produits. Une fois cette opération effectuée, le processus pourra être relancé depuis le début ou repris à l'endroit où il s'est arrêté."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:63
 msgid "user"

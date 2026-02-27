@@ -200,7 +200,7 @@ msgstr "Tab Plugin hữu ích"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:36
 msgid "Changelog Tab"
-msgstr "Tab Nhật ký thay ��ổi"
+msgstr "Tab Nhật ký thay đổi"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:41
 msgid "Extension Documentation Link"
@@ -438,7 +438,7 @@ msgstr "Đã xảy ra lỗi khi đọc tệp WXR này"
 
 #: framework/features/demo-install/parsers.php:56
 msgid "Details are shown above. The importer will now try again with a different parser..."
-msgstr "Chi tiết được hiển thị ở trên. Trình nhập liệu (importer) sẽ thử lại ngay bây giờ với bộ phân tích cú pháp khác..."
+msgstr "Chi tiết được hiển thị ở trên. Trình nhập li��u (importer) sẽ thử lại ngay bây giờ với bộ phân tích cú pháp khác..."
 
 #: framework/features/demo-install/parsers.php:111,
 #: framework/features/demo-install/parsers.php:116,
@@ -487,7 +487,7 @@ msgstr "Gán tác giả"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
-msgstr "Để việc chỉnh sửa và lưu nội dung đã nhập dễ dàng hơn, bạn có thể muốn gán lại tác giả của mục đã nhập cho một người dùng hiện có trên trang này, ví dụ như tài khoản quản trị viên chính của bạn."
+msgstr "Để việc chỉnh sửa và lưu nội dung đã nhập dễ dàng hơn, b���n có thể muốn gán lại tác giả của mục đã nhập cho một người dùng hiện có trên trang này, ví dụ như tài khoản quản trị viên chính của bạn."
 
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
@@ -533,7 +533,7 @@ msgstr "- Chọn -"
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:476
 msgid "Failed to create new user for %s. Their posts will be attributed to the current user."
-msgstr "Không thể tạo người dùng mới cho %s. Các bài viết của họ sẽ được gán cho người d��ng hiện tại."
+msgstr "Không thể tạo người dùng mới cho %s. Các bài viết của họ sẽ được gán cho người dùng hiện tại."
 
 #. translators: %s is the category slug.
 #: framework/features/demo-install/wp-importer.php:540
@@ -1261,7 +1261,7 @@ msgstr "Xem thêm thông tin về cách tạo danh sách trong FluentCRM %stại
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/AllFonts.js:123
 msgid "Modern Font Stack"
-msgstr "Bộ phông chữ hiện ��ại"
+msgstr "Bộ phông chữ hiện đại"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/CustomFonts.js:142
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:330
@@ -1474,7 +1474,7 @@ msgstr "%1$s %2$s đã tham gia danh sách chờ cho sản phẩm này."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:293
 msgid "Waitlist Form"
-msgstr "Biểu mẫu danh sách ch��"
+msgstr "Biểu mẫu danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-mailer.php:85
 msgid "Your waitlist subscription has been successfully canceled."
@@ -1936,7 +1936,7 @@ msgstr "Công cụ này sẽ tái tạo dữ liệu bảng tra cứu phân loạ
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:512
 msgid "Product taxonomies lookup table data is regenerating"
-msgstr "Dữ liệu bảng tra cứu phân loại sản phẩm đang được tái tạo"
+msgstr "Dữ liệu bảng tra cứu phân loại sản ph��m đang được tái tạo"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:525
 msgid "Regenerate"
@@ -3701,7 +3701,7 @@ msgstr "Hiển thị phần chi tiết khách hàng."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/index.js:71
 msgid "Order Overview"
-msgstr "Tổng quan ��ơn hàng"
+msgstr "Tổng quan đơn hàng"
 
 #: framework/premium/extensions/adobe-typekit/dashboard-static/js/AdobeTypekit.js:89
 msgid "Once you insert your %sProject ID%s and click the \"Fetch Fonts\" button, your fonts will become available in all theme’s typography options."
@@ -4735,7 +4735,7 @@ msgstr "Chỉ định lượng thời gian (tính bằng giây) để trì hoãn
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:140
 msgid "Choose the default color mode that a user will see when it visits your site."
-msgstr "Chọn chế độ màu mặc định mà người dùng sẽ thấy khi truy cập trang web của bạn."
+msgstr "Chọn chế độ màu mặc định mà người dùng sẽ th��y khi truy cập trang web của bạn."
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/config.php:4
 msgid "Color Switch"
@@ -6347,7 +6347,7 @@ msgstr "Hướng lên đầu!"
 
 #: framework/premium/static/js/hooks/CodeEditor.js:167
 msgid "Enabling & disabling the code editor will erase everything from your post editor and this action is irreversible."
-msgstr "Việc bật và tắt trình chỉnh sửa mã sẽ xóa mọi thứ khỏi trình chỉnh sửa bài viết của bạn và hành động này không thể thay đổi được."
+msgstr "Việc bật và tắt trình chỉnh sửa mã sẽ xóa mọi thứ khỏi trình chỉnh sửa bài viết của bạn và hành động này không th�� thay đổi được."
 
 #: framework/premium/static/js/hooks/CodeEditor.js:174
 msgid "Are you sure you want to continue?"
@@ -7527,7 +7527,7 @@ msgstr "Sau sản phẩm đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:696
 msgid "Before single product excerpt"
-msgstr "Trước đoạn trích sản phẩm đơn"
+msgstr "Trước đo���n trích sản phẩm đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:701
 msgid "After single product excerpt"

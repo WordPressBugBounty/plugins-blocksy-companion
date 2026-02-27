@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-19 15:00:29+0000\n"
+"PO-Revision-Date: 2026-02-27 07:15:19+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -3730,7 +3730,7 @@ msgstr ""
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/AllFonts.js:25
 #: framework/premium/extensions/local-google-fonts/dashboard-static/js/LocalGoogleFonts.js:342
 msgid "Available Fonts"
-msgstr ""
+msgstr "Verfügbare Schriften"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:388
 msgid "More information on how to generate an API key for Campaign Monitor can be found %shere%s."
@@ -4688,7 +4688,7 @@ msgstr ""
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/view.php:78
 msgid "Color mode switch"
-msgstr ""
+msgstr "Farbwechsler"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:92
 msgid "Items Counter"
@@ -5516,7 +5516,7 @@ msgstr ""
 #: framework/helpers/exts-configs.php:83
 msgctxt "Extension Brand Name"
 msgid "Color Mode Switch"
-msgstr ""
+msgstr "Farbwechsler"
 
 #: framework/helpers/exts-configs.php:84
 msgid "Add a dark colour scheme and switch to your website, which will make it pleasant to look at in low light environments."
@@ -6265,7 +6265,7 @@ msgstr "Bitte beachten Sie, dass einige dieser Informationen (Preis, SKU, Marke)
 #: framework/extensions/trending/customizer.php:162
 msgctxt "Extension Brand Name"
 msgid "Trending Posts"
-msgstr "Trendende Beiträge"
+msgstr "Beliebte Beiträge"
 
 #: framework/extensions/trending/customizer.php:500,
 #: framework/features/blocks/about-me/options.php:91,
@@ -9021,7 +9021,7 @@ msgstr "Benutzerdefinierte Schrift speichern"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:80
 msgid "Add Variation"
-msgstr "Variante hinzufügen"
+msgstr "neue Variante"
 
 #: framework/premium/extensions/local-google-fonts/dashboard-static/js/LocalGoogleFonts.js:258
 msgid "Download a font and serve it directly from your server, this is handy for those who want to comply with GDPR regulations or serve the font via CDN."

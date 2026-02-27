@@ -11,12 +11,6 @@ class Query {
 		}
 	}
 
-	private function maybe_enqueue_entries_styles() {
-		if (wp_style_is('ct-entries-styles', 'registered')) {
-			wp_enqueue_style('ct-entries-styles');
-		}
-	}
-
 	public function __construct() {
 		add_action('wp_ajax_blocksy_get_posts_block_data', function () {
 			if (! current_user_can('edit_posts')) {
@@ -305,8 +299,6 @@ class Query {
 						&&
 						$attributes['design'] === 'default'
 					) {
-						$this->maybe_enqueue_entries_styles();
-
 						$content = $this->render_block($attributes);
 
 						if (empty($content)) {
@@ -683,8 +675,6 @@ class Query {
 		if (! $query->have_posts() && $attributes['no_results'] === 'skip') {
 			return;
 		}
-
-		$this->maybe_enqueue_entries_styles();
 
 		$prefix = self::get_prefix_for($attributes);
 

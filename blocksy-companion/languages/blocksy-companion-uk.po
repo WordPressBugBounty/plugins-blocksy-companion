@@ -98,7 +98,7 @@ msgstr "Прогрес <span>%s%%</span>"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:162
 msgid "Please wait until the WooCommerce product taxonomies lookup table is regenerated."
-msgstr "Зачекайте, поки буде оновлено ��аблицю пошуку таксономій товарів WooCommerce."
+msgstr "Зачекайте, поки буде оновлено таблицю пошуку таксономій товарів WooCommerce."
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:175
 msgid "Why is the table being regenerated?"
@@ -125,7 +125,7 @@ msgstr "Перегляд підписників"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:87
 msgid "Edit this item"
-msgstr "Редагувати цей товар"
+msgstr "Редагувати ��ей товар"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:93,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:94
@@ -206,7 +206,7 @@ msgstr "Вкладка «Журнал змін»"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:41
 msgid "Extension Documentation Link"
-msgstr "Посилання на документацію розширення"
+msgstr "Посилання на документацію ро��ширення"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:46
 msgid "Extension Video Link"
@@ -298,7 +298,7 @@ msgstr "Переглянути документацію"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:401
 msgid "Enable field link"
-msgstr "Включити посилання поля"
+msgstr "Включити пос��лання поля"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:411
 msgid "Link Source"
@@ -494,7 +494,7 @@ msgstr "Щоб спростити редагування та збереженн
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
 msgid "If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details will be necessary."
-msgstr "Якщо в WordPress буде створено нового користува��а, новий пароль буде згенеровано випадковим чином, а роль нового користувача буде встановлено як %s. Потрібно буде вручну змінити дані нового користувача."
+msgstr "Якщо в WordPress буде створено нового користувача, новий пароль буде згенеровано випадковим чином, а роль нового користувача буде встановлено як %s. Потрібно буде вручну змінити дані нового користувача."
 
 #: framework/features/demo-install/wp-importer.php:371
 msgid "Import Attachments"
@@ -610,7 +610,7 @@ msgstr "Імпорт WordPress"
 #. translators: %s is the new version number.
 #: framework/features/demo-install/wp-importer.php:1468
 msgid "A new version of this importer is available. Please update to version %s to ensure compatibility with newer export files."
-msgstr "Доступна нова версія цього імпортера. Оновіть його до версії %s, щоб забезпе��ити сумісність з новими файлами експорту."
+msgstr "Доступна нова версія цього імпортера. Оновіть його до версії %s, щоб забезпечити сумісність з новими файлами експорту."
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
@@ -628,7 +628,7 @@ msgstr "Виконання коду було скасовано через по�
 #. translators: %1$s is the post type name, %2$s is the post edit link
 #: framework/premium/features/code-editor.php:132
 msgid "%1$s that caused the error: %2$s"
-msgstr "��иникла помилка через «%1$s»: %2$s"
+msgstr "Виникла помилка через «%1$s»: %2$s"
 
 #. translators: %1$s is the singular name of the custom post type, %2$s is the
 #. label of the taxonomy.
@@ -1466,7 +1466,7 @@ msgstr "Ви додані до списку очікування"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
-msgstr "Ви видалені зі списку очікування"
+msgstr "Ви вида��ені зі списку очікування"
 
 #. translators: %1$s is the number of users, %2$s is the plural form
 #. (user/users)
@@ -1544,7 +1544,7 @@ msgstr "Товар, на який ви чекаєте, знову в наявн�
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr "Гарні новини! Товар, на який ви так довго чекали, знову в наявності!"
+msgstr "Гарні новини! Тов��р, на який ви так довго чекали, знову в наявності!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
@@ -1601,7 +1601,7 @@ msgstr "Введіть свою електронну адресу, щоб отр
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:83
 msgid "Great! You have been added to the waitlist for this product. Please check your inbox and confirm the subscription to this waitlist."
-msgstr "Ви були додані до списку очікування цього товару. Перевірте свою поштову скриньку та підтвердіть своє включення до списку очікування."
+msgstr "Ви були додані до списку очікування цього товару. Перевірте свою поштову скриньку та підтвердіть своє вкл��чення до списку очікування."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:111
 msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
@@ -1688,7 +1688,7 @@ msgstr "відписатися"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
 msgid "You have been successfully added to the waitlist for the following item:"
-msgstr "Ви додані до списку очікування ць��го товару:"
+msgstr "Ви додані до списку очікування цього товару:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
@@ -1983,7 +1983,7 @@ msgstr "Колір межі контейнера"
 
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:197
 msgid "Container Background Color"
-msgstr "Колір фону контейнера"
+msgstr "Ко��ір фону контейнера"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:188
 msgid "API Version"
@@ -2859,7 +2859,7 @@ msgstr "Записи - макет 2"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-3.php:4
 msgid "Posts - Layout 3"
-msgstr "��аписи - макет 3"
+msgstr "Записи - макет 3"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-4.php:4
 msgid "Posts - Layout 4"
@@ -2965,7 +2965,7 @@ msgstr "Початковий стан панелі"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:240
 msgid "Closed"
-msgstr "Зачине��о"
+msgstr "Зачинено"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:241
 msgid "Opened"
@@ -3682,7 +3682,7 @@ msgstr "Спосіб оплати"
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:85
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:43
 msgid "Cash on delivery"
-msgstr "Оплата при доставці"
+msgstr "Оплата при дос��авці"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:88
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:28
@@ -6942,7 +6942,7 @@ msgstr "Умови відображення панелі ярликів"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1028
 msgid "Add one or more conditions to display the shortcuts bar."
-msgstr "Д��дайте одну або кілька умов для відображення панелі ярликів."
+msgstr "Додайте одну або кілька умов для відображення панелі ярликів."
 
 #: framework/premium/extensions/shortcuts/customizer.php:1052,
 #: framework/features/header/items/account/options.php:1918,
@@ -8685,7 +8685,7 @@ msgstr "Перезавантаження сторінки"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:103
 msgid "Items Horizontal Spacing"
-msgstr "Горизонтальний інтервал"
+msgstr "Го��изонтальний інтервал"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:115,
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:55
@@ -9029,7 +9029,7 @@ msgstr "Додати варіацію"
 
 #: framework/premium/extensions/local-google-fonts/dashboard-static/js/LocalGoogleFonts.js:258
 msgid "Download a font and serve it directly from your server, this is handy for those who want to comply with GDPR regulations or serve the font via CDN."
-msgstr "Завантажте шрифт і з��вантажуйте його прямо зі свого сервера. Це зручно для тих, хто хоче дотримуватися правил GDPR або розповсюджувати шрифт через CDN."
+msgstr "Завантажте шрифт і завантажуйте його прямо зі свого сервера. Це зручно для тих, хто хоче дотримуватися правил GDPR або розповсюджувати шрифт через CDN."
 
 #: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:200
 msgid "Item Settings"
@@ -11513,7 +11513,7 @@ msgstr "Текст"
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:19,
 #: framework/features/blocks/about-me/options.php:77
 msgid "You can add here some arbitrary HTML code."
-msgstr "Сюди можна вставити довільний HTML-код."
+msgstr "Сюди можна встав��ти довільний HTML-код."
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:74
 msgid "Container Style"

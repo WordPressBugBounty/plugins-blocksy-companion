@@ -102,7 +102,7 @@ msgstr "Подождите, пока будет обновлена таблиц�
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:175
 msgid "Why is the table being regenerated?"
-msgstr "Поч��му таблица генерируется заново?"
+msgstr "Почем�� таблица генерируется заново?"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:187
 msgid "Regenerate table manually"
@@ -238,7 +238,7 @@ msgstr "Сохранить параметры"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:34
 msgid "%s Content"
-msgstr "Содержимое %s"
+msgstr "Содержим��е %s"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:109
 msgid "Show Price Range Text"
@@ -254,7 +254,7 @@ msgstr "Поддержка"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:110
 msgid "If your questions have not been answered by documentation or video tutorials, drop us a line."
-msgstr "Если вы не нашли ответов на свои во��росы в документации или видеоуроках, напишите нам."
+msgstr "Если вы не нашли ответов на свои вопросы в документации или видеоуроках, напишите нам."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:115
 msgid "Submit a Ticket"
@@ -282,7 +282,7 @@ msgstr "Узнайте, как делать практически всё в Blo
 
 #: static/js/dashboard/helpers/SubmitSupport.js:68
 msgid "Watch Tutorials"
-msgstr "Смотр��ть уроки"
+msgstr "Смотреть уроки"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:82
 msgid "Knowledge Base"
@@ -380,7 +380,7 @@ msgstr "Введите то же значение ещё раз."
 
 #: framework/theme-integration.php:99
 msgid "Please enter no more than {0} characters."
-msgstr "Введите не более {0} символов."
+msgstr "Введите не более {0} симв��лов."
 
 #: framework/theme-integration.php:100
 msgid "Please enter at least {0} characters."
@@ -436,7 +436,7 @@ msgstr "Отображает простой баннер согласия, ин�
 #: framework/features/demo-install/parsers.php:99,
 #: framework/features/demo-install/parsers.php:107
 msgid "There was an error when reading this WXR file"
-msgstr "При чтении данного WXR-файла произошла ошибка!"
+msgstr "При чтении данного WXR-файла произ��шла ошибка!"
 
 #: framework/features/demo-install/parsers.php:56
 msgid "Details are shown above. The importer will now try again with a different parser..."
@@ -476,7 +476,7 @@ msgstr "Не удалось найти файл экспорта по адрес
 #. translators: %s is the WXR version number.
 #: framework/features/demo-install/wp-importer.php:282
 msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
-msgstr "Данный WXR-файл (версия %s) может не поддерживаться данной версией импортера. Рассмотрите возможность обновления."
+msgstr "Данный WXR-файл (версия %s) может не поддерживаться данной версией импортера. Рассмотрите возможность обно��ления."
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
@@ -1431,7 +1431,7 @@ msgstr "Действия"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:218,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:320
 msgid "Invalid request"
-msgstr "Недопустимый запрос"
+msgstr "Недопустимы�� запрос"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:111
 msgid "No waitlist found"
@@ -1462,7 +1462,7 @@ msgstr "Вы уже включены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:303
 msgid "You have been added to the waitlist"
-msgstr "Вы добавлены в ��писок ожидания"
+msgstr "Вы добавлены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
@@ -1659,7 +1659,7 @@ msgstr "Перейдите по ссылке ниже, чтобы оформит
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:30,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:15
 msgid "You have requested to join the waitlist for this item:"
-msgstr "Вы ��одали заявку на включение в список ожидания этого товара:"
+msgstr "Вы подали заявку на включение в список ожидания этого товара:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:66
 msgid "Click the button below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
@@ -2842,7 +2842,7 @@ msgstr "Перекрытие"
 #. translators: placeholder here means the actual URL.
 #: framework/premium/features/media-video/options.php:140
 msgid "Choose how the video will fill its container. More info about this can be found %1$shere%2$s."
-msgstr "Как видео будет размещено в контейнере. Подробную информацию об этом можно найти %1$sздесь%2$s."
+msgstr "Как видео будет размещено в контейнере. Подробную информацию об этом можно н��йти %1$sздесь%2$s."
 
 #. translators: %s is the author's display name.
 #: framework/features/blocks/dynamic-data/views/avatar-field.php:31
@@ -2859,7 +2859,7 @@ msgstr "Записи - макет 2"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-3.php:4
 msgid "Posts - Layout 3"
-msgstr "Записи - м��кет 3"
+msgstr "Записи - макет 3"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-4.php:4
 msgid "Posts - Layout 4"
@@ -3034,7 +3034,7 @@ msgstr "Целевое количество"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:90
 msgid "Amount of items the client has to buy in order to get free shipping."
-msgstr "Количество товаров, которые клиент должен приобрести, чтобы получить бесплатную доставку."
+msgstr "Количество т��варов, которые клиент должен приобрести, чтобы получить бесплатную доставку."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:172
 msgid "You can use dynamic code tags such as {items} inside this option."
@@ -3112,7 +3112,7 @@ msgstr "Нехватка запасов"
 
 #: framework/helpers/exts-configs.php:370
 msgid "Show the remaining stock of a product to create a sense of urgency and encourage your visitors to make a purchase."
-msgstr "Отображение оставшихся запасов товара, для создания ощущения срочности и побуждения посетителей совершить покупку."
+msgstr "Отображение оставшихся запасов товара, для создания ��щущения срочности и побуждения посетителей совершить покупку."
 
 #. translators: %s is the product name (theme or plugin)
 #: framework/views/theme-mismatch.php:36
@@ -3429,11 +3429,11 @@ msgstr "Это профессиональный стартовый сайт"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:54
 msgid "Upgrade to any pro plan and get instant access to this starter site and many other features."
-msgstr "Перейдите на любой профессио��альный тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
+msgstr "Перейдите на любой профессиональный тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:61
 msgid "Upgrade to the business or agency plan and get instant access to this starter site and many other features."
-msgstr "Перейдите на профессиональный или агентский тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
+msgstr "Перейдите на профессиональный или агентский тариф и получите мгновенны�� доступ к этому стартовому сайту и многим другим функциям."
 
 #: static/js/dashboard/helpers/useProExtensionInFree.js:14
 msgid "This is a Pro extension"
@@ -3508,7 +3508,7 @@ msgstr "Кнопка сброса"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:174
 msgid "Show or hide reset filter button."
-msgstr "Кнопка сброса фильтров."
+msgstr "Кнопка ��броса фильтров."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/index.js:10
 msgid "Shop Filters Controls"
@@ -3664,7 +3664,7 @@ msgstr "Адрес доставки"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:64
 msgid "Subtotal"
-msgstr "Под��тог"
+msgstr "Подытог"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:77
 msgid "Shipping"
@@ -4153,7 +4153,7 @@ msgstr "Колонки панели"
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:307,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:100
 msgid "Panel Backdrop"
-msgstr "Задник панели"
+msgstr "За��ник панели"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:554
 msgid "Widget Area Source"
@@ -4213,7 +4213,7 @@ msgstr "Кнопка"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:72
 msgid "Modal Trigger"
-msgstr "Триггер модального ��кна"
+msgstr "Триггер модального окна"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:82
 msgid "Card"
@@ -4541,7 +4541,7 @@ msgstr "Заголовок партнёрской ссылки"
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:57,
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:90
 msgid "Open Button Link In New Tab"
-msgstr "Открывать кнопкой ��овую вкладку"
+msgstr "Открывать кнопкой новую вкладку"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-page/options.php:14
 msgid "Quantity Auto Update"
@@ -5475,7 +5475,7 @@ msgstr "Таблица сравнения"
 
 #: framework/helpers/exts-configs.php:239
 msgid "Adds the “add to cart” actions to the product page as a floating bar if the product summary has disappeared from view."
-msgstr "Добавление действия добавления в корзину на странице товара в виде плавающей панели, появляющейся когда краткое описание товара исчезает из поля зрения."
+msgstr "Добавлени�� действия добавления в корзину на странице товара в виде плавающей панели, появляющейся когда краткое описание товара исчезает из поля зрения."
 
 #: framework/helpers/exts-configs.php:246,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:58
@@ -8350,7 +8350,7 @@ msgstr "Страница списка желаний"
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:46
 msgid "The page you select here will display the wish list for your logged out users."
-msgstr " На странице, которую вы выберете здесь, будет отображаться список желаний для невошедших в систему пользователей."
+msgstr " На с��ранице, которую вы выберете здесь, будет отображаться список желаний для невошедших в систему пользователей."
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:25
 msgid "Archive Page"
@@ -9013,7 +9013,7 @@ msgstr "Курсивный"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/RegularTab.js:30
 msgid "Upload only the %s.woff2%s or %s.ttf%s font file formats (see browser coverage %shere%s). Use %sthis converter tool%s if you don't have these font formats."
-msgstr "Загружайте только файлы шрифтов в форматах %s.woff2%s или %s.ttf%s (смотрите покрытие браузера %sздесь%s). Используйте %sэтот конвертер%s, если у вас нет таких форматов шрифтов."
+msgstr "Загружайте только файлы шрифтов в форматах %s.woff2%s или %s.ttf%s (смотрите покрытие браузера %sздесь%s). Используйте %sэтот конвертер%s, если у вас нет таких фо��матов шрифтов."
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:91
 msgid "Font Name"

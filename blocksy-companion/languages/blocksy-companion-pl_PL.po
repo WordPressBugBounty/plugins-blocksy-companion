@@ -4078,7 +4078,7 @@ msgstr "Bezpłatny pasek wysyłkowy"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:212
 msgid "Show if cart is empty"
-msgstr "Poka��, czy koszyk jest pusty"
+msgstr "Pokaż, czy koszyk jest pusty"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:445,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:180

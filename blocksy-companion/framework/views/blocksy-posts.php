@@ -148,14 +148,6 @@ if (! $query->have_posts() && $args['no_results'] === 'skip') {
 	return;
 }
 
-if (
-	$args['view'] !== 'slider'
-	&&
-	wp_style_is('ct-entries-styles', 'registered')
-) {
-	wp_enqueue_style('ct-entries-styles');
-}
-
 if (! empty($content)) {
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo $content;

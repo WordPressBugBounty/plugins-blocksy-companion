@@ -7,6 +7,7 @@ class MailerliteNewProvider extends Provider {
 		$args = [
 			'timeout' => 30,
 			'method' => $method,
+			'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:87.0) Gecko/20100101 Firefox/87.0',
 			'headers' => [
 				'Authorization' => 'Bearer ' . $api_key,
 				'accept' => 'application/json',

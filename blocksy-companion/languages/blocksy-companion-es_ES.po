@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-19 15:00:26+0000\n"
+"PO-Revision-Date: 2026-02-27 07:15:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1626,7 +1626,7 @@ msgstr "No"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:21
 msgid "You don't have any products in your waitlist yet."
-msgstr "Aún no tienes ningún producto en tu lista de espera."
+msgstr "Aún no tienes ningún producto en tu lista de espera"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/product-mobile-actions.php:27,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table.php:42
@@ -1687,7 +1687,7 @@ msgstr "darse de baja"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
 msgid "You have been successfully added to the waitlist for the following item:"
-msgstr ""
+msgstr "Usted ha sido incluido exitosamanete a la lista de espera para el siguiente artículo:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
@@ -1807,7 +1807,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/view.php:114
 msgid "Product successfully added to your cart!"
-msgstr ""
+msgstr "¡Producto agregado exitosamente a tu carrito!"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/view.php:121
 msgid "Close Modal"
@@ -2203,11 +2203,11 @@ msgstr ""
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:600
 msgid "Zoom In"
-msgstr ""
+msgstr "Acercar vista"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:604
 msgid "Zoom Out"
-msgstr ""
+msgstr "Alejar vista"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:640
 msgid "Image size"
@@ -3801,7 +3801,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table-no-results.php:6
 msgid "You don't have any products in your compare list yet."
-msgstr "No tienes ningún producto en tu lista de comparación."
+msgstr "Aún no tienes ningún producto en tu lista de comparación."
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:25,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:424
@@ -5239,7 +5239,7 @@ msgstr ""
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:137,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:155
 msgid "Your email *"
-msgstr ""
+msgstr "Tu correo electrónico"
 
 #: framework/extensions/newsletter-subscribe/providers/demo.php:16
 msgid "Demo List"
@@ -5539,7 +5539,7 @@ msgstr ""
 
 #: framework/dashboard.php:589
 msgid "You do not have sufficient permissions to access this page."
-msgstr ""
+msgstr "No tienes permisos suficientes para acceder a esta página."
 
 #: framework/theme-integration.php:236
 msgid "X (Twitter)"
@@ -6218,11 +6218,11 @@ msgstr ""
 
 #: framework/features/account-auth.php:237
 msgid "Your account was created successfully. Your login details have been sent to your email address. Please visit the %1$slogin page%2$s."
-msgstr ""
+msgstr "Su cuenta se creó correctamente. Sus datos de acceso han sido enviados a su correo electrónico. Visite la página de inicio de sesión %1$s \t%2$s."
 
 #: framework/features/account-auth.php:248
 msgid "Your account was created successfully and a password has been sent to your email address. Please visit the %1$slogin page%2$s."
-msgstr ""
+msgstr "Su cuenta se creó correctamente y se le envió una contraseña a su correo electrónico. Visite la página de inicio de sesión  %1$s \t%2$s."
 
 #. translators: This is a brand name. Preferably to not be translated
 #: framework/extensions/cookies-consent/config.php:5,
@@ -8363,7 +8363,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/views/table-no-results.php:6
 msgid "You don't have any products in your wishlist yet."
-msgstr ""
+msgstr "Aún no tienes ningún producto en tu lista de deseos."
 
 #: framework/premium/extensions/woocommerce-extra/features/archive-card/feature.php:59,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:58,
@@ -8376,7 +8376,7 @@ msgstr "Comprar"
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:173,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/views/columns/product-remove-button.php:13
 msgid "Remove Product"
-msgstr ""
+msgstr "Descartar Producto"
 
 #: framework/premium/features/content-blocks/options/404.php:33,
 #: framework/premium/features/content-blocks/options/header.php:55,
@@ -9101,7 +9101,7 @@ msgstr ""
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:596
 msgid "You can insert the link to a self hosted image or upload one. Please note that only icons in SVG format are allowed here to not break the editor interactiveness."
-msgstr ""
+msgstr "Usted puede insertar el enlace a una imagen alojada por ti mismo o subir una. Ten en cuenta que solo se permiten iconos en formato SVG para no afectar la interactividad del editor."
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:616
 msgid "Plugin Name"
@@ -11509,7 +11509,7 @@ msgstr "Texto"
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:19,
 #: framework/features/blocks/about-me/options.php:77
 msgid "You can add here some arbitrary HTML code."
-msgstr ""
+msgstr "Usted puede agregar aquí cualquier código HTML."
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:74
 msgid "Container Style"
