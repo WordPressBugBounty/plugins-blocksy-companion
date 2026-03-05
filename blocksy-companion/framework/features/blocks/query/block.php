@@ -403,6 +403,10 @@ class Query {
 
 					$this->current_wp_query = $query;
 
+					if ($is_slideshow_layout) {
+						wp_enqueue_style('ct-flexy-styles');
+					}
+
 					while ($query->have_posts()) {
 						$query->the_post();
 
@@ -714,6 +718,10 @@ class Query {
 			$attributes['has_slideshow'] !== 'yes'
 		) {
 			$this->maybe_enqueue_pagination_styles();
+		}
+
+		if ($attributes['has_slideshow'] === 'yes') {
+			wp_enqueue_style('ct-flexy-styles');
 		}
 
 		blocksy_render_archive_cards([

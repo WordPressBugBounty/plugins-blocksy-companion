@@ -4186,7 +4186,7 @@ msgstr "Secunde"
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:310,
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:342
 msgid "Hurry up! This sale ends in"
-msgstr "Grăbește-te! Această ofertă se încheie în"
+msgstr "Grăbește-te! Această ofertă se ��ncheie în"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:336
 msgid "Countdown Box"

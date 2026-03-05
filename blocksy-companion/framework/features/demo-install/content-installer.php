@@ -153,17 +153,6 @@ class DemoInstallContentInstaller {
 			3
 		);
 
-		add_action(
-			'wp_import_insert_post',
-			function ($post_id, $old_post_id) {
-				Plugin::instance()->header->patch_conditions(
-					intval($post_id),
-					intval($old_post_id)
-				);
-			},
-			10, 2
-		);
-
 		add_filter(
 			'wp_import_term_meta',
 			function($meta, $term_id, $post) {

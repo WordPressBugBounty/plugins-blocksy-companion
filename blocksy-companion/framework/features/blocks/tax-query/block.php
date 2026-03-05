@@ -141,6 +141,10 @@ class TaxQuery {
 					$is_slideshow_layout ? ['ct-query-template', 'is-layout-slider'] : ['ct-query-template-' . $layout],
 				);
 
+				if ($is_slideshow_layout) {
+					wp_enqueue_style('ct-flexy-styles');
+				}
+
 				if (
 					! $is_slideshow_layout
 					&&

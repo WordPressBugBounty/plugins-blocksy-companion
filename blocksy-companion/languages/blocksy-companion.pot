@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-02-27 16:02+0000\n"
+"POT-Creation-Date: 2026-03-05 18:42+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -295,8 +295,8 @@ msgid ""
 msgstr ""
 
 #: framework/features/demo-install.php:159,
-#: framework/features/demo-install/content-installer.php:184,
-#: framework/features/demo-install/content-installer.php:180,
+#: framework/features/demo-install/content-installer.php:173,
+#: framework/features/demo-install/content-installer.php:169,
 #: framework/features/demo-install/demo-register.php:12
 msgid "No demo name provided."
 msgstr ""
@@ -378,9 +378,9 @@ msgstr ""
 
 #. translators: This is a brand name. Preferably to not be translated
 #: framework/helpers/exts-configs.php:70,
-#: framework/premium/extensions/code-snippets/extension.php:30,
-#: framework/premium/extensions/code-snippets/extension.php:91,
-#: framework/premium/extensions/code-snippets/extension.php:134
+#: framework/premium/extensions/code-snippets/extension.php:38,
+#: framework/premium/extensions/code-snippets/extension.php:99,
+#: framework/premium/extensions/code-snippets/extension.php:142
 msgctxt "Extension Brand Name"
 msgid "Custom Code Snippets"
 msgstr ""
@@ -779,7 +779,7 @@ msgstr ""
 
 #: framework/helpers/exts-configs.php:394,
 #: framework/premium/extensions/woocommerce-extra/features/cart-suggested-products/options/main.php:46,
-#: framework/premium/extensions/woocommerce-extra/features/cart-suggested-products/views/suggested-products.php:53
+#: framework/premium/extensions/woocommerce-extra/features/cart-suggested-products/views/suggested-products.php:57
 msgid "Suggested Products"
 msgstr ""
 
@@ -2546,18 +2546,18 @@ msgstr ""
 msgid "Sorry, you don't have permission to install content."
 msgstr ""
 
-#: framework/features/demo-install/content-installer.php:212,
-#: framework/features/demo-install/content-installer.php:208
+#: framework/features/demo-install/content-installer.php:201,
+#: framework/features/demo-install/content-installer.php:197
 msgid "No demo data found."
 msgstr ""
 
 #. translators: %1$s and %2$s are HTML tags for a link.
-#: framework/features/demo-install/content-installer.php:348
+#: framework/features/demo-install/content-installer.php:337
 msgid "Importing %1$s: %2$s"
 msgstr ""
 
-#: framework/features/demo-install/content-installer.php:487,
-#: framework/features/demo-install/content-installer.php:483
+#: framework/features/demo-install/content-installer.php:476,
+#: framework/features/demo-install/content-installer.php:472
 msgid "No pages to assign."
 msgstr ""
 
@@ -3782,7 +3782,7 @@ msgstr ""
 msgid "Terms accent color"
 msgstr ""
 
-#: framework/features/blocks/query/block.php:791
+#: framework/features/blocks/query/block.php:799
 msgid "No posts found."
 msgstr ""
 
@@ -4204,21 +4204,21 @@ msgstr ""
 msgid "Adobe Typekit"
 msgstr ""
 
-#: framework/premium/extensions/code-snippets/extension.php:37,
-#: framework/premium/extensions/code-snippets/extension.php:98,
-#: framework/premium/extensions/code-snippets/extension.php:143
+#: framework/premium/extensions/code-snippets/extension.php:45,
+#: framework/premium/extensions/code-snippets/extension.php:106,
+#: framework/premium/extensions/code-snippets/extension.php:151
 msgid "Header scripts"
 msgstr ""
 
-#: framework/premium/extensions/code-snippets/extension.php:48,
-#: framework/premium/extensions/code-snippets/extension.php:109,
-#: framework/premium/extensions/code-snippets/extension.php:154
+#: framework/premium/extensions/code-snippets/extension.php:56,
+#: framework/premium/extensions/code-snippets/extension.php:117,
+#: framework/premium/extensions/code-snippets/extension.php:162
 msgid "After body open scripts"
 msgstr ""
 
-#: framework/premium/extensions/code-snippets/extension.php:59,
-#: framework/premium/extensions/code-snippets/extension.php:120,
-#: framework/premium/extensions/code-snippets/extension.php:165
+#: framework/premium/extensions/code-snippets/extension.php:67,
+#: framework/premium/extensions/code-snippets/extension.php:128,
+#: framework/premium/extensions/code-snippets/extension.php:173
 msgid "Footer scripts"
 msgstr ""
 
@@ -7406,7 +7406,7 @@ msgstr ""
 msgid "Every 12 Hours"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/feature.php:475,
+#: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/feature.php:494,
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:40
 msgid ""
 "<p><strong>🔥 Hurry up! Your selected items are in high demand!</"

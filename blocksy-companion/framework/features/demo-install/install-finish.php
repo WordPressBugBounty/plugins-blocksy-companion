@@ -84,6 +84,7 @@ class DemoInstallFinalActions {
 		$this->update_counts_for_all_terms();
 
 		$this->patch_attachment_ids_in_mods();
+		$this->patch_header_conditions();
 		$this->patch_nav_menu_locations();
 
 		// Clean up duplicate menu items that may have been created during chunked imports
@@ -380,6 +381,32 @@ class DemoInstallFinalActions {
 							$requestsPayload
 						);
 					}
+
+					if (
+						! isset($section['settings']['transparent_conditions'])
+						||
+						! is_array($section['settings']['transparent_conditions'])
+					) {
+						continue;
+					}
+
+					foreach ($section['settings']['transparent_conditions'] as $cond_index => $single_condition) {
+						if (
+							(
+								$single_condition['rule'] === 'page_ids'
+								||
+								$single_condition['rule'] === 'post_ids'
+							)
+							&&
+							isset($single_condition['payload']['post_id'])
+							&&
+							isset($requestsPayload['processed_posts'][intval($single_condition['payload']['post_id'])])
+						) {
+							$new_val['sections'][$section_index]['settings']['transparent_conditions'][$cond_index]['payload']['post_id'] = intval(
+								$requestsPayload['processed_posts'][intval($single_condition['payload']['post_id'])]
+							);
+						}
+					}
 				}
 
 				set_theme_mod($key, $new_val);
@@ -518,6 +545,28 @@ class DemoInstallFinalActions {
 		}
 
 		return $array;
+	}
+
+	public function patch_header_conditions() {
+		$body = json_decode(file_get_contents('php://input'), true);
+
+		if (! $body) {
+			return;
+		}
+
+		$requestsPayload = [];
+
+		if (isset($body['requestsPayload'])) {
+			$requestsPayload = $body['requestsPayload'];
+		}
+
+		if (! isset($requestsPayload['processed_posts'])) {
+			return;
+		}
+
+		Plugin::instance()->header->patch_conditions(
+			$requestsPayload['processed_posts']
+		);
 	}
 
 	public function patch_nav_menu_locations() {
