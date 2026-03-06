@@ -458,12 +458,6 @@ class HeaderAdditions {
 
 			foreach ($single_condition['conditions']['conditions'] as $nested_index => $single_particular_condition) {
 				if (
-					(
-						$single_particular_condition['rule'] === 'page_ids'
-						||
-						$single_particular_condition['rule'] === 'post_ids'
-					)
-					&&
 					isset($single_particular_condition['payload']['post_id'])
 					&&
 					isset($processed_posts[intval($single_particular_condition['payload']['post_id'])])

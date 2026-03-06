@@ -541,7 +541,7 @@ class TaxQuery {
 			if (
 				is_string($process_value)
 				&&
-				str_contains($process_value, 'var:preset|spacing|')
+				strpos($process_value, 'var:preset|spacing|') !== false
 			) {
 				$index_to_splice = strrpos($process_value, '|') + 1;
 				$slug            = _wp_to_kebab_case(substr($process_value, $index_to_splice));

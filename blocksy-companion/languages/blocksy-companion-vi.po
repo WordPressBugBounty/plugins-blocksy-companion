@@ -89,7 +89,7 @@ msgstr "Tối đa:"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:125
 msgid "Regenerating Taxonomies Data"
-msgstr "Đang tái tạo dữ liệu phân loại"
+msgstr "��ang tái tạo dữ liệu phân loại"
 
 #. translators: %s is replaced with the current progress percentage.
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:145
@@ -168,7 +168,7 @@ msgstr "Hình chữ nhật"
 
 #: framework/premium/features/premium-header/items/language-switcher/options/common.php:251
 msgid "Flag Border Radius"
-msgstr "Độ bo góc của cờ"
+msgstr "Đ�� bo góc của cờ"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:316
 msgid "More information on how to generate an API key for Klaviyo can be found %shere%s."
@@ -1554,7 +1554,7 @@ msgstr "Email này được gửi khi người dùng đăng ký thông báo về
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:10
 msgid "Confirm waitlist subscription"
-msgstr "Xác nhận đ��ng k�� danh sách chờ"
+msgstr "Xác nhận đăng ký danh sách chờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:11
 msgid "Get notified when {product_title} is back in stock"
@@ -1928,7 +1928,7 @@ msgstr "Tìm theo %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:500
 msgid "Regenerate the product taxonomies lookup table"
-msgstr "Tạo lại bảng tra cứu phân loại sản phẩm"
+msgstr "Tạo lại bảng tra c���u phân loại sản phẩm"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:501
 msgid "This tool will regenerate the product taxonomies lookup table data from existing product(s) data. This process may take a while."

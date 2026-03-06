@@ -33,7 +33,7 @@ $loggedout_icon_visibility = blocksy_akg(
 
 $link = '#account-modal';
 $aria_controls = [
-	'aria-controls' => 'account-modal'
+	// 'aria-controls' => 'account-modal'
 ];
 
 $login_account_action = blocksy_akg('login_account_action', $atts, 'modal');
