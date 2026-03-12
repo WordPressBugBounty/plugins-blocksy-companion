@@ -32,7 +32,8 @@ class BlocksyExtensionTrending {
 				'url' => blocksy_cdn_url(
 					BLOCKSY_URL . 'framework/extensions/trending/static/bundle/main.js'
 				),
-				'trigger' => 'click'
+				'trigger' => 'click',
+				'version' => blc_get_version()
 			];
 
 			return $chunks;

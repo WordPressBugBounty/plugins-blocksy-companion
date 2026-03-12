@@ -8045,7 +8045,7 @@ msgstr "Pictograme rețele sociale"
 #. translators: %s is a link to the Customizer section.
 #: framework/features/blocks/about-me/options.php:136
 msgid "You can configure social URLs in %s."
-msgstr "Poți configura URL-urile sociale în %s."
+msgstr "Poți configura URL-urile sociale ��n %s."
 
 #: framework/features/blocks/about-me/options.php:168,
 #: framework/features/blocks/socials/options.php:62,
@@ -9101,7 +9101,7 @@ msgstr "Poți introduce linkul către o imagine găzduită local sau să încarc
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:498
 msgid "Gutenberg Options Panel Icon URL"
-msgstr "Poți introduce linkul către o imagine găzduită local sau să încarci una. Dimensiunea recomandată este de 18px lățime și 18px înălțime."
+msgstr "Poți introduce linkul către o imagine găzduit�� local sau să încarci una. Dimensiunea recomandată este de 18px lățime și 18px înălțime."
 
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:596
 msgid "You can insert the link to a self hosted image or upload one. Please note that only icons in SVG format are allowed here to not break the editor interactiveness."

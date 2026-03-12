@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-19 13:53:21+0000\n"
+"PO-Revision-Date: 2026-03-10 12:36:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -130,335 +130,335 @@ msgstr "Edytuj ten element"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:93,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:94
 msgid "View Product"
-msgstr ""
+msgstr "Zobacz produkt"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:155
 msgid "Out of stock"
-msgstr ""
+msgstr "Brak na stanie"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:152
 msgid "In stock"
-msgstr ""
+msgstr "W magazynie"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:217
 msgid "Subscribers"
-msgstr ""
+msgstr "Subskrybenci"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:224
 msgid "Pending entries"
-msgstr ""
+msgstr "Wpisy oczekujące"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:232
 msgid "Failed entries"
-msgstr ""
+msgstr "Nieudane wpisy"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:245
 msgid "Stock"
-msgstr ""
+msgstr "Zapasy"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:188
 msgid "Failed to send"
-msgstr ""
+msgstr "Nie udało się wysłać"
 
 #: framework/premium/features/premium-header/items/language-switcher/options/common.php:18
 msgid "Flag Shape"
-msgstr ""
+msgstr "Kształt flagi"
 
 #: framework/premium/features/premium-header/items/language-switcher/options/common.php:25
 msgid "Rectangle"
-msgstr ""
+msgstr "Prostokąt"
 
 #: framework/premium/features/premium-header/items/language-switcher/options/common.php:251
 msgid "Flag Border Radius"
-msgstr ""
+msgstr "Promień obramowania flagi"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:316
 msgid "More information on how to generate an API key for Klaviyo can be found %shere%s."
-msgstr ""
+msgstr "Więcej informacji na temat generowania klucza API dla Klaviyo można znaleźć %stutaj%s."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:352
 msgid "More information on how to generate an API key for Kit (ConvertKit) can be found %shere%s."
-msgstr ""
+msgstr "Więcej informacji na temat generowania klucza API dla Kit (ConvertKit) można znaleźć %stutaj%s."
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:149
 msgid "White Label Extension"
-msgstr ""
+msgstr "Rozszerzenie \"Biała etykieta\""
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:161
 msgid "Please note that disabling this option will hide the white-label extension. To restore it, press the SHIFT key while clicking the dashboard logo."
-msgstr ""
+msgstr "Pamiętaj, że wyłączenie tej opcji spowoduje ukrycie rozszerzenia \"białej etykiety\". Aby je przywrócić, naciśnij klawisz SHIFT podczas klikania logo pulpitu nawigacyjnego."
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:17
 msgid "Account Menu Item"
-msgstr ""
+msgstr "Pozycja menu konta"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:27
 msgid "Starter Sites Tab"
-msgstr ""
+msgstr "Zakładka „Witryny startowe”"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:31
 msgid "Useful Plugins Tab"
-msgstr ""
+msgstr "Zakładka \"Przydatne wtyczki\""
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:36
 msgid "Changelog Tab"
-msgstr ""
+msgstr "Zakładka „Lista zmian”"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:41
 msgid "Extension Documentation Link"
-msgstr ""
+msgstr "Odnośnik do dokumentacji rozszerzenia"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:46
 msgid "Extension Video Link"
-msgstr ""
+msgstr "Odnośnik do filmu rozszerzającego"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:72
 msgid "Support Section"
-msgstr ""
+msgstr "Sekcja pomocy technicznej"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:77
 msgid "Knowledge Base Section"
-msgstr ""
+msgstr "Sekcja bazy wiedzy"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:82
 msgid "Video Tutorials Section"
-msgstr ""
+msgstr "Sekcja samouczków wideo"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:87
 msgid "Facebook Section"
-msgstr ""
+msgstr "Sekcja Facebook"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:108
 msgid "Button Link"
-msgstr ""
+msgstr "Odnośnik Przycisku"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:159
 msgid "Save Options"
-msgstr ""
+msgstr "Opcje zapisywania"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:34
 msgid "%s Content"
-msgstr ""
+msgstr "%s Treść"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:109
 msgid "Show Price Range Text"
-msgstr ""
+msgstr "Pokaż tekst zakresu cenowego"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/index.js:93
 msgid "Show Price Input Fields"
-msgstr ""
+msgstr "Pokaż pola wprowadzania ceny"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:107
 msgid "Support"
-msgstr ""
+msgstr "Wsparcie"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:110
 msgid "If your questions have not been answered by documentation or video tutorials, drop us a line."
-msgstr ""
+msgstr "Jeśli nie znalazłeś odpowiedzi na swoje pytania w dokumentacji lub samouczkach wideo, napisz do nas."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:115
 msgid "Submit a Ticket"
-msgstr ""
+msgstr "Prześlij zgłoszenie"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:32
 msgid "Facebook Community"
-msgstr ""
+msgstr "Społeczność Facebooka"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:35
 msgid "Share ideas, help others, ask questions and discuss your next project in our friendly community."
-msgstr ""
+msgstr "Dziel się pomysłami, pomagaj innym, zadawaj pytania i omawiaj swój kolejny projekt w naszej przyjaznej społeczności."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:43
 msgid "Join Our Community"
-msgstr ""
+msgstr "Dołącz do naszej społeczności"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:57
 msgid "Video Tutorials"
-msgstr ""
+msgstr "Samouczki wideo"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:60
 msgid "Learn how to do just about anything within Blocksy by following our byte-sized video tutorials."
-msgstr ""
+msgstr "Dowiedz się, jak wykonać niemal każdą czynność w Blocksy, oglądając nasze krótkie samouczki wideo."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:68
 msgid "Watch Tutorials"
-msgstr ""
+msgstr "Obejrzyj samouczki"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:82
 msgid "Knowledge Base"
-msgstr ""
+msgstr "Baza wiedzy"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:85
 msgid "Dive in with our documentation and learn tips and tricks about Blocksy and its components."
-msgstr ""
+msgstr "Zapoznaj się z naszą dokumentacją i poznaj porady i wskazówki dotyczące Blocksy i jego komponentów."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:93
 msgid "View Documentation"
-msgstr ""
+msgstr "Wyświetl dokumentację"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:401
 msgid "Enable field link"
-msgstr ""
+msgstr "Włącz odnośnik do pola"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:411
 msgid "Link Source"
-msgstr ""
+msgstr "Źródło odnośnika"
 
 #: framework/theme-integration.php:60
 msgid "Please enter a stronger password."
-msgstr ""
+msgstr "Wprowadź silniejsze hasło."
 
 #: framework/theme-integration.php:71
 msgctxt "password strength"
 msgid "Password strength unknown"
-msgstr ""
+msgstr "Siła hasła nieznana"
 
 #: framework/theme-integration.php:72
 msgctxt "password strength"
 msgid "Very weak"
-msgstr ""
+msgstr "Bardzo słaby"
 
 #: framework/theme-integration.php:73
 msgctxt "password strength"
 msgid "Weak"
-msgstr ""
+msgstr "Słaby"
 
 #: framework/theme-integration.php:74
 msgctxt "password strength"
 msgid "Medium"
-msgstr ""
+msgstr "Średni"
 
 #: framework/theme-integration.php:75
 msgctxt "password strength"
 msgid "Strong"
-msgstr ""
+msgstr "Silny"
 
 #: framework/theme-integration.php:76
 msgctxt "password mismatch"
 msgid "Mismatch"
-msgstr ""
+msgstr "Niedopasowanie"
 
 #: framework/theme-integration.php:89
 msgid "This field is required"
-msgstr ""
+msgstr "To pole jest wymagane"
 
 #: framework/theme-integration.php:90
 msgid "Please fix this field."
-msgstr ""
+msgstr "Proszę poprawić to pole."
 
 #: framework/theme-integration.php:91
 msgid "Please enter a valid email address."
-msgstr ""
+msgstr "Wpisz prawidłowy adres e-mail."
 
 #: framework/theme-integration.php:92
 msgid "Please enter a valid URL."
-msgstr ""
+msgstr "Wpisz prawidłowy adres URL."
 
 #: framework/theme-integration.php:93
 msgid "Please enter a valid date."
-msgstr ""
+msgstr "Wpisz prawidłową datę."
 
 #: framework/theme-integration.php:94
 msgid "Please enter a valid date (ISO)."
-msgstr ""
+msgstr "Wpisz prawidłową datę (ISO)."
 
 #: framework/theme-integration.php:95
 msgid "Please enter a valid number."
-msgstr ""
+msgstr "Wpisz poprawny numer."
 
 #: framework/theme-integration.php:96
 msgid "Please enter only digits."
-msgstr ""
+msgstr "Wpisz tylko cyfry."
 
 #: framework/theme-integration.php:97
 msgid "Please enter a valid credit card number."
-msgstr ""
+msgstr "Wpisz prawidłowy numer karty kredytowej."
 
 #: framework/theme-integration.php:98
 msgid "Please enter the same value again."
-msgstr ""
+msgstr "Wpisz ponownie tę samą wartość."
 
 #: framework/theme-integration.php:99
 msgid "Please enter no more than {0} characters."
-msgstr ""
+msgstr "Wpisz maksymalnie {0} znaków."
 
 #: framework/theme-integration.php:100
 msgid "Please enter at least {0} characters."
-msgstr ""
+msgstr "Wpisz co najmniej {0} znaków."
 
 #: framework/theme-integration.php:101
 msgid "Please enter a value between {0} and {1} characters long."
-msgstr ""
+msgstr "Wpisz wartość o długości od {0} do {1} znaków."
 
 #: framework/theme-integration.php:102
 msgid "Please enter a value between {0} and {1}."
-msgstr ""
+msgstr "Wpisz wartość z przedziału od {0} do {1}."
 
 #: framework/theme-integration.php:103
 msgid "Please enter a value less than or equal to {0}."
-msgstr ""
+msgstr "Wpisz wartość mniejszą lub równą {0}."
 
 #: framework/theme-integration.php:104
 msgid "Please enter a value greater than or equal to {0}."
-msgstr ""
+msgstr "Wpisz wartość większą lub równą {0}."
 
 #. translators: %s is the error message.
 #: framework/features/account-auth.php:90
 msgid "<strong>Error</strong>: %s"
-msgstr ""
+msgstr "<strong>Błąd</strong>: %s"
 
 #: framework/features/opengraph-meta-data.php:40
 msgid "X (Twitter) Username"
-msgstr ""
+msgstr "X (Twitter) Nazwa użytkownika"
 
 #: framework/features/svg.php:28
 msgid "This file does not appear to be a valid SVG file."
-msgstr ""
+msgstr "Ten plik nie wydaje się być prawidłowym plikiem SVG."
 
 #: framework/features/svg.php:37
 msgid "SVG files cannot contain PHP code."
-msgstr ""
+msgstr "Pliki SVG nie mogą zawierać kodu PHP."
 
 #: framework/helpers/exts-configs.php:403,
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:4
 msgid "Cart Reserved Timer"
-msgstr ""
+msgstr "Timer rezerwacji koszyka"
 
 #: framework/helpers/exts-configs.php:404
 msgid "Display a countdown timer for reserved cart items, encouraging users to complete their purchase before the timer expires."
-msgstr ""
+msgstr "Wyświetlaj licznik czasu dla zarezerwowanych produktów w koszyku, zachęcając użytkowników do sfinalizowania zakupu przed upływem czasu."
 
 #: framework/extensions/cookies-consent/config.php:6
 msgid "Display a simple consent banner to inform users about the use of cookies on the website."
-msgstr ""
+msgstr "Wyświetl prosty baner zgody, aby poinformować użytkowników o wykorzystaniu plików cookie na stronie internetowej."
 
 #: framework/features/demo-install/parsers.php:55,
 #: framework/features/demo-install/parsers.php:99,
 #: framework/features/demo-install/parsers.php:107
 msgid "There was an error when reading this WXR file"
-msgstr ""
+msgstr "Wystąpił błąd podczas odczytywania tego pliku WXR"
 
 #: framework/features/demo-install/parsers.php:56
 msgid "Details are shown above. The importer will now try again with a different parser..."
-msgstr ""
+msgstr "Szczegóły przedstawiono powyżej. Importer spróbuje ponownie, używając innego parsera..."
 
 #: framework/features/demo-install/parsers.php:111,
 #: framework/features/demo-install/parsers.php:116,
 #: framework/features/demo-install/parsers.php:373,
 #: framework/features/demo-install/parsers.php:590
 msgid "This does not appear to be a WXR file, missing/invalid WXR version number"
-msgstr ""
+msgstr "Nie wygląda to na plik WXR, brakuje numeru wersji WXR lub jest on nieprawidłowy"
 
 #: framework/features/demo-install/wp-importer.php:199,
 #: framework/features/demo-install/wp-importer.php:254,
 #: framework/features/demo-install/wp-importer.php:250,
 #: framework/features/demo-install/wp-importer.php:271
 msgid "Sorry, there has been an error."
-msgstr ""
+msgstr "Przepraszamy, wystąpił błąd."
 
 #: framework/features/demo-install/wp-importer.php:234
 msgid "All done."
-msgstr ""
+msgstr "Gotowe."
 
 #: framework/features/demo-install/wp-importer.php:234
 msgid "Have fun!"
@@ -9013,7 +9013,7 @@ msgstr "Italic"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/RegularTab.js:30
 msgid "Upload only the %s.woff2%s or %s.ttf%s font file formats (see browser coverage %shere%s). Use %sthis converter tool%s if you don't have these font formats."
-msgstr "Prześlij tylko pliki czcionek w formacie %s.woff2%s lub %s.ttf%s (zobacz zasięg przeglądarki %shere%s). Użyj %sthis converter tool%s, jeśli nie masz tych formatów czcionek."
+msgstr "Prześlij tylko pliki czcionek w formacie %s.woff2%s lub %s.ttf%s (zobacz zasięg przeglądarki %shere%s). U��yj %sthis converter tool%s, jeśli nie masz tych formatów czcionek."
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:91
 msgid "Font Name"

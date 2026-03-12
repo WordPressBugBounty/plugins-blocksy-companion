@@ -121,6 +121,7 @@ class BlocksyExtensionNewsletterSubscribe {
 						'framework/extensions/newsletter-subscribe/static/bundle/main.js'
 				),
 				'trigger' => 'submit',
+				'version' => blc_get_version()
 			];
 
 			return $chunks;
