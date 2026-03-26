@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class DemoInstallContentInstaller {
 	protected $demo_name = null;
 	protected $is_ajax_request = true;
@@ -28,7 +32,7 @@ class DemoInstallContentInstaller {
 	public function import() {
 		// For AJAX requests, require SSE Accept header
 		if ($this->is_ajax_request) {
-			$accept_header = isset($_SERVER['HTTP_ACCEPT']) ? $_SERVER['HTTP_ACCEPT'] : '';
+			$accept_header = isset($_SERVER['HTTP_ACCEPT']) ? sanitize_text_field(wp_unslash($_SERVER['HTTP_ACCEPT'])) : '';
 
 			if (strpos($accept_header, 'text/event-stream') === false) {
 				wp_send_json_error([
@@ -206,6 +210,7 @@ class DemoInstallContentInstaller {
 		$demo_to_install = $demo_to_install['demo'];
 
 		$wp_import = new \Blocksy_WP_Import();
+		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound -- required by WP Importer API
 		$GLOBALS['wp_import'] = $wp_import;
 
 		$import_data = $wp_import->parse($demo_to_install['content']);
@@ -415,7 +420,7 @@ class DemoInstallContentInstaller {
 		header('Connection: keep-alive');
 		header('X-Accel-Buffering: no');
 
-		// Disable time limit for SSE
+		// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged -- required for long-running SSE import
 		set_time_limit(0);
 
 		// Send initial connection event
@@ -423,6 +428,7 @@ class DemoInstallContentInstaller {
 	}
 
 	private function send_sse_event($event, $data) {
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- SSE protocol output, not HTML.
 		echo "event: {$event}\n";
 		echo "data: " . wp_json_encode($data) . "\n\n";
 

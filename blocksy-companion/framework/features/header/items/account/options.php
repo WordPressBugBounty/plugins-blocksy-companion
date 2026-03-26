@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $link_options = [
 	'profile' => __('Profile Page', 'blocksy-companion'),
 	'dashboard' => __('Dashboard Page', 'blocksy-companion'),
@@ -123,7 +127,7 @@ $layer_settings = [
 	],
 
 	'custom_link' => [
-		'label' => blc_safe_sprintf(
+		'label' => blocksy_companion_safe_sprintf(
 			'<%%= label || "%s" %%>',
 			__('Custom Link', 'blocksy-companion')
 		),
@@ -164,10 +168,10 @@ $layer_settings = [
 					'tablet' => 'skip'
 				],
 				'choices' => blocksy_ordered_keys(blocksy_get_menus_items()),
-				'desc' => blc_safe_sprintf(
+				'desc' => blocksy_companion_safe_sprintf(
 					// translators: %1$s and %2$s are HTML tags for a link.
 					__( 'Manage your menus in the %1$sMenus screen%2$s.', 'blocksy-companion' ),
-					blc_safe_sprintf(
+					blocksy_companion_safe_sprintf(
 						'<a href="%s" target="_blank">',
 						admin_url('/nav-menus.php')
 					),
@@ -256,12 +260,12 @@ if (class_exists( 'bbPress' )) {
 	];
 }
 
-if (function_exists('blc_get_content_blocks')) {
+if (function_exists('blocksy_companion_get_content_blocks')) {
 	$layer_settings['content-block'] = [
 		'label' => __('Content Block', 'blocksy-companion'),
 		'clone' => 5,
 		'options' => [
-			empty(blc_get_content_blocks())
+			empty(blocksy_companion_get_content_blocks())
 				? [
 					blocksy_rand_md5() => [
 						'type' => 'html',
@@ -281,7 +285,7 @@ if (function_exists('blc_get_content_blocks')) {
 						'defaultToFirstItem' => false,
 						'placeholder' => __('None', 'blocksy-companion'),
 						'choices' => blocksy_ordered_keys(
-							blc_get_content_blocks()
+							blocksy_companion_get_content_blocks()
 						),
 					],
 				],
@@ -383,7 +387,7 @@ $options = [
 						'type' => 'ct-condition',
 						'condition' => ['loggedin_media' => 'icon'],
 						'options' => [
-							blc_site_has_feature()
+							blocksy_companion_site_has_feature()
 								? [
 									'loggedin_icon_source' => [
 										'label' => __('Icon Source', 'blocksy-companion'),
@@ -432,7 +436,7 @@ $options = [
 
 							blocksy_rand_md5() => [
 								'type' => 'ct-condition',
-								'condition' => blc_site_has_feature()
+								'condition' => blocksy_companion_site_has_feature()
 									? [
 										'loggedin_icon_source' => 'default',
 									]
@@ -834,7 +838,7 @@ $options = [
 						'type' => 'ct-condition',
 						'condition' => ['logged_out_style' => 'icon'],
 						'options' => [
-							blc_site_has_feature()
+							blocksy_companion_site_has_feature()
 							? [
 								'logged_out_icon_source' => [
 									'label' => __(
@@ -882,7 +886,7 @@ $options = [
 
 							blocksy_rand_md5() => [
 								'type' => 'ct-condition',
-								'condition' => blc_site_has_feature()
+								'condition' => blocksy_companion_site_has_feature()
 								? [
 									'logged_out_icon_source' => 'default',
 								]

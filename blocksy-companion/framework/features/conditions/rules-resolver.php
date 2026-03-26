@@ -252,9 +252,9 @@ class ConditionsRulesResolver {
 		if (
 			$rule['rule'] === 'single_product'
 			&&
-			blc_theme_functions()->blocksy_manager()
+			blocksy_companion_theme_functions()->blocksy_manager()
 		) {
-			return blc_theme_functions()->blocksy_manager()->screen->is_product();
+			return blocksy_companion_theme_functions()->blocksy_manager()->screen->is_product();
 		}
 
 		if ($rule['rule'] === 'all_product_archives') {
@@ -381,11 +381,11 @@ class ConditionsRulesResolver {
 				return false;
 			}
 
-			if (! blc_theme_functions()->blocksy_manager()) {
+			if (! blocksy_companion_theme_functions()->blocksy_manager()) {
 				return false;
 			}
 
-			$manager = blc_theme_functions()->blocksy_manager();
+			$manager = blocksy_companion_theme_functions()->blocksy_manager();
 
 			if (! isset($manager->archive) || ! $manager->archive) {
 				return false;

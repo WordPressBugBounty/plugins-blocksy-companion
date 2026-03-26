@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 // phpcs:ignoreFile
 
 /** Display verbose errors */
@@ -1344,7 +1348,7 @@ class Blocksy_WP_Import extends WP_Importer {
 
 			return new WP_Error(
 				'import_file_error',
-				blc_safe_sprintf(
+				blocksy_companion_safe_sprintf(
 					// translators: %1$d is the HTTP response code, %2$s is the HTTP response message.
 					__(
 						'Remote server returned error response %1$d %2$s',
@@ -1387,7 +1391,7 @@ class Blocksy_WP_Import extends WP_Importer {
 
 			return new WP_Error(
 				'import_file_error',
-				blc_safe_sprintf(
+				blocksy_companion_safe_sprintf(
 					// translators: %s is the maximum file size allowed.
 					__(
 						'Remote file is too large, limit is %s',

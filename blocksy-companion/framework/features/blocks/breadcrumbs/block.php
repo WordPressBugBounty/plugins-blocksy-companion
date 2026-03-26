@@ -2,6 +2,10 @@
 
 namespace Blocksy\Editor\Blocks;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class BreadCrumbs {
 	public function __construct() {
 		add_action('init', [$this, 'blocksy_breadcrumbs_block']);
@@ -9,7 +13,7 @@ class BreadCrumbs {
 		add_action(
 			'wp_ajax_blocksy_blocks_retrieve_breadcrumbs_data_descriptor',
 			function () {
-				$blocksy_manager = blc_theme_functions()->blocksy_manager();
+				$blocksy_manager = blocksy_companion_theme_functions()->blocksy_manager();
 
 				if (
 					! current_user_can('manage_options')

@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $avatar_size = blocksy_akg('avatar_size', $attributes, 96);
 
 $img_attr = [

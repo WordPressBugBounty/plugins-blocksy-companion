@@ -196,11 +196,18 @@ export const getRowStickyHeight = (el, hasBorder = true) => {
 }
 
 export const maybeSetStickyHeightAnimated = (cb = () => 0) => {
-	const maybeFloatingCart = document.querySelector('.ct-floating-bar')
+	const value = cb()
 
-	if (!maybeFloatingCart) {
-		return
-	}
-
-	maybeFloatingCart.style.setProperty('--header-sticky-height-animated', cb())
+	document
+		.querySelectorAll(
+			[
+				'.ct-floating-bar',
+				'.ct-order-review',
+				'.sticky-summary .entry-summary',
+				'.sticky-gallery .woocommerce-product-gallery',
+			].join(',')
+		)
+		.forEach((el) => {
+			el.style.setProperty('--header-sticky-height-animated', value)
+		})
 }

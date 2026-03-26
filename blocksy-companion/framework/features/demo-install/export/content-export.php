@@ -4,6 +4,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class DemoInstallContentExport {
 	public function export() {
 		/**

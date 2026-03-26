@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class Dashboard {
 	public function __construct() {
 		add_filter(
@@ -129,37 +133,37 @@ class Dashboard {
 				return $class;
 			}
 
-			if (function_exists('blc_fs') && blc_fs()->is_activation_mode()) {
+			if (function_exists('blocksy_companion_fs') && blocksy_companion_fs()->is_activation_mode()) {
 				$class .= ' blocksy-fs-optin-dashboard';
 			}
 
 			return $class;
 		});
 
-		if (function_exists('blc_fs')) {
-			blc_fs()->add_filter('hide_plan_change', '__return_true');
-			blc_fs()->add_filter(
+		if (function_exists('blocksy_companion_fs')) {
+			blocksy_companion_fs()->add_filter('hide_plan_change', '__return_true');
+			blocksy_companion_fs()->add_filter(
 				'plugin_icon',
 				function ($url) {
 					return BLOCKSY_PATH . '/static/img/logo.jpg';
 				}
 			);
 
-			blc_fs()->add_filter(
+			blocksy_companion_fs()->add_filter(
 				'permission_diagnostic_default',
 				'__return_false'
 			);
 
-			blc_fs()->add_filter(
+			blocksy_companion_fs()->add_filter(
 				'show_deactivation_feedback_form',
 				'__return_false'
 			);
 
-			blc_fs()->add_filter('hide_freemius_powered_by', '__return_true');
+			blocksy_companion_fs()->add_filter('hide_freemius_powered_by', '__return_true');
 
-			blc_fs()->add_filter( 'show_deactivation_subscription_cancellation', '__return_false' );
+			blocksy_companion_fs()->add_filter( 'show_deactivation_subscription_cancellation', '__return_false' );
 
-			blc_fs()->add_filter(
+			blocksy_companion_fs()->add_filter(
 				'connect-message_on-premium',
 				function ($text) {
 					if (strpos($text, '<br>') !== false) {
@@ -172,7 +176,7 @@ class Dashboard {
 				}
 			);
 
-			blc_fs()->add_filter(
+			blocksy_companion_fs()->add_filter(
 				'connect_message_on_update',
 				function (
 					$message,
@@ -182,10 +186,10 @@ class Dashboard {
 					$site_link,
 					$freemius_link
 				) {
-					$is_network_upgrade_mode = ( fs_is_network_admin() && blc_fs()->is_network_upgrade_mode() );
-					$slug = blc_fs()->get_slug();
+					$is_network_upgrade_mode = ( fs_is_network_admin() && blocksy_companion_fs()->is_network_upgrade_mode() );
+					$slug = blocksy_companion_fs()->get_slug();
 					$is_gdpr_required = \FS_GDPR_Manager::instance()->is_required();
-					$hey_x_text = esc_html( blc_safe_sprintf( fs_text_x_inline( 'Hey %s,', 'greeting', 'hey-x', $slug ), $user_first_name ) );
+					$hey_x_text = esc_html( blocksy_companion_safe_sprintf( fs_text_x_inline( 'Hey %s,', 'greeting', 'hey-x', $slug ), $user_first_name ) );
 
 					$default_optin_message = $is_gdpr_required ?
 						fs_text_inline( 'Never miss an important update - opt in to our security & feature updates notifications, educational content, offers, and non-sensitive diagnostic tracking with %4$s. If you skip this, that\'s okay! %1$s will still work just fine.', 'connect-message_on-update', $slug ) :
@@ -198,9 +202,9 @@ class Dashboard {
 						/* translators: %s: name (e.g. Hey John,) */
 						'<span>' . $hey_x_text . '</span>'
 					) .
-					blc_safe_sprintf(
+					blocksy_companion_safe_sprintf(
 						esc_html( $default_optin_message ),
-						'<b>' . esc_html( blc_fs()->get_plugin_name() ) . '</b>',
+						'<b>' . esc_html( blocksy_companion_fs()->get_plugin_name() ) . '</b>',
 						'<b>' . $user_login . '</b>',
 						$site_link,
 						$freemius_link
@@ -209,13 +213,13 @@ class Dashboard {
 				}, 10, 6
 			);
 
-			blc_fs()->add_action('connect/before', function () {
+			blocksy_companion_fs()->add_action('connect/before', function () {
 				$path = dirname(__FILE__) . '/views/optin.php';
 
 				blocksy_render_view_e($path, []);
 			});
 
-			blc_fs()->add_action('connect/after', function () {
+			blocksy_companion_fs()->add_action('connect/after', function () {
 				echo '</div>';
 			});
 
@@ -226,7 +230,7 @@ class Dashboard {
 						wp_send_json_error();
 					}
 
-					blc_fs()->connect_again();
+					blocksy_companion_fs()->connect_again();
 					wp_send_json_success();
 				}
 			);
@@ -235,7 +239,7 @@ class Dashboard {
 				'wp_ajax_blocksy_dashboard_handle_incorrect_license',
 				function () {
 					if (! current_user_can(
-						blc_get_capabilities()->get_wp_capability_by('dashboard')
+						blocksy_companion_get_capabilities()->get_wp_capability_by('dashboard')
 					)) {
 						wp_send_json_error();
 					}
@@ -277,37 +281,37 @@ class Dashboard {
 					'is_multisite' => is_multisite()
 				];
 
-				if (function_exists('blc_fs')) {
-					$is_anonymous = blc_fs()->is_anonymous();
+				if (function_exists('blocksy_companion_fs')) {
+					$is_anonymous = blocksy_companion_fs()->is_anonymous();
 					$connect_template = '';
 
 					if ($is_anonymous) {
 						ob_start();
-						blc_fs()->_connect_page_render();
+						blocksy_companion_fs()->_connect_page_render();
 						$connect_template = ob_get_clean();
 					}
 
-					$current_plan = blc_get_capabilities()->get_plan();
+					$current_plan = blocksy_companion_get_capabilities()->get_plan();
 
 					// $current_plan = 'free';
 
 					$retrieve_demos_data = [
 					];
 
-					if (blc_fs()->_get_license()) {
-						$retrieve_demos_data['license_id'] = blc_fs()->_get_license()->id;
+					if (blocksy_companion_fs()->_get_license()) {
+						$retrieve_demos_data['license_id'] = blocksy_companion_fs()->_get_license()->id;
 					}
 
-					if (blc_fs()->get_site()) {
-						$retrieve_demos_data['install_id'] = blc_fs()->get_site()->id;
+					if (blocksy_companion_fs()->get_site()) {
+						$retrieve_demos_data['install_id'] = blocksy_companion_fs()->get_site()->id;
 					}
 
 					$result = [
 						'is_pro' => $current_plan !== 'free',
 						'current_plan' => $current_plan,
 
-						'pro_starter_sites' => blc_get_capabilities()->get_features()['pro_starter_sites'],
-						'pro_starter_sites_enhanced' => blc_get_capabilities()->get_features()['pro_starter_sites_enhanced'],
+						'pro_starter_sites' => blocksy_companion_get_capabilities()->get_features()['pro_starter_sites'],
+						'pro_starter_sites_enhanced' => blocksy_companion_get_capabilities()->get_features()['pro_starter_sites_enhanced'],
 
 						'is_anonymous' => $is_anonymous,
 						'connect_template' => $connect_template,
@@ -353,8 +357,8 @@ class Dashboard {
 				return;
 			}
 
-			if (intval(get_option('blc_activation_redirect', false)) === wp_get_current_user()->ID) {
-				delete_option('blc_activation_redirect');
+			if (intval(get_option('blocksy_companion_activation_redirect', false)) === wp_get_current_user()->ID) {
+				delete_option('blocksy_companion_activation_redirect');
 				wp_safe_redirect(admin_url('admin.php?page=ct-dashboard'));
 				exit;
 			}
@@ -378,7 +382,7 @@ class Dashboard {
 				'blocksy-dashboard-scripts',
 				BLOCKSY_URL . 'static/bundle/dashboard.js',
 				$deps,
-				blc_get_version(),
+				blocksy_companion_get_version(),
 				false
 			);
 		} else {
@@ -394,7 +398,7 @@ class Dashboard {
 					'wp-i18n',
 					'wp-util'
 				],
-				blc_get_version(),
+				blocksy_companion_get_version(),
 				false
 			);
 
@@ -450,7 +454,7 @@ class Dashboard {
 					$mismatched_product_name = 'Blocksy Companion plugin';
 					$mismatched_product_slug = 'blocksy-companion';
 
-					if (blc_can_use_premium_code()) {
+					if (blocksy_companion_can_use_premium_code()) {
 						$mismatched_product_name = 'Blocksy Companion Pro plugin';
 						$mismatched_product_slug = 'blocksy-companion-pro';
 					}
@@ -475,7 +479,7 @@ class Dashboard {
 			'blocksy-dashboard-styles',
 			BLOCKSY_URL . 'static/bundle/dashboard.min.css',
 			['wp-components'],
-			blc_get_version()
+			blocksy_companion_get_version()
 		);
 	}
 
@@ -501,7 +505,7 @@ class Dashboard {
 				'blocksy-dashboard-styles',
 				BLOCKSY_URL . 'static/bundle/dashboard.min.css',
 				[],
-				blc_get_version()
+				blocksy_companion_get_version()
 			);
 
 			wp_enqueue_script(
@@ -515,7 +519,7 @@ class Dashboard {
 					'wp-date',
 					'wp-i18n'
 				],
-				blc_get_version(),
+				blocksy_companion_get_version(),
 				false
 			);
 
@@ -537,14 +541,14 @@ class Dashboard {
 	}
 
 	public function setup_framework_page() {
-		if (! current_user_can(blc_get_capabilities()->get_wp_capability_by('dashboard'))) {
+		if (! current_user_can(blocksy_companion_get_capabilities()->get_wp_capability_by('dashboard'))) {
 			return;
 		}
 
 		$options = [
 			'title' => __('Blocksy', 'blocksy-companion'),
 			'menu-title' => __('Blocksy', 'blocksy-companion'),
-			'permision' => blc_get_capabilities()->get_wp_capability_by('dashboard'),
+			'permision' => blocksy_companion_get_capabilities()->get_wp_capability_by('dashboard'),
 			'top-level-handle' => 'ct-dashboard',
 			'callback' => [$this, 'welcome_page_template'],
 			'icon-url' => $this->get_icon(),
@@ -583,7 +587,7 @@ class Dashboard {
 	}
 
 	public function welcome_page_template() {
-		if (! current_user_can(blc_get_capabilities()->get_wp_capability_by('dashboard'))) {
+		if (! current_user_can(blocksy_companion_get_capabilities()->get_wp_capability_by('dashboard'))) {
 			wp_die(
 				esc_html(
 					__( 'You do not have sufficient permissions to access this page.', 'blocksy-companion' )

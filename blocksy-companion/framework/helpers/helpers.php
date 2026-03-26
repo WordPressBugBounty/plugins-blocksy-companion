@@ -1,6 +1,10 @@
 <?php
 
-function blc_call_gutenberg_function($original_function_name, $args = []) {
+if (! defined('ABSPATH')) {
+	exit;
+}
+
+function blocksy_companion_call_gutenberg_function($original_function_name, $args = []) {
 	$gutenberg_function_name = str_replace(
 		'wp_',
 		'gutenberg_',
@@ -16,7 +20,7 @@ function blc_call_gutenberg_function($original_function_name, $args = []) {
 	return call_user_func_array($function_to_call, $args);
 }
 
-function blc_get_gutenberg_class($class_name) {
+function blocksy_companion_get_gutenberg_class($class_name) {
 	$gutenberg_class_name = $class_name . '_Gutenberg';
 
 	if (class_exists($gutenberg_class_name)) {
@@ -26,7 +30,7 @@ function blc_get_gutenberg_class($class_name) {
 	return $class_name;
 }
 
-function blc_get_version() {
+function blocksy_companion_get_version() {
 	if (! function_exists('get_plugin_data')) {
 		require_once(ABSPATH . 'wp-admin/includes/plugin.php');
 	}
@@ -41,7 +45,7 @@ function blc_get_version() {
 	return $plugin_data['Version'];
 }
 
-function blc_get_capabilities() {
+function blocksy_companion_get_capabilities() {
 	static $capabilities = null;
 
 	if ($capabilities === null) {
@@ -51,7 +55,7 @@ function blc_get_capabilities() {
 	return $capabilities;
 }
 
-function blc_theme_functions() {
+function blocksy_companion_theme_functions() {
 	static $theme_functions = null;
 
 	if ($theme_functions === null) {
@@ -61,20 +65,20 @@ function blc_theme_functions() {
 	return $theme_functions;
 }
 
-function blc_can_use_premium_code() {
+function blocksy_companion_can_use_premium_code() {
 	return !! class_exists('Blocksy\Premium');
 }
 
-function blc_site_has_feature($feature = 'base_pro') {
+function blocksy_companion_site_has_feature($feature = 'base_pro') {
 	return (
-		blc_can_use_premium_code()
+		blocksy_companion_can_use_premium_code()
 		&&
-		blc_get_capabilities()->has_feature($feature)
+		blocksy_companion_get_capabilities()->has_feature($feature)
 	);
 }
 
 // https://developer.wordpress.org/reference/functions/is_ssl/
-function blc_maybe_is_ssl() {
+function blocksy_companion_maybe_is_ssl() {
 	// cloudflare
 	if (! empty($_SERVER['HTTP_CF_VISITOR'])) {
 		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
@@ -105,12 +109,12 @@ function blc_maybe_is_ssl() {
 
 // Don't use protocol relative URL, it's an anti pattern.
 // https://www.paulirish.com/2010/the-protocol-relative-url/
-function blc_normalize_site_url($url) {
+function blocksy_companion_normalize_site_url($url) {
 	$parsed_url = wp_parse_url($url);
 
 	$protocol = 'http';
 
-	if (blc_maybe_is_ssl()) {
+	if (blocksy_companion_maybe_is_ssl()) {
 		$protocol .= 's';
 	}
 
@@ -127,8 +131,8 @@ function blc_normalize_site_url($url) {
 	return $result;
 }
 
-if (! function_exists('blc_load_xml_file')) {
-	function blc_load_xml_file($url, $args = []) {
+if (! function_exists('blocksy_companion_load_xml_file')) {
+	function blocksy_companion_load_xml_file($url, $args = []) {
 		$args = wp_parse_args($args, [
 			'user_agent' => ''
 		]);
@@ -183,7 +187,7 @@ if (! function_exists('blc_load_xml_file')) {
 	}
 }
 
-function blc_stringify_url($parsed_url) {
+function blocksy_companion_stringify_url($parsed_url) {
 	$scheme = isset($parsed_url['scheme']) ? $parsed_url['scheme'] . '://' : '';
 	$host = isset($parsed_url['host']) ? $parsed_url['host'] : '';
 	$port = isset($parsed_url['port']) ? ':' . $parsed_url['port'] : '';
@@ -197,7 +201,7 @@ function blc_stringify_url($parsed_url) {
 	return "$scheme$user$pass$host$port$path$query$fragment";
 }
 
-function blc_is_xhr() {
+function blocksy_companion_is_xhr() {
 	return (
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		isset($_REQUEST['blocksy_ajax'])
@@ -207,7 +211,7 @@ function blc_is_xhr() {
 	);
 }
 
-function blc_get_option_from_db($option, $default = '') {
+function blocksy_companion_get_option_from_db($option, $default = '') {
 	try {
 		global $wpdb;
 
@@ -232,7 +236,7 @@ function blc_get_option_from_db($option, $default = '') {
 	return $default;
 }
 
-function blc_get_network_option_from_db($network_id, $option, $default = '') {
+function blocksy_companion_get_network_option_from_db($network_id, $option, $default = '') {
 	if ($network_id && ! is_numeric($network_id)) {
 		return false;
 	}
@@ -269,7 +273,7 @@ function blc_get_network_option_from_db($network_id, $option, $default = '') {
 	return $default;
 }
 
-function blc_safe_sprintf($format, ...$args) {
+function blocksy_companion_safe_sprintf($format, ...$args) {
 	$result = $format;
 
 	$is_error = false;
@@ -303,12 +307,12 @@ function blc_safe_sprintf($format, ...$args) {
 	return $result;
 }
 
-function blc_request_remote_url($url, $args = []) {
+function blocksy_companion_request_remote_url($url, $args = []) {
 	$request = new \Blocksy\RequestRemoteUrl();
 	return $request->request($url, $args);
 }
 
-function blc_get_jed_locale_data($domain) {
+function blocksy_companion_get_jed_locale_data($domain) {
 	static $locale = [];
 
 	if (isset($locale[$domain])) {
@@ -328,7 +332,7 @@ function blc_get_jed_locale_data($domain) {
 		$locale[$domain]['']['plural_forms'] = $translations->headers['Plural-Forms'];
 	}
 
-	foreach (blc_get_json_translation_files($domain) as $file_path) {
+	foreach (blocksy_companion_get_json_translation_files($domain) as $file_path) {
 		$parsed_json = json_decode(
 			call_user_func(
 				'file' . '_get_contents',
@@ -361,7 +365,7 @@ function blc_get_jed_locale_data($domain) {
 	return $locale[$domain];
 }
 
-function blc_get_variables_from_file(
+function blocksy_companion_get_variables_from_file(
 	$file_path,
 	array $_extract_variables,
 	array $_set_variables = array()
@@ -383,7 +387,7 @@ function blc_get_variables_from_file(
 	return $_extract_variables;
 }
 
-function blc_get_json_translation_files($domain) {
+function blocksy_companion_get_json_translation_files($domain) {
 	$cached_mofiles = [];
 
 	$locations = [
@@ -416,7 +420,7 @@ function blc_get_json_translation_files($domain) {
 	return $result;
 }
 
-function blc_debug_log($message, $object = null) {
+function blocksy_companion_debug_log($message, $object = null) {
 	if (
 		! defined('WP_DEBUG')
 		||
@@ -435,7 +439,7 @@ function blc_debug_log($message, $object = null) {
 }
 
 // TODO: maybe automatically expand class
-function blc_parse_attributes_string($input) {
+function blocksy_companion_parse_attributes_string($input) {
 	$result = [];
 
 	preg_match_all(

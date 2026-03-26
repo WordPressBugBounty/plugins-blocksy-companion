@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class CustomizerOptionsManager {
 	public function __construct() {
 		add_filter('blocksy:options:manage-options:top', function ($options) {

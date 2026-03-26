@@ -1,4 +1,9 @@
 <?php
+
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 /**
  * Contact Info widget
  *
@@ -39,7 +44,7 @@ $classes = ['ct-contact-info-block', $classes];
 $type = blocksy_akg('contacts_icon_shape', $atts, 'rounded');
 $fill = blocksy_akg('contacts_icon_fill_type', $atts, 'outline');
 
-$content = blc_get_contacts_output(
+$content = blocksy_get_contacts_output(
 	[
 		'data' => $contact_information,
 		'link_target' => blocksy_default_akg(

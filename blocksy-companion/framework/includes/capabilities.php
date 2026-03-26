@@ -32,7 +32,7 @@ class Capabilities {
 			wp_cache_delete('fs_accounts', 'options');
 		}
 
-		$this->accounts_cache = blc_get_option_from_db('fs_accounts');
+		$this->accounts_cache = blocksy_companion_get_option_from_db('fs_accounts');
 
 		$for_plans = $this->accounts_cache;
 
@@ -55,7 +55,7 @@ class Capabilities {
 				wp_cache_delete($cache_key, 'site-options');
 			}
 
-			$for_plans = blc_get_network_option_from_db(null, 'fs_accounts');
+			$for_plans = blocksy_companion_get_network_option_from_db(null, 'fs_accounts');
 		}
 
 		if (
@@ -150,7 +150,7 @@ class Capabilities {
 			return $this->plan;
 		}
 
-		if (! blc_can_use_premium_code()) {
+		if (! blocksy_companion_can_use_premium_code()) {
 			$this->plan = 'free';
 			return 'free';
 		}

@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class ThemeIntegration {
 	public function __construct() {
 		add_action(
@@ -126,7 +130,7 @@ class ThemeIntegration {
 					'global_data' => $global_data,
 
 					'trigger' => 'click',
-					'version' => blc_get_version()
+					'version' => blocksy_companion_get_version()
 				];
 			}
 
@@ -136,7 +140,7 @@ class ThemeIntegration {
 				'url' => blocksy_cdn_url(
 					BLOCKSY_URL . 'static/bundle/sticky.js'
 				),
-				'version' => blc_get_version()
+				'version' => blocksy_companion_get_version()
 			];
 
 			return $chunks;
@@ -299,7 +303,7 @@ class ThemeIntegration {
 					}
 
 					if (
-						blc_can_use_premium_code()
+						blocksy_companion_can_use_premium_code()
 						&&
 						file_exists(
 							BLOCKSY_PATH . '/framework/premium/changelog.txt'

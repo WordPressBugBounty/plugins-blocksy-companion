@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class ExtensionsManagerApi {
 	public function __construct() {
 		$this->attach_ajax_actions();

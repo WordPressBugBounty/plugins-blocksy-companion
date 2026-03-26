@@ -2,6 +2,10 @@
 
 namespace Blocksy\Editor;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class Blocks {
 	private $blocks = [];
 

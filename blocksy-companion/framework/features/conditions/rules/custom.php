@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $options = [];
 
 $custom_rules = apply_filters('blocksy:conditions:rules:custom', []);

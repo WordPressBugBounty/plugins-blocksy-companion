@@ -2,6 +2,10 @@
 
 namespace Blocksy\Editor\Blocks;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class TaxQuery {
 	private function maybe_enqueue_pagination_styles() {
 		if (wp_style_is('ct-pagination-styles', 'registered')) {
@@ -499,7 +503,7 @@ class TaxQuery {
 				];
 
 				foreach ($tax_block_patterns as $tax_block_pattern) {
-					$pattern_data = blc_theme_functions()->blocksy_get_variables_from_file(
+					$pattern_data = blocksy_companion_theme_functions()->blocksy_get_variables_from_file(
 						__DIR__ . '/block-patterns/' . $tax_block_pattern . '.php',
 						['pattern' => []]
 					);
@@ -611,8 +615,8 @@ class TaxQuery {
 
 		$custom_post_types = [];
 
-		if (blc_theme_functions()->blocksy_manager()) {
-			$custom_post_types = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
+		if (blocksy_companion_theme_functions()->blocksy_manager()) {
+			$custom_post_types = blocksy_companion_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
 		}
 
 		foreach ($custom_post_types as $cpt) {

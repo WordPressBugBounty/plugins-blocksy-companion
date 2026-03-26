@@ -2,6 +2,10 @@
 
 namespace Blocksy\Editor\Blocks;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class DynamicDataAPI {
 	public function __construct() {
 		add_action('rest_api_init', function() {
@@ -238,16 +242,16 @@ class DynamicDataAPI {
 
 	private function render_custom_field($object, $field_provider, $field_id) {
 		if (
-			! blc_get_ext('post-types-extra')
+			! blocksy_companion_get_ext('post-types-extra')
 			||
-			! blc_get_ext('post-types-extra')->dynamic_data
+			! blocksy_companion_get_ext('post-types-extra')->dynamic_data
 			||
-			! blc_get_ext('post-types-extra')->dynamic_data->custom_fields_manager
+			! blocksy_companion_get_ext('post-types-extra')->dynamic_data->custom_fields_manager
 		) {
 			return '';
 		}
 
-		$field_render = blc_get_ext('post-types-extra')
+		$field_render = blocksy_companion_get_ext('post-types-extra')
 			->dynamic_data
 			->custom_fields_manager
 			->render_field(
@@ -270,16 +274,16 @@ class DynamicDataAPI {
 
 	private function get_custom_fields_response($data) {
 		if (
-			! blc_get_ext('post-types-extra')
+			! blocksy_companion_get_ext('post-types-extra')
 			||
-			! blc_get_ext('post-types-extra')->dynamic_data
+			! blocksy_companion_get_ext('post-types-extra')->dynamic_data
 			||
-			! blc_get_ext('post-types-extra')->dynamic_data->custom_fields_manager
+			! blocksy_companion_get_ext('post-types-extra')->dynamic_data->custom_fields_manager
 		) {
 			return [];
 		}
 
-		$fields = blc_get_ext('post-types-extra')
+		$fields = blocksy_companion_get_ext('post-types-extra')
 			->dynamic_data
 			->custom_fields_manager
 			->get_fields(

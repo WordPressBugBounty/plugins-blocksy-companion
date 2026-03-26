@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class InlineStylesCollector {
 	private $css = '';
 
@@ -109,7 +113,7 @@ class InlineStylesCollector {
 			);
 		}
 
-		blc_call_gutenberg_function(
+		blocksy_companion_call_gutenberg_function(
 			'wp_style_engine_get_stylesheet_from_css_rules',
 			[
 				$styles,

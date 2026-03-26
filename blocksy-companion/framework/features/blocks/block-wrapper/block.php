@@ -2,6 +2,10 @@
 
 namespace Blocksy\Editor\Blocks;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class BlockWrapper {
 	public function __construct() {
 		add_action('init', [$this, 'blocksy_block_wrapper_block']);

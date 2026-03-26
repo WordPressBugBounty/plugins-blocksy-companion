@@ -2,10 +2,14 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class ConditionsManagerAPI {
 	public function __construct() {
 		add_action('wp_ajax_blc_retrieve_conditions_data', function () {
-			$capability = blc_get_capabilities()->get_wp_capability_by('conditions');
+			$capability = blocksy_companion_get_capabilities()->get_wp_capability_by('conditions');
 
 			if (! current_user_can($capability)) {
 				wp_send_json_error();

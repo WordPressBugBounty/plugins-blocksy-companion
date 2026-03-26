@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $tax_choices = [];
 
 if (class_exists('woocommerce')) {

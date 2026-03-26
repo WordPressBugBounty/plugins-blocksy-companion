@@ -30,7 +30,7 @@ class LicenseCli {
 	 * @subcommand activate
 	 */
 	public function license_activate($args, $assoc_args) {
-		$fs = blc_fs();
+		$fs = blocksy_companion_fs();
 
 		if (empty($fs)) {
 			\WP_CLI::error('Freemius instance not found.');

@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class Plugin {
 	/**
 	 * Blocksy instance.
@@ -102,7 +106,7 @@ class Plugin {
 					'blocksy-styles',
 					BLOCKSY_URL . 'static/bundle/options.min.css',
 					[],
-					blc_get_version()
+					blocksy_companion_get_version()
 				);
 
 				$current_screen = get_current_screen();
@@ -113,7 +117,7 @@ class Plugin {
 					return;
 				}
 
-				$locale_data_ct = blc_get_jed_locale_data('blocksy-companion');
+				$locale_data_ct = blocksy_companion_get_jed_locale_data('blocksy-companion');
 
 				wp_add_inline_script(
 					'wp-i18n',
@@ -135,9 +139,9 @@ class Plugin {
 		});
 
 		if (
-			blc_can_use_premium_code()
+			blocksy_companion_can_use_premium_code()
 			&&
-			blc_get_capabilities()->has_feature('base_pro')
+			blocksy_companion_get_capabilities()->has_feature('base_pro')
 		) {
 			$this->premium = new Premium();
 		}
@@ -188,6 +192,7 @@ class Plugin {
 		require_once BLOCKSY_PATH . '/framework/helpers/helpers.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/exts.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/woo.php';
+		require_once BLOCKSY_PATH . '/framework/helpers/backwards-compat.php';
 
 		// Some plugins override the REQUEST_URI server variable and we need to
 		// persist the original value for use within the blocksy_current_url()
@@ -253,7 +258,7 @@ class Plugin {
 
 			if (! empty($maybe_minimum_companion_version)) {
 				$is_companion_version_ok = version_compare(
-					blc_get_version(),
+					blocksy_companion_get_version(),
 					$maybe_minimum_companion_version
 				) > -1;
 			}
@@ -456,7 +461,7 @@ class Plugin {
 			'blocksy-admin-scripts',
 			BLOCKSY_URL . 'static/bundle/options.js',
 			$deps,
-			blc_get_version(),
+			blocksy_companion_get_version(),
 			true
 		);
 

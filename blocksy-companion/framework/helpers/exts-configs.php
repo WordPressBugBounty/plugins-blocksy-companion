@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 // Don't attempt to call __() function early on the frontend and only load them
 // where really needed because it otherwise breaks the translation process
 // by triggering _load_textdomain_just_in_time() too early.
@@ -30,7 +34,7 @@ $data = [
 
 	'post-types-extra' => [
 		'pro' => true,
-		'plans' => blc_get_capabilities()->get_features()['post_types_extra']
+		'plans' => blocksy_companion_get_capabilities()->get_features()['post_types_extra']
 	],
 
 	'shortcuts' => [
@@ -43,12 +47,12 @@ $data = [
 
 	'white-label' => [
 		'pro' => true,
-		'plans' => blc_get_capabilities()->get_features()['white_label']
+		'plans' => blocksy_companion_get_capabilities()->get_features()['white_label']
 	],
 
 	'woocommerce-extra' => [
 		'pro' => true,
-		'plans' => blc_get_capabilities()->get_features()['shop_extra'],
+		'plans' => blocksy_companion_get_capabilities()->get_features()['shop_extra'],
 	]
 ];
 
@@ -167,7 +171,7 @@ if (! $only_billing_data) {
 			],
 
 			'pro' => true,
-			'plans' => blc_get_capabilities()->get_features()['post_types_extra'],
+			'plans' => blocksy_companion_get_capabilities()->get_features()['post_types_extra'],
 
 			'documentation' => 'https://creativethemes.com/blocksy/docs/extensions/post-types-extra/',
 			'video' => 'https://creativethemes.com/blocksy/video-tutorials/blocksy-premium/post-types-extra-extension-walkthrough/',
@@ -215,7 +219,7 @@ if (! $only_billing_data) {
 			'description' => __('Replace Blocksy\'s branding with your own. Easily hide licensing info and other sections of the theme and companion plugin from your clients and make your final product look more professional.', 'blocksy-companion'),
 
 			'pro' => true,
-			'plans' => blc_get_capabilities()->get_features()['white_label'],
+			'plans' => blocksy_companion_get_capabilities()->get_features()['white_label'],
 
 			'documentation' => 'https://creativethemes.com/blocksy/docs/extensions/white-label/',
 			'video' => 'https://creativethemes.com/blocksy/video-tutorials/blocksy-premium/the-white-label-extension/',
@@ -227,7 +231,7 @@ if (! $only_billing_data) {
 			'name' => _x('Shop Extra', 'Extension Brand Name', 'blocksy-companion'),
 			'description' => __('Make the shopping experience better for your visitors! Add features such as Product Quick View, Wishlist functionality and a Floating Add to Cart button. Customize the single product gallery/slider and the layout.', 'blocksy-companion'),
 			'pro' => true,
-			'plans' => blc_get_capabilities()->get_features()['shop_extra'],
+			'plans' => blocksy_companion_get_capabilities()->get_features()['shop_extra'],
 			'documentation' => 'https://creativethemes.com/blocksy/docs/woocommerce/woocommerce-general/',
 			// 'video' => 'https://www.youtube.com/watch?v=Je18wF6xfWo',
 			'icon' => '<svg with="16" height="16" viewBox="0 0 16 16"><path d="M15 .9H1L0 5.1v2.1h1.1V15h13.8V7.1H16v-2L15 .9zM8.7 2.3h1.9l.4 2.9v.7H8.7V2.3zM5.1 5.1l.4-2.9h1.9v3.5H5.1v-.6zm9.6.7h-2.4V5l-.4-2.7H14l.7 2.9v.6z"/></svg>',

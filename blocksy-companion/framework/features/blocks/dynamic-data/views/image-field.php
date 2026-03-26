@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $view_type = blocksy_akg('viewType', $attributes, 'default');
 
 if ($view_type === 'cover') {

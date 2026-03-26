@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $current_screen = get_current_screen();
 
 if ($current_screen && $current_screen->id === 'update-core') {
@@ -25,7 +29,7 @@ if ($is_theme_version_ok && ! $is_companion_version_ok) {
 
 	$slug = plugin_basename(BLOCKSY__FILE__);
 
-	if (blc_can_use_premium_code()) {
+	if (blocksy_companion_can_use_premium_code()) {
 		$product_name = 'Blocksy Companion Pro plugin';
 	}
 }

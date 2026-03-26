@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 require_once dirname(__FILE__) . '/helpers.php';
 
 class BlocksyExtensionTrending {
@@ -33,7 +37,7 @@ class BlocksyExtensionTrending {
 					BLOCKSY_URL . 'framework/extensions/trending/static/bundle/main.js'
 				),
 				'trigger' => 'click',
-				'version' => blc_get_version()
+				'version' => blocksy_companion_get_version()
 			];
 
 			return $chunks;
@@ -55,20 +59,20 @@ class BlocksyExtensionTrending {
 		add_action('wp', function () {
 			$location = 'blocksy:template:after';
 
-			if (blc_site_has_feature()) {
-				$location = blc_theme_functions()->blocksy_get_theme_mod(
+			if (blocksy_companion_site_has_feature()) {
+				$location = blocksy_companion_theme_functions()->blocksy_get_theme_mod(
 					'trending_block_location',
 					'blocksy:content:bottom'
 				);
 			}
 
-			$this->result = blc_get_trending_posts_value();
+			$this->result = blocksy_companion_get_trending_posts_value();
 
 			add_action(
 				$location,
 				function () {
-					if (blc_site_has_feature()) {
-						$conditions = blc_theme_functions()->blocksy_get_theme_mod(
+					if (blocksy_companion_site_has_feature()) {
+						$conditions = blocksy_companion_theme_functions()->blocksy_get_theme_mod(
 							'trending_block_conditions',
 							[
 								[
@@ -86,7 +90,7 @@ class BlocksyExtensionTrending {
 					}
 
 					// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					echo blc_get_trending_block($this->result);
+					echo blocksy_companion_get_trending_block($this->result);
 				},
 				50
 			);

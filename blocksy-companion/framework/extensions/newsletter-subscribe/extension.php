@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 require_once dirname(__FILE__) . '/helpers.php';
 
 class BlocksyExtensionNewsletterSubscribe {
@@ -97,7 +101,7 @@ class BlocksyExtensionNewsletterSubscribe {
 				);
 
 				if (
-					blc_theme_functions()->blocksy_get_theme_mod(
+					blocksy_companion_theme_functions()->blocksy_get_theme_mod(
 						'newsletter_subscribe_single_post_enabled',
 						'yes'
 					) === 'yes'
@@ -121,7 +125,7 @@ class BlocksyExtensionNewsletterSubscribe {
 						'framework/extensions/newsletter-subscribe/static/bundle/main.js'
 				),
 				'trigger' => 'submit',
-				'version' => blc_get_version()
+				'version' => blocksy_companion_get_version()
 			];
 
 			return $chunks;
@@ -217,7 +221,7 @@ class BlocksyExtensionNewsletterSubscribe {
 				$args['class']
 			]);
 
-			return blc_ext_newsletter_subscribe_output_form($args);
+			return blocksy_companion_ext_newsletter_subscribe_output_form($args);
 		});
 
 		add_action(
@@ -239,7 +243,7 @@ class BlocksyExtensionNewsletterSubscribe {
 
 				$options = blocksy_akg(
 					'options',
-					blc_theme_functions()->blocksy_get_variables_from_file(
+					blocksy_companion_theme_functions()->blocksy_get_variables_from_file(
 						$options_file,
 						['options' => []]
 					)
@@ -368,6 +372,7 @@ class BlocksyExtensionNewsletterSubscribe {
 
 		$double_optin = false;
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		if (isset($_POST['DOUBLE_OPTIN'])) {
 			// phpcs:ignore WordPress.Security.NonceVerification.Missing
 			$double_optin = sanitize_text_field(wp_unslash($_POST['DOUBLE_OPTIN'])) === '1';

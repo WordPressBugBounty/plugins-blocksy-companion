@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 require_once dirname(__FILE__) . '/helpers.php';
 
 class BlocksyExtensionCookiesConsent {
@@ -121,16 +125,16 @@ class BlocksyExtensionCookiesConsent {
 
 		add_action('wp_ajax_blc_load_cookies_consent_data', [
 			$this,
-			'blc_load_cookies_consent_data',
+			'load_cookies_consent_data',
 		]);
 
 		add_action(
 			'wp_ajax_nopriv_blc_load_cookies_consent_data',
-			[$this, 'blc_load_cookies_consent_data']
+			[$this, 'load_cookies_consent_data']
 		);
 	}
 
-	public function blc_load_cookies_consent_data() {
+	public function load_cookies_consent_data() {
 		$scripts = apply_filters('blocksy:cookies-consent:scripts-to-load', [], PHP_INT_MAX);
 
 		wp_send_json_success([

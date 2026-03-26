@@ -9013,7 +9013,7 @@ msgstr "Italic"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/RegularTab.js:30
 msgid "Upload only the %s.woff2%s or %s.ttf%s font file formats (see browser coverage %shere%s). Use %sthis converter tool%s if you don't have these font formats."
-msgstr "Prześlij tylko pliki czcionek w formacie %s.woff2%s lub %s.ttf%s (zobacz zasięg przeglądarki %shere%s). U��yj %sthis converter tool%s, jeśli nie masz tych formatów czcionek."
+msgstr "Prześlij tylko pliki czcionek w formacie %s.woff2%s lub %s.ttf%s (zobacz zasięg przeglądarki %shere%s). Użyj %sthis converter tool%s, jeśli nie masz tych formatów czcionek."
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:91
 msgid "Font Name"

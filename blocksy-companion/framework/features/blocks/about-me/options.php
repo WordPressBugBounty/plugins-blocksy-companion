@@ -1,4 +1,9 @@
 <?php
+
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 /**
  * About me widget
  *
@@ -9,8 +14,8 @@
 
 $default_wp_user = '';
 
-if (blc_theme_functions()->blocksy_manager() !== \Blocksy\ThemeFunctions::$NON_EXISTING_FUNCTION) {
-	$default_wp_user = blc_theme_functions()->blocksy_manager()
+if (blocksy_companion_theme_functions()->blocksy_manager() !== \Blocksy\ThemeFunctions::$NON_EXISTING_FUNCTION) {
+	$default_wp_user = blocksy_companion_theme_functions()->blocksy_manager()
 		->entity_id_picker
 		->get_default_value([
 			'entity' => 'users'

@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $field = blocksy_akg('field', $attributes, 'wp:title');
 
 if (strpos($field, 'woo:') === 0) {
@@ -85,14 +89,14 @@ if (strpos($field, 'wp:') === 0) {
 	return;
 }
 
-if (! function_exists('blc_get_ext')) {
+if (! function_exists('blocksy_companion_get_ext')) {
 	return;
 }
 
 if (
-	! blc_get_ext('post-types-extra')
+	! blocksy_companion_get_ext('post-types-extra')
 	||
-	! blc_get_ext('post-types-extra')->dynamic_data
+	! blocksy_companion_get_ext('post-types-extra')->dynamic_data
 ) {
 	return;
 }
@@ -103,7 +107,7 @@ if (count($field_descriptor) < 2) {
 	return;
 }
 
-$field_render = blc_get_ext('post-types-extra')
+$field_render = blocksy_companion_get_ext('post-types-extra')
 	->dynamic_data
 	->custom_fields_manager
 	->render_field(

@@ -1,11 +1,15 @@
 <?php
 
-function blc_exts_get_preliminary_config($ext = null, $args = []) {
+if (! defined('ABSPATH')) {
+	exit;
+}
+
+function blocksy_companion_exts_get_preliminary_config($ext = null, $args = []) {
 	$args = wp_parse_args($args, [
 		'only_billing_data' => false
 	]);
 
-	$data = blc_get_variables_from_file(
+	$data = blocksy_companion_get_variables_from_file(
 		dirname(__FILE__) . '/exts-configs.php',
 		[
 			'data' => []
@@ -24,7 +28,7 @@ function blc_exts_get_preliminary_config($ext = null, $args = []) {
 	return $data[$ext];
 }
 
-function blc_get_ext($id, $args = []) {
+function blocksy_companion_get_ext($id, $args = []) {
 	if (! \Blocksy\Plugin::instance()->extensions) {
 		return null;
 	}

@@ -2,6 +2,10 @@
 
 namespace Blocksy\Editor\Blocks;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class Query {
 	private $current_wp_query = null;
 
@@ -29,8 +33,8 @@ class Query {
 
 			$post_types = [];
 
-			if (blc_theme_functions()->blocksy_manager()) {
-				$post_types = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
+			if (blocksy_companion_theme_functions()->blocksy_manager()) {
+				$post_types = blocksy_companion_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
 			}
 
 			foreach ($post_types as $single_post_type) {
@@ -569,7 +573,7 @@ class Query {
 				];
 
 				foreach ($posts_block_patterns as $posts_block_pattern) {
-					$pattern_data = blc_theme_functions()->blocksy_get_variables_from_file(
+					$pattern_data = blocksy_companion_theme_functions()->blocksy_get_variables_from_file(
 						__DIR__ . '/block-patterns/' . $posts_block_pattern . '.php',
 						['pattern' => []]
 					);
@@ -754,10 +758,10 @@ class Query {
 		$mobile_css = new \Blocksy_Css_Injector();
 
 		if ($attributes['has_slideshow'] === 'yes') {
-			$structure = blc_theme_functions()->blocksy_get_theme_mod($prefix . '_structure', 'grid');
+			$structure = blocksy_companion_theme_functions()->blocksy_get_theme_mod($prefix . '_structure', 'grid');
 
 			$grid_columns = blocksy_expand_responsive_value(
-				blc_theme_functions()->blocksy_get_theme_mod(
+				blocksy_companion_theme_functions()->blocksy_get_theme_mod(
 					$prefix . '_columns',
 					[
 						'desktop' => 3,
@@ -1099,8 +1103,8 @@ class Query {
 
 		$custom_post_types = [];
 
-		if (blc_theme_functions()->blocksy_manager()) {
-			$custom_post_types = blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
+		if (blocksy_companion_theme_functions()->blocksy_manager()) {
+			$custom_post_types = blocksy_companion_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
 		}
 
 		$preferred_post_type = explode(',', $attributes['post_type'])[0];

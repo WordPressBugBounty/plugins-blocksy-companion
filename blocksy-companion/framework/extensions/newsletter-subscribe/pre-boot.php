@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class BlocksyExtensionNewsletterSubscribePreBoot {
 	public function __construct() {
 		add_filter('blocksy-dashboard-scripts-dependencies', function ($s) {

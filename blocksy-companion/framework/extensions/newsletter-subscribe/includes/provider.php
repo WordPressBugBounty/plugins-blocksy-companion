@@ -82,7 +82,7 @@ class Provider {
 			&&
 			! in_array($option['provider'], $free_providers)
 			&&
-			blc_get_capabilities()->get_plan() === 'free'
+			blocksy_companion_get_capabilities()->get_plan() === 'free'
 		) {
 			$option['provider'] = $free_providers[0];
 		}
@@ -105,7 +105,7 @@ class Provider {
 	public function can($capability = 'manage_options') {
 		if (is_multisite()) {
 			// Only network admin can change files that affects the entire network.
-			$can = current_user_can_for_blog( get_current_blog_id(), $capability );
+			$can = current_user_can_for_site( get_current_blog_id(), $capability );
 		} else {
 			$can = current_user_can( $capability );
 		}

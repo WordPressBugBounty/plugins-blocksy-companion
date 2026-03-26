@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 blocksy_output_responsive([
 	'css' => $css,
 	'tablet_css' => $tablet_css,
@@ -8,7 +12,7 @@ blocksy_output_responsive([
 	'variableName' => 'trending-block-image-width',
 	'responsive' => true,
 	'unit' => 'px',
-	'value' => blc_theme_functions()->blocksy_get_theme_mod('trending_block_thumbnails_width', '60')
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod('trending_block_thumbnails_width', '60')
 ]);
 
 blocksy_output_responsive([
@@ -17,12 +21,12 @@ blocksy_output_responsive([
 	'mobile_css' => $mobile_css,
 	'selector' => '.ct-trending-block-item',
 	'variableName' => 'vertical-alignment',
-	'value' => blc_theme_functions()->blocksy_get_theme_mod( 'trendingItemsVerticalAlignment', 'center' ),
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod( 'trendingItemsVerticalAlignment', 'center' ),
 	'unit' => '',
 ]);
 
 blocksy_output_font_css([
-	'font_value' => blc_theme_functions()->blocksy_get_theme_mod( 'trendingBlockHeadingFont',
+	'font_value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod( 'trendingBlockHeadingFont',
 		blocksy_typography_default_values([
 			'size' => '15px',
 		])
@@ -34,7 +38,7 @@ blocksy_output_font_css([
 ]);
 
 blocksy_output_colors([
-	'value' => blc_theme_functions()->blocksy_get_theme_mod('trendingBlockHeadingFontColor'),
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod('trendingBlockHeadingFontColor'),
 	'default' => [
 		'default' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
 	],
@@ -52,7 +56,7 @@ blocksy_output_colors([
 
 
 blocksy_output_font_css([
-	'font_value' => blc_theme_functions()->blocksy_get_theme_mod( 'trendingBlockPostsFont',
+	'font_value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod( 'trendingBlockPostsFont',
 		blocksy_typography_default_values([
 			'size' => '15px',
 			'variation' => 'n5',
@@ -65,7 +69,7 @@ blocksy_output_font_css([
 ]);
 
 blocksy_output_colors([
-	'value' => blc_theme_functions()->blocksy_get_theme_mod('trendingBlockFontColor'),
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod('trendingBlockFontColor'),
 	'default' => [
 		'default' => [ 'color' => 'var(--theme-text-color)' ],
 		'hover' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
@@ -89,7 +93,7 @@ blocksy_output_colors([
 
 
 blocksy_output_font_css([
-	'font_value' => blc_theme_functions()->blocksy_get_theme_mod( 'trendingBlockTaxonomyFont',
+	'font_value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod( 'trendingBlockTaxonomyFont',
 		blocksy_typography_default_values([
 			'size' => '13px',
 			'variation' => 'n5',
@@ -102,7 +106,7 @@ blocksy_output_font_css([
 ]);
 
 blocksy_output_colors([
-	'value' => blc_theme_functions()->blocksy_get_theme_mod('trendingBlockTaxonomyFontColor'),
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod('trendingBlockTaxonomyFontColor'),
 	'default' => [
 		'default' => [ 'color' => 'var(--theme-text-color)' ],
 		'hover' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
@@ -127,7 +131,7 @@ blocksy_output_colors([
 
 
 blocksy_output_colors([
-	'value' => blc_theme_functions()->blocksy_get_theme_mod('trending_categories_font_colors'),
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod('trending_categories_font_colors'),
 	'default' => [
 		'default' => [ 'color' => 'var(--theme-text-color)' ],
 		'hover' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
@@ -150,7 +154,7 @@ blocksy_output_colors([
 ]);
 
 blocksy_output_colors([
-	'value' => blc_theme_functions()->blocksy_get_theme_mod('trending_categories_button_type_font_colors'),
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod('trending_categories_button_type_font_colors'),
 	'default' => [
 		'default' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
 		'hover' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
@@ -173,7 +177,7 @@ blocksy_output_colors([
 ]);
 
 blocksy_output_colors([
-	'value' => blc_theme_functions()->blocksy_get_theme_mod('trending_categories_button_type_background_colors'),
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod('trending_categories_button_type_background_colors'),
 	'default' => [
 		'default' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
 		'hover' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
@@ -197,7 +201,7 @@ blocksy_output_colors([
 
 
 blocksy_output_font_css([
-	'font_value' => blc_theme_functions()->blocksy_get_theme_mod( 'trendingBlockPriceFont',
+	'font_value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod( 'trendingBlockPriceFont',
 		blocksy_typography_default_values([
 			'size' => '13px',
 			// 'variation' => 'n5',a
@@ -210,7 +214,7 @@ blocksy_output_font_css([
 ]);
 
 blocksy_output_colors([
-	'value' => blc_theme_functions()->blocksy_get_theme_mod('trendingBlockPriceFontColor'),
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod('trendingBlockPriceFontColor'),
 	'default' => [
 		'default' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
 	],
@@ -233,14 +237,14 @@ blocksy_output_spacing([
 	'mobile_css' => $mobile_css,
 	'selector' => '.ct-trending-block-item',
 	'property' => 'trending-block-image-radius',
-	'value' => blc_theme_functions()->blocksy_get_theme_mod(
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod(
 		'trendingBlockImageRadius',
 		blocksy_spacing_value()
 	)
 ]);
 
 blocksy_output_colors([
-	'value' => blc_theme_functions()->blocksy_get_theme_mod('trendingBlockArrowsColor'),
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod('trendingBlockArrowsColor'),
 	'default' => [
 		'default' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
 		'hover' => [ 'color' => Blocksy_Css_Injector::get_skip_rule_keyword('DEFAULT') ],
@@ -267,7 +271,7 @@ blocksy_output_background_css([
 	'css' => $css,
 	'tablet_css' => $tablet_css,
 	'mobile_css' => $mobile_css,
-	'value' => blc_theme_functions()->blocksy_get_theme_mod(
+	'value' => blocksy_companion_theme_functions()->blocksy_get_theme_mod(
 		'trending_block_background',
 		blocksy_background_default_value([
 			'backgroundColor' => [
@@ -280,7 +284,7 @@ blocksy_output_background_css([
 	'responsive' => true,
 ]);
 
-$container_inner_spacing = blc_theme_functions()->blocksy_get_theme_mod( 'trendingBlockContainerSpacing', '30px' );
+$container_inner_spacing = blocksy_companion_theme_functions()->blocksy_get_theme_mod( 'trendingBlockContainerSpacing', '30px' );
 
 if ($container_inner_spacing !== '30px') {
 	blocksy_output_responsive([

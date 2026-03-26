@@ -2,6 +2,10 @@
 
 namespace Blocksy\Editor;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class GutenbergBlock {
 	protected $name;
 
@@ -102,7 +106,7 @@ class GutenbergBlock {
 			function ($data) use ($options_file) {
 				$options = blocksy_akg(
 					'options',
-					blc_theme_functions()->blocksy_get_variables_from_file(
+					blocksy_companion_theme_functions()->blocksy_get_variables_from_file(
 						$options_file,
 						['options' => []]
 					)

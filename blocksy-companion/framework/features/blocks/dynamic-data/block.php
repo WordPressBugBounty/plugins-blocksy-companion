@@ -2,6 +2,10 @@
 
 namespace Blocksy\Editor\Blocks;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class DynamicData {
 	public function __construct() {
 		new DynamicDataAPI();
@@ -16,7 +20,7 @@ class DynamicData {
 		add_filter('blocksy:block-editor:localized_data', function ($data) {
 			$options = blocksy_akg(
 				'options',
-				blc_theme_functions()->blocksy_get_variables_from_file(
+				blocksy_companion_theme_functions()->blocksy_get_variables_from_file(
 					dirname(__FILE__) . '/options.php',
 					['options' => []]
 				)
@@ -96,7 +100,7 @@ class DynamicData {
 
 					// Process primary element type styles.
 					if ($element_style_object) {
-						blc_call_gutenberg_function(
+						blocksy_companion_call_gutenberg_function(
 							'wp_style_engine_get_styles',
 							[
 								$element_style_object,
@@ -108,7 +112,7 @@ class DynamicData {
 						);
 
 						if (isset($element_config['additional_styles'])) {
-							blc_get_gutenberg_class('\WP_Style_Engine')::store_css_rule(
+							blocksy_companion_get_gutenberg_class('\WP_Style_Engine')::store_css_rule(
 								'block-supports',
 								$element_config['selector'],
 								$element_config['additional_styles']
@@ -116,7 +120,7 @@ class DynamicData {
 						}
 
 						if (isset($element_style_object[':hover'])) {
-							blc_call_gutenberg_function(
+							blocksy_companion_call_gutenberg_function(
 								'wp_style_engine_get_styles',[
 									$element_style_object[':hover'],
 									[
@@ -196,11 +200,11 @@ class DynamicData {
 
 	public function get_dynamic_styles_for() {
 		if (
-			! function_exists('blc_get_ext')
+			! function_exists('blocksy_companion_get_ext')
 			||
-			! blc_get_ext('post-types-extra')
+			! blocksy_companion_get_ext('post-types-extra')
 			||
-			! blc_get_ext('post-types-extra')->taxonomies_customization
+			! blocksy_companion_get_ext('post-types-extra')->taxonomies_customization
 		) {
 			return '';
 		}
@@ -215,7 +219,7 @@ class DynamicData {
 		$tablet_css = new \Blocksy_Css_Injector();
 		$mobile_css = new \Blocksy_Css_Injector();
 
-		blc_get_ext('post-types-extra')
+		blocksy_companion_get_ext('post-types-extra')
 			->taxonomies_customization
 			->get_terms_dynamic_styles([
 				'css' => $css,

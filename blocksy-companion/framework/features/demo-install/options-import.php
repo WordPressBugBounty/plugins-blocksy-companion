@@ -153,7 +153,7 @@ class DemoInstallOptionsInstaller {
 		$all['sidebar-1'] = [];
 		update_option('sidebars_widgets', $all);
 
-		$all = blc_theme_functions()->blocksy_get_theme_mod('sidebars_widgets');
+		$all = blocksy_companion_theme_functions()->blocksy_get_theme_mod('sidebars_widgets');
 
 		if ($all) {
 			$all['data']['sidebar-1'] = [];

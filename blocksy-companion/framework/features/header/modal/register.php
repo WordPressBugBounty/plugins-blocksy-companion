@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $has_username = true;
 $has_password = false;
 
@@ -87,7 +91,7 @@ if (
 	<?php } ?>
 
 	<?php
-	if (blc_site_has_feature()) {
+	if (blocksy_companion_site_has_feature()) {
 		if (
 			class_exists('NextendSocialLogin')
 			&&

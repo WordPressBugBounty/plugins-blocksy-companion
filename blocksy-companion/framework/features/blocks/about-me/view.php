@@ -1,4 +1,9 @@
 <?php
+
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 /**
  * About me widget
  *
@@ -49,8 +54,8 @@ $about_text = do_shortcode(
 
 if ($about_source === 'from_wp') {
 	if (! $user_id) {
-		if (blc_theme_functions()->blocksy_manager() !== \Blocksy\ThemeFunctions::$NON_EXISTING_FUNCTION) {
-			$user_id = blc_theme_functions()->blocksy_manager()
+		if (blocksy_companion_theme_functions()->blocksy_manager() !== \Blocksy\ThemeFunctions::$NON_EXISTING_FUNCTION) {
+			$user_id = blocksy_companion_theme_functions()->blocksy_manager()
 				->entity_id_picker
 				->get_default_value([
 					'entity' => 'users'

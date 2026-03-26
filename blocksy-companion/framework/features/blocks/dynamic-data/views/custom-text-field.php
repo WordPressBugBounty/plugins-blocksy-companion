@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $value_fallback = blocksy_akg('fallback', $attributes, '');
 
 if (! $value) {
@@ -41,7 +45,7 @@ if (
 	$link_field_descriptor = explode(':', $link_source);
 	
 	if (count($link_field_descriptor) === 2) {
-		$final_link = blc_get_ext('post-types-extra')
+		$final_link = blocksy_companion_get_ext('post-types-extra')
 			->dynamic_data
 			->custom_fields_manager
 			->render_field(

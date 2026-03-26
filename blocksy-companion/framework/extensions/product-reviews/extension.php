@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 require_once dirname(__FILE__) . '/helpers.php';
 
 class BlocksyExtensionProductReviews {
@@ -636,7 +640,7 @@ class BlocksyExtensionProductReviews {
 	public function setup_meta_box() {
 		add_meta_box(
 			'blocksy_settings_meta_box',
-			blc_safe_sprintf(
+			blocksy_companion_safe_sprintf(
 				// Translators: %s is the theme name.
 				__( '%s Settings', 'blocksy-companion' ),
 				__( 'Blocksy', 'blocksy-companion' )

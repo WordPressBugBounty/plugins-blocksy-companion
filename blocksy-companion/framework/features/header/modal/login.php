@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 // wp_login_form([]);
 
 $forgot_password_inline = apply_filters(
@@ -73,7 +77,7 @@ if (function_exists('is_account_page') && is_account_page()) {
 	</p>
 
 	<?php
-		if (blc_site_has_feature()) {
+		if (blocksy_companion_site_has_feature()) {
 			if (
 				class_exists('NextendSocialLogin', false)
 				&&

@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class ExtensionsManager {
 	/**
 	 * Collection of all the activated extensions.
@@ -162,7 +166,7 @@ class ExtensionsManager {
 
 		if (is_multisite()) {
 			// Only network admin can change files that affects the entire network.
-			$can = current_user_can_for_blog(
+			$can = current_user_can_for_site(
 				get_current_blog_id(),
 				$capability
 			);
@@ -260,9 +264,9 @@ class ExtensionsManager {
 
 	private function register_fake_extensions() {
 		if (
-			blc_can_use_premium_code()
+			blocksy_companion_can_use_premium_code()
 			&&
-			blc_get_capabilities()->get_plan() !== 'free'
+			blocksy_companion_get_capabilities()->get_plan() !== 'free'
 		) {
 			return;
 		}
@@ -285,7 +289,7 @@ class ExtensionsManager {
 	}
 
 	public function get_preliminary_exts_info() {
-		return blc_exts_get_preliminary_config();
+		return blocksy_companion_exts_get_preliminary_config();
 	}
 
 	private function register_extension_for($path) {
@@ -313,7 +317,7 @@ class ExtensionsManager {
 
 		$maybe_config = null;
 
-		$preliminary_config = blc_exts_get_preliminary_config(
+		$preliminary_config = blocksy_companion_exts_get_preliminary_config(
 			null,
 			['only_billing_data' => true]
 		);
@@ -329,13 +333,13 @@ class ExtensionsManager {
 			&&
 			$maybe_config['pro']
 		) {
-			if (blc_get_capabilities()->get_plan() === 'free') {
+			if (blocksy_companion_get_capabilities()->get_plan() === 'free') {
 				return;
 			}
 
 			if (isset($maybe_config['plans'])) {
 				if (! in_array(
-					blc_get_capabilities()->get_plan(),
+					blocksy_companion_get_capabilities()->get_plan(),
 					$maybe_config['plans']
 				)) {
 					return;
@@ -379,7 +383,7 @@ class ExtensionsManager {
 
 		$maybe_config = null;
 
-		$preliminary_config = blc_exts_get_preliminary_config(
+		$preliminary_config = blocksy_companion_exts_get_preliminary_config(
 			null,
 			['only_billing_data' => true]
 		);
@@ -395,13 +399,13 @@ class ExtensionsManager {
 			&&
 			$maybe_config['pro']
 		) {
-			if (blc_get_capabilities()->get_plan() === 'free') {
+			if (blocksy_companion_get_capabilities()->get_plan() === 'free') {
 				return;
 			}
 
 			if (isset($maybe_config['plans'])) {
 				if (! in_array(
-					blc_get_capabilities()->get_plan(),
+					blocksy_companion_get_capabilities()->get_plan(),
 					$maybe_config['plans']
 				)) {
 					return;

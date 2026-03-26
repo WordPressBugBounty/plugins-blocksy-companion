@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $user_roles = [];
 
 foreach (get_editable_roles() as $role_id => $role_info) {

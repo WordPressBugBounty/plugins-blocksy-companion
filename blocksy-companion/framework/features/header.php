@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class HeaderAdditions {
 	private $has_transparent_header = '__DEFAULT__';
 	private $has_sticky_header = '__DEFAULT__';
@@ -64,11 +68,11 @@ class HeaderAdditions {
 		});
 
 		add_filter('blocksy:header:row-wrapper-attr', function ($attr, $row, $device) {
-			if (! blc_theme_functions()->blocksy_manager()) {
+			if (! blocksy_companion_theme_functions()->blocksy_manager()) {
 				return $attr;
 			}
 
-			$current_section = blc_theme_functions()->blocksy_manager()->header_builder->get_current_section();
+			$current_section = blocksy_companion_theme_functions()->blocksy_manager()->header_builder->get_current_section();
 
 			if (!isset($current_section['settings'])) {
 				$current_section['settings'] = [];
@@ -259,7 +263,7 @@ class HeaderAdditions {
 	}
 
 	public function current_screen_has_transparent($check_conditions = true, $current_section_id = null) {
-		if (! blc_theme_functions()->blocksy_manager()) {
+		if (! blocksy_companion_theme_functions()->blocksy_manager()) {
 			return false;
 		}
 
@@ -270,7 +274,7 @@ class HeaderAdditions {
 			||
 			! $check_conditions
 		) {
-			$current_section = blc_theme_functions()->blocksy_manager()->header_builder->get_current_section(
+			$current_section = blocksy_companion_theme_functions()->blocksy_manager()->header_builder->get_current_section(
 				$current_section_id
 			);
 
@@ -372,11 +376,11 @@ class HeaderAdditions {
 			return $this->has_sticky_header;
 		}
 
-		if (! blc_theme_functions()->blocksy_manager()) {
+		if (! blocksy_companion_theme_functions()->blocksy_manager()) {
 			return false;
 		}
 
-		$current_section = blc_theme_functions()->blocksy_manager()->header_builder->get_current_section(
+		$current_section = blocksy_companion_theme_functions()->blocksy_manager()->header_builder->get_current_section(
 			$section_id
 		);
 
@@ -477,7 +481,7 @@ class HeaderAdditions {
 	}
 
 	public function get_conditions() {
-		$option = blc_theme_functions()->blocksy_get_theme_mod('blocksy_premium_header_conditions', []);
+		$option = blocksy_companion_theme_functions()->blocksy_get_theme_mod('blocksy_premium_header_conditions', []);
 
 		if (empty($option)) {
 			return [];

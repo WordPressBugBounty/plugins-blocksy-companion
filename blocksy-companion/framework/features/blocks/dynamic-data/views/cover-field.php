@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $POSITION_CLASSNAMES = [
 	'top left' => 'is-position-top-left',
 	'top center' => 'is-position-top-center',

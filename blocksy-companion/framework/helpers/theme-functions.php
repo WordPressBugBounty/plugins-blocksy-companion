@@ -34,7 +34,7 @@ class ThemeFunctions {
 		debug_print_backtrace();
 		$backtrace = ob_get_clean();
 
-		blc_debug_log('ThemeFunctions->__call : missing function', [
+		blocksy_companion_debug_log('ThemeFunctions->__call : missing function', [
 			'function_name' => $name,
 			'is_cli' => defined('WP_CLI') && WP_CLI ? 'yes' : 'no',
 

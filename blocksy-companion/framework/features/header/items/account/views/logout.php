@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $login_label = do_shortcode(
 	blocksy_translate_dynamic(
 		blocksy_default_akg(
@@ -80,11 +84,11 @@ if (! empty($login_label)) {
 if (blocksy_akg('logged_out_style', $atts, 'icon') === 'icon') {
 	$media_html = $icon[blocksy_default_akg('accountHeaderIcon', $atts, 'type-1')];
 
-	if (function_exists('blc_get_icon')) {
+	if (function_exists('blocksy_companion_get_icon')) {
 		$icon_source = blocksy_default_akg('logged_out_icon_source', $atts, 'default');
 
 		if ( $icon_source === 'custom' ) {
-			$media_html = blc_get_icon([
+			$media_html = blocksy_companion_get_icon([
 				'icon_descriptor' => blocksy_akg(
 					'logged_out_custom_icon',
 					$atts,

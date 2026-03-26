@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class DemoInstallExport {
 	public function request() {
 		if (! current_user_can('edit_theme_options')) {

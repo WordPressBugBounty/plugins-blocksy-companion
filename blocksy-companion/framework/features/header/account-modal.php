@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $form_views = [
 	'login' => '',
 	'register' => '',

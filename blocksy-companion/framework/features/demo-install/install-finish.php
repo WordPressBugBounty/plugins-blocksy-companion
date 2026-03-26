@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class DemoInstallFinalActions {
 	protected $is_ajax_request = true;
 
@@ -319,12 +323,12 @@ class DemoInstallFinalActions {
 	}
 
 	public function update_counts_for_all_terms() {
-		if (! blc_theme_functions()->blocksy_manager()) {
+		if (! blocksy_companion_theme_functions()->blocksy_manager()) {
 			return;
 		}
 
 		$taxonomies = array_reduce(
-			blc_theme_functions()->blocksy_manager()->post_types->get_supported_post_types(),
+			blocksy_companion_theme_functions()->blocksy_manager()->post_types->get_supported_post_types(),
 			function ($result, $item) {
 				return array_unique(array_merge(
 					$result,
@@ -668,7 +672,7 @@ class DemoInstallFinalActions {
 	public function cleanup_duplicate_menu_items() {
 		global $wpdb;
 
-		// Find all original_post_ids that have duplicates
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$duplicates = $wpdb->get_results("
 			SELECT meta_value as original_id, GROUP_CONCAT(post_id ORDER BY post_id) as post_ids
 			FROM {$wpdb->postmeta}

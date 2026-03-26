@@ -92,7 +92,9 @@ const getStartPositionFor = (stickyContainer) => {
 
 	const headerRect = stickyContainer.closest('header').getBoundingClientRect()
 
-	let stickyOffset = headerRect.top + scrollY
+	// Round to avoid floating point dust (e.g. -0.00006) at fractional DPRs
+	// like 1.25 where headerRect.top + scrollY doesn't cancel out to exactly 0.
+	let stickyOffset = Math.round(headerRect.top + scrollY)
 
 	if (stickyOffset > 0) {
 		let element = document.elementFromPoint(0, 3)

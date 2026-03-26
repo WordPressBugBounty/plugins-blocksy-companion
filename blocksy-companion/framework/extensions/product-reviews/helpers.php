@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 function blocksy_get_product_review_overall_score($post_id = null) {
 	if (! $post_id) {
 		global $post;

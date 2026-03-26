@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $options = [];
 
 $posts_options = [];
@@ -36,7 +40,7 @@ if ($filter === 'all' || $filter === 'archive') {
 
 		$posts_options[] = [
 			'id' => 'post_type_post_taxonomy_' . $single_taxonomy,
-			'title' => blc_safe_sprintf(
+			'title' => blocksy_companion_safe_sprintf(
 				// translators: %1$s is the label of the taxonomy.
 				__('Post %1$s', 'blocksy-companion'),
 				$taxonomy->label

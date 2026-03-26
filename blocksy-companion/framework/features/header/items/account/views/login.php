@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 if (! isset($device)) {
 	$device = 'desktop';
 }
@@ -93,7 +97,7 @@ if ($loggedin_media === 'avatar') {
 if ($loggedin_media === 'icon') {
 	$media_html = $icon[blocksy_akg('account_loggedin_icon', $atts, 'type-1')];
 
-	if (function_exists('blc_get_icon')) {
+	if (function_exists('blocksy_companion_get_icon')) {
 		$icon_source = blocksy_default_akg(
 			'loggedin_icon_source',
 			$atts,
@@ -101,7 +105,7 @@ if ($loggedin_media === 'icon') {
 		);
 
 		if ($icon_source === 'custom') {
-			$media_html = blc_get_icon([
+			$media_html = blocksy_companion_get_icon([
 				'icon_descriptor' => blocksy_akg(
 					'loggedin_custom_icon',
 					$atts,
@@ -524,12 +528,12 @@ if ($loggedin_interaction_type === 'dropdown') {
 				get_permalink(get_option('woocommerce_myaccount_page_id'))
 			);
 
-			$maybe_page_id = blc_theme_functions()->blocksy_get_theme_mod('woocommerce_wish_list_page');
+			$maybe_page_id = blocksy_companion_theme_functions()->blocksy_get_theme_mod('woocommerce_wish_list_page');
 
 			if (
 				! empty($maybe_page_id)
 				&&
-				blc_theme_functions()->blocksy_get_theme_mod('product_wishlist_display_for', 'logged_users') === 'all_users'
+				blocksy_companion_theme_functions()->blocksy_get_theme_mod('product_wishlist_display_for', 'logged_users') === 'all_users'
 			) {
 				$maybe_permalink = get_permalink($maybe_page_id);
 
@@ -798,7 +802,7 @@ if ($loggedin_interaction_type === 'dropdown') {
 						wp_parse_url($item_descriptor['link'])
 					);
 
-					if (rtrim(blc_stringify_url($parsed_url), '/') === rtrim(blocksy_current_url(), '/')) {
+					if (rtrim(blocksy_companion_stringify_url($parsed_url), '/') === rtrim(blocksy_current_url(), '/')) {
 						if (! isset($item_descriptor['attr']['class'])) {
 							$item_descriptor['attr']['class'] = '';
 						}

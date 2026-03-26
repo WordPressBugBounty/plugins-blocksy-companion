@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $brands = get_the_terms(get_the_ID(), 'product_brand');
 
 if (

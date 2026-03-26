@@ -2,6 +2,10 @@
 
 namespace Blocksy;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 class GoogleAnalytics {
 	public function __construct() {
 		add_filter(
@@ -41,7 +45,7 @@ class GoogleAnalytics {
 	}
 
 	private function get_ga_4_code() {
-		$analytics_v4_id = blc_theme_functions()->blocksy_get_theme_mod('analytics_v4_id', '');
+		$analytics_v4_id = blocksy_companion_theme_functions()->blocksy_get_theme_mod('analytics_v4_id', '');
 
 		if (empty($analytics_v4_id)) {
 			return '';
@@ -82,7 +86,7 @@ class GoogleAnalytics {
 				'type' => 'text',
 				'design' => 'block',
 				'value' => '',
-				'desc' => blc_safe_sprintf(
+				'desc' => blocksy_companion_safe_sprintf(
 					// translators: %1$s and %2$s are HTML tags for a link.
 					__(
 						'Link your Google Analytics 4 tracking ID. More info and instructions can be found %1$shere%2$s.',

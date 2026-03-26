@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 // phpcs:ignoreFile
 
 /**
@@ -84,7 +88,7 @@ class Blocksy_WXR_Parser_SimpleXML {
 		$content = '';
 
 		if (strpos($file, '<?xml') === false) {
-			$content = blc_request_remote_url($file);
+			$content = blocksy_companion_request_remote_url($file);
 		} else {
 			$content = $file;
 		}
@@ -348,7 +352,7 @@ class Blocksy_WXR_Parser_XML {
 		$content = '';
 
 		if (strpos($file, '<?xml') === false) {
-			$content = blc_request_remote_url($file);
+			$content = blocksy_companion_request_remote_url($file);
 		} else {
 			$content = $file;
 		}

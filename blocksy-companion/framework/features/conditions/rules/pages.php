@@ -1,5 +1,9 @@
 <?php
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 $pages_rules = [];
 
 if ($filter === 'all' || $filter === 'singular') {

@@ -2,6 +2,10 @@
 
 namespace Blocksy\Companion;
 
+if (! defined('ABSPATH')) {
+	exit;
+}
+
 trait WordPressActionsManager {
 	public function attach_hooks($args = []) {
 		if (! isset($this->actions) && ! isset($this->filters)) {
