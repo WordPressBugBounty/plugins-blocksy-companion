@@ -6218,7 +6218,7 @@ msgstr ""
 
 #: framework/features/account-auth.php:237
 msgid "Your account was created successfully. Your login details have been sent to your email address. Please visit the %1$slogin page%2$s."
-msgstr "حساب شما با موفقیت ایجاد شد. جزئیات ورود شما به نشانی رایانامه‌ی شما ارسال شد. لطفا %1$sبرگه‌ی ورود%2$s را مشاهده کنید."
+msgstr "حساب شما با موفقیت ایجاد شد. جزئیات ��رود شما به نشانی رایانامه‌ی شما ارسال شد. لطفا %1$sبرگه‌ی ورود%2$s را مشاهده کنید."
 
 #: framework/features/account-auth.php:248
 msgid "Your account was created successfully and a password has been sent to your email address. Please visit the %1$slogin page%2$s."

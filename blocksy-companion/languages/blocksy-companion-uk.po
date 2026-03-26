@@ -98,7 +98,7 @@ msgstr "Прогрес <span>%s%%</span>"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:162
 msgid "Please wait until the WooCommerce product taxonomies lookup table is regenerated."
-msgstr "Зачекайте, поки буде оновлен�� таблицю пошуку таксономій товарів WooCommerce."
+msgstr "Зачекайте, поки буде оновлено таблицю пошуку таксономій товарів WooCommerce."
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:175
 msgid "Why is the table being regenerated?"
@@ -182,7 +182,7 @@ msgstr "Детальну інформацію про те, як згенерув
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:149
 msgid "White Label Extension"
-msgstr "Розширення White Label"
+msgstr "Р��зширення White Label"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:161
 msgid "Please note that disabling this option will hide the white-label extension. To restore it, press the SHIFT key while clicking the dashboard logo."
@@ -206,7 +206,7 @@ msgstr "Вкладка «Журнал змін»"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:41
 msgid "Extension Documentation Link"
-msgstr "Посилання на документацію розширення"
+msgstr "Посилання ��а документацію розширення"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:46
 msgid "Extension Video Link"
@@ -290,7 +290,7 @@ msgstr "База знань"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:85
 msgid "Dive in with our documentation and learn tips and tricks about Blocksy and its components."
-msgstr "Ознакомьтесь с нашей документацией и получите советы и реко��ендации по Blocksy и его компонентах."
+msgstr "Ознакомьтесь с нашей документацией и получите советы и рекомендации по Blocksy и его компонентах."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:93
 msgid "View Documentation"
@@ -344,7 +344,7 @@ msgstr "Це поле є обов'язковим"
 
 #: framework/theme-integration.php:90
 msgid "Please fix this field."
-msgstr "Виправте вміст цього поля."
+msgstr "Виправт�� вміст цього поля."
 
 #: framework/theme-integration.php:91
 msgid "Please enter a valid email address."
@@ -610,7 +610,7 @@ msgstr "Імпорт WordPress"
 #. translators: %s is the new version number.
 #: framework/features/demo-install/wp-importer.php:1468
 msgid "A new version of this importer is available. Please update to version %s to ensure compatibility with newer export files."
-msgstr "Доступна нова версія цього імпортера. Оновіть його до версії %s, щоб забезпечити сумісність з новими файлами експорту."
+msgstr "Доступна нова версія цього імпортера. Оновіть й��го до версії %s, щоб забезпечити сумісність з новими файлами експорту."
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
@@ -1032,7 +1032,7 @@ msgstr "При натисканні кнопки закриття"
 
 #: framework/premium/features/content-blocks/options/popup.php:313
 msgid "On ESC Button Press"
-msgstr "При натисканні кнопки ESC"
+msgstr "При натисканні кн��пки ESC"
 
 #: framework/premium/features/content-blocks/options/popup.php:325
 msgid "On Backdrop Click"
@@ -1113,7 +1113,7 @@ msgstr "Ліміт архіву"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:575
 msgid "Limit the number of swatches shown on archive pages."
-msgstr "Обмеження кількості зразків, що відображаються на сторінках а��хіву."
+msgstr "Обмеження кількості зразків, що відображаються на сторінках архіву."
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:579
 msgid "Product Page Limit"
@@ -1544,7 +1544,7 @@ msgstr "Товар, на який ви чекаєте, знову в наявн�
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr "Гарні новини! Товар, на який ви так довго чекали, знову в наявності!"
+msgstr "Гарні новини! Товар, на який ви так довго чекали, знову �� наявності!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
@@ -1576,7 +1576,7 @@ msgstr "Попереднє замовлення підтверджено"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr "Ви отримаєте ��овідомлення, коли {product_title} знову з'явиться на складі."
+msgstr "Ви отримаєте повідомлення, коли {product_title} знову з'явиться на складі."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:56,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:192
@@ -1743,7 +1743,7 @@ msgstr "Відображення спливаючого вікна динамі�
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
-msgstr "Увімк. т��игер вікна"
+msgstr "Увімк. тригер вікна"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"
@@ -2741,7 +2741,7 @@ msgstr "Посилання на запис"
 #: framework/features/blocks/dynamic-data/options.php:209,
 #: framework/features/blocks/dynamic-data/options.php:213
 msgid "Link to author page"
-msgstr "Посилання на сторінку автора"
+msgstr "Посилання на с��орінку автора"
 
 #: framework/features/blocks/dynamic-data/options.php:228
 msgid "Link to term page"
@@ -2842,7 +2842,7 @@ msgstr "Перекриття"
 #. translators: placeholder here means the actual URL.
 #: framework/premium/features/media-video/options.php:140
 msgid "Choose how the video will fill its container. More info about this can be found %1$shere%2$s."
-msgstr "Як відео буде розміщено в контейнері. Детальну інформацію про це можна знайти %1$sтут%2$s."
+msgstr "Як відео буде розміщено в контейнері. Детальну інформацію про ��е можна знайти %1$sтут%2$s."
 
 #. translators: %s is the author's display name.
 #: framework/features/blocks/dynamic-data/views/avatar-field.php:31
@@ -2859,7 +2859,7 @@ msgstr "Записи - макет 2"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-3.php:4
 msgid "Posts - Layout 3"
-msgstr "��аписи - макет 3"
+msgstr "Записи - макет 3"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-4.php:4
 msgid "Posts - Layout 4"
@@ -2965,7 +2965,7 @@ msgstr "Початковий стан панелі"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:240
 msgid "Closed"
-msgstr "Зачине��о"
+msgstr "Зачинено"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:241
 msgid "Opened"
@@ -3034,7 +3034,7 @@ msgstr "Цільова кількість"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:90
 msgid "Amount of items the client has to buy in order to get free shipping."
-msgstr "Кількість товарів, які клієнт повинен придбати, щоб отримати безкоштовну доставку."
+msgstr "Кількість това��ів, які клієнт повинен придбати, щоб отримати безкоштовну доставку."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:172
 msgid "You can use dynamic code tags such as {items} inside this option."
@@ -3112,7 +3112,7 @@ msgstr "Нестача запасів"
 
 #: framework/helpers/exts-configs.php:370
 msgid "Show the remaining stock of a product to create a sense of urgency and encourage your visitors to make a purchase."
-msgstr "Відображення залишків товару, щоб створити відчуття терміновості та спонукати відвідувачів до покупки."
+msgstr "Відображення залишків товару, щоб створити відчуття терміновості та спону��ати відвідувачів до покупки."
 
 #. translators: %s is the product name (theme or plugin)
 #: framework/views/theme-mismatch.php:36
@@ -3751,7 +3751,7 @@ msgstr "Отримання..."
 
 #: framework/premium/extensions/adobe-typekit/dashboard-static/js/AdobeTypekit.js:164
 msgid "Please enter a valid Project ID to get all fonts."
-msgstr "Вве��іть дійсний ID проекту, щоб отримати всі шрифти."
+msgstr "Введіть дійсний ID проекту, щоб отримати всі шрифти."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:302
 msgid "This provider is used only for testing purposes. It doesnt register any real subscribers."
@@ -8685,7 +8685,7 @@ msgstr "Перезавантаження сторінки"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:103
 msgid "Items Horizontal Spacing"
-msgstr "Горизонтальний інтервал"
+msgstr "Г��ризонтальний інтервал"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:115,
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:55
@@ -11154,7 +11154,7 @@ msgstr "Весь час"
 
 #: framework/extensions/trending/customizer.php:401
 msgid "Last 24 Hours"
-msgstr "Останні 24 години"
+msgstr "Останні 24 г��дини"
 
 #: framework/extensions/trending/customizer.php:402
 msgid "Last 7 Days"
