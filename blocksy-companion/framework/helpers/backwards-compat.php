@@ -17,7 +17,7 @@ function blocksy_compat_call($fn, $args) {
 	}
 }
 
-if (! function_exists('blc_fs')) {
+if (! function_exists('blc_fs') && function_exists('blocksy_companion_fs')) {
 	function blc_fs() {
 		return blocksy_compat_call('blocksy_companion_fs', func_get_args());
 	}

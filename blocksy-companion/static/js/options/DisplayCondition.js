@@ -50,7 +50,7 @@ const DisplayCondition = ({
 	return (
 		<Fragment>
 			<button
-				className="button-primary"
+				className="ct-ui-button ct-ui-button-primary"
 				style={{ width: '100%' }}
 				onClick={(e) => {
 					e.preventDefault()
@@ -89,7 +89,7 @@ const DisplayCondition = ({
 
 						<div className="ct-modal-actions has-divider">
 							<button
-								className="button-primary"
+								className="ct-ui-button ct-ui-button-primary"
 								disabled={!localValue}
 								onClick={() => {
 									onChange(localValue)

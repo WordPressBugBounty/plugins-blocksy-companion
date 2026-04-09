@@ -119,7 +119,7 @@ const CustomizerOptionsManager = () => {
 
 				<section>
 					<button
-						className="button-primary"
+						className="ct-ui-button ct-ui-button-primary"
 						onClick={(e) => {
 							e.preventDefault()
 							setIsExporting(true)
@@ -177,7 +177,7 @@ const CustomizerOptionsManager = () => {
 						/>
 
 						<button
-							className={classnames('button-primary', {
+							className={classnames('ct-ui-button ct-ui-button-primary', {
 								'ct-loading': isImporting,
 							})}
 							disabled={!futureConfig}

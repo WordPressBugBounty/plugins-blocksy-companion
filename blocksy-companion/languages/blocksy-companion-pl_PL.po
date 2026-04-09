@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-03-10 12:36:35+0000\n"
+"PO-Revision-Date: 2026-04-08 14:30:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -462,274 +462,274 @@ msgstr "Gotowe."
 
 #: framework/features/demo-install/wp-importer.php:234
 msgid "Have fun!"
-msgstr ""
+msgstr "Baw się dobrze!"
 
 #: framework/features/demo-install/wp-importer.php:235
 msgid "Remember to update the passwords and roles of imported users."
-msgstr ""
+msgstr "Pamiętaj, aby zaktualizować hasła i uprawnienia zaimportowanych użytkowników."
 
 #. translators: %s is the path to the WXR file.
 #: framework/features/demo-install/wp-importer.php:258
 msgid "The export file could not be found at <code>%s</code>. It is likely that this was caused by a permissions problem."
-msgstr ""
+msgstr "Nie udało się znaleźć pliku eksportu pod adresem <code>%s</code>. Prawdopodobnie wynika to z problemu z uprawnieniami."
 
 #. translators: %s is the WXR version number.
 #: framework/features/demo-install/wp-importer.php:282
 msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
-msgstr ""
+msgstr "Ten plik WXR (wersja %s) może nie być obsługiwany przez tę wersję importera. Proszę rozważyć aktualizację."
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
 msgid "Failed to import author %s. Their posts will be attributed to the current user."
-msgstr ""
+msgstr "Nie udało się zaimportować autora %s. Jego wpisy zostaną przypisane bieżącemu użytkownikowi."
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
-msgstr ""
+msgstr "Przypisz autorów"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
-msgstr ""
+msgstr "Aby u��atwić sobie edycję i zapisywanie zaimportowanych treści, warto przypisać autora zaimportowanego elementu do istniejącego użytkownika tej witryny, na przykład do głównego konta administratora."
 
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
 msgid "If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details will be necessary."
-msgstr ""
+msgstr "Jeśli WordPress utworzy nowego użytkownika, zostanie wygenerowane losowe hasło, a rola nowego użytkownika zostanie ustawiona jako %s. Konieczna będzie ręczna zmiana danych nowego użytkownika."
 
 #: framework/features/demo-install/wp-importer.php:371
 msgid "Import Attachments"
-msgstr ""
+msgstr "Importuj załączniki"
 
 #: framework/features/demo-install/wp-importer.php:374
 msgid "Download and import file attachments"
-msgstr ""
+msgstr "Pobierz i zaimportuj załączniki"
 
 #: framework/features/demo-install/wp-importer.php:378
 msgid "Submit"
-msgstr ""
+msgstr "Prześlij"
 
 #: framework/features/demo-install/wp-importer.php:391
 msgid "Import author:"
-msgstr ""
+msgstr "Autor importu:"
 
 #: framework/features/demo-install/wp-importer.php:405
 msgid "as a new user:"
-msgstr ""
+msgstr "jako nowy użytkownik:"
 
 #: framework/features/demo-install/wp-importer.php:402
 msgid "or create new user with login name:"
-msgstr ""
+msgstr "lub utwórz nowego użytkownika o nazwie logowania:"
 
 #: framework/features/demo-install/wp-importer.php:415
 msgid "or assign posts to an existing user:"
-msgstr ""
+msgstr "lub przypisać wpisy do istniejącego użytkownika:"
 
 #: framework/features/demo-install/wp-importer.php:413
 msgid "assign posts to an existing user:"
-msgstr ""
+msgstr "przypisz wpisy do istniejącego użytkownika:"
 
 #: framework/features/demo-install/wp-importer.php:421
 msgid "- Select -"
-msgstr ""
+msgstr "- Wybierz -"
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:476
 msgid "Failed to create new user for %s. Their posts will be attributed to the current user."
-msgstr ""
+msgstr "Nie udało się utworzyć nowego użytkownika o nazwie %s. Jego wpisy zostaną przypisane do obecnego użytkownika."
 
 #. translators: %s is the category slug.
 #: framework/features/demo-install/wp-importer.php:540
 msgid "Failed to import category %s"
-msgstr ""
+msgstr "Nie udało się zaimportować kategorii %s"
 
 #. translators: %s is the tag name.
 #: framework/features/demo-install/wp-importer.php:593
 msgid "Failed to import post tag %s"
-msgstr ""
+msgstr "Nie udało się zaimportować tagu wpisu %s"
 
 #. translators: %1$s is the term taxonomy, %2$s is the term name.
 #. translators: %1$s is the taxonomy name, %2$s is the term name.
 #: framework/features/demo-install/wp-importer.php:658,
 #: framework/features/demo-install/wp-importer.php:969
 msgid "Failed to import %1$s %2$s"
-msgstr ""
+msgstr "Nie udało się zaimportować %1$s %2$s"
 
 #. translators: %1$s is the post type name, %2$s is the post title.
 #: framework/features/demo-install/wp-importer.php:924
 msgid "Failed to import %1$s &#8220;%2$s&#8221;"
-msgstr ""
+msgstr "Nie udało się zaimportować %1$s „%2$s”"
 
 #: framework/features/demo-install/wp-importer.php:833
 msgid "%1$s &#8220;%1$s&#8221; already exists."
-msgstr ""
+msgstr "%1$s „%1$s” już istnieje."
 
 #: framework/features/demo-install/wp-importer.php:1117
 msgid "Menu item skipped due to missing menu slug"
-msgstr ""
+msgstr "Element menu został pominięty ze względu na brak uproszczonej nazwy menu"
 
 #. translators: %s is the menu slug.
 #: framework/features/demo-install/wp-importer.php:1131
 msgid "Menu item skipped due to invalid menu slug: %s"
-msgstr ""
+msgstr "Element menu został pominięty ze względu na nieprawidłową uproszczoną nazwę menu: %s"
 
 #: framework/features/demo-install/wp-importer.php:1222
 msgid "Fetching attachments is not enabled"
-msgstr ""
+msgstr "Pobieranie załączników nie jest włączone"
 
 #: framework/features/demo-install/wp-importer.php:1236
 msgid "Invalid file type"
-msgstr ""
+msgstr "Nieprawidłowy typ pliku"
 
 #: framework/features/demo-install/wp-importer.php:1288
 msgid "Remote server did not respond"
-msgstr ""
+msgstr "Serwer zdalny nie odpowiedział"
 
 #. translators: %1$d is the HTTP response code, %2$s is the HTTP response
 #. message.
 #: framework/features/demo-install/wp-importer.php:1301
 msgid "Remote server returned error response %1$d %2$s"
-msgstr ""
+msgstr "Serwer zdalny zwrócił komunikat o błędzie %1$d %2$s"
 
 #: framework/features/demo-install/wp-importer.php:1322
 msgid "Remote file is incorrect size"
-msgstr ""
+msgstr "Plik zdalny ma nieprawidłowy rozmiar"
 
 #: framework/features/demo-install/wp-importer.php:1331
 msgid "Zero size file downloaded"
-msgstr ""
+msgstr "Pobrano plik o rozmiarze zerowym"
 
 #. translators: %s is the maximum file size allowed.
 #: framework/features/demo-install/wp-importer.php:1344
 msgid "Remote file is too large, limit is %s"
-msgstr ""
+msgstr "Plik zdalny jest zbyt duży, limit wynosi %s"
 
 #: framework/features/demo-install/wp-importer.php:1456
 msgid "Import WordPress"
-msgstr ""
+msgstr "Zaimportuj WordPress"
 
 #. translators: %s is the new version number.
 #: framework/features/demo-install/wp-importer.php:1468
 msgid "A new version of this importer is available. Please update to version %s to ensure compatibility with newer export files."
-msgstr ""
+msgstr "Dostępna jest nowa wersja tego importera. Proszę zaktualizować go do wersji %s, aby zapewnić zgodność z nowszymi plikami eksportu."
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
-msgstr ""
+msgstr "Cześć! Prześlij swój plik WordPress eXtended RSS (WXR), a my zaimportujemy na tę stronę wpisy, strony, komentarze, pola niestandardowe, kategorie i tagi."
 
 #: framework/features/demo-install/wp-importer.php:1490
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
-msgstr ""
+msgstr "Wybierz plik WXR (.xml), który chcesz przesłać, a następnie kliknij „Prześlij plik i zaimportuj”."
 
 #. translators: %1$s is the error message, %2$s is the line number
 #: framework/premium/features/code-editor.php:116
 msgid "Code execution has been canceled due to error: %1$s on line: %2$s"
-msgstr ""
+msgstr "Wykonanie kodu zostało przerwane z powodu błędu: %1$s w wierszu: %2$s"
 
 #. translators: %1$s is the post type name, %2$s is the post edit link
 #: framework/premium/features/code-editor.php:132
 msgid "%1$s that caused the error: %2$s"
-msgstr ""
+msgstr "%1$s, które spowodowało błąd: %2$s"
 
 #. translators: %1$s is the singular name of the custom post type, %2$s is the
 #. label of the taxonomy.
 #: framework/features/conditions/rules/cpt.php:47
 msgid "%1$s %2$s Taxonomy"
-msgstr ""
+msgstr "%1$s %2$s Taksonomia"
 
 #: framework/premium/features/content-blocks/admin-ui.php:740
 msgid "Popups"
-msgstr ""
+msgstr "Wyskakujące okienka"
 
 #: framework/premium/features/content-blocks/admin-ui.php:757
 msgid "Custom Templates"
-msgstr ""
+msgstr "Szablony niestandardowe (własne)"
 
 #: framework/premium/features/content-blocks/options/hook.php:341
 msgid "Custom Class"
-msgstr ""
+msgstr "Klasa niestandardowa (własna)"
 
 #: framework/premium/features/content-blocks/options/hook.php:349
 msgid "Custom Attribute"
-msgstr ""
+msgstr "Atrybut niestandardowy (własny)"
 
 #. translators: %1$s is the field title, %2$s is "Field INDEX"
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/options.php:24
 msgid "%1$s %2$s Font"
-msgstr ""
+msgstr "%1$s %2$s Krój pisma"
 
 #. translators: %1$s is the field title, %2$s is "Field INDEX"
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/options.php:36
 msgid "%1$s %2$s Color"
-msgstr ""
+msgstr "%1$s %2$s Kolor"
 
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:288
 msgid "Include brands"
-msgstr ""
+msgstr "Uwzględnij marki"
 
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:298,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:353
 msgid "No brands"
-msgstr ""
+msgstr "Brak marek"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/rating-filter/index.js:12
 msgid "Filter by products rating."
-msgstr ""
+msgstr "Filtruj według oceny produktów."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/rating-filter/index.js:59
 msgid "Match Rating Exactly"
-msgstr ""
+msgstr "Dokładne dopasowanie oceny"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/rating-filter/index.js:60
 msgid "Show only products that match the selected rating exactly."
-msgstr ""
+msgstr "Pokaż tylko produkty, które dokładnie odpowiadają wybranej ocenie."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/index.js:142
 msgid "Show Counters"
-msgstr ""
+msgstr "Pokaż liczniki"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/index.js:178
 msgid "Filter by Status"
-msgstr ""
+msgstr "Filtruj według statusu"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/index.js:26
 msgid "Filter by Status Controls"
-msgstr ""
+msgstr "Filtruj według elementów sterujących statusem"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/index.js:27
 msgid "Filter by products status."
-msgstr ""
+msgstr "Filtruj według statusu produktów."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/RenderOptions.js:139
 msgid "Max width"
-msgstr ""
+msgstr "Maksymalna szerokość"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/RenderOptions.js:35
 msgid "Show %s Image"
-msgstr ""
+msgstr "Pokaż obrazek %s"
 
 #: static/js/editor/blocks/dynamic-data/Preview.js:57
 msgid "Field not found"
-msgstr ""
+msgstr "Nie znaleziono pola"
 
 #: static/js/editor/blocks/dynamic-data/components/AlignmentControls.js:126
 msgid "Change content position"
-msgstr ""
+msgstr "Zmień położenie treści"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:129
 msgid "Layout"
-msgstr ""
+msgstr "Układ"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:143
 msgid "Inner blocks use content width"
-msgstr ""
+msgstr "Bloki wewnętrzne wykorzystują szerokość treści"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:153
 msgid "Nested blocks use content width with options for full and wide widths."
-msgstr ""
+msgstr "Bloki zagnieżdżone wykorzystują szerokość treści z opcjami pełnej i szerokiej szerokości."
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:156
 msgid "Nested blocks will fill the width of this container. Toggle to constrain."
-msgstr ""
+msgstr "Zagnieżdżone bloki wypełnią całą szerokość tego kontenera. Przełącz, aby ograniczyć szerokość."
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:165
 msgid "Content width"

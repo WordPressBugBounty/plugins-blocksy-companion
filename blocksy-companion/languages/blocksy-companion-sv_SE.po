@@ -9862,7 +9862,7 @@ msgstr "En månad"
 
 #: framework/extensions/cookies-consent/customizer.php:52
 msgid "Three months"
-msgstr "Tre m��nader"
+msgstr "Tre månader"
 
 #: framework/extensions/cookies-consent/customizer.php:53
 msgid "Six months"

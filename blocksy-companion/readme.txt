@@ -2,10 +2,10 @@
 Tags: widget, widgets
 Requires at least: 6.5
 Requires PHP: 7.0
-Tested up to: 6.9
+Tested up to: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.37
+Stable tag: 2.1.38
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,11 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.38: 2026-04-09
+- Improvement: Better integration with Nextend Social Login plugin and account header element
+- Improvement: UI improvements related to WordPress 7.0 changes
+- Fix: Cookies Consent - avoid unnecessary admin-ajax.php calls on every page load
+
 2.1.37: 2026-03-26
 - Fix: More reliable backward compatibility with theme
 

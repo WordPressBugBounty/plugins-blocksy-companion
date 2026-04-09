@@ -123,23 +123,39 @@ class BlocksyExtensionCookiesConsent {
 			add_filter('woocommerce_product_review_comment_form_args', [$this, 'change_comment_form']);
 		}, 999);
 
-		add_action('wp_ajax_blc_load_cookies_consent_data', [
+		add_filter(
+			'blocksy:footer:offcanvas-drawer',
+			function ($els, $payload) {
+				if ($payload['location'] !== 'start') {
+					return $els;
+				}
+
+				$els[] = '<template id="ct-cookies-consent-template">'
+					. blocksy_ext_cookies_consent_output()
+					. '</template>';
+
+				return $els;
+			},
+			10,
+			2
+		);
+
+		add_action('wp_ajax_blocksy_companion_load_cookies_consent_scripts', [
 			$this,
-			'load_cookies_consent_data',
+			'load_cookies_consent_scripts',
 		]);
 
 		add_action(
-			'wp_ajax_nopriv_blc_load_cookies_consent_data',
-			[$this, 'load_cookies_consent_data']
+			'wp_ajax_nopriv_blocksy_companion_load_cookies_consent_scripts',
+			[$this, 'load_cookies_consent_scripts']
 		);
 	}
 
-	public function load_cookies_consent_data() {
+	public function load_cookies_consent_scripts() {
 		$scripts = apply_filters('blocksy:cookies-consent:scripts-to-load', [], PHP_INT_MAX);
 
 		wp_send_json_success([
 			'scripts' => $scripts,
-			'consent_output' => blocksy_ext_cookies_consent_output(),
 		]);
 	}
 

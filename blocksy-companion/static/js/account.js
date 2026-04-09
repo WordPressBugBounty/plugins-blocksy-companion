@@ -23,7 +23,7 @@ const removeTurnstile = () => {
 
 			if (selector === 'register') {
 				turnstile.remove(
-					'.ct-account-modal #registerform .sct-woocommerce-register'
+					'.ct-account-modal #registerform .sct-woocommerce-register',
 				)
 			}
 		}
@@ -44,13 +44,29 @@ const resetTurnstile = () => {
 	})
 }
 
+const executeScripts = (container) => {
+	container.querySelectorAll('script').forEach((oldScript) => {
+		const newScript = document.createElement('script')
+
+		;[...oldScript.attributes].forEach(({ name, value }) => {
+			newScript.setAttribute(name, value)
+		})
+
+		if (oldScript.textContent) {
+			newScript.textContent = oldScript.textContent
+		}
+
+		oldScript.replaceWith(newScript)
+	})
+}
+
 const integrateGoogleSignIn = () => {
 	if (!window.google || !google.accounts || !google.accounts.id) {
 		return
 	}
 
 	const maybeButtons = document.querySelectorAll(
-		'.googlesitekit-sign-in-with-google__frontend-output-button'
+		'.googlesitekit-sign-in-with-google__frontend-output-button',
 	)
 
 	if (!maybeButtons.length) {
@@ -96,29 +112,23 @@ registerDynamicChunk('blocksy_account', {
 
 		if (!maybeTemplate) {
 			let maybeAccount = document.querySelector(
-				'#ct-account-modal-template'
+				'#ct-account-modal-template',
 			)
 
 			if (!maybeAccount) {
 				location = document.querySelector(
-					'[data-id="account"] .ct-account-item'
+					'[data-id="account"] .ct-account-item',
 				)
 					? document.querySelector(
-							'[data-id="account"] .ct-account-item'
-					  ).href
+							'[data-id="account"] .ct-account-item',
+						).href
 					: el.href
 
 				return
 			}
-			const templateElement = document.createElement('div')
 			const templateContent = maybeAccount.content.cloneNode(true)
 
-			templateElement.insertAdjacentHTML(
-				'beforeend',
-				templateContent.firstElementChild.outerHTML
-			)
-
-			maybeTemplate = templateElement.firstChild.outerHTML
+			maybeTemplate = templateContent.firstElementChild.outerHTML
 
 			removeTurnstile()
 			maybeAccount.remove()
@@ -131,7 +141,9 @@ registerDynamicChunk('blocksy_account', {
 				.querySelector('.ct-drawer-canvas')
 				.insertAdjacentHTML('beforeend', maybeTemplate)
 
-			panel = document.querySelector('.ct-drawer-canvas').lastChild
+			panel = document.querySelector('.ct-drawer-canvas').lastElementChild
+
+			executeScripts(panel)
 		}
 
 		const actuallyOpen = () => {

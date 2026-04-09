@@ -144,7 +144,7 @@ const EditConditions = ({ forcedEdit = false, headerId }) => {
 
 						<div className="ct-modal-actions has-divider">
 							<button
-								className="button-primary"
+								className="ct-ui-button ct-ui-button-primary"
 								disabled={!localConditions}
 								onClick={() => saveSettings()}>
 								{__('Save Conditions', 'blocksy-companion')}

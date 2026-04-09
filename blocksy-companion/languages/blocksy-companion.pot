@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-03-26 21:06+0000\n"
+"POT-Creation-Date: 2026-04-09 16:40+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -3006,12 +3006,12 @@ msgid "Post copy created."
 msgstr ""
 
 #. translators: %1$s is the error message, %2$s is the line number
-#: framework/premium/features/code-editor.php:120
+#: framework/premium/features/code-editor.php:148
 msgid "Code execution has been canceled due to error: %1$s on line: %2$s"
 msgstr ""
 
 #. translators: %1$s is the post type name, %2$s is the post edit link
-#: framework/premium/features/code-editor.php:136
+#: framework/premium/features/code-editor.php:164
 msgid "%1$s that caused the error: %2$s"
 msgstr ""
 
@@ -10198,45 +10198,45 @@ msgstr ""
 msgid "Remove Item"
 msgstr ""
 
-#: framework/premium/static/js/footer/CreateFooter.js:107
-#: framework/premium/static/js/header/CreateHeader.js:106
+#: framework/premium/static/js/footer/CreateFooter.js:109
+#: framework/premium/static/js/header/CreateHeader.js:108
 msgid "Copy elements & styles from"
 msgstr ""
 
-#: framework/premium/static/js/footer/CreateFooter.js:118
+#: framework/premium/static/js/footer/CreateFooter.js:120
 msgid "Picker Footer"
 msgstr ""
 
-#: framework/premium/static/js/footer/CreateFooter.js:133
+#: framework/premium/static/js/footer/CreateFooter.js:135
 #: framework/premium/static/js/footer/PanelsManager.js:52
 msgid "Global Footer"
 msgstr ""
 
-#: framework/premium/static/js/footer/CreateFooter.js:137
-#: framework/premium/static/js/header/CreateHeader.js:138
+#: framework/premium/static/js/footer/CreateFooter.js:139
+#: framework/premium/static/js/header/CreateHeader.js:140
 msgid "Secondary"
 msgstr ""
 
-#: framework/premium/static/js/footer/CreateFooter.js:141
-#: framework/premium/static/js/header/CreateHeader.js:142
+#: framework/premium/static/js/footer/CreateFooter.js:143
+#: framework/premium/static/js/header/CreateHeader.js:144
 msgid "Centered"
 msgstr ""
 
-#: framework/premium/static/js/footer/CreateFooter.js:172
+#: framework/premium/static/js/footer/CreateFooter.js:174
 msgid "Create New Footer"
 msgstr ""
 
-#: framework/premium/static/js/footer/CreateFooter.js:50
+#: framework/premium/static/js/footer/CreateFooter.js:51
 msgid "Create new footer"
 msgstr ""
 
-#: framework/premium/static/js/footer/CreateFooter.js:53
+#: framework/premium/static/js/footer/CreateFooter.js:55
 msgid ""
 "Create a new footer and assign it to different pages or posts based on your "
 "conditions."
 msgstr ""
 
-#: framework/premium/static/js/footer/CreateFooter.js:72
+#: framework/premium/static/js/footer/CreateFooter.js:74
 msgid "Footer name"
 msgstr ""
 
@@ -10280,30 +10280,30 @@ msgstr ""
 msgid "Edit Conditions"
 msgstr ""
 
-#: framework/premium/static/js/header/CreateHeader.js:117
+#: framework/premium/static/js/header/CreateHeader.js:119
 msgid "Picker header"
 msgstr ""
 
-#: framework/premium/static/js/header/CreateHeader.js:134
+#: framework/premium/static/js/header/CreateHeader.js:136
 #: static/js/header/PanelsManager.js:58
 msgid "Global Header"
 msgstr ""
 
-#: framework/premium/static/js/header/CreateHeader.js:173
+#: framework/premium/static/js/header/CreateHeader.js:175
 msgid "Create New Header"
 msgstr ""
 
-#: framework/premium/static/js/header/CreateHeader.js:50
+#: framework/premium/static/js/header/CreateHeader.js:51
 msgid "Create new header"
 msgstr ""
 
-#: framework/premium/static/js/header/CreateHeader.js:53
+#: framework/premium/static/js/header/CreateHeader.js:55
 msgid ""
 "Create a new header and assign it to different pages or posts based on your "
 "conditions."
 msgstr ""
 
-#: framework/premium/static/js/header/CreateHeader.js:71
+#: framework/premium/static/js/header/CreateHeader.js:73
 msgid "Header name"
 msgstr ""
 
