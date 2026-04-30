@@ -3,12 +3,7 @@
 namespace Blocksy\Extensions\NewsletterSubscribe;
 
 class EmailOctopusProvider extends Provider {
-	public function fetch_lists($api_key, $api_url) {
-
-		if (! $api_url) {
-			return 'api_url_invalid';
-		}
-
+	public function fetch_lists($api_key, $api_url = '') {
 		if (! $api_key) {
 			return 'api_key_invalid';
 		}
@@ -38,6 +33,8 @@ class EmailOctopusProvider extends Provider {
 				return [
 					'name' => $list['name'],
 					'id' => $list['id'],
+
+					'double_optin' => $list['double_opt_in']
 				];
 			}, $body['data']);
 		} else {
@@ -46,21 +43,64 @@ class EmailOctopusProvider extends Provider {
 	}
 
 	public function get_form_url_and_gdpr_for($maybe_custom_list = null) {
-		return [
+		$settings = $this->get_settings();
+
+		if (
+			! isset($settings['api_key'])
+			||
+			empty($settings['api_key'])
+		) {
+			return false;
+		}
+
+		$lists = $this->fetch_lists($settings['api_key']);
+		
+		if (
+			! is_array($lists)
+			||
+			empty($lists)
+		) {
+			return false;
+		}
+
+		if ($maybe_custom_list) {
+			$settings['list_id'] = $maybe_custom_list;
+		}
+
+		$base_config = [
 			'form_url' => '#',
 			'has_gdpr_fields' => false,
-			'provider' => 'emailoctopus'
+			'double_optin' => false,
+			'provider' => 'emailoctopus',
 		];
+
+		if (! $settings['list_id']) {
+			$base_config['double_optin'] = $lists[0]['double_optin'];
+
+			return $base_config;
+		}
+
+		foreach ($lists as $single_list) {
+			if ($single_list['id'] === $settings['list_id']) {
+				$base_config['double_optin'] = $single_list['double_optin'];
+
+				return $base_config;
+			}
+		}
+
+		return $base_config;
 	}
 
 	public function subscribe_form($args = []) {
 		$args = wp_parse_args($args, [
 			'email' => '',
 			'name' => '',
-			'group' => ''
+			'group' => '',
+			'double_optin' => false,
 		]);
 
 		$settings = $this->get_settings();
+		$target_status = $args['double_optin'] ? 'pending' : 'subscribed';
 
 		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_init
 		$curl = curl_init();
@@ -80,7 +120,7 @@ class EmailOctopusProvider extends Provider {
 				'FirstName' => $args['name']
 			],
 			'tags' => [],
-			'status' => 'subscribed'
+			'status' => $target_status,
 		]),
 		CURLOPT_HTTPHEADER => [
 			"Authorization: Bearer {$settings['api_key']}",
@@ -99,7 +139,7 @@ class EmailOctopusProvider extends Provider {
 		if ($err) {
 			return [
 				'result' => 'no',
-				'error' => $err
+				'error' => $err,
 			];
 		} else {
 			return [

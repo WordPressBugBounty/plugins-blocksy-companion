@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-04-09 16:40+0000\n"
+"POT-Creation-Date: 2026-04-30 15:45+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -593,11 +593,12 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:577,
 #: framework/premium/extensions/shortcuts/views/bar.php:56,
 #: framework/features/header/items/account/views/login.php:559,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:312,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:409,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:413,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:443,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:447,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:275,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:335,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:432,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:436,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:466,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:470,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:178,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:21,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/config.php:4,
@@ -779,7 +780,7 @@ msgstr ""
 
 #: framework/helpers/exts-configs.php:398,
 #: framework/premium/extensions/woocommerce-extra/features/cart-suggested-products/options/main.php:50,
-#: framework/premium/extensions/woocommerce-extra/features/cart-suggested-products/views/suggested-products.php:65
+#: framework/premium/extensions/woocommerce-extra/features/cart-suggested-products/views/suggested-products.php:66
 msgid "Suggested Products"
 msgstr ""
 
@@ -1204,7 +1205,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:372,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:403,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:432
-#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:274
+#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:279
 #: static/js/editor/blocks/about-me/Edit.js:196
 #: static/js/editor/blocks/contact-info/Edit.js:203
 #: static/js/editor/blocks/search/Edit.js:409
@@ -1295,7 +1296,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:378,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:408,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:437
-#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:283
+#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:288
 #: static/js/editor/blocks/about-me/Edit.js:205
 #: static/js/editor/blocks/contact-info/Edit.js:212
 #: static/js/editor/blocks/search/Edit.js:368
@@ -1777,7 +1778,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/search-input/options.php:316,
 #: framework/premium/features/premium-header/items/search-input/options.php:348,
 #: framework/premium/features/premium-header/items/search-input/options.php:378
-#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:132
+#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:137
 #: static/js/editor/blocks/search/Edit.js:196
 msgid "Input Font Color"
 msgstr ""
@@ -1800,7 +1801,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/search-input/options.php:734,
 #: framework/premium/features/premium-header/items/search-input/options.php:764,
 #: framework/premium/features/premium-header/items/search-input/options.php:794
-#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:223
+#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:228
 #: static/js/editor/blocks/search/Edit.js:269
 msgid "Focus"
 msgstr ""
@@ -1811,7 +1812,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/search-input/options.php:576,
 #: framework/premium/features/premium-header/items/search-input/options.php:608,
 #: framework/premium/features/premium-header/items/search-input/options.php:638
-#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:165
+#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:170
 #: static/js/editor/blocks/search/Edit.js:223
 msgid "Input Border Color"
 msgstr ""
@@ -1822,7 +1823,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/search-input/options.php:711,
 #: framework/premium/features/premium-header/items/search-input/options.php:741,
 #: framework/premium/features/premium-header/items/search-input/options.php:771
-#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:202
+#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:207
 #: static/js/editor/blocks/search/Edit.js:250
 msgid "Input Background Color"
 msgstr ""
@@ -3006,12 +3007,12 @@ msgid "Post copy created."
 msgstr ""
 
 #. translators: %1$s is the error message, %2$s is the line number
-#: framework/premium/features/code-editor.php:148
+#: framework/premium/features/code-editor.php:132
 msgid "Code execution has been canceled due to error: %1$s on line: %2$s"
 msgstr ""
 
 #. translators: %1$s is the post type name, %2$s is the post edit link
-#: framework/premium/features/code-editor.php:164
+#: framework/premium/features/code-editor.php:148
 msgid "%1$s that caused the error: %2$s"
 msgstr ""
 
@@ -7551,7 +7552,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:256,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:328,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:396
-#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:263
+#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:268
 #: static/js/editor/blocks/search/Edit.js:311
 msgid "Button Background Color"
 msgstr ""
@@ -8480,7 +8481,7 @@ msgstr ""
 msgid "here"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:398
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:421
 msgid "Wishlist Button"
 msgstr ""
 
@@ -9405,15 +9406,15 @@ msgstr ""
 msgid "Invalid API Key..."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:164
+#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:169
 msgid "Container Border Color"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:198
+#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:203
 msgid "Container Background Color"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:234
+#: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:239
 #: static/js/editor/blocks/search/Edit.js:281
 msgid "Button Text Color"
 msgstr ""

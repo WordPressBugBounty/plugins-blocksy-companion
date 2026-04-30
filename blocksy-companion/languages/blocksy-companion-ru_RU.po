@@ -344,7 +344,7 @@ msgstr "Это поле является обязательным"
 
 #: framework/theme-integration.php:90
 msgid "Please fix this field."
-msgstr "И��правьте содержимое этого поля."
+msgstr "Исп��авьте содержимое этого поля."
 
 #: framework/theme-integration.php:91
 msgid "Please enter a valid email address."
@@ -380,7 +380,7 @@ msgstr "Введите то же значение ещё раз."
 
 #: framework/theme-integration.php:99
 msgid "Please enter no more than {0} characters."
-msgstr "Введите н�� более {0} символов."
+msgstr "Введите не более {0} символов."
 
 #: framework/theme-integration.php:100
 msgid "Please enter at least {0} characters."
@@ -494,7 +494,7 @@ msgstr "Чтобы упростить редактирование и сохра
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
 msgid "If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details will be necessary."
-msgstr "Если в WordPress будет создан новый пользователь, новый пароль будет сгенерирован случайным образом, а роль нового пользователя бу��ет установлена как %s. Потребуется вручную изменить данные нового пользователя."
+msgstr "Если в WordPress будет создан новый пользователь, новый пароль будет сгенерирован случайным образом, а роль нового пользователя будет установлена как %s. Потребуется вручную изменить данные нового пользователя."
 
 #: framework/features/demo-install/wp-importer.php:371
 msgid "Import Attachments"
@@ -557,7 +557,7 @@ msgstr "Не удалось импортировать %1$s %2$s"
 #. translators: %1$s is the post type name, %2$s is the post title.
 #: framework/features/demo-install/wp-importer.php:924
 msgid "Failed to import %1$s &#8220;%2$s&#8221;"
-msgstr "Не ��далось импортировать %1$s &#8220;%2$s&#8221;"
+msgstr "Не удалось импортировать %1$s &#8220;%2$s&#8221;"
 
 #: framework/features/demo-install/wp-importer.php:833
 msgid "%1$s &#8220;%1$s&#8221; already exists."
@@ -623,7 +623,7 @@ msgstr "Выберите файл WXR (.xml) для загрузки, затем
 #. translators: %1$s is the error message, %2$s is the line number
 #: framework/premium/features/code-editor.php:116
 msgid "Code execution has been canceled due to error: %1$s on line: %2$s"
-msgstr "Выполнение кода было отменено из-за ошибки: %1$s в строке: %2$s!"
+msgstr "Выполнение кода было отменено из-за ошибки: %1$s в ст��оке: %2$s!"
 
 #. translators: %1$s is the post type name, %2$s is the post edit link
 #: framework/premium/features/code-editor.php:132
@@ -1431,7 +1431,7 @@ msgstr "Действия"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:218,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:320
 msgid "Invalid request"
-msgstr "Недопустимы�� запрос"
+msgstr "Недопустимый запрос"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:111
 msgid "No waitlist found"
@@ -1462,7 +1462,7 @@ msgstr "Вы уже включены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:303
 msgid "You have been added to the waitlist"
-msgstr "Вы добавлены в список ожидания"
+msgstr "Вы добавлены в ��писок ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
@@ -2648,7 +2648,7 @@ msgstr "Сбросить все"
 
 #: static/js/options/ConditionsManager/ExpireCondition.js:119
 msgid "The expiration date cannot be set earlier than the start date."
-msgstr "Дата истечен��я срока не может быть ранее даты начала действия."
+msgstr "Дата истечения срока не может быть ранее даты начала действия."
 
 #: framework/features/blocks/about-me/options.php:207,
 #: framework/features/blocks/share-box/options.php:66,
@@ -2957,7 +2957,7 @@ msgstr "Видимость триггера"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:107
 msgid "Trigger Label"
-msgstr "Я��лык триггера"
+msgstr "Ярлык триггера"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:233
 msgid "Panel Default State"
@@ -3433,7 +3433,7 @@ msgstr "Перейдите на любой профессиональный та
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:61
 msgid "Upgrade to the business or agency plan and get instant access to this starter site and many other features."
-msgstr "Перейдите на профессиональный или агентский тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
+msgstr "Перейдите на профессиональный или агентский тариф и получите мгновенный доступ к этому старт��вому сайту и многим другим функциям."
 
 #: static/js/dashboard/helpers/useProExtensionInFree.js:14
 msgid "This is a Pro extension"
@@ -4428,7 +4428,7 @@ msgstr "Скругление углов окна"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:452
 msgid "Compare Bar"
-msgstr "Панель сравнения"
+msgstr "Панель сра��нения"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:480
 msgid "Button Icon"
@@ -4541,7 +4541,7 @@ msgstr "Заголовок партнёрской ссылки"
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:57,
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:90
 msgid "Open Button Link In New Tab"
-msgstr "Открывать кнопкой новую вкладку"
+msgstr "Открывать кнопкой ��овую вкладку"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-page/options.php:14
 msgid "Quantity Auto Update"
@@ -7249,7 +7249,7 @@ msgstr "Низ мобильного"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:102
 msgid "Sidebar before"
-msgstr "До са��дбара"
+msgstr "До сайдбара"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:103,
 #: framework/premium/features/content-blocks/hooks-manager.php:110,

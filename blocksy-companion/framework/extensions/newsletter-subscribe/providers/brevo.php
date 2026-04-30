@@ -31,7 +31,7 @@ class BrevoProvider extends Provider {
 			return array_map(function($list) {
 				return [
 					'name' => $list['name'],
-					'id' => $list['id'],
+					'id' => (string) $list['id'],
 				];
 			}, $body['lists']);
 		} else {

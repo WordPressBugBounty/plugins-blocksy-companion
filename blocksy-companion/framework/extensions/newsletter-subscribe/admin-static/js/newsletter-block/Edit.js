@@ -5,7 +5,7 @@ import { colors } from './colors'
 import {
 	InspectorControls,
 	useBlockProps,
-	withColors,
+	withColors
 } from '@wordpress/block-editor'
 import { PanelBody } from '@wordpress/components'
 
@@ -38,7 +38,7 @@ const Edit = ({
 	buttonBackgroundColor,
 	setButtonBackgroundColor,
 	buttonBackgroundColorHover,
-	setButtonBackgroundColorHover,
+	setButtonBackgroundColorHover
 }) => {
 	const radius = attributes?.style?.border?.radius
 
@@ -58,8 +58,8 @@ const Edit = ({
 
 			...(attributes?.newsletter_subscribe_height
 				? {
-						'--theme-form-field-height': `${attributes.newsletter_subscribe_height}px`,
-				  }
+						'--theme-form-field-height': `${attributes.newsletter_subscribe_height}px`
+					}
 				: {}),
 			...(radius
 				? {
@@ -67,15 +67,15 @@ const Edit = ({
 							typeof radius === 'string'
 								? radius
 								: radius.topLeft || '0px'
-						}`,
-				  }
+						}`
+					}
 				: {}),
 			...(attributes?.newsletter_subscribe_gap
 				? {
-						'--theme-form-field-gap': `${attributes.newsletter_subscribe_gap}px`,
-				  }
-				: {}),
-		},
+						'--theme-form-field-gap': `${attributes.newsletter_subscribe_gap}px`
+					}
+				: {})
+		}
 	})
 
 	return (
@@ -87,37 +87,42 @@ const Edit = ({
 					...(inputIconColor?.color
 						? {
 								'--theme-button-text-initial-color':
-									inputIconColor.color,
-						  }
+									inputIconColor.color
+							}
 						: {}),
 					...(inputIconColorFocus?.color
 						? {
 								'--theme-button-text-hover-color':
-									inputIconColorFocus.color,
-						  }
+									inputIconColorFocus.color
+							}
 						: {}),
 					...(buttonBackgroundColor?.color
 						? {
 								'--theme-button-background-initial-color':
-									buttonBackgroundColor.color,
-						  }
+									buttonBackgroundColor.color
+							}
 						: {}),
 					...(buttonBackgroundColorHover?.color
 						? {
 								'--theme-button-background-hover-color':
-									buttonBackgroundColorHover.color,
-						  }
-						: {}),
+									buttonBackgroundColorHover.color
+							}
+						: {})
 				}}
 			/>
 			<InspectorControls>
 				<PanelBody>
 					<OptionsPanel
-						purpose={'gutenberg'}
+						purpose="gutenberg"
 						onChange={(optionId, optionValue) => {
-							setAttributes({
-								[optionId]: optionValue,
-							})
+							if (optionId === 'newsletter_subscribe_list_id') {
+								setAttributes({
+									[optionId]: `${optionValue}`
+								})
+								return
+							}
+
+							setAttributes({ [optionId]: optionValue })
 						}}
 						options={options}
 						value={attributes}
@@ -143,7 +148,7 @@ const Edit = ({
 							onColorChange: (value) =>
 								setInputFontColor(
 									value || colors.inputFontColor
-								),
+								)
 						},
 						{
 							colorValue: inputFontColorFocus.color,
@@ -152,8 +157,8 @@ const Edit = ({
 							onColorChange: (value) =>
 								setInputFontColorFocus(
 									value || colors.inputFontColorFocus
-								),
-						},
+								)
+						}
 					]}
 				/>
 
@@ -177,7 +182,7 @@ const Edit = ({
 							onColorChange: (value) =>
 								setInputBorderColor(
 									value || colors.inputBorderColor
-								),
+								)
 						},
 						{
 							colorValue: inputBorderColorFocus.color,
@@ -186,8 +191,8 @@ const Edit = ({
 							onColorChange: (value) =>
 								setInputBorderColorFocus(
 									value || colors.inputBorderColorFocus
-								),
-						},
+								)
+						}
 					]}
 				/>
 
@@ -198,7 +203,7 @@ const Edit = ({
 							? __(
 									'Container Background Color',
 									'blocksy-companion'
-							  )
+								)
 							: __('Input Background Color', 'blocksy-companion')
 					}
 					resetAll={() => {
@@ -216,7 +221,7 @@ const Edit = ({
 							onColorChange: (value) =>
 								setInputBackgroundColor(
 									value || colors.inputBackgroundColor
-								),
+								)
 						},
 						{
 							colorValue: inputBackgroundColorFocus.color,
@@ -225,8 +230,8 @@ const Edit = ({
 							onColorChange: (value) =>
 								setInputBackgroundColorFocus(
 									value || colors.inputBackgroundColorFocus
-								),
-						},
+								)
+						}
 					]}
 				/>
 
@@ -245,7 +250,7 @@ const Edit = ({
 							onColorChange: (value) =>
 								setInputIconColor(
 									value || colors.inputIconColor
-								),
+								)
 						},
 						{
 							colorValue: inputIconColorFocus.color,
@@ -254,8 +259,8 @@ const Edit = ({
 							onColorChange: (value) =>
 								setInputIconColorFocus(
 									value || colors.inputIconColorFocus
-								),
-						},
+								)
+						}
 					]}
 				/>
 
@@ -276,7 +281,7 @@ const Edit = ({
 							onColorChange: (value) =>
 								setButtonBackgroundColor(
 									value || colors.buttonBackgroundColor
-								),
+								)
 						},
 						{
 							colorValue: buttonBackgroundColorHover.color,
@@ -285,8 +290,8 @@ const Edit = ({
 							onColorChange: (value) =>
 								setButtonBackgroundColorHover(
 									value || colors.buttonBackgroundColorHover
-								),
-						},
+								)
+						}
 					]}
 				/>
 			</InspectorControls>

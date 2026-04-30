@@ -3,7 +3,7 @@
 /*
 Plugin Name: Blocksy Companion
 Description: This plugin is the companion for the Blocksy theme, it runs and adds its enhacements only if the Blocksy theme is installed and active.
-Version: 2.1.38
+Version: 2.1.39
 Author: CreativeThemes
 Author URI: https://creativethemes.com
 Text Domain: blocksy-companion
@@ -34,14 +34,14 @@ if ( function_exists( 'blocksy_companion_fs' ) || class_exists( '\\Blocksy\\Plug
         blocksy_companion_fs()->set_basename( false, __FILE__ );
     }
 } else {
-    if ( !function_exists( 'blocksy_companion_fs' ) && file_exists( dirname( __FILE__ ) . '/freemius/start.php' ) && (is_admin() || wp_doing_cron() || defined( 'WP_CLI' ) && WP_CLI || isset( $_REQUEST['customize_theme'] )) ) {
+    if ( !function_exists( 'blocksy_companion_fs' ) && file_exists( dirname( __FILE__ ) . '/vendor/freemius/start.php' ) && (is_admin() || wp_doing_cron() || defined( 'WP_CLI' ) && WP_CLI || isset( $_REQUEST['customize_theme'] )) ) {
         global $blocksy_companion_fs;
         if ( !isset( $blocksy_companion_fs ) ) {
             if ( !defined( 'WP_FS__PRODUCT_5115_MULTISITE' ) ) {
                 // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound -- Freemius requirement
                 define( 'WP_FS__PRODUCT_5115_MULTISITE', true );
             }
-            require_once dirname( __FILE__ ) . '/freemius/start.php';
+            require_once dirname( __FILE__ ) . '/vendor/freemius/start.php';
             $blocksy_has_account = true;
             $blocksy_fs_instance = \Freemius::instance( 5115, 'blocksy-companion', true );
             $blocksy_active_extensions = get_option( 'blocksy_active_extensions', [] );

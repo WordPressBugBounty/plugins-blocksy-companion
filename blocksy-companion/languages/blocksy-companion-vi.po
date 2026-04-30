@@ -168,7 +168,7 @@ msgstr "Hình chữ nhật"
 
 #: framework/premium/features/premium-header/items/language-switcher/options/common.php:251
 msgid "Flag Border Radius"
-msgstr "��ộ bo góc của cờ"
+msgstr "Độ bo góc của cờ"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:316
 msgid "More information on how to generate an API key for Klaviyo can be found %shere%s."
@@ -474,7 +474,7 @@ msgstr "Không tìm thấy tệp xuất tại <code>%s</code>. Có thể nguyên
 #. translators: %s is the WXR version number.
 #: framework/features/demo-install/wp-importer.php:282
 msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
-msgstr "Tệp WXR này (phiên bản %s) có thể không được hỗ trợ bởi phiên bản trình nhập liệu hiện tại. Vui lòng cân nhắc cập nhật."
+msgstr "Tệp WXR này (phiên bản %s) có thể không được hỗ trợ bởi phiên bản trình nhập liệu hiện tại. Vui lòng cân nhắc cập nh��t."
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
@@ -2324,7 +2324,7 @@ msgstr "Mục phân loại"
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:88
 #: static/js/editor/blocks/dynamic-data/preview-parts/WpFieldPreview.js:73
 msgid "Archive Title"
-msgstr "Tiêu đề lưu tr��"
+msgstr "Tiêu đề lưu trữ"
 
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:93
 #: static/js/editor/blocks/dynamic-data/preview-parts/WpFieldPreview.js:77
@@ -4076,7 +4076,7 @@ msgstr "Thanh vận chuyển miễn phí"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:212
 msgid "Show if cart is empty"
-msgstr "Hiển thị nếu giỏ hàng trống"
+msgstr "Hiển thị nếu giỏ h��ng trống"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:445,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:180
@@ -5352,7 +5352,7 @@ msgstr "Không có bài viết để tạo bản sao"
 
 #: framework/helpers/exts-configs.php:314
 msgid "Create a customized order “Thank You” page for your customers, giving them a personalized experience."
-msgstr "Tạo một trang “Cảm ơn�� đơn hàng tùy chỉnh cho khách hàng của bạn, mang lại cho họ một trải nghiệm cá nhân hóa."
+msgstr "Tạo một trang “Cảm ơn” đơn hàng tùy chỉnh cho khách hàng của bạn, mang lại cho họ một trải nghiệm cá nhân hóa."
 
 #: framework/helpers/exts-configs.php:322,
 #: framework/premium/extensions/woocommerce-extra/features/advanced-reviews/options.php:5
