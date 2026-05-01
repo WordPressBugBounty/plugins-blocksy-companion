@@ -10849,7 +10849,7 @@ msgstr "مشاهده‌ی نقد و بررسی محصول"
 
 #: framework/extensions/product-reviews/extension.php:551
 msgid "Add New Product Review"
-msgstr "افزودن نقد و بررسی محصول جد��د"
+msgstr "افزودن نقد و بررسی محصول جدید"
 
 #: framework/extensions/product-reviews/extension.php:552
 msgid "Add New Review"

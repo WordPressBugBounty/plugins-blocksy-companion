@@ -344,7 +344,7 @@ msgstr "Это поле является обязательным"
 
 #: framework/theme-integration.php:90
 msgid "Please fix this field."
-msgstr "Исп��авьте содержимое этого поля."
+msgstr "Исправьте содержимое этого поля."
 
 #: framework/theme-integration.php:91
 msgid "Please enter a valid email address."
@@ -388,7 +388,7 @@ msgstr "Введите не менее {0} символов."
 
 #: framework/theme-integration.php:101
 msgid "Please enter a value between {0} and {1} characters long."
-msgstr "Введите от {0} до {1} символов."
+msgstr "Введите от {0} до {1} ��имволов."
 
 #: framework/theme-integration.php:102
 msgid "Please enter a value between {0} and {1}."
@@ -422,7 +422,7 @@ msgstr "Файлы SVG не должны содержать PHP-код."
 #: framework/helpers/exts-configs.php:403,
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:4
 msgid "Cart Reserved Timer"
-msgstr "Таймер корзины"
+msgstr "Таймер корзин��"
 
 #: framework/helpers/exts-configs.php:404
 msgid "Display a countdown timer for reserved cart items, encouraging users to complete their purchase before the timer expires."
@@ -614,7 +614,7 @@ msgstr "Доступна новая версия этого импортера. 
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
-msgstr "Привет! Загрузите расширенный RSS-файл WordPress (WXR), и система импортирует записи, страницы, комментарии, пользовательские поля, рубрики и теги на этот сайт."
+msgstr "Привет! Загрузите расширенный RSS-файл WordPress (WXR), и система импортирует записи, страницы, комментарии, пользо��ательские поля, рубрики и теги на этот сайт."
 
 #: framework/features/demo-install/wp-importer.php:1490
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
@@ -623,7 +623,7 @@ msgstr "Выберите файл WXR (.xml) для загрузки, затем
 #. translators: %1$s is the error message, %2$s is the line number
 #: framework/premium/features/code-editor.php:116
 msgid "Code execution has been canceled due to error: %1$s on line: %2$s"
-msgstr "Выполнение кода было отменено из-за ошибки: %1$s в ст��оке: %2$s!"
+msgstr "Выполнение кода было отменено из-за ошибки: %1$s в строке: %2$s!"
 
 #. translators: %1$s is the post type name, %2$s is the post edit link
 #: framework/premium/features/code-editor.php:132
@@ -1431,7 +1431,7 @@ msgstr "Действия"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:218,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:320
 msgid "Invalid request"
-msgstr "Недопустимый запрос"
+msgstr "Недопустимы�� запрос"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:111
 msgid "No waitlist found"
@@ -1462,7 +1462,7 @@ msgstr "Вы уже включены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:303
 msgid "You have been added to the waitlist"
-msgstr "Вы добавлены в ��писок ожидания"
+msgstr "Вы добавлены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
@@ -2422,7 +2422,7 @@ msgstr "Вид сетки"
 #: static/js/editor/blocks/post-template/Edit.js:371
 #: static/js/editor/blocks/tax-template/Edit.js:309
 msgid "Tablet Columns"
-msgstr "Колонки планшета"
+msgstr "Колонки п��аншета"
 
 #: static/js/editor/blocks/post-template/Edit.js:380
 #: static/js/editor/blocks/tax-template/Edit.js:319
@@ -3112,7 +3112,7 @@ msgstr "Нехватка запасов"
 
 #: framework/helpers/exts-configs.php:370
 msgid "Show the remaining stock of a product to create a sense of urgency and encourage your visitors to make a purchase."
-msgstr "Отображение оставшихся запасов товара, для создания ощущения срочности и побуждения посетителей совершить покупку."
+msgstr "Отображение оставшихся запасов товара, для создания ощущения срочности и по��уждения посетителей совершить покупку."
 
 #. translators: %s is the product name (theme or plugin)
 #: framework/views/theme-mismatch.php:36
@@ -3433,7 +3433,7 @@ msgstr "Перейдите на любой профессиональный та
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:61
 msgid "Upgrade to the business or agency plan and get instant access to this starter site and many other features."
-msgstr "Перейдите на профессиональный или агентский тариф и получите мгновенный доступ к этому старт��вому сайту и многим другим функциям."
+msgstr "Перейдите на профессиональный или агентский тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
 
 #: static/js/dashboard/helpers/useProExtensionInFree.js:14
 msgid "This is a Pro extension"
@@ -4428,7 +4428,7 @@ msgstr "Скругление углов окна"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:452
 msgid "Compare Bar"
-msgstr "Панель сра��нения"
+msgstr "Панель сравнения"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:480
 msgid "Button Icon"
@@ -4541,7 +4541,7 @@ msgstr "Заголовок партнёрской ссылки"
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:57,
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:90
 msgid "Open Button Link In New Tab"
-msgstr "Открывать кнопкой ��овую вкладку"
+msgstr "Открывать кнопкой новую вкладку"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-page/options.php:14
 msgid "Quantity Auto Update"
@@ -8350,7 +8350,7 @@ msgstr "Страница списка желаний"
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:46
 msgid "The page you select here will display the wish list for your logged out users."
-msgstr " На странице, которую вы выберете здесь, будет отображаться список желаний для невошедших в систему пользователей."
+msgstr " На странице, которую вы выберете здес��, будет отображаться список желаний для невошедших в систему пользователей."
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:25
 msgid "Archive Page"
@@ -8673,7 +8673,7 @@ msgstr "Фильтр записей"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:59
 msgid "Filtering Behavior"
-msgstr "Поведение фильтрации"
+msgstr "��оведение фильтрации"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:67
 msgid "Instant Reload"

@@ -489,7 +489,7 @@ msgstr "Dodijeli autore"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
-msgstr "Kako biste si olakšali uređivanje i spremanje uvezenog sadržaja, možda ćete htjeti dodijeliti autora uvezenog ��lanka postojećem korisniku ove stranice, poput vašeg primarnog administratorskog računa."
+msgstr "Kako biste si olakšali uređivanje i spremanje uvezenog sadržaja, možda ćete htjeti dodijeliti autora uvezenog članka postojećem korisniku ove stranice, poput vašeg primarnog administratorskog računa."
 
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
@@ -535,7 +535,7 @@ msgstr "- Odaberi -"
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:476
 msgid "Failed to create new user for %s. Their posts will be attributed to the current user."
-msgstr "Nije uspjelo stvaranje novog korisnika za %s. Njihovi objavljeni članci bit će pripisani trenutnom korisniku."
+msgstr "Nije uspjelo stvaranje novog korisnika za %s. Njihovi objavljeni ��lanci bit će pripisani trenutnom korisniku."
 
 #. translators: %s is the category slug.
 #: framework/features/demo-install/wp-importer.php:540
