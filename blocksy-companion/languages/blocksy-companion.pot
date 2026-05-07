@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-01 14:36+0000\n"
+"POT-Creation-Date: 2026-05-07 16:11+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -1509,7 +1509,7 @@ msgstr ""
 
 #: framework/extensions/newsletter-subscribe/customizer.php:61,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:50
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:244
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:252
 msgid "List ID"
 msgstr ""
 
@@ -2603,13 +2603,26 @@ msgstr ""
 msgid "Sorry, you don't have permission to uninstall plugins."
 msgstr ""
 
-#: framework/features/demo-install/required-plugins.php:34
+#: framework/features/demo-install/required-plugins.php:38
 msgid "Sorry, you don't have permission to install plugins."
 msgstr ""
 
-#: framework/features/demo-install/required-plugins.php:46,
-#: framework/features/demo-install/required-plugins.php:41
+#: framework/features/demo-install/required-plugins.php:50,
+#: framework/features/demo-install/required-plugins.php:45
 msgid "No plugins to install."
+msgstr ""
+
+#: framework/features/demo-install/required-plugins.php:81
+msgid "Could not prepare plugin installation."
+msgstr ""
+
+#. translators: %s: Plugin name
+#: framework/features/demo-install/required-plugins.php:101
+msgid "Can't install and activate %s plugin."
+msgstr ""
+
+#: framework/features/demo-install/required-plugins.php:281
+msgid "Plugin is not installed."
 msgstr ""
 
 #: framework/features/demo-install/widgets-import.php:33
@@ -3007,12 +3020,12 @@ msgid "Post copy created."
 msgstr ""
 
 #. translators: %1$s is the error message, %2$s is the line number
-#: framework/premium/features/code-editor.php:132
+#: framework/premium/features/code-editor.php:124
 msgid "Code execution has been canceled due to error: %1$s on line: %2$s"
 msgstr ""
 
 #. translators: %1$s is the post type name, %2$s is the post edit link
-#: framework/premium/features/code-editor.php:148
+#: framework/premium/features/code-editor.php:140
 msgid "%1$s that caused the error: %2$s"
 msgstr ""
 
@@ -9390,7 +9403,7 @@ msgstr ""
 
 #: framework/extensions/newsletter-subscribe/admin-static/js/ListPicker.js:14
 #: framework/extensions/newsletter-subscribe/admin-static/js/ListPicker/Implementation.js:72
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:466
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:474
 #: static/js/dashboard/NoTheme.js:83
 #: static/js/dashboard/screens/SiteExport.js:314
 #: static/js/notifications/VersionMismatchNotice.js:110
@@ -9423,33 +9436,37 @@ msgstr ""
 msgid "Newsletter Controls"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:108
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:104
+msgid "Connect Newsletter Provider"
+msgstr ""
+
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:116
 msgid "Provider"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:135
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:143
 msgid "API URL"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:188
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:196
 msgid "API Version"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:198
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:206
 msgid "Pick Mailing Service"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:229
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:237
 msgid "API Key"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:266
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:274
 msgid ""
 "More information on how to generate an API key for Mailchimp can be found "
 "%shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:284
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:292
 msgid ""
 "More information on how to generate an API key for Mailerlite can be found "
 "%shere%s. Please note that it is required at least one group to be created "
@@ -9457,59 +9474,59 @@ msgid ""
 "group %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:302
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:310
 msgid ""
 "This provider is used only for testing purposes. It doesnt register any real "
 "subscribers."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:316
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:324
 msgid ""
 "More information on how to generate an API key for Klaviyo can be found "
 "%shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:334
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:342
 msgid ""
 "More information on how to generate an API key for Brevo can be found "
 "%shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:352
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:360
 msgid ""
 "More information on how to generate an API key for Kit (ConvertKit) can be "
 "found %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:370
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:378
 msgid ""
 "More information on how to generate an API key for ActiveCampaign can be "
 "found %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:388
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:396
 msgid ""
 "More information on how to generate an API key for Campaign Monitor can be "
 "found %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:406
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:414
 msgid ""
 "More information on how to generate an API key for EmailOctopus can be found "
 "%shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:424
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:432
 msgid ""
 "More information on how to create a list in MailPoet can be found %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:442
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:450
 msgid ""
 "More information on how to create a list in fluentcrm can be found %shere%s."
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:467
+#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:475
 #: framework/extensions/product-reviews/static/js/ProductReviews.js:96
 #: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:291
 #: framework/premium/extensions/sidebars/static/js/SettingsManager.js:112
@@ -9517,10 +9534,6 @@ msgstr ""
 #: framework/premium/static/js/footer/EditConditions.js:153
 #: framework/premium/static/js/media-video/components/EditVideoMeta.js:106
 msgid "Save Settings"
-msgstr ""
-
-#: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:94
-msgid "Connect Newsletter Provider"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/ListPicker.js:103
@@ -10779,27 +10792,27 @@ msgstr ""
 msgid "Installing %s"
 msgstr ""
 
-#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:131
+#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:132
 msgid "Preparing content"
 msgstr ""
 
-#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:143
+#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:144
 msgid "Import options"
 msgstr ""
 
-#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:156
+#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:157
 msgid "Import widgets"
 msgstr ""
 
-#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:176
+#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:177
 msgid "Import content"
 msgstr ""
 
-#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:195
+#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:196
 msgid "Final touches"
 msgstr ""
 
-#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:339
+#: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:340
 msgid "Preparing data..."
 msgstr ""
 
@@ -10964,6 +10977,10 @@ msgstr ""
 
 #: static/js/dashboard/screens/DemoInstall/components/Error.js:25
 msgid "Can't Import Starter Site"
+msgstr ""
+
+#: static/js/dashboard/screens/DemoInstall/components/Error.js:37
+msgid "More Information"
 msgstr ""
 
 #: static/js/dashboard/screens/DemoInstall/components/Progress.js:29
