@@ -3471,7 +3471,7 @@ msgstr "Faça upgrade para o plano empresarial ou de agência e tenha acesso ime
 
 #: static/js/dashboard/NoTheme.js:49
 msgid "In order to take full advantage of all features it has to offer - please install and activate the Blocksy theme also."
-msgstr "Para tirar o m��ximo partido de todas as funcionalidades que tem para oferecer, instale e active também o tema Blocksy."
+msgstr "Para tirar o máximo partido de todas as funcionalidades que tem para oferecer, instale e active também o tema Blocksy."
 
 #: static/js/dashboard/NoTheme.js:84
 msgid "Install and activate the Blocksy theme"
