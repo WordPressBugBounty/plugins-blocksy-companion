@@ -1,10 +1,6 @@
 import {
 	createElement,
-	useRef,
-	useEffect,
-	useState,
 	useCallback,
-	RawHTML,
 } from '@wordpress/element'
 import { RichText } from '@wordpress/block-editor'
 import { __ } from 'ct-i18n'
@@ -29,9 +25,15 @@ const OVERWRITE_ATTRIBUTES = {
 	...colors,
 }
 
-const Preview = ({ attributes, setAttributes, buttonStyles }) => {
-	const [isChanging, setIsChanging] = useState(false)
+const clearInlineWhiteSpaceRef = (element) => {
+	if (!element) {
+		return
+	}
 
+	element.style.removeProperty('white-space')
+}
+
+const Preview = ({ attributes, setAttributes, buttonStyles }) => {
 	const {
 		search_box_button_text,
 		search_box_placeholder,
@@ -42,10 +44,54 @@ const Preview = ({ attributes, setAttributes, buttonStyles }) => {
 		taxonomy_filter_visibility,
 	} = attributes
 
-	const maybeParts = useRef({
-		taxonomy: '',
-		icon: '',
-	})
+	const hasVisibleTaxonomyFilter = has_taxonomy_filter === 'yes'
+	const shouldWrapPseudoInput =
+		buttonPosition === 'outside' && hasVisibleTaxonomyFilter
+	const submitButtonType =
+		buttonUseText === 'yes'
+			? 'text'
+			: buttonPosition === 'inside'
+				? 'minimal:icon'
+				: 'icon'
+
+	const searchField = (
+		<input
+			type="search"
+			value={search_box_placeholder}
+			onChange={(e) => {
+				setAttributes({
+					search_box_placeholder: e.target.value,
+				})
+			}}
+			placeholder="Search"
+			name="s"
+			autoComplete="off"
+			title="Search for..."
+			aria-label="Search for..."
+		/>
+	)
+
+	const taxonomyField = hasVisibleTaxonomyFilter ? (
+					<div
+						className={cls('ct-fake-select', 'ct-select-taxonomy', {
+							'ct-hidden-lg': !taxonomy_filter_visibility.desktop,
+							'ct-hidden-md': !taxonomy_filter_visibility.tablet,
+							'ct-hidden-sm': !taxonomy_filter_visibility.mobile,
+						})}>
+						<RichText
+							tagName="span"
+							ref={clearInlineWhiteSpaceRef}
+							value={taxonomy_filter_label}
+							placeholder="Select Category"
+							allowedFormats={[]}
+							onChange={(content) =>
+								setAttributes({
+									taxonomy_filter_label: content,
+								})
+							}
+						/>
+					</div>
+				) : null
 
 	const formatContent = useCallback(
 		(content) => {
@@ -62,22 +108,6 @@ const Preview = ({ attributes, setAttributes, buttonStyles }) => {
 
 			searchBox.style = ''
 
-			if (virtualContainer.querySelector('.ct-select-taxonomy')) {
-				maybeParts.current = {
-					...maybeParts.current,
-					taxonomy: virtualContainer.querySelector(
-						'.ct-select-taxonomy'
-					).outerHTML,
-				}
-			}
-
-			if (virtualContainer.querySelector('.ct-icon')) {
-				maybeParts.current = {
-					...maybeParts.current,
-					icon: virtualContainer.querySelector('.ct-icon').outerHTML,
-				}
-			}
-
 			return virtualContainer.innerHTML
 		},
 		[search_box_placeholder, buttonPosition, buttonStyles]
@@ -92,77 +122,49 @@ const Preview = ({ attributes, setAttributes, buttonStyles }) => {
 		formatContent
 	)
 
-	useEffect(() => {
-		setIsChanging(true)
-
-		setTimeout(() => {
-			setIsChanging(false)
-		}, 100)
-	}, [attributes])
-
 	return isLoading ? (
 		<Spinner />
 	) : (
 		<form
 			role="search"
 			method="get"
+			onSubmit={(event) => {
+				event.preventDefault()
+			}}
 			className="ct-search-form"
 			data-form-controls={buttonPosition}
 			data-taxonomy-filter={
 				has_taxonomy_filter === 'yes' ? 'true' : 'false'
 			}
-			data-submit-button={buttonUseText === 'yes' ? 'text' : 'icon'}
-			data-updating={isChanging ? 'yes' : 'no'}>
-			<input
-				type="search"
-				value={search_box_placeholder}
-				onChange={(e) => {
-					setAttributes({
-						search_box_placeholder: e.target.value,
-					})
-				}}
-				placeholder="Search"
-				name="s"
-				autoComplete="off"
-				title="Search for..."
-				aria-label="Search for..."
-			/>
+			data-submit-button={submitButtonType}>
+			<div
+				className={cls('ct-search-form-inner', {
+					'ct-pseudo-input': buttonPosition === 'inside',
+				})}>
+				{shouldWrapPseudoInput ? (
+					<div className="ct-pseudo-input">
+						{searchField}
+						{taxonomyField}
+					</div>
+				) : (
+					<>
+						{searchField}
+						{taxonomyField}
+					</>
+				)}
 
-			<div className="ct-search-form-controls">
-				{has_taxonomy_filter === 'yes' ? (
-					<span
-						className={cls('ct-fake-select-container', {
-							'ct-hidden-lg': !taxonomy_filter_visibility.desktop,
-							'ct-hidden-md': !taxonomy_filter_visibility.tablet,
-							'ct-hidden-sm': !taxonomy_filter_visibility.mobile,
-						})}>
-						<select className="ct-select-taxonomy" />
-						<RichText
-							tagName="span"
-							className="ct-fake-select"
-							value={taxonomy_filter_label}
-							placeholder="Select Category"
-							allowedFormats={[]}
-							onChange={(content) =>
-								setAttributes({
-									taxonomy_filter_label: content,
-								})
-							}
-						/>
-					</span>
-				) : null}
 				<div
 					className="wp-element-button"
-					data-button={`${buttonPosition}:${
-						buttonUseText === 'yes' ? 'text' : 'icon'
-					}`}
 					aria-label="Search button"
 					style={buttonStyles}>
 					{buttonUseText === 'yes' ? (
 						<RichText
 							tagName="span"
+							identifier="search_box_button_text"
+							ref={clearInlineWhiteSpaceRef}
 							value={search_box_button_text}
 							placeholder="Search"
+							disableLineBreaks
 							allowedFormats={[]}
 							onChange={(content) =>
 								setAttributes({
@@ -171,7 +173,14 @@ const Preview = ({ attributes, setAttributes, buttonStyles }) => {
 							}
 						/>
 					) : (
-						<RawHTML>{maybeParts.current.icon}</RawHTML>
+						<svg
+							className="ct-icon ct-search-button-content"
+							aria-hidden="true"
+							width="15"
+							height="15"
+							viewBox="0 0 15 15">
+							<path d="M14.8,13.7L12,11c0.9-1.2,1.5-2.6,1.5-4.2c0-3.7-3-6.8-6.8-6.8S0,3,0,6.8s3,6.8,6.8,6.8c1.6,0,3.1-0.6,4.2-1.5l2.8,2.8c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C15.1,14.5,15.1,14,14.8,13.7z M1.5,6.8c0-2.9,2.4-5.2,5.2-5.2S12,3.9,12,6.8S9.6,12,6.8,12S1.5,9.6,1.5,6.8z" />
+						</svg>
 					)}
 					<span className="ct-ajax-loader">
 						<svg viewBox="0 0 24 24">

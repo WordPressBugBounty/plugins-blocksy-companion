@@ -16,6 +16,31 @@ import { ToolbarGroup, ToolbarButton } from '@wordpress/components'
 
 import { buttonOutside, buttonWithIcon } from './icons'
 
+const normalizeBorderRadiusValue = (radius) => {
+	if (!radius) {
+		return ''
+	}
+
+	if (typeof radius === 'string') {
+		return radius
+	}
+
+	const topLeft = radius.topLeft || '0px'
+	const topRight = radius.topRight || '0px'
+	const bottomRight = radius.bottomRight || '0px'
+	const bottomLeft = radius.bottomLeft || '0px'
+
+	if (
+		topLeft === topRight &&
+		topLeft === bottomRight &&
+		topLeft === bottomLeft
+	) {
+		return topLeft
+	}
+
+	return `${topLeft} ${topRight} ${bottomRight} ${bottomLeft}`
+}
+
 const Edit = ({
 	attributes,
 	setAttributes,
@@ -86,11 +111,8 @@ const Edit = ({
 
 			...(radius
 				? {
-						'--theme-form-field-border-radius': `${
-							typeof radius === 'string'
-								? radius
-								: `${radius.topLeft} ${radius.topRight} ${radius.bottomLeft} ${radius.bottomRight}`
-						}`,
+						'--theme-form-field-border-radius':
+							normalizeBorderRadiusValue(radius),
 				  }
 				: {}),
 
@@ -134,7 +156,10 @@ const Edit = ({
 						  }
 						: {}),
 
-					...(buttonPosition === 'outside'
+					...(!(
+						buttonPosition === 'inside' &&
+						buttonUseText !== 'yes'
+					)
 						? {
 								...(buttonBackgroundColor?.color
 									? {
@@ -192,6 +217,7 @@ const Edit = ({
 				</ToolbarGroup>
 			</BlockControls>
 			<InspectorControls group="styles">
+				<div className="blocksy-options-hide-border-unlink" />
 				<ColorsPanel
 					label={__('Input Font Color', 'blocksy-companion')}
 					resetAll={() => {
@@ -306,7 +332,9 @@ const Edit = ({
 					]}
 				/>
 
-				{buttonPosition === 'outside' ? (
+				{!(
+					buttonPosition === 'inside' && buttonUseText !== 'yes'
+				) ? (
 					<ColorsPanel
 						label={__('Button Background Color', 'blocksy-companion')}
 						resetAll={() => {

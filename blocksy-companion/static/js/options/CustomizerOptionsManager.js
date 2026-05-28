@@ -22,7 +22,7 @@ const wipeCaches = () => {
 
 		fetch(window.ajaxurl, {
 			method: 'POST',
-			body,
+			body
 		}).then((response) => {
 			if (response.status === 200) {
 				response.json().then(({ success, data }) => {
@@ -149,7 +149,7 @@ const CustomizerOptionsManager = () => {
 							<button
 								type="button"
 								className={classnames('ct-upload-button', {
-									active: isDraggedOver,
+									active: isDraggedOver
 								})}
 								ref={dropZoneRef}
 								onClick={() => {
@@ -160,7 +160,7 @@ const CustomizerOptionsManager = () => {
 									: __(
 											'Click or drop to upload a file...',
 											'blocksy-companion'
-									  )}
+										)}
 							</button>
 						</div>
 
@@ -169,17 +169,20 @@ const CustomizerOptionsManager = () => {
 							type="file"
 							onChange={({
 								target: {
-									files: [config],
-								},
+									files: [config]
+								}
 							}) => {
 								setFutureConfig(config)
 							}}
 						/>
 
 						<button
-							className={classnames('ct-ui-button ct-ui-button-primary', {
-								'ct-loading': isImporting,
-							})}
+							className={classnames(
+								'ct-ui-button ct-ui-button-primary',
+								{
+									'ct-loading': isImporting
+								}
+							)}
 							disabled={!futureConfig}
 							onClick={(e) => {
 								e.preventDefault()
@@ -206,11 +209,11 @@ const CustomizerOptionsManager = () => {
 												headers: {
 													Accept: 'application/json',
 													'Content-Type':
-														'application/json',
+														'application/json'
 												},
 												body: JSON.stringify(
 													unserialized
-												),
+												)
 											}
 										).then((response) => {
 											if (response.status === 200) {
@@ -387,7 +390,7 @@ const CustomizerOptionsManager = () => {
 											`${window.ajaxurl}?nonce=${ct_customizer_localizations.customizer_reset_none}`,
 											{
 												method: 'POST',
-												body,
+												body
 											}
 										).then((response) => {
 											if (response.status === 200) {
@@ -448,7 +451,7 @@ const CustomizerOptionsManager = () => {
 											dataToExport.includes(component)
 												? dataToExport.filter(
 														(c) => c !== component
-												  )
+													)
 												: [...dataToExport, component]
 										)
 									}}>
@@ -456,7 +459,7 @@ const CustomizerOptionsManager = () => {
 										className={classnames('ct-checkbox', {
 											active: dataToExport.includes(
 												component
-											),
+											)
 										})}>
 										<svg
 											width="10"
@@ -476,7 +479,7 @@ const CustomizerOptionsManager = () => {
 											widgets: __(
 												'Widgets settings',
 												'blocksy-companion'
-											),
+											)
 										}[component]
 									}
 								</div>
@@ -520,7 +523,7 @@ const CustomizerOptionsManager = () => {
 											`${window.ajaxurl}?nonce=${ct_customizer_localizations.customizer_reset_none}`,
 											{
 												method: 'POST',
-												body,
+												body
 											}
 										).then((response) => {
 											if (response.status === 200) {
@@ -535,7 +538,7 @@ const CustomizerOptionsManager = () => {
 															var blob = new Blob(
 																[data.data],
 																{
-																	type: 'application/octet-stream;charset=utf-8',
+																	type: 'application/octet-stream;charset=utf-8'
 																}
 															)
 

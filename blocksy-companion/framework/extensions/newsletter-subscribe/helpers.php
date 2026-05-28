@@ -165,11 +165,15 @@ function blocksy_companion_ext_newsletter_subscribe_output_form($args = []) {
 					blocksy_attr_to_html_e(
 						array_merge(
 							[
-								'class' => 'ct-newsletter-subscribe-form-elements',
+								'class' => trim(
+									'ct-newsletter-subscribe-form-elements' . (
+										$args['container_style'] === 'boxed'
+											? ' ct-pseudo-input'
+											: ''
+									)
+								),
+								'data-container' => $args['container_style'],
 							],
-							$args['container_style'] !== 'default' ? [
-								'data-container' => $args['container_style']
-							] : [],
 							$args['form_style'] === 'inline' ? [
 								'data-columns' => $fields_number
 							] : []

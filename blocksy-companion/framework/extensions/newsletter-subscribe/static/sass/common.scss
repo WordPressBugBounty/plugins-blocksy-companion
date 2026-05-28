@@ -26,28 +26,14 @@
 		&[data-container="boxed"] {
 			--theme-form-boxed-padding: calc(var(--theme-form-field-gap, 10px) / 2);
 
+			height: auto;
 			padding: var(--theme-form-boxed-padding);
-			border-radius: var(--theme-form-field-border-radius, 3px);
-			border: var(--theme-form-field-border-width, 1px) solid var(--theme-form-field-border-initial-color);
-			background-color: var(--theme-form-field-background-initial-color);
-			transition: border 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955),
-						background-color 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-
-			input {
-				border: none;
-				background: transparent;
-			}
 
 			.wp-element-button {
 				--theme-button-border-radius: max(
 					calc(var(--theme-form-field-border-radius, 3px) * 0.6),
 					calc(var(--theme-form-field-border-radius, 3px) - var(--theme-form-boxed-padding))
 				);
-			}
-
-			&:has(input:focus) {
-				border-color: var(--theme-form-field-border-focus-color);
-				background-color: var(--theme-form-field-background-focus-color);
 			}
 		}
 	}

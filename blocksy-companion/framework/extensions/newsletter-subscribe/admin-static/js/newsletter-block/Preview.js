@@ -40,13 +40,12 @@ const Preview = ({ attributes, buttonStyles, setAttributes }) => {
 				className="ct-newsletter-subscribe-form"
 				data-provider="demo">
 				<div
-					className="ct-newsletter-subscribe-form-elements"
-					{...(newsletter_subscribe_container_type === 'default'
-						? {}
-						: {
-								'data-container':
-									newsletter_subscribe_container_type,
-						  })}
+					className={`ct-newsletter-subscribe-form-elements${
+						newsletter_subscribe_container_type === 'boxed'
+							? ' ct-pseudo-input'
+							: ''
+					}`}
+					data-container={newsletter_subscribe_container_type}
 					{...(newsletter_subscribe_view_type !== 'inline'
 						? {}
 						: {

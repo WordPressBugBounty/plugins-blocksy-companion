@@ -574,7 +574,7 @@ msgstr "Element menu został pominięty ze względu na nieprawidłową uproszczo
 
 #: framework/features/demo-install/wp-importer.php:1222
 msgid "Fetching attachments is not enabled"
-msgstr "Pobieranie załączników nie jest włączone"
+msgstr "Pobieranie załącznik��w nie jest włączone"
 
 #: framework/features/demo-install/wp-importer.php:1236
 msgid "Invalid file type"
@@ -9737,7 +9737,7 @@ msgstr "Plik"
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/index.js:108
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:191
 msgid "Inline"
-msgstr "W tre��ci"
+msgstr "W treści"
 
 #: framework/features/google-analytics.php:81
 msgid "Google Analytics v4"

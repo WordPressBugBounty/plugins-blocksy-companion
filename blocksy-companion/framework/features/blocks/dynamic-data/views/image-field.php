@@ -272,10 +272,35 @@ if (
 	&&
 	!$maybe_video
 ) {
+	$lightbox_block = [
+		'blockName' => 'core/image',
+		'attrs' => [
+			'id' => $attachment_id,
+			'linkDestination' => 'none',
+		],
+		'innerBlocks' => [],
+		'innerHTML' => '',
+		'innerContent' => [],
+	];
+
+	$lightbox_block_instance = null;
+
+	if (class_exists('WP_Block')) {
+		$lightbox_block_instance = new WP_Block($lightbox_block);
+	}
+
+	// Match core/image asset loading for lightbox behavior.
+	if (function_exists('wp_enqueue_script_module')) {
+		wp_enqueue_script_module('@wordpress/block-library/image/view');
+	}
+
+	wp_enqueue_style('wp-block-image');
+
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo block_core_image_render_lightbox(
 		blocksy_html_tag($tag_name, $wrapper_attr, $value),
-		[]
+		$lightbox_block,
+		$lightbox_block_instance
 	);
 
 	return;

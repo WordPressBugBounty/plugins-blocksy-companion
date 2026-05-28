@@ -212,22 +212,23 @@ $form_attrs = [
 	'data-provider' => $provider_data['provider'],
 ];
 
-$container_atts = [
-	'class' => 'ct-newsletter-subscribe-form-elements'
-];
-
-if ($view_type === 'inline') {
-	$container_atts['data-columns'] = $fields_number;
-}
-
 $container_type = blocksy_default_akg(
 	'newsletter_subscribe_container_type',
 	$atts,
 	'default'
 );
 
-if ($container_type === 'boxed') {
-	$container_atts['data-container'] = 'boxed';
+$container_atts = [
+	'class' => trim(
+		'ct-newsletter-subscribe-form-elements' . (
+			$container_type === 'boxed' ? ' ct-pseudo-input' : ''
+		)
+	),
+	'data-container' => $container_type,
+];
+
+if ($view_type === 'inline') {
+	$container_atts['data-columns'] = $fields_number;
 }
 
 $skip_submit_output = '';

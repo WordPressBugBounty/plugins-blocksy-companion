@@ -357,14 +357,14 @@ class Plugin {
 				}
 			}
 
-			if ($is_cli) {
+			if ($is_cli && method_exists('\WP_CLI', 'get_config')) {
 				$cli_config = \WP_CLI::get_config();
 
 				$should_skip_themes_wp_cli = false;
 
 				// Proper way to handle skip-themes
 				// https://github.com/wp-cli/wp-cli/blob/a9fabc07adf274274ba6bcc0f0e081f1fab1220b/php/utils-wp.php#L276
-				if (isset($cli_config['skip-themes'])) {
+				if (is_array($cli_config) && isset($cli_config['skip-themes'])) {
 					if ($cli_config['skip-themes'] === true) {
 						$should_skip_themes_wp_cli = true;
 					}

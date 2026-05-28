@@ -4331,7 +4331,7 @@ msgstr "Pagini „Mulțumim”"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:492
 msgid "Thank You Page"
-msgstr "Pagină „Mulțumim”"
+msgstr "Pagină ���Mulțumim”"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:494
 msgid "Add New Thank You Page"

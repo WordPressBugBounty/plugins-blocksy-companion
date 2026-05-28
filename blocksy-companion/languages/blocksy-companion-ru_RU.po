@@ -344,7 +344,7 @@ msgstr "Это поле является обязательным"
 
 #: framework/theme-integration.php:90
 msgid "Please fix this field."
-msgstr "И��правьте содержимое этого поля."
+msgstr "Испр��вьте содержимое этого поля."
 
 #: framework/theme-integration.php:91
 msgid "Please enter a valid email address."
@@ -380,7 +380,7 @@ msgstr "Введите то же значение ещё раз."
 
 #: framework/theme-integration.php:99
 msgid "Please enter no more than {0} characters."
-msgstr "Введите н�� более {0} символов."
+msgstr "Введите не более {0} символов."
 
 #: framework/theme-integration.php:100
 msgid "Please enter at least {0} characters."
@@ -481,7 +481,7 @@ msgstr "Данный WXR-файл (версия %s) может не поддер
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
 msgid "Failed to import author %s. Their posts will be attributed to the current user."
-msgstr "Не удалось импортировать автора %s. Его публикации будут приписаны к вашему профилю."
+msgstr "Не удалось импортировать автора %s. Его публикации будут приписаны к вашему пр��филю."
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
@@ -494,7 +494,7 @@ msgstr "Чтобы упростить редактирование и сохра
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
 msgid "If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details will be necessary."
-msgstr "Если в WordPress будет создан новый пользователь, новый пароль будет сгенерирован случайным образом, а роль нового пользователя бу��ет установлена как %s. Потребуется вручную изменить данные нового пользователя."
+msgstr "Если в WordPress будет создан новый пользователь, новый пароль будет сгенерирован случайным образом, а роль нового пользователя будет установлена как %s. Потребуется вручную изменить данные нового пользователя."
 
 #: framework/features/demo-install/wp-importer.php:371
 msgid "Import Attachments"
@@ -557,7 +557,7 @@ msgstr "Не удалось импортировать %1$s %2$s"
 #. translators: %1$s is the post type name, %2$s is the post title.
 #: framework/features/demo-install/wp-importer.php:924
 msgid "Failed to import %1$s &#8220;%2$s&#8221;"
-msgstr "Не ��далось импортировать %1$s &#8220;%2$s&#8221;"
+msgstr "Не уда��ось импортировать %1$s &#8220;%2$s&#8221;"
 
 #: framework/features/demo-install/wp-importer.php:833
 msgid "%1$s &#8220;%1$s&#8221; already exists."
@@ -588,7 +588,7 @@ msgstr "Удалённый сервер не ответил"
 #. message.
 #: framework/features/demo-install/wp-importer.php:1301
 msgid "Remote server returned error response %1$d %2$s"
-msgstr "Удалённый сервер вернул ответ об ошибке %1$d %2$s"
+msgstr "У��алённый сервер вернул ответ об ошибке %1$d %2$s"
 
 #: framework/features/demo-install/wp-importer.php:1322
 msgid "Remote file is incorrect size"
@@ -2648,7 +2648,7 @@ msgstr "Сбросить все"
 
 #: static/js/options/ConditionsManager/ExpireCondition.js:119
 msgid "The expiration date cannot be set earlier than the start date."
-msgstr "Дата истечения с��ока не может быть ранее даты начала действия."
+msgstr "Дата истечения срока не может быть ранее даты начала действия."
 
 #: framework/features/blocks/about-me/options.php:207,
 #: framework/features/blocks/share-box/options.php:66,
@@ -3609,7 +3609,7 @@ msgstr "Отобьражать образцы"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/VariableTab.js:30
 msgid "Upload only the %s.woff2%s or %s.ttf%s font file formats. Don't convert variable fonts by yourself. Ask the font provider to hand a correct file or the %svariable%s font won't work."
-msgstr "Загружайте только файлы шрифтов в форматах %s.woff2%s или %s.ttf%s. Не конвертируйте вари��тивные шрифты самостоятельно. Попросите поставщика шрифтов предоставить правильный файл, иначе %svariable%s шрифта не будет работать."
+msgstr "Загружайте только файлы шрифтов в форматах %s.woff2%s или %s.ttf%s. Не конвертируйте вариативные шрифты самостоятельно. Попросите поставщика шрифтов предоставить правильный файл, иначе %svariable%s шрифта не будет работать."
 
 #: framework/premium/extensions/local-google-fonts/dashboard-static/js/AdvancedTab.js:54
 msgid "Preload Subsets"
@@ -4301,7 +4301,7 @@ msgstr "Условия отображения вкладки товаров"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/options.php:11
 msgid "Choose where you want this product tab to be displayed."
-msgstr "Где нужно отображать эту вкладку товаров."
+msgstr "Где нужно отображать эту ��кладку товаров."
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/options.php:27
 msgid "Tab Order"
@@ -9013,7 +9013,7 @@ msgstr "Курсивный"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/RegularTab.js:30
 msgid "Upload only the %s.woff2%s or %s.ttf%s font file formats (see browser coverage %shere%s). Use %sthis converter tool%s if you don't have these font formats."
-msgstr "Загружайте только файлы шрифтов в форматах %s.woff2%s или %s.ttf%s (смотрите покрытие браузера %sздесь%s). Используйте %sэтот конвертер%s, если у вас нет таких форматов шрифтов."
+msgstr "Загружайте только файлы шрифтов в форматах %s.woff2%s или %s.ttf%s (смотрите покрытие браузера %sздесь%s). Используйте %sэтот конвертер%s, если у вас нет т��ких форматов шрифтов."
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:91
 msgid "Font Name"
@@ -11115,7 +11115,7 @@ msgstr "Заголовок модуля"
 #: framework/extensions/trending/customizer.php:184,
 #: framework/extensions/trending/helpers.php:457
 msgid "Trending now"
-msgstr "Сейчас популярно"
+msgstr "С��йчас популярно"
 
 #: framework/extensions/trending/customizer.php:189
 msgid "Module Title Tag"

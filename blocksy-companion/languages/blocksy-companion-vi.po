@@ -612,7 +612,7 @@ msgstr "Đã có phiên bản mới của trình nhập này. Vui lòng cập nh
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
-msgstr "Chào bạn! Hãy tải lên tệp WordPress eXtended RSS (WXR) của bạn và chúng tôi sẽ nhập bài viết, trang, bình luận, trường tùy chỉnh, chuyên mục và thẻ vào trang web này."
+msgstr "Chào bạn! Hãy tải lên tệp WordPress eXtended RSS (WXR) của bạn và chúng tôi sẽ nhập bài vi���t, trang, bình luận, trường tùy chỉnh, chuyên mục và thẻ vào trang web này."
 
 #: framework/features/demo-install/wp-importer.php:1490
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
@@ -707,7 +707,7 @@ msgstr "Hiển thị ảnh %s"
 
 #: static/js/editor/blocks/dynamic-data/Preview.js:57
 msgid "Field not found"
-msgstr "Không tìm thấy trường"
+msgstr "Kh��ng tìm thấy trường"
 
 #: static/js/editor/blocks/dynamic-data/components/AlignmentControls.js:126
 msgid "Change content position"
@@ -3307,7 +3307,7 @@ msgstr "Thêm điều kiện"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:68
 msgid "Upgrade to the agency plan and get instant access to this starter site and many other features."
-msgstr "Nâng cấp lên g��i đại lý và có quyền truy cập ngay vào mẫu web bắt đầu này cùng nhiều tính năng khác."
+msgstr "Nâng cấp lên gói đại lý và có quyền truy cập ngay vào mẫu web bắt đầu này cùng nhiều tính năng khác."
 
 #: static/js/dashboard/screens/Extensions/CurrentExtension.js:316
 msgid "Documentation"
@@ -3518,7 +3518,7 @@ msgstr "Bộ lọc cửa hàng"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/index.js:11
 msgid "Widget for filtering the WooCommerce products loop by category, attribute or brand."
-msgstr "Tiện ích để lọc vòng lặp sản phẩm WooCommerce theo danh mục, thuộc tính ho���c thương hiệu."
+msgstr "Tiện ích để lọc vòng lặp sản phẩm WooCommerce theo danh mục, thuộc tính hoặc thương hiệu."
 
 #: framework/premium/static/js/blocks/ContentBlock.js:27
 msgid "Insert a specific Content Block anywhere on the site."
@@ -4377,7 +4377,7 @@ msgstr "So sánh sản phẩm"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/feature.php:296
 msgid "Close Compare Modal"
-msgstr "Đóng hộp b��t lên so sánh"
+msgstr "Đóng hộp bật lên so sánh"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/helpers.php:93,
 #: framework/premium/extensions/woocommerce-extra/features/compare/helpers.php:151
@@ -5197,7 +5197,7 @@ msgstr "Bản sao bài viết đã được tạo."
 
 #: framework/premium/features/local-gravatars.php:36
 msgid "Store Gravatars Locally"
-msgstr "Lưu trữ Gravatars cục bộ"
+msgstr "Lưu trữ Gravatars c���c bộ"
 
 #: framework/premium/features/local-gravatars.php:41
 msgid "Store and load Gravatars locally for increased privacy and performance."

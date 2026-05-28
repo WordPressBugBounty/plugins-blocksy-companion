@@ -133,7 +133,27 @@ if (isset($atts['style']['border']['radius'])) {
 		&&
 		! empty($atts['style']['border']['radius'])
 	) {
-		$style .= '--theme-form-field-border-radius:' . $atts['style']['border']['radius']['topLeft'] . $atts['style']['border']['radius']['topRight'] . $atts['style']['border']['radius']['bottomLeft'] . $atts['style']['border']['radius']['bottomRight'] . ';';
+		$top_left = $atts['style']['border']['radius']['topLeft'] ?? '0px';
+		$top_right = $atts['style']['border']['radius']['topRight'] ?? '0px';
+		$bottom_right = $atts['style']['border']['radius']['bottomRight'] ?? '0px';
+		$bottom_left = $atts['style']['border']['radius']['bottomLeft'] ?? '0px';
+
+		if (
+			$top_left === $top_right
+			&&
+			$top_left === $bottom_right
+			&&
+			$top_left === $bottom_left
+		) {
+			$style .= '--theme-form-field-border-radius:' . $top_left . ';';
+		} else {
+			$style .= '--theme-form-field-border-radius:' . join(' ', [
+				$top_left,
+				$top_right,
+				$bottom_right,
+				$bottom_left,
+			]) . ';';
+		}
 	}
 
 	unset($atts['style']['border']);
@@ -165,7 +185,7 @@ if (isset($atts['inputIconColorFocus'])) {
 	$button_colors['--theme-button-text-hover-color'] = "var(--wp--preset--color--$var)";
 }
 
-if ($buttonPosition === 'outside') {
+if (! ($buttonPosition === 'inside' && ! $buttonUseText)) {
 	$button_colors = array_merge(
 		$button_colors,
 		[

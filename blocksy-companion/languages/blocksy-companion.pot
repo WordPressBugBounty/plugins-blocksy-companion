@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-14 16:48+0000\n"
+"POT-Creation-Date: 2026-05-28 17:48+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -1208,7 +1208,7 @@ msgstr ""
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:279
 #: static/js/editor/blocks/about-me/Edit.js:196
 #: static/js/editor/blocks/contact-info/Edit.js:203
-#: static/js/editor/blocks/search/Edit.js:409
+#: static/js/editor/blocks/search/Edit.js:437
 #: static/js/editor/blocks/share-box/Edit.js:161
 #: static/js/editor/blocks/socials/Edit.js:172
 msgid "Initial"
@@ -1299,7 +1299,7 @@ msgstr ""
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:288
 #: static/js/editor/blocks/about-me/Edit.js:205
 #: static/js/editor/blocks/contact-info/Edit.js:212
-#: static/js/editor/blocks/search/Edit.js:368
+#: static/js/editor/blocks/search/Edit.js:396
 #: static/js/editor/blocks/share-box/Edit.js:173
 #: static/js/editor/blocks/socials/Edit.js:184
 msgid "Hover"
@@ -1779,7 +1779,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/search-input/options.php:348,
 #: framework/premium/features/premium-header/items/search-input/options.php:378
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:137
-#: static/js/editor/blocks/search/Edit.js:196
+#: static/js/editor/blocks/search/Edit.js:222
 msgid "Input Font Color"
 msgstr ""
 
@@ -1802,7 +1802,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/search-input/options.php:764,
 #: framework/premium/features/premium-header/items/search-input/options.php:794
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:228
-#: static/js/editor/blocks/search/Edit.js:269
+#: static/js/editor/blocks/search/Edit.js:295
 msgid "Focus"
 msgstr ""
 
@@ -1813,7 +1813,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/search-input/options.php:608,
 #: framework/premium/features/premium-header/items/search-input/options.php:638
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:170
-#: static/js/editor/blocks/search/Edit.js:223
+#: static/js/editor/blocks/search/Edit.js:249
 msgid "Input Border Color"
 msgstr ""
 
@@ -1824,7 +1824,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/search-input/options.php:741,
 #: framework/premium/features/premium-header/items/search-input/options.php:771
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:207
-#: static/js/editor/blocks/search/Edit.js:250
+#: static/js/editor/blocks/search/Edit.js:276
 msgid "Input Background Color"
 msgstr ""
 
@@ -1869,13 +1869,13 @@ msgstr ""
 msgid "Enter your email address below to subscribe to our newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:184
+#: framework/extensions/newsletter-subscribe/helpers.php:188
 msgid "First name"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:189,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:307,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:308
+#: framework/extensions/newsletter-subscribe/helpers.php:193,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:308,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:309
 msgid "Email address"
 msgstr ""
 
@@ -3265,8 +3265,8 @@ msgstr ""
 msgid "Newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:297,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:298,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:299,
 #: framework/features/blocks/about-me/options.php:73,
 #: framework/features/header/items/account/options.php:615,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:244,
@@ -3822,12 +3822,12 @@ msgstr ""
 #: framework/features/blocks/search/options.php:79,
 #: framework/features/blocks/search/options.php:85,
 #: framework/features/blocks/search/view.php:42,
-#: framework/features/blocks/search/view.php:223,
+#: framework/features/blocks/search/view.php:243,
 #: framework/features/conditions/rules/pages.php:26,
 #: framework/premium/features/premium-header/items/search-input/options.php:69,
 #: framework/premium/features/premium-header/items/search-input/view.php:90
 #: static/js/editor/blocks/query/edit/PatternSelectionModal.js:92
-#: static/js/editor/blocks/search/Preview.js:24
+#: static/js/editor/blocks/search/Preview.js:20
 #: static/js/editor/blocks/tax-query/edit/PatternSelectionModal.js:78
 msgid "Search"
 msgstr ""
@@ -3858,7 +3858,7 @@ msgid "Taxonomy Filter"
 msgstr ""
 
 #: framework/features/blocks/search/options.php:166,
-#: framework/features/blocks/search/view.php:227
+#: framework/features/blocks/search/view.php:247
 msgid "Select Category"
 msgstr ""
 
@@ -7566,7 +7566,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:328,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:396
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:268
-#: static/js/editor/blocks/search/Edit.js:311
+#: static/js/editor/blocks/search/Edit.js:339
 msgid "Button Background Color"
 msgstr ""
 
@@ -8620,7 +8620,7 @@ msgid "Dropdown Font"
 msgstr ""
 
 #: framework/premium/features/premium-header/items/search-input/options.php:867
-#: static/js/editor/blocks/search/Edit.js:346
+#: static/js/editor/blocks/search/Edit.js:374
 msgid "Dropdown Text Color"
 msgstr ""
 
@@ -9428,7 +9428,7 @@ msgid "Container Background Color"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:239
-#: static/js/editor/blocks/search/Edit.js:281
+#: static/js/editor/blocks/search/Edit.js:307
 msgid "Button Text Color"
 msgstr ""
 
@@ -10279,7 +10279,7 @@ msgstr ""
 #: framework/premium/static/js/footer/PanelsManager.js:212
 #: framework/premium/static/js/hooks/CodeEditor.js:189
 #: static/js/header/PanelsManager.js:217
-#: static/js/options/CustomizerOptionsManager.js:496
+#: static/js/options/CustomizerOptionsManager.js:499
 msgid "Cancel"
 msgstr ""
 
@@ -11638,27 +11638,27 @@ msgstr ""
 msgid "Create advanced queries based on your specified criterias."
 msgstr ""
 
-#: static/js/editor/blocks/search/Edit.js:163
+#: static/js/editor/blocks/search/Edit.js:188
 msgid "Button Outside"
 msgstr ""
 
-#: static/js/editor/blocks/search/Edit.js:180
+#: static/js/editor/blocks/search/Edit.js:205
 msgid "Use button with text"
 msgstr ""
 
-#: static/js/editor/blocks/search/Edit.js:282
+#: static/js/editor/blocks/search/Edit.js:308
 msgid "Button Icon Color"
 msgstr ""
 
-#: static/js/editor/blocks/search/Edit.js:379
+#: static/js/editor/blocks/search/Edit.js:407
 msgid "Dropdown Background Color"
 msgstr ""
 
-#: static/js/editor/blocks/search/Edit.js:400
+#: static/js/editor/blocks/search/Edit.js:428
 msgid "Dropdown Shadow Color"
 msgstr ""
 
-#: static/js/editor/blocks/search/Preview.js:25
+#: static/js/editor/blocks/search/Preview.js:21
 msgid "Select category"
 msgstr ""
 
@@ -11962,59 +11962,59 @@ msgstr ""
 msgid "Click or drop to upload a file..."
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:265
+#: static/js/options/CustomizerOptionsManager.js:268
 msgid "Import Customizations"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:275
+#: static/js/options/CustomizerOptionsManager.js:278
 msgid "Copy Options"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:278
+#: static/js/options/CustomizerOptionsManager.js:281
 msgid "Copy and import your customizations from parent or child theme."
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:334
+#: static/js/options/CustomizerOptionsManager.js:337
 msgid "Copy From Parent Theme"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:340
+#: static/js/options/CustomizerOptionsManager.js:343
 msgid "Copy From Child Theme"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:347
+#: static/js/options/CustomizerOptionsManager.js:350
 msgid ""
 "You are about to copy all the settings from your parent theme into the child "
 "theme. Are you sure you want to continue?"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:353
+#: static/js/options/CustomizerOptionsManager.js:356
 msgid ""
 "You are about to copy all the settings from your child theme into the parent "
 "theme. Are you sure you want to continue?"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:409
+#: static/js/options/CustomizerOptionsManager.js:412
 msgid "Yes, I am sure"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:423
+#: static/js/options/CustomizerOptionsManager.js:426
 msgid "Export Settings"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:427
+#: static/js/options/CustomizerOptionsManager.js:430
 msgid "Choose what set of settings you want to export."
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:472
+#: static/js/options/CustomizerOptionsManager.js:475
 msgid "Customizer settings"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:476
+#: static/js/options/CustomizerOptionsManager.js:479
 msgid "Widgets settings"
 msgstr ""
 
-#: static/js/options/CustomizerOptionsManager.js:572
+#: static/js/options/CustomizerOptionsManager.js:575
 msgid "Export"
 msgstr ""
 
