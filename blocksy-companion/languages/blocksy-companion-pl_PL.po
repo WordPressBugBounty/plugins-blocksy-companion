@@ -574,7 +574,7 @@ msgstr "Element menu został pominięty ze względu na nieprawidłową uproszczo
 
 #: framework/features/demo-install/wp-importer.php:1222
 msgid "Fetching attachments is not enabled"
-msgstr "Pobieranie załącznik��w nie jest włączone"
+msgstr "Pobieranie załączników nie jest włączone"
 
 #: framework/features/demo-install/wp-importer.php:1236
 msgid "Invalid file type"
@@ -5938,7 +5938,7 @@ msgstr "Odstępy między ikonami"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/feature.php:162
 msgid "Add widgets here."
-msgstr "Tutaj można dodawać widżety."
+msgstr "Tutaj można dodawa�� widżety."
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/views/panel.php:66
 msgid "Close filters modal"

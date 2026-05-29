@@ -535,7 +535,7 @@ msgstr "- Odaberi -"
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:476
 msgid "Failed to create new user for %s. Their posts will be attributed to the current user."
-msgstr "Nije uspjelo stvaranje novog korisnika za %s. Njihovi objavljeni članci bit će pripisani trenutnom korisniku."
+msgstr "Nije uspjelo stvaranje novog korisnika za %s. Njihovi objavljeni ��lanci bit će pripisani trenutnom korisniku."
 
 #. translators: %s is the category slug.
 #: framework/features/demo-install/wp-importer.php:540
@@ -5507,7 +5507,7 @@ msgstr "Prikaz približnog vremena čitanja članka kako bi posjetitelji znali �
 #: framework/helpers/exts-configs.php:149
 #: static/js/editor/blocks/dynamic-data/index.js:124
 msgid "Dynamic Data"
-msgstr "Dinami��ki podaci"
+msgstr "Dinamički podaci"
 
 #: framework/helpers/exts-configs.php:150
 msgid "Integrates custom fields solutions in the meta layers of a post and presents additional information."

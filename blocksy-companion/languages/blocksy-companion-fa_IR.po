@@ -3300,7 +3300,7 @@ msgstr ""
 
 #: static/js/options/ConditionsManager/SingleCondition.js:423
 msgid "Display if query string is present in URL"
-msgstr "اگر عبارت ک��ئری در نشانی اینترنتی بود نمایش بده"
+msgstr "اگر عبارت کوئری در نشانی اینترنتی بود نمایش بده"
 
 #: static/js/options/DisplayCondition.js:62
 msgid "Add Conditions"
@@ -3531,7 +3531,7 @@ msgstr "قالب «هیچ‌چیز یافت نشد»"
 
 #: framework/premium/static/js/hooks/CreateHook.js:164
 msgid "Maintenance Template"
-msgstr "قالب «تعمیر و نگهداری��"
+msgstr "قالب «تعمیر و نگهداری»"
 
 #: framework/premium/static/js/media-video/components/EditVideoMeta.js:44
 msgid "Video Options"
@@ -5182,7 +5182,7 @@ msgstr ""
 
 #: framework/premium/extensions/mega-menu/options.php:312
 msgid "If you have complex data inside your mega menu you can enable this option in order to load the dropdown content with AJAX and improve the website loading time."
-msgstr "اگر داده‌های پیچیده‌ای درون فهرست حرفه‌ای خود دارید، شما می‌ت��انید این گزینه را فعال کنید تا محتوای کشویی را با AJAX بارگذاری کند و زمان بارگذاری وب‌سایت را بهبود دهد."
+msgstr "اگر داده‌های پیچیده‌ای درون فهرست حرفه‌ای خود دارید، شما می‌توانید این گزینه را فعال کنید تا محتوای کشویی را با AJAX بارگذاری کند و زمان بارگذاری وب‌سایت را بهبود دهد."
 
 #: framework/premium/extensions/mega-menu/options.php:403
 msgid "Content Visibility"
@@ -5466,7 +5466,7 @@ msgstr ""
 
 #: framework/helpers/exts-configs.php:263
 msgid "A set of features that lets you create easily your dream products wishlists and share them with friends and family."
-msgstr "دسته‌ای از امکانات که به شما اجازه می‌دهد به سادگی لیست علاقه‌مندی‌های محصول دلخواه خود را بسازید و آن‌ها را با دوستان و خانواده به اشتراک بگذارید."
+msgstr "دسته‌ای از امکانات که به شما اجازه ��ی‌دهد به سادگی لیست علاقه‌مندی‌های محصول دلخواه خود را بسازید و آن‌ها را با دوستان و خانواده به اشتراک بگذارید."
 
 #: framework/helpers/exts-configs.php:270
 msgid "Compare View"

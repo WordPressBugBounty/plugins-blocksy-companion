@@ -29,7 +29,7 @@ msgstr "Mỗi 12 giờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/feature.php:417
 msgid "<p><strong>🔥 Hurry up! Your selected items are reserved for {time} minutes.</strong></p>"
-msgstr "<p><strong>🔥 Nhanh tay lên! Các món bạn chọn đang được giữ chỗ trong {time} phút.</strong></p>"
+msgstr "<p><strong>🔥 Nhanh tay lên! Các món bạn chọn đang được gi��� chỗ trong {time} phút.</strong></p>"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:28
 msgid "Countdown Duration"
@@ -264,7 +264,7 @@ msgstr "Cộng đồng Facebook"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:35
 msgid "Share ideas, help others, ask questions and discuss your next project in our friendly community."
-msgstr "Chia sẻ ý tưởng, giúp đỡ người khác, đặt câu hỏi và thảo luận về dự án tiếp theo của bạn trong cộng đồng thân thiện của chúng tôi."
+msgstr "Chia s��� ý tưởng, giúp đỡ người khác, đặt câu hỏi và thảo luận về dự án tiếp theo của bạn trong cộng đồng thân thiện của chúng tôi."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:43
 msgid "Join Our Community"
@@ -612,7 +612,7 @@ msgstr "Đã có phiên bản mới của trình nhập này. Vui lòng cập nh
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
-msgstr "Chào bạn! Hãy tải lên tệp WordPress eXtended RSS (WXR) của bạn và chúng tôi sẽ nhập bài vi���t, trang, bình luận, trường tùy chỉnh, chuyên mục và thẻ vào trang web này."
+msgstr "Chào bạn! Hãy tải lên tệp WordPress eXtended RSS (WXR) của bạn và chúng tôi sẽ nhập bài vi��t, trang, bình luận, trường tùy chỉnh, chuyên mục và thẻ vào trang web này."
 
 #: framework/features/demo-install/wp-importer.php:1490
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
@@ -707,7 +707,7 @@ msgstr "Hiển thị ảnh %s"
 
 #: static/js/editor/blocks/dynamic-data/Preview.js:57
 msgid "Field not found"
-msgstr "Kh��ng tìm thấy trường"
+msgstr "Không tìm thấy trường"
 
 #: static/js/editor/blocks/dynamic-data/components/AlignmentControls.js:126
 msgid "Change content position"
@@ -1997,7 +1997,7 @@ msgstr "Hiển thị các bộ lọc hiện đang hoạt động."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:52
 msgid "Category 1"
-msgstr "Danh mục 1"
+msgstr "Danh m��c 1"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:58
 msgid "Category 2"
@@ -2324,7 +2324,7 @@ msgstr "Mục phân loại"
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:88
 #: static/js/editor/blocks/dynamic-data/preview-parts/WpFieldPreview.js:73
 msgid "Archive Title"
-msgstr "Tiêu đề lưu trữ"
+msgstr "Tiêu đề lưu tr��"
 
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:93
 #: static/js/editor/blocks/dynamic-data/preview-parts/WpFieldPreview.js:77
@@ -3445,7 +3445,7 @@ msgstr "Đại lý"
 #: static/js/dashboard/helpers/useUpsellModal.js:11
 #: static/js/dashboard/screens/DemoInstall/filters/DemoListFilters.js:14
 msgid "Free"
-msgstr "Miễn phí"
+msgstr "Mi��n phí"
 
 #: static/js/dashboard/helpers/useUpsellModal.js:119
 msgid "Compare Plans"
@@ -3522,7 +3522,7 @@ msgstr "Tiện ích để lọc vòng lặp sản phẩm WooCommerce theo danh m
 
 #: framework/premium/static/js/blocks/ContentBlock.js:27
 msgid "Insert a specific Content Block anywhere on the site."
-msgstr "Chèn một Khối nội dung cụ thể ở bất kỳ đâu trên trang web."
+msgstr "Chèn một Khối nội dung cụ th�� ở bất kỳ đâu trên trang web."
 
 #: framework/premium/static/js/hooks/CreateHook.js:156
 msgid "Nothing Found Template"
@@ -5197,7 +5197,7 @@ msgstr "Bản sao bài viết đã được tạo."
 
 #: framework/premium/features/local-gravatars.php:36
 msgid "Store Gravatars Locally"
-msgstr "Lưu trữ Gravatars c���c bộ"
+msgstr "Lưu trữ Gravatars cục bộ"
 
 #: framework/premium/features/local-gravatars.php:41
 msgid "Store and load Gravatars locally for increased privacy and performance."
@@ -7527,7 +7527,7 @@ msgstr "Sau sản phẩm đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:696
 msgid "Before single product excerpt"
-msgstr "Trước đoạn trích sản phẩm đơn"
+msgstr "Trước đo���n trích sản phẩm đơn"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:701
 msgid "After single product excerpt"
