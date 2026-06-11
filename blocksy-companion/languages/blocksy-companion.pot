@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-05-29 14:11+0000\n"
+"POT-Creation-Date: 2026-06-11 16:50+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -692,7 +692,7 @@ msgid ""
 msgstr ""
 
 #: framework/helpers/exts-configs.php:334,
-#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:213,
+#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:202,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:8
 msgid "Free Shipping Bar"
 msgstr ""
@@ -1937,7 +1937,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:613,
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:364,
 #: framework/premium/extensions/woocommerce-extra/features/share-box-layer/feature.php:215,
-#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:223,
+#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:212,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:273,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:296,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:948,
@@ -7740,15 +7740,15 @@ msgstr ""
 msgid "Product Price & Stock Visibility"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-cart/feature.php:172
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-cart/feature.php:200
 msgid "Shopping cart panel"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-cart/feature.php:180
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-cart/feature.php:208
 msgid "Shopping Cart"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/offcanvas-cart/feature.php:182
+#: framework/premium/extensions/woocommerce-extra/features/offcanvas-cart/feature.php:210
 msgid "Close cart drawer"
 msgstr ""
 
@@ -8109,21 +8109,21 @@ msgstr ""
 msgid "Share Box"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:216
+#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:205
 msgid "Show if cart is empty"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:477,
+#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:504,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:184
 msgid "Congratulations! You got free shipping 🎉"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:454,
+#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:481,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:143
 msgid "Add {price} more to get free shipping!"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:467,
+#: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:494,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:168
 msgid "Add {items} more items to get free shipping!"
 msgstr ""
@@ -9769,11 +9769,11 @@ msgstr ""
 msgid "Sidebar name"
 msgstr ""
 
-#: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:149
+#: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:152
 msgid "White Label Extension"
 msgstr ""
 
-#: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:161
+#: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:164
 msgid ""
 "Please note that disabling this option will hide the white-label extension. "
 "To restore it, press the SHIFT key while clicking the dashboard logo."
@@ -9908,7 +9908,7 @@ msgstr ""
 msgid "Button Link"
 msgstr ""
 
-#: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:159
+#: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:156
 msgid "Save Options"
 msgstr ""
 
