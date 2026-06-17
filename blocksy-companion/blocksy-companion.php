@@ -3,14 +3,14 @@
 /*
 Plugin Name: Blocksy Companion
 Description: This plugin is the companion for the Blocksy theme, it runs and adds its enhacements only if the Blocksy theme is installed and active.
-Version: 2.1.45
+Version: 2.1.46
 Author: CreativeThemes
 Author URI: https://creativethemes.com
 Text Domain: blocksy-companion
 Domain Path: /languages/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Requires at least: 6.5
+Requires at least: 6.7
 Requires PHP: 7.0
 */
 if ( !defined( 'ABSPATH' ) ) {

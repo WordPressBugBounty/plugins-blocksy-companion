@@ -489,7 +489,7 @@ msgstr "Przypisz autorów"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
-msgstr "Aby u��atwić sobie edycję i zapisywanie zaimportowanych treści, warto przypisać autora zaimportowanego elementu do istniejącego użytkownika tej witryny, na przykład do głównego konta administratora."
+msgstr "Aby ułatwić sobie edycję i zapisywanie zaimportowanych treści, warto przypisać autora zaimportowanego elementu do istniejącego użytkownika tej witryny, na przykład do głównego konta administratora."
 
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
@@ -9737,7 +9737,7 @@ msgstr "Plik"
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/index.js:108
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:191
 msgid "Inline"
-msgstr "W tre��ci"
+msgstr "W treści"
 
 #: framework/features/google-analytics.php:81
 msgid "Google Analytics v4"

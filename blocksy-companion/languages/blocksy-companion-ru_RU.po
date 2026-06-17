@@ -98,7 +98,7 @@ msgstr "Прогресс <span>%s%%</span>"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:162
 msgid "Please wait until the WooCommerce product taxonomies lookup table is regenerated."
-msgstr "Подождите, пока б��дет обновлена таблица поиска таксономий товаров WooCommerce."
+msgstr "Подождите, пока будет обновлена таблица поиска таксономий товаров WooCommerce."
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:175
 msgid "Why is the table being regenerated?"
@@ -290,7 +290,7 @@ msgstr "База знаний"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:85
 msgid "Dive in with our documentation and learn tips and tricks about Blocksy and its components."
-msgstr "Ознакомьтесь с нашей документацией и получите советы и рекомендации по Blocksy и его компонентах."
+msgstr "Ознакомьтесь с нашей документа��ией и получите советы и рекомендации по Blocksy и его компонентах."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:93
 msgid "View Documentation"
@@ -409,7 +409,7 @@ msgstr "<strong>Ошибка</strong>: %s"
 
 #: framework/features/opengraph-meta-data.php:40
 msgid "X (Twitter) Username"
-msgstr "Имя пользователя X (Twitter)"
+msgstr "Имя по��ьзователя X (Twitter)"
 
 #: framework/features/svg.php:28
 msgid "This file does not appear to be a valid SVG file."
@@ -522,7 +522,7 @@ msgstr "или создать нового пользователя с имен�
 
 #: framework/features/demo-install/wp-importer.php:415
 msgid "or assign posts to an existing user:"
-msgstr "или назначать записи пользователю:"
+msgstr "или назначать запис�� пользователю:"
 
 #: framework/features/demo-install/wp-importer.php:413
 msgid "assign posts to an existing user:"
@@ -582,7 +582,7 @@ msgstr "Недопустимый тип файла"
 
 #: framework/features/demo-install/wp-importer.php:1288
 msgid "Remote server did not respond"
-msgstr "Удал��нный сервер не ответил"
+msgstr "Удалённый сервер не ответил"
 
 #. translators: %1$d is the HTTP response code, %2$s is the HTTP response
 #. message.
@@ -1431,7 +1431,7 @@ msgstr "Действия"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:218,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:320
 msgid "Invalid request"
-msgstr "Недопустимы�� запрос"
+msgstr "Недопустимый запрос"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:111
 msgid "No waitlist found"
@@ -1462,7 +1462,7 @@ msgstr "Вы уже включены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:303
 msgid "You have been added to the waitlist"
-msgstr "Вы добавлены в список ожидания"
+msgstr "Вы добавлены в ��писок ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
@@ -3112,7 +3112,7 @@ msgstr "Нехватка запасов"
 
 #: framework/helpers/exts-configs.php:370
 msgid "Show the remaining stock of a product to create a sense of urgency and encourage your visitors to make a purchase."
-msgstr "Отображение оставшихся запасов товара, для создания ощущения срочности и побуждения посетителей совершить покупку."
+msgstr "Отображение оставшихся запасов товара, для создания ощущения срочности и п��буждения посетителей совершить покупку."
 
 #. translators: %s is the product name (theme or plugin)
 #: framework/views/theme-mismatch.php:36
@@ -3429,7 +3429,7 @@ msgstr "Это профессиональный стартовый сайт"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:54
 msgid "Upgrade to any pro plan and get instant access to this starter site and many other features."
-msgstr "Перейдите на любой профессио��альный тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
+msgstr "Перейдите на любой профессиональный тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:61
 msgid "Upgrade to the business or agency plan and get instant access to this starter site and many other features."
@@ -4541,7 +4541,7 @@ msgstr "Заголовок партнёрской ссылки"
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:57,
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:90
 msgid "Open Button Link In New Tab"
-msgstr "Открывать кнопкой новую вкладку"
+msgstr "Открывать кнопкой ��овую вкладку"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-page/options.php:14
 msgid "Quantity Auto Update"

@@ -1,11 +1,11 @@
 === Blocksy Companion ===
 Tags: widget, widgets
-Requires at least: 6.5
+Requires at least: 6.7
 Requires PHP: 7.0
 Tested up to: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.45
+Stable tag: 2.1.46
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,14 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.46: 2026-06-17
+- Improvement: Account modal - better handling for login verification and interstitial steps
+- Improvement: Account modal - support for "All in One WP Security" plugin
+- Improvement: Dynamic data block - prevent unnecessary `aria-label` on unlinked images
+- Improvement: Dynamic data block - support semantic date output with `<time>` tag
+- Improvement: Product reviews - ensure product description post meta field is correctly sanitized upon save and display in frontend
+- Fix: Newsletter subscribe - fix GDPR checkbox ID collisions
+
 2.1.45: 2026-06-11
 - Improvement: General fixes and improvements
 

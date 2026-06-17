@@ -466,7 +466,7 @@ msgstr "Насолоджуйтесь!"
 
 #: framework/features/demo-install/wp-importer.php:235
 msgid "Remember to update the passwords and roles of imported users."
-msgstr "Не забудьте оновити паролі та ролі імпортованих користувачів."
+msgstr "Не забудьте оновити паролі та ролі ім��ортованих користувачів."
 
 #. translators: %s is the path to the WXR file.
 #: framework/features/demo-install/wp-importer.php:258
@@ -485,7 +485,7 @@ msgstr "Не вдалося імпортувати автора %s. Його п�
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
-msgstr "Призначити авторів"
+msgstr "Призначити ав��орів"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
@@ -494,7 +494,7 @@ msgstr "Щоб спростити редагування та збереженн
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
 msgid "If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details will be necessary."
-msgstr "Якщо в WordPress буде створено нового корис��увача, новий пароль буде згенеровано випадковим чином, а роль нового користувача буде встановлено як %s. Потрібно буде вручну змінити дані нового користувача."
+msgstr "Якщо в WordPress буде створено нового користувача, новий пароль буде згенеровано випадковим чином, а роль нового користувача буде встановлено як %s. Потрібно буде вручну змінити дані нового користувача."
 
 #: framework/features/demo-install/wp-importer.php:371
 msgid "Import Attachments"
@@ -610,7 +610,7 @@ msgstr "Імпорт WordPress"
 #. translators: %s is the new version number.
 #: framework/features/demo-install/wp-importer.php:1468
 msgid "A new version of this importer is available. Please update to version %s to ensure compatibility with newer export files."
-msgstr "Доступна нова версія цього імпортера. Оновіть його до версії %s, щоб заб��зпечити сумісність з новими файлами експорту."
+msgstr "Доступна нова версія цього імпортера. Оновіть його до версії %s, щоб забезпечити сумісність з новими файлами експорту."
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
@@ -2519,7 +2519,7 @@ msgstr "Спадкувати з налаштувальника"
 #: static/js/editor/blocks/query/edit/PostsPlaceholder.js:69
 #: static/js/editor/blocks/tax-query/edit/TermsPlaceholder.js:57
 msgid "Choose Pattern"
-msgstr "Оберіть пате��н"
+msgstr "Оберіть патерн"
 
 #: static/js/editor/blocks/query/edit/TaxonomyControls.js:167
 msgid "Search for a term"
@@ -2536,7 +2536,7 @@ msgstr "Супутні"
 #: static/js/editor/blocks/query/index.js:13
 #: static/js/editor/blocks/tax-query/index.js:13
 msgid "Create advanced queries based on your specified criterias."
-msgstr "Створення розширених запитів на основі заданих критеріїв."
+msgstr "��творення розширених запитів на основі заданих критеріїв."
 
 #: static/js/editor/blocks/search/Edit.js:163
 msgid "Button Outside"
@@ -2648,7 +2648,7 @@ msgstr "Скинути всі"
 
 #: static/js/options/ConditionsManager/ExpireCondition.js:119
 msgid "The expiration date cannot be set earlier than the start date."
-msgstr "Дата закінчення терміну не може бути раніше дати початку дії."
+msgstr "Дата закінчення ��ерміну не може бути раніше дати початку дії."
 
 #: framework/features/blocks/about-me/options.php:207,
 #: framework/features/blocks/share-box/options.php:66,
@@ -3451,7 +3451,7 @@ msgstr "Безкоштовний"
 
 #: static/js/dashboard/helpers/useUpsellModal.js:119
 msgid "Compare Plans"
-msgstr "Порівняння тари��ів"
+msgstr "Порівняння тарифів"
 
 #: static/js/dashboard/helpers/useUpsellModal.js:17
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:107
@@ -3751,7 +3751,7 @@ msgstr "Отримання..."
 
 #: framework/premium/extensions/adobe-typekit/dashboard-static/js/AdobeTypekit.js:164
 msgid "Please enter a valid Project ID to get all fonts."
-msgstr "Введіть дійсний ID проекту, щоб отримати всі шрифти."
+msgstr "Вве��іть дійсний ID проекту, щоб отримати всі шрифти."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:302
 msgid "This provider is used only for testing purposes. It doesnt register any real subscribers."
@@ -6942,7 +6942,7 @@ msgstr "Умови відображення панелі ярликів"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1028
 msgid "Add one or more conditions to display the shortcuts bar."
-msgstr "Додайте одну або кілька умов для відображення панелі ярликів."
+msgstr "До��айте одну або кілька умов для відображення панелі ярликів."
 
 #: framework/premium/extensions/shortcuts/customizer.php:1052,
 #: framework/features/header/items/account/options.php:1918,
@@ -8051,7 +8051,7 @@ msgstr "Ви можете налаштувати соціальні URL-адре
 #: framework/features/blocks/socials/options.php:62,
 #: framework/premium/features/premium-header/items/contacts/options.php:405
 msgid "Open links in new tab"
-msgstr "Відкривати посила��ня в новій вкладці"
+msgstr "Відкривати посилання в новій вкладці"
 
 #: framework/features/blocks/about-me/options.php:175,
 #: framework/features/blocks/contact-info/options.php:527,
@@ -8690,7 +8690,7 @@ msgstr "Горизонтальний інтервал"
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:115,
 #: framework/premium/features/premium-header/items/language-switcher/options/dropdown.php:55
 msgid "Items Vertical Spacing"
-msgstr "Вертикальний інт��рвал"
+msgstr "Вертикальний інтервал"
 
 #: framework/premium/extensions/post-types-extra/features/filtering/customizer.php:127
 msgid "Container Bottom Spacing"
@@ -11508,7 +11508,7 @@ msgstr "Розсилка"
 #: static/js/editor/blocks/contact-info/Edit.js:107
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:276
 msgid "Text"
-msgstr "Т��кст"
+msgstr "Текст"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:19,
 #: framework/features/blocks/about-me/options.php:77

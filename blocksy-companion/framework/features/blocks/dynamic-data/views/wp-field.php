@@ -190,10 +190,24 @@ if ($field === 'wp:date') {
 		}
 	}
 
-	$value = get_the_date($date_format);
+	$value = blocksy_html_tag(
+		'time',
+		[
+			'datetime' => get_the_date('c'),
+			'itemprop' => 'datePublished'
+		],
+		get_the_date($date_format)
+	);
 
 	if (blocksy_akg('date_type', $attributes, 'published') === 'modified') {
-		$value = get_the_modified_date($date_format);
+		$value = blocksy_html_tag(
+			'time',
+			[
+				'datetime' => get_the_modified_date('c'),
+				'itemprop' => 'dateModified'
+			],
+			get_the_modified_date($date_format)
+		);
 	}
 
 	if ($has_field_link) {
