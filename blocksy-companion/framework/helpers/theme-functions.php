@@ -14,10 +14,10 @@ namespace Blocksy;
 // Right now, only five functions must be protected with this proxy:
 //
 // - blocksy_get_theme_mod()
-// - blocksy_get_variables_from_file()
 // - blocksy_manager()
 // - blocksy_get_search_post_type()
 // - blocksy_has_dynamic_css_in_frontend()
+// - blocksy_theme_get_dynamic_styles()
 //
 // If more functions will be called earlier than `after_setup_theme`, they
 // should be added here and should be only called through this proxy object.
@@ -57,7 +57,6 @@ class ThemeFunctions {
 
 		$functions_with_default = [
 			'blocksy_get_theme_mod',
-			'blocksy_get_variables_from_file',
 		];
 
 		// Special case for blocksy_get_theme_mod, when we know the default

@@ -67,7 +67,7 @@ class GutenbergBlock {
 			return '';
 		}
 
-		return blocksy_render_view($file_path, [
+		return blocksy_companion_render_view($file_path, [
 			'atts' => $attributes,
 		]);
 	}
@@ -106,7 +106,7 @@ class GutenbergBlock {
 			function ($data) use ($options_file) {
 				$options = blocksy_akg(
 					'options',
-					blocksy_companion_theme_functions()->blocksy_get_variables_from_file(
+					blocksy_companion_get_variables_from_file(
 						$options_file,
 						['options' => []]
 					)

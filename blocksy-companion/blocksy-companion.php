@@ -3,7 +3,7 @@
 /*
 Plugin Name: Blocksy Companion
 Description: This plugin is the companion for the Blocksy theme, it runs and adds its enhacements only if the Blocksy theme is installed and active.
-Version: 2.1.46
+Version: 2.1.47
 Author: CreativeThemes
 Author URI: https://creativethemes.com
 Text Domain: blocksy-companion
@@ -49,6 +49,17 @@ if ( function_exists( 'blocksy_companion_fs' ) || class_exists( '\\Blocksy\\Plug
                 $blocksy_active_extensions = [];
             }
             if ( in_array( 'white-label', $blocksy_active_extensions ) && ($blocksy_fs_instance->is_plan( 'agency' ) || $blocksy_fs_instance->is_plan( 'agency_v2' )) ) {
+                /**
+                 * Filters the Blocksy white-label settings.
+                 *
+                 * Lets agency-plan sites override the stored white-label
+                 * configuration from code instead of the saved option.
+                 *
+                 * @since 1.7.18
+                 *
+                 * @param array $settings White-label settings. Default the stored
+                 *                         `blocksy_ext_white_label_settings` option, or [].
+                 */
                 $blocksy_wl_settings = apply_filters( 'blocksy:ext:white-label:settings', get_option( 'blocksy_ext_white_label_settings', [] ) );
                 if ( $blocksy_wl_settings && isset( $blocksy_wl_settings['hide_billing_account'] ) && $blocksy_wl_settings['hide_billing_account'] && !is_multisite() ) {
                     $blocksy_has_account = false;
@@ -88,6 +99,11 @@ if ( function_exists( 'blocksy_companion_fs' ) || class_exists( '\\Blocksy\\Plug
             }
 
             blocksy_companion_fs();
+            /**
+             * Fires after the Blocksy Companion Freemius SDK instance has loaded.
+             *
+             * @since 2.1.36
+             */
             do_action( 'blocksy_companion_fs_loaded' );
         }
     }

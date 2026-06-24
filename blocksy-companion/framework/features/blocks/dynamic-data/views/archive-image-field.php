@@ -62,7 +62,7 @@ if ($term_id) {
 	}
 }
 
-blocksy_render_view_e(
+blocksy_companion_render_view_e(
 	dirname(__FILE__) . '/image-field.php',
 	[
 		'attributes' => $attributes,

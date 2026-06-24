@@ -20,7 +20,7 @@ class DynamicData {
 		add_filter('blocksy:block-editor:localized_data', function ($data) {
 			$options = blocksy_akg(
 				'options',
-				blocksy_companion_theme_functions()->blocksy_get_variables_from_file(
+				blocksy_companion_get_variables_from_file(
 					dirname(__FILE__) . '/options.php',
 					['options' => []]
 				)
@@ -180,7 +180,7 @@ class DynamicData {
 			setup_postdata($post);
 		}
 
-		$content = blocksy_render_view(
+		$content = blocksy_companion_render_view(
 			dirname(__FILE__) . '/view.php',
 			[
 				'attributes' => $attributes,

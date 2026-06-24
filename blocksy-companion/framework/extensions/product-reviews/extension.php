@@ -261,7 +261,7 @@ class BlocksyExtensionProductReviews {
 				return $layers;
 			}
 
-			$layers['overall_score'] = blocksy_get_product_review_overall_score();
+			$layers['overall_score'] = blocksy_companion_get_product_review_overall_score();
 
 			return $layers;
 		}, 10, 2);
@@ -368,7 +368,7 @@ class BlocksyExtensionProductReviews {
 					return;
 				}
 
-				blocksy_render_view_e(
+				blocksy_companion_render_view_e(
 					dirname(__FILE__) . '/views/single-top.php',
 					[]
 				);
@@ -541,7 +541,7 @@ class BlocksyExtensionProductReviews {
 	}
 
 	static public function add_global_styles($args) {
-		blocksy_theme_get_dynamic_styles(array_merge([
+		blocksy_companion_theme_functions()->blocksy_theme_get_dynamic_styles(array_merge([
 			'path' => dirname(__FILE__) . '/global.php',
 			'chunk' => 'global',
 		], $args));
@@ -652,7 +652,7 @@ class BlocksyExtensionProductReviews {
 					$values = [[]];
 				}
 
-				$options = blocksy_get_options(
+				$options = blocksy_companion_get_options(
 					dirname(__FILE__) . '/metabox.php',
 					[],
 					false
@@ -698,10 +698,10 @@ class BlocksyExtensionProductReviews {
 
 		$values = [];
 
-		if (isset($_POST['blocksy_product_review_options'][blocksy_post_name()])) {
+		if (isset($_POST['blocksy_product_review_options'][blocksy_companion_post_name()])) {
 			$values = json_decode(
 				// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-				wp_unslash($_POST['blocksy_product_review_options'][blocksy_post_name()]),
+				wp_unslash($_POST['blocksy_product_review_options'][blocksy_companion_post_name()]),
 				true
 			);
 		}

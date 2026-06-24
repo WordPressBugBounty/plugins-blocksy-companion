@@ -4,7 +4,7 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-function blocksy_ext_cookies_consent_output() {
+function blocksy_companion_ext_cookies_consent_output() {
 	$content = blocksy_companion_theme_functions()->blocksy_get_theme_mod(
 		'cookie_consent_content',
 		__('We use cookies to ensure that we give you the best experience on our website.', 'blocksy-companion')
@@ -45,7 +45,7 @@ function blocksy_ext_cookies_consent_output() {
 	return ob_get_clean();
 }
 
-function blocksy_ext_cookies_checkbox($prefix = '', $unique_suffix = '') {
+function blocksy_companion_ext_cookies_checkbox($prefix = '', $unique_suffix = '') {
 	ob_start();
 
 	if (! empty($prefix)) {

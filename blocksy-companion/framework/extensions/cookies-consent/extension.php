@@ -123,6 +123,18 @@ class BlocksyExtensionCookiesConsent {
 			add_filter('woocommerce_product_review_comment_form_args', [$this, 'change_comment_form']);
 		}, 999);
 
+		// Append the cookies consent checkbox to the blog comment form. The theme used
+		// to call the companion directly here; now the companion owns it through the
+		// native comment_form_defaults filter. Priority 6 — one above the theme's own
+		// priority-5 comment_form_defaults hook — guarantees this runs AFTER the theme,
+		// so the consent checkbox is appended after the theme's comment-form markup,
+		// preserving the original order (theme's notes/cookies first, then this).
+		add_filter('comment_form_defaults', function ($defaults) {
+			$defaults['comment_notes_after'] .= blocksy_companion_ext_cookies_checkbox('comment');
+
+			return $defaults;
+		}, 6);
+
 		add_filter(
 			'blocksy:footer:offcanvas-drawer',
 			function ($els, $payload) {
@@ -131,7 +143,7 @@ class BlocksyExtensionCookiesConsent {
 				}
 
 				$els[] = '<template id="ct-cookies-consent-template">'
-					. blocksy_ext_cookies_consent_output()
+					. blocksy_companion_ext_cookies_consent_output()
 					. '</template>';
 
 				return $els;
@@ -160,13 +172,13 @@ class BlocksyExtensionCookiesConsent {
 	}
 
 	public function change_comment_form($comment_form) {
-		$comment_form['comment_field'] .= blocksy_ext_cookies_checkbox('reviews');
+		$comment_form['comment_field'] .= blocksy_companion_ext_cookies_checkbox('reviews');
 
 		return $comment_form;
 	}
 
 	static public function add_global_styles($args) {
-		blocksy_theme_get_dynamic_styles(array_merge([
+		blocksy_companion_theme_functions()->blocksy_theme_get_dynamic_styles(array_merge([
 			'path' => dirname(__FILE__) . '/global.php',
 			'chunk' => 'global',
 		], $args));
@@ -181,7 +193,7 @@ class BlocksyExtensionCookiesConsent {
 	}
 
 	public function add_options_panel($options) {
-		$options['cookie_consent_ext'] = blocksy_get_options(
+		$options['cookie_consent_ext'] = blocksy_companion_get_options(
 			dirname(__FILE__) . '/customizer.php',
 			[],
 			false

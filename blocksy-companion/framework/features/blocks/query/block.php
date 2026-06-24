@@ -573,7 +573,7 @@ class Query {
 				];
 
 				foreach ($posts_block_patterns as $posts_block_pattern) {
-					$pattern_data = blocksy_companion_theme_functions()->blocksy_get_variables_from_file(
+					$pattern_data = blocksy_companion_get_variables_from_file(
 						__DIR__ . '/block-patterns/' . $posts_block_pattern . '.php',
 						['pattern' => []]
 					);
@@ -1085,7 +1085,7 @@ class Query {
 		$tablet_css = new \Blocksy_Css_Injector();
 		$mobile_css = new \Blocksy_Css_Injector();
 
-		blocksy_theme_get_dynamic_styles([
+		blocksy_companion_theme_functions()->blocksy_theme_get_dynamic_styles([
 			'name' => 'global/posts-listing',
 			'css' => $args['css'],
 			'mobile_css' => $args['mobile_css'],

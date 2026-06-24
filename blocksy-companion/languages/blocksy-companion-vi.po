@@ -474,7 +474,7 @@ msgstr "Không tìm thấy tệp xuất tại <code>%s</code>. Có thể nguyên
 #. translators: %s is the WXR version number.
 #: framework/features/demo-install/wp-importer.php:282
 msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
-msgstr "Tệp WXR này (phiên bản %s) có thể không được hỗ trợ bởi phiên bản trình nhập liệu hiện tại. Vui lòng cân nhắc cập nh��t."
+msgstr "Tệp WXR này (phiên bản %s) có thể không được hỗ trợ bởi phiên bản trình nhập liệu hiện tại. Vui lòng cân nhắc cập nhật."
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
@@ -1261,7 +1261,7 @@ msgstr "Xem thêm thông tin về cách tạo danh sách trong FluentCRM %stại
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/AllFonts.js:123
 msgid "Modern Font Stack"
-msgstr "Bộ phông chữ hi��n đại"
+msgstr "Bộ phông chữ hiện đại"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/CustomFonts.js:142
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:330
@@ -5197,7 +5197,7 @@ msgstr "Bản sao bài viết đã được tạo."
 
 #: framework/premium/features/local-gravatars.php:36
 msgid "Store Gravatars Locally"
-msgstr "Lưu trữ Gravatars cục b���"
+msgstr "Lưu trữ Gravatars cục bộ"
 
 #: framework/premium/features/local-gravatars.php:41
 msgid "Store and load Gravatars locally for increased privacy and performance."
@@ -5331,7 +5331,7 @@ msgstr "Màu tiêu đề Module"
 
 #: framework/extensions/trending/customizer.php:671
 msgid "Posts Title Font"
-msgstr "Phông chữ Tiêu đề bài viết"
+msgstr "Phông chữ Tiêu đ��� bài viết"
 
 #: framework/extensions/trending/customizer.php:680
 msgid "Posts Title Font Color"
@@ -11184,7 +11184,7 @@ msgstr "Hàng trên cùng & hàng chính"
 
 #: framework/features/header/header-options.php:47
 msgid "All Rows"
-msgstr "Tất cả các hàng"
+msgstr "T��t cả các hàng"
 
 #: framework/features/header/header-options.php:52
 msgid "Main & Bottom Row"

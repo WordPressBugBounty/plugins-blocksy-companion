@@ -503,7 +503,7 @@ class TaxQuery {
 				];
 
 				foreach ($tax_block_patterns as $tax_block_pattern) {
-					$pattern_data = blocksy_companion_theme_functions()->blocksy_get_variables_from_file(
+					$pattern_data = blocksy_companion_get_variables_from_file(
 						__DIR__ . '/block-patterns/' . $tax_block_pattern . '.php',
 						['pattern' => []]
 					);

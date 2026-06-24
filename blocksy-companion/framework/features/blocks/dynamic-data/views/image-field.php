@@ -15,7 +15,7 @@ if ($view_type === 'cover') {
 		return;
 	}
 
-	blocksy_render_view_e(
+	blocksy_companion_render_view_e(
 		dirname(__FILE__) . '/cover-field.php',
 		[
 			'attributes' => $attributes,
