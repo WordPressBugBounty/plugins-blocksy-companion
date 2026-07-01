@@ -140,7 +140,7 @@ msgstr "Còn hàng"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:217
 msgid "Subscribers"
-msgstr "Người đăng ký"
+msgstr "Ng��ời đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:224
 msgid "Pending entries"
@@ -354,7 +354,7 @@ msgstr "Vui lòng nhập URL hợp lệ."
 
 #: framework/theme-integration.php:93
 msgid "Please enter a valid date."
-msgstr "Vui lòng nhập ngày hợp lệ."
+msgstr "Vui lòng nhập ngày hợp l��."
 
 #: framework/theme-integration.php:94
 msgid "Please enter a valid date (ISO)."
@@ -4076,7 +4076,7 @@ msgstr "Thanh vận chuyển miễn phí"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:212
 msgid "Show if cart is empty"
-msgstr "Hiển thị nếu giỏ hàng trống"
+msgstr "Hiển thị nếu giỏ h��ng trống"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:445,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:180
@@ -5197,7 +5197,7 @@ msgstr "Bản sao bài viết đã được tạo."
 
 #: framework/premium/features/local-gravatars.php:36
 msgid "Store Gravatars Locally"
-msgstr "Lưu trữ Gravatars cục bộ"
+msgstr "Lưu trữ Gravatars cục b���"
 
 #: framework/premium/features/local-gravatars.php:41
 msgid "Store and load Gravatars locally for increased privacy and performance."
@@ -5331,7 +5331,7 @@ msgstr "Màu tiêu đề Module"
 
 #: framework/extensions/trending/customizer.php:671
 msgid "Posts Title Font"
-msgstr "Phông chữ Tiêu đ��� bài viết"
+msgstr "Phông chữ Tiêu đề bài viết"
 
 #: framework/extensions/trending/customizer.php:680
 msgid "Posts Title Font Color"
@@ -11184,7 +11184,7 @@ msgstr "Hàng trên cùng & hàng chính"
 
 #: framework/features/header/header-options.php:47
 msgid "All Rows"
-msgstr "T��t cả các hàng"
+msgstr "Tất cả các hàng"
 
 #: framework/features/header/header-options.php:52
 msgid "Main & Bottom Row"

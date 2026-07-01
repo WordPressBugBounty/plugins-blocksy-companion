@@ -489,7 +489,7 @@ msgstr "Dodijeli autore"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
-msgstr "Kako biste si olakšali uređivanje i spremanje uvezenog sadržaja, možda ćete htjeti dodijeliti autora uvezenog članka postojećem korisniku ove stranice, poput vašeg primarnog administratorskog računa."
+msgstr "Kako biste si olakšali uređivanje i spremanje uvezenog sadržaja, možda ćete htjeti dodijeliti autora uvezenog članka postojećem korisniku ove stranice, poput va��eg primarnog administratorskog računa."
 
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355

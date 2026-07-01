@@ -4,6 +4,13 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
+/**
+ * Post name.
+ */
+function blocksy_companion_post_name() {
+	return 'ct_options';
+}
+
 function blocksy_companion_call_gutenberg_function($original_function_name, $args = []) {
 	$gutenberg_function_name = str_replace(
 		'wp_',

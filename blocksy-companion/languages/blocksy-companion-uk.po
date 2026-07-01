@@ -98,7 +98,7 @@ msgstr "Прогрес <span>%s%%</span>"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:162
 msgid "Please wait until the WooCommerce product taxonomies lookup table is regenerated."
-msgstr "Зачекайте, поки буде оновлено таблицю пошуку таксономій то��арів WooCommerce."
+msgstr "Зачекайте, поки буде оновлено таблицю пошуку таксономій товарів WooCommerce."
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/taxonomies.php:175
 msgid "Why is the table being regenerated?"
@@ -178,7 +178,7 @@ msgstr "Детальну інформацію про те, як згенерув
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:352
 msgid "More information on how to generate an API key for Kit (ConvertKit) can be found %shere%s."
-msgstr "Детальну інформацію про те, як згенерувати API-ключ ConvertKit, можна знайти %sтут%s."
+msgstr "��етальну інформацію про те, як згенерувати API-ключ ConvertKit, можна знайти %sтут%s."
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:149
 msgid "White Label Extension"
@@ -290,7 +290,7 @@ msgstr "База знань"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:85
 msgid "Dive in with our documentation and learn tips and tricks about Blocksy and its components."
-msgstr "Ознакомьтесь с нашей документацией и получите советы и рекомендации по Blocksy и его компонен��ах."
+msgstr "Ознакомьтесь с нашей документацией и получите советы и рекомендации по Blocksy и его компонентах."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:93
 msgid "View Documentation"
@@ -336,7 +336,7 @@ msgstr "Пароль надійний"
 #: framework/theme-integration.php:76
 msgctxt "password mismatch"
 msgid "Mismatch"
-msgstr "Невідпо��ідність паролів"
+msgstr "Невідповідність паролів"
 
 #: framework/theme-integration.php:89
 msgid "This field is required"
@@ -376,7 +376,7 @@ msgstr "Введіть дійсний номер банківської карт
 
 #: framework/theme-integration.php:98
 msgid "Please enter the same value again."
-msgstr "Вве��іть те саме значення ще раз."
+msgstr "Введіть те саме значення ще раз."
 
 #: framework/theme-integration.php:99
 msgid "Please enter no more than {0} characters."
@@ -481,7 +481,7 @@ msgstr "Цей WXR-файл (версія %s) може не підтримува
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
 msgid "Failed to import author %s. Their posts will be attributed to the current user."
-msgstr "Не вдалося ��мпортувати автора %s. Його публікації будуть приписані до вашого профілю."
+msgstr "��е вдалося імпортувати автора %s. Його публікації будуть приписані до вашого профілю."
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
@@ -494,7 +494,7 @@ msgstr "Щоб спростити редагування та збереженн
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
 msgid "If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details will be necessary."
-msgstr "Якщо в WordPress буде створено нового користувача, новий пароль буде згенеро��ано випадковим чином, а роль нового користувача буде встановлено як %s. Потрібно буде вручну змінити дані нового користувача."
+msgstr "Якщо в WordPress буде створено нового користувача, новий пароль буде згенеровано випадковим чином, а роль нового користувача буде встановлено як %s. Потрібно буде вручну змінити дані нового користувача."
 
 #: framework/features/demo-install/wp-importer.php:371
 msgid "Import Attachments"
@@ -526,7 +526,7 @@ msgstr "або призначати записи користувачеві:"
 
 #: framework/features/demo-install/wp-importer.php:413
 msgid "assign posts to an existing user:"
-msgstr "призначат�� записи користувачеві:"
+msgstr "призначати записи користувачеві:"
 
 #: framework/features/demo-install/wp-importer.php:421
 msgid "- Select -"
@@ -610,7 +610,7 @@ msgstr "Імпорт WordPress"
 #. translators: %s is the new version number.
 #: framework/features/demo-install/wp-importer.php:1468
 msgid "A new version of this importer is available. Please update to version %s to ensure compatibility with newer export files."
-msgstr "Доступна нова версія цього імпортера. Оновіть його до версії %s, щоб забезпечити сумісність з новими файлами експорту."
+msgstr "Доступна нова версія цього імпортера. Оновіть його до версії %s, щоб забезпечити сумісність з ��овими файлами експорту."
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
@@ -1466,7 +1466,7 @@ msgstr "Ви додані до списку очікування"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
-msgstr "Ви видалені зі списку очікування"
+msgstr "Ви вида��ені зі списку очікування"
 
 #. translators: %1$s is the number of users, %2$s is the plural form
 #. (user/users)
@@ -1544,7 +1544,7 @@ msgstr "Товар, на який ви чекаєте, знову в наявн�
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr "Гарні новини! Товар, на який ви так довго чекали, знову в наявності!"
+msgstr "Гарні новини! Тов��р, на який ви так довго чекали, знову в наявності!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
@@ -1601,7 +1601,7 @@ msgstr "Введіть свою електронну адресу, щоб отр
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:83
 msgid "Great! You have been added to the waitlist for this product. Please check your inbox and confirm the subscription to this waitlist."
-msgstr "Ви були додані до списку очікування цього товару. Перевірте свою поштову скриньку та підтвердіть своє включення до списку очікування."
+msgstr "Ви були додані до списку очікування цього товару. Перевірте свою поштову скриньку та підтвердіть своє вкл��чення до списку очікування."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:111
 msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
@@ -2536,7 +2536,7 @@ msgstr "Супутні"
 #: static/js/editor/blocks/query/index.js:13
 #: static/js/editor/blocks/tax-query/index.js:13
 msgid "Create advanced queries based on your specified criterias."
-msgstr "��творення розширених запитів на основі заданих критеріїв."
+msgstr "Створення розширених запитів на основі заданих критеріїв."
 
 #: static/js/editor/blocks/search/Edit.js:163
 msgid "Button Outside"
@@ -2648,7 +2648,7 @@ msgstr "Скинути всі"
 
 #: static/js/options/ConditionsManager/ExpireCondition.js:119
 msgid "The expiration date cannot be set earlier than the start date."
-msgstr "Дата закінчення ��ерміну не може бути раніше дати початку дії."
+msgstr "Дата закінчення терміну не може бути раніше дати початку дії."
 
 #: framework/features/blocks/about-me/options.php:207,
 #: framework/features/blocks/share-box/options.php:66,
@@ -2859,7 +2859,7 @@ msgstr "Записи - макет 2"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-3.php:4
 msgid "Posts - Layout 3"
-msgstr "Записи - макет 3"
+msgstr "��аписи - макет 3"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-4.php:4
 msgid "Posts - Layout 4"
@@ -2965,7 +2965,7 @@ msgstr "Початковий стан панелі"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:240
 msgid "Closed"
-msgstr "Зачинено"
+msgstr "Зачине��о"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:241
 msgid "Opened"
@@ -3034,7 +3034,7 @@ msgstr "Цільова кількість"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:90
 msgid "Amount of items the client has to buy in order to get free shipping."
-msgstr "Кількість товарів, які клієнт повинен придбати, щоб отр��мати безкоштовну доставку."
+msgstr "Кількість товарів, які клієнт повинен придбати, щоб отримати безкоштовну доставку."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:172
 msgid "You can use dynamic code tags such as {items} inside this option."
@@ -3751,7 +3751,7 @@ msgstr "Отримання..."
 
 #: framework/premium/extensions/adobe-typekit/dashboard-static/js/AdobeTypekit.js:164
 msgid "Please enter a valid Project ID to get all fonts."
-msgstr "Введіть дійсний ID проекту, щоб отримати всі шрифти."
+msgstr "Вве��іть дійсний ID проекту, щоб отримати всі шрифти."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:302
 msgid "This provider is used only for testing purposes. It doesnt register any real subscribers."
@@ -4309,7 +4309,7 @@ msgstr "Порядок вкладок"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-tabs/options.php:32
 msgid "Default tabs order: Description - 10, Additional Information - 20, Reviews - 30."
-msgstr "Порядок вкладок за замо��чуванням: опис - 10, додаткова інформація - 20, відгуки - 30."
+msgstr "Порядок вкладок за замовчуванням: опис - 10, додаткова інформація - 20, відгуки - 30."
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:106
 msgid "Payment Gateways"
@@ -11508,7 +11508,7 @@ msgstr "Розсилка"
 #: static/js/editor/blocks/contact-info/Edit.js:107
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:276
 msgid "Text"
-msgstr "Текст"
+msgstr "Т��кст"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:19,
 #: framework/features/blocks/about-me/options.php:77
