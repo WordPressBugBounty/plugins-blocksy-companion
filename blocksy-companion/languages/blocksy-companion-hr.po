@@ -489,7 +489,7 @@ msgstr "Dodijeli autore"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
-msgstr "Kako biste si olakšali uređivanje i spremanje uvezenog sadržaja, možda ćete htjeti dodijeliti autora uvezenog članka postojećem korisniku ove stranice, poput va��eg primarnog administratorskog računa."
+msgstr "Kako biste si olakšali uređivanje i spremanje uvezenog sadržaja, možda ćete htjeti dodijeliti autora uvezenog članka postojećem korisniku ove stranice, poput vašeg primarnog administratorskog računa."
 
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
@@ -5507,7 +5507,7 @@ msgstr "Prikaz približnog vremena čitanja članka kako bi posjetitelji znali �
 #: framework/helpers/exts-configs.php:149
 #: static/js/editor/blocks/dynamic-data/index.js:124
 msgid "Dynamic Data"
-msgstr "Dinamički podaci"
+msgstr "Dinami��ki podaci"
 
 #: framework/helpers/exts-configs.php:150
 msgid "Integrates custom fields solutions in the meta layers of a post and presents additional information."

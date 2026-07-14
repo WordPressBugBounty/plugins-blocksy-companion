@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-04-08 14:30:54+0000\n"
+"PO-Revision-Date: 2026-07-06 13:54:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -713,7 +713,7 @@ msgstr "Nie znaleziono pola"
 
 #: static/js/editor/blocks/dynamic-data/components/AlignmentControls.js:126
 msgid "Change content position"
-msgstr "Zmień położenie treści"
+msgstr "Zmień pozycję treści"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:129
 msgid "Layout"
@@ -721,71 +721,71 @@ msgstr "Układ"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:143
 msgid "Inner blocks use content width"
-msgstr "Bloki wewnętrzne wykorzystują szerokość treści"
+msgstr "Bloki wewnętrzne uwzględniają szerokość treści"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:153
 msgid "Nested blocks use content width with options for full and wide widths."
-msgstr "Bloki zagnieżdżone wykorzystują szerokość treści z opcjami pełnej i szerokiej szerokości."
+msgstr "Zagnieżdżone bloki używają szerokości treści motywu z opcjami pełnej oraz większej szerokości."
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:156
 msgid "Nested blocks will fill the width of this container. Toggle to constrain."
-msgstr "Zagnieżdżone bloki wypełnią całą szerokość tego kontenera. Przełącz, aby ograniczyć szerokość."
+msgstr "Zagnieżdżone bloki wypełnią szerokość kontenera. Przełącz aby wymusić."
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:165
 msgid "Content width"
-msgstr ""
+msgstr "Szerokość treści"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:186
 msgid "Wide width"
-msgstr ""
+msgstr "Zwiększona szerokość"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:206
 msgid "Customize the width for all elements that are assigned to the center or wide columns."
-msgstr ""
+msgstr "Dostosuj szerokość wszystkich elementu przypisanych do wycentrowanych lub szerokich kolumn."
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:236
 msgid "Focal point"
-msgstr ""
+msgstr "Punkt centralny"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:269
 msgid "Fixed background"
-msgstr ""
+msgstr "Nieruchome tło"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:286
 msgid "Repeated background"
-msgstr ""
+msgstr "Tło powtarzalne"
 
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:218
 msgid "Minimum height"
-msgstr ""
+msgstr "Minimalna wysokość"
 
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:54
 msgid "Block Settings"
-msgstr ""
+msgstr "Ustawienia bloku"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:286
 msgid "Overlay"
-msgstr ""
+msgstr "Nakładka"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:462
 msgid "View Type"
-msgstr ""
+msgstr "Zobacz rodzaj"
 
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:811
 msgid "Overlay opacity"
-msgstr ""
+msgstr "Przezroczystość nakładki"
 
 #: static/js/editor/blocks/dynamic-data/index.js:113
 msgid "Dynamic Archive Image"
-msgstr ""
+msgstr "Obrazek archiwum dynamicznego"
 
 #: static/js/editor/blocks/dynamic-data/index.js:117
 msgid "Dynamic Archive Title"
-msgstr ""
+msgstr "Tytuł archiwum dynamicznego"
 
 #: static/js/editor/blocks/dynamic-data/index.js:121
 msgid "Dynamic Archive Description"
-msgstr ""
+msgstr "Opis archiwum dynamicznego"
 
 #: static/js/editor/blocks/dynamic-data/index.js:81
 msgid "Dynamic Attributes"
@@ -795,88 +795,88 @@ msgstr "Atrybuty dynamiczne"
 #: static/js/editor/blocks/query/Preview.js:126
 #: static/js/editor/blocks/tax-template/Edit.js:233
 msgid "No results found."
-msgstr ""
+msgstr "Brak wyników."
 
 #: static/js/editor/blocks/post-template/Edit.js:359
 #: static/js/editor/blocks/tax-template/Edit.js:296
 msgid "Desktop Columns"
-msgstr ""
+msgstr "Kolumny na komputerze"
 
 #: static/js/editor/blocks/query/Edit.js:192
 #: static/js/editor/blocks/tax-query/Edit.js:177
 msgid "Slideshow"
-msgstr ""
+msgstr "Pokaz slajdów"
 
 #: static/js/editor/blocks/query/Edit.js:205
 #: static/js/editor/blocks/tax-query/Edit.js:190
 msgid "Arrows"
-msgstr ""
+msgstr "Strzałki"
 
 #: static/js/editor/blocks/query/Edit.js:231
 #: static/js/editor/blocks/tax-query/Edit.js:216
 msgid "Autoplay Speed"
-msgstr ""
+msgstr "Prędkość autoodtwarzania"
 
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:253
 msgid "Level"
-msgstr ""
+msgstr "Poziom"
 
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:261
 msgid "All Taxonomies"
-msgstr ""
+msgstr "Wszystkie taksonomie"
 
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:269
 msgid "Only Parent Taxonomies"
-msgstr ""
+msgstr "Tylko taksonomie nadrzędne"
 
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:277
 msgid "Relevant Taxonomies"
-msgstr ""
+msgstr "Odpowiednie taksonomie"
 
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:293
 msgid "Taxonomies Visibility"
-msgstr ""
+msgstr "Widoczność taksonomii"
 
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:311
 msgid "Hide Empty Taxonomies"
-msgstr ""
+msgstr "Ukryj puste taksonomie"
 
 #: static/js/notifications/VersionMismatchNotice.js:112
 msgid "Update %s Now"
-msgstr ""
+msgstr "Aktualizuj teraz %s"
 
 #: static/js/editor/blocks/dynamic-data/components/utils.js:482
 msgctxt "Indicates this palette comes from the theme."
 msgid "Theme"
-msgstr ""
+msgstr "Motyw"
 
 #: static/js/editor/blocks/dynamic-data/components/utils.js:495
 msgctxt "Indicates this palette comes from WordPress."
 msgid "Default"
-msgstr ""
+msgstr "Domyślne"
 
 #: static/js/editor/blocks/dynamic-data/components/utils.js:504
 msgctxt "Indicates this palette is created by the user."
 msgid "Custom"
-msgstr ""
+msgstr "Własna"
 
 #: framework/helpers/exts-configs.php:286
 msgid "Advanced Product Brands"
-msgstr ""
+msgstr "Zaawansowane marki produktów"
 
 #: framework/helpers/exts-configs.php:395
 msgid "Display a curated list of recommended products based on customer selection to enhance their experience and increase conversion rates."
-msgstr ""
+msgstr "Wyświetlaj wyselekcjonowaną listę polecanych produktów w oparciu o wybór klienta, aby poprawić jego wrażenia i zwiększyć współczynniki konwersji."
 
 #. translators: %s is the product name (theme or plugin)
 #: framework/views/theme-mismatch.php:48
 #: static/js/notifications/VersionMismatchNotice.js:65
 msgid "In order to take full advantage of all features the core has to offer - please install and activate the latest version of %s."
-msgstr ""
+msgstr "Aby w pełni wykorzystać wszystkie funkcje oferowane przez rdzeń WordPressa, zainstaluj i włącz najnowszą wersję %s."
 
 #: framework/features/header/account-modal.php:23
 msgid "Account modal"
-msgstr ""
+msgstr "Konto modalne"
 
 #: framework/premium/features/premium-header.php:306
 msgid "Icon Gap"
@@ -885,15 +885,15 @@ msgstr ""
 #. translators: %s is the email address
 #: framework/extensions/newsletter-subscribe/providers/mailchimp.php:186
 msgid "%s is already a list member."
-msgstr ""
+msgstr "%s jest już członkiem listy."
 
 #: framework/features/blocks/dynamic-data/options.php:218
 msgid "Link to email"
-msgstr ""
+msgstr "Odnośnik do e-mail"
 
 #: framework/features/blocks/dynamic-data/options.php:223
 msgid "Link to website"
-msgstr ""
+msgstr "Odnośnik do witryny internetowej"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:439
 msgid "After certain number of cards"
@@ -930,55 +930,55 @@ msgstr ""
 #. translators: 1: the search query
 #: framework/features/blocks/dynamic-data/views/wp-field.php:33
 msgid "Search Results for %1$s"
-msgstr ""
+msgstr "Wyniki wyszukiwania dla %1$s"
 
 #: framework/features/blocks/tax-query/block-patterns/tax-layout-5.php:4
 msgid "Taxonomies - Layout 5"
-msgstr ""
+msgstr "Taksonomie - układ 5"
 
 #: framework/features/header/items/account/options.php:7
 msgid "Logout Action"
-msgstr ""
+msgstr "Akcja wylogowania"
 
 #: framework/features/header/items/account/options.php:15
 msgid "User Name"
-msgstr ""
+msgstr "Nazwa użytkownika"
 
 #: framework/features/header/items/account/options.php:19
 msgid "Available fields: {first_name}, {last_name}, {user_name}"
-msgstr ""
+msgstr "Dostępne pola: {first_name}, {last_name}, {user_name}."
 
 #: framework/features/header/items/account/options.php:293
 msgid "Open Login Modal"
-msgstr ""
+msgstr "Otwórz okno dialogowe logowania"
 
 #: framework/features/header/items/account/options.php:294
 msgid "Open Custom Link"
-msgstr ""
+msgstr "Otwórz własny odnośnik"
 
 #: framework/features/header/items/account/options.php:298,
 #: framework/features/header/items/account/options.php:299
 msgid "Open WooCommerce Account Page"
-msgstr ""
+msgstr "Otwórz stronę konta WooCommerce"
 
 #: framework/features/header/items/account/options.php:532,
 #: framework/features/header/items/account/options.php:985,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:83,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:92
 msgid "Icon Visibility"
-msgstr ""
+msgstr "Widoczność ikonki"
 
 #: framework/features/header/items/account/options.php:662
 msgid "Link to Page"
-msgstr ""
+msgstr "Odnośnik do strony"
 
 #: framework/features/header/items/account/options.php:757
 msgid "Top Offset (Sticky State)"
-msgstr ""
+msgstr "Odsunięcie górne (stan przypięty)"
 
 #: framework/features/header/items/account/options.php:785
 msgid "Page "
-msgstr ""
+msgstr "Strona "
 
 #: framework/premium/extensions/woocommerce-extra/features/attributes-layer.php:124
 msgid "Attributes Table"
@@ -1259,7 +1259,7 @@ msgstr ""
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:442
 msgid "More information on how to create a list in fluentcrm can be found %shere%s."
-msgstr ""
+msgstr "Więcej informacji na temat tworzenia listy we fluentcrm znajdziesz %stutaj%s."
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/AllFonts.js:123
 msgid "Modern Font Stack"

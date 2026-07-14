@@ -209,12 +209,6 @@ class DynamicData {
 			return '';
 		}
 
-		$styles = [
-			'desktop' => '',
-			'tablet' => '',
-			'mobile' => ''
-		];
-
 		$css = new \Blocksy_Css_Injector();
 		$tablet_css = new \Blocksy_Css_Injector();
 		$mobile_css = new \Blocksy_Css_Injector();
@@ -229,25 +223,11 @@ class DynamicData {
 				'chunk' => 'global'
 			]);
 
-		$styles['desktop'] .= $css->build_css_structure();
-		$styles['tablet'] .= $tablet_css->build_css_structure();
-		$styles['mobile'] .= $mobile_css->build_css_structure();
-
-		$final_css = '';
-
-		if (! empty($styles['desktop'])) {
-			$final_css .= $styles['desktop'];
-		}
-
-		if (! empty(trim($styles['tablet']))) {
-			$final_css .= '@media (max-width: 999.98px) {' . $styles['tablet'] . '}';
-		}
-
-		if (! empty(trim($styles['mobile']))) {
-			$final_css .= '@media (max-width: 689.98px) {' . $styles['mobile'] . '}';
-		}
-
-		return $final_css;
+		return blocksy_companion_assemble_dynamic_css([
+			'css' => $css,
+			'tablet_css' => $tablet_css,
+			'mobile_css' => $mobile_css,
+		]);
 	}
 }
 

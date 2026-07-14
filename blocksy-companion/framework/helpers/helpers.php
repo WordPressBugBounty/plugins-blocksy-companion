@@ -60,6 +60,39 @@ function blocksy_companion_get_version() {
 	return $version;
 }
 
+/**
+ * Assemble desktop + responsive dynamic CSS into a single string, wrapping the
+ * tablet/mobile output in Blocksy's breakpoint media queries. The css/tablet_css/
+ * mobile_css args are CSS-structure objects (respond to build_css_structure())
+ * or null.
+ *
+ * Centralizes the desktop + 999.98px + 689.98px pattern that was copied across
+ * the popups renderer, the mega-menu AJAX renderer, the dynamic-data block and
+ * the inline styles collector.
+ */
+function blocksy_companion_assemble_dynamic_css($args = []) {
+	$args = wp_parse_args($args, [
+		'css' => null,
+		'tablet_css' => null,
+		'mobile_css' => null,
+	]);
+
+	$result = $args['css'] ? trim($args['css']->build_css_structure()) : '';
+
+	$tablet = $args['tablet_css'] ? trim($args['tablet_css']->build_css_structure()) : '';
+	$mobile = $args['mobile_css'] ? trim($args['mobile_css']->build_css_structure()) : '';
+
+	if (! empty($tablet)) {
+		$result .= '@media (max-width: 999.98px) {' . $tablet . '}';
+	}
+
+	if (! empty($mobile)) {
+		$result .= '@media (max-width: 689.98px) {' . $mobile . '}';
+	}
+
+	return $result;
+}
+
 function blocksy_companion_get_capabilities() {
 	static $capabilities = null;
 
