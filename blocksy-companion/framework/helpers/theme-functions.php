@@ -11,13 +11,15 @@ namespace Blocksy;
 // For the blocksy_get_theme_mod() function, the special handling of the null
 // value is not necessary.
 //
-// Right now, only five functions must be protected with this proxy:
+// Right now, only seven functions must be protected with this proxy:
 //
 // - blocksy_get_theme_mod()
 // - blocksy_manager()
 // - blocksy_get_search_post_type()
 // - blocksy_has_dynamic_css_in_frontend()
 // - blocksy_theme_get_dynamic_styles()
+// - blocksy_woo_has_ajax_add_to_cart()
+// - blocksy_has_product_specific_layer()
 //
 // If more functions will be called earlier than `after_setup_theme`, they
 // should be added here and should be only called through this proxy object.
@@ -55,16 +57,18 @@ class ThemeFunctions {
 			return [];
 		}
 
+		// Functions whose default value is one of their arguments, keyed by
+		// that argument's index. Other helpers are not handled like this and
+		// the caller is supposed to handle the `null` return value.
 		$functions_with_default = [
-			'blocksy_get_theme_mod',
+			'blocksy_get_theme_mod' => 1,
 		];
 
-		// Special case for blocksy_get_theme_mod, when we know the default
-		// is the 2nd argument. Other helpers will not be handled like this
-		// and the caller are supposed to handle the `null` return value.
-		if (in_array($name, $functions_with_default)) {
-			if (count($arguments) > 1) {
-				return $arguments[1];
+		if (isset($functions_with_default[$name])) {
+			$default_index = $functions_with_default[$name];
+
+			if (count($arguments) > $default_index) {
+				return $arguments[$default_index];
 			}
 		}
 

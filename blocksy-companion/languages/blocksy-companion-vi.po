@@ -110,7 +110,7 @@ msgstr "Tái tạo bảng thủ công"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:533
 msgid "This tool will abort the regenerate product taxonomies lookup table regeneration. After this is done the process can be either started over, or resumed to continue where it stopped."
-msgstr "Công cụ này sẽ hủy bỏ quá trình tái t���o bảng tra cứu phân loại sản phẩm. Sau khi hủy, quy trình có thể được bắt đầu lại từ đầu hoặc tiếp tục từ điểm đã dừng."
+msgstr "Công cụ này sẽ hủy bỏ quá trình tái tạo bảng tra cứu phân loại sản phẩm. Sau khi hủy, quy trình có thể được bắt đầu lại từ đầu hoặc tiếp tục từ điểm đã dừng."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:63
 msgid "user"
@@ -386,7 +386,7 @@ msgstr "Vui lòng nhập ít nhất {0} ký tự."
 
 #: framework/theme-integration.php:101
 msgid "Please enter a value between {0} and {1} characters long."
-msgstr "Vui lòng nhập giá trị có độ dài từ {0} đến {1} ký tự."
+msgstr "Vui lòng nhập giá trị có độ dài từ {0} đến {1} ký t��."
 
 #: framework/theme-integration.php:102
 msgid "Please enter a value between {0} and {1}."
@@ -474,7 +474,7 @@ msgstr "Không tìm thấy tệp xuất tại <code>%s</code>. Có thể nguyên
 #. translators: %s is the WXR version number.
 #: framework/features/demo-install/wp-importer.php:282
 msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
-msgstr "Tệp WXR này (phiên bản %s) có thể không được hỗ trợ bởi phiên bản trình nhập liệu hiện tại. Vui lòng cân nhắc c���p nhật."
+msgstr "Tệp WXR này (phiên bản %s) có thể không được hỗ trợ bởi phiên bản trình nhập liệu hiện tại. Vui lòng cân nhắc cập nhật."
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
@@ -612,7 +612,7 @@ msgstr "Đã có phiên bản mới của trình nhập này. Vui lòng cập nh
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
-msgstr "Chào bạn! Hãy tải lên tệp WordPress eXtended RSS (WXR) của bạn và chúng tôi sẽ nhập bài viết, trang, bình luận, trường tùy chỉnh, chuyên mục và thẻ vào trang web này."
+msgstr "Chào bạn! Hãy tải lên tệp WordPress eXtended RSS (WXR) của bạn và chúng tôi s��� nhập bài viết, trang, bình luận, trường tùy chỉnh, chuyên mục và thẻ vào trang web này."
 
 #: framework/features/demo-install/wp-importer.php:1490
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
@@ -644,7 +644,7 @@ msgstr "Mẫu tùy chỉnh"
 
 #: framework/premium/features/content-blocks/options/hook.php:341
 msgid "Custom Class"
-msgstr "Lớp tùy chỉnh"
+msgstr "L��p tùy chỉnh"
 
 #: framework/premium/features/content-blocks/options/hook.php:349
 msgid "Custom Attribute"
