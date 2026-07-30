@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.50
+Stable tag: 2.1.51
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,10 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.51: 2026-07-30
+- Improvement: Dynamic data block - make sure the excerpt source is properly outputted on shop archive page
+- Improvement: Variation swatches - smarter and more resilient check for out of stock variations
+
 2.1.50: 2026-07-23
 - Improvement: General fixes and improvements
 

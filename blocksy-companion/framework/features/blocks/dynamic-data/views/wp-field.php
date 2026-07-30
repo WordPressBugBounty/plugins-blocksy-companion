@@ -49,18 +49,12 @@ if ($field === 'wp:archive_title') {
 if ($field === 'wp:archive_description') {
 	$value = get_the_archive_description();
 
-	$is_page = blocksy_is_page();
+	$special_post_id = blocksy_companion_theme_functions()->blocksy_get_special_post_id();
 
-	if (
-		function_exists('is_woocommerce')
-		&&
-		is_shop()
-		&&
-		$is_page
-	) {
+	if ($special_post_id) {
 		$value = blocksy_entry_excerpt([
-			'length' => PHP_INT_MAX,
-			'post_id' => $is_page
+			'length' => 'original',
+			'post_id' => $special_post_id
 		]);
 	}
 }
@@ -162,13 +156,21 @@ if ($field === 'wp:term_description') {
 }
 
 if ($field === 'wp:excerpt') {
+	$excerpt_args = [
+		'length' => intval(blocksy_akg('excerpt_length', $attributes, 40)),
+		'skip_container' => true
+	];
+
+	$special_post_id = blocksy_companion_theme_functions()->blocksy_get_special_post_id();
+
+	if ($special_post_id) {
+		$excerpt_args['post_id'] = $special_post_id;
+	}
+
 	if (blocksy_akg('tagName', $attributes, 'div') === 'p') {
 		remove_filter('the_excerpt', 'wpautop');
 	}
-	$value = blocksy_entry_excerpt([
-		'length' => intval(blocksy_akg('excerpt_length', $attributes, 40)),
-		'skip_container' => true
-	]);
+	$value = blocksy_entry_excerpt($excerpt_args);
 
 	if (empty($value) && ! empty($value_fallback)) {
 		$has_fallback = true;

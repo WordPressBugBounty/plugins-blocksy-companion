@@ -164,7 +164,7 @@ class DynamicData {
 
 		$post_id = get_the_ID();
 
-		$maybe_special_post_id = blocksy_get_special_post_id([
+		$maybe_special_post_id = blocksy_companion_theme_functions()->blocksy_get_special_post_id([
 			'context' => 'local',
 			'block_context' => $block->context,
 		]);
@@ -230,4 +230,3 @@ class DynamicData {
 		]);
 	}
 }
-

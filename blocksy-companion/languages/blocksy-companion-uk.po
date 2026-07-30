@@ -178,7 +178,7 @@ msgstr "Детальну інформацію про те, як згенерув
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:352
 msgid "More information on how to generate an API key for Kit (ConvertKit) can be found %shere%s."
-msgstr "Детальну ін��ормацію про те, як згенерувати API-ключ ConvertKit, можна знайти %sтут%s."
+msgstr "Дета��ьну інформацію про те, як згенерувати API-ключ ConvertKit, можна знайти %sтут%s."
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:149
 msgid "White Label Extension"
@@ -234,7 +234,7 @@ msgstr "Посилання кнопки"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:159
 msgid "Save Options"
-msgstr "Зберег��и параметри"
+msgstr "Зберегти параметри"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:34
 msgid "%s Content"
@@ -290,7 +290,7 @@ msgstr "База знань"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:85
 msgid "Dive in with our documentation and learn tips and tricks about Blocksy and its components."
-msgstr "Ознакомьтесь с нашей документацией и получите советы и рекомендации по Blocksy и его компонентах."
+msgstr "Ознакомьтесь с нашей документацией и получите советы и рекомендации по Blocksy и его ко��понентах."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:93
 msgid "View Documentation"
@@ -336,7 +336,7 @@ msgstr "Пароль надійний"
 #: framework/theme-integration.php:76
 msgctxt "password mismatch"
 msgid "Mismatch"
-msgstr "Невідповідність паролів"
+msgstr "Н��відповідність паролів"
 
 #: framework/theme-integration.php:89
 msgid "This field is required"
@@ -494,7 +494,7 @@ msgstr "Щоб спростити редагування та збереженн
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
 msgid "If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details will be necessary."
-msgstr "Якщо в WordPress буде створено нового користувача, новий пароль буде згенеровано випадковим чином, а роль нового користувача буде встановлено як %s. Потрібно буде вручну змінити дані нового користувача."
+msgstr "Якщо в WordPress буде створено нового користувача, новий пароль буде з��енеровано випадковим чином, а роль нового користувача буде встановлено як %s. Потрібно буде вручну змінити дані нового користувача."
 
 #: framework/features/demo-install/wp-importer.php:371
 msgid "Import Attachments"
@@ -526,7 +526,7 @@ msgstr "або призначати записи користувачеві:"
 
 #: framework/features/demo-install/wp-importer.php:413
 msgid "assign posts to an existing user:"
-msgstr "призначати записи користувачеві:"
+msgstr "при��начати записи користувачеві:"
 
 #: framework/features/demo-install/wp-importer.php:421
 msgid "- Select -"
@@ -610,7 +610,7 @@ msgstr "Імпорт WordPress"
 #. translators: %s is the new version number.
 #: framework/features/demo-install/wp-importer.php:1468
 msgid "A new version of this importer is available. Please update to version %s to ensure compatibility with newer export files."
-msgstr "Доступна нова версія цього імпортера. Оновіть його до версії %s, щоб забезпечити сумісність з новими файл��ми експорту."
+msgstr "Доступна нова версія цього імпортера. Оновіть його до версії %s, щоб забезпечити сумісність з нови��и файлами експорту."
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
@@ -628,7 +628,7 @@ msgstr "Виконання коду було скасовано через по�
 #. translators: %1$s is the post type name, %2$s is the post edit link
 #: framework/premium/features/code-editor.php:132
 msgid "%1$s that caused the error: %2$s"
-msgstr "Виникла помилка через «%1$s»: %2$s"
+msgstr "Виникла помилка через ��%1$s»: %2$s"
 
 #. translators: %1$s is the singular name of the custom post type, %2$s is the
 #. label of the taxonomy.
@@ -1032,7 +1032,7 @@ msgstr "При натисканні кнопки закриття"
 
 #: framework/premium/features/content-blocks/options/popup.php:313
 msgid "On ESC Button Press"
-msgstr "При натисканні кн��пки ESC"
+msgstr "При натисканні кнопки ESC"
 
 #: framework/premium/features/content-blocks/options/popup.php:325
 msgid "On Backdrop Click"
@@ -1113,7 +1113,7 @@ msgstr "Ліміт архіву"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:575
 msgid "Limit the number of swatches shown on archive pages."
-msgstr "Обмеження кількості зразків, що відображаються на сторінках архіву."
+msgstr "Обмеження кількості зразків, що відображаються на сторінках а��хіву."
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:579
 msgid "Product Page Limit"
@@ -1511,7 +1511,7 @@ msgstr "Редагувати"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:120,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:225
 msgid "Delete"
-msgstr "Вида��ити"
+msgstr "Видалити"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:128
 msgid "View"
@@ -1576,7 +1576,7 @@ msgstr "Попереднє замовлення підтверджено"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr "Ви отримаєте повід��млення, коли {product_title} знову з'явиться на складі."
+msgstr "Ви отримаєте ��овідомлення, коли {product_title} знову з'явиться на складі."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:56,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:192
@@ -1743,7 +1743,7 @@ msgstr "Відображення спливаючого вікна динамі�
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
-msgstr "Увімк. тригер вікна"
+msgstr "Увімк. т��игер вікна"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"
@@ -3034,7 +3034,7 @@ msgstr "Цільова кількість"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:90
 msgid "Amount of items the client has to buy in order to get free shipping."
-msgstr "Кількість товарів, які клієнт повинен придбати, щоб отримати безкоштовну доставку."
+msgstr "Кількість товарів, які клієнт повине�� придбати, щоб отримати безкоштовну доставку."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:172
 msgid "You can use dynamic code tags such as {items} inside this option."
@@ -4556,7 +4556,7 @@ msgstr "Про бренди"
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:412,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:450
 msgid "About %s"
-msgstr "Про бренд %s"
+msgstr "Про бр��нд %s"
 
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:475,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:519,
@@ -6942,7 +6942,7 @@ msgstr "Умови відображення панелі ярликів"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1028
 msgid "Add one or more conditions to display the shortcuts bar."
-msgstr "До��айте одну або кілька умов для відображення панелі ярликів."
+msgstr "Д��дайте одну або кілька умов для відображення панелі ярликів."
 
 #: framework/premium/extensions/shortcuts/customizer.php:1052,
 #: framework/features/header/items/account/options.php:1918,
@@ -9029,7 +9029,7 @@ msgstr "Додати варіацію"
 
 #: framework/premium/extensions/local-google-fonts/dashboard-static/js/LocalGoogleFonts.js:258
 msgid "Download a font and serve it directly from your server, this is handy for those who want to comply with GDPR regulations or serve the font via CDN."
-msgstr "Завантажте шри��т і з��вантажуйте його прямо зі свого сервера. Це зручно для тих, хто хоче дотримуватися правил GDPR або розповсюджувати шрифт через CDN."
+msgstr "Завантажте шрифт і завантажуйте його прямо зі свого сервера. Це зручно для тих, хто хоче дотримуватися правил GDPR або розповсюджувати шрифт через CDN."
 
 #: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:200
 msgid "Item Settings"
@@ -11513,7 +11513,7 @@ msgstr "Текст"
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:19,
 #: framework/features/blocks/about-me/options.php:77
 msgid "You can add here some arbitrary HTML code."
-msgstr "Сюди можна вставити ��овільний HTML-код."
+msgstr "Сюди можна вставити довільний HTML-код."
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:74
 msgid "Container Style"

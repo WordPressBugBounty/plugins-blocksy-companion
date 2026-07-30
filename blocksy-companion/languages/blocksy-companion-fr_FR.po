@@ -617,7 +617,7 @@ msgstr "Bonjour ! Téléversez votre fichier WordPress eXtended RSS (WXR) et no
 
 #: framework/features/demo-install/wp-importer.php:1490
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
-msgstr "Choisissez un fichier WXR (.xml) à téléverser, puis cliquez sur « Téléverser le fichier et l’importer »."
+msgstr "Choisissez un fichier WXR (.xml) à t��léverser, puis cliquez sur « Téléverser le fichier et l’importer »."
 
 #. translators: %1$s is the error message, %2$s is the line number
 #: framework/premium/features/code-editor.php:116

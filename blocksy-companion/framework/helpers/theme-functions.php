@@ -11,7 +11,7 @@ namespace Blocksy;
 // For the blocksy_get_theme_mod() function, the special handling of the null
 // value is not necessary.
 //
-// Right now, only seven functions must be protected with this proxy:
+// Right now, only eight functions must be protected with this proxy:
 //
 // - blocksy_get_theme_mod()
 // - blocksy_manager()
@@ -20,6 +20,7 @@ namespace Blocksy;
 // - blocksy_theme_get_dynamic_styles()
 // - blocksy_woo_has_ajax_add_to_cart()
 // - blocksy_has_product_specific_layer()
+// - blocksy_get_special_post_id()
 //
 // If more functions will be called earlier than `after_setup_theme`, they
 // should be added here and should be only called through this proxy object.
@@ -76,4 +77,3 @@ class ThemeFunctions {
 		return self::$NON_EXISTING_FUNCTION;
 	}
 }
-
