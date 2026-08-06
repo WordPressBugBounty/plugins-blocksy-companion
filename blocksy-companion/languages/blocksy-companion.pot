@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-07-30 08:40+0000\n"
+"POT-Creation-Date: 2026-08-06 13:48+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -21,12 +21,12 @@ msgstr ""
 "x-generator: babel-plugin-wp-i18n\n"
 
 #. translators: %s: PHP version
-#: blocksy-companion.php:204
+#: blocksy-companion.php:210
 msgid "Blocksy requires PHP version %s+, plugin is currently NOT RUNNING."
 msgstr ""
 
 #. translators: %s: WordPress version
-#: blocksy-companion.php:215
+#: blocksy-companion.php:221
 msgid ""
 "Blocksy requires WordPress version %s+. Because you are using an earlier "
 "version, the plugin is currently NOT RUNNING."
@@ -592,18 +592,18 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:551,
 #: framework/premium/extensions/shortcuts/customizer.php:577,
 #: framework/premium/extensions/shortcuts/views/bar.php:56,
-#: framework/features/header/items/account/views/login.php:559,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:275,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:335,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:450,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:454,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:484,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:488,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:177,
+#: framework/features/header/items/account/views/login.php:558,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:279,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:345,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:460,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:464,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:494,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:498,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:192,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:21,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/config.php:8,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:164,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/view.php:104
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/view.php:108
 msgid "Wishlist"
 msgstr ""
 
@@ -801,7 +801,7 @@ msgid ""
 "complete their purchase before the timer expires."
 msgstr ""
 
-#: framework/premium/pro.php:68,
+#: framework/premium/pro.php:69,
 #: framework/extensions/newsletter-subscribe/customizer.php:53,
 #: framework/extensions/trending/customizer.php:244,
 #: framework/premium/features/premium-header.php:363,
@@ -1446,7 +1446,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/contacts/options.php:272,
 #: framework/premium/features/premium-header/items/contacts/options.php:317,
 #: framework/premium/features/premium-header/items/contacts/options.php:362,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:289
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:292
 #: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:42
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:42
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:125
@@ -1464,7 +1464,7 @@ msgstr ""
 #: framework/features/blocks/dynamic-data/options.php:171,
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:95,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:240,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:373
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:376
 #: framework/premium/extensions/white-label/dashboard-static/js/SupportSectionModal.js:63
 msgid "Description"
 msgstr ""
@@ -1933,7 +1933,7 @@ msgstr ""
 #: framework/premium/features/content-blocks/content-block-layer.php:285,
 #: framework/premium/extensions/woocommerce-extra/features/attributes-layer.php:128,
 #: framework/premium/extensions/woocommerce-extra/features/sku-layer.php:68,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:410,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:411,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:562,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:613,
 #: framework/premium/extensions/woocommerce-extra/features/product-sale-countdown/feature.php:362,
@@ -2075,7 +2075,7 @@ msgstr ""
 #: framework/extensions/product-reviews/helpers.php:34,
 #: framework/extensions/product-reviews/metabox.php:201,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:311,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:475,
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:478,
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/rating.php:161
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:144
 msgid "Rating"
@@ -2317,7 +2317,7 @@ msgstr ""
 #: framework/features/header/items/account/options.php:422,
 #: framework/features/header/items/account/options.php:832,
 #: framework/features/header/items/account/options.php:873,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:364,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:365,
 #: framework/premium/features/premium-header/items/contacts/options.php:118,
 #: framework/premium/features/premium-header/items/contacts/options.php:163,
 #: framework/premium/features/premium-header/items/contacts/options.php:208,
@@ -3329,7 +3329,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:72,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:103,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:147,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:241,
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:244,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:243,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:196,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:196
@@ -3711,13 +3711,13 @@ msgstr ""
 
 #: framework/features/blocks/dynamic-data/options.php:110,
 #: framework/features/blocks/dynamic-data/options.php:111,
-#: framework/features/blocks/dynamic-data/views/wp-field.php:240
+#: framework/features/blocks/dynamic-data/views/wp-field.php:239
 msgid "No comments"
 msgstr ""
 
 #: framework/features/blocks/dynamic-data/options.php:116,
 #: framework/features/blocks/dynamic-data/options.php:117,
-#: framework/features/blocks/dynamic-data/views/wp-field.php:241
+#: framework/features/blocks/dynamic-data/views/wp-field.php:240
 msgid "One comment"
 msgstr ""
 
@@ -3726,7 +3726,7 @@ msgid "Multiple comments"
 msgstr ""
 
 #: framework/features/blocks/dynamic-data/options.php:123,
-#: framework/features/blocks/dynamic-data/views/wp-field.php:242
+#: framework/features/blocks/dynamic-data/views/wp-field.php:241
 msgid "% comments"
 msgstr ""
 
@@ -4560,11 +4560,11 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:616,
 #: framework/premium/extensions/shortcuts/customizer.php:642,
 #: framework/premium/extensions/shortcuts/views/bar.php:57,
-#: framework/features/header/items/account/views/login.php:593,
+#: framework/features/header/items/account/views/login.php:591,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:8,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:204,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:208,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-account.php:73
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:206,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:210,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-account.php:70
 msgid "Waitlist"
 msgstr ""
 
@@ -5192,7 +5192,7 @@ msgid "After related posts"
 msgstr ""
 
 #: framework/premium/features/content-blocks/hooks-manager.php:411,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:376
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:377
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:722
 msgid "Before"
 msgstr ""
@@ -5203,7 +5203,7 @@ msgid "Loop"
 msgstr ""
 
 #: framework/premium/features/content-blocks/hooks-manager.php:418,
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:387
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:388
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:731
 msgid "After"
 msgstr ""
@@ -5834,14 +5834,14 @@ msgid "%s Avatar"
 msgstr ""
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:29,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:428
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:431
 #: static/js/editor/blocks/dynamic-data/preview-parts/woo/StockPreview.js:6
 msgid "In Stock"
 msgstr ""
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:30,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:366,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:428,
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:431,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/includes/swatch-element-render.php:55,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/product-mobile-actions.php:23,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:68
@@ -5992,24 +5992,24 @@ msgstr ""
 
 #: framework/features/header/items/account/options.php:203,
 #: framework/features/header/items/account/options.php:207,
-#: framework/features/header/items/account/views/login.php:630
+#: framework/features/header/items/account/views/login.php:628
 msgid "Dokan Dashboard"
 msgstr ""
 
 #: framework/features/header/items/account/options.php:217,
 #: framework/features/header/items/account/options.php:221,
-#: framework/features/header/items/account/views/login.php:664
+#: framework/features/header/items/account/views/login.php:662
 msgid "Dokan Shop"
 msgstr ""
 
 #: framework/features/header/items/account/options.php:233,
 #: framework/features/header/items/account/options.php:237,
-#: framework/features/header/items/account/views/login.php:696
+#: framework/features/header/items/account/views/login.php:694
 msgid "Tutor LMS Dashboard"
 msgstr ""
 
 #: framework/features/header/items/account/options.php:253,
-#: framework/features/header/items/account/views/login.php:723
+#: framework/features/header/items/account/views/login.php:721
 msgid "bbPress Dashboard"
 msgstr ""
 
@@ -6255,7 +6255,7 @@ msgstr ""
 msgid "Dark Mode Logo"
 msgstr ""
 
-#: framework/premium/extensions/shortcuts/views/bar.php:517
+#: framework/premium/extensions/shortcuts/views/bar.php:524
 msgid "Shortcuts bar"
 msgstr ""
 
@@ -6265,7 +6265,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/sku-layer.php:64,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:329,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:410
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:413
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:152
 msgid "SKU"
 msgstr ""
@@ -6962,20 +6962,20 @@ msgstr ""
 msgid "Field"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:350,
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:351,
 #: framework/premium/features/premium-header/items/language-switcher/options/common.php:17,
 #: framework/premium/features/premium-header/items/language-switcher/options/common.php:20,
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/options/status.php:26
 msgid "Label"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:399
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:400
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:743
 msgid "Fallback"
 msgstr ""
 
 #. translators: %s is the provider label (ACF, Toolset, etc.)
-#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:427
+#: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:428
 msgid "%s Field"
 msgstr ""
 
@@ -7137,7 +7137,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:204,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:63,
 #: framework/premium/extensions/woocommerce-extra/features/cart-suggested-products/options/generic.php:196,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:317,
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:320,
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:336,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:246,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:57,
@@ -7399,7 +7399,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:479,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:523,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:585,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:692
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:695
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:162
 msgid "Brands"
 msgstr ""
@@ -7545,12 +7545,12 @@ msgid "Compare Table Fields"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:222,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:345
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:348
 msgid "Add to Cart"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:347,
-#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:438
+#: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:441
 msgid "Availability"
 msgstr ""
 
@@ -8520,12 +8520,12 @@ msgstr ""
 msgid "here"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:421
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:431
 msgid "Wishlist Button"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:159,
-#: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:243
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:174,
+#: framework/premium/extensions/woocommerce-extra/features/wish-list/helpers.php:258
 msgid "Add to wishlist"
 msgstr ""
 
@@ -8903,63 +8903,63 @@ msgstr ""
 msgid "Reset Filter"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:503
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:499
 msgid "Regenerate the product taxonomies lookup table"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:504
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:500
 msgid ""
 "This tool will regenerate the product taxonomies lookup table data from "
 "existing product(s) data. This process may take a while."
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:515
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:511
 msgid "Product taxonomies lookup table data is regenerating"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:528
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:524
 msgid "Regenerate"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:522
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:518
 msgid "Filling in progress (%d)"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:564
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:560
 msgid "Resume the product taxonomies lookup table regeneration"
 msgstr ""
 
 #. translators: %1$s = count of products already processed.
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:567
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:563
 msgid ""
 "This tool will resume the product taxonomies lookup table regeneration at "
 "the point in which it was aborted (%1$s products were already processed)."
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:587
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:583
 msgid "Product taxonomies lookup table regeneration process has been resumed."
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:589
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:585
 msgid "Resume"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:535
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:531
 msgid "Abort the product taxonomies lookup table regeneration"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:536
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:532
 msgid ""
 "This tool will abort the regenerate product taxonomies lookup table "
 "regeneration. After this is done the process can be either started over, or "
 "resumed to continue where it stopped."
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:556
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:552
 msgid "Product taxonomies lookup table regeneration process has been aborted."
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:558
+#: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:554
 msgid "Abort"
 msgstr ""
 

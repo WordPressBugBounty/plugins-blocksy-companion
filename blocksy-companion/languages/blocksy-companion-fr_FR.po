@@ -453,7 +453,7 @@ msgstr "Il semble que ce ne soit pas un fichier WXR, le numéro de version WXR e
 #: framework/features/demo-install/wp-importer.php:250,
 #: framework/features/demo-install/wp-importer.php:271
 msgid "Sorry, there has been an error."
-msgstr "Désolé, il y a eu une erreur."
+msgstr "D��solé, il y a eu une erreur."
 
 #: framework/features/demo-install/wp-importer.php:234
 msgid "All done."
@@ -617,7 +617,7 @@ msgstr "Bonjour ! Téléversez votre fichier WordPress eXtended RSS (WXR) et no
 
 #: framework/features/demo-install/wp-importer.php:1490
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
-msgstr "Choisissez un fichier WXR (.xml) à t��léverser, puis cliquez sur « Téléverser le fichier et l’importer »."
+msgstr "Choisissez un fichier WXR (.xml) à téléverser, puis cliquez sur « Téléverser le fichier et l’importer »."
 
 #. translators: %1$s is the error message, %2$s is the line number
 #: framework/premium/features/code-editor.php:116

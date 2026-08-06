@@ -3,7 +3,7 @@
 /*
 Plugin Name: Blocksy Companion
 Description: This plugin is the companion for the Blocksy theme, it runs and adds its enhacements only if the Blocksy theme is installed and active.
-Version: 2.1.51
+Version: 2.1.52
 Author: CreativeThemes
 Author URI: https://creativethemes.com
 Text Domain: blocksy-companion
@@ -42,7 +42,11 @@ if ( function_exists( 'blocksy_companion_fs' ) || class_exists( '\\Blocksy\\Plug
                 define( 'WP_FS__PRODUCT_5115_MULTISITE', true );
             }
             require_once dirname( __FILE__ ) . '/vendor/freemius/start.php';
-            $blocksy_has_account = true;
+        }
+        $blocksy_has_account = true;
+        // start.php can return without loading the SDK when another
+        // plugin's bundled copy wins the version election.
+        if ( !isset( $blocksy_companion_fs ) && class_exists( '\\Freemius' ) ) {
             $blocksy_fs_instance = \Freemius::instance( 5115, 'blocksy-companion', true );
             $blocksy_active_extensions = get_option( 'blocksy_active_extensions', [] );
             if ( !is_array( $blocksy_active_extensions ) ) {
@@ -65,6 +69,8 @@ if ( function_exists( 'blocksy_companion_fs' ) || class_exists( '\\Blocksy\\Plug
                     $blocksy_has_account = false;
                 }
             }
+        }
+        if ( !isset( $blocksy_companion_fs ) && function_exists( 'fs_dynamic_init' ) ) {
             $blocksy_companion_fs = fs_dynamic_init( array(
                 'id'               => '5115',
                 'slug'             => 'blocksy-companion',

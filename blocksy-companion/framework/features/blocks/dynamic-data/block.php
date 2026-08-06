@@ -141,6 +141,26 @@ class DynamicData {
 	}
 
 	public function render($attributes, $content, $block) {
+		$allowed_tag_names = [
+			'div',
+			'span',
+			'p',
+			'h1',
+			'h2',
+			'h3',
+			'h4',
+			'h5',
+			'h6',
+		];
+
+		$tag_name = blocksy_akg('tagName', $attributes, 'div');
+
+		$attributes['tagName'] = in_array(
+			$tag_name,
+			$allowed_tag_names,
+			true
+		) ? $tag_name : 'div';
+
 		if (
 			isset($attributes['lightbox'])
 			&&

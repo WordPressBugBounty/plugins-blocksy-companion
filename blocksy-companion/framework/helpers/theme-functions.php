@@ -21,6 +21,7 @@ namespace Blocksy;
 // - blocksy_woo_has_ajax_add_to_cart()
 // - blocksy_has_product_specific_layer()
 // - blocksy_get_special_post_id()
+// - blocksy_get_taxonomy_options()
 //
 // If more functions will be called earlier than `after_setup_theme`, they
 // should be added here and should be only called through this proxy object.

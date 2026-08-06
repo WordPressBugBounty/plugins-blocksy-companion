@@ -29,7 +29,7 @@ msgstr "Mỗi 12 giờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/feature.php:417
 msgid "<p><strong>🔥 Hurry up! Your selected items are reserved for {time} minutes.</strong></p>"
-msgstr "<p><strong>🔥 Nhanh tay lên! Các món bạn chọn đang được giữ chỗ trong {time} phút.</strong></p>"
+msgstr "<p><strong>🔥 Nhanh tay lên! Các món bạn chọn đang đư��c giữ chỗ trong {time} phút.</strong></p>"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:28
 msgid "Countdown Duration"
@@ -110,7 +110,7 @@ msgstr "Tái tạo bảng thủ công"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:533
 msgid "This tool will abort the regenerate product taxonomies lookup table regeneration. After this is done the process can be either started over, or resumed to continue where it stopped."
-msgstr "Công cụ này sẽ hủy bỏ quá trình tái tạo b���ng tra cứu phân loại sản phẩm. Sau khi hủy, quy trình có thể được bắt đầu lại từ đầu hoặc tiếp tục từ điểm đã dừng."
+msgstr "Công cụ này sẽ hủy bỏ quá trình tái tạo bảng tra cứu phân loại sản phẩm. Sau khi hủy, quy trình có thể được bắt đầu lại từ đầu hoặc tiếp tục từ điểm đã dừng."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:63
 msgid "user"
@@ -140,7 +140,7 @@ msgstr "Còn hàng"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:217
 msgid "Subscribers"
-msgstr "Người đăng ký"
+msgstr "Ngư���i đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:224
 msgid "Pending entries"
@@ -492,7 +492,7 @@ msgstr "Để việc chỉnh sửa và lưu nội dung đã nhập dễ dàng h�
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
 msgid "If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details will be necessary."
-msgstr "Nếu người dùng mới được tạo bởi WordPress, một mật khẩu mới sẽ được tạo ngẫu nhiên và vai trò của người dùng mới sẽ được đặt là %s. Bạn sẽ cần thay đổi chi tiết của người dùng mới theo cách thủ công."
+msgstr "Nếu người dùng mới được tạo bởi WordPress, một mật khẩu mới s�� được tạo ngẫu nhiên và vai trò của người dùng mới sẽ được đặt là %s. Bạn sẽ cần thay đổi chi tiết của người dùng mới theo cách thủ công."
 
 #: framework/features/demo-install/wp-importer.php:371
 msgid "Import Attachments"
@@ -608,7 +608,7 @@ msgstr "Nhập WordPress"
 #. translators: %s is the new version number.
 #: framework/features/demo-install/wp-importer.php:1468
 msgid "A new version of this importer is available. Please update to version %s to ensure compatibility with newer export files."
-msgstr "Đã có phiên bản mới của trình nhập này. Vui lòng cập nhật lên phiên bản %s để đảm bảo tương thích với các t��p xuất mới hơn."
+msgstr "Đã có phiên bản mới của trình nhập này. Vui lòng cập nhật lên phiên bản %s để đảm bảo tương thích với các tệp xuất mới hơn."
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."

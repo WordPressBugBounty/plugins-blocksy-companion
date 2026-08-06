@@ -5507,7 +5507,7 @@ msgstr "Prikaz približnog vremena čitanja članka kako bi posjetitelji znali �
 #: framework/helpers/exts-configs.php:149
 #: static/js/editor/blocks/dynamic-data/index.js:124
 msgid "Dynamic Data"
-msgstr "Dinamički podaci"
+msgstr "Dinami��ki podaci"
 
 #: framework/helpers/exts-configs.php:150
 msgid "Integrates custom fields solutions in the meta layers of a post and presents additional information."

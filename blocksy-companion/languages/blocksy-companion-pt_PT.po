@@ -5109,7 +5109,7 @@ msgstr "Cor do emblema da lista de desejos"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1251
 msgid "Compare Badge Color"
-msgstr "Cor do emblema de comparaç��o"
+msgstr "Cor do emblema de comparação"
 
 #: framework/premium/extensions/sidebars/extension.php:190
 msgid "Remove Widget Area"
