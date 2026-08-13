@@ -6656,7 +6656,7 @@ msgstr "در حال فعال‌سازی افزونه‌ی %s"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:34
 msgid "downloading demo widgets"
-msgstr "د�� حال دریافت ابزارک‌های نمایشی"
+msgstr "در حال دریافت ابزارک‌های نمایشی"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:38
 msgid "installing demo widgets"
@@ -10849,7 +10849,7 @@ msgstr "مشاهده‌ی نقد و بررسی محصول"
 
 #: framework/extensions/product-reviews/extension.php:551
 msgid "Add New Product Review"
-msgstr "افزودن نقد و بررسی محصول جدید"
+msgstr "افزودن نقد و بررسی محصول ��دید"
 
 #: framework/extensions/product-reviews/extension.php:552
 msgid "Add New Review"

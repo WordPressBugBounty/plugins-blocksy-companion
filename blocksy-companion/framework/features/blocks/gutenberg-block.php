@@ -91,7 +91,14 @@ class GutenbergBlock {
 			$block_data['attributes'] = $this->config['attributes'];
 		}
 
-		register_block_type('blocksy/' . $this->name, $block_data);
+		$block_json_path = BLOCKSY_PATH . '/static/js/editor/blocks/' . $this->name . '/block.json';
+
+		register_block_type(
+			file_exists($block_json_path)
+				? $block_json_path
+				: 'blocksy/' . $this->name,
+			$block_data
+		);
 	}
 
 	public function localize_data() {

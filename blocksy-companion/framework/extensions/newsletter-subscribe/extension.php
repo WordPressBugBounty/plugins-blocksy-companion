@@ -280,7 +280,7 @@ class BlocksyExtensionNewsletterSubscribe {
 	}
 
 	public function blocksy_newsletter_block() {
-		register_block_type('blocksy/newsletter', [
+		register_block_type(BLOCKSY_PATH . '/framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/block.json', [
 			'render_callback' => [$this, 'render_block'],
 			'editor_style_handles' => [
 				'blocksy/newsletter',

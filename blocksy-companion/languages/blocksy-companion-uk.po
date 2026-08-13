@@ -182,7 +182,7 @@ msgstr "Детальну інформацію про те, як згенерув
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:149
 msgid "White Label Extension"
-msgstr "Р��зширення White Label"
+msgstr "Розш��рення White Label"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:161
 msgid "Please note that disabling this option will hide the white-label extension. To restore it, press the SHIFT key while clicking the dashboard logo."
@@ -206,7 +206,7 @@ msgstr "Вкладка «Журнал змін»"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:41
 msgid "Extension Documentation Link"
-msgstr "Посилання ��а документацію розширення"
+msgstr "Посилання на документацію розширення"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:46
 msgid "Extension Video Link"
@@ -344,7 +344,7 @@ msgstr "Це поле є обов'язковим"
 
 #: framework/theme-integration.php:90
 msgid "Please fix this field."
-msgstr "Виправт�� вміст цього поля."
+msgstr "Виправте вміст цього поля."
 
 #: framework/theme-integration.php:91
 msgid "Please enter a valid email address."
@@ -466,7 +466,7 @@ msgstr "Насолоджуйтесь!"
 
 #: framework/features/demo-install/wp-importer.php:235
 msgid "Remember to update the passwords and roles of imported users."
-msgstr "Не забудьте оновити паролі та ролі ��мпортованих користувачів."
+msgstr "Не забудьте оновити паролі та ролі імпортованих користувачів."
 
 #. translators: %s is the path to the WXR file.
 #: framework/features/demo-install/wp-importer.php:258
@@ -485,7 +485,7 @@ msgstr "Не вдалося імпортувати автора %s. Його п�
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
-msgstr "Призначити ��вторів"
+msgstr "Призначити авторів"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
@@ -1466,7 +1466,7 @@ msgstr "Ви додані до списку очікування"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
-msgstr "Ви вида��ені зі списку очікування"
+msgstr "Ви видалені зі списку очікування"
 
 #. translators: %1$s is the number of users, %2$s is the plural form
 #. (user/users)
@@ -1544,7 +1544,7 @@ msgstr "Товар, на який ви чекаєте, знову в наявн�
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/back-in-stock.php:11
 msgid "Good news! The product you have been waiting for is now back in stock!"
-msgstr "Гарні новини! Тов��р, на який ви так довго чекали, знову в наявності!"
+msgstr "Гарні новини! Товар, на який ви так довго чекали, знову в наявності!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/confirm-subscription.php:8
 msgid "Waitlist - Confirm Subscription"
@@ -1601,7 +1601,7 @@ msgstr "Введіть свою електронну адресу, щоб отр
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:83
 msgid "Great! You have been added to the waitlist for this product. Please check your inbox and confirm the subscription to this waitlist."
-msgstr "Ви були додані до списку очікування цього товару. Перевірте свою поштову скриньку та підтвердіть своє вкл��чення до списку очікування."
+msgstr "Ви були додані до списку очікування цього товару. Перевірте свою поштову скриньку та підтвердіть своє включення до списку очікування."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/form.php:111
 msgid "Great! You have been added to the waitlist for this product. You will receive an email as soon as the item is back in stock."
@@ -1688,7 +1688,7 @@ msgstr "відписатися"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
 msgid "You have been successfully added to the waitlist for the following item:"
-msgstr "Ви додані до списку очікування цього товару:"
+msgstr "Ви додані до списку очікування ць��го товару:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
@@ -1983,7 +1983,7 @@ msgstr "Колір межі контейнера"
 
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:197
 msgid "Container Background Color"
-msgstr "Колір фону контейнера"
+msgstr "Колір ��ону контейнера"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:188
 msgid "API Version"
@@ -2061,7 +2061,7 @@ msgstr "Ваш сайт налаштований неправильно, і AJAX
 
 #: static/js/dashboard/screens/DemoInstall.js:201
 msgid "Failed to retrieve starter sites list.<br> Error code - %s"
-msgstr "Не вдалося отримати список стартових сайтів. <br>Код помилки — %s"
+msgstr "Не вдалося отримати спис��к стартових сайтів. <br>Код помилки — %s"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:129
 msgid "Installing %s"
@@ -2859,7 +2859,7 @@ msgstr "Записи - макет 2"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-3.php:4
 msgid "Posts - Layout 3"
-msgstr "��аписи - макет 3"
+msgstr "Записи - макет 3"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-4.php:4
 msgid "Posts - Layout 4"
@@ -2965,7 +2965,7 @@ msgstr "Початковий стан панелі"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:240
 msgid "Closed"
-msgstr "Зачине��о"
+msgstr "Зачинено"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:241
 msgid "Opened"
@@ -3751,7 +3751,7 @@ msgstr "Отримання..."
 
 #: framework/premium/extensions/adobe-typekit/dashboard-static/js/AdobeTypekit.js:164
 msgid "Please enter a valid Project ID to get all fonts."
-msgstr "Вве��іть дійсний ID проекту, щоб отримати всі шрифти."
+msgstr "Введіть дійсний ID проекту, щоб отримати всі шрифти."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:302
 msgid "This provider is used only for testing purposes. It doesnt register any real subscribers."
@@ -4122,7 +4122,7 @@ msgstr "Кошик"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-cart/feature.php:172
 msgid "Close cart drawer"
-msgstr "Закрити випадаючий кошик"
+msgstr "Закрити випад��ючий кошик"
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/feature.php:157,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:563
@@ -4221,7 +4221,7 @@ msgstr "Картка"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:91
 msgid "Modal Width"
-msgstr "Ширина модального вікна"
+msgstr "Шир��на модального вікна"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:102
 msgid "Product Navigation"
@@ -4877,7 +4877,7 @@ msgstr "Відображення мінімалістичного відеопл
 
 #: framework/premium/features/performance-typography/feature.php:130
 msgid "Preconnect Google Fonts"
-msgstr "Попереднє підключення шрифтів Google"
+msgstr "П��переднє підключення шрифтів Google"
 
 #: framework/premium/features/performance-typography/feature.php:141
 msgid "Preconnect Adobe Typekit Fonts"
@@ -9029,7 +9029,7 @@ msgstr "Додати варіацію"
 
 #: framework/premium/extensions/local-google-fonts/dashboard-static/js/LocalGoogleFonts.js:258
 msgid "Download a font and serve it directly from your server, this is handy for those who want to comply with GDPR regulations or serve the font via CDN."
-msgstr "Завантажте шрифт і завантажуйте його прямо зі свого сервера. Це зручно для тих, хто хоче дотримуватися правил GDPR або розповсюджувати шрифт через CDN."
+msgstr "Завантажте шрифт �� завантажуйте його прямо зі свого сервера. Це зручно для тих, хто хоче дотримуватися правил GDPR або розповсюджувати шрифт через CDN."
 
 #: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:200
 msgid "Item Settings"

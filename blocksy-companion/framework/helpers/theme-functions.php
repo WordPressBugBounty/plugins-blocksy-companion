@@ -11,7 +11,7 @@ namespace Blocksy;
 // For the blocksy_get_theme_mod() function, the special handling of the null
 // value is not necessary.
 //
-// Right now, only eight functions must be protected with this proxy:
+// Right now, these functions must be protected with this proxy:
 //
 // - blocksy_get_theme_mod()
 // - blocksy_manager()
@@ -22,9 +22,19 @@ namespace Blocksy;
 // - blocksy_has_product_specific_layer()
 // - blocksy_get_special_post_id()
 // - blocksy_get_taxonomy_options()
+// - blocksy_get_terms()
+// - blocksy_flexy_pills()
+// - blocksy_get_post_options()
+// - blocksy_sanitize_post_meta_options()
 //
 // If more functions will be called earlier than `after_setup_theme`, they
 // should be added here and should be only called through this proxy object.
+//
+// A `null` return means the value was never processed, so callers that pass
+// data through a theme helper before storing it must treat `null` as "drop
+// the value", never as "store what I had". blocksy_sanitize_post_meta_options()
+// is the case that matters today: it guards a write path, so falling back to
+// the unsanitized input would defeat the sanitizer entirely.
 class ThemeFunctions {
 	public static $NON_EXISTING_FUNCTION = null;
 

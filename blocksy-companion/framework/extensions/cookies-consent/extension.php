@@ -110,8 +110,7 @@ class BlocksyExtensionCookiesConsent {
 						'<p>' . esc_html__('Please accept the Privacy Policy in order to comment.', 'blocksy-companion') . '</p>',
 						esc_html__('Comment Submission Failure', 'blocksy-companion'),
 						array(
-							// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-							'response' => $data,
+							'response' => 403,
 							'back_link' => true,
 						)
 					);

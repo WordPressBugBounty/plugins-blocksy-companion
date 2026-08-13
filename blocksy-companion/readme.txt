@@ -2,10 +2,10 @@
 Tags: widget, widgets
 Requires at least: 6.7
 Requires PHP: 7.0
-Tested up to: 7.0
+Tested up to: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.52
+Stable tag: 2.1.53
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,10 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.53: 2026-08-13
+- Improvement: Better support for WordPress 7.1 responsive block styles
+- Improvement: Cookies Consent - correctly display the message when submitting comments
+
 2.1.52: 2026-08-06
 - Improvement: Advanced Taxonomies block - correctly load additional pages with Infinite Scroll pagination type
 - Improvement: Dynamic Data block - correctly display archive page images when used in Content Blocks

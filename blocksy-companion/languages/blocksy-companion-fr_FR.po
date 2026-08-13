@@ -453,7 +453,7 @@ msgstr "Il semble que ce ne soit pas un fichier WXR, le numéro de version WXR e
 #: framework/features/demo-install/wp-importer.php:250,
 #: framework/features/demo-install/wp-importer.php:271
 msgid "Sorry, there has been an error."
-msgstr "D��solé, il y a eu une erreur."
+msgstr "Désolé, il y a eu une erreur."
 
 #: framework/features/demo-install/wp-importer.php:234
 msgid "All done."
@@ -1211,7 +1211,7 @@ msgstr "4 étoiles"
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/rating.php:120
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/rating-filter/Preview.js:25
 msgid "5 stars"
-msgstr "5 étoiles"
+msgstr "5 ��toiles"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/status.php:147
 msgid "On sale"
