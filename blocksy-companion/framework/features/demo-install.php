@@ -91,6 +91,13 @@ class DemoInstall {
 		add_filter(
 			'blocksy_dashboard_localizations',
 			function ($d) {
+				/**
+				 * Filters whether the starter sites installer is available in the dashboard.
+				 *
+				 * @since 1.7.4
+				 *
+				 * @param string $enabled Either 'yes' or 'no'. Default 'yes'.
+				 */
 				$d['has_demo_install'] = apply_filters(
 					'blocksy_ext_demo_install_enabled',
 					'yes'

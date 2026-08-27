@@ -95,10 +95,33 @@ class ToolCli {
 	 * @return array
 	 */
 	private function get_tools() {
+		/**
+		 * Filters the tools exposed by the `wp blocksy tool` CLI command.
+		 *
+		 * @since 2.1.1
+		 *
+		 * @param array $tools {
+		 *     Tools, keyed by their CLI identifier.
+		 *
+		 *     @type array $tool_id {
+		 *         @type string   $name     Human readable tool name.
+		 *         @type callable $callback Callback invoked when the tool is run.
+		 *     }
+		 * }
+		 */
 		return apply_filters('blocksy_cli_tools', [
 			'regenerate_dynamic_css' => [
 				'name' => 'Regenerate Dynamic CSS',
 				'callback' => function() {
+					/**
+					 * Fires when the dynamic CSS caches should be invalidated.
+					 *
+					 * Listeners drop their generated CSS files/transients so the
+					 * next request regenerates them.
+					 *
+					 * @since 1.6.2
+					 * @since 1.8.0 Renamed from `blocksy:dynamic-css:regenere_css_files`.
+					 */
 					do_action('blocksy:dynamic-css:refresh-caches');
 					\WP_CLI::success('Dynamic CSS cache has been regenerated.');
 				}

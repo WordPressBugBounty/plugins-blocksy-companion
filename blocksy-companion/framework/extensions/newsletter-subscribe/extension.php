@@ -241,7 +241,7 @@ class BlocksyExtensionNewsletterSubscribe {
 					BLOCKSY_PATH .
 					'framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php';
 
-				$options = blocksy_akg(
+				$options = blocksy_companion_akg(
 					'options',
 					blocksy_companion_get_variables_from_file(
 						$options_file,

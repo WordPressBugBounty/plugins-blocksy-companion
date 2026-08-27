@@ -15,15 +15,23 @@ class BlocksyExtensionProductReviews {
 					return;
 				}
 
+				/**
+				 * Filters the product review options used to render the review front end.
+				 *
+				 * @since 1.8.7
+				 *
+				 * @param array $atts    Options stored in the `blocksy_product_review_options` post meta.
+				 * @param int   $post_id The product review post ID.
+				 */
 				$atts = apply_filters(
 					'blocksy:ext:product-reviews:frontend:atts',
-					blocksy_get_post_options(null, [
+					blocksy_companion_theme_functions()->blocksy_get_post_options(null, [
 						'meta_id' => 'blocksy_product_review_options'
 					]),
 					get_the_ID()
 				);
 
-				$product_review_entity = blocksy_akg(
+				$product_review_entity = blocksy_companion_akg(
 					'product_review_entity',
 					$atts,
 					'Thing'
@@ -46,36 +54,36 @@ class BlocksyExtensionProductReviews {
 					echo '<meta itemprop="image" content="' . esc_url(get_the_post_thumbnail_url()) . '">';
 				}
 
-				$product_description = blocksy_akg('product_description', $atts, '');
+				$product_description = blocksy_companion_akg('product_description', $atts, '');
 
 				if (! empty($product_description)) {
-					blocksy_html_tag_e('meta', [
+					blocksy_companion_html_tag_e('meta', [
 						'itemprop' => 'description',
 						'content' => wp_strip_all_tags($product_description)
 					]);
 				}
 
 				if ($product_review_entity === 'Product') {
-					$product_entity_sku = blocksy_akg('product_entity_sku', $atts, '');
-					$product_entity_brand = blocksy_akg('product_entity_brand', $atts, '');
-					$product_entity_price = blocksy_akg('product_entity_price', $atts, '');
+					$product_entity_sku = blocksy_companion_akg('product_entity_sku', $atts, '');
+					$product_entity_brand = blocksy_companion_akg('product_entity_brand', $atts, '');
+					$product_entity_price = blocksy_companion_akg('product_entity_price', $atts, '');
 
 					if (! empty($product_entity_sku)) {
-						blocksy_html_tag_e('meta', [
+						blocksy_companion_html_tag_e('meta', [
 							'itemprop' => 'sku',
 							'content' => $product_entity_sku
 						]);
 					}
 
 					if (! empty($product_entity_brand)) {
-						blocksy_html_tag_e(
+						blocksy_companion_html_tag_e(
 							'div',
 							[
 								'itemprop' => 'brand',
 								'itemscope' => '',
 								'itemtype' => 'https://schema.org/Brand'
 							],
-							blocksy_html_tag(
+							blocksy_companion_html_tag(
 								'meta',
 								[
 									'itemprop' => 'name',
@@ -85,18 +93,18 @@ class BlocksyExtensionProductReviews {
 						);
 					}
 
-					$product_link = blocksy_akg('product_link', $atts, '#');
+					$product_link = blocksy_companion_akg('product_link', $atts, '#');
 
 					$offers_contents = '';
 
 					if (! empty($product_link)) {
-						$offers_contents .= blocksy_html_tag('link', [
+						$offers_contents .= blocksy_companion_html_tag('link', [
 							'itemprop' => 'url',
 							'href' => $product_link
 						]);
 					}
 
-					$offers_contents .= blocksy_html_tag('meta', [
+					$offers_contents .= blocksy_companion_html_tag('meta', [
 						'itemprop' => 'availability',
 						'content' => 'https://schema.org/InStock'
 					]);
@@ -114,7 +122,7 @@ class BlocksyExtensionProductReviews {
 							$product_entity_price
 						);
 
-						$offers_contents .= blocksy_html_tag('meta', [
+						$offers_contents .= blocksy_companion_html_tag('meta', [
 							'itemprop' => 'price',
 							'content' => $parsed_price
 						]);
@@ -141,13 +149,13 @@ class BlocksyExtensionProductReviews {
 							$parsed_currency = $currencies[$parsed_currency];
 						}
 
-						$offers_contents .= blocksy_html_tag('meta', [
+						$offers_contents .= blocksy_companion_html_tag('meta', [
 							'itemprop' => 'priceCurrency',
 							'content' => $parsed_currency
 						]);
 					}
 
-					blocksy_html_tag_e(
+					blocksy_companion_html_tag_e(
 						'div',
 						[
 							'itemprop' => 'offers',
@@ -159,17 +167,17 @@ class BlocksyExtensionProductReviews {
 				}
 				
 				if ($product_review_entity === 'LocalBusiness') {
-					$local_business_address = blocksy_akg('local_business_address', $atts, '');
+					$local_business_address = blocksy_companion_akg('local_business_address', $atts, '');
 
 					if (! empty($local_business_address)) {
-						blocksy_html_tag_e(
+						blocksy_companion_html_tag_e(
 							'div',
 							[
 								'itemprop' => 'address',
 								'itemscope' => '',
 								'itemtype' => 'https://schema.org/PostalAddress'
 							],
-							blocksy_html_tag(
+							blocksy_companion_html_tag(
 								'meta',
 								[
 									'itemprop' => 'streetAddress',

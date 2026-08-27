@@ -102,6 +102,15 @@ class DynamicCss {
 		// Will catch when the import is done and will refresh the dynamic CSS.
 		// All in One WP Migration compatibility.
 		add_action('ai1wm_status_import_done', function () {
+			/**
+			 * Fires when the dynamic CSS caches should be invalidated.
+			 *
+			 * Listeners drop their generated CSS files/transients so the
+			 * next request regenerates them.
+			 *
+			 * @since 1.6.2
+			 * @since 1.8.0 Renamed from `blocksy:dynamic-css:regenere_css_files`.
+			 */
 			do_action('blocksy:dynamic-css:refresh-caches');
 		});
 	}

@@ -214,6 +214,15 @@ class Capabilities {
 			return false;
 		}
 
+		/**
+		 * Filters the WordPress capability required by a Blocksy capability scope.
+		 *
+		 * @since 2.0.62
+		 *
+		 * @param string $capability    The WordPress capability mapped to the scope.
+		 * @param string $scope         The Blocksy capability scope being resolved.
+		 * @param array  $scope_details Additional context for the scope. Default empty array.
+		 */
 		return apply_filters(
 			'blocksy:capabilities:wp_capability',
 			$this->wp_capabilities[$scope],

@@ -12,8 +12,8 @@ if (! defined('ABSPATH')) {
  * @package Blocksy
  */
 
-$classes = blocksy_default_akg('className', $atts, '');
-$contact_information = blocksy_default_akg('contact_information', $atts, [
+$classes = blocksy_companion_akg('className', $atts, '');
+$contact_information = blocksy_companion_akg('contact_information', $atts, [
 	[
 		'id' => 'address',
 		'enabled' => true,
@@ -41,39 +41,39 @@ $contact_information = blocksy_default_akg('contact_information', $atts, [
 
 $classes = ['ct-contact-info-block', $classes];
 
-$type = blocksy_akg('contacts_icon_shape', $atts, 'rounded');
-$fill = blocksy_akg('contacts_icon_fill_type', $atts, 'outline');
+$type = blocksy_companion_akg('contacts_icon_shape', $atts, 'rounded');
+$fill = blocksy_companion_akg('contacts_icon_fill_type', $atts, 'outline');
 
 $content = blocksy_get_contacts_output(
 	[
 		'data' => $contact_information,
-		'link_target' => blocksy_default_akg(
+		'link_target' => blocksy_companion_akg(
 			'contact_link_target',
 			$atts,
 			'no'
 		),
-		'link_nofollow' => blocksy_default_akg(
+		'link_nofollow' => blocksy_companion_akg(
 			'link_nofollow',
 			$atts,
 			'no'
 		),
 		'type' => $type,
 		'fill' => $fill,
-		'link_icons' => blocksy_akg('link_icons', $atts, 'no'),
+		'link_icons' => blocksy_companion_akg('link_icons', $atts, 'no'),
 	]
 );
 
 $colors = [
-	'--theme-block-text-color' => blocksy_default_akg('customTextColor', $atts, ''),
-	'--theme-link-initial-color' => blocksy_default_akg('customTextInitialColor', $atts, ''),
-	'--theme-link-hover-color' => blocksy_default_akg('customTextHoverColor', $atts, ''),
-	'--theme-icon-color' => blocksy_default_akg('customIconsColor', $atts, ''),
-	'--theme-icon-hover-color' => blocksy_default_akg('customIconsHoverColor', $atts, ''),
+	'--theme-block-text-color' => blocksy_companion_akg('customTextColor', $atts, ''),
+	'--theme-link-initial-color' => blocksy_companion_akg('customTextInitialColor', $atts, ''),
+	'--theme-link-hover-color' => blocksy_companion_akg('customTextHoverColor', $atts, ''),
+	'--theme-icon-color' => blocksy_companion_akg('customIconsColor', $atts, ''),
+	'--theme-icon-hover-color' => blocksy_companion_akg('customIconsHoverColor', $atts, ''),
 ];
 
 if ($type !== 'simple') {
-	$base_color = blocksy_default_akg('customBorderColor', $atts, 'rgba(218, 222, 228, 0.5)');
-	$hover_color = blocksy_default_akg('customBorderHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
+	$base_color = blocksy_companion_akg('customBorderColor', $atts, 'rgba(218, 222, 228, 0.5)');
+	$hover_color = blocksy_companion_akg('customBorderHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
 
 	if (isset($atts['borderColor'])) {
 		$var = $atts['borderColor'];
@@ -86,8 +86,8 @@ if ($type !== 'simple') {
 	}
 
 	if ($fill === 'solid') {
-		$base_color = blocksy_default_akg('customBackgroundColor', $atts, 'rgba(218, 222, 228, 0.5)');
-		$hover_color = blocksy_default_akg('customBackgroundHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
+		$base_color = blocksy_companion_akg('customBackgroundColor', $atts, 'rgba(218, 222, 228, 0.5)');
+		$hover_color = blocksy_companion_akg('customBackgroundHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
 
 		if (isset($atts['backgroundColor'])) {
 			$var = $atts['backgroundColor'];
@@ -148,28 +148,28 @@ $wp_styles_css = '';
 
 if (isset($atts['style'])) {
 	$wp_styles = wp_style_engine_get_styles($atts['style']);
-	$wp_styles_css = blocksy_akg('css', $wp_styles, '');
+	$wp_styles_css = blocksy_companion_akg('css', $wp_styles, '');
 }
 
 $style = '';
 
-$icons_size = blocksy_akg('contacts_icons_size', $atts, 20);
+$icons_size = blocksy_companion_akg('contacts_icons_size', $atts, 20);
 
 if (! empty($icons_size)) {
 	$style .= '--theme-icon-size:' . $icons_size . 'px;';
 }
 
-$items_spacing = blocksy_akg('contacts_items_spacing', $atts, '');
+$items_spacing = blocksy_companion_akg('contacts_items_spacing', $atts, '');
 
 if (! empty($items_spacing)) {
 	$style .= '--items-spacing:' . $items_spacing . 'px;';
 }
 
-if (blocksy_default_akg('contacts_items_direction', $atts, 'column') === 'column') {
-	$style .= '--items-direction:' . blocksy_default_akg('contacts_items_direction', $atts, 'column') . ';';
+if (blocksy_companion_akg('contacts_items_direction', $atts, 'column') === 'column') {
+	$style .= '--items-direction:' . blocksy_companion_akg('contacts_items_direction', $atts, 'column') . ';';
 }
 
-blocksy_html_tag_e(
+blocksy_companion_html_tag_e(
 	'div',
 	[
 		'class' => implode(' ', $classes),

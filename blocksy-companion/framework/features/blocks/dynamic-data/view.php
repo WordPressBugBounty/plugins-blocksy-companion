@@ -4,7 +4,7 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-$field = blocksy_akg('field', $attributes, 'wp:title');
+$field = blocksy_companion_akg('field', $attributes, 'wp:title');
 
 if (strpos($field, 'woo:') === 0) {
 	blocksy_companion_render_view_e(

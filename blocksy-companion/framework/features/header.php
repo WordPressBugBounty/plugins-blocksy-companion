@@ -284,12 +284,12 @@ class HeaderAdditions {
 
 			$atts = $current_section['settings'];
 
-			if (blocksy_akg('has_transparent_header', $atts, 'no') === 'no') {
+			if (blocksy_companion_akg('has_transparent_header', $atts, 'no') === 'no') {
 				$this->has_transparent_header = false;
 				return false;
 			}
 
-			$transparent_behaviour = blocksy_akg(
+			$transparent_behaviour = blocksy_companion_akg(
 				'transparent_behaviour',
 				$atts,
 				[
@@ -321,7 +321,7 @@ class HeaderAdditions {
 				(
 					($current_section['id'] === 'type-1'
 						&&
-						$conditions_manager->condition_matches(blocksy_akg(
+						$conditions_manager->condition_matches(blocksy_companion_akg(
 							'transparent_conditions',
 							$atts,
 							[
@@ -353,6 +353,18 @@ class HeaderAdditions {
 					!$check_conditions
 				)
 				&&
+				/**
+				 * Filters whether the transparent header is allowed on the current screen.
+				 *
+				 * Returning false makes the header render in its default, non-transparent state.
+				 *
+				 * @since 1.8.0
+				 *
+				 * @param bool  $allowed            Whether the transparent header is allowed. Default true.
+				 * @param array $current_section    The header section descriptor being rendered. Has an `id` key.
+				 * @param array $transparent_result Devices the header is transparent on. Any of 'desktop',
+				 *                                  'tablet' and 'mobile'.
+				 */
 				apply_filters(
 					'blocksy:header:transparent:current-screen-allowed',
 					true,
@@ -390,12 +402,12 @@ class HeaderAdditions {
 
 		$atts = $current_section['settings'];
 
-		if (blocksy_akg('has_sticky_header', $atts, 'no') === 'no') {
+		if (blocksy_companion_akg('has_sticky_header', $atts, 'no') === 'no') {
 			$has_sticky_header_result = false;
 		} else {
 			$atts = $current_section['settings'];
 
-			$sticky_behaviour = blocksy_akg(
+			$sticky_behaviour = blocksy_companion_akg(
 				'sticky_behaviour',
 				$atts,
 				[
@@ -422,8 +434,8 @@ class HeaderAdditions {
 				// 'behaviour' => 'middle_bottom'
 				// 'behaviour' => 'middle'
 				// 'behaviour' => 'middle_bottom'
-				'behaviour' => blocksy_akg('sticky_rows', $atts, 'middle'),
-				'effect' => blocksy_akg('sticky_effect', $atts, 'shrink')
+				'behaviour' => blocksy_companion_akg('sticky_rows', $atts, 'middle'),
+				'effect' => blocksy_companion_akg('sticky_effect', $atts, 'shrink')
 			];
 
 			foreach ($sticky_behaviour as $device => $value) {
@@ -558,7 +570,7 @@ class HeaderAdditions {
 
 		$atts = $render->get_item_data_for('account');
 
-		$account_user_visibility = blocksy_akg('account_user_visibility', $atts, [
+		$account_user_visibility = blocksy_companion_akg('account_user_visibility', $atts, [
 			'logged_in' => true,
 			'logged_out' => true,
 		]);
@@ -572,7 +584,7 @@ class HeaderAdditions {
 			return false;
 		}
 
-		if (blocksy_akg('login_account_action', $atts, 'modal') !== 'modal') {
+		if (blocksy_companion_akg('login_account_action', $atts, 'modal') !== 'modal') {
 			$this->has_account_modal = false;
 			return false;
 		}

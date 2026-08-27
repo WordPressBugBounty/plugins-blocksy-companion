@@ -18,7 +18,7 @@ class DynamicData {
 		);
 
 		add_filter('blocksy:block-editor:localized_data', function ($data) {
-			$options = blocksy_akg(
+			$options = blocksy_companion_akg(
 				'options',
 				blocksy_companion_get_variables_from_file(
 					dirname(__FILE__) . '/options.php',
@@ -70,7 +70,7 @@ class DynamicData {
 					$updated_class_name
 				);
 
-				$overlayOpacity = intval(blocksy_akg(
+				$overlayOpacity = intval(blocksy_companion_akg(
 					'dimRatio',
 					$parsed_block['attrs'],
 					50
@@ -140,6 +140,21 @@ class DynamicData {
 		);
 	}
 
+	public static function get_product_attribute_choices() {
+		if (! function_exists('wc_get_attribute_taxonomies')) {
+			return [];
+		}
+
+		$choices = [];
+
+		foreach (wc_get_attribute_taxonomies() as $attribute_taxonomy) {
+			$choices[$attribute_taxonomy->attribute_name] =
+				$attribute_taxonomy->attribute_label;
+		}
+
+		return $choices;
+	}
+
 	public function render($attributes, $content, $block) {
 		$allowed_tag_names = [
 			'div',
@@ -153,7 +168,7 @@ class DynamicData {
 			'h6',
 		];
 
-		$tag_name = blocksy_akg('tagName', $attributes, 'div');
+		$tag_name = blocksy_companion_akg('tagName', $attributes, 'div');
 
 		$attributes['tagName'] = in_array(
 			$tag_name,

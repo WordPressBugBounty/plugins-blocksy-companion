@@ -61,6 +61,11 @@ class AccountAuth {
 	}
 
 	public function implement_user_lostpassword() {
+		/**
+		 * Fires before the account modal handles a lost password request.
+		 *
+		 * @since 2.0.76
+		 */
 		do_action('blocksy:account:user-flow:before-lostpassword');
 
 		ob_start();
@@ -159,6 +164,11 @@ class AccountAuth {
 	}
 
 	public function implement_user_registration() {
+		/**
+		 * Fires before the account modal handles a registration request.
+		 *
+		 * @since 2.0.76
+		 */
 		do_action('blocksy:account:user-flow:before-registration');
 
 		ob_start();
@@ -300,6 +310,11 @@ class AccountAuth {
 	}
 
 	public function implement_user_login() {
+		/**
+		 * Fires before the account modal handles a login request.
+		 *
+		 * @since 2.0.76
+		 */
 		do_action('blocksy:account:user-flow:before-login');
 
 		add_filter(
@@ -311,6 +326,15 @@ class AccountAuth {
 				if (! is_wp_error($user) && ! $reauth) {
 					wp_send_json_success([
 						'html' => '',
+						/**
+						 * Filters the URL the account modal redirects to after a successful login.
+						 *
+						 * @since 1.8.7
+						 *
+						 * @param string   $redirect_to           The redirect destination URL.
+						 * @param string   $requested_redirect_to The redirect destination requested with the login request.
+						 * @param \WP_User $user                  The user that was logged in.
+						 */
 						'redirect_to' => apply_filters(
 							'blocksy:account:modal:login:redirect_to',
 							$redirect_to,
@@ -351,6 +375,16 @@ class AccountAuth {
 			$strategy = 'woocommerce';
 		}
 
+		/**
+		 * Filters the registration strategy used by the account modal.
+		 *
+		 * Returning null disables registration altogether.
+		 *
+		 * @since 1.8.86
+		 *
+		 * @param string|null $strategy Registration strategy. Either 'wp', 'woocommerce' or null when
+		 *                              registration is disabled.
+		 */
 		return apply_filters('blocksy:account:register:strategy', $strategy);
 	}
 }

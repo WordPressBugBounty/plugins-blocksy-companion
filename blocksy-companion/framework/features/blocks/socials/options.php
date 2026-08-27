@@ -56,6 +56,19 @@ $options = [
 			],
 		],
 
+		/**
+		 * Filters the social networks available in the block's networks picker.
+		 *
+		 * @since 2.0.49
+		 *
+		 * @param array $networks {
+		 *     Social networks, keyed by network id.
+		 *
+		 *     @type array $network {
+		 *         @type string $label Network label shown in the picker.
+		 *     }
+		 * }
+		 */
 		'settings' => apply_filters(
 			'blocksy:socials:options:icon',
 			blocksy_get_social_networks_list()

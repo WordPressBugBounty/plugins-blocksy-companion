@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.53
+Stable tag: 2.1.55
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,13 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.55: 2026-08-27
+- Improvement: General fixes and improvements
+
+2.1.54: 2026-08-27
+- Improvement: Dynamic Data block - correctly display WooCommerce product attributes when no attribute is explicitly selected
+- Improvement: Translations - improve the loading of translation strings in the admin area
+
 2.1.53: 2026-08-13
 - Improvement: Better support for WordPress 7.1 responsive block styles
 - Improvement: Cookies Consent - correctly display the message when submitting comments

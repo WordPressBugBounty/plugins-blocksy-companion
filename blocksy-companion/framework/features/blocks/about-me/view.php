@@ -12,11 +12,11 @@ if (! defined('ABSPATH')) {
  * @package Blocksy
  */
 
-$about_source = blocksy_default_akg('about_source', $atts, 'from_wp');
-$alignment = blocksy_default_akg('about_alignment', $atts, 'center');
-$avatar_size = blocksy_default_akg('about_avatar_size', $atts, 'small');
-$avatar_shape = blocksy_default_akg('avatar_shape', $atts, 'rounded');
-$className = blocksy_default_akg('className', $atts, '');
+$about_source = blocksy_companion_akg('about_source', $atts, 'from_wp');
+$alignment = blocksy_companion_akg('about_alignment', $atts, 'center');
+$avatar_size = blocksy_companion_akg('about_avatar_size', $atts, 'small');
+$avatar_shape = blocksy_companion_akg('avatar_shape', $atts, 'rounded');
+$className = blocksy_companion_akg('className', $atts, '');
 
 $sizes = [
 	'small' => 90,
@@ -24,11 +24,11 @@ $sizes = [
 	'large' => 200,
 ];
 
-$user_id = blocksy_akg('wp_user', $atts, null);
+$user_id = blocksy_companion_akg('wp_user', $atts, null);
 
 $image_output = blocksy_media(
 	[
-		'attachment_id' => blocksy_default_akg(
+		'attachment_id' => blocksy_companion_akg(
 			'about_avatar/attachment_id',
 			$atts,
 			null
@@ -43,9 +43,9 @@ $image_output = blocksy_media(
 	]
 );
 
-$about_name = blocksy_default_akg('about_name', $atts, 'John Doe');
+$about_name = blocksy_companion_akg('about_name', $atts, 'John Doe');
 $about_text = do_shortcode(
-	blocksy_default_akg(
+	blocksy_companion_akg(
 		'about_text',
 		$atts,
 		'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua tincidunt tortor aliquam.'
@@ -84,7 +84,7 @@ if ($about_source === 'from_wp') {
 
 $link_rel = '';
 
-$link_target = blocksy_default_akg('link_target', $atts, 'no');
+$link_target = blocksy_companion_akg('link_target', $atts, 'no');
 
 if ($link_target === 'yes') {
 	$link_target = '_blank';
@@ -93,26 +93,26 @@ if ($link_target === 'yes') {
 	$link_target = false;
 }
 
-$link_nofollow = blocksy_default_akg('link_nofollow', $atts, 'no');
+$link_nofollow = blocksy_companion_akg('link_nofollow', $atts, 'no');
 
 if ($link_nofollow === 'yes') {
 	$link_rel .= ' nofollow';
 }
 
-$size = blocksy_default_akg('about_social_icons_size', $atts, 'small');
-$type = blocksy_default_akg('about_social_type', $atts, 'rounded');
-$fill = blocksy_default_akg('about_social_icons_fill', $atts, 'outline');
+$size = blocksy_companion_akg('about_social_icons_size', $atts, 'small');
+$type = blocksy_companion_akg('about_social_type', $atts, 'rounded');
+$fill = blocksy_companion_akg('about_social_icons_fill', $atts, 'outline');
 
 $colors = [
-	'--theme-block-text-color' => blocksy_default_akg('customTextColor', $atts, ''),
-	'--theme-link-hover-color' => blocksy_default_akg('customTextHoverColor', $atts, ''),
-	'--theme-icon-color' => blocksy_default_akg('customIconsColor', $atts, ''),
-	'--theme-icon-hover-color' => blocksy_default_akg('customIconsHoverColor', $atts, ''),
+	'--theme-block-text-color' => blocksy_companion_akg('customTextColor', $atts, ''),
+	'--theme-link-hover-color' => blocksy_companion_akg('customTextHoverColor', $atts, ''),
+	'--theme-icon-color' => blocksy_companion_akg('customIconsColor', $atts, ''),
+	'--theme-icon-hover-color' => blocksy_companion_akg('customIconsHoverColor', $atts, ''),
 ];
 
 if ($type !== 'simple') {
-	$base_color = blocksy_default_akg('customBorderColor', $atts, 'rgba(218, 222, 228, 0.5)');
-	$hover_color = blocksy_default_akg('customBorderHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
+	$base_color = blocksy_companion_akg('customBorderColor', $atts, 'rgba(218, 222, 228, 0.5)');
+	$hover_color = blocksy_companion_akg('customBorderHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
 
 	if (isset($atts['borderColor'])) {
 		$var = $atts['borderColor'];
@@ -125,8 +125,8 @@ if ($type !== 'simple') {
 	}
 
 	if ($fill === 'solid') {
-		$base_color = blocksy_default_akg('customBackgroundColor', $atts, 'rgba(218, 222, 228, 0.5)');
-		$hover_color = blocksy_default_akg('customBackgroundHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
+		$base_color = blocksy_companion_akg('customBackgroundColor', $atts, 'rgba(218, 222, 228, 0.5)');
+		$hover_color = blocksy_companion_akg('customBackgroundHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
 
 		if (isset($atts['backgroundColor'])) {
 			$var = $atts['backgroundColor'];
@@ -182,13 +182,13 @@ foreach ($colors as $key => $value) {
 	$attr['style'] .= $key . ':' . $value . ';';
 }
 
-$icons_size = blocksy_akg('about_social_icons_size', $atts, '');
+$icons_size = blocksy_companion_akg('about_social_icons_size', $atts, '');
 
 if (! empty($icons_size)) {
 	$attr['style'] .= '--theme-icon-size:' . $icons_size . 'px;';
 }
 
-$items_spacing = blocksy_akg('about_items_spacing', $atts, '');
+$items_spacing = blocksy_companion_akg('about_items_spacing', $atts, '');
 
 if (! empty($items_spacing)) {
 	$attr['style'] .= '--items-spacing:' . $items_spacing . 'px;';
@@ -196,7 +196,7 @@ if (! empty($items_spacing)) {
 
 ?>
 
-<div <?php blocksy_attr_to_html_e($attr) ?>>
+<div <?php blocksy_companion_attr_to_html_e($attr) ?>>
 	<?php
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo $image_output;
@@ -223,7 +223,7 @@ if (! empty($items_spacing)) {
 	<?php
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo blocksy_social_icons(
-			blocksy_default_akg('about_socials', $atts, [
+			blocksy_companion_akg('about_socials', $atts, [
 				[
 					'id' => 'facebook',
 					'enabled' => true,
@@ -244,7 +244,7 @@ if (! empty($items_spacing)) {
 				'size' => $size,
 				'type' => $type,
 				'fill' => $fill,
-				'icons-color' => blocksy_default_akg('about_social_icons_color', $atts, 'default'),
+				'icons-color' => blocksy_companion_akg('about_social_icons_color', $atts, 'default'),
 				'links_target' => $link_target,
 				'links_rel' => $link_rel,
 			]

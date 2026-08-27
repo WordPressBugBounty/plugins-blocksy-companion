@@ -13,20 +13,20 @@ if (! defined('ABSPATH')) {
  */
 
 // Widget title
-$title = blocksy_default_akg(
+$title = blocksy_companion_akg(
 	'title',
 	$atts,
 	__('Newsletter', 'blocksy-companion')
 );
 
 // Button text
-$button_text = blocksy_default_akg(
+$button_text = blocksy_companion_akg(
 	'newsletter_subscribe_button_text',
 	$atts,
 	__('Subscribe', 'blocksy-companion')
 );
 
-$newsletter_subscribe_name_required = blocksy_default_akg(
+$newsletter_subscribe_name_required = blocksy_companion_akg(
 	'newsletter_subscribe_name_required',
 	$atts,
 	'no'
@@ -36,8 +36,8 @@ $newsletter_subscribe_name_required = blocksy_default_akg(
 
 $style = '';
 
-$newsletter_subscribe_height = blocksy_default_akg('newsletter_subscribe_height', $atts, '');
-$newsletter_subscribe_gap = blocksy_default_akg('newsletter_subscribe_gap', $atts, '');
+$newsletter_subscribe_height = blocksy_companion_akg('newsletter_subscribe_height', $atts, '');
+$newsletter_subscribe_gap = blocksy_companion_akg('newsletter_subscribe_gap', $atts, '');
 
 if (! empty($newsletter_subscribe_height)) {
 	$style .= '--theme-form-field-height:' . $newsletter_subscribe_height . 'px;';
@@ -95,12 +95,12 @@ if (isset($atts['style']['border']['radius'])) {
 }
 
 $colors = [
-	'--theme-form-text-initial-color' => blocksy_default_akg('customInputFontColor', $atts, ''),
-	'--theme-form-text-focus-color' => blocksy_default_akg('customInputFontColorFocus', $atts, ''),
-	'--theme-form-field-border-initial-color' => blocksy_default_akg('customInputBorderColor', $atts, ''),
-	'--theme-form-field-border-focus-color' => blocksy_default_akg('customInputBorderColorFocus', $atts, ''),
-	'--theme-form-field-background-initial-color' => blocksy_default_akg('customInputBackgroundColor', $atts, ''),
-	'--theme-form-field-background-focus-color' => blocksy_default_akg('customInputBackgroundColorFocus', $atts, ''),
+	'--theme-form-text-initial-color' => blocksy_companion_akg('customInputFontColor', $atts, ''),
+	'--theme-form-text-focus-color' => blocksy_companion_akg('customInputFontColorFocus', $atts, ''),
+	'--theme-form-field-border-initial-color' => blocksy_companion_akg('customInputBorderColor', $atts, ''),
+	'--theme-form-field-border-focus-color' => blocksy_companion_akg('customInputBorderColorFocus', $atts, ''),
+	'--theme-form-field-background-initial-color' => blocksy_companion_akg('customInputBackgroundColor', $atts, ''),
+	'--theme-form-field-background-focus-color' => blocksy_companion_akg('customInputBackgroundColorFocus', $atts, ''),
 ];
 
 if (isset($atts['inputFontColor'])) {
@@ -144,18 +144,18 @@ foreach ($colors as $key => $value) {
 
 // Form name
 $has_name =
-	blocksy_default_akg('has_newsletter_subscribe_name', $atts, 'no') === 'yes';
+	blocksy_companion_akg('has_newsletter_subscribe_name', $atts, 'no') === 'yes';
 
 $list_id = null;
 
 if (
-	blocksy_default_akg(
+	blocksy_companion_akg(
 		'newsletter_subscribe_list_id_source',
 		$atts,
 		'default'
 	) === 'custom'
 ) {
-	$list_id = blocksy_default_akg('newsletter_subscribe_list_id', $atts, '');
+	$list_id = blocksy_companion_akg('newsletter_subscribe_list_id', $atts, '');
 }
 
 $manager = \Blocksy\Extensions\NewsletterSubscribe\Provider::get_for_settings();
@@ -179,18 +179,18 @@ $form_url = $provider_data['form_url'];
 $has_gdpr_fields = $provider_data['has_gdpr_fields'];
 $has_double_optin = isset($provider_data['double_optin']) ? $provider_data['double_optin'] : false;
 
-$name_label = blocksy_default_akg(
+$name_label = blocksy_companion_akg(
 	'newsletter_subscribe_name_label',
 	$atts,
 	__('Your name', 'blocksy-companion')
 );
-$email_label = blocksy_default_akg(
+$email_label = blocksy_companion_akg(
 	'newsletter_subscribe_mail_label',
 	$atts,
 	__('Your email *', 'blocksy-companion')
 );
 
-$view_type = blocksy_default_akg(
+$view_type = blocksy_companion_akg(
 	'newsletter_subscribe_view_type',
 	$atts,
 	'inline'
@@ -213,7 +213,7 @@ $form_attrs = [
 	'data-provider' => $provider_data['provider'],
 ];
 
-$container_type = blocksy_default_akg(
+$container_type = blocksy_companion_akg(
 	'newsletter_subscribe_container_type',
 	$atts,
 	'default'
@@ -251,10 +251,10 @@ $button_colors = [];
 $button_colors = array_merge(
 	$button_colors,
 	[
-		'--theme-button-text-initial-color' => blocksy_default_akg('customInputIconColor', $atts, ''),
-		'--theme-button-text-hover-color' => blocksy_default_akg('customInputIconColorFocus', $atts, ''),
-		'--theme-button-background-initial-color' => blocksy_default_akg('customButtonBackgroundColor', $atts, ''),
-		'--theme-button-background-hover-color' => blocksy_default_akg('customButtonBackgroundColorHover', $atts, ''),
+		'--theme-button-text-initial-color' => blocksy_companion_akg('customInputIconColor', $atts, ''),
+		'--theme-button-text-hover-color' => blocksy_companion_akg('customInputIconColorFocus', $atts, ''),
+		'--theme-button-background-initial-color' => blocksy_companion_akg('customButtonBackgroundColor', $atts, ''),
+		'--theme-button-background-hover-color' => blocksy_companion_akg('customButtonBackgroundColorHover', $atts, ''),
 	]
 );
 
@@ -288,9 +288,9 @@ foreach ($button_colors as $key => $value) {
 }
 
 ?>
-	<form <?php blocksy_attr_to_html_e($form_attrs); ?>>
+	<form <?php blocksy_companion_attr_to_html_e($form_attrs); ?>>
 
-		<div <?php blocksy_attr_to_html_e($container_atts); ?>>
+		<div <?php blocksy_companion_attr_to_html_e($container_atts); ?>>
 			<?php if ($has_name) { ?>
 				<input
 					type="text"

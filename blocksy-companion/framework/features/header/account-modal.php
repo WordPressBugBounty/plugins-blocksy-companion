@@ -11,6 +11,16 @@ $form_views = [
 ];
 
 foreach ($form_views as $form_key => $value) {
+	/**
+	 * Filters the rendered markup of an account modal form view.
+	 *
+	 * The dynamic portion of the hook name, `$form_key`, refers to the form being
+	 * rendered. Possible values are 'login', 'register' and 'lostpassword'.
+	 *
+	 * @since 1.8.0
+	 *
+	 * @param string $view The rendered form markup.
+	 */
 	$form_views[$form_key] = apply_filters(
 		'blocksy:header:account-modal:views:' . $form_key . '-form',
 		blocksy_companion_render_view(
@@ -20,7 +30,7 @@ foreach ($form_views as $form_key => $value) {
 	);
 }
 
-$close_button_type = blocksy_akg('account_close_button_type', $atts, 'type-1');
+$close_button_type = blocksy_companion_akg('account_close_button_type', $atts, 'type-1');
 
 ?>
 

@@ -12,12 +12,12 @@ if (! defined('ABSPATH')) {
  * @package Blocksy
  */
 
-$classes = blocksy_default_akg('className', $atts, '');
-$color = blocksy_default_akg('share_icons_color', $atts, 'default');
-$type = blocksy_default_akg('share_type', $atts, 'simple');
-$fill = blocksy_default_akg('share_icons_fill', $atts, 'outline');
-$icons_size = blocksy_akg('share_icons_size', $atts, '');
-$items_spacing = blocksy_akg('items_spacing', $atts, '');
+$classes = blocksy_companion_akg('className', $atts, '');
+$color = blocksy_companion_akg('share_icons_color', $atts, 'default');
+$type = blocksy_companion_akg('share_type', $atts, 'simple');
+$fill = blocksy_companion_akg('share_icons_fill', $atts, 'outline');
+$icons_size = blocksy_companion_akg('share_icons_size', $atts, '');
+$items_spacing = blocksy_companion_akg('items_spacing', $atts, '');
 
 $colors = [];
 
@@ -27,12 +27,12 @@ $wrapper_attr = [
 ];
 
 if ($color !== 'official') {
-	$colors['--theme-icon-color'] = blocksy_default_akg('customInitialColor', $atts, '');
-	$colors['--theme-icon-hover-color'] = blocksy_default_akg('customHoverColor', $atts, '');
+	$colors['--theme-icon-color'] = blocksy_companion_akg('customInitialColor', $atts, '');
+	$colors['--theme-icon-hover-color'] = blocksy_companion_akg('customHoverColor', $atts, '');
 
 	if ($type !== 'simple') {
-		$base_color = blocksy_default_akg('customBorderColor', $atts, 'rgba(218, 222, 228, 0.5)');
-		$hover_color = blocksy_default_akg('customBorderHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
+		$base_color = blocksy_companion_akg('customBorderColor', $atts, 'rgba(218, 222, 228, 0.5)');
+		$hover_color = blocksy_companion_akg('customBorderHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
 
 		if (isset($atts['borderColor'])) {
 			$var = $atts['borderColor'];
@@ -45,8 +45,8 @@ if ($color !== 'official') {
 		}
 
 		if ($fill === 'solid') {
-			$base_color = blocksy_default_akg('customBackgroundColor', $atts, 'rgba(218, 222, 228, 0.5)');
-			$hover_color = blocksy_default_akg('customBackgroundHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
+			$base_color = blocksy_companion_akg('customBackgroundColor', $atts, 'rgba(218, 222, 228, 0.5)');
+			$hover_color = blocksy_companion_akg('customBackgroundHoverColor', $atts, 'rgba(218, 222, 228, 0.7)');
 
 			if (isset($atts['backgroundColor'])) {
 				$var = $atts['backgroundColor'];
@@ -99,7 +99,7 @@ if (empty($wrapper_attr['style'])) {
 	unset($wrapper_attr['style']);
 }
 
-blocksy_html_tag_e('div', $wrapper_attr, false);
+blocksy_companion_html_tag_e('div', $wrapper_attr, false);
 
 /**
  * blocksy_share_icons() function is already properly escaped.
@@ -118,7 +118,7 @@ if ($fill) {
 
 
 // v.2.0.74 migration
-$share_networks = blocksy_akg(
+$share_networks = blocksy_companion_akg(
 	'share_networks',
 	$atts,
 	[

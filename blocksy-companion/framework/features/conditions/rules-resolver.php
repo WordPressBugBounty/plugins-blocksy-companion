@@ -590,6 +590,18 @@ class ConditionsRulesResolver {
 			}
 		}
 
+		/**
+		 * Filters the result of resolving a display condition rule.
+		 *
+		 * Runs for the rules the built-in resolver doesn't handle, which lets custom rules
+		 * declared through `blocksy:conditions:rules:custom` be matched.
+		 *
+		 * @since 2.0.69
+		 *
+		 * @param bool  $result Whether the rule matches the current request. Default false.
+		 * @param array $rule   The rule being resolved. Has a `rule` key with the rule id and,
+		 *                      optionally, a `payload` key with the rule's stored value.
+		 */
 		return apply_filters(
 			'blocksy:conditions:rules:resolve',
 			false,

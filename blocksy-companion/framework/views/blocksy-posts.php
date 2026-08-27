@@ -142,6 +142,14 @@ if (isset($_GET['blocksy_term_id'])) {
 	];
 }
 
+/**
+ * Filters the query arguments used by the `[blocksy_posts]` shortcode.
+ *
+ * @since 1.8.7
+ *
+ * @param array $query_args Arguments passed to `WP_Query`.
+ * @param array $args       Parsed shortcode attributes.
+ */
 $query = new WP_Query(apply_filters(
 	'blocksy:general:shortcodes:blocksy-posts:args',
 	$query_args,

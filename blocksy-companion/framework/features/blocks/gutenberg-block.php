@@ -111,7 +111,7 @@ class GutenbergBlock {
 		add_filter(
 			'blocksy:block-editor:localized_data',
 			function ($data) use ($options_file) {
-				$options = blocksy_akg(
+				$options = blocksy_companion_akg(
 					'options',
 					blocksy_companion_get_variables_from_file(
 						$options_file,

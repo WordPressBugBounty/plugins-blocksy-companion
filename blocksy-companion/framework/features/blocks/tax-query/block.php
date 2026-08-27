@@ -29,7 +29,7 @@ class TaxQuery {
 
 			$pagination_output = '';
 
-			if (blocksy_akg('has_pagination', $body['attributes'], 'no') === 'yes') {
+			if (blocksy_companion_akg('has_pagination', $body['attributes'], 'no') === 'yes') {
 				$term_query = $this->get_term_query($body['attributes']);
 
 				if ($term_query) {
@@ -135,8 +135,8 @@ class TaxQuery {
 				$context = $instance->context;
 
 				$is_slideshow_layout = $context['has_slideshow'] === 'yes';
-				$has_item_link = blocksy_akg('has_item_link', $block['attrs'], 'no') === 'yes';
-				$layout = blocksy_akg('layout/type', $block['attrs'], 'default');
+				$has_item_link = blocksy_companion_akg('has_item_link', $block['attrs'], 'no') === 'yes';
+				$layout = blocksy_companion_akg('layout/type', $block['attrs'], 'default');
 				$is_grid_layout = $layout === 'grid';
 
 				$processor->next_tag('div');
@@ -201,23 +201,23 @@ class TaxQuery {
 					'mobile' => 1
 				];
 
-				$desktopColumns = blocksy_akg('layout/columnCount', $block['attrs'], '3');
-				$tabletColumns = blocksy_akg('tabletColumns', $block['attrs'], '2');
-				$mobileColumns = blocksy_akg('mobileColumns', $block['attrs'], '1');
+				$desktopColumns = blocksy_companion_akg('layout/columnCount', $block['attrs'], '3');
+				$tabletColumns = blocksy_companion_akg('tabletColumns', $block['attrs'], '2');
+				$mobileColumns = blocksy_companion_akg('mobileColumns', $block['attrs'], '1');
 
 				if ($is_grid_layout) {
 					$columns = [
-						'desktop' => blocksy_akg(
+						'desktop' => blocksy_companion_akg(
 							'columnCount',
 							$block['attrs']['layout'],
 							'3'
 						),
-						'tablet' => blocksy_akg(
+						'tablet' => blocksy_companion_akg(
 							'tabletColumns',
 							$block['attrs'],
 							'2'
 						),
-						'mobile' => blocksy_akg(
+						'mobile' => blocksy_companion_akg(
 							'mobileColumns',
 							$block['attrs'],
 							'1'
@@ -372,14 +372,14 @@ class TaxQuery {
 								'class' => 'ct-link-overlay',
 							];
 
-							$link_html = blocksy_html_tag(
+							$link_html = blocksy_companion_html_tag(
 								'a',
 								$link_attributes,
 								''
 							);
 						}
 
-						$single_item = blocksy_html_tag(
+						$single_item = blocksy_companion_html_tag(
 							'div',
 							[
 								'class' => implode(' ', [
@@ -393,7 +393,7 @@ class TaxQuery {
 						);
 
 						if ($is_slideshow_layout) {
-							$single_item = blocksy_html_tag(
+							$single_item = blocksy_companion_html_tag(
 								'div',
 								array_merge(
 									[
@@ -453,7 +453,7 @@ class TaxQuery {
 							$pills = ob_get_clean();
 						}
 
-						$content = blocksy_html_tag(
+						$content = blocksy_companion_html_tag(
 							'div',
 							array_merge(
 								[
@@ -464,18 +464,18 @@ class TaxQuery {
 									'data-autoplay' => $context['has_slideshow_autoplay_speed']
 								] : []
 							),
-							blocksy_html_tag(
+							blocksy_companion_html_tag(
 								'div',
 								[
 									'class' => 'flexy'
 								],
-								blocksy_html_tag(
+								blocksy_companion_html_tag(
 									'div',
 									[
 										'class' => 'flexy-view',
 										'data-flexy-view' => 'boxed'
 									],
-									blocksy_html_tag(
+									blocksy_companion_html_tag(
 										'div',
 										[
 											'class' => 'flexy-items',
@@ -495,7 +495,7 @@ class TaxQuery {
 					);
 
 					if (
-						blocksy_akg('has_pagination', $context, 'no') === 'yes'
+						blocksy_companion_akg('has_pagination', $context, 'no') === 'yes'
 						&&
 						! $is_slideshow_layout
 					) {
@@ -553,7 +553,7 @@ class TaxQuery {
 
 		$gap_value = '';
 
-		$gap_value = blocksy_akg('spacing', $attributes['style'], []);
+		$gap_value = blocksy_companion_akg('spacing', $attributes['style'], []);
 
 		if (! isset($gap_value['blockGap'])) {
 			return '';
@@ -880,8 +880,8 @@ class TaxQuery {
 				];
 			}
 
-			$maybe_icon = blocksy_akg('icon_image', $term_atts, '');
-			$maybe_image = blocksy_akg('image', $term_atts, $attachment);
+			$maybe_icon = blocksy_companion_akg('icon_image', $term_atts, '');
+			$maybe_image = blocksy_companion_akg('image', $term_atts, $attachment);
 
 			$terms_descriptors[] = [
 				'term_id' => $term->term_id,

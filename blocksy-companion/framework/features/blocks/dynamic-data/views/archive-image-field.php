@@ -8,7 +8,7 @@ if (! isset($term_id)) {
 	$term_id = null;
 }
 
-$image_source = blocksy_akg('imageSource', $attributes, 'featured');
+$image_source = blocksy_companion_akg('imageSource', $attributes, 'featured');
 $attachment_id = null;
 
 if (! $term_id && is_archive()) {
@@ -47,10 +47,10 @@ if ($term_id) {
 		$term_atts = [];
 	}
 
-	$maybe_image = blocksy_akg('image', $term_atts, '');
+	$maybe_image = blocksy_companion_akg('image', $term_atts, '');
 
 	if ($image_source === 'icon') {
-		$maybe_image = blocksy_akg('icon_image', $term_atts, '');
+		$maybe_image = blocksy_companion_akg('icon_image', $term_atts, '');
 	}
 
 	if (

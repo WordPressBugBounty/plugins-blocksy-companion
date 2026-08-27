@@ -71,7 +71,7 @@ function blocksy_companion_ext_cookies_checkbox($prefix = '', $unique_suffix = '
 	<p class="gdpr-confirm-policy">
 		<input name="ct_has_gdprconfirm" type="hidden" value="yes">
 		<?php
-			blocksy_html_tag_e(
+			blocksy_companion_html_tag_e(
 				'input',
 				[
 					'id' => $input_id,

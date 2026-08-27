@@ -96,9 +96,28 @@ class DemoInstallFinalActions {
 		$this->cleanup_duplicate_menu_items();
 
 		do_action('customize_save_after');
+		/**
+		 * Fires when the dynamic CSS caches should be invalidated.
+		 *
+		 * Listeners drop their generated CSS files/transients so the
+		 * next request regenerates them.
+		 *
+		 * @since 1.6.2
+		 * @since 1.8.0 Renamed from `blocksy:dynamic-css:regenere_css_files`.
+		 */
 		do_action('blocksy:dynamic-css:refresh-caches');
+		/**
+		 * Fires when all the caches managed by Blocksy need to be purged.
+		 *
+		 * @since 2.0.27
+		 */
 		do_action('blocksy:cache-manager:purge-all');
 
+		/**
+		 * Fires after a starter site import has finished and all the caches were refreshed.
+		 *
+		 * @since 2.0.84
+		 */
 		do_action('blocksy:demo-install:finish');
 
 		if ($this->is_ajax_request) {

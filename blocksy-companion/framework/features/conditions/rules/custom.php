@@ -6,6 +6,22 @@ if (! defined('ABSPATH')) {
 
 $options = [];
 
+/**
+ * Filters the custom rules added to the display conditions picker.
+ *
+ * @since 2.0.69
+ *
+ * @param array $custom_rules {
+ *     Custom rules. Entries without an `id` and a `title` are skipped.
+ *
+ *     @type array $rule {
+ *         @type string $id             Rule id.
+ *         @type string $title          Rule label shown in the conditions picker.
+ *         @type bool   $has_text_field Whether the rule renders a free text field. Optional.
+ *         @type array  $choices        Choices rendered for the rule. Optional.
+ *     }
+ * }
+ */
 $custom_rules = apply_filters('blocksy:conditions:rules:custom', []);
 
 $result = [];

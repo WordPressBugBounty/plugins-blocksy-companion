@@ -21,16 +21,16 @@ $wrapper_attr = [
 	'style' => ''
 ];
 
-$aspect_ratio = blocksy_akg('aspectRatio', $attributes, 'auto');
-$minimum_height = blocksy_akg('minimumHeight', $attributes, '');
-$size_slug = blocksy_akg('sizeSlug', $attributes, 'full');
+$aspect_ratio = blocksy_companion_akg('aspectRatio', $attributes, 'auto');
+$minimum_height = blocksy_companion_akg('minimumHeight', $attributes, '');
+$size_slug = blocksy_companion_akg('sizeSlug', $attributes, 'full');
 
-$has_parallax = blocksy_akg('hasParallax', $attributes, false);
-$is_repeated = blocksy_akg('isRepeated', $attributes, false);
-$allow_custom_content_and_wide_size = blocksy_akg('allowCustomContentAndWideSize', $attributes, true);
+$has_parallax = blocksy_companion_akg('hasParallax', $attributes, false);
+$is_repeated = blocksy_companion_akg('isRepeated', $attributes, false);
+$allow_custom_content_and_wide_size = blocksy_companion_akg('allowCustomContentAndWideSize', $attributes, true);
 
-$focal_point = blocksy_akg('focalPoint', $attributes, []);
-$content_position = blocksy_akg('contentPosition', $attributes, 'center center');
+$focal_point = blocksy_companion_akg('focalPoint', $attributes, []);
+$content_position = blocksy_companion_akg('contentPosition', $attributes, 'center center');
 
 if (
 	! empty($POSITION_CLASSNAMES[$content_position])
@@ -116,7 +116,7 @@ if (
 		$size_slug
 	);
 
-	$image_result = blocksy_html_tag(
+	$image_result = blocksy_companion_html_tag(
 		'div',
 		[
 			'class' => "wp-block-cover__image-background wp-image-{$attachment_id} has-parallax",
@@ -134,7 +134,7 @@ $overlay_atts = [
 	'aria-hidden' => 'true',
 ];
 
-$overlay_content = blocksy_html_tag(
+$overlay_content = blocksy_companion_html_tag(
 	'span',
 	array_merge(
 		[
@@ -158,8 +158,8 @@ if ($allow_custom_content_and_wide_size) {
 	$inner_classes[] = 'wp-block-cover-is-layout-flow';
 }
 
-$content_size = blocksy_akg('contentSize', $attributes, 0);
-$wide_size = blocksy_akg('wideSize', $attributes, 0);
+$content_size = blocksy_companion_akg('contentSize', $attributes, 0);
+$wide_size = blocksy_companion_akg('wideSize', $attributes, 0);
 
 if (! empty($content_size)) {
 	$css = new \Blocksy_Css_Injector();
@@ -198,12 +198,12 @@ if (! empty($wide_size)) {
 	]);
 }
 
-$content = blocksy_html_tag(
+$content = blocksy_companion_html_tag(
 	'div',
 	$wrapper_attr,
 	$overlay_content .
 	$image_result .
-	blocksy_html_tag(
+	blocksy_companion_html_tag(
 		'div',
 		[
 			'class' => join(' ', $inner_classes)

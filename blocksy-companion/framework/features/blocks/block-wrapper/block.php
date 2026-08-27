@@ -136,7 +136,7 @@ class BlockWrapper {
 					}
 				}
 
-				return blocksy_html_tag(
+				return blocksy_companion_html_tag(
 					'div',
 					array_merge(
 						[

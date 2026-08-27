@@ -163,6 +163,14 @@ class BlocksyExtensionCookiesConsent {
 	}
 
 	public function load_cookies_consent_scripts() {
+		/**
+		 * Filters the scripts loaded over AJAX once the cookies consent is given.
+		 *
+		 * @since 2.0.1
+		 *
+		 * @param array $scripts Scripts to load. Default empty array.
+		 * @param int   $unused  Second argument, always PHP_INT_MAX.
+		 */
 		$scripts = apply_filters('blocksy:cookies-consent:scripts-to-load', [], PHP_INT_MAX);
 
 		wp_send_json_success([

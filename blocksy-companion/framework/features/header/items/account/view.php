@@ -11,12 +11,12 @@ if (! isset($device)) {
 $current_user_id = get_current_user_id();
 
 if (is_customize_preview()) {
-	if (blocksy_akg('account_state', $atts, 'in') === 'out') {
+	if (blocksy_companion_akg('account_state', $atts, 'in') === 'out') {
 		$current_user_id = null;
 	}
 }
 
-$loggedin_icon_visibility = blocksy_akg(
+$loggedin_icon_visibility = blocksy_companion_akg(
 	'loggedin_icon_visibility',
 	$atts,
 	[
@@ -26,7 +26,7 @@ $loggedin_icon_visibility = blocksy_akg(
 	]
 );
 
-$loggedout_icon_visibility = blocksy_akg(
+$loggedout_icon_visibility = blocksy_companion_akg(
 	'loggedout_icon_visibility',
 	$atts,
 	[
@@ -46,6 +46,13 @@ if (is_user_logged_in()) {
 
 $icon_classes = trim($icon_classes);
 
+/**
+ * Filters the icons available for the header account item.
+ *
+ * @since 1.8.0
+ *
+ * @param array $icon SVG markup for every account icon type, keyed by icon type id.
+ */
 $icon = apply_filters('blocksy:header:account:icons', [
 	'type-1' => '<svg class="' . $icon_classes . '" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15"><path d="M7.5,0C3.4,0,0,3.4,0,7.5c0,1.7,0.5,3.2,1.5,4.5c1.4,1.9,3.6,3,6,3s4.6-1.1,6-3c1-1.3,1.5-2.9,1.5-4.5C15,3.4,11.6,0,7.5,0zM7.5,13.5c-1.4,0-2.8-0.5-3.8-1.4c1.1-0.9,2.4-1.4,3.8-1.4s2.8,0.5,3.8,1.4C10.3,13,8.9,13.5,7.5,13.5z M12.3,11c-1.3-1.1-3-1.8-4.8-1.8S4,9.9,2.7,11c-0.8-1-1.2-2.2-1.2-3.5c0-3.3,2.7-6,6-6s6,2.7,6,6C13.5,8.8,13.1,10,12.3,11zM7.5,3C6.1,3,5,4.1,5,5.5S6.1,8,7.5,8S10,6.9,10,5.5S8.9,3,7.5,3zM7.5,6.5c-0.5,0-1-0.5-1-1s0.5-1,1-1s1,0.5,1,1S8,6.5,7.5,6.5z"/></svg>',
 
@@ -67,7 +74,7 @@ if (! $current_user_id) {
 	$path = 'logout';
 }
 
-$account_user_visibility = blocksy_default_akg(
+$account_user_visibility = blocksy_companion_akg(
 	'account_user_visibility',
 	$atts,
 	[
@@ -87,7 +94,7 @@ if (
 $attr = array_merge(
 	[
 		'class' => trim('ct-header-account ' . blocksy_visibility_classes(
-			blocksy_default_akg(
+			blocksy_companion_akg(
 				'header_account_visibility',
 				$atts,
 				[

@@ -62,6 +62,13 @@ class CacheResetManager {
 			$page_is_cached = $super_cache_enabled;
 		}
 
+		/**
+		 * Filters whether the current page is served by a page caching solution.
+		 *
+		 * @since 2.0.1
+		 *
+		 * @param bool $page_is_cached Whether a known page caching plugin was detected as enabled. Default false.
+		 */
 		return apply_filters(
 			'blocksy:cache-manager:page-is-cached',
 			$page_is_cached

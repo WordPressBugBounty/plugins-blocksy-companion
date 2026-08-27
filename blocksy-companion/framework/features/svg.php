@@ -17,6 +17,15 @@ class SvgHandling {
 					return $file;
 				}
 
+				/**
+				 * Filters whether the uploaded SVG files should be sanitized.
+				 *
+				 * Returning false skips the sanitization and lets the file through untouched.
+				 *
+				 * @since 2.1.3
+				 *
+				 * @param bool $should_sanitize Whether to sanitize the SVG. Default true.
+				 */
 				if (! apply_filters('blocksy:svg:should_sanitize', true)) {
 					return $file;
 				}

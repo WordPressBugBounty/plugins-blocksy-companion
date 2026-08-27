@@ -110,7 +110,7 @@ msgstr "Tái tạo bảng thủ công"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:533
 msgid "This tool will abort the regenerate product taxonomies lookup table regeneration. After this is done the process can be either started over, or resumed to continue where it stopped."
-msgstr "Công cụ này sẽ hủy bỏ quá trình tái tạo b���ng tra cứu phân loại sản phẩm. Sau khi hủy, quy trình có thể được bắt đầu lại từ đầu hoặc tiếp tục từ điểm đã dừng."
+msgstr "Công cụ này sẽ hủy bỏ quá trình tái tạo bảng tra cứu phân loại sản phẩm. Sau khi hủy, quy trình có thể được bắt đầu lại từ đầu hoặc tiếp tục từ điểm đã dừng."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:63
 msgid "user"
@@ -424,7 +424,7 @@ msgstr "Bộ đếm ngược giữ giỏ hàng"
 
 #: framework/helpers/exts-configs.php:404
 msgid "Display a countdown timer for reserved cart items, encouraging users to complete their purchase before the timer expires."
-msgstr "Hiển thị đồng hồ đếm ngược cho các món hàng đang được giữ chỗ, thúc đẩy người dùng hoàn tất mua hàng trước khi hết gi��."
+msgstr "Hiển thị đồng hồ đếm ngược cho các món hàng đang được giữ chỗ, thúc đẩy người dùng hoàn tất mua hàng trước khi hết giờ."
 
 #: framework/extensions/cookies-consent/config.php:6
 msgid "Display a simple consent banner to inform users about the use of cookies on the website."
@@ -612,7 +612,7 @@ msgstr "Đã có phiên bản mới của trình nhập này. Vui lòng cập nh
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
-msgstr "Chào bạn! Hãy tải lên tệp WordPress eXtended RSS (WXR) của bạn và chúng tôi sẽ nhập bài viết, trang, bình luận, trường tùy chỉnh, chuyên mục và thẻ vào trang web này."
+msgstr "Chào b���n! Hãy tải lên tệp WordPress eXtended RSS (WXR) của bạn và chúng tôi sẽ nhập bài viết, trang, bình luận, trường tùy chỉnh, chuyên mục và thẻ vào trang web này."
 
 #: framework/features/demo-install/wp-importer.php:1490
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
@@ -4076,7 +4076,7 @@ msgstr "Thanh vận chuyển miễn phí"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:212
 msgid "Show if cart is empty"
-msgstr "Hiển thị nếu giỏ hàng trống"
+msgstr "Hiển thị nếu giỏ h��ng trống"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:445,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:180
@@ -5197,7 +5197,7 @@ msgstr "Bản sao bài viết đã được tạo."
 
 #: framework/premium/features/local-gravatars.php:36
 msgid "Store Gravatars Locally"
-msgstr "Lưu trữ Gravatars cục bộ"
+msgstr "Lưu trữ Gravatars cục b���"
 
 #: framework/premium/features/local-gravatars.php:41
 msgid "Store and load Gravatars locally for increased privacy and performance."
@@ -11172,7 +11172,7 @@ msgstr "Quay lại đăng nhập"
 
 #: framework/features/header/header-options.php:11
 msgid "Sticky Functionality"
-msgstr "Ch��c năng ghim"
+msgstr "Chức năng ghim"
 
 #: framework/features/header/header-options.php:37
 msgid "Only Main Row"

@@ -136,8 +136,8 @@ class Query {
 				$context = $instance->context;
 
 				$is_slideshow_layout = $context['has_slideshow'] === 'yes';
-				$has_item_link = blocksy_akg('has_item_link', $block['attrs'], 'no') === 'yes';
-				$layout = blocksy_akg('layout/type', $block['attrs'], 'default');
+				$has_item_link = blocksy_companion_akg('has_item_link', $block['attrs'], 'no') === 'yes';
+				$layout = blocksy_companion_akg('layout/type', $block['attrs'], 'default');
 				$is_grid_layout = $layout === 'grid';
 
 				$processor->next_tag('div');
@@ -198,19 +198,19 @@ class Query {
 
 				if ($is_grid_layout) {
 					$columns = [
-						'desktop' => blocksy_akg(
+						'desktop' => blocksy_companion_akg(
 							'columnCount',
 							$block['attrs']['layout'],
 							'3'
 						),
 
-						'tablet' => blocksy_akg(
+						'tablet' => blocksy_companion_akg(
 							'tabletColumns',
 							$block['attrs'],
 							'2'
 						),
 
-						'mobile' => blocksy_akg(
+						'mobile' => blocksy_companion_akg(
 							'mobileColumns',
 							$block['attrs'],
 							'1'
@@ -324,7 +324,7 @@ class Query {
 
 						$wrapper_attributes = get_block_wrapper_attributes($wrapper_attr);
 
-						return blocksy_html_tag(
+						return blocksy_companion_html_tag(
 							'div',
 							$wrapper_attributes,
 							$content
@@ -452,7 +452,7 @@ class Query {
 								'class' => 'ct-link-overlay',
 							];
 
-							$link_html = blocksy_html_tag(
+							$link_html = blocksy_companion_html_tag(
 								'a',
 								$link_attributes,
 								''
@@ -462,7 +462,7 @@ class Query {
 						$single_item = '<article' . ' class="' . esc_attr($post_classes) . '">' . $link_html . $block_content . '</article>';
 
 						if ($is_slideshow_layout) {
-							$single_item = blocksy_html_tag(
+							$single_item = blocksy_companion_html_tag(
 								'div',
 								[
 									'class' => 'flexy-item',
@@ -516,7 +516,7 @@ class Query {
 							$pills = ob_get_clean();
 						}
 
-						$content = blocksy_html_tag(
+						$content = blocksy_companion_html_tag(
 							'div',
 							array_merge(
 								[
@@ -525,18 +525,18 @@ class Query {
 								],
 								$context['has_slideshow_autoplay'] === 'yes' ? ['data-autoplay' => $context['has_slideshow_autoplay_speed']] : []
 							),
-							blocksy_html_tag(
+							blocksy_companion_html_tag(
 								'div',
 								[
 									'class' => 'flexy'
 								],
-								blocksy_html_tag(
+								blocksy_companion_html_tag(
 									'div',
 									[
 										'class' => 'flexy-view',
 										'data-flexy-view' => 'boxed'
 									],
-									blocksy_html_tag(
+									blocksy_companion_html_tag(
 										'div',
 										[
 											'class' => 'flexy-items'
@@ -565,7 +565,7 @@ class Query {
 					);
 
 					if (
-						blocksy_akg('has_pagination', $context, 'no') === 'yes'
+						blocksy_companion_akg('has_pagination', $context, 'no') === 'yes'
 						&&
 						! $is_slideshow_layout
 					) {
@@ -621,7 +621,7 @@ class Query {
 
 		$gap_value = '';
 
-		$gap_value = blocksy_akg('spacing', $attributes['style'], []);
+		$gap_value = blocksy_companion_akg('spacing', $attributes['style'], []);
 
 		if (! isset($gap_value['blockGap'])) {
 			return '';
@@ -831,7 +831,7 @@ class Query {
 			$result = __('No posts found.', 'blocksy-companion');
 		}
 
-		return blocksy_html_tag(
+		return blocksy_companion_html_tag(
 			'div',
 			$block_atts,
 			$result

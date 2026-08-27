@@ -190,6 +190,7 @@ class Plugin {
 		require_once BLOCKSY_PATH . '/framework/helpers/request.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/theme-functions.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/helpers.php';
+		require_once BLOCKSY_PATH . '/framework/helpers/html.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/exts.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/woo.php';
 		require_once BLOCKSY_PATH . '/framework/helpers/backwards-compat.php';

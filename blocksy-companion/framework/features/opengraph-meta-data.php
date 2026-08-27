@@ -217,7 +217,7 @@ class OpenGraphMetaData {
 	}
 
 	private function get_open_graph_tag($attr, $property, $content) {
-		return blocksy_html_tag(
+		return blocksy_companion_html_tag(
 			'meta',
 			[
 				$attr => $property,

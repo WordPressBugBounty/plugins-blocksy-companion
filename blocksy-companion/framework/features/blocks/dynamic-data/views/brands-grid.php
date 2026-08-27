@@ -18,7 +18,7 @@ if (! count($brands)) {
 	return;
 }
 
-blocksy_html_tag_e(
+blocksy_companion_html_tag_e(
 	'div',
 	[
 		'class' => 'ct-product-brands',
@@ -28,7 +28,7 @@ blocksy_html_tag_e(
 		function ($brand) {
 			$output = '';
 
-			$label = blocksy_html_tag(
+			$label = blocksy_companion_html_tag(
 				'a',
 				[
 					'href' => esc_url(get_term_link($brand)),
@@ -56,7 +56,7 @@ blocksy_html_tag_e(
 				];
 			}
 
-			$maybe_image = blocksy_akg('icon_image', $term_atts, '');
+			$maybe_image = blocksy_companion_akg('icon_image', $term_atts, '');
 
 			if (
 				$maybe_image

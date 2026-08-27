@@ -4,7 +4,7 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-$value_fallback = blocksy_akg('fallback', $attributes, '');
+$value_fallback = blocksy_companion_akg('fallback', $attributes, '');
 
 if (! $value) {
 	$value = '';
@@ -25,13 +25,13 @@ if (
 	return;
 }
 
-$value_after = blocksy_akg('after', $attributes, '');
-$value_before = blocksy_akg('before', $attributes, '');
+$value_after = blocksy_companion_akg('after', $attributes, '');
+$value_before = blocksy_companion_akg('before', $attributes, '');
 
-$has_field_link = blocksy_akg('has_field_link', $attributes, 'no');
-$has_field_link_wrap_content = blocksy_akg('has_field_link_wrap_content', $attributes, 'no');
+$has_field_link = blocksy_companion_akg('has_field_link', $attributes, 'no');
+$has_field_link_wrap_content = blocksy_companion_akg('has_field_link_wrap_content', $attributes, 'no');
 
-$link_source = blocksy_akg('link_source', $attributes, '');
+$link_source = blocksy_companion_akg('link_source', $attributes, '');
 
 $final_link = [
 	'value' => '',
@@ -60,7 +60,7 @@ if (
 	
 }
 
-$tagName = blocksy_akg('tagName', $attributes, 'div');
+$tagName = blocksy_companion_akg('tagName', $attributes, 'div');
 
 $classes = ['ct-dynamic-data'];
 
@@ -93,12 +93,12 @@ if ($has_field_link === 'yes') {
 		'href' => $final_link['value'],
 	];
 
-	if (blocksy_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
+	if (blocksy_companion_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
 		$link_attr['target'] = '_blank';
 	}
 
-	if (! empty(blocksy_akg('has_field_link_rel', $attributes, ''))) {
-		$link_attr['rel'] = blocksy_akg(
+	if (! empty(blocksy_companion_akg('has_field_link_rel', $attributes, ''))) {
+		$link_attr['rel'] = blocksy_companion_akg(
 			'has_field_link_rel',
 			$attributes,
 			''
@@ -106,7 +106,7 @@ if ($has_field_link === 'yes') {
 	}
 
 	if ($has_field_link_wrap_content === 'no') {
-		$value = blocksy_html_tag('a', $link_attr, $value);
+		$value = blocksy_companion_html_tag('a', $link_attr, $value);
 	}
 }
 
@@ -125,8 +125,8 @@ if (
 	&&
 	$has_field_link === 'yes'
 ) {
-	$value = blocksy_html_tag('a', $link_attr, $value);
+	$value = blocksy_companion_html_tag('a', $link_attr, $value);
 }
 
-blocksy_html_tag_e($tagName, $wrapper_attr, $value);
+blocksy_companion_html_tag_e($tagName, $wrapper_attr, $value);
 

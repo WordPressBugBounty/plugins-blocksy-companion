@@ -254,6 +254,20 @@ class ThemeIntegration {
 				$fields['tiktok'] = __( 'TikTok', 'blocksy-companion' );
 				$fields['mastodon'] = __( 'Mastodon', 'blocksy-companion' );
 
+				/**
+				 * Filters the additional social networks available on the user profile screen.
+				 *
+				 * @since 2.0.1
+				 *
+				 * @param array $additional_fields {
+				 *     Additional social network fields. Entries without an `id` and a `name` are skipped.
+				 *
+				 *     @type array $field {
+				 *         @type string $id   Key the field is stored under in the user meta.
+				 *         @type string $name Field label shown on the profile screen.
+				 *     }
+				 * }
+				 */
 				$additional_fields = apply_filters(
 					'blocksy:author-profile:custom-social-network',
 					[]

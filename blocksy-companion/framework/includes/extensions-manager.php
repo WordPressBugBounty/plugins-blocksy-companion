@@ -214,6 +214,15 @@ class ExtensionsManager {
 
 		update_option($this->get_option_name(), array_unique($activated));
 
+		/**
+		 * Fires when the dynamic CSS caches should be invalidated.
+		 *
+		 * Listeners drop their generated CSS files/transients so the
+		 * next request regenerates them.
+		 *
+		 * @since 1.6.2
+		 * @since 1.8.0 Renamed from `blocksy:dynamic-css:regenere_css_files`.
+		 */
 		do_action('blocksy:dynamic-css:refresh-caches');
 	}
 
@@ -242,10 +251,26 @@ class ExtensionsManager {
 			[$id]
 		));
 
+		/**
+		 * Fires when the dynamic CSS caches should be invalidated.
+		 *
+		 * Listeners drop their generated CSS files/transients so the
+		 * next request regenerates them.
+		 *
+		 * @since 1.6.2
+		 * @since 1.8.0 Renamed from `blocksy:dynamic-css:regenere_css_files`.
+		 */
 		do_action('blocksy:dynamic-css:refresh-caches');
 	}
 
 	private function read_installed_extensions() {
+		/**
+		 * Filters the directories scanned for Blocksy extensions.
+		 *
+		 * @since 1.7.4
+		 *
+		 * @param array $paths_to_look_for_extensions Absolute paths to the directories holding extensions.
+		 */
 		$paths_to_look_for_extensions = apply_filters(
 			'blocksy_extensions_paths',
 			[

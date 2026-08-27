@@ -4,14 +4,12 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-$tax_choices = [];
+$tax_choices = \Blocksy\Editor\Blocks\DynamicData::get_product_attribute_choices();
 
-if (class_exists('woocommerce')) {
-	$attribute_taxonomies = wc_get_attribute_taxonomies();
-	
-	foreach ($attribute_taxonomies as $tax) {
-		$tax_choices[$tax->attribute_name] = $tax->attribute_label;
-	}
+$default_tax_choice = '';
+
+if (count($tax_choices) > 0) {
+	$default_tax_choice = array_keys($tax_choices)[0];
 }
 
 $options = [
@@ -132,7 +130,7 @@ $options = [
 			'attribute' => [
 				'label' => __('Attribute', 'blocksy-companion'),
 				'type' => 'ct-select',
-				'value' => isset(array_keys($tax_choices)[0]) ? array_keys($tax_choices)[0] : '',
+				'value' => $default_tax_choice,
 				'design' => 'inline',
 				'setting' => [ 'transport' => 'postMessage' ],
 				'choices' => blocksy_ordered_keys($tax_choices),

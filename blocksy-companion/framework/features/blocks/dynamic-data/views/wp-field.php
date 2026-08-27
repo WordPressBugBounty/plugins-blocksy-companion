@@ -4,16 +4,16 @@ if (! defined('ABSPATH')) {
 	exit;
 }
 
-$value_fallback = blocksy_akg('fallback', $attributes, '');
+$value_fallback = blocksy_companion_akg('fallback', $attributes, '');
 
 $value = '';
 
 $has_fallback = false;
 
-$has_field_link = blocksy_akg('has_field_link', $attributes, 'no') === 'yes';
-$has_field_link_wrap_content = blocksy_akg('has_field_link_wrap_content', $attributes, 'no');
+$has_field_link = blocksy_companion_akg('has_field_link', $attributes, 'no') === 'yes';
+$has_field_link_wrap_content = blocksy_companion_akg('has_field_link_wrap_content', $attributes, 'no');
 
-$has_archive_prefix = blocksy_akg('has_archive_prefix', $attributes, 'no') === 'yes';
+$has_archive_prefix = blocksy_companion_akg('has_archive_prefix', $attributes, 'no') === 'yes';
 
 if ($field === 'wp:archive_title') {
 	$value = '';
@@ -73,12 +73,12 @@ if ($field === 'wp:title') {
 			'href' => get_permalink()
 		];
 
-		if (blocksy_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
+		if (blocksy_companion_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
 			$link_attr['target'] = '_blank';
 		}
 
-		if (! empty(blocksy_akg('has_field_link_rel', $attributes, ''))) {
-			$link_attr['rel'] = blocksy_akg(
+		if (! empty(blocksy_companion_akg('has_field_link_rel', $attributes, ''))) {
+			$link_attr['rel'] = blocksy_companion_akg(
 				'has_field_link_rel',
 				$attributes,
 				''
@@ -86,7 +86,7 @@ if ($field === 'wp:title') {
 		}
 
 		if ($has_field_link_wrap_content === 'no') {
-			$value = blocksy_html_tag('a', $link_attr, $value);
+			$value = blocksy_companion_html_tag('a', $link_attr, $value);
 		}
 	}
 }
@@ -102,12 +102,12 @@ if ($field === 'wp:term_title') {
 				'href' => get_term_link($blocksy_term_obj)
 			];
 
-			if (blocksy_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
+			if (blocksy_companion_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
 				$link_attr['target'] = '_blank';
 			}
 
-			if (! empty(blocksy_akg('has_field_link_rel', $attributes, ''))) {
-				$link_attr['rel'] = blocksy_akg(
+			if (! empty(blocksy_companion_akg('has_field_link_rel', $attributes, ''))) {
+				$link_attr['rel'] = blocksy_companion_akg(
 					'has_field_link_rel',
 					$attributes,
 					''
@@ -115,7 +115,7 @@ if ($field === 'wp:term_title') {
 			}
 
 			if ($has_field_link_wrap_content === 'no') {
-				$value = blocksy_html_tag('a', $link_attr, $value);
+				$value = blocksy_companion_html_tag('a', $link_attr, $value);
 			}
 		}
 	}
@@ -132,12 +132,12 @@ if ($field === 'wp:term_count') {
 				'href' => get_term_link($blocksy_term_obj)
 			];
 
-			if (blocksy_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
+			if (blocksy_companion_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
 				$link_attr['target'] = '_blank';
 			}
 
-			if (! empty(blocksy_akg('has_field_link_rel', $attributes, ''))) {
-				$link_attr['rel'] = blocksy_akg(
+			if (! empty(blocksy_companion_akg('has_field_link_rel', $attributes, ''))) {
+				$link_attr['rel'] = blocksy_companion_akg(
 					'has_field_link_rel',
 					$attributes,
 					''
@@ -145,7 +145,7 @@ if ($field === 'wp:term_count') {
 			}
 
 			if ($has_field_link_wrap_content === 'no') {
-				$value = blocksy_html_tag('a', $link_attr, $value);
+				$value = blocksy_companion_html_tag('a', $link_attr, $value);
 			}
 		}
 	}
@@ -161,11 +161,11 @@ if ($field === 'wp:term_description') {
 
 if ($field === 'wp:excerpt') {
 	$excerpt_args = [
-		'length' => intval(blocksy_akg('excerpt_length', $attributes, 40)),
+		'length' => intval(blocksy_companion_akg('excerpt_length', $attributes, 40)),
 		'skip_container' => true
 	];
 
-	if (blocksy_akg('tagName', $attributes, 'div') === 'p') {
+	if (blocksy_companion_akg('tagName', $attributes, 'div') === 'p') {
 		remove_filter('the_excerpt', 'wpautop');
 	}
 
@@ -175,7 +175,7 @@ if ($field === 'wp:excerpt') {
 		$has_fallback = true;
 		$value = do_shortcode($value_fallback);
 	}
-	if (blocksy_akg('tagName', $attributes, 'div') === 'p') {
+	if (blocksy_companion_akg('tagName', $attributes, 'div') === 'p') {
 		add_filter('the_excerpt', 'wpautop');
 	}
 }
@@ -183,15 +183,15 @@ if ($field === 'wp:excerpt') {
 if ($field === 'wp:date') {
 	$date_format = get_option('date_format', 'F j, Y');
 
-	if (blocksy_akg('default_format', $attributes, 'published') === 'no') {
-		$date_format = blocksy_akg('date_format', $attributes, 'F j, Y');
+	if (blocksy_companion_akg('default_format', $attributes, 'published') === 'no') {
+		$date_format = blocksy_companion_akg('date_format', $attributes, 'F j, Y');
 
 		if ($date_format === 'custom') {
-			$date_format = blocksy_akg('custom_date_format', $attributes, 'F j, Y');
+			$date_format = blocksy_companion_akg('custom_date_format', $attributes, 'F j, Y');
 		}
 	}
 
-	$value = blocksy_html_tag(
+	$value = blocksy_companion_html_tag(
 		'time',
 		[
 			'datetime' => get_the_date('c'),
@@ -200,8 +200,8 @@ if ($field === 'wp:date') {
 		get_the_date($date_format)
 	);
 
-	if (blocksy_akg('date_type', $attributes, 'published') === 'modified') {
-		$value = blocksy_html_tag(
+	if (blocksy_companion_akg('date_type', $attributes, 'published') === 'modified') {
+		$value = blocksy_companion_html_tag(
 			'time',
 			[
 				'datetime' => get_the_modified_date('c'),
@@ -216,12 +216,12 @@ if ($field === 'wp:date') {
 			'href' => get_permalink()
 		];
 
-		if (blocksy_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
+		if (blocksy_companion_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
 			$link_attr['target'] = '_blank';
 		}
 
-		if (! empty(blocksy_akg('has_field_link_rel', $attributes, ''))) {
-			$link_attr['rel'] = blocksy_akg(
+		if (! empty(blocksy_companion_akg('has_field_link_rel', $attributes, ''))) {
+			$link_attr['rel'] = blocksy_companion_akg(
 				'has_field_link_rel',
 				$attributes,
 				''
@@ -229,33 +229,33 @@ if ($field === 'wp:date') {
 		}
 
 		if ($has_field_link_wrap_content === 'no') {
-			$value = blocksy_html_tag('a', $link_attr, $value);
+			$value = blocksy_companion_html_tag('a', $link_attr, $value);
 		}
 	}
 }
 
 if ($field === 'wp:comments') {
 	$value = get_comments_number_text(
-		blocksy_akg('zero_text', $attributes, __('No comments', 'blocksy-companion')),
-		blocksy_akg('single_text', $attributes, __('One comment', 'blocksy-companion')),
-		blocksy_akg('multiple_text', $attributes, __('% comments', 'blocksy-companion'))
+		blocksy_companion_akg('zero_text', $attributes, __('No comments', 'blocksy-companion')),
+		blocksy_companion_akg('single_text', $attributes, __('One comment', 'blocksy-companion')),
+		blocksy_companion_akg('multiple_text', $attributes, __('% comments', 'blocksy-companion'))
 	);
 
 	if ($has_field_link) {
-		$value = blocksy_html_tag(
+		$value = blocksy_companion_html_tag(
 			'a',
 			array_merge(
 				[
 					'href' => get_comments_link()
 				],
 
-				blocksy_akg('has_field_link_new_tab', $attributes, 'no') === 'yes' ?
+				blocksy_companion_akg('has_field_link_new_tab', $attributes, 'no') === 'yes' ?
 				[
 					'target' => '_blank'
 				] : [],
 
-				! empty(blocksy_akg('has_field_link_rel', $attributes, '')) ? [
-					'rel' => blocksy_akg('has_field_link_rel', $attributes, '')
+				! empty(blocksy_companion_akg('has_field_link_rel', $attributes, '')) ? [
+					'rel' => blocksy_companion_akg('has_field_link_rel', $attributes, '')
 				] : []
 			),
 			$value
@@ -265,7 +265,7 @@ if ($field === 'wp:comments') {
 
 if ($field === 'wp:author') {
 	$author_id = blocksy_get_author_id();
-	$author_field = blocksy_akg('author_field', $attributes, 'display_name');
+	$author_field = blocksy_companion_akg('author_field', $attributes, 'display_name');
 
 	$overide_link = '';
 
@@ -315,19 +315,19 @@ if ($field === 'wp:author') {
 		&&
 		$has_field_link
 	) {
-		$value = blocksy_html_tag(
+		$value = blocksy_companion_html_tag(
 			'a',
 			array_merge(
 				[
 					'href' => ! empty($overide_link) ? $overide_link : get_author_posts_url($author_id)
 				],
 
-				blocksy_akg('has_field_link_new_tab', $attributes, 'no') === 'yes' ? [
+				blocksy_companion_akg('has_field_link_new_tab', $attributes, 'no') === 'yes' ? [
 					'target' => '_blank'
 				] : [],
 
-				! empty(blocksy_akg('has_field_link_rel', $attributes, '')) ? [
-					'rel' => blocksy_akg('has_field_link_rel', $attributes, '')
+				! empty(blocksy_companion_akg('has_field_link_rel', $attributes, '')) ? [
+					'rel' => blocksy_companion_akg('has_field_link_rel', $attributes, '')
 				] : []
 			),
 			$value
@@ -336,7 +336,7 @@ if ($field === 'wp:author') {
 }
 
 if ($field === 'wp:terms') {
-	$taxonomy = blocksy_akg('taxonomy', $attributes, '');
+	$taxonomy = blocksy_companion_akg('taxonomy', $attributes, '');
 
 	if (empty($taxonomy)) {
 		$internal_taxonomies = get_object_taxonomies([
@@ -379,13 +379,13 @@ if ($field === 'wp:terms') {
 
 				$classes = [];
 
-				$termAccentColor = blocksy_akg('termAccentColor', $attributes, 'yes');
+				$termAccentColor = blocksy_companion_akg('termAccentColor', $attributes, 'yes');
 
 				if ($termAccentColor === 'yes') {
 					$classes[] = 'ct-term-' . $term->term_id;
 				}
 
-				$termClass = blocksy_akg('termClass', $attributes, '');
+				$termClass = blocksy_companion_akg('termClass', $attributes, '');
 
 				if (! empty($termClass)) {
 					$classes[] = $termClass;
@@ -400,20 +400,20 @@ if ($field === 'wp:terms') {
 
 					$attrs['href'] = get_term_link($term, $taxonomy);
 
-					if (blocksy_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
+					if (blocksy_companion_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
 						$attrs['target'] = '_blank';
 					}
 
-					if (! empty(blocksy_akg('has_field_link_rel', $attributes, ''))) {
-						$attrs['rel'] = blocksy_akg('has_field_link_rel', $attributes, '');
+					if (! empty(blocksy_companion_akg('has_field_link_rel', $attributes, ''))) {
+						$attrs['rel'] = blocksy_companion_akg('has_field_link_rel', $attributes, '');
 					}
 				}
 
-				return '<' . $tagName . ' ' . trim(blocksy_attr_to_html($attrs)) . '>' . $term->name . '</' . $tagName . '>';
+				return '<' . $tagName . ' ' . trim(blocksy_companion_attr_to_html($attrs)) . '>' . $term->name . '</' . $tagName . '>';
 			}, $terms);
 
 			$value = implode(
-				preg_replace('/ /', "\u{00A0}", blocksy_akg('separator', $attributes, ', ')),
+				preg_replace('/ /', "\u{00A0}", blocksy_companion_akg('separator', $attributes, ', ')),
 				$terms
 			);
 		}
@@ -433,8 +433,8 @@ if (
 	return;
 }
 
-$value_after = blocksy_akg('after', $attributes, '');
-$value_before = blocksy_akg('before', $attributes, '');
+$value_after = blocksy_companion_akg('after', $attributes, '');
+$value_before = blocksy_companion_akg('before', $attributes, '');
 
 if (! empty($value_after) && ! $has_fallback) {
 	$value .= $value_after;
@@ -444,7 +444,7 @@ if (! empty($value_before) && ! $has_fallback) {
 	$value = $value_before . $value;
 }
 
-$tagName = blocksy_akg('tagName', $attributes, 'div');
+$tagName = blocksy_companion_akg('tagName', $attributes, 'div');
 
 $classes = [
 	'ct-dynamic-data'
@@ -478,9 +478,9 @@ if (
 	&&
 	$has_field_link
 ) {
-	$value = blocksy_html_tag('a', $link_attr, $value);
+	$value = blocksy_companion_html_tag('a', $link_attr, $value);
 }
 
 $wrapper_attr = get_block_wrapper_attributes($wrapper_attr);
 
-blocksy_html_tag_e($tagName, $wrapper_attr, $value);
+blocksy_companion_html_tag_e($tagName, $wrapper_attr, $value);

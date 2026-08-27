@@ -35,7 +35,7 @@ class InlineStylesCollector {
 			return '';
 		}
 
-		return blocksy_html_tag('style', [], $final_css);
+		return blocksy_companion_html_tag('style', [], $final_css);
 	}
 
 	public function add($args = []) {

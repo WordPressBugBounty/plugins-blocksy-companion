@@ -15,9 +15,9 @@ class DynamicDataAPI {
 						return null;
 					}
 
-					$maybe_new_video = blocksy_get_post_options($post['id']);
+					$maybe_new_video = blocksy_companion_theme_functions()->blocksy_get_post_options($post['id']);
 
-					$media_video_source = blocksy_akg(
+					$media_video_source = blocksy_companion_akg(
 						'media_video_source',
 						$maybe_new_video,
 						'upload'
@@ -26,7 +26,7 @@ class DynamicDataAPI {
 					$video_url = '';
 
 					if ($media_video_source === 'upload') {
-						$video_url = blocksy_akg(
+						$video_url = blocksy_companion_akg(
 							'media_video_upload',
 							$maybe_new_video,
 							''
@@ -34,7 +34,7 @@ class DynamicDataAPI {
 					}
 
 					if ($media_video_source === 'youtube') {
-						$video_url = blocksy_akg(
+						$video_url = blocksy_companion_akg(
 							'media_video_youtube_url',
 							$maybe_new_video,
 							''
@@ -42,7 +42,7 @@ class DynamicDataAPI {
 					}
 
 					if ($media_video_source === 'vimeo') {
-						$video_url = blocksy_akg(
+						$video_url = blocksy_companion_akg(
 							'media_video_vimeo_url',
 							$maybe_new_video,
 							''
@@ -68,6 +68,17 @@ class DynamicDataAPI {
 				}
 
 				wp_send_json_success(
+					/**
+					 * Filters the dynamic data descriptor sent to the block editor.
+					 *
+					 * @since 2.0.49
+					 *
+					 * @param array $data {
+					 *     Dynamic data descriptor.
+					 *
+					 *     @type array $fields Custom fields available for the requested context.
+					 * }
+					 */
 					apply_filters('blocksy:general:blocks:dynamic-data:data', [
 						'fields' => $this->get_custom_fields_response($data)
 					])
@@ -119,16 +130,12 @@ class DynamicDataAPI {
 					&&
 					$data['field_id'] === 'attributes'
 				) {
-					if (! isset($data['attributes']['attribute'])) {
-						wp_send_json_success([
-							'field_data' => []
-						]);
-					}
-
 					wp_send_json_success([
 						'field_data' => $this->render_woo_attributes_field(
 							$object,
-							$data['attributes']['attribute']
+							isset($data['attributes']['attribute'])
+								? $data['attributes']['attribute']
+								: ''
 						)
 					]);
 				}
@@ -176,7 +183,7 @@ class DynamicDataAPI {
 				}
 			}
 
-			$maybe_image = blocksy_akg('icon_image', $term_atts, '');
+			$maybe_image = blocksy_companion_akg('icon_image', $term_atts, '');
 
 			if (is_array($maybe_image)) {
 				$attachment = $maybe_image;
@@ -202,6 +209,14 @@ class DynamicDataAPI {
 
 		if (! $product) {
 			return [];
+		}
+
+		if (empty($attribute)) {
+			$choices = DynamicData::get_product_attribute_choices();
+
+			if (count($choices) > 0) {
+				$attribute = array_keys($choices)[0];
+			}
 		}
 
 		$attributes = $product->get_attributes();

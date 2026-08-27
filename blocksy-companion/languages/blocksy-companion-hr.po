@@ -535,7 +535,7 @@ msgstr "- Odaberi -"
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:476
 msgid "Failed to create new user for %s. Their posts will be attributed to the current user."
-msgstr "Nije uspjelo stvaranje novog korisnika za %s. Njihovi objavljeni članci bit će pripisani trenutnom korisniku."
+msgstr "Nije uspjelo stvaranje novog korisnika za %s. Njihovi objavljeni ��lanci bit će pripisani trenutnom korisniku."
 
 #. translators: %s is the category slug.
 #: framework/features/demo-install/wp-importer.php:540
@@ -3850,7 +3850,7 @@ msgstr "Kratko ime"
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/feature.php:58,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:338
 msgid "Sorry, this product is unavailable. Please choose a different combination."
-msgstr "Žao nam je, ovaj proizvod nije dostupan. Molimo odaberite drugu kombinaciju."
+msgstr "��ao nam je, ovaj proizvod nije dostupan. Molimo odaberite drugu kombinaciju."
 
 #: framework/features/blocks/dynamic-data/views/woo-field.php:26,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:339,

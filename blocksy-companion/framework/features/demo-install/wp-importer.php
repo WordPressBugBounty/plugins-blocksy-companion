@@ -595,6 +595,13 @@ class Blocksy_WP_Import extends WP_Importer {
 			$this->process_termmeta($cat, $id);
 
 			// TODO: added action
+			/**
+			 * Fires after a term has been imported from the WXR file.
+			 *
+			 * @since 1.5.4
+			 *
+			 * @param int $term_id The imported term ID.
+			 */
 			do_action('blocksy_wp_import_insert_term', $cat['term_id']);
 		}
 
@@ -650,6 +657,13 @@ class Blocksy_WP_Import extends WP_Importer {
 			$this->process_termmeta( $tag, $id['term_id'] );
 
 			// TODO: added action
+			/**
+			 * Fires after a term has been imported from the WXR file.
+			 *
+			 * @since 1.5.4
+			 *
+			 * @param int $term_id The imported term ID.
+			 */
 			do_action('blocksy_wp_import_insert_term', $id['term_id']);
 		}
 
@@ -725,6 +739,13 @@ class Blocksy_WP_Import extends WP_Importer {
 			$this->process_termmeta( $term, $id['term_id'] );
 
 			// TODO: added action
+			/**
+			 * Fires after a term has been imported from the WXR file.
+			 *
+			 * @since 1.5.4
+			 *
+			 * @param int $term_id The imported term ID.
+			 */
 			do_action('blocksy_wp_import_insert_term', $id['term_id']);
 		}
 

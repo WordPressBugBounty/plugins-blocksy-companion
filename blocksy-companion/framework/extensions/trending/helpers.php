@@ -260,6 +260,13 @@ if (! function_exists('blocksy_companion_get_trending_posts_value')) {
 			}
 		}
 
+		/**
+		 * Filters the query arguments used to fetch the trending posts.
+		 *
+		 * @since 1.8.0
+		 *
+		 * @param array $query_args Arguments passed to `WP_Query`.
+		 */
 		$query = new WP_Query(apply_filters(
 			'blocksy:trending-posts:query-args',
 			$query_args
@@ -344,7 +351,7 @@ if (! function_exists('blocksy_companion_get_trending_posts_value')) {
 					is_array($taxonomy_values)
 				) {
 					foreach ($taxonomy_values as $tax) {
-						$taxonomies_to_render[] = blocksy_html_tag(
+						$taxonomies_to_render[] = blocksy_companion_html_tag(
 							'a',
 							[
 								'href' => get_term_link($tax),
@@ -366,12 +373,12 @@ if (! function_exists('blocksy_companion_get_trending_posts_value')) {
 							$divider = ' / ';
 						}
 
-						$individual_entry['taxonomy'] = blocksy_html_tag(
+						$individual_entry['taxonomy'] = blocksy_companion_html_tag(
 							'ul',
 							[
 								'class' => 'entry-meta'
 							],
-							blocksy_html_tag(
+							blocksy_companion_html_tag(
 								'li',
 								[
 									'class' => 'meta-categories',
@@ -393,7 +400,7 @@ if (! function_exists('blocksy_companion_get_trending_posts_value')) {
 			) {
 				$product = wc_get_product(get_the_ID());
 
-				$individual_entry['price'] = blocksy_html_tag(
+				$individual_entry['price'] = blocksy_companion_html_tag(
 					'span',
 					[
 						'class' => 'price'
@@ -483,7 +490,7 @@ function blocksy_companion_get_trending_block($result = null) {
 
 	?>
 
-	<section <?php blocksy_attr_to_html_e($attr) ?>>
+	<section <?php blocksy_companion_attr_to_html_e($attr) ?>>
 		<div class="ct-container" <?php
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			echo $data_page
@@ -528,19 +535,19 @@ function blocksy_companion_get_trending_block($result = null) {
 
 			<?php
 				foreach ($result['posts'] as $post) {
-					blocksy_html_tag_e(
+					blocksy_companion_html_tag_e(
 						'div',
 						[
 							'class' => 'ct-trending-block-item'
 						],
 						$post['image'] .
-						blocksy_html_tag(
+						blocksy_companion_html_tag(
 							'div',
 							[
 								'class' => 'ct-trending-block-item-content'
 							],
 							$post['taxonomy'] .
-							blocksy_html_tag(
+							blocksy_companion_html_tag(
 								'a',
 								[
 									'href' => $post['url'],
