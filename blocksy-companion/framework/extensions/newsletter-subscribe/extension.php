@@ -359,21 +359,27 @@ class BlocksyExtensionNewsletterSubscribe {
 	}
 
 	public function newsletter_subscribe_process_ajax_subscribe() {
-		// phpcs:ignore WordPress.Security.NonceVerification.Missing
-		if (!isset($_POST['EMAIL'])) {
-			wp_send_json_error();
-		}
+		$error_response = [
+			'result' => 'no',
+			'message' => \Blocksy\Extensions\NewsletterSubscribe\NewsletterMessages::unable_to_subscribe(),
+		];
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		if (!isset($_POST['GROUP'])) {
-			wp_send_json_error();
+			wp_send_json_error($error_response);
+		}
+
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		$group = sanitize_text_field(wp_unslash($_POST['GROUP']));
+
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
+		if (!isset($_POST['EMAIL'])) {
+			wp_send_json_error($error_response);
 		}
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		$email = sanitize_email(wp_unslash($_POST['EMAIL']));
 		$name = '';
-		// phpcs:ignore WordPress.Security.NonceVerification.Missing
-		$group = sanitize_text_field(wp_unslash($_POST['GROUP']));
 
 		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		if (isset($_POST['FNAME'])) {
@@ -381,23 +387,36 @@ class BlocksyExtensionNewsletterSubscribe {
 			$name = sanitize_text_field(wp_unslash($_POST['FNAME']));
 		}
 
-		$double_optin = false;
-
-		// phpcs:ignore WordPress.Security.NonceVerification.Missing
-		if (isset($_POST['DOUBLE_OPTIN'])) {
-			// phpcs:ignore WordPress.Security.NonceVerification.Missing
-			$double_optin = sanitize_text_field(wp_unslash($_POST['DOUBLE_OPTIN'])) === '1';
-		}
-
 		$manager = \Blocksy\Extensions\NewsletterSubscribe\Provider::get_for_settings();
+		$list = $manager->get_list($group);
+
+		if (! $list) {
+			wp_send_json_error($error_response);
+		}
 
 		$result = $manager->subscribe_form([
 			'email' => $email,
 			'name' => $name,
 			'group' => $group,
-			'double_optin' => $double_optin,
+			'double_optin' => ! empty($list['double_optin']),
 		]);
 
-		wp_send_json_success($result);
+		$messages = [
+			\Blocksy\Extensions\NewsletterSubscribe\NewsletterMessages::unable_to_subscribe(),
+			\Blocksy\Extensions\NewsletterSubscribe\NewsletterMessages::confirm_subscription(),
+			\Blocksy\Extensions\NewsletterSubscribe\NewsletterMessages::subscribed_successfully(),
+			\Blocksy\Extensions\NewsletterSubscribe\NewsletterMessages::already_subscribed($email),
+		];
+
+		$message = $result['message'] ?? $messages[0];
+
+		if (! in_array($message, $messages, true)) {
+			$message = $messages[0];
+		}
+
+		wp_send_json_success([
+			'result' => $result['result'] ?? 'no',
+			'message' => $message,
+		]);
 	}
 }

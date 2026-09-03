@@ -74,7 +74,15 @@ class Query {
 					get_post_type($body['previewedPostId']),
 					['return_empty' => true]
 				),
-				'all_posts' => $query->get_posts(),
+				'all_posts' => array_map(
+					function ($post) {
+						return [
+							'ID' => $post->ID,
+							'post_type' => $post->post_type
+						];
+					},
+					$query->get_posts()
+				),
 				'post_types' => $all_post_types,
 				'pagination_output' => blocksy_display_posts_pagination([
 					'query' => $query,

@@ -266,7 +266,7 @@ msgstr "Сообщество в Facebook"
 
 #: static/js/dashboard/helpers/SubmitSupport.js:35
 msgid "Share ideas, help others, ask questions and discuss your next project in our friendly community."
-msgstr "Делитесь идеями, помогайте другим, задавайте вопросы �� обсуждайте свой следующий проект в нашем дружелюбном сообществе."
+msgstr "Делитесь идеями, помогайте другим, задавайте вопросы и обсуждайте свой следующий проект в нашем дружелюбном сообществе."
 
 #: static/js/dashboard/helpers/SubmitSupport.js:43
 msgid "Join Our Community"
@@ -344,7 +344,7 @@ msgstr "Это поле является обязательным"
 
 #: framework/theme-integration.php:90
 msgid "Please fix this field."
-msgstr "Испра��ьте содержимое этого поля."
+msgstr "Испр��вьте содержимое этого поля."
 
 #: framework/theme-integration.php:91
 msgid "Please enter a valid email address."
@@ -481,7 +481,7 @@ msgstr "Данный WXR-файл (версия %s) может не поддер
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
 msgid "Failed to import author %s. Their posts will be attributed to the current user."
-msgstr "Не удалось импортировать автора %s. Его публикации будут приписаны к вашему про��илю."
+msgstr "Не удалось импортировать автора %s. Его публикации будут приписаны к вашему пр��филю."
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
@@ -557,7 +557,7 @@ msgstr "Не удалось импортировать %1$s %2$s"
 #. translators: %1$s is the post type name, %2$s is the post title.
 #: framework/features/demo-install/wp-importer.php:924
 msgid "Failed to import %1$s &#8220;%2$s&#8221;"
-msgstr "Не удал��сь импортировать %1$s &#8220;%2$s&#8221;"
+msgstr "Не уда��ось импортировать %1$s &#8220;%2$s&#8221;"
 
 #: framework/features/demo-install/wp-importer.php:833
 msgid "%1$s &#8220;%1$s&#8221; already exists."
@@ -588,7 +588,7 @@ msgstr "Удалённый сервер не ответил"
 #. message.
 #: framework/features/demo-install/wp-importer.php:1301
 msgid "Remote server returned error response %1$d %2$s"
-msgstr "Уд��лённый сервер вернул ответ об ошибке %1$d %2$s"
+msgstr "У��алённый сервер вернул ответ об ошибке %1$d %2$s"
 
 #: framework/features/demo-install/wp-importer.php:1322
 msgid "Remote file is incorrect size"
@@ -729,7 +729,7 @@ msgstr "Вложенные блоки используют ширину соде
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:156
 msgid "Nested blocks will fill the width of this container. Toggle to constrain."
-msgstr "Вложенные блоки будут занимать всю ширину этого контейнера. Включите, чтобы ограничить."
+msgstr "Вложенные блоки будут заним��ть всю ширину этого контейнера. Включите, чтобы ограничить."
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:165
 msgid "Content width"
@@ -1133,7 +1133,7 @@ msgstr "Система показа скрытых при превышении �
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:611
 msgid "Out of Stock Swatch Type"
-msgstr "Тип о��разца отсутствующего на складе"
+msgstr "Тип образца отсутствующего на складе"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:618
 msgid "Faded"
@@ -1462,7 +1462,7 @@ msgstr "Вы уже включены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:303
 msgid "You have been added to the waitlist"
-msgstr "Вы добавлены в ��писок ожидания"
+msgstr "Вы добавлены в список ожидания"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
@@ -1576,7 +1576,7 @@ msgstr "Предзаказ подтверждён"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr "Вы будете уведомлены, когда {product_title} снова появится на складе."
+msgstr "Вы будете уведом��ены, когда {product_title} снова появится на складе."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:56,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:192
@@ -1659,7 +1659,7 @@ msgstr "Перейдите по ссылке ниже, чтобы оформит
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:30,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:15
 msgid "You have requested to join the waitlist for this item:"
-msgstr "Вы ��одали заявку на включение в список ожидания этого товара:"
+msgstr "Вы подали заявку на включение в список ожидания этого товара:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:66
 msgid "Click the button below to confirm your subscription. Once confirmed, we will notify you when the item is back in stock."
@@ -1688,7 +1688,7 @@ msgstr "отписаться"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
 msgid "You have been successfully added to the waitlist for the following item:"
-msgstr "Вы добавлены в список ожидания следующего товара:"
+msgstr "Вы добавлены в с��исок ожидания следующего товара:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
@@ -1755,7 +1755,7 @@ msgstr "Длина описания"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:115
 msgid "Cart Button"
-msgstr "Кнопка корзины"
+msgstr "Кнопка к��рзины"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:125
 msgid "Checkout Button"
@@ -1846,7 +1846,7 @@ msgstr "Оформление"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:44
 msgid "Continue Shopping"
-msgstr "Продолжить покупки"
+msgstr "Продолжить по��упки"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:424
 msgid "More information on how to create a list in MailPoet can be found %shere%s."
@@ -2422,7 +2422,7 @@ msgstr "Вид сетки"
 #: static/js/editor/blocks/post-template/Edit.js:371
 #: static/js/editor/blocks/tax-template/Edit.js:309
 msgid "Tablet Columns"
-msgstr "Колонки планшета"
+msgstr "Колонки п��аншета"
 
 #: static/js/editor/blocks/post-template/Edit.js:380
 #: static/js/editor/blocks/tax-template/Edit.js:319
@@ -2859,7 +2859,7 @@ msgstr "Записи - макет 2"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-3.php:4
 msgid "Posts - Layout 3"
-msgstr "Записи - м��кет 3"
+msgstr "Записи - макет 3"
 
 #: framework/features/blocks/query/block-patterns/posts-layout-4.php:4
 msgid "Posts - Layout 4"
@@ -3112,7 +3112,7 @@ msgstr "Нехватка запасов"
 
 #: framework/helpers/exts-configs.php:370
 msgid "Show the remaining stock of a product to create a sense of urgency and encourage your visitors to make a purchase."
-msgstr "Отображение оставшихся запасов товара, для создания ощущения срочности и побуждения посетителей совершить покупку."
+msgstr "Отображение оставшихся запасов товара, для создания ощущения срочности и п��буждения посетителей совершить покупку."
 
 #. translators: %s is the product name (theme or plugin)
 #: framework/views/theme-mismatch.php:36
@@ -3429,7 +3429,7 @@ msgstr "Это профессиональный стартовый сайт"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:54
 msgid "Upgrade to any pro plan and get instant access to this starter site and many other features."
-msgstr "Перейдите на любой профессио��альный тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
+msgstr "Перейдите на любой профессиональный тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:61
 msgid "Upgrade to the business or agency plan and get instant access to this starter site and many other features."
@@ -3571,7 +3571,7 @@ msgstr "Формат"
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/index.js:103
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:187
 msgid "List"
-msgstr "Список"
+msgstr "С��исок"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:220
 msgid "Multiple Selections"
@@ -3664,7 +3664,7 @@ msgstr "Адрес доставки"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:64
 msgid "Subtotal"
-msgstr "Под��тог"
+msgstr "Подытог"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:77
 msgid "Shipping"
@@ -4318,7 +4318,7 @@ msgstr "Платёжные шлюзы"
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:112,
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/options.php:65
 msgid "Shipping Methods"
-msgstr "Спосо��ы доставки"
+msgstr "Способы доставки"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-thank-you-page/feature.php:276
 msgid "Thank you Page"
@@ -4415,7 +4415,7 @@ msgstr "Длина"
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:263
 #: static/js/editor/blocks/dynamic-data/hooks/use-dynamic-data-descriptor.js:156
 msgid "Attributes"
-msgstr "��трибуты"
+msgstr "Атрибуты"
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:343,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:434
@@ -4541,7 +4541,7 @@ msgstr "Заголовок партнёрской ссылки"
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:57,
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:90
 msgid "Open Button Link In New Tab"
-msgstr "Открывать к��опкой новую вкладку"
+msgstr "Открывать кнопкой новую вкладку"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-page/options.php:14
 msgid "Quantity Auto Update"

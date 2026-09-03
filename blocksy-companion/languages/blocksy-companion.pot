@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-27 16:37+0000\n"
+"POT-Creation-Date: 2026-09-03 17:30+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -294,10 +294,10 @@ msgid ""
 "in doing so."
 msgstr ""
 
-#: framework/features/demo-install.php:170,
+#: framework/features/demo-install.php:174,
 #: framework/features/demo-install/content-installer.php:177,
 #: framework/features/demo-install/content-installer.php:173,
-#: framework/features/demo-install/demo-register.php:12
+#: framework/features/demo-install/demo-register.php:16
 msgid "No demo name provided."
 msgstr ""
 
@@ -831,7 +831,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:301,
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:192,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:45,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:893,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:922,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/providers/custom.php:13,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:22,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:22
@@ -1534,7 +1534,7 @@ msgstr ""
 #: framework/extensions/newsletter-subscribe/helpers.php:41,
 #: framework/extensions/newsletter-subscribe/helpers.php:85,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:127,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:185
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:184
 msgid "Your name"
 msgstr ""
 
@@ -1870,13 +1870,13 @@ msgstr ""
 msgid "Enter your email address below to subscribe to our newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:189
+#: framework/extensions/newsletter-subscribe/helpers.php:184
 msgid "First name"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:194,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:309,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:310
+#: framework/extensions/newsletter-subscribe/helpers.php:189,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:303,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:304
 msgid "Email address"
 msgstr ""
 
@@ -1941,7 +1941,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:210,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:273,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/feature.php:296,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:912,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:941,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-layer.php:305
 msgid "Bottom Spacing"
 msgstr ""
@@ -2413,7 +2413,7 @@ msgstr ""
 #: framework/extensions/trending/customizer.php:475,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:43,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:90,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:839
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:868
 msgid "Button"
 msgstr ""
 
@@ -2783,47 +2783,47 @@ msgstr ""
 msgid "Invalid file type"
 msgstr ""
 
-#: framework/features/demo-install/wp-importer.php:1361
+#: framework/features/demo-install/wp-importer.php:1363
 msgid "Remote server did not respond"
 msgstr ""
 
 #. translators: %1$d is the HTTP response code, %2$s is the HTTP response message.
-#: framework/features/demo-install/wp-importer.php:1374
+#: framework/features/demo-install/wp-importer.php:1376
 msgid "Remote server returned error response %1$d %2$s"
 msgstr ""
 
-#: framework/features/demo-install/wp-importer.php:1395
+#: framework/features/demo-install/wp-importer.php:1397
 msgid "Remote file is incorrect size"
 msgstr ""
 
-#: framework/features/demo-install/wp-importer.php:1404
+#: framework/features/demo-install/wp-importer.php:1406
 msgid "Zero size file downloaded"
 msgstr ""
 
 #. translators: %s is the maximum file size allowed.
-#: framework/features/demo-install/wp-importer.php:1417
+#: framework/features/demo-install/wp-importer.php:1419
 msgid "Remote file is too large, limit is %s"
 msgstr ""
 
-#: framework/features/demo-install/wp-importer.php:1529
+#: framework/features/demo-install/wp-importer.php:1531
 msgid "Import WordPress"
 msgstr ""
 
 #. translators: %s is the new version number.
-#: framework/features/demo-install/wp-importer.php:1541
+#: framework/features/demo-install/wp-importer.php:1543
 msgid ""
 "A new version of this importer is available. Please update to version %s to "
 "ensure compatibility with newer export files."
 msgstr ""
 
-#: framework/features/demo-install/wp-importer.php:1562
+#: framework/features/demo-install/wp-importer.php:1564
 msgid ""
 "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
 "the posts, pages, comments, custom fields, categories, and tags into this "
 "site."
 msgstr ""
 
-#: framework/features/demo-install/wp-importer.php:1563
+#: framework/features/demo-install/wp-importer.php:1565
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
 msgstr ""
 
@@ -3014,11 +3014,11 @@ msgstr ""
 msgid "No post to duplicate"
 msgstr ""
 
-#: framework/premium/features/clone-cpt.php:131
+#: framework/premium/features/clone-cpt.php:68
 msgid "Post creation failed, could not find original post: "
 msgstr ""
 
-#: framework/premium/features/clone-cpt.php:190
+#: framework/premium/features/clone-cpt.php:199
 msgid "Post copy created."
 msgstr ""
 
@@ -3260,7 +3260,7 @@ msgid "Fields Gap"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:142,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:190
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:189
 msgid "Your email *"
 msgstr ""
 
@@ -3269,8 +3269,8 @@ msgstr ""
 msgid "Newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:299,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:300,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:293,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:294,
 #: framework/features/blocks/about-me/options.php:73,
 #: framework/features/header/items/account/options.php:615,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:253,
@@ -3325,7 +3325,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:35,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:171,
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:91,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:841,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:870,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:72,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:103,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:147,
@@ -3802,7 +3802,7 @@ msgstr ""
 msgid "Terms accent color"
 msgstr ""
 
-#: framework/features/blocks/query/block.php:831
+#: framework/features/blocks/query/block.php:839
 msgid "No posts found."
 msgstr ""
 
@@ -7050,7 +7050,7 @@ msgstr ""
 
 #: framework/premium/extensions/post-types-extra/features/filtering/helpers.php:221,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:300,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:892,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:921,
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/options/status.php:52
 #: static/js/editor/blocks/query/edit/layers/useTaxonomiesLayers.js:65
 msgid "All"
@@ -8335,8 +8335,8 @@ msgid "Add new"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:618,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:848,
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:883
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:877,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:912
 msgid "Swatches"
 msgstr ""
 
@@ -8344,22 +8344,22 @@ msgstr ""
 msgid "Swatches removed"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:676
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:682
 msgid "Swatches saved"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:840,
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:869,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:28,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:50,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:146
 msgid "Color"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:842
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:871
 msgid "Mixed"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:867
+#: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:896
 msgid "Custom Attributes"
 msgstr ""
 

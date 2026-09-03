@@ -294,8 +294,9 @@ if (! function_exists('blocksy_companion_load_xml_file')) {
 		if (ini_get('allow_url_fopen') && ini_get('allow_url_fopen') !== 'Off') {
 			$context_options = [
 				"ssl" => [
-					"verify_peer" => false,
-					"verify_peer_name" => false,
+					"verify_peer" => true,
+					"verify_peer_name" => true,
+					'cafile' => ABSPATH . WPINC . '/certificates/ca-bundle.crt',
 				]
 			];
 
@@ -322,9 +323,11 @@ if (! function_exists('blocksy_companion_load_xml_file')) {
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
 			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
-			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
+			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
-			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
+			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
+			curl_setopt($curl, CURLOPT_CAINFO, ABSPATH . WPINC . '/certificates/ca-bundle.crt');
 
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_exec
 			$result = curl_exec($curl);

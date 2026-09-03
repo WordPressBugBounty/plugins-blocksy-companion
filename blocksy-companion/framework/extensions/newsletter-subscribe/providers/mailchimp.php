@@ -264,7 +264,7 @@ class MailchimpProvider extends Provider {
 		$fname = $name_parts['first_name'];
 		$lname = $name_parts['last_name'];
 		$subscriber_hash = $this->get_subscriber_hash($args['email']);
-		$list_path = 'lists/' . $args['group'] . '/members';
+		$list_path = 'lists/' . rawurlencode($args['group']) . '/members';
 
 		$member_check = $this->request(
 			$api_key,
@@ -285,7 +285,6 @@ class MailchimpProvider extends Provider {
 			return [
 				'result' => 'no',
 				'message' => $this->map_error_response_to_message($member_check['body'], $args['email']),
-				'res' => $member_check['body'],
 			];
 		}
 
@@ -317,7 +316,6 @@ class MailchimpProvider extends Provider {
 			return [
 				'result' => 'no',
 				'message' => NewsletterMessages::already_subscribed($args['email']),
-				'res' => $member_check['body'],
 			];
 		}
 
@@ -353,13 +351,11 @@ class MailchimpProvider extends Provider {
 			return [
 				'result' => 'yes',
 				'message' => NewsletterMessages::subscribed_successfully(),
-				'res' => $subscribe_response['body'],
 			];
 		} else {
 			return [
 				'result' => 'no',
 				'message' => $this->map_error_response_to_message($subscribe_response['body'], $args['email']),
-				'res' => $subscribe_response['body'],
 			];
 		}
 	}

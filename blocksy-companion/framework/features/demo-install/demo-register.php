@@ -4,6 +4,10 @@ namespace Blocksy;
 
 class DemoInstallRegisterDemo {
 	public function register() {
+		if (! current_user_can('edit_theme_options')) {
+			wp_send_json_error();
+		}
+
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$raw_demo_name = isset($_REQUEST['demo_name']) ? sanitize_text_field(wp_unslash($_REQUEST['demo_name'])) : '';
 
@@ -28,6 +32,10 @@ class DemoInstallRegisterDemo {
 	}
 
 	public function deregister() {
+		if (! current_user_can('edit_theme_options')) {
+			wp_send_json_error();
+		}
+
 		update_option('blocksy_ext_demos_current_demo', null);
 
 		/**

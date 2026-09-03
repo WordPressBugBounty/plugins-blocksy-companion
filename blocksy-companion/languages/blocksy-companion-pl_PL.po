@@ -489,7 +489,7 @@ msgstr "Przypisz autorów"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
-msgstr "Aby ułatwić sobie edycję i zapisywanie zaimportowanych treści, warto przypisać autora zaimportowanego elementu do istniejącego użytkownika tej witryny, na przykład do głównego konta administratora."
+msgstr "Aby ułatwi�� sobie edycję i zapisywanie zaimportowanych treści, warto przypisać autora zaimportowanego elementu do istniejącego użytkownika tej witryny, na przykład do głównego konta administratora."
 
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
@@ -1466,7 +1466,7 @@ msgstr "Zostałeś dodany na listę oczekujących"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
-msgstr "Zostałe�� usunięty z listy oczekujących"
+msgstr "Zostałeś usunięty z listy oczekujących"
 
 #. translators: %1$s is the number of users, %2$s is the plural form
 #. (user/users)

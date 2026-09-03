@@ -112,16 +112,11 @@ function blocksy_companion_ext_newsletter_subscribe_output_form($args = []) {
 
 	$form_url = $provider_data['form_url'];
 	$has_gdpr_fields = $provider_data['has_gdpr_fields'];
-	$has_double_optin = isset($provider_data['double_optin']) ? $provider_data['double_optin'] : false;
 
 	$additional_output = '';
 
 	if ($has_gdpr_fields) {
 		$additional_output = 'data-skip-submit';
-	}
-
-	if ($has_double_optin) {
-		$additional_output .= ' data-double-optin';
 	}
 
 	$fields_number = '2';

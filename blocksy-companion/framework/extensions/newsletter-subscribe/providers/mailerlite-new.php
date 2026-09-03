@@ -205,7 +205,6 @@ class MailerliteNewProvider extends Provider {
 				'result' => 'no',
 				'message' => isset($response['body']['message']) ? $response['body']['message'] : NewsletterMessages::unable_to_subscribe(),
 				'error' => $response['error'],
-				'res' => $response['body'],
 			];
 		}
 
@@ -215,14 +214,12 @@ class MailerliteNewProvider extends Provider {
 			return [
 				'result' => 'yes',
 				'message' => NewsletterMessages::confirm_subscription(),
-				'res' => $response['body'],
 			];
 		}
 
 		return [
 			'result' => 'yes',
 			'message' => NewsletterMessages::subscribed_successfully(),
-			'res' => $response['body'],
 		];
 	}
 }

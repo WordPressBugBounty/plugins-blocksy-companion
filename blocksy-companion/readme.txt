@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.55
+Stable tag: 2.1.56
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,14 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.56: 2026-09-03
+- Improvement: Advanced Posts (Query) block - return minimal post fields from the editor data endpoint
+- Improvement: Advanced Posts block - prevent post meta links from being underlined
+- Improvement: Newsletter Subscribe - validate list id server-side and harden the AJAX subscribe endpoint
+- Improvement: Remote requests - enforce TLS certificate verification on outbound HTTPS
+- Improvement: Starter Sites - align demo-install AJAX handlers on the shared capability check
+- Improvement: Starter Sites - bind demo import URL through $wpdb->prepare in replace_urls
+
 2.1.55: 2026-08-27
 - Improvement: General fixes and improvements
 

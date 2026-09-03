@@ -466,7 +466,7 @@ msgstr "Насолоджуйтесь!"
 
 #: framework/features/demo-install/wp-importer.php:235
 msgid "Remember to update the passwords and roles of imported users."
-msgstr "Не забудьте оновити паролі та ролі імпортованих користувачів."
+msgstr "Не забудьте оновити паролі та ролі і��портованих користувачів."
 
 #. translators: %s is the path to the WXR file.
 #: framework/features/demo-install/wp-importer.php:258
@@ -485,7 +485,7 @@ msgstr "Не вдалося імпортувати автора %s. Його п�
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
-msgstr "Призначити авторів"
+msgstr "Призначити а��торів"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
@@ -1032,7 +1032,7 @@ msgstr "При натисканні кнопки закриття"
 
 #: framework/premium/features/content-blocks/options/popup.php:313
 msgid "On ESC Button Press"
-msgstr "При натисканні кн��пки ESC"
+msgstr "При натисканні кнопки ESC"
 
 #: framework/premium/features/content-blocks/options/popup.php:325
 msgid "On Backdrop Click"
@@ -1391,7 +1391,7 @@ msgstr "Тільки авторизованим"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
-msgstr "Відображення опції списку очікування виключно для користувачів, які увійшли в систему."
+msgstr "Відображення опції списку очікування виключно для користувачів, які увійшли в сист��му."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"
@@ -1743,7 +1743,7 @@ msgstr "Відображення спливаючого вікна динамі�
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
-msgstr "Уві��к. тригер вікна"
+msgstr "Увімк. тригер вікна"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"
@@ -1959,7 +1959,7 @@ msgstr "Цей механізм відновить оновлення табли
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:584
 msgid "Product taxonomies lookup table regeneration process has been resumed."
-msgstr "Процес оновлення таблиці пошуку таксономій товарів відновлено."
+msgstr "Процес оновлен��я таблиці пошуку таксономій товарів відновлено."
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:586
 msgid "Resume"
@@ -2383,7 +2383,7 @@ msgstr "Динамічні бренди"
 
 #: static/js/editor/blocks/dynamic-data/index.js:89
 msgid "Dynamic SKU"
-msgstr "Динамічний артикул"
+msgstr "Дин��мічний артикул"
 
 #: static/js/editor/blocks/dynamic-data/index.js:93
 msgid "Dynamic Rating"
@@ -2536,7 +2536,7 @@ msgstr "Супутні"
 #: static/js/editor/blocks/query/index.js:13
 #: static/js/editor/blocks/tax-query/index.js:13
 msgid "Create advanced queries based on your specified criterias."
-msgstr "��творення розширених запитів на основі заданих критеріїв."
+msgstr "Створення розширених запитів на основі заданих критеріїв."
 
 #: static/js/editor/blocks/search/Edit.js:163
 msgid "Button Outside"
@@ -2648,7 +2648,7 @@ msgstr "Скинути всі"
 
 #: static/js/options/ConditionsManager/ExpireCondition.js:119
 msgid "The expiration date cannot be set earlier than the start date."
-msgstr "Дата закінчення ��ерміну не може бути раніше дати початку дії."
+msgstr "Дата закінчення терміну не може бути раніше дати початку дії."
 
 #: framework/features/blocks/about-me/options.php:207,
 #: framework/features/blocks/share-box/options.php:66,
@@ -2842,7 +2842,7 @@ msgstr "Перекриття"
 #. translators: placeholder here means the actual URL.
 #: framework/premium/features/media-video/options.php:140
 msgid "Choose how the video will fill its container. More info about this can be found %1$shere%2$s."
-msgstr "Як відео буде розміщено в контейнері. Детальну інформацію про це можна знайти %1$s��ут%2$s."
+msgstr "Як відео буде розміщено в контейнері. Детальну інформацію про це можна знайти %1$sтут%2$s."
 
 #. translators: %s is the author's display name.
 #: framework/features/blocks/dynamic-data/views/avatar-field.php:31
@@ -3038,7 +3038,7 @@ msgstr "Кількість товарів, які клієнт повинен п
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:172
 msgid "You can use dynamic code tags such as {items} inside this option."
-msgstr "Можна використовувати теги динамічного коду, такі як {items}, всередині цього параметра."
+msgstr "Можна використовувати теги динам��чного коду, такі як {items}, всередині цього параметра."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:199,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/options.php:62
@@ -3215,7 +3215,7 @@ msgstr "У вас немає дозволу на встановлення доч
 
 #: framework/features/demo-install/content-eraser.php:23
 msgid "Sorry, you don't have permission to erase content."
-msgstr "У вас нем��є дозволу на видалення вмісту."
+msgstr "У вас немає дозволу на видалення вмісту."
 
 #: framework/features/demo-install/content-installer.php:73
 msgid "Sorry, you don't have permission to install content."
@@ -3512,7 +3512,7 @@ msgstr "Кнопка скидання фільтрів."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/index.js:10
 msgid "Shop Filters Controls"
-msgstr "Опції фільтрів тов��рів"
+msgstr "Опції фільтрів товарів"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/index.js:162
 msgid "Shop Filters"
@@ -6700,7 +6700,7 @@ msgstr "скидання параметрів налаштовувача"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:74
 msgid "resetting widgets"
-msgstr "скидання віджетів"
+msgstr "скидання в��джетів"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:89
 msgid "users"
@@ -6942,7 +6942,7 @@ msgstr "Умови відображення панелі ярликів"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1028
 msgid "Add one or more conditions to display the shortcuts bar."
-msgstr "До��айте одну або кілька умов для відображення панелі ярликів."
+msgstr "Додайте одну або кілька умов для відображення панелі ярликів."
 
 #: framework/premium/extensions/shortcuts/customizer.php:1052,
 #: framework/features/header/items/account/options.php:1918,
@@ -7683,7 +7683,7 @@ msgstr "Оформлення перед відгуком"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:889
 msgid "Checkout order review"
-msgstr "Перегляд оформлюваного замовлення"
+msgstr "Перег��яд оформлюваного замовлення"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:893
 msgid "Review order before cart contents"
@@ -11508,7 +11508,7 @@ msgstr "Розсилка"
 #: static/js/editor/blocks/contact-info/Edit.js:107
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:276
 msgid "Text"
-msgstr "Т��кст"
+msgstr "Текст"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:19,
 #: framework/features/blocks/about-me/options.php:77

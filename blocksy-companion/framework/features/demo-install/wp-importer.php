@@ -1339,19 +1339,21 @@ class Blocksy_WP_Import extends WP_Importer {
 		// extract the file name and extension from the url
 		$file_name = basename( $url );
 
-		add_filter('https_ssl_verify', '__return_false');
-
 		// get placeholder file in the upload dir with a unique, sanitized filename
 		$upload = wp_upload_bits( $file_name, 0, '', $post['upload_date'] );
 		if ( $upload['error'] )
 			return new WP_Error( 'upload_dir_error', $upload['error'] );
 
 		// fetch the remote url and write it to the placeholder file
+		add_filter('https_ssl_verify', '__return_false');
+
 		$remote_response = wp_safe_remote_get( $url, array(
 			'timeout' => 300,
             		'stream' => true,
             		'filename' => $upload['file'],
         	) );
+
+		remove_filter('https_ssl_verify', '__return_false');
 
 		$headers = wp_remote_retrieve_headers( $remote_response );
 

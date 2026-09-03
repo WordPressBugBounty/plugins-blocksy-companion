@@ -612,7 +612,7 @@ msgstr "Đã có phiên bản mới của trình nhập này. Vui lòng cập nh
 
 #: framework/features/demo-install/wp-importer.php:1489
 msgid "Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import the posts, pages, comments, custom fields, categories, and tags into this site."
-msgstr "Chào b���n! Hãy tải lên tệp WordPress eXtended RSS (WXR) của bạn và chúng tôi sẽ nhập bài viết, trang, bình luận, trường tùy chỉnh, chuyên mục và thẻ vào trang web này."
+msgstr "Chào bạn! Hãy tải lên tệp WordPress eXtended RSS (WXR) của bạn và chúng tôi sẽ nhập bài viết, trang, bình luận, trường tùy chỉnh, chuyên mục và thẻ vào trang web này."
 
 #: framework/features/demo-install/wp-importer.php:1490
 msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
@@ -870,7 +870,7 @@ msgstr "Hiển thị danh sách các sản phẩm được đề xuất chọn l
 #: framework/views/theme-mismatch.php:48
 #: static/js/notifications/VersionMismatchNotice.js:65
 msgid "In order to take full advantage of all features the core has to offer - please install and activate the latest version of %s."
-msgstr "Để tận dụng tối đa tất cả các tính năng mà lõi hệ thống cung cấp - vui lòng cài đặt và kích hoạt phiên bản mới nhất của %s."
+msgstr "Để t���n dụng tối đa tất cả các tính năng mà lõi hệ thống cung cấp - vui lòng cài đặt và kích hoạt phiên bản mới nhất của %s."
 
 #: framework/features/header/account-modal.php:23
 msgid "Account modal"
@@ -1014,7 +1014,7 @@ msgstr "Khoảng thời gian tùy chỉnh"
 
 #: framework/premium/features/content-blocks/options/popup.php:245
 msgid "Number of days before the popup will automatically relaunch again."
-msgstr "Số ngày trước khi popup tự động khởi chạy lại."
+msgstr "Số ngày tr��ớc khi popup tự động khởi chạy lại."
 
 #: framework/premium/features/content-blocks/options/popup.php:279
 msgid "Days before the popup relaunches after the additional close trigger is activated."
@@ -1261,7 +1261,7 @@ msgstr "Xem thêm thông tin về cách tạo danh sách trong FluentCRM %stại
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/AllFonts.js:123
 msgid "Modern Font Stack"
-msgstr "Bộ phông chữ hi��n đại"
+msgstr "Bộ phông chữ hiện đại"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/CustomFonts.js:142
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:330
@@ -4076,7 +4076,7 @@ msgstr "Thanh vận chuyển miễn phí"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:212
 msgid "Show if cart is empty"
-msgstr "Hiển thị nếu giỏ h��ng trống"
+msgstr "Hiển thị nếu giỏ hàng trống"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:445,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:180

@@ -94,7 +94,7 @@ class CampaignMonitorProvider extends Provider {
 
 		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt_array
 		curl_setopt_array($curl, array(
-			CURLOPT_URL => 'https://api.createsend.com/api/v3.3/subscribers/' . $args['group'] . '.json',
+			CURLOPT_URL => 'https://api.createsend.com/api/v3.3/subscribers/' . rawurlencode($args['group']) . '.json',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => "",
 			CURLOPT_MAXREDIRS => 10,
@@ -143,4 +143,3 @@ class CampaignMonitorProvider extends Provider {
 		}
 	}
 }
-

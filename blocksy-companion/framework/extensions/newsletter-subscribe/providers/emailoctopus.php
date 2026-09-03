@@ -107,7 +107,7 @@ class EmailOctopusProvider extends Provider {
 
 		// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt_array
 		curl_setopt_array($curl, [
-		CURLOPT_URL => "https://api.emailoctopus.com/lists/{$args['group']}/contacts",
+		CURLOPT_URL => 'https://api.emailoctopus.com/lists/' . rawurlencode($args['group']) . '/contacts',
 		CURLOPT_RETURNTRANSFER => true,
 		CURLOPT_ENCODING => "",
 		CURLOPT_MAXREDIRS => 10,
@@ -145,9 +145,7 @@ class EmailOctopusProvider extends Provider {
 			return [
 				'result' => 'yes',
 				'message' => NewsletterMessages::subscribed_successfully(),
-				'res' => $response,
 			];
 		}
 	}
 }
-

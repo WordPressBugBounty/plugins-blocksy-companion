@@ -187,13 +187,22 @@ class DemoInstallFinalActions {
 
 		global $wpdb;
 
-		// @codingStandardsIgnoreStart cannot use `$wpdb->prepare` because it remove's the backslashes
+		// `_elementor_data` is stored as JSON, so the slashes inside the URLs
+		// are escaped -- the needle and the replacement have to be escaped the
+		// same way in order to match.
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$wpdb->query(
-			"UPDATE {$wpdb->postmeta} " .
-			"SET `meta_value` = REPLACE(`meta_value`, '" . str_replace( '/', '\\\/', $from ) . "', '" . str_replace( '/', '\\\/', $to ) . "') " .
-			"WHERE `meta_key` = '_elementor_data' AND `meta_value` LIKE '[%' ;"
-		); // meta_value LIKE '[%' are json formatted
-		// @codingStandardsIgnoreEnd
+			$wpdb->prepare(
+				"UPDATE {$wpdb->postmeta}
+				SET meta_value = REPLACE(meta_value, %s, %s)
+				WHERE meta_key = %s
+				AND meta_value LIKE %s",
+				str_replace('/', '\\/', $from),
+				str_replace('/', '\\/', $to),
+				'_elementor_data',
+				'[%'
+			)
+		);
 
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$option_keys = $wpdb->get_results(
@@ -216,8 +225,6 @@ class DemoInstallFinalActions {
 		$from_menu_link = $demo_content['url'];
 		$to_menu_link = trailingslashit(get_site_url());
 
-		$escaped_from = esc_sql($from_menu_link);
-		$escaped_to = esc_sql($to_menu_link);
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$wpdb->query(
 			$wpdb->prepare(

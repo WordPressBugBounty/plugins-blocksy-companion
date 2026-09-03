@@ -107,7 +107,7 @@ class ConvertKitNewProvider extends Provider {
 
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt_array
 			curl_setopt_array($curl, [
-				CURLOPT_URL => 'https://api.kit.com/v4/forms/' . $args['group'] . '/subscribers',
+				CURLOPT_URL => 'https://api.kit.com/v4/forms/' . rawurlencode($args['group']) . '/subscribers',
 				CURLOPT_RETURNTRANSFER => true,
 				CURLOPT_ENCODING => "",
 				CURLOPT_MAXREDIRS => 10,
@@ -154,4 +154,3 @@ class ConvertKitNewProvider extends Provider {
 		}		
 	}
 }
-

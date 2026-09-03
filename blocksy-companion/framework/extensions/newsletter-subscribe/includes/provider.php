@@ -72,6 +72,30 @@ class Provider {
 		return [];
 	}
 
+	public function get_list($list_id) {
+		$settings = $this->get_settings();
+		$lists = $this->fetch_lists(
+			$settings['api_key'],
+			$settings['api_url'] ?? ''
+		);
+
+		if (! is_array($lists)) {
+			return null;
+		}
+
+		foreach ($lists as $list) {
+			if (
+				isset($list['id'])
+				&&
+				(string) $list['id'] === (string) $list_id
+			) {
+				return $list;
+			}
+		}
+
+		return null;
+	}
+
 	public function get_settings() {
 		$option = get_option('blocksy_ext_mailchimp_credentials', []);
 
@@ -143,4 +167,3 @@ class Provider {
 		];
 	}
 }
-

@@ -132,7 +132,7 @@ class MailerliteClassicProvider extends Provider {
 
 		$response = $this->request(
 			'POST',
-			'groups/' . $args['group'] . '/subscribers',
+			'groups/' . rawurlencode($args['group']) . '/subscribers',
 			$settings['api_key'],
 			[
 				'email' => $args['email'],
@@ -145,7 +145,6 @@ class MailerliteClassicProvider extends Provider {
 				'result' => 'no',
 				'message' => isset($response['body']['error']['message']) ? $response['body']['error']['message'] : NewsletterMessages::unable_to_subscribe(),
 				'error' => $response['error'],
-				'res' => $response['body'],
 			];
 		}
 
@@ -155,14 +154,12 @@ class MailerliteClassicProvider extends Provider {
 			return [
 				'result' => 'yes',
 				'message' => NewsletterMessages::confirm_subscription(),
-				'res' => $response['body'],
 			];
 		}
 
 		return [
 			'result' => 'yes',
 			'message' => NewsletterMessages::subscribed_successfully(),
-			'res' => $response['body'],
 		];
 	}
 }

@@ -184,7 +184,6 @@ class KlaviyoProvider extends Provider {
 					'result' => 'no',
 					'message' => NewsletterMessages::unable_to_subscribe(),
 					'error' => $response['error'],
-					'res' => $response['body'],
 				];
 			}
 
@@ -207,7 +206,6 @@ class KlaviyoProvider extends Provider {
 			return [
 				'result' => 'yes',
 				'message' => NewsletterMessages::confirm_subscription(),
-				'res' => $response['body'],
 			];
 		}
 
@@ -228,7 +226,6 @@ class KlaviyoProvider extends Provider {
 				'result' => 'no',
 				'message' => NewsletterMessages::unable_to_subscribe(),
 				'error' => $import_response['error'],
-				'res' => $import_response['body'],
 			];
 		}
 
@@ -238,13 +235,12 @@ class KlaviyoProvider extends Provider {
 			return [
 				'result' => 'no',
 				'message' => NewsletterMessages::unable_to_subscribe(),
-				'res' => $import_response['body'],
 			];
 		}
 
 		$list_response = $this->request(
 			'POST',
-			'lists/' . $args['group'] . '/relationships/profiles',
+			'lists/' . rawurlencode($args['group']) . '/relationships/profiles',
 			$settings['api_key'],
 			[
 				'data' => [
@@ -261,7 +257,6 @@ class KlaviyoProvider extends Provider {
 				'result' => 'no',
 				'message' => NewsletterMessages::unable_to_subscribe(),
 				'error' => $list_response['error'],
-				'res' => $list_response['body'],
 			];
 		}
 

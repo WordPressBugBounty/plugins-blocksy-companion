@@ -1307,7 +1307,7 @@ msgstr "قائمة انتظار المنتج"
 
 #: framework/helpers/exts-configs.php:386
 msgid "Allow your customers to sign up for a waitlist for products that are out of stock and get notified when they are back in stock."
-msgstr "اسمح لعملائك بالتسجيل في قائمة انتظار للمنتجات التي نفدت من المخزون والحصول على إشعار عندم�� تعود إلى المخزون."
+msgstr "اسمح لعملائك بالتسجيل في قائمة انتظار للمنتجات التي نفدت من المخزون والحصول على إشعار عندما تعود إلى المخزون."
 
 #: framework/premium/extensions/shortcuts/customizer.php:612,
 #: framework/premium/extensions/shortcuts/customizer.php:638,
@@ -6502,7 +6502,7 @@ msgstr "تضمين"
 #: static/js/editor/blocks/query/edit/PostsInspectorControls.js:291
 #: static/js/options/ConditionsManager/SingleCondition.js:96
 msgid "Exclude"
-msgstr "استثناء"
+msgstr "است��ناء"
 
 #: framework/premium/static/js/options/PreviewedPostsSelect.js:118
 #: static/js/options/ConditionsManager/SingleCondition.js:148

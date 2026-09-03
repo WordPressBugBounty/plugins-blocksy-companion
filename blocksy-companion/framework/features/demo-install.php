@@ -162,6 +162,10 @@ class DemoInstall {
 	}
 
 	public function demo_get_content_preliminary_data() {
+		if (! current_user_can('edit_theme_options')) {
+			wp_send_json_error();
+		}
+
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$raw_demo_name = isset($_REQUEST['demo_name']) ? sanitize_text_field(wp_unslash($_REQUEST['demo_name'])) : '';
 
