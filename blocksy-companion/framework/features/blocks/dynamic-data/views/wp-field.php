@@ -35,7 +35,7 @@ if ($field === 'wp:archive_title') {
 	}
 
 	if (is_search()) {
-		$value = blocksy_safe_sprintf(
+		$value = blocksy_companion_safe_sprintf(
 			// translators: 1: the search query
 			__(
 				'Search Results for %1$s',
@@ -173,7 +173,7 @@ if ($field === 'wp:excerpt') {
 
 	if (empty($value) && ! empty($value_fallback)) {
 		$has_fallback = true;
-		$value = do_shortcode($value_fallback);
+		$value = do_shortcode(blocksy_companion_sanitize_html_for_display($value_fallback));
 	}
 	if (blocksy_companion_akg('tagName', $attributes, 'div') === 'p') {
 		add_filter('the_excerpt', 'wpautop');
@@ -307,7 +307,7 @@ if ($field === 'wp:author') {
 
 	if (empty($value) && ! empty($value_fallback)) {
 		$has_fallback = true;
-		$value = do_shortcode($value_fallback);
+		$value = do_shortcode(blocksy_companion_sanitize_html_for_display($value_fallback));
 	}
 
 	if (
@@ -421,7 +421,7 @@ if ($field === 'wp:terms') {
 
 	if (empty($value) && ! empty($value_fallback)) {
 		$has_fallback = true;
-		$value = do_shortcode($value_fallback);
+		$value = do_shortcode(blocksy_companion_sanitize_html_for_display($value_fallback));
 	}
 }
 
@@ -433,8 +433,8 @@ if (
 	return;
 }
 
-$value_after = blocksy_companion_akg('after', $attributes, '');
-$value_before = blocksy_companion_akg('before', $attributes, '');
+$value_after = blocksy_companion_sanitize_html_for_display(blocksy_companion_akg('after', $attributes, ''));
+$value_before = blocksy_companion_sanitize_html_for_display(blocksy_companion_akg('before', $attributes, ''));
 
 if (! empty($value_after) && ! $has_fallback) {
 	$value .= $value_after;

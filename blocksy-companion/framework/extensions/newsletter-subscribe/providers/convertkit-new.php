@@ -40,14 +40,6 @@ class ConvertKitNewProvider extends Provider {
 		}
 	}
 
-	public function get_form_url_and_gdpr_for($maybe_custom_list = null) {
-		return [
-			'form_url' => '#',
-			'has_gdpr_fields' => false,
-			'provider' => 'convertkit'
-		];
-	}
-
 	public function subscribe_form($args = []) {
 		$args = wp_parse_args($args, [
 			'email' => '',

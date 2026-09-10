@@ -45,10 +45,12 @@ $image_output = blocksy_media(
 
 $about_name = blocksy_companion_akg('about_name', $atts, 'John Doe');
 $about_text = do_shortcode(
-	blocksy_companion_akg(
-		'about_text',
-		$atts,
-		'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua tincidunt tortor aliquam.'
+	blocksy_companion_sanitize_html_for_display(
+		blocksy_companion_akg(
+			'about_text',
+			$atts,
+			'Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua tincidunt tortor aliquam.'
+		)
 	)
 );
 
@@ -79,7 +81,9 @@ if ($about_source === 'from_wp') {
 	);
 
 	$about_name = blocksy_get_the_author_meta('display_name', $user_id);
-	$about_text = blocksy_get_the_author_meta('description', $user_id);
+	$about_text = blocksy_companion_sanitize_html_for_display(
+		blocksy_get_the_author_meta('description', $user_id)
+	);
 }
 
 $link_rel = '';
@@ -205,7 +209,7 @@ if (! empty($items_spacing)) {
 	<div class="ct-about-me-name">
 		<span><?php
 			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo $about_name;
+			echo blocksy_companion_sanitize_html_for_display($about_name);
 		?></span>
 
 		<?php if ($about_source === 'from_wp') { ?>

@@ -100,8 +100,8 @@ if (empty(trim($value))) {
 	return;
 }
 
-$value_after = blocksy_companion_akg('after', $attributes, '');
-$value_before = blocksy_companion_akg('before', $attributes, '');
+$value_after = blocksy_companion_sanitize_html_for_display(blocksy_companion_akg('after', $attributes, ''));
+$value_before = blocksy_companion_sanitize_html_for_display(blocksy_companion_akg('before', $attributes, ''));
 
 if (! empty($value_after) && ! $has_fallback) {
 	$value .= $value_after;

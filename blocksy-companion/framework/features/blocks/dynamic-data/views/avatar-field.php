@@ -30,7 +30,7 @@ $value = get_avatar(
 	$author_id,
 	$avatar_size,
 	'',
-	blocksy_safe_sprintf(
+	blocksy_companion_safe_sprintf(
 		// translators: %s is the author's display name.
 		__('%s Avatar', 'blocksy-companion'),
 		blocksy_get_the_author_meta('display_name', $author_id)

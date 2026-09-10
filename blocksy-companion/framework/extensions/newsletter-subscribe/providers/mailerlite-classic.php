@@ -104,22 +104,6 @@ class MailerliteClassicProvider extends Provider {
 		}, $response['body']);
 	}
 
-	public function get_form_url_and_gdpr_for($maybe_custom_list = null) {
-		$settings = $this->get_settings();
-		$has_double_optin = false;
-
-		if (isset($settings['api_key']) && $settings['api_key']) {
-			$has_double_optin = $this->fetch_double_optin_status($settings['api_key']);
-		}
-
-		return [
-			'form_url' => '#',
-			'has_gdpr_fields' => false,
-			'double_optin' => $has_double_optin,
-			'provider' => 'mailerlite'
-		];
-	}
-
 	public function subscribe_form($args = []) {
 		$args = wp_parse_args($args, [
 			'email' => '',
@@ -150,7 +134,7 @@ class MailerliteClassicProvider extends Provider {
 
 		$status = $response['body']['type'] ?? '';
 
-		if ($status === 'unconfirmed') {
+		if ($status === 'unconfirmed' || $args['double_optin']) {
 			return [
 				'result' => 'yes',
 				'message' => NewsletterMessages::confirm_subscription(),

@@ -337,7 +337,7 @@ class DemoInstallContentInstaller {
 				function($post) use ($wp_import, $content_import_timeout) {
 					$time = microtime(true) - $this->content_started_at;
 
-					$status_message = blocksy_safe_sprintf(
+					$status_message = blocksy_companion_safe_sprintf(
 						// translators: %1$s and %2$s are HTML tags for a link.
 						__('Importing %1$s: %2$s', 'blocksy-companion'),
 						$post['post_type'],

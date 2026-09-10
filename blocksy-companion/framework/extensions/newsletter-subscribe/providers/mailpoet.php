@@ -22,14 +22,6 @@ class MailPoetProvider extends Provider {
 		}, $mailpoet_api->getLists());
 	}
 
-	public function get_form_url_and_gdpr_for($maybe_custom_list = null) {
-		return [
-			'form_url' => '#',
-			'has_gdpr_fields' => false,
-			'provider' => 'mailpoet'
-		];
-	}
-
 	public function subscribe_form($args = []) {
 		$args = wp_parse_args($args, [
 			'email' => '',
@@ -88,4 +80,3 @@ class MailPoetProvider extends Provider {
 		];
 	}
 }
-

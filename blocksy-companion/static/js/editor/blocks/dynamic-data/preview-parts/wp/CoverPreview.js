@@ -23,7 +23,6 @@ const CoverPreview = ({ attributes, url }) => {
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 60 60"
 					preserveAspectRatio="none"
-					className="ct-dynamic-data-placeholder-illustration"
 					aria-hidden="true"
 					focusable="false">
 					<path

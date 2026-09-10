@@ -165,7 +165,7 @@ class DynamicDataAPI {
 		$brands_result = [];
 
 		foreach ($brands as $term) {
-			$term_atts = blocksy_get_taxonomy_options($term->term_id);
+			$term_atts = blocksy_companion_theme_functions()->blocksy_get_taxonomy_options($term->term_id);
 
 			$maybe_image_id = get_term_meta($term->term_id, 'thumbnail_id', true);
 

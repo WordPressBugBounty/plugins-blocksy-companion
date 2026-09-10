@@ -9,6 +9,20 @@ if (! defined('ABSPATH')) {
 class SvgHandling {
 	public function __construct() {
 		add_filter(
+			'blocksy:display-html:allowed-tags',
+			[$this, 'add_svg_allowed_tags'],
+			10, 2
+		);
+
+		add_filter(
+			'wp_kses_uri_attributes',
+			function ($attributes) {
+				$attributes[] = 'xlink:href';
+				return $attributes;
+			}
+		);
+
+		add_filter(
 			'wp_handle_upload_prefilter',
 			function ($file) {
 				$extension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
@@ -280,6 +294,70 @@ class SvgHandling {
 			'height' => $height,
 			'orientation' => ($width > $height) ? 'landscape' : 'portrait'
 		];
+	}
+
+	public function add_svg_allowed_tags($tags, $context) {
+		static $svg_tags = [];
+
+		if (! isset($svg_tags[$context])) {
+			$svg_tags[$context] = $this->get_svg_allowed_tags($context);
+		}
+
+		foreach ($svg_tags[$context] as $tag => $attributes) {
+			if (isset($tags[$tag])) {
+				$tags[$tag] = array_merge($tags[$tag], $attributes);
+				continue;
+			}
+
+			$tags[$tag] = $attributes;
+		}
+
+		return $tags;
+	}
+
+	private function get_svg_allowed_tags($context) {
+		$base_path = BLOCKSY_PATH . 'vendor/svg-sanitizer/src';
+
+		require_once($base_path . '/data/TagInterface.php');
+		require_once($base_path . '/data/AllowedTags.php');
+		require_once($base_path . '/data/AttributeInterface.php');
+		require_once($base_path . '/data/AllowedAttributes.php');
+
+		// SMIL can write javascript: into href, which wp_kses() does not
+		// protocol-filter there. A <style> inside inline SVG applies to the
+		// whole document.
+		$excluded_tags = [
+			'#text',
+			'animate',
+			'set',
+			'animatecolor',
+			'animatemotion',
+			'animatetransform',
+		];
+
+		if ($context !== 'logo') {
+			$excluded_tags[] = 'style';
+		}
+
+		$attributes = [];
+
+		foreach (\blocksy\enshrined\svgSanitize\data\AllowedAttributes::getAttributes() as $attribute) {
+			$attributes[strtolower($attribute)] = true;
+		}
+
+		$tags = [];
+
+		foreach (\blocksy\enshrined\svgSanitize\data\AllowedTags::getTags() as $tag) {
+			$tag = strtolower($tag);
+
+			if (in_array($tag, $excluded_tags)) {
+				continue;
+			}
+
+			$tags[$tag] = $attributes;
+		}
+
+		return $tags;
 	}
 
 	public function cleanup_svg($content) {

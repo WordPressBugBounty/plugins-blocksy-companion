@@ -182,7 +182,7 @@ msgstr "Детальну інформацію про те, як згенерув
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:149
 msgid "White Label Extension"
-msgstr "Ро��ширення White Label"
+msgstr "Розши��ення White Label"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:161
 msgid "Please note that disabling this option will hide the white-label extension. To restore it, press the SHIFT key while clicking the dashboard logo."
@@ -206,7 +206,7 @@ msgstr "Вкладка «Журнал змін»"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:41
 msgid "Extension Documentation Link"
-msgstr "Посилання н�� документацію розширення"
+msgstr "Посилання на документацію розширення"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:46
 msgid "Extension Video Link"
@@ -417,7 +417,7 @@ msgstr "Цей файл, ймовірно, не є допустимим файл
 
 #: framework/features/svg.php:37
 msgid "SVG files cannot contain PHP code."
-msgstr "Файли SVG не повинні містити PHP-код."
+msgstr "Файли SVG не повинні ��істити PHP-код."
 
 #: framework/helpers/exts-configs.php:403,
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:4
@@ -466,7 +466,7 @@ msgstr "Насолоджуйтесь!"
 
 #: framework/features/demo-install/wp-importer.php:235
 msgid "Remember to update the passwords and roles of imported users."
-msgstr "Не забудьте оновити паролі та ролі і��портованих користувачів."
+msgstr "Не забудьте оновити паролі та ролі імпо��тованих користувачів."
 
 #. translators: %s is the path to the WXR file.
 #: framework/features/demo-install/wp-importer.php:258
@@ -485,7 +485,7 @@ msgstr "Не вдалося імпортувати автора %s. Його п�
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
-msgstr "Призначити а��торів"
+msgstr "Призначити авто��ів"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
@@ -1113,7 +1113,7 @@ msgstr "Ліміт архіву"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:575
 msgid "Limit the number of swatches shown on archive pages."
-msgstr "Обмеження кількості зразків, що відображаються на сторінках архіву."
+msgstr "Обмеження кількості зразків, що відображаються на сторінках а��хіву."
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:579
 msgid "Product Page Limit"
@@ -1391,7 +1391,7 @@ msgstr "Тільки авторизованим"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
-msgstr "Відображення опції списку очікування виключно для користувачів, які увійшли в сист��му."
+msgstr "Відображення опції списку очікування виключно для користувачів, які увійшли в систему."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"
@@ -1743,7 +1743,7 @@ msgstr "Відображення спливаючого вікна динамі�
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
-msgstr "Увімк. тригер вікна"
+msgstr "Уві��к. тригер вікна"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"
@@ -1959,7 +1959,7 @@ msgstr "Цей механізм відновить оновлення табли
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:584
 msgid "Product taxonomies lookup table regeneration process has been resumed."
-msgstr "Процес оновлен��я таблиці пошуку таксономій товарів відновлено."
+msgstr "Процес оновлення таблиці пошуку таксономій товарів відновлено."
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:586
 msgid "Resume"
@@ -2061,7 +2061,7 @@ msgstr "Ваш сайт налаштований неправильно, і AJAX
 
 #: static/js/dashboard/screens/DemoInstall.js:201
 msgid "Failed to retrieve starter sites list.<br> Error code - %s"
-msgstr "Не вдалося отримати список стартових сайтів. <br>Код помилки — %s"
+msgstr "Не вдалося отримати список стартових сайтів. <br>Код п��милки — %s"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:129
 msgid "Installing %s"
@@ -2383,7 +2383,7 @@ msgstr "Динамічні бренди"
 
 #: static/js/editor/blocks/dynamic-data/index.js:89
 msgid "Dynamic SKU"
-msgstr "Дин��мічний артикул"
+msgstr "Динамічний артикул"
 
 #: static/js/editor/blocks/dynamic-data/index.js:93
 msgid "Dynamic Rating"
@@ -3038,7 +3038,7 @@ msgstr "Кількість товарів, які клієнт повинен п
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:172
 msgid "You can use dynamic code tags such as {items} inside this option."
-msgstr "Можна використовувати теги динам��чного коду, такі як {items}, всередині цього параметра."
+msgstr "Можна використовувати теги динамічного коду, такі як {items}, всередині цього параметра."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:199,
 #: framework/premium/extensions/woocommerce-extra/features/stock-scarcity/options.php:62
@@ -3112,7 +3112,7 @@ msgstr "Нестача запасів"
 
 #: framework/helpers/exts-configs.php:370
 msgid "Show the remaining stock of a product to create a sense of urgency and encourage your visitors to make a purchase."
-msgstr "Відображення залишків товару, щоб створити відчуття терміновості та спонукати відвідувачів до покупки."
+msgstr "Відображення залишків товару, щоб створити відчутт�� терміновості та спонукати відвідувачів до покупки."
 
 #. translators: %s is the product name (theme or plugin)
 #: framework/views/theme-mismatch.php:36
@@ -6700,7 +6700,7 @@ msgstr "скидання параметрів налаштовувача"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:74
 msgid "resetting widgets"
-msgstr "скидання в��джетів"
+msgstr "скидання віджетів"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:89
 msgid "users"
@@ -7683,7 +7683,7 @@ msgstr "Оформлення перед відгуком"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:889
 msgid "Checkout order review"
-msgstr "Перег��яд оформлюваного замовлення"
+msgstr "Перегляд оформлюваного замовлення"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:893
 msgid "Review order before cart contents"
@@ -8045,7 +8045,7 @@ msgstr "Соціальні іконки"
 #. translators: %s is a link to the Customizer section.
 #: framework/features/blocks/about-me/options.php:136
 msgid "You can configure social URLs in %s."
-msgstr "Ви можете налаштувати соціальні URL-адреси у %s."
+msgstr "Ви можете налаштувати со��іальні URL-адреси у %s."
 
 #: framework/features/blocks/about-me/options.php:168,
 #: framework/features/blocks/socials/options.php:62,
@@ -9029,7 +9029,7 @@ msgstr "Додати варіацію"
 
 #: framework/premium/extensions/local-google-fonts/dashboard-static/js/LocalGoogleFonts.js:258
 msgid "Download a font and serve it directly from your server, this is handy for those who want to comply with GDPR regulations or serve the font via CDN."
-msgstr "Завантажте шрифт і завантажуйте його прямо зі свого сервера. Це зручно для тих, хто хоче дотримуватися правил GDPR або розповсюджувати шрифт через CDN."
+msgstr "Завантажте шрифт і завантажуйте його прямо зі свого сервера. Це зручно для тих, хто хоче дотримуватися правил GDPR або розповсюджувати шрифт че��ез CDN."
 
 #: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:200
 msgid "Item Settings"

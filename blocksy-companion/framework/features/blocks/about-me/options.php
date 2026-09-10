@@ -136,10 +136,10 @@ $options = [
 		'type' => 'ct-layers',
 		'divider' => 'top:full',
 		'manageable' => true,
-		'desc' => blocksy_safe_sprintf(
+		'desc' => blocksy_companion_safe_sprintf(
 			// translators: %s is a link to the Customizer section.
 			__('You can configure social URLs in %s.', 'blocksy-companion'),
-			blocksy_safe_sprintf(
+			blocksy_companion_safe_sprintf(
 				'<a href="%s" target="_blank">%s</a>',
 				admin_url('/customize.php?autofocus[section]=social_accounts'),
 				__('Customizer', 'blocksy-companion')

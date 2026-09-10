@@ -62,7 +62,7 @@ class MailchimpProvider extends Provider {
 
 	private function map_error_response_to_message($response, $email = '') {
 		if ($this->is_member_exists_error($response)) {
-			return blocksy_safe_sprintf(
+			return blocksy_companion_safe_sprintf(
 				// translators: %s is the email address
 				__('%s is already a list member.', 'blocksy-companion'),
 				$email
@@ -181,59 +181,6 @@ class MailchimpProvider extends Provider {
 		} else {
 			return 'api_key_invalid';
 		}
-	}
-
-	public function get_form_url_and_gdpr_for($maybe_custom_list = null) {
-		$settings = $this->get_settings();
-
-		if (! isset($settings['api_key'])) {
-			return false;
-		}
-
-		if (! $settings['api_key']) {
-			return false;
-		}
-
-		$lists = $this->fetch_lists($settings['api_key']);
-
-		if (! is_array($lists)) {
-			return false;
-		}
-
-		if (empty($lists)) {
-			return false;
-		}
-
-		if ($maybe_custom_list) {
-			$settings['list_id'] = $maybe_custom_list;
-		}
-
-		if (! $settings['list_id']) {
-			return [
-				'form_url' => $lists[0]['subscribe_url_long'],
-				'has_gdpr_fields' => $lists[0]['has_gdpr_fields'],
-				'double_optin' => $lists[0]['double_optin'],
-				'provider' => 'mailchimp'
-			];
-		}
-
-		foreach ($lists as $single_list) {
-			if ($single_list['id'] === $settings['list_id']) {
-				return [
-					'form_url' => $single_list['subscribe_url_long'],
-					'has_gdpr_fields' => $single_list['has_gdpr_fields'],
-					'double_optin' => $single_list['double_optin'],
-					'provider' => 'mailchimp'
-				];
-			}
-		}
-
-		return [
-			'form_url' => $lists[0]['subscribe_url_long'],
-			'has_gdpr_fields' => $lists[0]['has_gdpr_fields'],
-			'double_optin' => $lists[0]['double_optin'],
-			'provider' => 'mailchimp'
-		];
 	}
 
 	public function subscribe_form($args = []) {

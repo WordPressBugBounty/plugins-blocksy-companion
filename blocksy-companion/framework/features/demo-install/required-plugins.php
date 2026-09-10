@@ -96,7 +96,7 @@ class DemoInstallPluginsInstaller {
 			if (is_wp_error($plugin_activation_result)) {
 				if ($this->is_ajax_request) {
 					wp_send_json_error([
-						'message' => blocksy_safe_sprintf(
+						'message' => blocksy_companion_safe_sprintf(
 							/* translators: %s: Plugin name */
 							__('Can\'t install and activate %s plugin.', 'blocksy-companion'),
 							'<b>' . ($this->plugin_name ? $this->plugin_name : $single_plugin) . '</b>'

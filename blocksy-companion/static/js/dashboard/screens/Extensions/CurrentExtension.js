@@ -113,9 +113,9 @@ const CurrentExtension = ({
 		if (!currentExtension || !customContent.showExtension) {
 			navigate('/extensions')
 		}
-	}, [])
+	}, [currentExtension, customContent.showExtension])
 
-	if (!currentExtension) {
+	if (!currentExtension || !customContent.showExtension) {
 		return null
 	}
 

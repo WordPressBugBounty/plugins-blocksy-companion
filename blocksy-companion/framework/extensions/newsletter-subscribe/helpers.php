@@ -94,12 +94,6 @@ function blocksy_companion_ext_newsletter_subscribe_output_form($args = []) {
 	$has_name = $args['has_name'] === 'yes';
 
 	$manager = \Blocksy\Extensions\NewsletterSubscribe\Provider::get_for_settings();
-	$provider_data = $manager->get_form_url_and_gdpr_for($args['list_id']);
-
-	if (! $provider_data) {
-		return '';
-	}
-
 	$settings = $manager->get_settings();
 
 	$list_id = $settings['list_id'];
@@ -108,16 +102,7 @@ function blocksy_companion_ext_newsletter_subscribe_output_form($args = []) {
 		$list_id = $args['list_id'];
 	}
 
-	$provider_data['provider'] .= ':' . $list_id;
-
-	$form_url = $provider_data['form_url'];
-	$has_gdpr_fields = $provider_data['has_gdpr_fields'];
-
-	$additional_output = '';
-
-	if ($has_gdpr_fields) {
-		$additional_output = 'data-skip-submit';
-	}
+	$provider = $settings['provider'] . ':' . $list_id;
 
 	$fields_number = '2';
 	$gdpr_checkbox_id_suffix = substr(blocksy_rand_md5(), 0, 3);
@@ -151,10 +136,9 @@ function blocksy_companion_ext_newsletter_subscribe_output_form($args = []) {
 			</p>
 		<?php } ?>
 
-		<form target="_blank" action="<?php echo esc_attr($form_url) ?>" method="post"
-			data-provider="<?php echo esc_attr($provider_data['provider']) ?>"
-			class="ct-newsletter-subscribe-form"
-			<?php echo wp_kses_post($additional_output) ?>>
+		<form action="#" method="post"
+			data-provider="<?php echo esc_attr($provider) ?>"
+			class="ct-newsletter-subscribe-form">
 
 			<div
 				<?php

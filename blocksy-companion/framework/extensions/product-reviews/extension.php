@@ -728,15 +728,23 @@ class BlocksyExtensionProductReviews {
 		// null bytes or serialized payloads — covering every field, including
 		// ones added later. The matching output templates escape every value
 		// (esc_html / esc_attr / esc_url), so this is the storage-side guard.
-		if (function_exists('blocksy_sanitize_post_meta_options')) {
-			$values = blocksy_sanitize_post_meta_options($values);
+		$values = blocksy_companion_theme_functions()->blocksy_sanitize_post_meta_options($values);
+
+		if ($values === \Blocksy\ThemeFunctions::$NON_EXISTING_FUNCTION) {
+			return;
 		}
 
 		// product_description is the only rich-text (wp-editor) field, so the
 		// blunt pass above would have emptied it. Restore it from the raw value
 		// through the dedicated user-HTML sanitizer.
-		if ($raw_description !== null && function_exists('blocksy_sanitize_user_html')) {
-			$values['product_description'] = blocksy_sanitize_user_html($raw_description);
+		if ($raw_description !== null) {
+			$sanitized_description = blocksy_companion_theme_functions()->blocksy_sanitize_user_html($raw_description);
+
+			if ($sanitized_description === \Blocksy\ThemeFunctions::$NON_EXISTING_FUNCTION) {
+				return;
+			}
+
+			$values['product_description'] = $sanitized_description;
 		}
 
 		update_post_meta(

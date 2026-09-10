@@ -62,8 +62,10 @@ const ImagePreview = ({
 	const gradientClass = __experimentalGetGradientClass(gradient)
 
 	const blockProps = useBlockProps({
-		className: classnames('ct-dynamic-media', {
+		className: classnames({
+			'ct-dynamic-media': viewType !== 'cover',
 			[`align${imageAlign}`]: imageAlign,
+			'ct-dynamic-cover': viewType === 'cover',
 			'wp-block-cover': viewType === 'cover',
 			'has-parallax': viewType === 'cover' && hasParallax,
 			[getPositionClassName(contentPosition)]:
@@ -216,7 +218,6 @@ const ImagePreview = ({
 					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 60 60"
 					preserveAspectRatio="none"
-					className="ct-dynamic-data-placeholder-illustration"
 					aria-hidden="true"
 					focusable="false">
 					<path

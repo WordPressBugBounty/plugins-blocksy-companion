@@ -798,3 +798,15 @@ function blocksy_companion_parse_attributes_string($input) {
 
 	return $result;
 }
+
+function blocksy_companion_sanitize_html_for_display($html) {
+	$result = blocksy_companion_theme_functions()->blocksy_sanitize_html_for_display([
+		'html' => $html,
+	]);
+
+	if ($result === \Blocksy\ThemeFunctions::$NON_EXISTING_FUNCTION) {
+		return wp_kses_post($html);
+	}
+
+	return $result;
+}

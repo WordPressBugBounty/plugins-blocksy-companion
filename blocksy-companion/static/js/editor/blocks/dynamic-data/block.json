@@ -222,9 +222,9 @@
 			"radius": true,
 			"width": true,
 			"__experimentalDefaultControls": {
-				"color": true,
-				"radius": true,
-				"width": true
+				"color": false,
+				"radius": false,
+				"width": false
 			},
 			"__experimentalSelector": "img, .block-editor-media-placeholder, .wp-block-post-featured-image__overlay",
 			"__experimentalSkipSerialization": true
@@ -240,7 +240,7 @@
 			"__experimentalLetterSpacing": true,
 			"__experimentalTextTransform": true,
 			"__experimentalDefaultControls": {
-				"fontSize": true
+				"fontSize": false
 			}
 		}
 	},

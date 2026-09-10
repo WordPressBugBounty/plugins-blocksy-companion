@@ -1391,7 +1391,7 @@ msgstr "Doar pentru Utilizatori Autentificați"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:70
 msgid "Display the waitlist feature exclusively to users who are logged in."
-msgstr "Afișează funcția de listă de așteptare exclusiv utilizatorilor care sunt autentificați."
+msgstr "Afișează func��ia de listă de așteptare exclusiv utilizatorilor care sunt autentificați."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:83
 msgid "Subscription Confirmation"

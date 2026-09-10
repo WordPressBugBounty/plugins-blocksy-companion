@@ -14,7 +14,7 @@ $has_fallback = false;
 
 if (empty($value) && ! empty($value_fallback)) {
 	$has_fallback = true;
-	$value = do_shortcode($value_fallback);
+	$value = do_shortcode(blocksy_companion_sanitize_html_for_display($value_fallback));
 }
 
 if (
@@ -25,8 +25,8 @@ if (
 	return;
 }
 
-$value_after = blocksy_companion_akg('after', $attributes, '');
-$value_before = blocksy_companion_akg('before', $attributes, '');
+$value_after = blocksy_companion_sanitize_html_for_display(blocksy_companion_akg('after', $attributes, ''));
+$value_before = blocksy_companion_sanitize_html_for_display(blocksy_companion_akg('before', $attributes, ''));
 
 $has_field_link = blocksy_companion_akg('has_field_link', $attributes, 'no');
 $has_field_link_wrap_content = blocksy_companion_akg('has_field_link_wrap_content', $attributes, 'no');

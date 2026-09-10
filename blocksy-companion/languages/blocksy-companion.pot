@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-03 17:30+0000\n"
+"POT-Creation-Date: 2026-09-10 17:43+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -227,46 +227,46 @@ msgid "An unexpected error occurred. Please try again later."
 msgstr ""
 
 #. translators: %s is the error message.
-#: framework/features/account-auth.php:106
+#: framework/features/account-auth.php:117
 msgid "<strong>Error</strong>: %s"
 msgstr ""
 
 #. translators: 1: link open 2: link close
-#: framework/features/account-auth.php:125
+#: framework/features/account-auth.php:136
 msgid ""
 "Check your email for the confirmation link, then visit the %1$slogin "
 "page%2$s."
 msgstr ""
 
-#: framework/features/account-auth.php:138,
-#: framework/features/account-auth.php:298
+#: framework/features/account-auth.php:149,
+#: framework/features/account-auth.php:307
 msgid "Check your email"
 msgstr ""
 
 #. translators: 1: link open 2: link close
-#: framework/features/account-auth.php:284
+#: framework/features/account-auth.php:293
 msgid ""
 "Registration complete. Please check your email, then visit the %1$slogin "
 "page%2$s."
 msgstr ""
 
-#: framework/features/account-auth.php:258
+#: framework/features/account-auth.php:267
 msgid ""
 "Your account was created successfully. Your login details have been sent to "
 "your email address. Please visit the %1$slogin page%2$s."
 msgstr ""
 
-#: framework/features/account-auth.php:269
+#: framework/features/account-auth.php:278
 msgid ""
 "Your account was created successfully and a password has been sent to your "
 "email address. Please visit the %1$slogin page%2$s."
 msgstr ""
 
-#: framework/features/account-auth.php:304
+#: framework/features/account-auth.php:313
 msgid "Registration Form"
 msgstr ""
 
-#: framework/features/account-auth.php:305
+#: framework/features/account-auth.php:314
 msgid "Register For This Site"
 msgstr ""
 
@@ -356,11 +356,11 @@ msgstr ""
 msgid "X (Twitter) Username"
 msgstr ""
 
-#: framework/features/svg.php:42
+#: framework/features/svg.php:56
 msgid "This file does not appear to be a valid SVG file."
 msgstr ""
 
-#: framework/features/svg.php:51
+#: framework/features/svg.php:65
 msgid "SVG files cannot contain PHP code."
 msgstr ""
 
@@ -1530,11 +1530,11 @@ msgid "Name Label"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/customizer.php:123,
-#: framework/extensions/newsletter-subscribe/extension.php:210,
+#: framework/extensions/newsletter-subscribe/extension.php:208,
 #: framework/extensions/newsletter-subscribe/helpers.php:41,
 #: framework/extensions/newsletter-subscribe/helpers.php:85,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:127,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:184
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:174
 msgid "Your name"
 msgstr ""
 
@@ -1544,7 +1544,7 @@ msgid "Mail Label"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/customizer.php:134,
-#: framework/extensions/newsletter-subscribe/extension.php:211,
+#: framework/extensions/newsletter-subscribe/extension.php:209,
 #: framework/extensions/newsletter-subscribe/helpers.php:45,
 #: framework/extensions/newsletter-subscribe/helpers.php:86
 msgid "Your email"
@@ -1557,7 +1557,7 @@ msgid "Button Label"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/customizer.php:143,
-#: framework/extensions/newsletter-subscribe/extension.php:205,
+#: framework/extensions/newsletter-subscribe/extension.php:203,
 #: framework/extensions/newsletter-subscribe/helpers.php:35,
 #: framework/extensions/newsletter-subscribe/helpers.php:80,
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:148,
@@ -1862,7 +1862,7 @@ msgstr ""
 msgid "Container Border Radius"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/extension.php:157
+#: framework/extensions/newsletter-subscribe/extension.php:155
 msgid "Disable Subscribe Form"
 msgstr ""
 
@@ -1870,13 +1870,13 @@ msgstr ""
 msgid "Enter your email address below to subscribe to our newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:184
+#: framework/extensions/newsletter-subscribe/helpers.php:168
 msgid "First name"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/helpers.php:189,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:303,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:304
+#: framework/extensions/newsletter-subscribe/helpers.php:173,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:286,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:287
 msgid "Email address"
 msgstr ""
 
@@ -2260,7 +2260,7 @@ msgstr ""
 #: framework/extensions/trending/customizer.php:46
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:197
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/TaxonomySelector.js:23
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:503
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:506
 #: static/js/editor/blocks/tax-query/Edit.js:157
 msgid "Taxonomy"
 msgstr ""
@@ -3216,7 +3216,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/header-items/wish-list/options.php:570
 #: static/js/editor/blocks/breadcrumbs/Edit.js:62
 #: static/js/editor/blocks/contact-info/Edit.js:107
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:276
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:278
 msgid "Text"
 msgstr ""
 
@@ -3260,7 +3260,7 @@ msgid "Fields Gap"
 msgstr ""
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:142,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:189
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:179
 msgid "Your email *"
 msgstr ""
 
@@ -3269,12 +3269,12 @@ msgstr ""
 msgid "Newsletter"
 msgstr ""
 
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:293,
-#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:294,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:276,
+#: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/view.php:277,
 #: framework/features/blocks/about-me/options.php:73,
 #: framework/features/header/items/account/options.php:615,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:253,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:206
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:207
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:135
 msgid "Name"
 msgstr ""
@@ -3331,9 +3331,9 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:147,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:244,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:252,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:205,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:205
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:533
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:206,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:206
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:536
 msgid "Image"
 msgstr ""
 
@@ -3485,7 +3485,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/contacts/options.php:455,
 #: framework/premium/features/premium-header/items/content-block/options.php:30
 #: framework/premium/static/js/blocks/ContentBlock.js:58
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:618
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:621
 msgid "None"
 msgstr ""
 
@@ -3513,7 +3513,7 @@ msgstr ""
 msgid "Solid"
 msgstr ""
 
-#: framework/features/blocks/about-me/view.php:213
+#: framework/features/blocks/about-me/view.php:217
 msgid "View Profile"
 msgstr ""
 
@@ -3593,7 +3593,7 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:75,
 #: framework/premium/extensions/shortcuts/customizer.php:101,
 #: framework/premium/extensions/shortcuts/customizer.php:807,
-#: framework/premium/extensions/shortcuts/extension.php:194,
+#: framework/premium/extensions/shortcuts/extension.php:200,
 #: framework/premium/extensions/shortcuts/views/bar.php:26,
 #: framework/premium/extensions/shortcuts/views/bar.php:51,
 #: framework/premium/features/premium-header/items/contacts/options.php:131
@@ -3627,7 +3627,7 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:166,
 #: framework/premium/extensions/shortcuts/views/bar.php:52,
 #: framework/premium/features/premium-header/items/contacts/options.php:312,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:207
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:208
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderOverview.js:23
 msgid "Email"
 msgstr ""
@@ -3788,12 +3788,12 @@ msgid "Link to archive page"
 msgstr ""
 
 #: framework/features/blocks/dynamic-data/options.php:247
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:447
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:450
 msgid "Open in new tab"
 msgstr ""
 
 #: framework/features/blocks/dynamic-data/options.php:253
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:457
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:460
 msgid "Link Rel"
 msgstr ""
 
@@ -3802,7 +3802,7 @@ msgstr ""
 msgid "Terms accent color"
 msgstr ""
 
-#: framework/features/blocks/query/block.php:839
+#: framework/features/blocks/query/block.php:840
 msgid "No posts found."
 msgstr ""
 
@@ -4258,7 +4258,7 @@ msgstr ""
 msgid "Menu Item Settings"
 msgstr ""
 
-#: framework/premium/extensions/mega-menu/extension.php:387
+#: framework/premium/extensions/mega-menu/extension.php:416
 msgid "New"
 msgstr ""
 
@@ -4429,7 +4429,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/contacts/options.php:730
 #: static/js/editor/blocks/breadcrumbs/Edit.js:74
 #: static/js/editor/blocks/contact-info/Edit.js:123
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:265
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:266
 msgid "Link Hover"
 msgstr ""
 
@@ -4514,7 +4514,7 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:16,
 #: framework/premium/extensions/shortcuts/customizer.php:42,
 #: framework/premium/extensions/shortcuts/customizer.php:798,
-#: framework/premium/extensions/shortcuts/extension.php:185,
+#: framework/premium/extensions/shortcuts/extension.php:191,
 #: framework/premium/extensions/shortcuts/views/bar.php:17,
 #: framework/premium/extensions/shortcuts/views/bar.php:50
 msgid "Home"
@@ -5205,7 +5205,7 @@ msgstr ""
 
 #: framework/premium/features/content-blocks/hooks-manager.php:425,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:377
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:722
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:725
 msgid "Before"
 msgstr ""
 
@@ -5216,7 +5216,7 @@ msgstr ""
 
 #: framework/premium/features/content-blocks/hooks-manager.php:432,
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:388
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:731
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:734
 msgid "After"
 msgstr ""
 
@@ -5812,7 +5812,7 @@ msgstr ""
 #: framework/premium/features/media-video/options.php:140
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/RenderOptions.js:129
 #: static/js/editor/blocks/dynamic-data/components/Dimensions.js:194
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:488
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:491
 msgid "Cover"
 msgstr ""
 
@@ -5823,7 +5823,7 @@ msgid ""
 "found %1$shere%2$s."
 msgstr ""
 
-#: framework/premium/features/media-video/video-import-export.php:117
+#: framework/premium/features/media-video/video-import-export.php:115
 msgid "Blocksy Images Metadata"
 msgstr ""
 
@@ -6976,7 +6976,7 @@ msgid "Label"
 msgstr ""
 
 #: framework/premium/extensions/post-types-extra/features/dynamic-data/feature.php:400
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:743
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:746
 msgid "Fallback"
 msgstr ""
 
@@ -7048,7 +7048,7 @@ msgstr ""
 msgid "Button Padding"
 msgstr ""
 
-#: framework/premium/extensions/post-types-extra/features/filtering/helpers.php:221,
+#: framework/premium/extensions/post-types-extra/features/filtering/helpers.php:220,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:300,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/feature.php:921,
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/options/status.php:52
@@ -7145,7 +7145,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:63,
 #: framework/premium/extensions/woocommerce-extra/features/cart-suggested-products/options/generic.php:196,
 #: framework/premium/extensions/woocommerce-extra/features/compare/views/table.php:320,
-#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:336,
+#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:353,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:255,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:57,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-confirm-subscription.php:38,
@@ -7414,7 +7414,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:482,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:538,
 #: framework/premium/extensions/woocommerce-extra/features/brands/feature.php:589
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:681
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:684
 msgid "Logo Size"
 msgstr ""
 
@@ -8487,7 +8487,7 @@ msgid "Dual Color"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/woo-tab-options.php:32
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:814
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:817
 msgid "Colors"
 msgstr ""
 
@@ -8687,15 +8687,15 @@ msgstr ""
 msgid "Main Color"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:251
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:238
 msgid "Shipping Cost"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:260
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:247
 msgid "Tax Amount"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:269
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:256
 msgid "Cart Total"
 msgstr ""
 
@@ -8792,15 +8792,15 @@ msgstr ""
 msgid "Payment method:"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:151
+#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:168
 msgid "Minimum:"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:183
+#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:200
 msgid "Maximum:"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:296,
+#: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/price.php:313,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:18
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/price-filter/Preview.js:48
@@ -8866,7 +8866,7 @@ msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/status.php:229,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:256,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:212
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:213
 msgid "Status"
 msgstr ""
 
@@ -9088,7 +9088,7 @@ msgid "Edit this item"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:97,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:89
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:90
 msgid "Edit"
 msgstr ""
 
@@ -9122,49 +9122,49 @@ msgid "Stock"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:267,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:129,
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:234
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:130,
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:235
 msgid "Delete"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:16
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:17
 msgid "Export Subscribers"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:76
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:77
 msgid "Guest"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:88
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:89
 msgid "Edit this customer"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:137
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:138
 msgid "View"
 msgstr ""
 
 #. translators: %s is the human readable time difference
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:173
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:174
 msgid "%s ago"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:191
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:192
 msgid "Pending"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:197
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:198
 msgid "Failed to send"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:217
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:218
 msgid "Is registered"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:219
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:220
 msgid "Date created"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:237
+#: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:238
 msgid "Retry Send"
 msgstr ""
 
@@ -9606,7 +9606,7 @@ msgstr ""
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:475
 #: framework/extensions/product-reviews/static/js/ProductReviews.js:96
-#: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:291
+#: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:292
 #: framework/premium/extensions/sidebars/static/js/SettingsManager.js:112
 #: framework/premium/extensions/white-label/dashboard-static/js/EditSettings.js:810
 #: framework/premium/static/js/footer/EditConditions.js:153
@@ -9823,7 +9823,7 @@ msgstr ""
 msgid "Save Font"
 msgstr ""
 
-#: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:200
+#: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:201
 msgid "Item Settings"
 msgstr ""
 
@@ -10489,6 +10489,10 @@ msgstr ""
 msgid ""
 "Please select the type of your content block and place it in the location "
 "you want based on your display and user conditions."
+msgstr ""
+
+#: framework/premium/static/js/media-video/components/EditVideoButton.js:78
+msgid "Edit video"
 msgstr ""
 
 #: framework/premium/static/js/media-video/components/EditVideoMeta.js:45
@@ -11261,91 +11265,91 @@ msgstr ""
 msgid "3:2"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:286
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:289
 msgid "Overlay"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:382
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:385
 msgid "Content Source"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:401
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:404
 msgid "Show archive label"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:414
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:417
 msgid "Enable field link"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:424
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:427
 msgid "Link Source"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:430
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:433
 msgid "Search for field"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:475
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:478
 msgid "View Type"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:524
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:527
 msgid "Image Source"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:537
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:540
 msgid "Icon/Logo"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:576
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:579
 msgid "Expand on click"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:589
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:592
 msgid "Video thumbnail"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:600
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:603
 msgid "Show Caption"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:608
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:611
 msgid "Image Hover Effect"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:622
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:625
 msgid "Zoom In"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:626
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:629
 msgid "Zoom Out"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:662
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:665
 msgid "Image size"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:695
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:698
 msgid "Logo Gap"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:747
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:750
 msgid "Custom field fallback"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:761
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:764
 msgid "Include Before/After in link"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:848
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:851
 msgid "Overlay opacity"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:870
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:873
 msgid "Term additional class"
 msgstr ""
 
-#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:877
+#: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:880
 msgid "Additional class for term items. Useful for styling."
 msgstr ""
 

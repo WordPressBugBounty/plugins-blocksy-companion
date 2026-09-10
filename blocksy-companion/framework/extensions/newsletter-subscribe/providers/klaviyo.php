@@ -75,42 +75,6 @@ class KlaviyoProvider extends Provider {
 		}, $response['body']['data']);
 	}
 
-	public function get_form_url_and_gdpr_for($maybe_custom_list = null) {
-		$settings = $this->get_settings();
-
-		if (! isset($settings['api_key']) || ! $settings['api_key']) {
-			return false;
-		}
-
-		$lists = $this->fetch_lists($settings['api_key']);
-
-		if (! is_array($lists) || empty($lists)) {
-			return false;
-		}
-
-		if ($maybe_custom_list) {
-			$settings['list_id'] = $maybe_custom_list;
-		}
-
-		$selected_list = $lists[0];
-
-		if (! empty($settings['list_id'])) {
-			foreach ($lists as $single_list) {
-				if ($single_list['id'] === $settings['list_id']) {
-					$selected_list = $single_list;
-					break;
-				}
-			}
-		}
-
-		return [
-			'form_url' => '#',
-			'has_gdpr_fields' => false,
-			'double_optin' => isset($selected_list['double_optin']) ? $selected_list['double_optin'] : false,
-			'provider' => 'klaviyo'
-		];
-	}
-
 	public function subscribe_form($args = []) {
 		$args = wp_parse_args($args, [
 			'email' => '',

@@ -86,7 +86,7 @@ $options = [
 								'type' => 'text',
 								'label' => __('Custom date format', 'blocksy-companion'),
 								'value' => 'F j, Y',
-								'desc' => blocksy_safe_sprintf(
+								'desc' => blocksy_companion_safe_sprintf(
 									'%s <a href="%s" target="_blank">format string</a>',
 									__('Enter a date or time', 'blocksy-companion'),
 									'https://wordpress.org/documentation/article/customize-date-and-time-format/'

@@ -120,16 +120,6 @@ class MailerliteNewProvider extends Provider {
 		return $is_enabled;
 	}
 
-	private function is_double_optin_enabled($settings) {
-		$detected = false;
-
-		if (isset($settings['api_key']) && $settings['api_key']) {
-			$detected = $this->fetch_double_optin_status($settings['api_key']);
-		}
-
-		return $detected;
-	}
-
 	public function fetch_lists($api_key, $api_url = '') {
 		if (! $api_key) {
 			return 'api_key_invalid';
@@ -145,9 +135,7 @@ class MailerliteNewProvider extends Provider {
 			return 'api_key_invalid';
 		}
 
-		$double_optin = $this->is_double_optin_enabled([
-			'api_key' => $api_key,
-		]);
+		$double_optin = $this->fetch_double_optin_status($api_key);
 
 		return array_map(function($list) use ($double_optin) {
 			return [
@@ -156,17 +144,6 @@ class MailerliteNewProvider extends Provider {
 				'double_optin' => $double_optin,
 			];
 		}, $response['body']['data']);
-	}
-
-	public function get_form_url_and_gdpr_for($maybe_custom_list = null) {
-		$settings = $this->get_settings();
-
-		return [
-			'form_url' => '#',
-			'has_gdpr_fields' => false,
-			'double_optin' => $this->is_double_optin_enabled($settings),
-			'provider' => 'mailerlite'
-		];
 	}
 
 	public function subscribe_form($args = []) {
@@ -189,7 +166,7 @@ class MailerliteNewProvider extends Provider {
 			]
 		];
 
-		if ($args['double_optin'] || $this->is_double_optin_enabled($settings)) {
+		if ($args['double_optin']) {
 			$payload['status'] = 'unconfirmed';
 		}
 

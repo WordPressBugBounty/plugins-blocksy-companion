@@ -160,23 +160,13 @@ if (
 
 $manager = \Blocksy\Extensions\NewsletterSubscribe\Provider::get_for_settings();
 
-// Button value
-$provider_data = $manager->get_form_url_and_gdpr_for($list_id);
-
-if (! $provider_data) {
-	return;
-}
-
 $settings = $manager->get_settings();
 
 if (! $list_id) {
 	$list_id = $settings['list_id'];
 }
 
-$provider_data['provider'] .= ':' . $list_id;
-
-$form_url = $provider_data['form_url'];
-$has_gdpr_fields = $provider_data['has_gdpr_fields'];
+$provider = $settings['provider'] . ':' . $list_id;
 
 $name_label = blocksy_companion_akg(
 	'newsletter_subscribe_name_label',
@@ -205,11 +195,10 @@ if ($has_name) {
 echo '<div class="ct-newsletter-subscribe-block">';
 
 $form_attrs = [
-	'action' => esc_attr($form_url),
+	'action' => '#',
 	'method' => 'post',
-	'target' => '_blank',
 	'class' => 'ct-newsletter-subscribe-form',
-	'data-provider' => $provider_data['provider'],
+	'data-provider' => $provider,
 ];
 
 $container_type = blocksy_companion_akg(
@@ -229,12 +218,6 @@ $container_atts = [
 
 if ($view_type === 'inline') {
 	$container_atts['data-columns'] = $fields_number;
-}
-
-$skip_submit_output = '';
-
-if ($has_gdpr_fields) {
-	$form_attrs['data-skip-submit'] = '';
 }
 
 if (! empty($style) || ! empty($colors_css)) {

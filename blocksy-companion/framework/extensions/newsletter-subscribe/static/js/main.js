@@ -18,6 +18,13 @@ const submitAjax = (form) => {
 		.then(({ data }) => {
 			form.classList.remove('subscribe-loading')
 
+			if (data && data.form_url) {
+				form.action = data.form_url
+				form.dynamicJsChunkStop()
+				form.requestSubmit()
+				return
+			}
+
 			if (!data || !data.message) {
 				form.classList.add('subscribe-error')
 				return

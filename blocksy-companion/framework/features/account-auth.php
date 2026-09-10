@@ -60,6 +60,19 @@ class AccountAuth {
 		});
 	}
 
+	// Avoids "Undefined variable" PHP warnings for $error/$user_login,
+	// which wp-login.php's inline code expects to already be set.
+	private function require_wp_login() {
+		ob_start();
+
+		$error = '';
+		$user_login = '';
+
+		require_once ABSPATH . 'wp-login.php';
+
+		return ob_get_clean();
+	}
+
 	public function implement_user_lostpassword() {
 		/**
 		 * Fires before the account modal handles a lost password request.
@@ -68,9 +81,7 @@ class AccountAuth {
 		 */
 		do_action('blocksy:account:user-flow:before-lostpassword');
 
-		ob_start();
-		require_once ABSPATH . 'wp-login.php';
-		$res = ob_get_clean();
+		$this->require_wp_login();
 
 		$errors = [];
 		$success = false;
@@ -171,9 +182,7 @@ class AccountAuth {
 		 */
 		do_action('blocksy:account:user-flow:before-registration');
 
-		ob_start();
-		require_once ABSPATH . 'wp-login.php';
-		$res = ob_get_clean();
+		$this->require_wp_login();
 
 		$_POST['woocommerce-register-nonce'] = '~';
 		add_filter('dokan_register_nonce_check', '__return_false');
@@ -350,9 +359,7 @@ class AccountAuth {
 			3
 		);
 
-		ob_start();
-		require_once ABSPATH . 'wp-login.php';
-		$html = ob_get_clean();
+		$html = $this->require_wp_login();
 
 		wp_send_json_success([
 			'html' => $html,

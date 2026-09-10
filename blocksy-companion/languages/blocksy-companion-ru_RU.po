@@ -729,7 +729,7 @@ msgstr "Вложенные блоки используют ширину соде
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:156
 msgid "Nested blocks will fill the width of this container. Toggle to constrain."
-msgstr "Вложенные блоки будут заним��ть всю ширину этого контейнера. Включите, чтобы ограничить."
+msgstr "Вложенные блоки будут занимать всю ширину этого контейнера. Включите, чтобы ограничить."
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:165
 msgid "Content width"
@@ -1576,7 +1576,7 @@ msgstr "Предзаказ подтверждён"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/subscription-confirmed.php:11
 msgid "You will be notified when {product_title} is back in stock"
-msgstr "Вы будете уведом��ены, когда {product_title} снова появится на складе."
+msgstr "Вы будете уведомлены, когда {product_title} снова появится на складе."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:56,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/emails/waitlist-email.php:192
@@ -1688,7 +1688,7 @@ msgstr "отписаться"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
 msgid "You have been successfully added to the waitlist for the following item:"
-msgstr "Вы добавлены в с��исок ожидания следующего товара:"
+msgstr "Вы добавлены в список ожидания следующего товара:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
@@ -1755,7 +1755,7 @@ msgstr "Длина описания"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:115
 msgid "Cart Button"
-msgstr "Кнопка к��рзины"
+msgstr "Кнопка корзины"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:125
 msgid "Checkout Button"
@@ -1846,7 +1846,7 @@ msgstr "Оформление"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/product-actions.php:44
 msgid "Continue Shopping"
-msgstr "Продолжить по��упки"
+msgstr "Продолжить покупки"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:424
 msgid "More information on how to create a list in MailPoet can be found %shere%s."
@@ -3571,7 +3571,7 @@ msgstr "Формат"
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/index.js:103
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:187
 msgid "List"
-msgstr "С��исок"
+msgstr "Список"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:220
 msgid "Multiple Selections"
@@ -4541,7 +4541,7 @@ msgstr "Заголовок партнёрской ссылки"
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:57,
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:90
 msgid "Open Button Link In New Tab"
-msgstr "Открывать кнопкой новую вкладку"
+msgstr "Открывать кноп��ой новую вкладку"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-page/options.php:14
 msgid "Quantity Auto Update"
@@ -8350,7 +8350,7 @@ msgstr "Страница списка желаний"
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:46
 msgid "The page you select here will display the wish list for your logged out users."
-msgstr " На странице, которую вы выберете здесь, будет отображаться список желаний для невошедших в систему пользователей."
+msgstr " На ��транице, которую вы выберете здесь, будет отображаться список желаний для невошедших в систему пользователей."
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:25
 msgid "Archive Page"

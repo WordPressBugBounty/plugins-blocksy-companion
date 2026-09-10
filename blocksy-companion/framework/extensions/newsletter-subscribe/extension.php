@@ -117,9 +117,7 @@ class BlocksyExtensionNewsletterSubscribe {
 		add_filter('blocksy:frontend:dynamic-js-chunks', function ($chunks) {
 			$chunks[] = [
 				'id' => 'blocksy_ext_newsletter_subscribe',
-				'selector' => implode(', ', [
-					'.ct-newsletter-subscribe-form:not([data-skip-submit])',
-				]),
+				'selector' => '.ct-newsletter-subscribe-form',
 				'url' => blocksy_cdn_url(
 					BLOCKSY_URL .
 						'framework/extensions/newsletter-subscribe/static/bundle/main.js'
@@ -392,6 +390,18 @@ class BlocksyExtensionNewsletterSubscribe {
 
 		if (! $list) {
 			wp_send_json_error($error_response);
+		}
+
+		if (! empty($list['has_gdpr_fields'])) {
+			$form_url = isset($list['subscribe_url_long']) ? esc_url_raw($list['subscribe_url_long']) : '';
+
+			if (! $form_url) {
+				wp_send_json_error($error_response);
+			}
+
+			wp_send_json_success([
+				'form_url' => $form_url,
+			]);
 		}
 
 		$result = $manager->subscribe_form([

@@ -42,55 +42,6 @@ class EmailOctopusProvider extends Provider {
 		}
 	}
 
-	public function get_form_url_and_gdpr_for($maybe_custom_list = null) {
-		$settings = $this->get_settings();
-
-		if (
-			! isset($settings['api_key'])
-			||
-			empty($settings['api_key'])
-		) {
-			return false;
-		}
-
-		$lists = $this->fetch_lists($settings['api_key']);
-		
-		if (
-			! is_array($lists)
-			||
-			empty($lists)
-		) {
-			return false;
-		}
-
-		if ($maybe_custom_list) {
-			$settings['list_id'] = $maybe_custom_list;
-		}
-
-		$base_config = [
-			'form_url' => '#',
-			'has_gdpr_fields' => false,
-			'double_optin' => false,
-			'provider' => 'emailoctopus',
-		];
-
-		if (! $settings['list_id']) {
-			$base_config['double_optin'] = $lists[0]['double_optin'];
-
-			return $base_config;
-		}
-
-		foreach ($lists as $single_list) {
-			if ($single_list['id'] === $settings['list_id']) {
-				$base_config['double_optin'] = $single_list['double_optin'];
-
-				return $base_config;
-			}
-		}
-
-		return $base_config;
-	}
-
 	public function subscribe_form($args = []) {
 		$args = wp_parse_args($args, [
 			'email' => '',
