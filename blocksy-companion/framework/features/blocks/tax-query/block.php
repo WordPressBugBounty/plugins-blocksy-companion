@@ -347,7 +347,13 @@ class TaxQuery {
 							'include' => [$term_obj->term_id]
 						]);
 
-						$term_obj->count = $all_terms[0]->count;
+						if (
+							! is_wp_error($all_terms)
+							&&
+							! empty($all_terms[0])
+						) {
+							$term_obj->count = $all_terms[0]->count;
+						}
 
 						$block_instance = $block->parsed_block;
 

@@ -237,14 +237,18 @@ foreach ($button_colors as $key => $value) {
 					$atts,
 					'no'
 				) === 'yes',
-				'search_placeholder' => blocksy_companion_akg(
-					'search_box_placeholder',
-					$atts,
-					__('Search', 'blocksy-companion')
+				'search_placeholder' => esc_attr(
+					blocksy_companion_akg(
+						'search_box_placeholder',
+						$atts,
+						__('Search', 'blocksy-companion')
+					)
 				),
 				'has_taxonomy_filter' => blocksy_companion_akg('has_taxonomy_filter', $atts, 'no') === 'yes',
 				'has_taxonomy_children' => blocksy_companion_akg('has_taxonomy_children', $atts, 'no') === 'yes',
-				'taxonomy_filter_label' => blocksy_companion_akg('taxonomy_filter_label', $atts, __('Select Category', 'blocksy-companion')),
+				'taxonomy_filter_label' => sanitize_text_field(
+					blocksy_companion_akg('taxonomy_filter_label', $atts, __('Select Category', 'blocksy-companion'))
+				),
 				'search_through_taxonomy' => blocksy_companion_akg('search_through_taxonomy', $atts, 'no'),
 				'taxonomy_filter_visibility' => blocksy_companion_akg(
 					'taxonomy_filter_visibility',

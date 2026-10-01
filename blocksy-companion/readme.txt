@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.57
+Stable tag: 2.1.58
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,19 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.58: 2026-10-01
+- Improvement: Account header element - add support for the WP 2FA plugin by Melapress
+- Improvement: Account header element - prevent the login modal from freezing after anchor scrolling
+- Improvement: Account modal - make sure registration and lost password forms work on cached pages and properly display errors
+- Improvement: Advanced Taxonomies block - preserve term counts when third-party filters exclude terms
+- Improvement: Breadcrumbs - properly sanitize custom CSS classes and color values in the Breadcrumbs block
+- Improvement: Header Builder - properly escape custom element labels and text in the header and Account element
+- Improvement: SVG uploads - make sure SVG files are cleaned on every upload method, including XML-RPC and imports
+- Improvement: SVG uploads - sanitize SVG files uploaded through the REST API and SVG icons rendered inline
+- Improvement: Search - correctly display custom placeholders and category filter labels that contain quotes or special characters
+- Fix: Google Analytics - validate the GA4 measurement ID format before saving and output
+- Fix: Logo elements - correctly display SVG logos with embedded images when the “Inline SVG File” option is enabled
+
 2.1.57: 2026-09-10
 - Improvement: Account header element - improve reliability of login, registration, and password reset forms
 - Improvement: Advanced Posts block - improve link accessibility when the “Link to post” option is enabled

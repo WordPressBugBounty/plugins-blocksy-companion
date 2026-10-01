@@ -11,6 +11,7 @@ import { __ } from 'ct-i18n'
 import useActivationAction from '../../helpers/useActivationAction'
 
 import { applyFilters } from '@wordpress/hooks'
+import FiltersCrawlNotice from '../../../../../framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice'
 
 const CurrentExtension = ({
 	navigate,
@@ -19,6 +20,7 @@ const CurrentExtension = ({
 	setExtsStatus,
 }) => {
 	const [hasCustomContent, setHasCustomContent] = useState(false)
+	const [hasFiltersCrawlNotice, setHasFiltersCrawlNotice] = useState(false)
 
 	const [isLoading, activationAction, activationContent] =
 		useActivationAction(currentExtension)
@@ -197,7 +199,12 @@ const CurrentExtension = ({
 					<div className="ct-extension-modules">
 						{currentExtension.config.features.map((feature) => (
 							<div
-								className="ct-extension-module"
+								className={classnames('ct-extension-module', {
+									'ct-extension-warning':
+										currentExtension.name === 'woocommerce-extra' &&
+										feature.id === 'filters' &&
+										hasFiltersCrawlNotice,
+								})}
 								key={feature.id}>
 								<h5>
 									{feature.title}
@@ -289,6 +296,15 @@ const CurrentExtension = ({
 								</h5>
 
 								<p>{feature.description}</p>
+
+								{currentExtension.name === 'woocommerce-extra' &&
+									feature.id === 'filters' &&
+									currentExtension.data?.settings.features.filters && (
+										<FiltersCrawlNotice
+											data={currentExtension.data}
+											onVisibilityChange={setHasFiltersCrawlNotice}
+										/>
+									)}
 
 								{(feature.documentation &&
 									!ctDashboardLocalizations.plugin_data

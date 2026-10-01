@@ -55,12 +55,12 @@ class Subject
      * @param array $subjects   Previously processed subjects
      * @param int   $level      The current level of nesting.
      * @return bool
-     * @throws \enshrined\svgSanitize\Exceptions\NestingException
+     * @throws \blocksy\enshrined\svgSanitize\Exceptions\NestingException
      */
     public function hasInfiniteLoop(array $subjects = [], $level = 1)
     {
         if ($level > $this->useNestingLimit) {
-            throw new \enshrined\svgSanitize\Exceptions\NestingException('Nesting level too high, aborting', 1570713498, null, $this->getElement());
+            throw new \blocksy\enshrined\svgSanitize\Exceptions\NestingException('Nesting level too high, aborting', 1570713498, null, $this->getElement());
         }
 
         if (in_array($this, $subjects, true)) {

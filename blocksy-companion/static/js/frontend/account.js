@@ -2,6 +2,7 @@ import ctEvents from 'ct-events'
 import { formPreSubmitHook } from './account/hooks'
 import { resetCaptchaFor, reCreateCaptchaFor } from './account/captcha'
 import { mountPasswordStrength } from './account/password-strength'
+import { readAccountResponse } from './account/response'
 
 import { maybeHandleLoginForm } from './account/handlers/login'
 
@@ -242,14 +243,25 @@ export const handleAccountModal = (el) => {
 						body: new FormData(maybeRegister)
 					}
 				)
-					.then((response) => response.text())
-					.then((html) => {
+					.then(readAccountResponse)
+					.then(({ rejected, html }) => {
+						maybeCleanupLoadingState(maybeRegister)
+
+						if (rejected) {
+							actuallyInsertError(
+								maybeRegister.closest('.ct-register-form'),
+								ct_localizations.login_generic_error_msg
+							)
+
+							ctEvents.trigger('blocksy:account:register:error')
+
+							return
+						}
+
 						const { doc, hasError } = maybeAddErrors(
 							maybeRegister.closest('.ct-register-form'),
 							html
 						)
-
-						maybeCleanupLoadingState(maybeRegister)
 
 						if (!hasError) {
 							maybeAddMessage(
@@ -323,14 +335,25 @@ export const handleAccountModal = (el) => {
 					body: new FormData(maybeLostPassword)
 				}
 			)
-				.then((response) => response.text())
-				.then((html) => {
+				.then(readAccountResponse)
+				.then(({ rejected, html }) => {
+					maybeCleanupLoadingState(maybeLostPassword)
+
+					if (rejected) {
+						actuallyInsertError(
+							maybeLostPassword.closest(
+								'.ct-forgot-password-form'
+							),
+							ct_localizations.login_generic_error_msg
+						)
+
+						return
+					}
+
 					const { doc, hasError } = maybeAddErrors(
 						maybeLostPassword.closest('.ct-forgot-password-form'),
 						html
 					)
-
-					maybeCleanupLoadingState(maybeLostPassword)
 
 					if (!hasError) {
 						maybeAddMessage(

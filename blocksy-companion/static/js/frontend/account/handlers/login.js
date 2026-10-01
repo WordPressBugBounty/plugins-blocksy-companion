@@ -137,7 +137,11 @@ export const maybeHandleLoginForm = (el) => {
 								)
 									.then((response) => response.json())
 									.then(({ data: { html, redirect_to } }) => {
-										location = redirect_to
+										if (redirect_to === location.href) {
+											location.reload()
+										} else {
+											location = redirect_to
+										}
 									})
 							}
 
@@ -238,6 +242,7 @@ export const maybeHandleLoginForm = (el) => {
 						)
 
 						if (
+							!maybeMountTwoFactorForm(maybeLogin, doc) &&
 							!maybeMountKadenceInterstitialForm(maybeLogin, doc)
 						) {
 							location.reload()
@@ -260,7 +265,11 @@ export const maybeHandleLoginForm = (el) => {
 					if (!hasError) {
 						if (!maybeMountTwoFactorForm(maybeLogin, doc)) {
 							setTimeout(() => {
-								location = redirect_to
+								if (redirect_to === location.href) {
+									location.reload()
+								} else {
+									location = redirect_to
+								}
 							}, 2000)
 						}
 					} else {

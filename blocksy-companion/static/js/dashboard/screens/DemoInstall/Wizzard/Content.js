@@ -79,12 +79,15 @@ const Content = ({
 								})
 							}
 							key={option}>
-							{option
-								.split('_')
-								.map((w) =>
-									w.replace(/^\w/, (c) => c.toUpperCase())
-								)
-								.join(' ')}
+							<span className="ct-label">
+								{
+									{
+										options: __('Theme settings', 'blocksy-companion'),
+										widgets: __('Widgets', 'blocksy-companion'),
+										content: __('Content', 'blocksy-companion'),
+									}[option]
+								}
+							</span>
 						</Checkbox>
 					))}
 
@@ -103,7 +106,9 @@ const Content = ({
 							})
 						}>
 						<div>
-							{__('Clean Install', 'blocksy-companion')}
+							<span className="ct-label">
+								{__('Clean Install', 'blocksy-companion')}
+							</span>
 							<i>
 								{__(
 									'This option will remove the previous imported content and will perform a fresh and clean install.',

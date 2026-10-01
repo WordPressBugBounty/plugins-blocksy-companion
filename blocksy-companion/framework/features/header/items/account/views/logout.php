@@ -5,13 +5,15 @@ if (! defined('ABSPATH')) {
 }
 
 $login_label = do_shortcode(
-	blocksy_translate_dynamic(
-		blocksy_companion_akg(
-			'login_label',
-			$atts,
-			__('Login', 'blocksy-companion')
-		),
-		$panel_type . ':' . $section_id . ':' . $item_id . ':login_label'
+	blocksy_companion_sanitize_html_for_display(
+		blocksy_translate_dynamic(
+			blocksy_companion_akg(
+				'login_label',
+				$atts,
+				__('Login', 'blocksy-companion')
+			),
+			$panel_type . ':' . $section_id . ':' . $item_id . ':login_label'
+		)
 	)
 );
 
@@ -43,7 +45,7 @@ $aria_controls = [
 $login_account_action = blocksy_companion_akg('login_account_action', $atts, 'modal');
 
 if ($login_account_action === 'custom') {
-	$link = do_shortcode(blocksy_companion_akg('loggedout_account_custom_page', $atts, ''));
+	$link = esc_url(do_shortcode(blocksy_companion_akg('loggedout_account_custom_page', $atts, '')));
 	$aria_controls = [];
 }
 

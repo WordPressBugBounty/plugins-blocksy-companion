@@ -23,54 +23,78 @@ class SvgHandling {
 		);
 
 		add_filter(
-			'wp_handle_upload_prefilter',
-			function ($file) {
-				$extension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+			'blocksy:svg:sanitize-inline',
+			function ($svg, $args) {
+				if ($svg !== null) {
+					return $svg;
+				}
+
+				$args = wp_parse_args($args, [
+					'svg' => '',
+				]);
+
+				return self::sanitize_inline_svg([
+					'svg' => $args['svg'],
+				]);
+			},
+			10, 2
+		);
+
+		$sanitize_svg_upload = function ($file) {
+			$extension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+
+			if ('svg' !== $extension) {
+				return $file;
+			}
+
+			$error = self::sanitize_svg_file($file['tmp_name']);
+
+			if ($error) {
+				$file['error'] = $error;
+			}
+
+			return $file;
+		};
+
+		add_filter('wp_handle_upload_prefilter', $sanitize_svg_upload);
+		add_filter('wp_handle_sideload_prefilter', $sanitize_svg_upload);
+
+		add_filter(
+			'wp_handle_upload',
+			function ($upload) {
+				if (
+					! is_array($upload)
+					||
+					! empty($upload['error'])
+					||
+					empty($upload['file'])
+				) {
+					return $upload;
+				}
+
+				$extension = strtolower(pathinfo($upload['file'], PATHINFO_EXTENSION));
 
 				if ('svg' !== $extension) {
-					return $file;
+					return $upload;
 				}
 
-				/**
-				 * Filters whether the uploaded SVG files should be sanitized.
-				 *
-				 * Returning false skips the sanitization and lets the file through untouched.
-				 *
-				 * @since 2.1.3
-				 *
-				 * @param bool $should_sanitize Whether to sanitize the SVG. Default true.
-				 */
-				if (! apply_filters('blocksy:svg:should_sanitize', true)) {
-					return $file;
+				// wp_upload_bits() with empty bits creates a placeholder that
+				// importers stream the remote file into afterwards.
+				if ('' === file_get_contents($upload['file'])) {
+					return $upload;
 				}
 
-				$svg_content = file_get_contents($file['tmp_name']);
+				$error = self::sanitize_svg_file($upload['file']);
 
-				$trimmed_content = trim($svg_content);
+				if ($error) {
+					wp_delete_file($upload['file']);
 
-				if (
-					strpos($trimmed_content, '<?xml') !== 0
-					&&
-					strpos($trimmed_content, '<svg') !== 0
-				) {
-					$file['error'] = __('This file does not appear to be a valid SVG file.', 'blocksy-companion');
-					return $file;
+					return [
+						'error' => $error
+					];
 				}
 
-				if (
-					stripos($svg_content, '<?php') !== false
-					||
-					stripos($svg_content, '<?=') !== false
-				) {
-					$file['error'] = __('SVG files cannot contain PHP code.', 'blocksy-companion');
-					return $file;
-				}
-
-				$sanitized_content = $this->cleanup_svg($svg_content);
-
-				file_put_contents($file['tmp_name'], $sanitized_content);
-
-				return $file;
+				return $upload;
 			}
 		);
 
@@ -360,7 +384,126 @@ class SvgHandling {
 		return $tags;
 	}
 
-	public function cleanup_svg($content) {
+	private static function sanitize_svg_file($path) {
+		/**
+		 * Filters whether the uploaded SVG files should be sanitized.
+		 *
+		 * Returning false skips the sanitization and lets the file through untouched.
+		 *
+		 * @since 2.1.3
+		 *
+		 * @param bool $should_sanitize Whether to sanitize the SVG. Default true.
+		 */
+		if (! apply_filters('blocksy:svg:should_sanitize', true)) {
+			return '';
+		}
+
+		$svg_content = file_get_contents($path);
+
+		$trimmed_content = trim($svg_content);
+
+		if (
+			strpos($trimmed_content, '<?xml') !== 0
+			&&
+			strpos($trimmed_content, '<svg') !== 0
+		) {
+			return __('This file does not appear to be a valid SVG file.', 'blocksy-companion');
+		}
+
+		if (
+			stripos($svg_content, '<?php') !== false
+			||
+			stripos($svg_content, '<?=') !== false
+		) {
+			return __('SVG files cannot contain PHP code.', 'blocksy-companion');
+		}
+
+		$sanitized_content = self::cleanup_svg($svg_content);
+
+		if (! is_string($sanitized_content) || $sanitized_content === '') {
+			return __('This SVG file could not be sanitized.', 'blocksy-companion');
+		}
+
+		if (file_put_contents($path, $sanitized_content) === false) {
+			return __('This SVG file could not be sanitized.', 'blocksy-companion');
+		}
+
+		return '';
+	}
+
+	public static function cleanup_svg($content) {
+		$sanitizer = self::get_sanitizer();
+
+		try {
+			return $sanitizer->sanitize($content);
+		} catch (\Throwable $e) {
+			return false;
+		}
+	}
+
+	public static function sanitize_inline_svg($args = []) {
+		$args = wp_parse_args($args, [
+			'svg' => null,
+			'file' => '',
+		]);
+
+		$svg = $args['svg'];
+
+		if ($svg === null) {
+			$file = $args['file'];
+
+			if (! is_string($file) || strpos($file, '://') !== false) {
+				return '';
+			}
+
+			if (! is_file($file)) {
+				return '';
+			}
+
+			$filetype = wp_check_filetype($file, ['svg' => 'image/svg+xml']);
+
+			if ($filetype['ext'] !== 'svg') {
+				return '';
+			}
+
+			if (filesize($file) > 5 * MB_IN_BYTES) {
+				return '';
+			}
+
+			$svg = file_get_contents($file);
+		}
+
+		if (! is_string($svg) || $svg === '' || strlen($svg) > 5 * MB_IN_BYTES) {
+			return '';
+		}
+
+		static $cache = [];
+
+		$key = md5($svg);
+
+		if (array_key_exists($key, $cache)) {
+			return $cache[$key];
+		}
+
+		$sanitizer = self::get_sanitizer();
+		$sanitizer->removeRemoteReferences(true);
+
+		try {
+			$sanitized = $sanitizer->sanitize($svg);
+		} catch (\Throwable $e) {
+			$sanitized = false;
+		}
+
+		if (! is_string($sanitized)) {
+			$sanitized = '';
+		}
+
+		$cache[$key] = $sanitized;
+
+		return $sanitized;
+	}
+
+	private static function get_sanitizer() {
 		$base_path = BLOCKSY_PATH . 'vendor/svg-sanitizer/src';
 
 		require_once($base_path . '/data/AttributeInterface.php');
@@ -381,7 +524,7 @@ class SvgHandling {
 		// validation issues when embedding SVGs inline.
 		$sanitizer->removeXMLTag(true);
 
-		return $sanitizer->sanitize($content);
+		return $sanitizer;
 	}
 }
 

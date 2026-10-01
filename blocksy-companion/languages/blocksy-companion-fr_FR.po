@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Blocksy Companion Pro package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-02 10:48:47+0000\n"
+"PO-Revision-Date: 2026-09-28 07:00:15+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1949,7 +1949,7 @@ msgstr "Remplissage en cours (%d)"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:561
 msgid "Resume the product taxonomies lookup table regeneration"
-msgstr "Reprendre la régénération de la table de recherche des taxonomies de produits"
+msgstr "Reprendre la rég��nération de la table de recherche des taxonomies de produits"
 
 #. translators: %1$s = count of products already processed.
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:564
@@ -4087,7 +4087,7 @@ msgstr "Félicitations ! Vous avez bénéficié de la livraison gratuite 🎉"
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:422,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:139
 msgid "Add {price} more to get free shipping!"
-msgstr "Ajoutez {prix} de plus pour bénéficier de la livraison gratuite !"
+msgstr "Ajoutez {price} de plus pour bénéficier de la livraison gratuite !"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:15,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:15
@@ -11591,7 +11591,7 @@ msgstr "Scripts après l'ouverture de la balise body"
 
 #: framework/helpers/exts-configs.php:97
 msgid "Upload an unlimited number of custom fonts or variable fonts and use them throughout Blocksy and your favorite page builder."
-msgstr "Téléversez un nombre illimité de polices personnalisées ou de polices variables et utilisez-les dans Blocksy et dans votre constructeur de pages préféré."
+msgstr "Téléversez un nombre illimité de polices personnalisées ou de polices variables et utilisez-les dans Blocksy et dans votre constructeur de pages pr��féré."
 
 #: framework/helpers/exts-configs.php:109
 msgid "Serve your chosen Google Fonts from your own web server. This will increase the loading speed and makes sure your website complies with the privacy regulations."

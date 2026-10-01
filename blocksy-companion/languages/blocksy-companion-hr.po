@@ -2343,7 +2343,7 @@ msgstr "Dinamički naslov"
 
 #: static/js/editor/blocks/dynamic-data/index.js:45
 msgid "Dynamic Excerpt"
-msgstr "Dinami��ki isječak"
+msgstr "Dinamički isječak"
 
 #: static/js/editor/blocks/dynamic-data/index.js:49
 msgid "Dynamic Post Date"

@@ -1466,7 +1466,7 @@ msgstr "Zostałeś dodany na listę oczekujących"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
-msgstr "Zostałe�� usunięty z listy oczekujących"
+msgstr "Zostałeś usunięty z listy oczekujących"
 
 #. translators: %1$s is the number of users, %2$s is the plural form
 #. (user/users)

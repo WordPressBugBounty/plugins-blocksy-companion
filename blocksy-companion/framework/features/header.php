@@ -105,7 +105,7 @@ class HeaderAdditions {
 				}
 
 				$start_html = '<div class="ct-sticky-container">';
-				$start_html .= '<div data-sticky="' . $sticky_result['effect'] . '">';
+				$start_html .= '<div data-sticky="' . esc_attr($sticky_result['effect']) . '">';
 
 				$end_html = '</div></div>';
 

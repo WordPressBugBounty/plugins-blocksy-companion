@@ -7,7 +7,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-09-10 17:43+0000\n"
+"POT-Creation-Date: 2026-10-01 18:19+0000\n"
 "Project-Id-Version: undefined\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;"
@@ -37,8 +37,8 @@ msgstr ""
 #: framework/features/header/items/account/options.php:88,
 #: framework/features/header/items/account/options.php:92,
 #: framework/features/header/items/account/options.php:696,
-#: framework/features/header/items/account/views/login.php:183,
-#: framework/features/header/items/account/views/login.php:371
+#: framework/features/header/items/account/views/login.php:185,
+#: framework/features/header/items/account/views/login.php:379
 msgid "Dashboard"
 msgstr ""
 
@@ -227,46 +227,46 @@ msgid "An unexpected error occurred. Please try again later."
 msgstr ""
 
 #. translators: %s is the error message.
-#: framework/features/account-auth.php:117
+#: framework/features/account-auth.php:106
 msgid "<strong>Error</strong>: %s"
 msgstr ""
 
 #. translators: 1: link open 2: link close
-#: framework/features/account-auth.php:136
+#: framework/features/account-auth.php:125
 msgid ""
 "Check your email for the confirmation link, then visit the %1$slogin "
 "page%2$s."
 msgstr ""
 
-#: framework/features/account-auth.php:149,
-#: framework/features/account-auth.php:307
+#: framework/features/account-auth.php:138,
+#: framework/features/account-auth.php:298
 msgid "Check your email"
 msgstr ""
 
 #. translators: 1: link open 2: link close
-#: framework/features/account-auth.php:293
+#: framework/features/account-auth.php:284
 msgid ""
 "Registration complete. Please check your email, then visit the %1$slogin "
 "page%2$s."
 msgstr ""
 
-#: framework/features/account-auth.php:267
+#: framework/features/account-auth.php:258
 msgid ""
 "Your account was created successfully. Your login details have been sent to "
 "your email address. Please visit the %1$slogin page%2$s."
 msgstr ""
 
-#: framework/features/account-auth.php:278
+#: framework/features/account-auth.php:269
 msgid ""
 "Your account was created successfully and a password has been sent to your "
 "email address. Please visit the %1$slogin page%2$s."
 msgstr ""
 
-#: framework/features/account-auth.php:313
+#: framework/features/account-auth.php:304
 msgid "Registration Form"
 msgstr ""
 
-#: framework/features/account-auth.php:314
+#: framework/features/account-auth.php:305
 msgid "Register For This Site"
 msgstr ""
 
@@ -325,12 +325,12 @@ msgstr ""
 msgid "Inline"
 msgstr ""
 
-#: framework/features/google-analytics.php:85
+#: framework/features/google-analytics.php:93
 msgid "Google Analytics v4"
 msgstr ""
 
 #. translators: %1$s and %2$s are HTML tags for a link.
-#: framework/features/google-analytics.php:91
+#: framework/features/google-analytics.php:99
 msgid ""
 "Link your Google Analytics 4 tracking ID. More info and instructions can be "
 "found %1$shere%2$s."
@@ -356,12 +356,16 @@ msgstr ""
 msgid "X (Twitter) Username"
 msgstr ""
 
-#: framework/features/svg.php:56
+#: framework/features/svg.php:410
 msgid "This file does not appear to be a valid SVG file."
 msgstr ""
 
-#: framework/features/svg.php:65
+#: framework/features/svg.php:418
 msgid "SVG files cannot contain PHP code."
+msgstr ""
+
+#: framework/features/svg.php:424, framework/features/svg.php:428
+msgid "This SVG file could not be sanitized."
 msgstr ""
 
 #. translators: This is a brand name. Preferably to not be translated
@@ -592,7 +596,7 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:551,
 #: framework/premium/extensions/shortcuts/customizer.php:577,
 #: framework/premium/extensions/shortcuts/views/bar.php:56,
-#: framework/features/header/items/account/views/login.php:558,
+#: framework/features/header/items/account/views/login.php:568,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:279,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:345,
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/feature.php:460,
@@ -1006,6 +1010,7 @@ msgstr ""
 #: framework/premium/features/premium-header/items/contacts/options.php:282,
 #: framework/premium/features/premium-header/items/contacts/options.php:327,
 #: framework/premium/features/premium-header/items/contacts/options.php:372
+#: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:87
 msgid "Content"
 msgstr ""
 
@@ -2837,7 +2842,7 @@ msgstr ""
 
 #: framework/features/header/account-modal.php:52,
 #: framework/features/header/items/account/options.php:1080,
-#: framework/features/header/items/account/views/logout.php:12
+#: framework/features/header/items/account/views/logout.php:13
 msgid "Login"
 msgstr ""
 
@@ -3023,12 +3028,12 @@ msgid "Post copy created."
 msgstr ""
 
 #. translators: %1$s is the error message, %2$s is the line number
-#: framework/premium/features/code-editor.php:132
+#: framework/premium/features/code-editor.php:136
 msgid "Code execution has been canceled due to error: %1$s on line: %2$s"
 msgstr ""
 
 #. translators: %1$s is the post type name, %2$s is the post edit link
-#: framework/premium/features/code-editor.php:148
+#: framework/premium/features/code-editor.php:152
 msgid "%1$s that caused the error: %2$s"
 msgstr ""
 
@@ -3828,7 +3833,7 @@ msgstr ""
 #: framework/features/blocks/search/options.php:79,
 #: framework/features/blocks/search/options.php:85,
 #: framework/features/blocks/search/view.php:42,
-#: framework/features/blocks/search/view.php:243,
+#: framework/features/blocks/search/view.php:244,
 #: framework/features/conditions/rules/pages.php:26,
 #: framework/premium/features/premium-header/items/search-input/options.php:69,
 #: framework/premium/features/premium-header/items/search-input/view.php:90
@@ -3864,7 +3869,7 @@ msgid "Taxonomy Filter"
 msgstr ""
 
 #: framework/features/blocks/search/options.php:166,
-#: framework/features/blocks/search/view.php:247
+#: framework/features/blocks/search/view.php:250
 msgid "Select Category"
 msgstr ""
 
@@ -4258,7 +4263,7 @@ msgstr ""
 msgid "Menu Item Settings"
 msgstr ""
 
-#: framework/premium/extensions/mega-menu/extension.php:416
+#: framework/premium/extensions/mega-menu/extension.php:422
 msgid "New"
 msgstr ""
 
@@ -4563,7 +4568,7 @@ msgstr ""
 #: framework/premium/extensions/shortcuts/customizer.php:616,
 #: framework/premium/extensions/shortcuts/customizer.php:642,
 #: framework/premium/extensions/shortcuts/views/bar.php:57,
-#: framework/features/header/items/account/views/login.php:591,
+#: framework/features/header/items/account/views/login.php:601,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:8,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:215,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/feature.php:219,
@@ -5916,7 +5921,7 @@ msgstr ""
 #: framework/features/header/items/account/options.php:10,
 #: framework/features/header/items/account/options.php:68,
 #: framework/features/header/items/account/options.php:132,
-#: framework/features/header/items/account/views/login.php:432
+#: framework/features/header/items/account/views/login.php:440
 msgid "Custom Link"
 msgstr ""
 
@@ -5960,16 +5965,16 @@ msgstr ""
 
 #: framework/features/header/items/account/options.php:106,
 #: framework/features/header/items/account/options.php:705,
-#: framework/features/header/items/account/views/login.php:189,
-#: framework/features/header/items/account/views/login.php:400
+#: framework/features/header/items/account/views/login.php:191,
+#: framework/features/header/items/account/views/login.php:408
 msgid "Edit Profile"
 msgstr ""
 
 #: framework/features/header/items/account/options.php:116,
 #: framework/features/header/items/account/options.php:120,
 #: framework/features/header/items/account/options.php:714,
-#: framework/features/header/items/account/views/login.php:195,
-#: framework/features/header/items/account/views/login.php:421
+#: framework/features/header/items/account/views/login.php:197,
+#: framework/features/header/items/account/views/login.php:429
 msgid "Log Out"
 msgstr ""
 
@@ -5993,30 +5998,30 @@ msgstr ""
 #: framework/features/header/items/account/options.php:191,
 #: framework/features/header/items/account/options.php:634,
 #: framework/features/header/items/account/views/login.php:125,
-#: framework/features/header/items/account/views/login.php:511
+#: framework/features/header/items/account/views/login.php:521
 msgid "My Account"
 msgstr ""
 
 #: framework/features/header/items/account/options.php:203,
 #: framework/features/header/items/account/options.php:207,
-#: framework/features/header/items/account/views/login.php:628
+#: framework/features/header/items/account/views/login.php:638
 msgid "Dokan Dashboard"
 msgstr ""
 
 #: framework/features/header/items/account/options.php:217,
 #: framework/features/header/items/account/options.php:221,
-#: framework/features/header/items/account/views/login.php:662
+#: framework/features/header/items/account/views/login.php:672
 msgid "Dokan Shop"
 msgstr ""
 
 #: framework/features/header/items/account/options.php:233,
 #: framework/features/header/items/account/options.php:237,
-#: framework/features/header/items/account/views/login.php:694
+#: framework/features/header/items/account/views/login.php:704
 msgid "Tutor LMS Dashboard"
 msgstr ""
 
 #: framework/features/header/items/account/options.php:253,
-#: framework/features/header/items/account/views/login.php:721
+#: framework/features/header/items/account/views/login.php:731
 msgid "bbPress Dashboard"
 msgstr ""
 
@@ -7741,15 +7746,15 @@ msgstr ""
 msgid "Choose a custom thank you page for this product."
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/feature.php:142
+#: framework/premium/extensions/woocommerce-extra/features/filters/feature.php:144
 msgid "AJAX Filtering"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/feature.php:148
+#: framework/premium/extensions/woocommerce-extra/features/filters/feature.php:150
 msgid "Scroll to Top"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/filters/feature.php:149
+#: framework/premium/extensions/woocommerce-extra/features/filters/feature.php:151
 msgid "Automatically scroll page to top after user interaction."
 msgstr ""
 
@@ -7893,6 +7898,7 @@ msgid "Filter Widgets"
 msgstr ""
 
 #: framework/premium/extensions/woocommerce-extra/features/offcanvas-filters/options.php:578
+#: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:86
 msgid "Widgets"
 msgstr ""
 
@@ -8687,15 +8693,15 @@ msgstr ""
 msgid "Main Color"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:238
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:237
 msgid "Shipping Cost"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:247
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:246
 msgid "Tax Amount"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:256
+#: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/views/added-product.php:255
 msgid "Cart Total"
 msgstr ""
 
@@ -9168,12 +9174,12 @@ msgstr ""
 msgid "Retry Send"
 msgstr ""
 
-#: framework/premium/extensions/woocommerce-extra/features/swatches/includes/frontend.php:227
+#: framework/premium/extensions/woocommerce-extra/features/swatches/includes/frontend.php:233
 msgid "Show more swatches"
 msgstr ""
 
 #. translators: %s is the number of additional swatches.
-#: framework/premium/extensions/woocommerce-extra/features/swatches/includes/frontend.php:233
+#: framework/premium/extensions/woocommerce-extra/features/swatches/includes/frontend.php:239
 msgid "+%s More"
 msgstr ""
 
@@ -9994,6 +10000,81 @@ msgstr ""
 msgid "%s Content"
 msgstr ""
 
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:127
+msgid "Product filter crawling needs attention!"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:128
+msgid "Unable to check filter crawling"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:164
+msgid "Product Filter Crawling"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:169
+msgid ""
+"The filter crawling rules are present in your robots.txt file. No further "
+"action is needed."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:176
+msgid ""
+"We could not read your public robots.txt file. This can happen if your "
+"server blocks the check or the request times out. Try again, or ask your "
+"hosting provider to check that the file is accessible."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:184
+msgid ""
+"Blocksy automatically asks search engines not to crawl product filter "
+"combinations, which can create many URLs and increase server load."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:191
+msgid "Some of these rules are missing from your <a>robots.txt file ↗</a>."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:206
+msgid "To fix this, please follow the steps below:"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:214
+msgid "Copy the rules below and add them to the end of your robots.txt file."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:220
+msgid "Save the file, then click “Check again”."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:239
+msgid "Missing robots.txt rules"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:260
+msgid "Copy rules"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:268
+msgid "Rules copied!"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:290
+msgid "Select the rules and copy them with your keyboard."
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:309
+msgid "Checking…"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:311
+msgid "Got it, back to dashboard"
+msgstr ""
+
+#: framework/premium/extensions/woocommerce-extra/dashboard-static/js/FiltersCrawlNotice.js:312
+msgid "Check again"
+msgstr ""
+
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:111
 msgid "Display the currently active filters."
 msgstr ""
@@ -10772,7 +10853,7 @@ msgid "Now you can view your website or start customizing it"
 msgstr ""
 
 #: static/js/dashboard/screens/DemoInstall/Installer/InstallCompleted.js:33
-#: static/js/dashboard/screens/Extensions/CurrentExtension.js:342
+#: static/js/dashboard/screens/Extensions/CurrentExtension.js:358
 msgid "Customize"
 msgstr ""
 
@@ -10969,11 +11050,11 @@ msgstr ""
 msgid "Install Child Theme"
 msgstr ""
 
-#: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:106
+#: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:110
 msgid "Clean Install"
 msgstr ""
 
-#: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:108
+#: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:113
 msgid ""
 "This option will remove the previous imported content and will perform a "
 "fresh and clean install."
@@ -10987,6 +11068,10 @@ msgstr ""
 msgid ""
 "This will import posts, pages, comments, navigation menus, custom fields, "
 "terms and custom posts."
+msgstr ""
+
+#: static/js/dashboard/screens/DemoInstall/Wizzard/Content.js:85
+msgid "Theme settings"
 msgstr ""
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ModifyDemo.js:141
@@ -11096,15 +11181,15 @@ msgstr ""
 msgid "Loading Extensions Status..."
 msgstr ""
 
-#: static/js/dashboard/screens/Extensions/CurrentExtension.js:316
+#: static/js/dashboard/screens/Extensions/CurrentExtension.js:332
 msgid "Documentation"
 msgstr ""
 
-#: static/js/dashboard/screens/Extensions/CurrentExtension.js:346
+#: static/js/dashboard/screens/Extensions/CurrentExtension.js:362
 msgid "Manage"
 msgstr ""
 
-#: static/js/dashboard/screens/Extensions/CurrentExtension.js:86
+#: static/js/dashboard/screens/Extensions/CurrentExtension.js:88
 msgid "Video Tutorial"
 msgstr ""
 

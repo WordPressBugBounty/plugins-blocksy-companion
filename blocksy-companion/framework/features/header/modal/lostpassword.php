@@ -50,5 +50,4 @@ if (! defined('ABSPATH')) {
 	 * @since 1.7.43
 	 */
 	do_action('blocksy:account:modal:lostpassword:end'); ?>
-	<?php wp_nonce_field('blocksy-lostpassword', 'blocksy-lostpassword-nonce'); ?>
 </form>

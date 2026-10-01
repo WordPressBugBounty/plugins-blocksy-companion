@@ -74,6 +74,10 @@ class AccountAuth {
 	}
 
 	public function implement_user_lostpassword() {
+		if (is_user_logged_in()) {
+			wp_send_json_error([]);
+		}
+
 		/**
 		 * Fires before the account modal handles a lost password request.
 		 *
@@ -85,21 +89,6 @@ class AccountAuth {
 
 		$errors = [];
 		$success = false;
-
-		$nonce_value = '';
-
-		if (
-			isset($_POST['blocksy-lostpassword-nonce'])
-			&&
-			is_string($_POST['blocksy-lostpassword-nonce'])
-		) {
-			$nonce_value = sanitize_key($_POST['blocksy-lostpassword-nonce']);
-		}
-
-		if (!wp_verify_nonce($nonce_value, 'blocksy-lostpassword')) {
-			wp_send_json_error([]);
-			exit;
-		}
 
 		if (class_exists('WC_Shortcode_My_Account')) {
 			$success = \WC_Shortcode_My_Account::retrieve_password();
@@ -175,6 +164,10 @@ class AccountAuth {
 	}
 
 	public function implement_user_registration() {
+		if (is_user_logged_in()) {
+			wp_send_json_error([]);
+		}
+
 		/**
 		 * Fires before the account modal handles a registration request.
 		 *
@@ -194,31 +187,23 @@ class AccountAuth {
 		$user_login = '';
 		$user_email = '';
 		$user_pass = '';
-		$nonce_value = '';
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		if (isset($_POST['user_login']) && is_string($_POST['user_login'])) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing
 			$user_login = sanitize_user(wp_unslash($_POST['user_login']));
 		}
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		if (isset($_POST['user_email']) && is_string($_POST['user_email'])) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing
 			$user_email = sanitize_email(wp_unslash($_POST['user_email']));
 		}
 
+		// phpcs:ignore WordPress.Security.NonceVerification.Missing
 		if (isset($_POST['user_pass']) && is_string($_POST['user_pass'])) {
+			// phpcs:ignore WordPress.Security.NonceVerification.Missing
 			$user_pass = sanitize_text_field(wp_unslash($_POST['user_pass']));
-		}
-
-		if (
-			isset($_POST['blocksy-register-nonce'])
-			&&
-			is_string($_POST['blocksy-register-nonce'])
-		) {
-			$nonce_value = sanitize_key($_POST['blocksy-register-nonce']);
-		}
-
-		if (!wp_verify_nonce($nonce_value, 'blocksy-register')) {
-			wp_send_json_error([]);
-			exit;
 		}
 
 		if ($this->get_registration_strategy() === 'woocommerce') {
@@ -231,28 +216,34 @@ class AccountAuth {
 				$user_email
 			);
 
-			$errors = wc_create_new_customer(
-				sanitize_email($user_email),
-				wc_clean($user_login),
-				$user_pass
-			);
+			$errors = $validation_error;
 
-			if (
-				! is_wp_error($errors)
-				&&
-				apply_filters(
-					'woocommerce_registration_auth_new_customer',
-					true,
-					$errors
-				)
-				&&
-				isset($_POST['role'])
-				&&
-				$_POST['role'] === 'seller'
-			) {
-				ob_start();
-				wc_set_customer_auth_cookie($errors);
-				ob_clean();
+			if (! $errors->has_errors()) {
+				$errors = wc_create_new_customer(
+					sanitize_email($user_email),
+					wc_clean($user_login),
+					$user_pass
+				);
+
+				if (
+					! is_wp_error($errors)
+					&&
+					apply_filters(
+						'woocommerce_registration_auth_new_customer',
+						true,
+						$errors
+					)
+					&&
+					// phpcs:ignore WordPress.Security.NonceVerification.Missing
+					isset($_POST['role'])
+					&&
+					// phpcs:ignore WordPress.Security.NonceVerification.Missing
+					$_POST['role'] === 'seller'
+				) {
+					ob_start();
+					wc_set_customer_auth_cookie($errors);
+					ob_clean();
+				}
 			}
 		} else {
 			$errors = register_new_user($user_login, $user_email);

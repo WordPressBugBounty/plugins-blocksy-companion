@@ -54,7 +54,7 @@ if ($loggedin_interaction_type !== 'dropdown') {
 	}
 
 	if ($account_link === 'custom') {
-		$link = do_shortcode(blocksy_companion_akg('account_custom_page', $atts, ''));
+		$link = esc_url(do_shortcode(blocksy_companion_akg('account_custom_page', $atts, '')));
 	}
 
 	if ($account_link === 'woocommerce_account' && class_exists('WooCommerce')) {
@@ -127,15 +127,17 @@ $loggedin_label = blocksy_expand_responsive_value(
 
 
 $loggedin_label = do_shortcode(
-	blocksy_translate_dynamic(
-		$loggedin_label,
-		$panel_type . ':' . $section_id . ':' . $item_id . ':loggedin_label'
+	blocksy_companion_sanitize_html_for_display(
+		blocksy_translate_dynamic(
+			$loggedin_label,
+			$panel_type . ':' . $section_id . ':' . $item_id . ':loggedin_label'
+		)
 	)
 );
 
 if (blocksy_companion_akg('loggedin_text', $atts, 'label') === 'username') {
 	$user = wp_get_current_user();
-	$loggedin_label = $user->display_name;
+	$loggedin_label = esc_html($user->display_name);
 }
 
 $loggedin_label_position = blocksy_expand_responsive_value(
@@ -226,9 +228,11 @@ if ($loggedin_interaction_type === 'dropdown') {
 		}
 
 		if (isset($dropdown_row['label'])) {
-			$dropdown_row['label'] = blocksy_translate_dynamic(
-				$dropdown_row['label'],
-				$panel_type . ':' . $section_id . ':account:dropdown_items:' . $dropdown_row['id'] . ':label'
+			$dropdown_row['label'] = blocksy_companion_sanitize_html_for_display(
+				blocksy_translate_dynamic(
+					$dropdown_row['label'],
+					$panel_type . ':' . $section_id . ':account:dropdown_items:' . $dropdown_row['id'] . ':label'
+				)
 			);
 		}
 
@@ -249,10 +253,12 @@ if ($loggedin_interaction_type === 'dropdown') {
 				!empty($user_firstname) || !empty($user_lastname)
 				? str_replace(
 					['{first_name}', '{last_name}', '{user_name}'],
-					[$user_firstname, $user_lastname, $user->display_name],
-					blocksy_companion_akg('account_user_info_display_name', $dropdown_row, '{first_name} {last_name}')
+					[esc_html($user_firstname), esc_html($user_lastname), esc_html($user->display_name)],
+					blocksy_companion_sanitize_html_for_display(
+						blocksy_companion_akg('account_user_info_display_name', $dropdown_row, '{first_name} {last_name}')
+					)
 				)
-				: $user->display_name;
+				: esc_html($user->display_name);
 
 			$image_html = '';
 
@@ -279,9 +285,11 @@ if ($loggedin_interaction_type === 'dropdown') {
 				||
 				is_customize_preview()
 			) {
-				$message = blocksy_companion_akg('account_user_info_additional_fields', $dropdown_row, '{user_email}');
-				$message = str_replace('{user_email}', $user->user_email, $message);
-				$message = str_replace('{user_name}', $user->display_name, $message);
+				$message = blocksy_companion_sanitize_html_for_display(
+					blocksy_companion_akg('account_user_info_additional_fields', $dropdown_row, '{user_email}')
+				);
+				$message = str_replace('{user_email}', esc_html($user->user_email), $message);
+				$message = str_replace('{user_name}', esc_html($user->display_name), $message);
 
 				$user_role = '';
 
@@ -296,7 +304,7 @@ if ($loggedin_interaction_type === 'dropdown') {
 					}
 				}
 
-				$message = str_replace('{user_role}', $user_role, $message);
+				$message = str_replace('{user_role}', esc_html($user_role), $message);
 
 				$additional_fields_html = blocksy_companion_html_tag(
 					'small',
@@ -312,7 +320,7 @@ if ($loggedin_interaction_type === 'dropdown') {
 			}
 
 			$link_source = blocksy_companion_akg('account_user_info_link', $dropdown_row, 'none');
-			$custom_link = blocksy_companion_akg('account_user_info_custom_link', $dropdown_row, '#');
+			$custom_link = esc_url(blocksy_companion_akg('account_user_info_custom_link', $dropdown_row, '#'));
 
 			if ($link_source === 'dashboard') {
 				$custom_link = get_dashboard_url();
@@ -442,11 +450,13 @@ if ($loggedin_interaction_type === 'dropdown') {
 					'class' => 'menu-item'
 				],
 
-				'link' => do_shortcode(
-					blocksy_companion_akg(
-						'link',
-						$dropdown_row,
-						'#'
+				'link' => esc_url(
+					do_shortcode(
+						blocksy_companion_akg(
+							'link',
+							$dropdown_row,
+							'#'
+						)
 					)
 				),
 				'link_attr' => [

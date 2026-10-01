@@ -424,7 +424,7 @@ msgstr "Bộ đếm ngược giữ giỏ hàng"
 
 #: framework/helpers/exts-configs.php:404
 msgid "Display a countdown timer for reserved cart items, encouraging users to complete their purchase before the timer expires."
-msgstr "Hiển thị đồng hồ đếm ngược cho các món hàng đang được giữ chỗ, thúc đẩy người dùng hoàn tất mua hàng trước khi h���t giờ."
+msgstr "Hiển thị đồng hồ đếm ngược cho các món hàng đang được giữ chỗ, thúc đẩy người dùng hoàn tất mua hàng trước khi hết giờ."
 
 #: framework/extensions/cookies-consent/config.php:6
 msgid "Display a simple consent banner to inform users about the use of cookies on the website."
@@ -492,7 +492,7 @@ msgstr "Để việc chỉnh sửa và lưu nội dung đã nhập dễ dàng h�
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
 msgid "If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details will be necessary."
-msgstr "Nếu người dùng mới được tạo bởi WordPress, một mật khẩu m��i sẽ được tạo ngẫu nhiên và vai trò của người dùng mới sẽ được đặt là %s. Bạn sẽ cần thay đổi chi tiết của người dùng mới theo cách thủ công."
+msgstr "Nếu người dùng mới được tạo bởi WordPress, một mật khẩu mới sẽ được tạo ngẫu nhiên và vai trò của người dùng mới sẽ được đặt là %s. Bạn sẽ cần thay đổi chi tiết của người dùng mới theo cách thủ công."
 
 #: framework/features/demo-install/wp-importer.php:371
 msgid "Import Attachments"
@@ -747,7 +747,7 @@ msgstr "Điểm trọng tâm"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:269
 msgid "Fixed background"
-msgstr "Nền cố đ���nh"
+msgstr "Nền cố định"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:286
 msgid "Repeated background"
@@ -1050,7 +1050,7 @@ msgstr "Độ trễ"
 
 #: framework/premium/features/content-blocks/options/popup.php:473
 msgid "Select a post/page to preview it's content inside the editor while building the popup."
-msgstr "Chọn một bài viết/trang để xem trước nội dung bên trong trình chỉnh sửa khi xây dựng popup."
+msgstr "Chọn m��t bài viết/trang để xem trước nội dung bên trong trình chỉnh sửa khi xây dựng popup."
 
 #: framework/premium/features/content-blocks/options/popup.php:572
 msgid "Lock the page scroll while the popup is triggered/oppened."
@@ -1139,7 +1139,7 @@ msgstr "Làm mờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:619
 msgid "Crossed"
-msgstr "Gạch chéo"
+msgstr "G���ch chéo"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-suggested-products/options/generic.php:35
 msgid "Block"
@@ -1615,7 +1615,7 @@ msgstr "Hủy đăng ký"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:72
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:331
 msgid "Yes"
-msgstr "Có"
+msgstr "C��"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/product-mobile-actions.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:72
@@ -1737,7 +1737,7 @@ msgstr "Thông báo đã thêm vào giỏ hàng"
 
 #: framework/helpers/exts-configs.php:378
 msgid "Show a dynamic confirmation popup with product recommendations whenever items are added to the cart."
-msgstr "Hiển thị một hộp thoại xác nhận động kèm theo gợi ý sản phẩm mỗi khi có mặt hàng được thêm vào giỏ hàng."
+msgstr "Hiển thị một hộp thoại xác nhận động kèm theo gợi ý sản phẩm mỗi khi có m���t hàng được thêm vào giỏ hàng."
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
@@ -1932,7 +1932,7 @@ msgstr "Tạo lại bảng tra cứu phân loại sản phẩm"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:501
 msgid "This tool will regenerate the product taxonomies lookup table data from existing product(s) data. This process may take a while."
-msgstr "Công cụ này sẽ tái tạo dữ liệu bảng tra cứu phân loại sản phẩm từ dữ liệu sản phẩm hiện có. Quá trình này có thể mất một thời gian."
+msgstr "Công cụ này sẽ tái tạo dữ liệu bảng tra cứu phân loại sản phẩm từ dữ liệu sản phẩm hiện có. Quá trình n��y có thể mất một thời gian."
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:512
 msgid "Product taxonomies lookup table data is regenerating"
@@ -4076,7 +4076,7 @@ msgstr "Thanh vận chuyển miễn phí"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:212
 msgid "Show if cart is empty"
-msgstr "Hiển thị nếu giỏ hàng trống"
+msgstr "Hiển thị nếu giỏ h��ng trống"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:445,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:180
@@ -4743,7 +4743,7 @@ msgstr "Chuyển đổi màu"
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:39
 msgid "Reverse Icon State"
-msgstr "Đảo ngư���c trạng thái biểu tượng"
+msgstr "Đảo ngược trạng thái biểu tượng"
 
 #: framework/premium/extensions/color-mode-switch/header-items/color-mode-switcher/options.php:102
 msgid "Dark Mode Label"
@@ -5197,7 +5197,7 @@ msgstr "Bản sao bài viết đã được tạo."
 
 #: framework/premium/features/local-gravatars.php:36
 msgid "Store Gravatars Locally"
-msgstr "Lưu trữ Gravatars cục bộ"
+msgstr "Lưu trữ Gravatars cục b���"
 
 #: framework/premium/features/local-gravatars.php:41
 msgid "Store and load Gravatars locally for increased privacy and performance."

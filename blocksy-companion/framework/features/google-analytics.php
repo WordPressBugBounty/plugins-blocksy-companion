@@ -44,39 +44,47 @@ class GoogleAnalytics {
 		);
 	}
 
+	public function sanitize_ga_4_id($id) {
+		if (! is_string($id)) {
+			return '';
+		}
+
+		$id = trim($id);
+
+		if (! preg_match('/^[A-Z]{1,3}-[A-Z0-9-]+$/i', $id)) {
+			return '';
+		}
+
+		return $id;
+	}
+
 	private function get_ga_4_code() {
-		$analytics_v4_id = blocksy_companion_theme_functions()->blocksy_get_theme_mod('analytics_v4_id', '');
+		$analytics_v4_id = $this->sanitize_ga_4_id(
+			blocksy_companion_theme_functions()->blocksy_get_theme_mod('analytics_v4_id', '')
+		);
 
 		if (empty($analytics_v4_id)) {
 			return '';
 		}
 
-		// phpcs:disable WordPress.WP.EnqueuedResources.NonEnqueuedScript
+		$src = 'https://www.googletagmanager.com/gtag/js?id=' . rawurlencode(
+			$analytics_v4_id
+		);
 
-		ob_start(); ?>
+		$config_id = wp_json_encode(
+			$analytics_v4_id,
+			JSON_HEX_TAG | JSON_UNESCAPED_SLASHES
+		);
 
-		<!-- Global site tag (gtag.js) - Google Analytics v4 -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=<?php
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo $analytics_v4_id;
-		 ?>"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', '<?php
-			// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			echo $analytics_v4_id;
-		?>');
-
-		</script>
-		<!-- End Google Analytics v4 -->
-
-		<?php
-		return ob_get_clean();
-
-		// phpcs:enable WordPress.WP.EnqueuedResources.NonEnqueuedScript
+		return wp_get_script_tag([
+			'async' => true,
+			'src' => esc_url_raw($src),
+		]) . wp_get_inline_script_tag(
+			"window.dataLayer = window.dataLayer || [];\n" .
+			"function gtag(){dataLayer.push(arguments);}\n" .
+			"gtag('js', new Date());\n" .
+			"gtag('config', " . $config_id . ");"
+		);
 	}
 
 	public function generate_google_analytics_opts($options) {
@@ -96,7 +104,10 @@ class GoogleAnalytics {
 					'</a>'
 				),
 				'disableRevertButton' => true,
-				'setting' => [ 'transport' => 'postMessage' ],
+				'setting' => [
+					'transport' => 'postMessage',
+					'sanitize_callback' => [$this, 'sanitize_ga_4_id'],
+				],
 			]
 		];
 

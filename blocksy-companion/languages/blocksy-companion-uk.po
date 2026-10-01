@@ -938,7 +938,7 @@ msgstr "Таксономії - макет 5"
 
 #: framework/features/header/items/account/options.php:7
 msgid "Logout Action"
-msgstr "Дія виходу з системи"
+msgstr "Дія в��ходу з системи"
 
 #: framework/features/header/items/account/options.php:15
 msgid "User Name"
@@ -970,7 +970,7 @@ msgstr "Видимість значка"
 
 #: framework/features/header/items/account/options.php:662
 msgid "Link to Page"
-msgstr "Посилання на сторінку"
+msgstr "Посила��ня на сторінку"
 
 #: framework/features/header/items/account/options.php:757
 msgid "Top Offset (Sticky State)"
@@ -1113,7 +1113,7 @@ msgstr "Ліміт архіву"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:575
 msgid "Limit the number of swatches shown on archive pages."
-msgstr "Обмеження кількості зразків, що відображаються на сторінках а��хіву."
+msgstr "Обмеження кількості зразків, що відображаються на сторінках архіву."
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:579
 msgid "Product Page Limit"
@@ -1375,7 +1375,7 @@ msgstr "Увімкнути для попередніх замовлень"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:42
 msgid "Allow users to join the waitlist even if the product is on backorder."
-msgstr "Дозволяє користувачам записуватися в список очікування, навіть якщо товар знаходиться в стадії попереднього замовлення."
+msgstr "Дозволяє користувачам записуватися в список ��чікування, навіть якщо товар знаходиться в стадії попереднього замовлення."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:55
 msgid "Show Users Count"
@@ -2061,7 +2061,7 @@ msgstr "Ваш сайт налаштований неправильно, і AJAX
 
 #: static/js/dashboard/screens/DemoInstall.js:201
 msgid "Failed to retrieve starter sites list.<br> Error code - %s"
-msgstr "Не вдалося отримати список стартових сайтів. <br>Код п��милки — %s"
+msgstr "Не вдалося отримати список стартових сайтів. <br>Код помилки — %s"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/useInstaller.js:129
 msgid "Installing %s"
@@ -2536,7 +2536,7 @@ msgstr "Супутні"
 #: static/js/editor/blocks/query/index.js:13
 #: static/js/editor/blocks/tax-query/index.js:13
 msgid "Create advanced queries based on your specified criterias."
-msgstr "Створення розширених запитів на основі заданих критеріїв."
+msgstr "��творення розширених запитів на основі заданих критеріїв."
 
 #: static/js/editor/blocks/search/Edit.js:163
 msgid "Button Outside"
@@ -2648,7 +2648,7 @@ msgstr "Скинути всі"
 
 #: static/js/options/ConditionsManager/ExpireCondition.js:119
 msgid "The expiration date cannot be set earlier than the start date."
-msgstr "Дата закінчення терміну не може бути раніше дати початку дії."
+msgstr "Дата закінчення ��ерміну не може бути раніше дати початку дії."
 
 #: framework/features/blocks/about-me/options.php:207,
 #: framework/features/blocks/share-box/options.php:66,
@@ -3112,7 +3112,7 @@ msgstr "Нестача запасів"
 
 #: framework/helpers/exts-configs.php:370
 msgid "Show the remaining stock of a product to create a sense of urgency and encourage your visitors to make a purchase."
-msgstr "Відображення залишків товару, щоб створити відчутт�� терміновості та спонукати відвідувачів до покупки."
+msgstr "Відображення залишків товару, щоб створити відчуття терміновості та спонукати відвідувачів до покупки."
 
 #. translators: %s is the product name (theme or plugin)
 #: framework/views/theme-mismatch.php:36
@@ -3751,7 +3751,7 @@ msgstr "Отримання..."
 
 #: framework/premium/extensions/adobe-typekit/dashboard-static/js/AdobeTypekit.js:164
 msgid "Please enter a valid Project ID to get all fonts."
-msgstr "Введіть дійсний ID проекту, щоб отримати всі шрифти."
+msgstr "Вве��іть дійсний ID проекту, щоб отримати всі шрифти."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:302
 msgid "This provider is used only for testing purposes. It doesnt register any real subscribers."
@@ -8045,7 +8045,7 @@ msgstr "Соціальні іконки"
 #. translators: %s is a link to the Customizer section.
 #: framework/features/blocks/about-me/options.php:136
 msgid "You can configure social URLs in %s."
-msgstr "Ви можете налаштувати со��іальні URL-адреси у %s."
+msgstr "Ви можете налаштувати соціальні URL-адреси у %s."
 
 #: framework/features/blocks/about-me/options.php:168,
 #: framework/features/blocks/socials/options.php:62,
@@ -9029,7 +9029,7 @@ msgstr "Додати варіацію"
 
 #: framework/premium/extensions/local-google-fonts/dashboard-static/js/LocalGoogleFonts.js:258
 msgid "Download a font and serve it directly from your server, this is handy for those who want to comply with GDPR regulations or serve the font via CDN."
-msgstr "Завантажте шрифт і завантажуйте його прямо зі свого сервера. Це зручно для тих, хто хоче дотримуватися правил GDPR або розповсюджувати шрифт че��ез CDN."
+msgstr "Завантажте шрифт і завантажуйте його прямо зі свого сервера. Це зручно для тих, хто хоче дотримуватися правил GDPR або розповсюджувати шрифт через CDN."
 
 #: framework/premium/extensions/mega-menu/static/js/SettingsManager.js:200
 msgid "Item Settings"
@@ -11508,7 +11508,7 @@ msgstr "Розсилка"
 #: static/js/editor/blocks/contact-info/Edit.js:107
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:276
 msgid "Text"
-msgstr "Текст"
+msgstr "Т��кст"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:19,
 #: framework/features/blocks/about-me/options.php:77

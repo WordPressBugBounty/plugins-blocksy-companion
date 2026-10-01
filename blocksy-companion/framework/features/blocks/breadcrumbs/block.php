@@ -159,32 +159,46 @@ class BreadCrumbs {
 					]
 				);
 
-				$colors = isset($attributes['style']['color']) ? $attributes['style']['color'] : [];
+				$colors = [];
+
+				$hex_color_pattern = '/^#([0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/i';
 
 				if (isset($attributes['linkColor'])) {
-					$var = $attributes['linkColor'];
+					$var = sanitize_key($attributes['linkColor']);
 					$colors['--theme-link-initial-color'] = "var(--wp--preset--color--$var)";
 				}
 
-				if (isset($attributes['customLinkColor'])) {
+				if (
+					isset($attributes['customLinkColor'])
+					&&
+					preg_match($hex_color_pattern, $attributes['customLinkColor'])
+				) {
 					$colors['--theme-link-initial-color'] = $attributes['customLinkColor'];
 				}
 
 				if (isset($attributes['textColor'])) {
-					$var = $attributes['textColor'];
+					$var = sanitize_key($attributes['textColor']);
 					$colors['--theme-text-color'] = "var(--wp--preset--color--$var)";
 				}
 
-				if (isset($attributes['customTextColor'])) {
+				if (
+					isset($attributes['customTextColor'])
+					&&
+					preg_match($hex_color_pattern, $attributes['customTextColor'])
+				) {
 					$colors['--theme-text-color'] = $attributes['customTextColor'];
 				}
 
 				if (isset($attributes['linkHoverColor'])) {
-					$var = $attributes['linkHoverColor'];
+					$var = sanitize_key($attributes['linkHoverColor']);
 					$colors['--theme-link-hover-color'] = "var(--wp--preset--color--$var)";
 				}
 
-				if (isset($attributes['customLinkHoverColor'])) {
+				if (
+					isset($attributes['customLinkHoverColor'])
+					&&
+					preg_match($hex_color_pattern, $attributes['customLinkHoverColor'])
+				) {
 					$colors['--theme-link-hover-color'] = $attributes['customLinkHoverColor'];
 				}
 
@@ -206,10 +220,22 @@ class BreadCrumbs {
 
 				$wp_styles_css = isset($wp_styles['css']) ? $wp_styles['css'] : '';
 
+				$class = '';
+
+				if (is_string($attributes['className'])) {
+					$class = implode(
+						' ',
+						array_map(
+							'sanitize_html_class',
+							explode(' ', $attributes['className'])
+						)
+					);
+				}
+
 				return $breadcrumbs_builder->render(
 					array_merge(
 						[
-							'class' => $attributes['className'],
+							'class' => $class,
 						],
 						! empty($wp_styles_css) || ! empty($colors_css) ? [
 							'style' => $wp_styles_css . $colors_css

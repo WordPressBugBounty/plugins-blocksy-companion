@@ -7687,7 +7687,7 @@ msgstr "Rever encomenda antes dos conteúdos do carrinho"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:897
 msgid "Review order after cart contents"
-msgstr "Rever encomenda depois dos conte��dos do carrinho"
+msgstr "Rever encomenda depois dos conteúdos do carrinho"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:901
 msgid "Review order before order total"

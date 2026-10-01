@@ -6753,7 +6753,7 @@ msgstr "Lær mer om dattertema"
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ChildTheme.js:72
 msgid "We strongly recommend to install the child theme, this way you will have freedom to make changes without breaking the parent theme."
-msgstr "Vil vil sterkt anbefale å installere et dattertema. På den måten vil du ha frihet til å gj��re endringer uten å skade modertemaet."
+msgstr "Vil vil sterkt anbefale å installere et dattertema. På den måten vil du ha frihet til å gjøre endringer uten å skade modertemaet."
 
 #: static/js/dashboard/screens/DemoInstall/Wizzard/ChildTheme.js:79
 msgid "We strongly recommend to activate the child theme, this way you will have freedom to make changes without breaking the parent theme."

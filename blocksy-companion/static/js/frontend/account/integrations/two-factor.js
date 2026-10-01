@@ -61,9 +61,14 @@ export const maybeMountTwoFactorForm = (form, doc) => {
 
 		let formData = new FormData(maybeTwoFactorForm)
 
+		// FormData omits the clicked button, which WP 2FA needs to identify resend requests.
+		if (e.submitter?.name) {
+			formData.append(e.submitter.name, e.submitter.value)
+		}
+
 		fetch(maybeTwoFactorForm.action, {
 			method: maybeTwoFactorForm.method,
-			body: formData,
+			body: formData
 		})
 			.then((response) => response.text())
 			.then((html) => {
@@ -80,8 +85,11 @@ export const maybeMountTwoFactorForm = (form, doc) => {
 
 				if (!hasError) {
 					setTimeout(() => {
-						location = form.querySelector(
-							'[name="redirect_to"]'
+						location = (
+							form.querySelector('[name="redirect_to"]') ||
+							maybeTwoFactorForm.querySelector(
+								'[name="redirect_to"]'
+							)
 						).value
 					}, 2000)
 				}
