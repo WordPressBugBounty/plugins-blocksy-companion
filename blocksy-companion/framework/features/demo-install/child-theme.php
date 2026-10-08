@@ -8,7 +8,7 @@ if (! defined('ABSPATH')) {
 
 class DemoInstallChildThemeInstaller {
 	public function import() {
-		if (! current_user_can('edit_theme_options')) {
+		if (! current_user_can('switch_themes')) {
 			wp_send_json_error([
 				'message' => __("Sorry, you don't have permission to install child themes.", 'blocksy-companion')
 			]);
@@ -29,6 +29,12 @@ class DemoInstallChildThemeInstaller {
 		global $wp_filesystem;
 
 		if (! $wp_filesystem->exists($path)) {
+			if (! current_user_can('install_themes')) {
+				wp_send_json_error([
+					'message' => __("Sorry, you don't have permission to install child themes.", 'blocksy-companion')
+				]);
+			}
+
 			$wp_filesystem->mkdir( $path );
 
 			$wp_filesystem->put_contents(

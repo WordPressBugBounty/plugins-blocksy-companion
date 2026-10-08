@@ -5466,7 +5466,7 @@ msgstr ""
 
 #: framework/helpers/exts-configs.php:263
 msgid "A set of features that lets you create easily your dream products wishlists and share them with friends and family."
-msgstr "دسته‌ای از امکانات که به شما اجازه می‌دهد به سادگی لیست علاقه‌مندی‌های محصول دلخواه خود را بسازید و آن‌ها را با دوستان و خانواده به اشتراک بگذا��ید."
+msgstr "دسته‌ای ��ز امکانات که به شما اجازه می‌دهد به سادگی لیست علاقه‌مندی‌های محصول دلخواه خود را بسازید و آن‌ها را با دوستان و خانواده به اشتراک بگذارید."
 
 #: framework/helpers/exts-configs.php:270
 msgid "Compare View"
@@ -5684,7 +5684,7 @@ msgstr "انتخاب بلوک محتوا"
 #: framework/features/header/items/account/options.php:271,
 #: framework/premium/features/premium-header/items/content-block/options.php:16
 msgid "Create a new content Block/Hook"
-msgstr "ایجاد یک ب��وک محتوا/هوک جدید"
+msgstr "ایجاد یک بلوک محتوا/هوک جدید"
 
 #: framework/premium/extensions/mega-menu/options.php:647
 msgid "Heading Font"
@@ -6656,7 +6656,7 @@ msgstr "در حال فعال‌سازی افزونه‌ی %s"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:34
 msgid "downloading demo widgets"
-msgstr "د�� حال دریافت ابزارک‌های نمایشی"
+msgstr "در حال دریافت ابزارک‌های نمایشی"
 
 #: static/js/dashboard/screens/DemoInstall/Installer/messages.js:38
 msgid "installing demo widgets"

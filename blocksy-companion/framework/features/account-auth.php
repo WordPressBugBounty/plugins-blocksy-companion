@@ -177,8 +177,9 @@ class AccountAuth {
 
 		$this->require_wp_login();
 
-		$_POST['woocommerce-register-nonce'] = '~';
-		add_filter('dokan_register_nonce_check', '__return_false');
+		// Never disable dokan_register_nonce_check: Dokan then treats the
+		// request as its own vendor form and allows the seller role.
+		$_POST['woocommerce-register-nonce'] = wp_create_nonce('woocommerce-register');
 
 		if (! $this->get_registration_strategy()) {
 			exit;
@@ -234,11 +235,7 @@ class AccountAuth {
 						$errors
 					)
 					&&
-					// phpcs:ignore WordPress.Security.NonceVerification.Missing
-					isset($_POST['role'])
-					&&
-					// phpcs:ignore WordPress.Security.NonceVerification.Missing
-					$_POST['role'] === 'seller'
+					in_array('seller', get_userdata($errors)->roles, true)
 				) {
 					ob_start();
 					wc_set_customer_auth_cookie($errors);

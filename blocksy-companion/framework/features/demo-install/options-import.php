@@ -109,6 +109,18 @@ class DemoInstallOptionsInstaller {
 			if ($key === 'sidebars_widgets') continue;
 			if ($key === 'custom_css_post_id') continue;
 
+			if (
+				$key === 'header_placements'
+				||
+				$key === 'footer_placements'
+			) {
+				$sanitized = blocksy_companion_theme_functions()->blocksy_sanitize_builder_value([], $val);
+
+				if ($sanitized !== ThemeFunctions::$NON_EXISTING_FUNCTION) {
+					$val = $sanitized;
+				}
+			}
+
 			do_action('customize_save_' . $key, $wp_customize);
 			set_theme_mod($key, $val);
 		}

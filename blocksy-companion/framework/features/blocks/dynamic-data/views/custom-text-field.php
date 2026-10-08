@@ -25,8 +25,8 @@ if (
 	return;
 }
 
-$value_after = blocksy_companion_sanitize_html_for_display(blocksy_companion_akg('after', $attributes, ''));
-$value_before = blocksy_companion_sanitize_html_for_display(blocksy_companion_akg('before', $attributes, ''));
+$value_before = blocksy_companion_akg('before', $attributes, '');
+$value_after = blocksy_companion_akg('after', $attributes, '');
 
 $has_field_link = blocksy_companion_akg('has_field_link', $attributes, 'no');
 $has_field_link_wrap_content = blocksy_companion_akg('has_field_link_wrap_content', $attributes, 'no');
@@ -90,7 +90,7 @@ $link_attr = [];
 
 if ($has_field_link === 'yes') {
 	$link_attr = [
-		'href' => $final_link['value'],
+		'href' => esc_url(blocksy_companion_akg('value', $final_link, '')),
 	];
 
 	if (blocksy_companion_akg('has_field_link_new_tab', $attributes, 'no') === 'yes') {
@@ -112,12 +112,10 @@ if ($has_field_link === 'yes') {
 
 $wrapper_attr = get_block_wrapper_attributes($wrapper_attr);
 
-if (! empty($value_after) && ! $has_fallback) {
-	$value .= $value_after;
-}
-
-if (! empty($value_before) && ! $has_fallback) {
-	$value = $value_before . $value;
+if (! $has_fallback) {
+	$value = blocksy_companion_sanitize_html_for_display(
+		$value_before . $value . $value_after
+	);
 }
 
 if (

@@ -14,7 +14,7 @@ class Capabilities {
 		'custom_post_type' => 'manage_options',
 		'conditions' => 'manage_options',
 
-		'ext_code_snippets_fields' => 'edit_posts'
+		'ext_code_snippets_fields' => 'unfiltered_html'
 	];
 
 	public function __construct() {

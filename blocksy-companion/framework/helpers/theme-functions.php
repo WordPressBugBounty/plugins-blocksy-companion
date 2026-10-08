@@ -56,6 +56,7 @@ class ThemeFunctions {
 			'blocksy_lazy_zone_end',
 			'blocksy_start_fatal_containment',
 			'blocksy_restore_fatal_containment',
+			'blocksy_sanitize_builder_value',
 		];
 
 		if (in_array($name, $optional_functions, true)) {

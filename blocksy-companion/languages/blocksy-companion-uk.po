@@ -182,7 +182,7 @@ msgstr "Детальну інформацію про те, як згенерув
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:149
 msgid "White Label Extension"
-msgstr "Розши��ення White Label"
+msgstr "Розш��рення White Label"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:161
 msgid "Please note that disabling this option will hide the white-label extension. To restore it, press the SHIFT key while clicking the dashboard logo."
@@ -417,7 +417,7 @@ msgstr "Цей файл, ймовірно, не є допустимим файл
 
 #: framework/features/svg.php:37
 msgid "SVG files cannot contain PHP code."
-msgstr "Файли SVG не повинні ��істити PHP-код."
+msgstr "Файли SVG не повинні містити PHP-код."
 
 #: framework/helpers/exts-configs.php:403,
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:4
@@ -466,7 +466,7 @@ msgstr "Насолоджуйтесь!"
 
 #: framework/features/demo-install/wp-importer.php:235
 msgid "Remember to update the passwords and roles of imported users."
-msgstr "Не забудьте оновити паролі та ролі імпо��тованих користувачів."
+msgstr "Не забудьте оновити паролі та ролі імп��ртованих користувачів."
 
 #. translators: %s is the path to the WXR file.
 #: framework/features/demo-install/wp-importer.php:258
@@ -485,7 +485,7 @@ msgstr "Не вдалося імпортувати автора %s. Його п�
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
-msgstr "Призначити авто��ів"
+msgstr "Призначити авт��рів"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
@@ -938,7 +938,7 @@ msgstr "Таксономії - макет 5"
 
 #: framework/features/header/items/account/options.php:7
 msgid "Logout Action"
-msgstr "Дія в��ходу з системи"
+msgstr "Дія виходу з системи"
 
 #: framework/features/header/items/account/options.php:15
 msgid "User Name"
@@ -970,7 +970,7 @@ msgstr "Видимість значка"
 
 #: framework/features/header/items/account/options.php:662
 msgid "Link to Page"
-msgstr "Посила��ня на сторінку"
+msgstr "Посилання на сторінку"
 
 #: framework/features/header/items/account/options.php:757
 msgid "Top Offset (Sticky State)"
@@ -1032,7 +1032,7 @@ msgstr "При натисканні кнопки закриття"
 
 #: framework/premium/features/content-blocks/options/popup.php:313
 msgid "On ESC Button Press"
-msgstr "При натисканні кнопки ESC"
+msgstr "При натисканні кн��пки ESC"
 
 #: framework/premium/features/content-blocks/options/popup.php:325
 msgid "On Backdrop Click"
@@ -1375,7 +1375,7 @@ msgstr "Увімкнути для попередніх замовлень"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:42
 msgid "Allow users to join the waitlist even if the product is on backorder."
-msgstr "Дозволяє користувачам записуватися в список ��чікування, навіть якщо товар знаходиться в стадії попереднього замовлення."
+msgstr "Дозволяє користувачам записуватися в список очікування, навіть якщо товар знаходиться в стадії попереднього замовлення."
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/customizer-options.php:55
 msgid "Show Users Count"
@@ -1688,7 +1688,7 @@ msgstr "відписатися"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-subscription-confirmed.php:31,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-subscription-confirmed.php:15
 msgid "You have been successfully added to the waitlist for the following item:"
-msgstr "Ви додані до списку очікування цього товару:"
+msgstr "Ви додані до списку очікування ць��го товару:"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-confirm-subscription.php:17
@@ -1743,7 +1743,7 @@ msgstr "Відображення спливаючого вікна динамі�
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
-msgstr "Уві��к. тригер вікна"
+msgstr "Увімк. тригер вікна"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:26
 msgid "Product Page"
@@ -1983,7 +1983,7 @@ msgstr "Колір межі контейнера"
 
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:197
 msgid "Container Background Color"
-msgstr "Колір фону контейнера"
+msgstr "Ко��ір фону контейнера"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:188
 msgid "API Version"
@@ -2536,7 +2536,7 @@ msgstr "Супутні"
 #: static/js/editor/blocks/query/index.js:13
 #: static/js/editor/blocks/tax-query/index.js:13
 msgid "Create advanced queries based on your specified criterias."
-msgstr "��творення розширених запитів на основі заданих критеріїв."
+msgstr "Створення розширених запитів на основі заданих критеріїв."
 
 #: static/js/editor/blocks/search/Edit.js:163
 msgid "Button Outside"
@@ -2648,7 +2648,7 @@ msgstr "Скинути всі"
 
 #: static/js/options/ConditionsManager/ExpireCondition.js:119
 msgid "The expiration date cannot be set earlier than the start date."
-msgstr "Дата закінчення ��ерміну не може бути раніше дати початку дії."
+msgstr "Дата закінчення терміну не може бути раніше дати початку дії."
 
 #: framework/features/blocks/about-me/options.php:207,
 #: framework/features/blocks/share-box/options.php:66,
@@ -2741,7 +2741,7 @@ msgstr "Посилання на запис"
 #: framework/features/blocks/dynamic-data/options.php:209,
 #: framework/features/blocks/dynamic-data/options.php:213
 msgid "Link to author page"
-msgstr "Посилання на сторінку автора"
+msgstr "Посилання на с��орінку автора"
 
 #: framework/features/blocks/dynamic-data/options.php:228
 msgid "Link to term page"
@@ -2842,7 +2842,7 @@ msgstr "Перекриття"
 #. translators: placeholder here means the actual URL.
 #: framework/premium/features/media-video/options.php:140
 msgid "Choose how the video will fill its container. More info about this can be found %1$shere%2$s."
-msgstr "Як відео буде розміщено в контейнері. Детальну інформацію про це можна знайти %1$sтут%2$s."
+msgstr "Як відео буде розміщено в контейнері. Детальну інформацію про ��е можна знайти %1$sтут%2$s."
 
 #. translators: %s is the author's display name.
 #: framework/features/blocks/dynamic-data/views/avatar-field.php:31
@@ -3034,7 +3034,7 @@ msgstr "Цільова кількість"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:90
 msgid "Amount of items the client has to buy in order to get free shipping."
-msgstr "Кількість товарів, які клієнт повинен придбати, щоб отримати безкоштовну доставку."
+msgstr "Кількість това��ів, які клієнт повинен придбати, щоб отримати безкоштовну доставку."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:172
 msgid "You can use dynamic code tags such as {items} inside this option."
@@ -3112,7 +3112,7 @@ msgstr "Нестача запасів"
 
 #: framework/helpers/exts-configs.php:370
 msgid "Show the remaining stock of a product to create a sense of urgency and encourage your visitors to make a purchase."
-msgstr "Відображення залишків товару, щоб створити відчуття терміновості та спонукати відвідувачів до покупки."
+msgstr "Відображення залишків товару, щоб створити відчуття терміновості та спону��ати відвідувачів до покупки."
 
 #. translators: %s is the product name (theme or plugin)
 #: framework/views/theme-mismatch.php:36
@@ -3751,7 +3751,7 @@ msgstr "Отримання..."
 
 #: framework/premium/extensions/adobe-typekit/dashboard-static/js/AdobeTypekit.js:164
 msgid "Please enter a valid Project ID to get all fonts."
-msgstr "Вве��іть дійсний ID проекту, щоб отримати всі шрифти."
+msgstr "Введіть дійсний ID проекту, щоб отримати всі шрифти."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:302
 msgid "This provider is used only for testing purposes. It doesnt register any real subscribers."
@@ -6583,7 +6583,7 @@ msgstr "Умови відображення прозорого заголовк�
 
 #: static/js/options/DisplayCondition.js:23
 msgid "Add one or more conditions to display the transparent header."
-msgstr "Додайте одну або декілька умов для відображення прозорого заголовка."
+msgstr "Додайте одну або декілька умов для відо��раження прозорого заголовка."
 
 #: static/js/dashboard/screens/DemoInstall.js:166
 msgid "Loading Starter Sites..."
@@ -7683,7 +7683,7 @@ msgstr "Оформлення перед відгуком"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:889
 msgid "Checkout order review"
-msgstr "Перегляд оформлюваного замовлення"
+msgstr "Перегляд о��ормлюваного замовлення"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:893
 msgid "Review order before cart contents"
@@ -11508,7 +11508,7 @@ msgstr "Розсилка"
 #: static/js/editor/blocks/contact-info/Edit.js:107
 #: static/js/editor/blocks/dynamic-data/components/InspectorControls.js:276
 msgid "Text"
-msgstr "Т��кст"
+msgstr "Текст"
 
 #: framework/extensions/newsletter-subscribe/ct-newsletter-subscribe/options.php:19,
 #: framework/features/blocks/about-me/options.php:77

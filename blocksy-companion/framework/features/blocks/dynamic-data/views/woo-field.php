@@ -100,15 +100,17 @@ if (empty(trim($value))) {
 	return;
 }
 
-$value_after = blocksy_companion_sanitize_html_for_display(blocksy_companion_akg('after', $attributes, ''));
-$value_before = blocksy_companion_sanitize_html_for_display(blocksy_companion_akg('before', $attributes, ''));
+$value_before = blocksy_companion_akg('before', $attributes, '');
+$value_after = blocksy_companion_akg('after', $attributes, '');
 
-if (! empty($value_after) && ! $has_fallback) {
-	$value .= $value_after;
-}
-
-if (! empty($value_before) && ! $has_fallback) {
-	$value = $value_before . $value;
+if (
+	! $has_fallback
+	&&
+	(! empty($value_before) || ! empty($value_after))
+) {
+	$value = blocksy_companion_sanitize_html_for_display(
+		$value_before . $value . $value_after
+	);
 }
 
 $tagName = blocksy_companion_akg('tagName', $attributes, 'div');

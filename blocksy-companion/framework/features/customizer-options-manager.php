@@ -60,6 +60,14 @@ class CustomizerOptionsManager {
 				true
 			);
 
+			global $wp_customize;
+
+			if (! is_array($data) || ! $wp_customize) {
+				wp_send_json_error();
+			}
+
+			$data = $this->sanitize_import_data($data);
+
 			// The above code will only import stuff from $data['mods']
 			// that is actually a customizer control. Everything else will be ignored
 			if (isset($data['mods'])) {
@@ -184,6 +192,87 @@ class CustomizerOptionsManager {
 
 			wp_send_json_success([]);
 		});
+	}
+
+	public function sanitize_import_data($data) {
+		global $wp_customize;
+
+		$allowed_options = (new DemoInstallOptionsExport())->get_exported_options_keys();
+
+		foreach ($wp_customize->settings() as $key => $setting) {
+			if (
+				'option' !== $setting->type
+				||
+				'widget_' === substr(strtolower($key), 0, 7)
+				||
+				'sidebars_' === substr(strtolower($key), 0, 9)
+				||
+				! $setting->check_capabilities()
+			) {
+				continue;
+			}
+
+			$allowed_options[] = $key;
+		}
+
+		$options = [];
+
+		if (isset($data['options']) && is_array($data['options'])) {
+			$options = array_intersect_key(
+				$data['options'],
+				array_flip($allowed_options)
+			);
+		}
+
+		$data['options'] = $options;
+
+		if (current_user_can(
+			blocksy_companion_get_capabilities()->get_wp_capability_by('ext_code_snippets_fields')
+		)) {
+			return $data;
+		}
+
+		if (isset($data['mods']) && is_array($data['mods'])) {
+			unset(
+				$data['mods']['header_scripts'],
+				$data['mods']['header_after_body_scripts'],
+				$data['mods']['footer_scripts']
+			);
+		}
+
+		unset($data['fluent_snippets'], $data['wp_css']);
+
+		if (isset($data['blocksy_widgets']) && is_array($data['blocksy_widgets'])) {
+			global $wp_widget_factory;
+
+			foreach ($data['blocksy_widgets'] as $sidebar_id => $widgets) {
+				if (! is_array($widgets)) {
+					unset($data['blocksy_widgets'][$sidebar_id]);
+					continue;
+				}
+
+				foreach ($widgets as $widget_instance_id => $widget) {
+					$widget_object = $wp_widget_factory->get_widget_object(
+						preg_replace('/-[0-9]+$/', '', $widget_instance_id)
+					);
+
+					$sanitized = false;
+
+					if ($widget_object && is_array($widget)) {
+						$sanitized = $widget_object->update($widget, []);
+					}
+
+					if (! is_array($sanitized)) {
+						unset($data['blocksy_widgets'][$sidebar_id][$widget_instance_id]);
+						continue;
+					}
+
+					$data['blocksy_widgets'][$sidebar_id][$widget_instance_id] = $sanitized;
+				}
+			}
+		}
+
+		return $data;
 	}
 
 	private function get_data($theme_slug = null, $strategy = 'options') {

@@ -474,7 +474,7 @@ msgstr "Không tìm thấy tệp xuất tại <code>%s</code>. Có thể nguyên
 #. translators: %s is the WXR version number.
 #: framework/features/demo-install/wp-importer.php:282
 msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
-msgstr "Tệp WXR này (phiên bản %s) có thể không được hỗ trợ bởi phiên bản trình nhập liệu hiện tại. Vui lòng cân nhắc cập nhật."
+msgstr "Tệp WXR này (phiên bản %s) có thể không được hỗ trợ bởi phiên bản trình nhập liệu hiện tại. Vui lòng cân nhắc cập nh��t."
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
@@ -747,7 +747,7 @@ msgstr "Điểm trọng tâm"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:269
 msgid "Fixed background"
-msgstr "Nền cố định"
+msgstr "Nền cố đ���nh"
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:286
 msgid "Repeated background"
@@ -1050,7 +1050,7 @@ msgstr "Độ trễ"
 
 #: framework/premium/features/content-blocks/options/popup.php:473
 msgid "Select a post/page to preview it's content inside the editor while building the popup."
-msgstr "Chọn m��t bài viết/trang để xem trước nội dung bên trong trình chỉnh sửa khi xây dựng popup."
+msgstr "Chọn một bài viết/trang để xem trước nội dung bên trong trình chỉnh sửa khi xây dựng popup."
 
 #: framework/premium/features/content-blocks/options/popup.php:572
 msgid "Lock the page scroll while the popup is triggered/oppened."
@@ -1139,7 +1139,7 @@ msgstr "Làm mờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:619
 msgid "Crossed"
-msgstr "G���ch chéo"
+msgstr "Gạch chéo"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-suggested-products/options/generic.php:35
 msgid "Block"
@@ -1261,7 +1261,7 @@ msgstr "Xem thêm thông tin về cách tạo danh sách trong FluentCRM %stại
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/AllFonts.js:123
 msgid "Modern Font Stack"
-msgstr "Bộ phông chữ hiện đại"
+msgstr "Bộ phông chữ hi��n đại"
 
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/CustomFonts.js:142
 #: framework/premium/extensions/custom-fonts/dashboard-static/js/Uploader.js:330
@@ -1615,7 +1615,7 @@ msgstr "Hủy đăng ký"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:72
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:331
 msgid "Yes"
-msgstr "C��"
+msgstr "Có"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/product-mobile-actions.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:72
@@ -1737,7 +1737,7 @@ msgstr "Thông báo đã thêm vào giỏ hàng"
 
 #: framework/helpers/exts-configs.php:378
 msgid "Show a dynamic confirmation popup with product recommendations whenever items are added to the cart."
-msgstr "Hiển thị một hộp thoại xác nhận động kèm theo gợi ý sản phẩm mỗi khi có m���t hàng được thêm vào giỏ hàng."
+msgstr "Hiển thị một hộp thoại xác nhận động kèm theo gợi ý sản phẩm mỗi khi có mặt hàng được thêm vào giỏ hàng."
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:15
 msgid "Trigger Popup On"
@@ -1932,7 +1932,7 @@ msgstr "Tạo lại bảng tra cứu phân loại sản phẩm"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:501
 msgid "This tool will regenerate the product taxonomies lookup table data from existing product(s) data. This process may take a while."
-msgstr "Công cụ này sẽ tái tạo dữ liệu bảng tra cứu phân loại sản phẩm từ dữ liệu sản phẩm hiện có. Quá trình n��y có thể mất một thời gian."
+msgstr "Công cụ này sẽ tái tạo dữ liệu bảng tra cứu phân loại sản phẩm từ dữ liệu sản phẩm hiện có. Quá trình này có thể mất một thời gian."
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:512
 msgid "Product taxonomies lookup table data is regenerating"
@@ -4076,7 +4076,7 @@ msgstr "Thanh vận chuyển miễn phí"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:212
 msgid "Show if cart is empty"
-msgstr "Hiển thị nếu giỏ h��ng trống"
+msgstr "Hiển thị nếu giỏ hàng trống"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:445,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:180
@@ -5197,7 +5197,7 @@ msgstr "Bản sao bài viết đã được tạo."
 
 #: framework/premium/features/local-gravatars.php:36
 msgid "Store Gravatars Locally"
-msgstr "Lưu trữ Gravatars cục b���"
+msgstr "Lưu trữ Gravatars cục bộ"
 
 #: framework/premium/features/local-gravatars.php:41
 msgid "Store and load Gravatars locally for increased privacy and performance."

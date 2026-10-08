@@ -818,3 +818,16 @@ function blocksy_companion_sanitize_html_for_display($html) {
 
 	return $result;
 }
+
+function blocksy_companion_get_viewable_post_types($post_types) {
+	$result = array_values(array_filter(
+		array_map('trim', explode(',', $post_types)),
+		'is_post_type_viewable'
+	));
+
+	if (empty($result)) {
+		return ['post'];
+	}
+
+	return $result;
+}

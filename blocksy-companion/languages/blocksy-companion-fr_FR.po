@@ -453,7 +453,7 @@ msgstr "Il semble que ce ne soit pas un fichier WXR, le numéro de version WXR e
 #: framework/features/demo-install/wp-importer.php:250,
 #: framework/features/demo-install/wp-importer.php:271
 msgid "Sorry, there has been an error."
-msgstr "Désolé, il y a eu une erreur."
+msgstr "D��solé, il y a eu une erreur."
 
 #: framework/features/demo-install/wp-importer.php:234
 msgid "All done."
@@ -1211,7 +1211,7 @@ msgstr "4 étoiles"
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/rating.php:120
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/rating-filter/Preview.js:25
 msgid "5 stars"
-msgstr "5 étoiles"
+msgstr "5 ��toiles"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/filter-types/status.php:147
 msgid "On sale"
@@ -1949,7 +1949,7 @@ msgstr "Remplissage en cours (%d)"
 
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:561
 msgid "Resume the product taxonomies lookup table regeneration"
-msgstr "Reprendre la rég��nération de la table de recherche des taxonomies de produits"
+msgstr "Reprendre la régénération de la table de recherche des taxonomies de produits"
 
 #. translators: %1$s = count of products already processed.
 #: framework/premium/extensions/woocommerce-extra/features/filters/includes/taxonomies-products-lookup-table.php:564
@@ -10791,7 +10791,7 @@ msgstr "Bouton « Lire la suite »"
 
 #: framework/extensions/product-reviews/extension.php:409
 msgid "Buy Now Button"
-msgstr "Bouton « Acheter maintenant »"
+msgstr "Bouton «��Acheter maintenant »"
 
 #: framework/extensions/product-reviews/extension.php:257,
 #: framework/extensions/product-reviews/extension.php:428
@@ -11591,7 +11591,7 @@ msgstr "Scripts après l'ouverture de la balise body"
 
 #: framework/helpers/exts-configs.php:97
 msgid "Upload an unlimited number of custom fonts or variable fonts and use them throughout Blocksy and your favorite page builder."
-msgstr "Téléversez un nombre illimité de polices personnalisées ou de polices variables et utilisez-les dans Blocksy et dans votre constructeur de pages pr��féré."
+msgstr "Téléversez un nombre illimité de polices personnalisées ou de polices variables et utilisez-les dans Blocksy et dans votre constructeur de pages préféré."
 
 #: framework/helpers/exts-configs.php:109
 msgid "Serve your chosen Google Fonts from your own web server. This will increase the loading speed and makes sure your website complies with the privacy regulations."

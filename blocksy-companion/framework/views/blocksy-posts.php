@@ -14,10 +14,12 @@ if (! empty($args['class'])) {
 	$shortcode_class .= ' ' . esc_attr($args['class']);
 }
 
+$post_types = blocksy_companion_get_viewable_post_types($args['post_type']);
+
 $query_args = [
 	'order' => $args['order'],
 	'ignore_sticky_posts' => true,
-	'post_type' => explode(',', $args['post_type']),
+	'post_type' => $post_types,
 	'orderby' => $args['orderby'],
 	'posts_per_page' => $args['limit'],
 	'ignore_sticky_posts' => $args['ignore_sticky_posts'] === 'yes',
@@ -25,14 +27,18 @@ $query_args = [
 	'blocksy_posts_shortcode' => true
 ];
 
-if (! empty($args['meta_value'])) {
-	// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
-	$query_args['meta_value'] = $args['meta_value'];
-}
-
-if (! empty($args['meta_key'])) {
+if (
+	! empty($args['meta_key'])
+	&&
+	! is_protected_meta($args['meta_key'], 'post')
+) {
 	// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key
 	$query_args['meta_key'] = $args['meta_key'];
+
+	if (! empty($args['meta_value'])) {
+		// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_value
+		$query_args['meta_value'] = $args['meta_value'];
+	}
 }
 
 if ($args['has_pagination'] === 'yes') {
@@ -222,7 +228,7 @@ if ($args['view'] === 'slider') {
 		$custom_post_types = blocksy_companion_theme_functions()->blocksy_manager()->post_types->get_supported_post_types();
 	}
 
-	$preferred_post_type = explode(',', $args['post_type'])[0];
+	$preferred_post_type = $post_types[0];
 
 	foreach ($custom_post_types as $cpt) {
 		if ($cpt === $preferred_post_type) {

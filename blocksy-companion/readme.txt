@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.58
+Stable tag: 2.1.59
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,17 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.59: 2026-10-08
+- Improvement: Account modal - respect Dokan vendor registration setting
+- Improvement: Custom Code Snippets - show the post and page panel only to users who can save unfiltered HTML
+- Improvement: Custom Fonts and Local Google Fonts - make sure font settings are properly sanitized and only administrators can manage extensions
+- Improvement: Customizer Options Manager - import only known settings and require unfiltered HTML permission for code, CSS and widget scripts
+- Improvement: Dynamic Data - correctly render HTML tags opened in the Before field and closed in the After field
+- Improvement: Dynamic Data - properly escape custom field values and link URLs in blocks and card layers
+- Improvement: Posts block - only list public post types
+- Improvement: Starter Sites - require plugin and theme management permissions to deactivate demo plugins and install the child theme
+- Fix: Header/Footer builder - allow scripts and styles in Text and Copyright elements for unfiltered_html authors
+
 2.1.58: 2026-10-01
 - Improvement: Account header element - add support for the WP 2FA plugin by Melapress
 - Improvement: Account header element - prevent the login modal from freezing after anchor scrolling

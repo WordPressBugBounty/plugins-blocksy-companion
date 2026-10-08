@@ -856,7 +856,7 @@ class Query {
 
 		$query_args = [
 			'order' => $attributes['order'],
-			'post_type' => explode(',', $attributes['post_type']),
+			'post_type' => blocksy_companion_get_viewable_post_types($attributes['post_type']),
 			'orderby' => $attributes['orderby'],
 			'posts_per_page' => $attributes['limit'],
 			'post_status' => 'publish'
