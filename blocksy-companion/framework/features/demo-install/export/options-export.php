@@ -4,7 +4,7 @@ namespace Blocksy;
 
 class DemoInstallOptionsExport {
 	public function get_exported_options_keys() {
-		return [
+		return array(
 			'blocksy_ext_mailchimp_credentials',
 			'blocksy_ext_post_types_extra_settings',
 			'blocksy_ext_woocommerce_extra_settings',
@@ -21,8 +21,8 @@ class DemoInstallOptionsExport {
 			'elementor_cpt_support',
 
 			// Greenshift
-			'gspb_global_settings'
-		];
+			'gspb_global_settings',
+		);
 	}
 
 	private $core_options = array(
@@ -33,7 +33,7 @@ class DemoInstallOptionsExport {
 		// 'page_for_posts',
 	);
 
-	private $page_ids = [
+	private $page_ids = array(
 		'woocommerce_shop_page_id',
 		'woocommerce_cart_page_id',
 		'woocommerce_checkout_page_id',
@@ -46,61 +46,65 @@ class DemoInstallOptionsExport {
 		'woocommerce_logout_page_id',
 		'woocommerce_lost_password_page_id',
 		'page_on_front',
-		'page_for_posts'
-	];
+		'page_for_posts',
+	);
 
 	public function export() {
-		$theme = get_stylesheet();
+		$theme    = get_stylesheet();
 		$template = get_template();
-		$charset = get_option( 'blog_charset' );
-		$mods = get_theme_mods();
+		$charset  = get_option( 'blog_charset' );
+		$mods     = get_theme_mods();
 
-		$data = [
+		$data = array(
 			'template' => $template,
-			'mods' => $mods ? $mods : [],
-			'options' => []
-		];
+			'mods'     => $mods ? $mods : array(),
+			'options'  => array(),
+		);
 
 		global $wp_customize;
 
 		// Get options from the Customizer API.
 		$settings = $wp_customize->settings();
 
-		foreach ($settings as $key => $setting) {
-			if ('option' == $setting->type) {
-				if ('widget_' === substr(strtolower($key), 0, 7)) {
+		foreach ( $settings as $key => $setting ) {
+			if ( 'option' == $setting->type ) {
+				if ( 'widget_' === substr( strtolower( $key ), 0, 7 ) ) {
 					continue;
 				}
 
-				if ('sidebars_' === substr(strtolower($key), 0, 9)) {
+				if ( 'sidebars_' === substr( strtolower( $key ), 0, 9 ) ) {
 					continue;
 				}
 
-				if (in_array($key, $this->core_options)) {
+				if ( in_array( $key, $this->core_options ) ) {
 					continue;
 				}
 
-				$data['options'][$key] = $setting->value();
+				$data['options'][ $key ] = $setting->value();
 			}
 		}
 
 		$option_keys = $this->get_exported_options_keys();
 
-		foreach ($option_keys as $option_key) {
-			$data['options'][$option_key] = get_option($option_key);
+		foreach ( $option_keys as $option_key ) {
+			$data['options'][ $option_key ] = get_option( $option_key );
 		}
 
-		if (function_exists('wp_get_custom_css_post')) {
+		if ( is_array( $data['options']['blocksy_ext_mailchimp_credentials'] ) ) {
+			unset( $data['options']['blocksy_ext_mailchimp_credentials']['api_key'] );
+		}
+
+		if ( function_exists( 'wp_get_custom_css_post' ) ) {
 			$data['wp_css'] = wp_get_custom_css();
 		}
 
 		/**
 		 * Temporary work around until Elementor comes up with something better
 		 */
-		if (class_exists('\Elementor\Plugin')) {
+		if ( class_exists( '\Elementor\Plugin' ) ) {
 			$default_post_id = \Elementor\Plugin::$instance->kits_manager->get_active_id();
 
-			if (! empty($default_post_id)) {
+			if ( ! empty( $default_post_id ) ) {
 				$global_data = get_post_meta(
 					$default_post_id,
 					'_elementor_page_settings',
@@ -111,85 +115,88 @@ class DemoInstallOptionsExport {
 			}
 		}
 
-		if (class_exists('\FluentForm\App\Hooks\Handlers\ActivationHandler')) {
-			$form = \FluentForm\App\Models\Form::with(['formMeta'])->get();
+		if ( class_exists( '\FluentForm\App\Hooks\Handlers\ActivationHandler' ) ) {
+			$form = \FluentForm\App\Models\Form::with( array( 'formMeta' ) )->get();
 
-			$forms = [];
+			$forms = array();
 
-			foreach ($form as $item) {
-				$form = json_decode($item);
+			foreach ( $form as $item ) {
+				$form = json_decode( $item );
 
-				$formMetaFiltered = array_filter($form->form_meta, function ($item) {
-					return ($item->meta_key !== '_total_views');
-				});
+				$form_meta_filtered = array_filter(
+					$form->form_meta,
+					function ( $item ) {
+						return ( '_total_views' !== $item->meta_key );
+					}
+				);
 
-				$form->metas = $formMetaFiltered;
-				$form->form_fields = json_decode($form->form_fields);
+				$form->metas       = $form_meta_filtered;
+				$form->form_fields = json_decode( $form->form_fields );
 
 				$forms[] = $form;
 			}
 
 			$data['fluent_form_forms'] = json_decode(
-				json_encode(array_values($forms)),
+				json_encode( array_values( $forms ) ),
 				true
 			);
 		}
 
-		if (class_exists('\FluentBooking\App\Hooks\Handlers\DataExporter')) {
-			$exporter = new \FluentBooking\App\Hooks\Handlers\DataExporter();
-			$fluent_booking_data = $exporter->prepareCalendarExportData(null);
+		if ( class_exists( '\FluentBooking\App\Hooks\Handlers\DataExporter' ) ) {
+			$exporter            = new \FluentBooking\App\Hooks\Handlers\DataExporter();
+			$fluent_booking_data = $exporter->prepareCalendarExportData( null );
 
 			$data['fluent_booking_data'] = $fluent_booking_data;
 		}
 
-		if (function_exists('wc_get_attribute_taxonomies')) {
+		if ( function_exists( 'wc_get_attribute_taxonomies' ) ) {
 			$attribute_taxonomies = wc_get_attribute_taxonomies();
 
-			$data['woocommerce_attribute_taxonomies'] = json_decode(json_encode(
-				array_values(wc_get_attribute_taxonomies())
-			));
+			$data['woocommerce_attribute_taxonomies'] = json_decode(
+				json_encode(
+					array_values( wc_get_attribute_taxonomies() )
+				)
+			);
 		}
 
-		if (class_exists('\FluentSnippets\App\Model\Snippet')) {
-			$snippetModel = new \FluentSnippets\App\Model\Snippet();
-			$allSnippets = $snippetModel->get();
+		if ( class_exists( '\FluentSnippets\App\Model\Snippet' ) ) {
+			$snippet_model = new \FluentSnippets\App\Model\Snippet();
+			$all_snippets  = $snippet_model->get();
 
-			$formattedSnippets = [];
+			$formatted_snippets = array();
 
-			foreach ($allSnippets as $snippet) {
+			foreach ( $all_snippets as $snippet ) {
 				$code = $snippet['code'];
 				$meta = $snippet['meta'];
 
-				$formattedSnippets[] = [
-					'code'      => base64_encode($code),
-					'code_hash' => md5($code),
+				$formatted_snippets[] = array(
+					'code'      => base64_encode( $code ),
+					'code_hash' => md5( $code ),
 					'info'      => $meta,
-				];
+				);
 			}
 
-			$data['fluent_snippets'] = $formattedSnippets;
+			$data['fluent_snippets'] = $formatted_snippets;
 		}
 
 		return $data;
 	}
 
 	public function export_pages_ids_options() {
-		$result = [];
+		$result = array();
 
-		foreach ($this->page_ids as $single_page_id) {
-			$id = get_option($single_page_id, null);
+		foreach ( $this->page_ids as $single_page_id ) {
+			$id = get_option( $single_page_id, null );
 
 			$title = false;
 
-			if ($id) {
-				$title = get_the_title($id);
+			if ( $id ) {
+				$title = get_the_title( $id );
 			}
 
-			$result[$single_page_id] = $title;
+			$result[ $single_page_id ] = $title;
 		}
 
 		return $result;
 	}
 }
-
-

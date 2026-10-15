@@ -4,18 +4,19 @@ import {
 	Component,
 	useContext,
 	useRef,
-	useState,
+	useState
 } from '@wordpress/element'
 import {
 	Overlay,
 	OptionsPanel,
 	getValueFromInput,
-	PlacementsDragDropContext,
+	PlacementsDragDropContext
 } from 'blocksy-options'
 import { __ } from 'ct-i18n'
 import useFetch from 'react-fetch-hook'
 
 import { createTrigger, useTrigger } from '../helpers/react-use-trigger'
+import { getLocalizations } from '../editor/utils/localizations'
 
 const requestTrigger = createTrigger()
 const EditConditions = ({ forcedEdit = false, headerId }) => {
@@ -31,14 +32,14 @@ const EditConditions = ({ forcedEdit = false, headerId }) => {
 
 	const saveSettings = () => {
 		fetch(
-			`${wp.ajax.settings.url}?action=blocksy_header_update_all_conditions`,
+			`${wp.ajax.settings.url}?action=blocksy_header_update_all_conditions&nonce=${getLocalizations().dashboard_actions_nonce}`,
 			{
 				headers: {
 					Accept: 'application/json',
-					'Content-Type': 'application/json',
+					'Content-Type': 'application/json'
 				},
 				method: 'POST',
-				body: JSON.stringify(localConditions),
+				body: JSON.stringify(localConditions)
 			}
 		)
 			.then((r) => r.json())
@@ -51,7 +52,7 @@ const EditConditions = ({ forcedEdit = false, headerId }) => {
 	const {
 		data: conditions,
 		isLoading,
-		error,
+		error
 	} = useFetch(
 		`${blocksy_admin.ajax_url}?action=blocksy_header_get_all_conditions`,
 		{
@@ -65,7 +66,7 @@ const EditConditions = ({ forcedEdit = false, headerId }) => {
 
 				return data.conditions
 			},
-			depends: [requestTriggerValue],
+			depends: [requestTriggerValue]
 		}
 	)
 
@@ -83,7 +84,8 @@ const EditConditions = ({ forcedEdit = false, headerId }) => {
 					}
 
 					setIsEditing(true)
-				}}>
+				}}
+			>
 				{__('Add/Edit Conditions', 'blocksy-companion')}
 			</button>
 
@@ -118,8 +120,8 @@ const EditConditions = ({ forcedEdit = false, headerId }) => {
 										).filter(({ id }) => id !== headerId),
 										{
 											id: headerId,
-											conditions: cond,
-										},
+											conditions: cond
+										}
 									])
 								}}
 								options={{
@@ -128,15 +130,15 @@ const EditConditions = ({ forcedEdit = false, headerId }) => {
 										design: 'none',
 										value: [],
 										design: 'none',
-										label: false,
-									},
+										label: false
+									}
 								}}
 								value={{
 									conditions: (
 										(localConditions || conditions).find(
 											({ id }) => id === headerId
 										) || { conditions: [] }
-									).conditions,
+									).conditions
 								}}
 								hasRevertButton={false}
 							/>
@@ -146,7 +148,8 @@ const EditConditions = ({ forcedEdit = false, headerId }) => {
 							<button
 								className="ct-ui-button ct-ui-button-primary"
 								disabled={!localConditions}
-								onClick={() => saveSettings()}>
+								onClick={() => saveSettings()}
+							>
 								{__('Save Conditions', 'blocksy-companion')}
 							</button>
 						</div>

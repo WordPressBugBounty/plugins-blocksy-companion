@@ -1,6 +1,6 @@
 <?php
 
-if (! defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
@@ -17,37 +17,37 @@ if (! defined('ABSPATH')) {
  *
  * @return null|mixed
  */
-function blocksy_companion_akg($keys, $array_or_object, $default_value = null) {
-	if (! is_array($keys)) {
-		$keys = explode('/', (string) $keys);
+function blocksy_companion_akg( $keys, $array_or_object, $default_value = null ) {
+	if ( ! is_array( $keys ) ) {
+		$keys = explode( '/', (string) $keys );
 	}
 
-	$key_or_property = array_shift($keys);
+	$key_or_property = array_shift( $keys );
 
-	if (is_null($key_or_property)) {
+	if ( is_null( $key_or_property ) ) {
 		return $default_value;
 	}
 
-	$is_object = is_object($array_or_object);
+	$is_object = is_object( $array_or_object );
 
-	if ($is_object) {
-		if (! property_exists($array_or_object, $key_or_property)) {
+	if ( $is_object ) {
+		if ( ! property_exists( $array_or_object, $key_or_property ) ) {
 			return $default_value;
 		}
 	} else {
-		if (! is_array($array_or_object) || ! array_key_exists($key_or_property, $array_or_object)) {
+		if ( ! is_array( $array_or_object ) || ! array_key_exists( $key_or_property, $array_or_object ) ) {
 			return $default_value;
 		}
 	}
 
-	if (isset($keys[0])) { // not used count() for performance reasons.
-		if ($is_object) {
-			return blocksy_companion_akg($keys, $array_or_object->{$key_or_property}, $default_value);
+	if ( isset( $keys[0] ) ) { // not used count() for performance reasons.
+		if ( $is_object ) {
+			return blocksy_companion_akg( $keys, $array_or_object->{$key_or_property}, $default_value );
 		} else {
-			return blocksy_companion_akg($keys, $array_or_object[$key_or_property], $default_value);
+			return blocksy_companion_akg( $keys, $array_or_object[ $key_or_property ], $default_value );
 		}
 	} else {
-		if ($is_object) {
+		if ( $is_object ) {
 			return $array_or_object->{$key_or_property};
 		} else {
 			return $array_or_object[ $key_or_property ];
@@ -62,7 +62,7 @@ function blocksy_companion_post_name() {
 	return 'ct_options';
 }
 
-function blocksy_companion_call_gutenberg_function($original_function_name, $args = []) {
+function blocksy_companion_call_gutenberg_function( $original_function_name, $args = array() ) {
 	$gutenberg_function_name = str_replace(
 		'wp_',
 		'gutenberg_',
@@ -71,17 +71,17 @@ function blocksy_companion_call_gutenberg_function($original_function_name, $arg
 
 	$function_to_call = $original_function_name;
 
-	if (function_exists($gutenberg_function_name)) {
+	if ( function_exists( $gutenberg_function_name ) ) {
 		$function_to_call = $gutenberg_function_name;
 	}
 
-	return call_user_func_array($function_to_call, $args);
+	return call_user_func_array( $function_to_call, $args );
 }
 
-function blocksy_companion_get_gutenberg_class($class_name) {
+function blocksy_companion_get_gutenberg_class( $class_name ) {
 	$gutenberg_class_name = $class_name . '_Gutenberg';
 
-	if (class_exists($gutenberg_class_name)) {
+	if ( class_exists( $gutenberg_class_name ) ) {
 		return $gutenberg_class_name;
 	}
 
@@ -91,12 +91,12 @@ function blocksy_companion_get_gutenberg_class($class_name) {
 function blocksy_companion_get_version() {
 	static $version = null;
 
-	if ($version !== null) {
+	if ( null !== $version ) {
 		return $version;
 	}
 
-	if (! function_exists('get_plugin_data')) {
-		require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+	if ( ! function_exists( 'get_plugin_data' ) ) {
+		require_once ABSPATH . 'wp-admin/includes/plugin.php';
 	}
 
 	// Prevent early translation call by setting $translate to false.
@@ -121,23 +121,26 @@ function blocksy_companion_get_version() {
  * the popups renderer, the mega-menu AJAX renderer, the dynamic-data block and
  * the inline styles collector.
  */
-function blocksy_companion_assemble_dynamic_css($args = []) {
-	$args = wp_parse_args($args, [
-		'css' => null,
-		'tablet_css' => null,
-		'mobile_css' => null,
-	]);
+function blocksy_companion_assemble_dynamic_css( $args = array() ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'css'        => null,
+			'tablet_css' => null,
+			'mobile_css' => null,
+		)
+	);
 
-	$result = $args['css'] ? trim($args['css']->build_css_structure()) : '';
+	$result = $args['css'] ? trim( $args['css']->build_css_structure() ) : '';
 
-	$tablet = $args['tablet_css'] ? trim($args['tablet_css']->build_css_structure()) : '';
-	$mobile = $args['mobile_css'] ? trim($args['mobile_css']->build_css_structure()) : '';
+	$tablet = $args['tablet_css'] ? trim( $args['tablet_css']->build_css_structure() ) : '';
+	$mobile = $args['mobile_css'] ? trim( $args['mobile_css']->build_css_structure() ) : '';
 
-	if (! empty($tablet)) {
+	if ( ! empty( $tablet ) ) {
 		$result .= '@media (max-width: 999.98px) {' . $tablet . '}';
 	}
 
-	if (! empty($mobile)) {
+	if ( ! empty( $mobile ) ) {
 		$result .= '@media (max-width: 689.98px) {' . $mobile . '}';
 	}
 
@@ -147,17 +150,21 @@ function blocksy_companion_assemble_dynamic_css($args = []) {
 function blocksy_companion_get_capabilities() {
 	static $capabilities = null;
 
-	if ($capabilities === null) {
+	if ( null === $capabilities ) {
 		$capabilities = new Blocksy\Capabilities();
 	}
 
 	return $capabilities;
 }
 
+function blocksy_companion_rand_md5() {
+	return md5( time() . '-' . uniqid( wp_rand(), true ) . '-' . wp_rand() );
+}
+
 function blocksy_companion_theme_functions() {
 	static $theme_functions = null;
 
-	if ($theme_functions === null) {
+	if ( null === $theme_functions ) {
 		$theme_functions = new Blocksy\ThemeFunctions();
 	}
 
@@ -165,45 +172,60 @@ function blocksy_companion_theme_functions() {
 }
 
 function blocksy_companion_can_use_premium_code() {
-	return !! class_exists('Blocksy\Premium');
+	return ! ! class_exists( 'Blocksy\Premium' );
 }
 
-function blocksy_companion_site_has_feature($feature = 'base_pro') {
+function blocksy_companion_site_has_feature( $feature = 'base_pro' ) {
 	return (
 		blocksy_companion_can_use_premium_code()
 		&&
-		blocksy_companion_get_capabilities()->has_feature($feature)
+		blocksy_companion_get_capabilities()->has_feature( $feature )
 	);
 }
 
-add_filter('blocksy:companion:has', function ($has, $id) {
-	if ($id === 'base_pro') {
-		return blocksy_companion_site_has_feature('base_pro');
-	}
-
-	return $has;
-}, 10, 2);
-
-function blocksy_companion_register_theme_bridge($feature, $function_name) {
-	$method = str_replace('blocksy_companion_', '', $function_name);
-
-	add_filter('blocksy:companion:has', function ($has, $id) use ($feature) {
-		if ($id === $feature) {
-			return true;
+add_filter(
+	'blocksy:companion:has',
+	function ( $has, $id ) {
+		if ( 'base_pro' === $id ) {
+			return blocksy_companion_site_has_feature( 'base_pro' );
 		}
 
 		return $has;
-	}, 10, 2);
+	},
+	10,
+	2
+);
 
-	add_filter('blocksy:companion:' . $method, function ($default, $atts) use ($function_name) {
-		$result = call_user_func($function_name, $atts);
+function blocksy_companion_register_theme_bridge( $feature, $function_name ) {
+	$method = str_replace( 'blocksy_companion_', '', $function_name );
 
-		if ($result) {
-			return $result;
-		}
+	add_filter(
+		'blocksy:companion:has',
+		function ( $has, $id ) use ( $feature ) {
+			if ( $id === $feature ) {
+				return true;
+			}
 
-		return $default;
-	}, 10, 2);
+			return $has;
+		},
+		10,
+		2
+	);
+
+	add_filter(
+		'blocksy:companion:' . $method,
+		function ( $default_value, $atts ) use ( $function_name ) {
+			$result = call_user_func( $function_name, $atts );
+
+			if ( $result ) {
+				return $result;
+			}
+
+			return $default_value;
+		},
+		10,
+		2
+	);
 }
 
 /**
@@ -212,37 +234,40 @@ function blocksy_companion_register_theme_bridge($feature, $function_name) {
  * instead of reaching \Blocksy\Plugin::instance()->extensions directly (which fatals
  * when the companion is inactive or mid-update).
  */
-function blocksy_companion_activate_extension($args = []) {
-	$args = wp_parse_args($args, [
-		'id' => null
-	]);
+function blocksy_companion_activate_extension( $args = array() ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'id' => null,
+		)
+	);
 
-	if (! $args['id']) {
+	if ( ! $args['id'] ) {
 		return false;
 	}
 
-	\Blocksy\Plugin::instance()->extensions->activate_extension($args['id']);
+	\Blocksy\Plugin::instance()->extensions->activate_extension( $args['id'] );
 
 	return true;
 }
 
-blocksy_companion_register_theme_bridge('extensions', 'blocksy_companion_activate_extension');
+blocksy_companion_register_theme_bridge( 'extensions', 'blocksy_companion_activate_extension' );
 
 // https://developer.wordpress.org/reference/functions/is_ssl/
 function blocksy_companion_maybe_is_ssl() {
 	// cloudflare
-	if (! empty($_SERVER['HTTP_CF_VISITOR'])) {
+	if ( ! empty( $_SERVER['HTTP_CF_VISITOR'] ) ) {
 		// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-		$cfo = json_decode(wp_unslash($_SERVER['HTTP_CF_VISITOR']));
+		$cfo = json_decode( wp_unslash( $_SERVER['HTTP_CF_VISITOR'] ) );
 
-		if (isset($cfo->scheme) && 'https' === $cfo->scheme) {
+		if ( isset( $cfo->scheme ) && 'https' === $cfo->scheme ) {
 			return true;
 		}
 	}
 
 	// other proxy
 	if (
-		! empty($_SERVER['HTTP_X_FORWARDED_PROTO'])
+		! empty( $_SERVER['HTTP_X_FORWARDED_PROTO'] )
 		&&
 		'https' === $_SERVER['HTTP_X_FORWARDED_PROTO']
 	) {
@@ -251,106 +276,109 @@ function blocksy_companion_maybe_is_ssl() {
 
 	// is_ssl() sometimes returns false when it should return true,
 	// for example updates.
-	if (strpos(strtolower(get_site_url()), 'https://') === 0) {
+	if ( strpos( strtolower( get_site_url() ), 'https://' ) === 0 ) {
 		return true;
 	}
 
-	return function_exists('is_ssl') ? is_ssl() : false;
+	return function_exists( 'is_ssl' ) ? is_ssl() : false;
 }
 
 // Don't use protocol relative URL, it's an anti pattern.
 // https://www.paulirish.com/2010/the-protocol-relative-url/
-function blocksy_companion_normalize_site_url($url) {
-	$parsed_url = wp_parse_url($url);
+function blocksy_companion_normalize_site_url( $url ) {
+	$parsed_url = wp_parse_url( $url );
 
 	$protocol = 'http';
 
-	if (blocksy_companion_maybe_is_ssl()) {
+	if ( blocksy_companion_maybe_is_ssl() ) {
 		$protocol .= 's';
 	}
 
 	$result = $protocol . '://' . $parsed_url['host'];
 
-	if (isset($parsed_url['port'])) {
+	if ( isset( $parsed_url['port'] ) ) {
 		$result = $result . ':' . $parsed_url['port'];
 	}
 
-	if (isset($parsed_url['path'])) {
+	if ( isset( $parsed_url['path'] ) ) {
 		$result = $result . $parsed_url['path'];
 	}
 
 	return $result;
 }
 
-if (! function_exists('blocksy_companion_load_xml_file')) {
-	function blocksy_companion_load_xml_file($url, $args = []) {
-		$args = wp_parse_args($args, [
-			'user_agent' => ''
-		]);
+if ( ! function_exists( 'blocksy_companion_load_xml_file' ) ) {
+	function blocksy_companion_load_xml_file( $url, $args = array() ) {
+		$args = wp_parse_args(
+			$args,
+			array(
+				'user_agent' => '',
+			)
+		);
 
 		// phpcs:ignore Squiz.PHP.DiscouragedFunctions.Discouraged
-		set_time_limit(300);
+		set_time_limit( 300 );
 
-		if (ini_get('allow_url_fopen') && ini_get('allow_url_fopen') !== 'Off') {
-			$context_options = [
-				"ssl" => [
-					"verify_peer" => true,
-					"verify_peer_name" => true,
-					'cafile' => ABSPATH . WPINC . '/certificates/ca-bundle.crt',
-				]
-			];
+		if ( ini_get( 'allow_url_fopen' ) && ini_get( 'allow_url_fopen' ) !== 'Off' ) {
+			$context_options = array(
+				'ssl' => array(
+					'verify_peer'      => true,
+					'verify_peer_name' => true,
+					'cafile'           => ABSPATH . WPINC . '/certificates/ca-bundle.crt',
+				),
+			);
 
-			if (! empty($args['user_agent'])) {
-				$context_options['http'] = [
-					'user_agent' => $args['user_agent']
-				];
+			if ( ! empty( $args['user_agent'] ) ) {
+				$context_options['http'] = array(
+					'user_agent' => $args['user_agent'],
+				);
 			}
 
 			return file_get_contents(
 				$url,
 				false,
-				stream_context_create($context_options)
+				stream_context_create( $context_options )
 			);
-		} else if (function_exists('curl_init')) {
+		} elseif ( function_exists( 'curl_init' ) ) {
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_init
-			$curl = curl_init($url);
+			$curl = curl_init( $url );
 
-			if (! empty($args['user_agent'])) {
+			if ( ! empty( $args['user_agent'] ) ) {
 				// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
-				curl_setopt($curl, CURLOPT_USERAGENT, $args['user_agent']);
+				curl_setopt( $curl, CURLOPT_USERAGENT, $args['user_agent'] );
 			}
 
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
-			curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt( $curl, CURLOPT_RETURNTRANSFER, 1 );
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
-			curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
+			curl_setopt( $curl, CURLOPT_SSL_VERIFYHOST, 2 );
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
-			curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
+			curl_setopt( $curl, CURLOPT_SSL_VERIFYPEER, true );
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_setopt
-			curl_setopt($curl, CURLOPT_CAINFO, ABSPATH . WPINC . '/certificates/ca-bundle.crt');
+			curl_setopt( $curl, CURLOPT_CAINFO, ABSPATH . WPINC . '/certificates/ca-bundle.crt' );
 
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_exec
-			$result = curl_exec($curl);
+			$result = curl_exec( $curl );
 			// phpcs:ignore WordPress.WP.AlternativeFunctions.curl_curl_close
-			curl_close($curl);
+			curl_close( $curl );
 
 			return $result;
 		} else {
-			throw new Exception("Can't load data.");
+			throw new Exception( "Can't load data." );
 		}
 	}
 }
 
-function blocksy_companion_stringify_url($parsed_url) {
-	$scheme = isset($parsed_url['scheme']) ? $parsed_url['scheme'] . '://' : '';
-	$host = isset($parsed_url['host']) ? $parsed_url['host'] : '';
-	$port = isset($parsed_url['port']) ? ':' . $parsed_url['port'] : '';
-	$user = isset($parsed_url['user']) ? $parsed_url['user'] : '';
-	$pass = isset($parsed_url['pass']) ? ':' . $parsed_url['pass']  : '';
-	$pass = ($user || $pass) ? "$pass@" : '';
-	$path = isset($parsed_url['path']) ? $parsed_url['path'] : '';
-	$query = isset($parsed_url['query']) ? '?' . $parsed_url['query'] : '';
-	$fragment = isset($parsed_url['fragment']) ? '#' . $parsed_url['fragment'] : '';
+function blocksy_companion_stringify_url( $parsed_url ) {
+	$scheme   = isset( $parsed_url['scheme'] ) ? $parsed_url['scheme'] . '://' : '';
+	$host     = isset( $parsed_url['host'] ) ? $parsed_url['host'] : '';
+	$port     = isset( $parsed_url['port'] ) ? ':' . $parsed_url['port'] : '';
+	$user     = isset( $parsed_url['user'] ) ? $parsed_url['user'] : '';
+	$pass     = isset( $parsed_url['pass'] ) ? ':' . $parsed_url['pass'] : '';
+	$pass     = ( $user || $pass ) ? "$pass@" : '';
+	$path     = isset( $parsed_url['path'] ) ? $parsed_url['path'] : '';
+	$query    = isset( $parsed_url['query'] ) ? '?' . $parsed_url['query'] : '';
+	$fragment = isset( $parsed_url['fragment'] ) ? '#' . $parsed_url['fragment'] : '';
 
 	return "$scheme$user$pass$host$port$path$query$fragment";
 }
@@ -358,14 +386,14 @@ function blocksy_companion_stringify_url($parsed_url) {
 function blocksy_companion_is_xhr() {
 	return (
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		isset($_REQUEST['blocksy_ajax'])
+		isset( $_REQUEST['blocksy_ajax'] )
 		&&
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-		strtolower(sanitize_text_field(wp_unslash($_REQUEST['blocksy_ajax']))) === 'yes'
+		strtolower( sanitize_text_field( wp_unslash( $_REQUEST['blocksy_ajax'] ) ) ) === 'yes'
 	);
 }
 
-function blocksy_companion_get_option_from_db($option, $default = '') {
+function blocksy_companion_get_option_from_db( $option, $default_value = '' ) {
 	try {
 		global $wpdb;
 
@@ -379,26 +407,26 @@ function blocksy_companion_get_option_from_db($option, $default = '') {
 			)
 		);
 
-		$wpdb->suppress_errors($suppress);
+		$wpdb->suppress_errors( $suppress );
 
-		if (is_object($row)) {
-			return maybe_unserialize($row->option_value);
+		if ( is_object( $row ) ) {
+			return maybe_unserialize( $row->option_value );
 		}
-	} catch (Exception $e) {
+	} catch ( Exception $e ) {
 	}
 
-	return $default;
+	return $default_value;
 }
 
-function blocksy_companion_get_network_option_from_db($network_id, $option, $default = '') {
-	if ($network_id && ! is_numeric($network_id)) {
+function blocksy_companion_get_network_option_from_db( $network_id, $option, $default_value = '' ) {
+	if ( $network_id && ! is_numeric( $network_id ) ) {
 		return false;
 	}
 
 	$network_id = (int) $network_id;
 
 	// Fallback to the current network if a network ID is not specified.
-	if (! $network_id) {
+	if ( ! $network_id ) {
 		$network_id = get_current_network_id();
 	}
 
@@ -416,18 +444,18 @@ function blocksy_companion_get_network_option_from_db($network_id, $option, $def
 			)
 		);
 
-		$wpdb->suppress_errors($suppress);
+		$wpdb->suppress_errors( $suppress );
 
-		if (is_object($row)) {
-			return maybe_unserialize($row->meta_value);
+		if ( is_object( $row ) ) {
+			return maybe_unserialize( $row->meta_value );
 		}
-	} catch (Exception $e) {
+	} catch ( Exception $e ) {
 	}
 
-	return $default;
+	return $default_value;
 }
 
-function blocksy_companion_safe_sprintf($format, ...$args) {
+function blocksy_companion_safe_sprintf( $format, ...$args ) {
 	$result = $format;
 
 	$is_error = false;
@@ -437,23 +465,25 @@ function blocksy_companion_safe_sprintf($format, ...$args) {
 	// https://www.php.net/manual/en/function.vsprintf.php#refsect1-function.vsprintf-errors
 
 	// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_set_error_handler
-	set_error_handler(function () use (&$is_error) {
-		$is_error = true;
-	});
+	set_error_handler(
+		function () use ( &$is_error ) {
+			$is_error = true;
+		}
+	);
 
-	if (interface_exists('Throwable')) {
+	if ( interface_exists( 'Throwable' ) ) {
 		try {
-			$result = vsprintf($format, $args);
-		} catch (\Throwable $e) {
+			$result = vsprintf( $format, $args );
+		} catch ( \Throwable $e ) {
 			$is_error = true;
 		}
 	} else {
-		$result = vsprintf($format, $args);
+		$result = vsprintf( $format, $args );
 	}
 
 	restore_error_handler();
 
-	if ($is_error) {
+	if ( $is_error ) {
 		// TODO: maybe cleanup format from %s, %d, etc
 		return $format;
 	}
@@ -461,32 +491,32 @@ function blocksy_companion_safe_sprintf($format, ...$args) {
 	return $result;
 }
 
-function blocksy_companion_request_remote_url($url, $args = []) {
+function blocksy_companion_request_remote_url( $url, $args = array() ) {
 	$request = new \Blocksy\RequestRemoteUrl();
-	return $request->request($url, $args);
+	return $request->request( $url, $args );
 }
 
-function blocksy_companion_get_jed_locale_data($domain) {
-	static $locale = [];
+function blocksy_companion_get_jed_locale_data( $domain ) {
+	static $locale = array();
 
-	if (isset($locale[$domain])) {
-		return $locale[$domain];
+	if ( isset( $locale[ $domain ] ) ) {
+		return $locale[ $domain ];
 	}
 
-	$translations = get_translations_for_domain($domain);
+	$translations = get_translations_for_domain( $domain );
 
-	$locale[$domain] = [
-		'' => [
+	$locale[ $domain ] = array(
+		'' => array(
 			'domain' => $domain,
-			'lang' => get_user_locale(),
-		]
-	];
+			'lang'   => get_user_locale(),
+		),
+	);
 
-	if (! empty($translations->headers['Plural-Forms'])) {
-		$locale[$domain]['']['plural_forms'] = $translations->headers['Plural-Forms'];
+	if ( ! empty( $translations->headers['Plural-Forms'] ) ) {
+		$locale[ $domain ]['']['plural_forms'] = $translations->headers['Plural-Forms'];
 	}
 
-	foreach (blocksy_companion_get_json_translation_files($domain) as $file_path) {
+	foreach ( blocksy_companion_get_json_translation_files( $domain ) as $file_path ) {
 		$parsed_json = json_decode(
 			call_user_func(
 				'file' . '_get_contents',
@@ -498,25 +528,25 @@ function blocksy_companion_get_jed_locale_data($domain) {
 		if (
 			! $parsed_json
 			||
-			! isset($parsed_json['locale_data']['messages'])
+			! isset( $parsed_json['locale_data']['messages'] )
 		) {
 			continue;
 		}
 
-		foreach ($parsed_json['locale_data']['messages'] as $msgid => $entry) {
-			if (empty($msgid)) {
+		foreach ( $parsed_json['locale_data']['messages'] as $msgid => $entry ) {
+			if ( empty( $msgid ) ) {
 				continue;
 			}
 
-			$locale[$domain][$msgid] = $entry;
+			$locale[ $domain ][ $msgid ] = $entry;
 		}
 	}
 
-	foreach ($translations->entries as $msgid => $entry) {
-		$locale[$domain][$entry->key()] = [$translations->translate($entry->key())];
+	foreach ( $translations->entries as $msgid => $entry ) {
+		$locale[ $domain ][ $entry->key() ] = array( $translations->translate( $entry->key() ) );
 	}
 
-	return $locale[$domain];
+	return $locale[ $domain ];
 }
 
 /**
@@ -541,8 +571,8 @@ function blocksy_companion_get_jed_locale_data($domain) {
  *
  * @return void
  */
-function blocksy_companion_handle_contained_fatal(\Throwable $e, $context = '', $containment = []) {
-	blocksy_companion_theme_functions()->blocksy_restore_fatal_containment($containment);
+function blocksy_companion_handle_contained_fatal( \Throwable $e, $context = '', $containment = array() ) {
+	blocksy_companion_theme_functions()->blocksy_restore_fatal_containment( $containment );
 
 	blocksy_companion_debug_log(
 		sprintf(
@@ -568,10 +598,10 @@ function blocksy_companion_handle_contained_fatal(\Throwable $e, $context = '', 
 	 */
 	$should_rethrow = apply_filters(
 		'blocksy:companion:contained-fatal:rethrow',
-		defined('WP_DEBUG') && WP_DEBUG
+		defined( 'WP_DEBUG' ) && WP_DEBUG
 	);
 
-	if ($should_rethrow) {
+	if ( $should_rethrow ) {
 		throw $e;
 	}
 }
@@ -590,14 +620,14 @@ function blocksy_companion_handle_contained_fatal(\Throwable $e, $context = '', 
  *
  * @return string HTML.
  */
-function blocksy_companion_render_view($file_path, $view_variables = [], $default_value = '') {
-	if (! is_file($file_path)) {
+function blocksy_companion_render_view( $file_path, $view_variables = array(), $default_value = '' ) {
+	if ( ! is_file( $file_path ) ) {
 		return $default_value;
 	}
 
 	// phpcs:ignore WordPress.PHP.DontExtract.extract_extract
-	extract($view_variables, EXTR_REFS);
-	unset($view_variables);
+	extract( $view_variables, EXTR_REFS );
+	unset( $view_variables );
 
 	ob_start();
 
@@ -605,9 +635,9 @@ function blocksy_companion_render_view($file_path, $view_variables = [], $defaul
 
 	try {
 		require $file_path;
-	} catch (\Throwable $e) {
+	} catch ( \Throwable $e ) {
 		ob_end_clean();
-		blocksy_companion_handle_contained_fatal($e, $file_path, $blocksy_fatal_containment);
+		blocksy_companion_handle_contained_fatal( $e, $file_path, $blocksy_fatal_containment );
 		return $default_value;
 	}
 
@@ -626,9 +656,9 @@ function blocksy_companion_render_view($file_path, $view_variables = [], $defaul
  *
  * @return void
  */
-function blocksy_companion_render_view_e($file_path, $view_variables = [], $default_value = '') {
+function blocksy_companion_render_view_e( $file_path, $view_variables = array(), $default_value = '' ) {
 	// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	echo blocksy_companion_render_view($file_path, $view_variables, $default_value);
+	echo blocksy_companion_render_view( $file_path, $view_variables, $default_value );
 }
 
 /**
@@ -649,22 +679,22 @@ function blocksy_companion_get_variables_from_file(
 	array $_set_variables = array()
 ) {
 	// phpcs:ignore WordPress.PHP.DontExtract.extract_extract
-	extract($_set_variables, EXTR_REFS);
-	unset($_set_variables);
+	extract( $_set_variables, EXTR_REFS );
+	unset( $_set_variables );
 
-	if (is_file($file_path)) {
+	if ( is_file( $file_path ) ) {
 		$blocksy_fatal_containment = blocksy_companion_theme_functions()->blocksy_start_fatal_containment();
 
 		try {
 			require $file_path;
-		} catch (\Throwable $e) {
-			blocksy_companion_handle_contained_fatal($e, $file_path, $blocksy_fatal_containment);
+		} catch ( \Throwable $e ) {
+			blocksy_companion_handle_contained_fatal( $e, $file_path, $blocksy_fatal_containment );
 		}
 	}
 
-	foreach ($_extract_variables as $variable_name => $default_value) {
-		if (isset($$variable_name) ) {
-			$_extract_variables[$variable_name] = $$variable_name;
+	foreach ( $_extract_variables as $variable_name => $default_value ) {
+		if ( isset( $$variable_name ) ) {
+			$_extract_variables[ $variable_name ] = $$variable_name;
 		}
 	}
 
@@ -685,12 +715,12 @@ function blocksy_companion_get_variables_from_file(
  *
  * @return array|null
  */
-function blocksy_companion_get_options($path, $pass_inside = [], $relative = true) {
-	if ($relative) {
+function blocksy_companion_get_options( $path, $pass_inside = array(), $relative = true ) {
+	if ( $relative ) {
 		$path = get_template_directory() . '/inc/options/' . $path . '.php';
 	}
 
-	if (! file_exists($path)) {
+	if ( ! file_exists( $path ) ) {
 		return null;
 	}
 
@@ -706,36 +736,41 @@ function blocksy_companion_get_options($path, $pass_inside = [], $relative = tru
 	 * @param string $path        Absolute path to the loaded options file.
 	 * @param array  $pass_inside Variables passed into the file scope.
 	 */
-	return apply_filters('blocksy:options:retrieve', blocksy_companion_akg(
-		'options',
-		blocksy_companion_get_variables_from_file(
-			$path,
-			['options' => []],
-			$pass_inside
-		)
-	), $path, $pass_inside);
+	return apply_filters(
+		'blocksy:options:retrieve',
+		blocksy_companion_akg(
+			'options',
+			blocksy_companion_get_variables_from_file(
+				$path,
+				array( 'options' => array() ),
+				$pass_inside
+			)
+		),
+		$path,
+		$pass_inside
+	);
 }
 
-function blocksy_companion_get_json_translation_files($domain) {
+function blocksy_companion_get_json_translation_files( $domain ) {
 	$locale = determine_locale();
 
-	$locations = [
+	$locations = array(
 		WP_LANG_DIR . '/themes',
-		WP_LANG_DIR . '/plugins'
-	];
+		WP_LANG_DIR . '/plugins',
+	);
 
-	$result = [];
+	$result = array();
 
-	foreach ($locations as $location) {
+	foreach ( $locations as $location ) {
 		$files = glob(
 			$location . '/' . $domain . '-' . $locale . '-*.json'
 		);
 
-		if (! $files) {
+		if ( ! $files ) {
 			continue;
 		}
 
-		$result = array_merge($result, $files);
+		$result = array_merge( $result, $files );
 	}
 
 	return $result;
@@ -754,7 +789,7 @@ function blocksy_companion_get_json_translation_files($domain) {
  *
  * @return void
  */
-function blocksy_companion_debug_log($message, $object = null) {
+function blocksy_companion_debug_log( $message, $context = null ) {
 	/**
 	 * Fires for every companion debug log message.
 	 *
@@ -764,22 +799,22 @@ function blocksy_companion_debug_log($message, $object = null) {
 	 * @since 2.1.47
 	 *
 	 * @param string $message The log message.
-	 * @param mixed  $object  Optional context (e.g. a \Throwable). Default null.
+	 * @param mixed  $context Optional context (e.g. a \Throwable). Default null.
 	 */
-	do_action('blocksy:companion:debug-log', $message, $object);
+	do_action( 'blocksy:companion:debug-log', $message, $context );
 
-	if (is_null($object)) {
+	if ( is_null( $context ) ) {
 		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
-		error_log($message);
+		error_log( $message );
 	} else {
 		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log, WordPress.PHP.DevelopmentFunctions.error_log_print_r
-		error_log($message . ': ' . print_r($object, true));
+		error_log( $message . ': ' . print_r( $context, true ) );
 	}
 }
 
 // TODO: maybe automatically expand class
-function blocksy_companion_parse_attributes_string($input) {
-	$result = [];
+function blocksy_companion_parse_attributes_string( $input ) {
+	$result = array();
 
 	preg_match_all(
 		'/([a-zA-Z0-9_-]+)=([\'"])(.*?)\2/',
@@ -788,45 +823,224 @@ function blocksy_companion_parse_attributes_string($input) {
 		PREG_SET_ORDER
 	);
 
-	foreach ($matches as $match) {
-		$result[$match[1]] = $match[3];
+	foreach ( $matches as $match ) {
+		$result[ $match[1] ] = $match[3];
 	}
 
-	$stripped = preg_replace('/([a-zA-Z0-9_-]+)=([\'"])(.*?)\2/', '', $input);
+	$stripped = preg_replace( '/([a-zA-Z0-9_-]+)=([\'"])(.*?)\2/', '', $input );
 
-	$stripped = preg_replace('/([a-zA-Z0-9_-]+)=([^\s]+)/', '', $stripped);
+	$stripped = preg_replace( '/([a-zA-Z0-9_-]+)=([^\s]+)/', '', $stripped );
 
-	preg_match_all('/\b([a-zA-Z0-9_-]+)\b/', $stripped, $boolMatches);
+	preg_match_all( '/\b([a-zA-Z0-9_-]+)\b/', $stripped, $bool_matches );
 
-	foreach ($boolMatches[1] as $key) {
-		if (! array_key_exists($key, $result)) {
-			$result[$key] = '';
+	foreach ( $bool_matches[1] as $key ) {
+		if ( ! array_key_exists( $key, $result ) ) {
+			$result[ $key ] = '';
+		}
+	}
+
+	foreach ( $result as $name => $value ) {
+		if ( stripos( $name, 'on' ) === 0 ) {
+			unset( $result[ $name ] );
 		}
 	}
 
 	return $result;
 }
 
-function blocksy_companion_sanitize_html_for_display($html) {
-	$result = blocksy_companion_theme_functions()->blocksy_sanitize_html_for_display([
-		'html' => $html,
-	]);
+// Keep in parity with blocksy_is_allowed_custom_attribute_name() in the theme
+// (inc/helpers/html.php) and its matching test file.
+function blocksy_companion_is_allowed_custom_attribute_name( $name ) {
+	$name = strtolower( $name );
 
-	if ($result === \Blocksy\ThemeFunctions::$NON_EXISTING_FUNCTION) {
-		return wp_kses_post($html);
+	if ( in_array( $name, array( 'id', 'class', 'title', 'role', 'lang', 'dir' ), true ) ) {
+		return true;
+	}
+
+	return preg_match( '/^(data|aria)-[a-z0-9_-]+$/', $name ) === 1;
+}
+
+function blocksy_companion_get_json_request_body() {
+	$raw_body = file_get_contents( 'php://input' );
+
+	if ( ! $raw_body ) {
+		return null;
+	}
+
+	$payload = json_decode( $raw_body, true );
+
+	if ( ! is_array( $payload ) ) {
+		return null;
+	}
+
+	return $payload;
+}
+
+function blocksy_companion_sanitize_html_for_display( $html ) {
+	$result = blocksy_companion_theme_functions()->blocksy_sanitize_html_for_display(
+		array(
+			'html' => $html,
+		)
+	);
+
+	if ( \Blocksy\ThemeFunctions::NON_EXISTING_FUNCTION === $result ) {
+		return wp_kses_post( $html );
 	}
 
 	return $result;
 }
 
-function blocksy_companion_get_viewable_post_types($post_types) {
-	$result = array_values(array_filter(
-		array_map('trim', explode(',', $post_types)),
-		'is_post_type_viewable'
-	));
+function blocksy_companion_sanitize_wrapped_html_for_display( $args = array() ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'before'       => '',
+			'value'        => '',
+			'after'        => '',
+			'trusted_html' => false,
+		)
+	);
 
-	if (empty($result)) {
-		return ['post'];
+	if ( ! $args['trusted_html'] ) {
+		return blocksy_companion_sanitize_html_for_display(
+			$args['before'] . $args['value'] . $args['after']
+		);
+	}
+
+	$token = '%%' . wp_generate_uuid4() . '%%';
+
+	$sanitized = blocksy_companion_sanitize_html_for_display(
+		$args['before'] . $token . $args['after']
+	);
+
+	$prefix = strstr( $sanitized, $token, true );
+
+	if (
+		false === $prefix
+		||
+		false !== strpos( strrchr( '>' . $prefix, '>' ), '<' )
+	) {
+		return blocksy_companion_sanitize_html_for_display(
+			$args['before'] . $args['value'] . $args['after']
+		);
+	}
+
+	return str_replace( $token, $args['value'], $sanitized );
+}
+
+function blocksy_companion_get_viewable_post_types( $post_types ) {
+	$result = array_values(
+		array_filter(
+			array_map( 'trim', explode( ',', $post_types ) ),
+			'is_post_type_viewable'
+		)
+	);
+
+	if ( empty( $result ) ) {
+		return array( 'post' );
+	}
+
+	return $result;
+}
+
+function blocksy_companion_is_post_viewable( $args = array() ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'post'      => null,
+			'post_type' => null,
+		)
+	);
+
+	$post = get_post( $args['post'] );
+
+	if ( ! $post ) {
+		return false;
+	}
+
+	if (
+		$args['post_type']
+		&&
+		! in_array( $post->post_type, (array) $args['post_type'], true )
+	) {
+		return false;
+	}
+
+	if (
+		'product_variation' === $post->post_type
+		&&
+		! blocksy_companion_is_post_viewable(
+			array(
+				'post'      => $post->post_parent,
+				'post_type' => 'product',
+			)
+		)
+	) {
+		return false;
+	}
+
+	if ( post_password_required( $post ) ) {
+		return false;
+	}
+
+	if ( 'publish' === $post->post_status ) {
+		return true;
+	}
+
+	return (
+		'private' === $post->post_status
+		&&
+		current_user_can( 'read_post', $post->ID )
+	);
+}
+
+function blocksy_companion_colors_to_css( $colors ) {
+	$css = '';
+
+	foreach ( $colors as $key => $value ) {
+		$color = blocksy_companion_theme_functions()->blocksy_validate_color( $value );
+
+		if ( empty( $color ) ) {
+			continue;
+		}
+
+		$css .= $key . ':' . $color . ';';
+	}
+
+	return $css;
+}
+
+function blocksy_companion_sanitize_border_radius( $radius ) {
+	$length_pattern = '/^\d+(\.\d+)?(px|em|rem|%|vh|vw)?$/D';
+
+	if ( is_string( $radius ) ) {
+		if ( ! preg_match( $length_pattern, $radius ) ) {
+			return null;
+		}
+
+		return $radius;
+	}
+
+	if ( ! is_array( $radius ) ) {
+		return null;
+	}
+
+	$result = array();
+
+	foreach ( array( 'topLeft', 'topRight', 'bottomLeft', 'bottomRight' ) as $corner ) {
+		if (
+			isset( $radius[ $corner ] )
+			&&
+			is_string( $radius[ $corner ] )
+			&&
+			preg_match( $length_pattern, $radius[ $corner ] )
+		) {
+			$result[ $corner ] = $radius[ $corner ];
+		}
+	}
+
+	if ( empty( $result ) ) {
+		return null;
 	}
 
 	return $result;

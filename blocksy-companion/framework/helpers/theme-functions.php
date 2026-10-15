@@ -44,67 +44,68 @@ namespace Blocksy;
 // is the case that matters today: it guards a write path, so falling back to
 // the unsanitized input would defeat the sanitizer entirely.
 class ThemeFunctions {
-	public static $NON_EXISTING_FUNCTION = null;
+	const NON_EXISTING_FUNCTION = null;
 
-	public function __call($name, $arguments) {
-		if (function_exists($name)) {
-			return call_user_func_array($name, $arguments);
+	public function __call( $name, $arguments ) {
+		if ( function_exists( $name ) ) {
+			return call_user_func_array( $name, $arguments );
 		}
 
-		$optional_functions = [
+		$optional_functions = array(
 			'blocksy_lazy_zone_start',
 			'blocksy_lazy_zone_end',
 			'blocksy_start_fatal_containment',
 			'blocksy_restore_fatal_containment',
 			'blocksy_sanitize_builder_value',
-		];
+		);
 
-		if (in_array($name, $optional_functions, true)) {
-			return self::$NON_EXISTING_FUNCTION;
+		if ( in_array( $name, $optional_functions, true ) ) {
+			return self::NON_EXISTING_FUNCTION;
 		}
 
 		ob_start();
-		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_print_backtrace
+		// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_debug_print_backtrace, PHPCompatibility.FunctionUse.ArgumentFunctionsReportCurrentValue.NeedsInspection -- no arguments are inspected
 		debug_print_backtrace();
 		$backtrace = ob_get_clean();
 
-		blocksy_companion_debug_log('ThemeFunctions->__call : missing function', [
-			'function_name' => $name,
-			'is_cli' => defined('WP_CLI') && WP_CLI ? 'yes' : 'no',
+		blocksy_companion_debug_log(
+			'ThemeFunctions->__call : missing function',
+			array(
+				'function_name'  => $name,
+				'is_cli'         => defined( 'WP_CLI' ) && WP_CLI ? 'yes' : 'no',
 
-			// phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-			'current_script' => $_SERVER['SCRIPT_FILENAME'],
+				'current_script' => $_SERVER['SCRIPT_FILENAME'], // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated, WordPress.Security.ValidatedSanitizedInput.MissingUnslash, WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 
-			'backtrace' => $backtrace,
+			'backtrace'          => $backtrace,
 
-			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			'request' => $_REQUEST
-		]);
+			'request'            => $_REQUEST, // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			)
+		);
 
-		if ($name === 'blocksy_has_dynamic_css_in_frontend') {
+		if ( 'blocksy_has_dynamic_css_in_frontend' === $name ) {
 			return false;
 		}
 
-		if ($name === 'blocksy_get_search_post_type') {
-			return [];
+		if ( 'blocksy_get_search_post_type' === $name ) {
+			return array();
 		}
 
 		// Functions whose default value is one of their arguments, keyed by
 		// that argument's index. Other helpers are not handled like this and
 		// the caller is supposed to handle the `null` return value.
-		$functions_with_default = [
+		$functions_with_default = array(
 			'blocksy_get_theme_mod' => 1,
-		];
+		);
 
-		if (isset($functions_with_default[$name])) {
-			$default_index = $functions_with_default[$name];
+		if ( isset( $functions_with_default[ $name ] ) ) {
+			$default_index = $functions_with_default[ $name ];
 
-			if (count($arguments) > $default_index) {
-				return $arguments[$default_index];
+			if ( count( $arguments ) > $default_index ) {
+				return $arguments[ $default_index ];
 			}
 		}
 
 		// Every other function should handle the special case of the `null`.
-		return self::$NON_EXISTING_FUNCTION;
+		return self::NON_EXISTING_FUNCTION;
 	}
 }

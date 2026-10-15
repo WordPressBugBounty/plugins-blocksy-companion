@@ -729,7 +729,7 @@ msgstr "Вложенные блоки используют ширину соде
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:156
 msgid "Nested blocks will fill the width of this container. Toggle to constrain."
-msgstr "Вложенные блоки будут заним��ть всю ширину этого контейнера. Включите, чтобы ограничить."
+msgstr "Вложенные блоки будут занимать всю ширину этого контейнера. Включите, чтобы ограничить."
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:165
 msgid "Content width"
@@ -1020,7 +1020,7 @@ msgstr "Количество дней до того, как модальное �
 
 #: framework/premium/features/content-blocks/options/popup.php:279
 msgid "Days before the popup relaunches after the additional close trigger is activated."
-msgstr "Дней до повторного запуска модального окна после активации дополнительного триггера закр��тия."
+msgstr "Дней до повторного запуска модального окна после активации дополнительного триггера закрытия."
 
 #: framework/premium/features/content-blocks/options/popup.php:295
 msgid "Close Actions"
@@ -1056,7 +1056,7 @@ msgstr "Выберите запись/страницу для предпросм
 
 #: framework/premium/features/content-blocks/options/popup.php:572
 msgid "Lock the page scroll while the popup is triggered/oppened."
-msgstr "Блокировка прокрутки страницы под модальным окном."
+msgstr "Блокировка прокрутки страницы под мод��льным окном."
 
 #: framework/premium/features/content-blocks/options/popup.php:647
 msgid "Close Button Position"
@@ -1431,7 +1431,7 @@ msgstr "Действия"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:218,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:320
 msgid "Invalid request"
-msgstr "Недопустимы�� запрос"
+msgstr "Недопустимый запрос"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:111
 msgid "No waitlist found"
@@ -1515,7 +1515,7 @@ msgstr "Удалить"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:128
 msgid "View"
-msgstr "Просмотр"
+msgstr "Просмот��"
 
 #. translators: %s is the human readable time difference
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-users-table.php:164
@@ -3112,7 +3112,7 @@ msgstr "Нехватка запасов"
 
 #: framework/helpers/exts-configs.php:370
 msgid "Show the remaining stock of a product to create a sense of urgency and encourage your visitors to make a purchase."
-msgstr "Отображение оставшихся запасов товара, для создания ощущения срочности и п��буждения посетителей совершить покупку."
+msgstr "Отображение оставшихся запасов товара, для создания ощущения срочности и побуждения посетителей совершить покупку."
 
 #. translators: %s is the product name (theme or plugin)
 #: framework/views/theme-mismatch.php:36
@@ -3429,7 +3429,7 @@ msgstr "Это профессиональный стартовый сайт"
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:54
 msgid "Upgrade to any pro plan and get instant access to this starter site and many other features."
-msgstr "Перейдите на любой профессиональный тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
+msgstr "Перейдите на любой профессио��альный тариф и получите мгновенный доступ к этому стартовому сайту и многим другим функциям."
 
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:61
 msgid "Upgrade to the business or agency plan and get instant access to this starter site and many other features."
@@ -3664,7 +3664,7 @@ msgstr "Адрес доставки"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:64
 msgid "Subtotal"
-msgstr "Подытог"
+msgstr "Под��тог"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/ct-order/OrderDetails.js:77
 msgid "Shipping"
@@ -4213,7 +4213,7 @@ msgstr "Кнопка"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:72
 msgid "Modal Trigger"
-msgstr "Триггер модального окна"
+msgstr "Триггер модального ��кна"
 
 #: framework/premium/extensions/woocommerce-extra/features/quick-view/options.php:82
 msgid "Card"
@@ -4541,7 +4541,7 @@ msgstr "Заголовок партнёрской ссылки"
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:57,
 #: framework/premium/extensions/woocommerce-extra/features/affiliate/options.php:90
 msgid "Open Button Link In New Tab"
-msgstr "Открывать кноп��ой новую вкладку"
+msgstr "Открывать кнопкой ��овую вкладку"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-page/options.php:14
 msgid "Quantity Auto Update"
@@ -5471,7 +5471,7 @@ msgstr "Набор функций, позволяющих легко созда�
 
 #: framework/helpers/exts-configs.php:270
 msgid "Compare View"
-msgstr "Таблица сравне��ия"
+msgstr "Таблица сравнения"
 
 #: framework/helpers/exts-configs.php:239
 msgid "Adds the “add to cart” actions to the product page as a floating bar if the product summary has disappeared from view."
@@ -8350,7 +8350,7 @@ msgstr "Страница списка желаний"
 
 #: framework/premium/extensions/woocommerce-extra/features/wish-list/options.php:46
 msgid "The page you select here will display the wish list for your logged out users."
-msgstr " На странице, которую вы выберете з��есь, будет отображаться список желаний для невошедших в систему пользователей."
+msgstr " На странице, которую вы выберете здесь, будет отображаться список желаний для невошедших в систему пользователей."
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:25
 msgid "Archive Page"

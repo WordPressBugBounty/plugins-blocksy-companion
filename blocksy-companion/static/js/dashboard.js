@@ -22,14 +22,14 @@ getStarterSitesStatus()
 		}
 
 		fetch(
-			`${ctDashboardLocalizations.ajax_url}?action=blocksy_dashboard_handle_incorrect_license`,
+			`${ctDashboardLocalizations.ajax_url}?action=blocksy_dashboard_handle_incorrect_license&nonce=${ctDashboardLocalizations.dashboard_actions_nonce}`,
 			{
 				method: 'POST',
 				body: JSON.stringify({}),
 				headers: {
 					Accept: 'application/json',
-					'Content-Type': 'application/json',
-				},
+					'Content-Type': 'application/json'
+				}
 			}
 		).then(({ success, data }) => {
 			// Ignore result
@@ -42,18 +42,18 @@ getStarterSitesStatus()
 ctEvents.on('ct:dashboard:routes', (r) => {
 	r.push({
 		Component: (props) => <Extensions {...props} />,
-		path: '/extensions',
+		path: '/extensions'
 	})
 
 	r.push({
 		Component: (props) => <Extension {...props} />,
-		path: '/extensions/:extension',
+		path: '/extensions/:extension'
 	})
 
 	if (ctDashboardLocalizations.plugin_data.has_demo_install === 'yes') {
 		r.push({
 			Component: (props) => <DemoInstall {...props} />,
-			path: '/demos',
+			path: '/demos'
 		})
 	}
 })
@@ -66,9 +66,9 @@ ctEvents.on('ct:dashboard:navigation-links', (r) => {
 			getProps: ({ isPartiallyCurrent, isCurrent }) =>
 				isPartiallyCurrent
 					? {
-							'aria-current': 'page',
-					  }
-					: {},
+							'aria-current': 'page'
+						}
+					: {}
 		})
 	}
 
@@ -86,11 +86,11 @@ ctEvents.on('ct:dashboard:navigation-links', (r) => {
 			return {
 				...(isPartiallyCurrent || isCurrent
 					? {
-							'aria-current': 'page',
-					  }
-					: {}),
+							'aria-current': 'page'
+						}
+					: {})
 			}
-		},
+		}
 	})
 })
 

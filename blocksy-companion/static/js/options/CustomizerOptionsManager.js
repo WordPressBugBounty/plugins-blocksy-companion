@@ -3,7 +3,7 @@ import {
 	useState,
 	useEffect,
 	createElement,
-	Fragment,
+	Fragment
 } from '@wordpress/element'
 import { __ } from 'ct-i18n'
 import saveAs from './file-saver'
@@ -19,6 +19,7 @@ const wipeCaches = () => {
 
 		body.append('action', 'blocksy_customizer_wipe_caches')
 		body.append('wp_customize', 'on')
+		body.append('nonce', ct_customizer_localizations.customizer_reset_none)
 
 		fetch(window.ajaxurl, {
 			method: 'POST',
@@ -123,7 +124,8 @@ const CustomizerOptionsManager = () => {
 						onClick={(e) => {
 							e.preventDefault()
 							setIsExporting(true)
-						}}>
+						}}
+					>
 						{__('Export Customizations', 'blocksy-companion')}
 					</button>
 				</section>
@@ -154,7 +156,8 @@ const CustomizerOptionsManager = () => {
 								ref={dropZoneRef}
 								onClick={() => {
 									inputRef.current.click()
-								}}>
+								}}
+							>
 								{futureConfig
 									? futureConfig.name
 									: __(
@@ -232,25 +235,29 @@ const CustomizerOptionsManager = () => {
 										})
 									} catch (e) {}
 								}
-							}}>
+							}}
+						>
 							{isImporting ? (
 								<svg
 									width="14"
 									height="14"
-									viewBox="0 0 100 100">
+									viewBox="0 0 100 100"
+								>
 									<g transform="translate(50,50)">
 										<g transform="scale(1)">
 											<circle
 												cx="0"
 												cy="0"
 												r="50"
-												fill="currentColor"></circle>
+												fill="currentColor"
+											></circle>
 											<circle
 												cx="0"
 												cy="-26"
 												r="12"
 												fill="var(--ui-accent-color)"
-												transform="rotate(161.634)">
+												transform="rotate(161.634)"
+											>
 												<animateTransform
 													attributeName="transform"
 													type="rotate"
@@ -259,7 +266,8 @@ const CustomizerOptionsManager = () => {
 													keyTimes="0;1"
 													dur="1s"
 													begin="0s"
-													repeatCount="indefinite"></animateTransform>
+													repeatCount="indefinite"
+												></animateTransform>
 											</circle>
 										</g>
 									</g>
@@ -294,7 +302,8 @@ const CustomizerOptionsManager = () => {
 									onClick={(e) => {
 										e.preventDefault()
 										setIsCopyingOptions('child')
-									}}>
+									}}
+								>
 									{__(
 										'Copy From Child Theme',
 										'blocksy-companion'
@@ -314,7 +323,8 @@ const CustomizerOptionsManager = () => {
 									onClick={(e) => {
 										e.preventDefault()
 										setIsCopyingOptions('parent')
-									}}>
+									}}
+								>
 									{__(
 										'Copy From Parent Theme',
 										'blocksy-companion'
@@ -361,14 +371,16 @@ const CustomizerOptionsManager = () => {
 
 						<div
 							className="ct-modal-actions has-divider"
-							data-buttons="2">
+							data-buttons="2"
+						>
 							<button
 								onClick={(e) => {
 									e.preventDefault()
 									e.stopPropagation()
 									setIsCopyingOptions(false)
 								}}
-								className="button">
+								className="button"
+							>
 								{__('Cancel', 'blocksy-companion')}
 							</button>
 
@@ -408,7 +420,8 @@ const CustomizerOptionsManager = () => {
 											}
 										})
 									} catch (e) {}
-								}}>
+								}}
+							>
 								{__('Yes, I am sure', 'blocksy-companion')}
 							</button>
 						</div>
@@ -435,7 +448,8 @@ const CustomizerOptionsManager = () => {
 
 						<div
 							className="ct-checkboxes-container"
-							data-type="grid:bordered">
+							data-type="grid:bordered"
+						>
 							{['options', 'widgets'].map((component) => (
 								<div
 									className="ct-checkbox-container"
@@ -454,20 +468,24 @@ const CustomizerOptionsManager = () => {
 													)
 												: [...dataToExport, component]
 										)
-									}}>
+									}}
+								>
 									<span
 										className={classnames('ct-checkbox', {
 											active: dataToExport.includes(
 												component
 											)
-										})}>
+										})}
+									>
 										<svg
 											width="10"
 											height="8"
-											viewBox="0 0 11.2 9.1">
+											viewBox="0 0 11.2 9.1"
+										>
 											<polyline
 												className="check"
-												points="1.2,4.8 4.4,7.9 9.9,1.2 "></polyline>
+												points="1.2,4.8 4.4,7.9 9.9,1.2 "
+											></polyline>
 										</svg>
 									</span>
 									{
@@ -488,14 +506,16 @@ const CustomizerOptionsManager = () => {
 
 						<div
 							className="ct-modal-actions has-divider"
-							data-buttons="2">
+							data-buttons="2"
+						>
 							<button
 								onClick={(e) => {
 									e.preventDefault()
 									e.stopPropagation()
 									setIsExporting(false)
 								}}
-								className="button">
+								className="button"
+							>
 								{__('Cancel', 'blocksy-companion')}
 							</button>
 
@@ -571,7 +591,8 @@ const CustomizerOptionsManager = () => {
 											}
 										})
 									} catch (e) {}
-								}}>
+								}}
+							>
 								{__('Export', 'blocksy-companion')}
 							</button>
 						</div>

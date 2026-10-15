@@ -5352,7 +5352,7 @@ msgid "No post to duplicate"
 msgstr ""
 
 #: framework/helpers/exts-configs.php:314
-msgid "Create a customized order “Thank You�� page for your customers, giving them a personalized experience."
+msgid "Create a customized order “Thank You” page for your customers, giving them a personalized experience."
 msgstr ""
 
 #: framework/helpers/exts-configs.php:322,

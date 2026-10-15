@@ -2,7 +2,7 @@
 
 namespace Blocksy;
 
-if (! defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
@@ -12,40 +12,43 @@ class ExtensionsManager {
 	 *
 	 * @var array The array of all the extension objects.
 	 */
-	private $extensions = [];
-	private $exts_classes_map = [];
+	private $extensions       = array();
+	private $exts_classes_map = array();
 
 	private function get_option_name() {
 		return 'blocksy_active_extensions';
 	}
 
-	public function get($id, $args = []) {
-		$args = wp_parse_args($args, [
-			// regular | preboot | full
-			'type' => 'regular',
-		]);
+	public function get( $id, $args = array() ) {
+		$args = wp_parse_args(
+			$args,
+			array(
+				// regular | preboot | full
+				'type' => 'regular',
+			)
+		);
 
-		if (! isset($this->extensions[$id])) {
+		if ( ! isset( $this->extensions[ $id ] ) ) {
 			return null;
 		}
 
-		if ($args['type'] === 'full') {
-			return $this->extensions[$id];
+		if ( 'full' === $args['type'] ) {
+			return $this->extensions[ $id ];
 		}
 
-		if ($args['type'] === 'preboot') {
-			if (! isset($this->extensions[$id]['__object_preboot'])) {
+		if ( 'preboot' === $args['type'] ) {
+			if ( ! isset( $this->extensions[ $id ]['__object_preboot'] ) ) {
 				return null;
 			}
 
-			return $this->extensions[$id]['__object_preboot'];
+			return $this->extensions[ $id ]['__object_preboot'];
 		}
 
-		if (! isset($this->extensions[$id]['__object'])) {
+		if ( ! isset( $this->extensions[ $id ]['__object'] ) ) {
 			return null;
 		}
 
-		return $this->extensions[$id]['__object'];
+		return $this->extensions[ $id ]['__object'];
 	}
 
 	/**
@@ -54,46 +57,53 @@ class ExtensionsManager {
 	public function __construct() {
 		$this->read_installed_extensions();
 
-		spl_autoload_register([$this, 'perform_autoload']);
+		spl_autoload_register( array( $this, 'perform_autoload' ) );
 
-		if (wp_doing_ajax()) {
-			add_action('init', function () {
-				if (
+		if ( wp_doing_ajax() ) {
+			add_action(
+				'init',
+				function () {
+					if (
 					$this->is_dashboard_page()
 					||
 					(
 						// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-						isset($_REQUEST['action'])
+						isset( $_REQUEST['action'] )
 						&&
 						strpos(
 							// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-							sanitize_text_field(wp_unslash($_REQUEST['action'])),
+							sanitize_text_field( wp_unslash( $_REQUEST['action'] ) ),
 							'blocksy'
 						) !== false
 					)
-				) {
-					$this->do_extensions_preboot();
+					) {
+						$this->do_extensions_preboot();
+					}
 				}
-			});
+			);
 		} else {
-			if ($this->is_dashboard_page()) {
-				$this->do_extensions_preboot();
+			if ( $this->is_dashboard_page() ) {
+				add_action(
+					'init',
+					array( $this, 'do_extensions_preboot' ),
+					PHP_INT_MAX
+				);
 			}
 		}
 
-		foreach ($this->get_activated_extensions() as $single_id) {
-			$this->boot_activated_extension_for($single_id);
+		foreach ( $this->get_activated_extensions() as $single_id ) {
+			$this->boot_activated_extension_for( $single_id );
 		}
 
 		add_action(
 			'activate_blocksy-companion/blocksy-companion.php',
-			[$this, 'handle_activation'],
+			array( $this, 'handle_activation' ),
 			11
 		);
 
 		add_action(
 			'deactivate_blocksy-companion/blocksy-companion.php',
-			[$this, 'handle_deactivation'],
+			array( $this, 'handle_deactivation' ),
 			11
 		);
 	}
@@ -101,12 +111,14 @@ class ExtensionsManager {
 	public function handle_activation() {
 		ob_start();
 
-		foreach ($this->get_activated_extensions() as $id) {
-			if (method_exists($this->get_class_name_for($id), "onActivation")) {
-				call_user_func([
-					$this->get_class_name_for($id),
-					'onActivation'
-				]);
+		foreach ( $this->get_activated_extensions() as $id ) {
+			if ( method_exists( $this->get_class_name_for( $id ), 'onActivation' ) ) {
+				call_user_func(
+					array(
+						$this->get_class_name_for( $id ),
+						'onActivation',
+					)
+				);
 			}
 		}
 
@@ -114,41 +126,43 @@ class ExtensionsManager {
 	}
 
 	public function handle_deactivation() {
-		foreach ($this->get_activated_extensions() as $id) {
-			if (method_exists($this->get_class_name_for($id), "onDeactivation")) {
-				call_user_func([
-					$this->get_class_name_for($id),
-					'onDeactivation'
-				]);
+		foreach ( $this->get_activated_extensions() as $id ) {
+			if ( method_exists( $this->get_class_name_for( $id ), 'onDeactivation' ) ) {
+				call_user_func(
+					array(
+						$this->get_class_name_for( $id ),
+						'onDeactivation',
+					)
+				);
 			}
 		}
 	}
 
 	public function do_extensions_preboot() {
-		foreach (array_keys($this->get_extensions()) as $single_id) {
-			$this->maybe_do_extension_preboot($single_id);
+		foreach ( array_keys( $this->get_extensions() ) as $single_id ) {
+			$this->maybe_do_extension_preboot( $single_id );
 		}
 	}
 
 	private function is_dashboard_page() {
-		global $pagenow;
-
 		$is_ct_settings =
-			// 'themes.php' === $pagenow &&
 			// phpcs:ignore WordPress.Security.NonceVerification.Recommended
-			isset($_GET['page']) && 'ct-dashboard' === $_GET['page'];
+			isset( $_GET['page'] ) && 'ct-dashboard' === $_GET['page'];
 
 		return $is_ct_settings;
 	}
 
-	public function get_extensions($args = []) {
-		$args = wp_parse_args($args, [
-			'require_config' => false,
-		]);
+	public function get_extensions( $args = array() ) {
+		$args = wp_parse_args(
+			$args,
+			array(
+				'require_config' => false,
+			)
+		);
 
-		if ($args['require_config']) {
-			foreach ($this->extensions as $id => $extension) {
-				$this->extensions[$id]['config'] = $this->read_config_for(
+		if ( $args['require_config'] ) {
+			foreach ( $this->extensions as $id => $extension ) {
+				$this->extensions[ $id ]['config'] = $this->read_config_for(
 					$extension['path']
 				);
 			}
@@ -159,22 +173,18 @@ class ExtensionsManager {
 		return $this->extensions;
 	}
 
-	public function can($capability = 'install_plugins') {
-		$user = wp_get_current_user();
-
-		// return array_intersect(['administrator'], $user->roles );
-
-		if (is_multisite()) {
+	public function can( $capability = 'install_plugins' ) {
+		if ( is_multisite() ) {
 			// Only network admin can change files that affects the entire network.
 			$can = current_user_can_for_site(
 				get_current_blog_id(),
 				$capability
 			);
 		} else {
-			$can = current_user_can($capability);
+			$can = current_user_can( $capability );
 		}
 
-		if ($can) {
+		if ( $can ) {
 			// Also you can use this method to get the capability.
 			$can = $capability;
 		}
@@ -182,37 +192,39 @@ class ExtensionsManager {
 		return $can;
 	}
 
-	public function activate_extension($id) {
-		if (! isset($this->extensions[$id])) {
+	public function activate_extension( $id ) {
+		if ( ! isset( $this->extensions[ $id ] ) ) {
 			return;
 		}
 
-		if (! $this->extensions[$id]['path']) {
+		if ( ! $this->extensions[ $id ]['path'] ) {
 			return;
 		}
 
 		$activated = $this->get_activated_extensions();
 
-		if (! in_array(strtolower($id), $activated)) {
-			$path = $this->extensions[$id]['path'];
-			require_once($path . '/extension.php');
+		if ( ! in_array( strtolower( $id ), $activated, true ) ) {
+			$path = $this->extensions[ $id ]['path'];
+			require_once $path . '/extension.php';
 
-			if (method_exists($this->get_class_name_for($id), "onActivation")) {
-				call_user_func([
-					$this->get_class_name_for($id),
-					'onActivation'
-				]);
+			if ( method_exists( $this->get_class_name_for( $id ), 'onActivation' ) ) {
+				call_user_func(
+					array(
+						$this->get_class_name_for( $id ),
+						'onActivation',
+					)
+				);
 			}
 
-			$class = $this->get_class_name_for($id);
+			$class = $this->get_class_name_for( $id );
 
 			// Init extension right away.
-			$this->extensions[$id]['__object'] = new $class;
+			$this->extensions[ $id ]['__object'] = new $class();
 		}
 
-		$activated[] = strtolower($id);
+		$activated[] = strtolower( $id );
 
-		update_option($this->get_option_name(), array_unique($activated));
+		update_option( $this->get_option_name(), array_unique( $activated ) );
 
 		/**
 		 * Fires when the dynamic CSS caches should be invalidated.
@@ -223,33 +235,38 @@ class ExtensionsManager {
 		 * @since 1.6.2
 		 * @since 1.8.0 Renamed from `blocksy:dynamic-css:regenere_css_files`.
 		 */
-		do_action('blocksy:dynamic-css:refresh-caches');
+		do_action( 'blocksy:dynamic-css:refresh-caches' );
 	}
 
-	public function deactivate_extension($id) {
-		if (! isset($this->extensions[$id])) {
+	public function deactivate_extension( $id ) {
+		if ( ! isset( $this->extensions[ $id ] ) ) {
 			return;
 		}
 
-		if (! $this->extensions[$id]['path']) {
+		if ( ! $this->extensions[ $id ]['path'] ) {
 			return;
 		}
 
 		$activated = $this->get_activated_extensions();
 
-		if (in_array(strtolower($id), $activated)) {
-			if (method_exists($this->get_class_name_for($id), "onDeactivation")) {
-				call_user_func([
-					$this->get_class_name_for($id),
-					'onDeactivation'
-				]);
+		if ( in_array( strtolower( $id ), $activated, true ) ) {
+			if ( method_exists( $this->get_class_name_for( $id ), 'onDeactivation' ) ) {
+				call_user_func(
+					array(
+						$this->get_class_name_for( $id ),
+						'onDeactivation',
+					)
+				);
 			}
 		}
 
-		update_option($this->get_option_name(), array_diff(
-			$activated,
-			[$id]
-		));
+		update_option(
+			$this->get_option_name(),
+			array_diff(
+				$activated,
+				array( $id )
+			)
+		);
 
 		/**
 		 * Fires when the dynamic CSS caches should be invalidated.
@@ -260,7 +277,7 @@ class ExtensionsManager {
 		 * @since 1.6.2
 		 * @since 1.8.0 Renamed from `blocksy:dynamic-css:regenere_css_files`.
 		 */
-		do_action('blocksy:dynamic-css:refresh-caches');
+		do_action( 'blocksy:dynamic-css:refresh-caches' );
 	}
 
 	private function read_installed_extensions() {
@@ -273,16 +290,16 @@ class ExtensionsManager {
 		 */
 		$paths_to_look_for_extensions = apply_filters(
 			'blocksy_extensions_paths',
-			[
-				BLOCKSY_PATH . 'framework/extensions'
-			]
+			array(
+				BLOCKSY_PATH . 'framework/extensions',
+			)
 		);
 
-		foreach ($paths_to_look_for_extensions as $single_path) {
-			$all_extensions = glob($single_path . '/*', GLOB_ONLYDIR);
+		foreach ( $paths_to_look_for_extensions as $single_path ) {
+			$all_extensions = glob( $single_path . '/*', GLOB_ONLYDIR );
 
-			foreach ($all_extensions as $single_extension) {
-				$this->register_extension_for($single_extension);
+			foreach ( $all_extensions as $single_extension ) {
+				$this->register_extension_for( $single_extension );
 			}
 		}
 	}
@@ -298,18 +315,18 @@ class ExtensionsManager {
 
 		$preliminary_info = $this->get_preliminary_exts_info();
 
-		foreach ($preliminary_info as $id => $info) {
-			if (isset($this->extensions[$id])) {
+		foreach ( $preliminary_info as $id => $info ) {
+			if ( isset( $this->extensions[ $id ] ) ) {
 				continue;
 			}
 
-			$this->extensions[$id] = [
-				'path' => null,
+			$this->extensions[ $id ] = array(
+				'path'     => null,
 				'__object' => null,
-				'config' => $info,
-				'readme' => '',
-				'data' => null
-			];
+				'config'   => $info,
+				'readme'   => '',
+				'data'     => null,
+			);
 		}
 	}
 
@@ -317,217 +334,235 @@ class ExtensionsManager {
 		return blocksy_companion_exts_get_preliminary_config();
 	}
 
-	private function register_extension_for($path) {
-		$id = str_replace('_', '-', basename($path));
+	private function register_extension_for( $path ) {
+		$id = str_replace( '_', '-', basename( $path ) );
 
-		if (isset($this->extensions[$id])) return;
+		if ( isset( $this->extensions[ $id ] ) ) {
+			return;
+		}
 
-		$this->extensions[$id] = [
-			'path' => $path,
+		$this->extensions[ $id ] = array(
+			'path'     => $path,
 			'__object' => null,
-			'config' => null,
-			'data' => null
-		];
+			'config'   => null,
+			'data'     => null,
+		);
 
-		$this->read_autoload_for($id, $path);
+		$this->read_autoload_for( $id, $path );
 	}
 
-	private function maybe_do_extension_preboot($id) {
-		if (! isset($this->extensions[$id])) return false;
-		if (isset($this->extensions[$id]['__object_preboot'])) return;
+	private function maybe_do_extension_preboot( $id ) {
+		if ( ! isset( $this->extensions[ $id ] ) ) {
+			return false;
+		}
+		if ( isset( $this->extensions[ $id ]['__object_preboot'] ) ) {
+			return;
+		}
 
-		$class_name = explode('-', $id);
-		$class_name = array_map('ucfirst', $class_name);
-		$class_name = 'BlocksyExtension' . implode('', $class_name) . 'PreBoot';
+		$class_name = explode( '-', $id );
+		$class_name = array_map( 'ucfirst', $class_name );
+		$class_name = 'BlocksyExtension' . implode( '', $class_name ) . 'PreBoot';
 
 		$maybe_config = null;
 
 		$preliminary_config = blocksy_companion_exts_get_preliminary_config(
 			null,
-			['only_billing_data' => true]
+			array( 'only_billing_data' => true )
 		);
 
-		if (isset($preliminary_config[$id])) {
-			$maybe_config = $preliminary_config[$id];
+		if ( isset( $preliminary_config[ $id ] ) ) {
+			$maybe_config = $preliminary_config[ $id ];
 		}
 
 		if (
 			$maybe_config
 			&&
-			isset($maybe_config['pro'])
+			isset( $maybe_config['pro'] )
 			&&
 			$maybe_config['pro']
 		) {
-			if (blocksy_companion_get_capabilities()->get_plan() === 'free') {
+			if ( blocksy_companion_get_capabilities()->get_plan() === 'free' ) {
 				return;
 			}
 
-			if (isset($maybe_config['plans'])) {
-				if (! in_array(
+			if ( isset( $maybe_config['plans'] ) ) {
+				if ( ! in_array(
 					blocksy_companion_get_capabilities()->get_plan(),
-					$maybe_config['plans']
-				)) {
+					$maybe_config['plans'],
+					true
+				) ) {
 					return;
 				}
 			}
 		}
 
-		$path = $this->extensions[$id]['path'];
+		$path = $this->extensions[ $id ]['path'];
 
-		if (! $path) {
+		if ( ! $path ) {
 			return;
 		}
 
-		if (! @is_readable($path . '/pre-boot.php')) {
+		if ( ! @is_readable( $path . '/pre-boot.php' ) ) {
 			return;
 		}
 
-		if (! file_exists($path . '/pre-boot.php')) {
+		if ( ! file_exists( $path . '/pre-boot.php' ) ) {
 			return;
 		}
 
-		require_once($path . '/pre-boot.php');
+		require_once $path . '/pre-boot.php';
 
-		$this->extensions[$id]['__object_preboot'] = new $class_name();
+		$this->extensions[ $id ]['__object_preboot'] = new $class_name();
 
-		if (method_exists(
-			$this->extensions[$id]['__object_preboot'], 'ext_data'
-		)) {
-			$this->extensions[$id]['data'] = $this->extensions[
-				$id
-			]['__object_preboot']->ext_data();
+		if ( wp_doing_ajax() && method_exists(
+			$this->extensions[ $id ]['__object_preboot'],
+			'ext_data'
+		) ) {
+			$this->extensions[ $id ]['data'] = $this->extensions[ $id ]['__object_preboot']->ext_data();
 		}
 	}
 
-	private function boot_activated_extension_for($id) {
-		if (! isset($this->extensions[$id])) return false;
-		if (! isset($this->extensions[$id]['path'])) return false;
-		if (! $this->extensions[$id]['path']) return false;
+	private function boot_activated_extension_for( $id ) {
+		if ( ! isset( $this->extensions[ $id ] ) ) {
+			return false;
+		}
+		if ( ! isset( $this->extensions[ $id ]['path'] ) ) {
+			return false;
+		}
+		if ( ! $this->extensions[ $id ]['path'] ) {
+			return false;
+		}
 
-		if (isset($this->extensions[$id]['__object'])) return;
+		if ( isset( $this->extensions[ $id ]['__object'] ) ) {
+			return;
+		}
 
 		$maybe_config = null;
 
 		$preliminary_config = blocksy_companion_exts_get_preliminary_config(
 			null,
-			['only_billing_data' => true]
+			array( 'only_billing_data' => true )
 		);
 
-		if (isset($preliminary_config[$id])) {
-			$maybe_config = $preliminary_config[$id];
+		if ( isset( $preliminary_config[ $id ] ) ) {
+			$maybe_config = $preliminary_config[ $id ];
 		}
 
 		if (
 			$maybe_config
 			&&
-			isset($maybe_config['pro'])
+			isset( $maybe_config['pro'] )
 			&&
 			$maybe_config['pro']
 		) {
-			if (blocksy_companion_get_capabilities()->get_plan() === 'free') {
+			if ( blocksy_companion_get_capabilities()->get_plan() === 'free' ) {
 				return;
 			}
 
-			if (isset($maybe_config['plans'])) {
-				if (! in_array(
+			if ( isset( $maybe_config['plans'] ) ) {
+				if ( ! in_array(
 					blocksy_companion_get_capabilities()->get_plan(),
-					$maybe_config['plans']
-				)) {
+					$maybe_config['plans'],
+					true
+				) ) {
 					return;
 				}
 			}
 		}
 
-		$class_name = explode('-', $id);
-		$class_name = array_map('ucfirst', $class_name);
-		$class_name = 'BlocksyExtension' . implode('', $class_name);
+		$class_name = explode( '-', $id );
+		$class_name = array_map( 'ucfirst', $class_name );
+		$class_name = 'BlocksyExtension' . implode( '', $class_name );
 
-		$path = $this->extensions[$id]['path'];
+		$path = $this->extensions[ $id ]['path'];
 
-		if (! $path) {
+		if ( ! $path ) {
 			return;
 		}
 
-		if (! @is_readable($path . '/extension.php')) {
+		if ( ! @is_readable( $path . '/extension.php' ) ) {
 			return;
 		}
 
-		if (! file_exists($path . '/extension.php')) {
+		if ( ! file_exists( $path . '/extension.php' ) ) {
 			return;
 		}
 
-		require_once($path . '/extension.php');
+		require_once $path . '/extension.php';
 
-		$this->extensions[$id]['__object'] = new $class_name();
+		$this->extensions[ $id ]['__object'] = new $class_name();
 	}
 
-	private function get_class_name_for($id, $args = []) {
-		$args = wp_parse_args($args, [
-			'prefix' => true
-		]);
+	private function get_class_name_for( $id, $args = array() ) {
+		$args = wp_parse_args(
+			$args,
+			array(
+				'prefix' => true,
+			)
+		);
 
-		$class_name = explode('-', $id);
-		$class_name = array_map('ucfirst', $class_name);
-		$class_name = implode('', $class_name);
+		$class_name = explode( '-', $id );
+		$class_name = array_map( 'ucfirst', $class_name );
+		$class_name = implode( '', $class_name );
 
-		if ($args['prefix']) {
+		if ( $args['prefix'] ) {
 			$class_name = 'BlocksyExtension' . $class_name;
 		}
 
 		return $class_name;
 	}
 
-	private function read_config_for($file_path) {
-		$_extract_variables = ['config' => []];
+	private function read_config_for( $file_path ) {
+		$_extract_variables = array( 'config' => array() );
 
-		if (is_readable($file_path . '/config.php')) {
+		if ( is_readable( $file_path . '/config.php' ) ) {
 			require $file_path . '/config.php';
 
-			foreach ($_extract_variables as $variable_name => $default_value) {
-				if (isset($$variable_name)) {
-					$_extract_variables[$variable_name] = $$variable_name;
+			foreach ( $_extract_variables as $variable_name => $default_value ) {
+				if ( isset( $$variable_name ) ) {
+					$_extract_variables[ $variable_name ] = $$variable_name;
 				}
 			}
 		}
 
-		$name = explode('-', basename($file_path));
-		$name = array_map('ucfirst', $name);
-		$name = implode(' ', $name);
+		$name = explode( '-', basename( $file_path ) );
+		$name = array_map( 'ucfirst', $name );
+		$name = implode( ' ', $name );
 
 		$_extract_variables['config'] = array_merge(
-			[
-				'name' => $name,
+			array(
+				'name'        => $name,
 				'description' => '',
-				'pro' => false,
-				'hidden' => false
-			],
+				'pro'         => false,
+				'hidden'      => false,
+			),
 			$_extract_variables['config']
 		);
 
 		return $_extract_variables['config'];
 	}
 
-	private function read_autoload_for($id, $file_path) {
-		$_extract_variables = ['autoload' => []];
+	private function read_autoload_for( $id, $file_path ) {
+		$_extract_variables = array( 'autoload' => array() );
 
-		if (is_readable($file_path . '/autoload.php')) {
+		if ( is_readable( $file_path . '/autoload.php' ) ) {
 			require $file_path . '/autoload.php';
 
-			foreach ($_extract_variables as $variable_name => $default_value) {
-				if (isset($$variable_name)) {
-					$_extract_variables[$variable_name] = $$variable_name;
+			foreach ( $_extract_variables as $variable_name => $default_value ) {
+				if ( isset( $$variable_name ) ) {
+					$_extract_variables[ $variable_name ] = $$variable_name;
 				}
 			}
 		}
 
-		$ext_class_name = $this->get_class_name_for($id, ['prefix' => false]);
+		$ext_class_name = $this->get_class_name_for( $id, array( 'prefix' => false ) );
 
-		foreach ($_extract_variables['autoload'] as $class_name => $path) {
-			$final_class_name = 'Blocksy\\Extensions\\';
+		foreach ( $_extract_variables['autoload'] as $class_name => $path ) {
+			$final_class_name  = 'Blocksy\\Extensions\\';
 			$final_class_name .= $ext_class_name;
 			$final_class_name .= '\\' . $class_name;
 
-			$this->exts_classes_map[$final_class_name] = path_join(
+			$this->exts_classes_map[ $final_class_name ] = path_join(
 				$file_path,
 				$path
 			);
@@ -535,25 +570,24 @@ class ExtensionsManager {
 	}
 
 	private function get_activated_extensions() {
-		$opt = get_option($this->get_option_name(), []);
+		$opt = get_option( $this->get_option_name(), array() );
 
-		if (! is_array($opt)) {
-			$opt = [];
+		if ( ! is_array( $opt ) ) {
+			$opt = array();
 		}
 
 		return $opt;
 	}
 
-	private function perform_autoload($class) {
-		if (! isset($this->exts_classes_map[$class])) {
+	private function perform_autoload( $class_name ) {
+		if ( ! isset( $this->exts_classes_map[ $class_name ] ) ) {
 			return;
 		}
 
-		$filename = $this->exts_classes_map[$class];
+		$filename = $this->exts_classes_map[ $class_name ];
 
-		if (is_readable($filename)) {
+		if ( is_readable( $filename ) ) {
 			require $filename;
 		}
 	}
 }
-

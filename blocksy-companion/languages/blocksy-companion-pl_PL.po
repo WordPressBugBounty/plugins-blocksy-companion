@@ -1466,7 +1466,7 @@ msgstr "Zostałeś dodany na listę oczekujących"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-dashboard.php:333
 msgid "You have been removed from the waitlist"
-msgstr "Zostałe�� usunięty z listy oczekujących"
+msgstr "Zostałeś usunięty z listy oczekujących"
 
 #. translators: %1$s is the number of users, %2$s is the plural form
 #. (user/users)
@@ -1649,7 +1649,7 @@ msgstr "Cześć %s!"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:35,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:20
 msgid "Great news! The %s from your waitlist is now back in stock!"
-msgstr "Dobra wiadomość! Produkt %s z Twojej listy oczekujących jest już dostępny!"
+msgstr "Dobra wiadomo��ć! Produkt %s z Twojej listy oczekujących jest już dostępny!"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/waitlist-back-in-stock.php:46,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/templates/emails/plain/waitlist-back-in-stock.php:25
@@ -3552,7 +3552,7 @@ msgstr "Wyświetla sekcję szczegółów zamówienia."
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:164
 msgid "Filter By"
-msgstr "Filtruj wed��ug"
+msgstr "Filtruj według"
 
 #: framework/features/blocks/dynamic-data/options.php:129
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/active-filters/index.js:97

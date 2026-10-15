@@ -4462,7 +4462,7 @@ msgstr "Barva ozadja gumba"
 #: framework/premium/extensions/woocommerce-extra/features/custom-badges/design-options.php:15,
 #: framework/premium/extensions/woocommerce-extra/features/custom-badges/options.php:5
 msgid "New Badge"
-msgstr "Nova zna��ka"
+msgstr "Nova značka"
 
 #: framework/premium/extensions/woocommerce-extra/features/custom-badges/design-options.php:55,
 #: framework/premium/extensions/woocommerce-extra/features/custom-badges/options.php:53

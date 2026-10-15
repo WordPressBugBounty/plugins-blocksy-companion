@@ -1,142 +1,148 @@
 <?php
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound, VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable, VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedUnsetVariable -- view scope, variables come from blocksy_companion_render_view()
 
-if (! defined('ABSPATH')) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$search_through = blocksy_companion_akg('search_through', $atts, [
-	'post' => true,
-	'page' => true,
-	'product' => true
-]);
+$search_through = blocksy_companion_akg(
+	'search_through',
+	$atts,
+	array(
+		'post'    => true,
+		'page'    => true,
+		'product' => true,
+	)
+);
 
-$post_type = blocksy_companion_theme_functions()->blocksy_get_search_post_type($search_through);
+$post_type = blocksy_companion_theme_functions()->blocksy_get_search_post_type( $search_through );
 
-$class = trim('ct-search-box ' . blocksy_companion_akg('className', $atts, ''));
+$class = trim( 'ct-search-box ' . blocksy_companion_akg( 'className', $atts, '' ) );
 
 $icon = '<svg class="ct-icon ct-search-button-content" aria-hidden="true" width="15" height="15" viewBox="0 0 15 15"><path d="M14.8,13.7L12,11c0.9-1.2,1.5-2.6,1.5-4.2c0-3.7-3-6.8-6.8-6.8S0,3,0,6.8s3,6.8,6.8,6.8c1.6,0,3.1-0.6,4.2-1.5l2.8,2.8c0.1,0.1,0.3,0.2,0.5,0.2s0.4-0.1,0.5-0.2C15.1,14.5,15.1,14,14.8,13.7z M1.5,6.8c0-2.9,2.4-5.2,5.2-5.2S12,3.9,12,6.8S9.6,12,6.8,12S1.5,9.6,1.5,6.8z"/></svg>';
 
-if (function_exists('blocksy_companion_get_icon') && isset($atts['icon'])) {
-	$icon = blocksy_companion_get_icon([
-		'icon_descriptor' => blocksy_companion_akg('icon', $atts, [
-			'icon' => 'blc blc-search'
-		]),
-		'icon_container' => true,
-		'icon_html_atts' => [
-			'class' => 'ct-icon ct-search-button-content',
-		]
-	]);
+if ( function_exists( 'blocksy_companion_get_icon' ) && isset( $atts['icon'] ) ) {
+	$icon = blocksy_companion_get_icon(
+		array(
+			'icon_descriptor' => blocksy_companion_akg(
+				'icon',
+				$atts,
+				array(
+					'icon' => 'blc blc-search',
+				)
+			),
+			'icon_container'  => true,
+			'icon_html_atts'  => array(
+				'class' => 'ct-icon ct-search-button-content',
+			),
+		)
+	);
 }
 
-$colors = [
-	'--theme-form-text-initial-color' => blocksy_companion_akg('customInputFontColor', $atts, ''),
-	'--theme-form-text-focus-color' => blocksy_companion_akg('customInputFontFocusColor', $atts, ''),
-	'--theme-form-field-border-initial-color' => blocksy_companion_akg('customInputBorderColor', $atts, ''),
-	'--theme-form-field-border-focus-color' => blocksy_companion_akg('customInputBorderColorFocus', $atts, ''),
-	'--theme-form-field-background-initial-color' => blocksy_companion_akg('customInputBackgroundColor', $atts, ''),
-	'--theme-form-field-background-focus-color' => blocksy_companion_akg('customInputBackgroundColorFocus', $atts, ''),
-];
+$colors = array(
+	'--theme-form-text-initial-color'             => blocksy_companion_akg( 'customInputFontColor', $atts, '' ),
+	'--theme-form-text-focus-color'               => blocksy_companion_akg( 'customInputFontFocusColor', $atts, '' ),
+	'--theme-form-field-border-initial-color'     => blocksy_companion_akg( 'customInputBorderColor', $atts, '' ),
+	'--theme-form-field-border-focus-color'       => blocksy_companion_akg( 'customInputBorderColorFocus', $atts, '' ),
+	'--theme-form-field-background-initial-color' => blocksy_companion_akg( 'customInputBackgroundColor', $atts, '' ),
+	'--theme-form-field-background-focus-color'   => blocksy_companion_akg( 'customInputBackgroundColorFocus', $atts, '' ),
+);
 
-$buttonUseText = blocksy_companion_akg('buttonUseText', $atts, 'no') === 'yes';
-$buttonPosition = blocksy_companion_akg('buttonPosition', $atts, 'inside');
-$search_box_button_text = blocksy_companion_akg('search_box_button_text', $atts, __('Search', 'blocksy-companion'));
-$has_live_results = blocksy_companion_akg('enable_live_results', $atts, 'no');
+$button_use_text        = blocksy_companion_akg( 'buttonUseText', $atts, 'no' ) === 'yes';
+$button_position        = blocksy_companion_akg( 'buttonPosition', $atts, 'inside' );
+$search_box_button_text = blocksy_companion_akg( 'search_box_button_text', $atts, __( 'Search', 'blocksy-companion' ) );
+$has_live_results       = blocksy_companion_akg( 'enable_live_results', $atts, 'no' );
 
-if (isset($atts['inputFontColor'])) {
-	$var = $atts['inputFontColor'];
+if ( isset( $atts['inputFontColor'] ) ) {
+	$var                                       = $atts['inputFontColor'];
 	$colors['--theme-form-text-initial-color'] = "var(--wp--preset--color--$var)";
 }
 
-if (isset($atts['inputFontColorFocus'])) {
-	$var = $atts['inputFontColorFocus'];
+if ( isset( $atts['inputFontColorFocus'] ) ) {
+	$var                                     = $atts['inputFontColorFocus'];
 	$colors['--theme-form-text-focus-color'] = "var(--wp--preset--color--$var)";
 }
 
-if (isset($atts['inputBorderColor'])) {
+if ( isset( $atts['inputBorderColor'] ) ) {
 	$var = $atts['inputBorderColor'];
 	$colors['--theme-form-field-border-initial-color'] = "var(--wp--preset--color--$var)";
 }
 
-if (isset($atts['inputBorderColorFocus'])) {
+if ( isset( $atts['inputBorderColorFocus'] ) ) {
 	$var = $atts['inputBorderColorFocus'];
 	$colors['--theme-form-field-border-focus-color'] = "var(--wp--preset--color--$var)";
 }
 
-if (isset($atts['inputBackgroundColor'])) {
+if ( isset( $atts['inputBackgroundColor'] ) ) {
 	$var = $atts['inputBackgroundColor'];
 	$colors['--theme-form-field-background-initial-color'] = "var(--wp--preset--color--$var)";
 }
 
-if (isset($atts['inputBackgroundColorFocus'])) {
+if ( isset( $atts['inputBackgroundColorFocus'] ) ) {
 	$var = $atts['inputBackgroundColorFocus'];
 	$colors['--theme-form-field-background-focus-color'] = "var(--wp--preset--color--$var)";
 }
 
-if ($has_live_results === 'yes') {
+if ( 'yes' === $has_live_results ) {
 	$colors = array_merge(
 		$colors,
-		[
-			'--theme-link-initial-color' => blocksy_companion_akg('customDropdownTextInitialColor', $atts, ''),
-			'--theme-link-hover-color' => blocksy_companion_akg('customDropdownTextHoverColor', $atts, ''),
-			'--search-dropdown-background' => blocksy_companion_akg('customDropdownBackgroundColor', $atts, ''),
-			'--search-dropdown-box-shadow-color' => blocksy_companion_akg('customShadowColor', $atts, ''),
-		]
+		array(
+			'--theme-link-initial-color'         => blocksy_companion_akg( 'customDropdownTextInitialColor', $atts, '' ),
+			'--theme-link-hover-color'           => blocksy_companion_akg( 'customDropdownTextHoverColor', $atts, '' ),
+			'--search-dropdown-background'       => blocksy_companion_akg( 'customDropdownBackgroundColor', $atts, '' ),
+			'--search-dropdown-box-shadow-color' => blocksy_companion_akg( 'customShadowColor', $atts, '' ),
+		)
 	);
 
-	if (isset($atts['dropdownTextInitialColor'])) {
-		$var = $atts['dropdownTextInitialColor'];
+	if ( isset( $atts['dropdownTextInitialColor'] ) ) {
+		$var                                  = $atts['dropdownTextInitialColor'];
 		$colors['--theme-link-initial-color'] = "var(--wp--preset--color--$var)";
 	}
 
-	if (isset($atts['dropdownTextHoverColor'])) {
-		$var = $atts['dropdownTextHoverColor'];
+	if ( isset( $atts['dropdownTextHoverColor'] ) ) {
+		$var                                = $atts['dropdownTextHoverColor'];
 		$colors['--theme-link-hover-color'] = "var(--wp--preset--color--$var)";
 	}
 
-	if (isset($atts['dropdownBackgroundColor'])) {
-		$var = $atts['dropdownBackgroundColor'];
+	if ( isset( $atts['dropdownBackgroundColor'] ) ) {
+		$var                                    = $atts['dropdownBackgroundColor'];
 		$colors['--search-dropdown-background'] = "var(--wp--preset--color--$var)";
 	}
 
-	if (isset($atts['shadowColor'])) {
+	if ( isset( $atts['shadowColor'] ) ) {
 		$var = $atts['shadowColor'];
 		$colors['--search-dropdown-box-shadow-color'] = "var(--wp--preset--color--$var)";
 	}
 }
 
-$colors_css = '';
-
-foreach ($colors as $key => $value) {
-	if (empty($value)) {
-		continue;
-	}
-	$colors_css .= $key . ':' . $value . ';';
-}
+$colors_css = blocksy_companion_colors_to_css( $colors );
 
 $style = '';
 
-$search_box_height = blocksy_companion_akg('searchBoxHeight', $atts, '');
+$search_box_height = (float) blocksy_companion_akg( 'searchBoxHeight', $atts, '' );
 
-if (! empty($search_box_height)) {
+if ( ! empty( $search_box_height ) ) {
 	$style .= '--theme-form-field-height:' . $search_box_height . 'px;';
 }
 
-if (isset($atts['style']['border']['radius'])) {
+if ( isset( $atts['style']['border']['radius'] ) ) {
+	$atts['style']['border']['radius'] = blocksy_companion_sanitize_border_radius( $atts['style']['border']['radius'] );
+
 	if (
-		gettype($atts['style']['border']['radius']) === 'string'
+		gettype( $atts['style']['border']['radius'] ) === 'string'
 		&&
-		! empty(gettype($atts['style']['border']['radius']))
+		! empty( gettype( $atts['style']['border']['radius'] ) )
 	) {
 		$style .= '--theme-form-field-border-radius:' . $atts['style']['border']['radius'] . ';';
-	} else if (
-		gettype($atts['style']['border']['radius']) === 'array'
+	} elseif (
+		gettype( $atts['style']['border']['radius'] ) === 'array'
 		&&
-		! empty($atts['style']['border']['radius'])
+		! empty( $atts['style']['border']['radius'] )
 	) {
-		$top_left = $atts['style']['border']['radius']['topLeft'] ?? '0px';
-		$top_right = $atts['style']['border']['radius']['topRight'] ?? '0px';
+		$top_left     = $atts['style']['border']['radius']['topLeft'] ?? '0px';
+		$top_right    = $atts['style']['border']['radius']['topRight'] ?? '0px';
 		$bottom_right = $atts['style']['border']['radius']['bottomRight'] ?? '0px';
-		$bottom_left = $atts['style']['border']['radius']['bottomLeft'] ?? '0px';
+		$bottom_left  = $atts['style']['border']['radius']['bottomLeft'] ?? '0px';
 
 		if (
 			$top_left === $top_right
@@ -147,134 +153,133 @@ if (isset($atts['style']['border']['radius'])) {
 		) {
 			$style .= '--theme-form-field-border-radius:' . $top_left . ';';
 		} else {
-			$style .= '--theme-form-field-border-radius:' . join(' ', [
-				$top_left,
-				$top_right,
-				$bottom_right,
-				$bottom_left,
-			]) . ';';
+			$style .= '--theme-form-field-border-radius:' . join(
+				' ',
+				array(
+					$top_left,
+					$top_right,
+					$bottom_right,
+					$bottom_left,
+				)
+			) . ';';
 		}
 	}
 
-	unset($atts['style']['border']);
+	unset( $atts['style']['border'] );
 }
 
 $wp_styles = wp_style_engine_get_styles(
-	blocksy_companion_akg('style', $atts, [])
+	blocksy_companion_akg( 'style', $atts, array() )
 );
 
-$wp_styles_css = isset($wp_styles['css']) ? $wp_styles['css'] : '';
+$wp_styles_css = isset( $wp_styles['css'] ) ? $wp_styles['css'] : '';
 
-$button_colors = [];
+$button_colors = array();
 
 $button_colors = array_merge(
 	$button_colors,
-	[
-		'--theme-button-text-initial-color' => blocksy_companion_akg('customInputIconColor', $atts, ''),
-		'--theme-button-text-hover-color' => blocksy_companion_akg('customInputIconColorFocus', $atts, ''),
-	]
+	array(
+		'--theme-button-text-initial-color' => blocksy_companion_akg( 'customInputIconColor', $atts, '' ),
+		'--theme-button-text-hover-color'   => blocksy_companion_akg( 'customInputIconColorFocus', $atts, '' ),
+	)
 );
 
-if (isset($atts['inputIconColor'])) {
+if ( isset( $atts['inputIconColor'] ) ) {
 	$var = $atts['inputIconColor'];
 	$button_colors['--theme-button-text-initial-color'] = "var(--wp--preset--color--$var)";
 }
 
-if (isset($atts['inputIconColorFocus'])) {
+if ( isset( $atts['inputIconColorFocus'] ) ) {
 	$var = $atts['inputIconColorFocus'];
 	$button_colors['--theme-button-text-hover-color'] = "var(--wp--preset--color--$var)";
 }
 
-if (! ($buttonPosition === 'inside' && ! $buttonUseText)) {
+if ( ! ( 'inside' === $button_position && ! $button_use_text ) ) {
 	$button_colors = array_merge(
 		$button_colors,
-		[
-			'--theme-button-background-initial-color' => blocksy_companion_akg('customButtonBackgroundColor', $atts, ''),
-			'--theme-button-background-hover-color' => blocksy_companion_akg('customButtonBackgroundColorHover', $atts, ''),
-		]
+		array(
+			'--theme-button-background-initial-color' => blocksy_companion_akg( 'customButtonBackgroundColor', $atts, '' ),
+			'--theme-button-background-hover-color'   => blocksy_companion_akg( 'customButtonBackgroundColorHover', $atts, '' ),
+		)
 	);
 
-	if (isset($atts['buttonBackgroundColor'])) {
+	if ( isset( $atts['buttonBackgroundColor'] ) ) {
 		$var = $atts['buttonBackgroundColor'];
 		$button_colors['--theme-button-background-initial-color'] = "var(--wp--preset--color--$var)";
 	}
 
-	if (isset($atts['buttonBackgroundColorHover'])) {
+	if ( isset( $atts['buttonBackgroundColorHover'] ) ) {
 		$var = $atts['buttonBackgroundColorHover'];
 		$button_colors['--theme-button-background-hover-color'] = "var(--wp--preset--color--$var)";
 	}
 }
 
-$button_colors_css = '';
-
-foreach ($button_colors as $key => $value) {
-	if (empty($value)) {
-		continue;
-	}
-	$button_colors_css .= $key . ':' . $value . ';';
-}
+$button_colors_css = blocksy_companion_colors_to_css( $button_colors );
 
 ?>
 
-<div class="<?php echo esc_attr($class) ?>">
+<div class="<?php echo esc_attr( $class ); ?>">
 	<?php
-		if (function_exists('blocksy_isolated_get_search_form')) {
-			blocksy_isolated_get_search_form([
-				'ct_post_type' => $post_type,
-				'search_live_results' => blocksy_companion_akg('enable_live_results', $atts, 'no'),
-				'live_results_attr' => blocksy_companion_akg(
+	if ( function_exists( 'blocksy_isolated_get_search_form' ) ) {
+		blocksy_isolated_get_search_form(
+			array(
+				'ct_post_type'               => $post_type,
+				'search_live_results'        => blocksy_companion_akg( 'enable_live_results', $atts, 'no' ),
+				'live_results_attr'          => blocksy_companion_akg(
 					'live_results_images',
 					$atts,
 					'yes'
 				) === 'yes' ? 'thumbs' : '',
-				'ct_product_price' => blocksy_companion_akg(
+				'ct_product_price'           => blocksy_companion_akg(
 					'searchProductPrice',
 					$atts,
 					'no'
 				) === 'yes',
-				'ct_product_status' => blocksy_companion_akg(
+				'ct_product_status'          => blocksy_companion_akg(
 					'searchProductStatus',
 					$atts,
 					'no'
 				) === 'yes',
-				'search_placeholder' => esc_attr(
+				'search_placeholder'         => esc_attr(
 					blocksy_companion_akg(
 						'search_box_placeholder',
 						$atts,
-						__('Search', 'blocksy-companion')
+						__( 'Search', 'blocksy-companion' )
 					)
 				),
-				'has_taxonomy_filter' => blocksy_companion_akg('has_taxonomy_filter', $atts, 'no') === 'yes',
-				'has_taxonomy_children' => blocksy_companion_akg('has_taxonomy_children', $atts, 'no') === 'yes',
-				'taxonomy_filter_label' => sanitize_text_field(
-					blocksy_companion_akg('taxonomy_filter_label', $atts, __('Select Category', 'blocksy-companion'))
+				'has_taxonomy_filter'        => blocksy_companion_akg( 'has_taxonomy_filter', $atts, 'no' ) === 'yes',
+				'has_taxonomy_children'      => blocksy_companion_akg( 'has_taxonomy_children', $atts, 'no' ) === 'yes',
+				'taxonomy_filter_label'      => sanitize_text_field(
+					blocksy_companion_akg( 'taxonomy_filter_label', $atts, __( 'Select Category', 'blocksy-companion' ) )
 				),
-				'search_through_taxonomy' => blocksy_companion_akg('search_through_taxonomy', $atts, 'no'),
+				'search_through_taxonomy'    => blocksy_companion_akg( 'search_through_taxonomy', $atts, 'no' ),
 				'taxonomy_filter_visibility' => blocksy_companion_akg(
 					'taxonomy_filter_visibility',
 					$atts,
-					[
+					array(
 						'desktop' => true,
-						'tablet' => true,
-						'mobile' => false,
-					]
+						'tablet'  => true,
+						'mobile'  => false,
+					)
 				),
-				'icon' => $buttonUseText ? blocksy_companion_html_tag(
+				'icon'                       => $button_use_text ? blocksy_companion_html_tag(
 					'span',
-					[
-						'class' => 'ct-search-button-content'
-					],
-					$search_box_button_text): $icon ,
-				'html_atts' => [
-					'data-form-controls' => $buttonPosition,
-					'data-taxonomy-filter' => blocksy_companion_akg('has_taxonomy_filter', $atts, 'no') === 'yes' ? 'true' : 'false',
-					'data-submit-button' => $buttonUseText ? 'text' : 'icon',
-					'style' => $style . $colors_css . $wp_styles_css
-				],
-				'button_html_atts' => !empty($button_colors_css) ? [
-					'style' => $button_colors_css
-				] : []
-			]);
-		}
+					array(
+						'class' => 'ct-search-button-content',
+					),
+					esc_html( $search_box_button_text )
+				) : $icon,
+				'html_atts'                  => array(
+					'data-form-controls'   => $button_position,
+					'data-taxonomy-filter' => blocksy_companion_akg( 'has_taxonomy_filter', $atts, 'no' ) === 'yes' ? 'true' : 'false',
+					'data-submit-button'   => $button_use_text ? 'text' : 'icon',
+					'style'                => $style . $colors_css . $wp_styles_css,
+				),
+				'button_html_atts'           => ! empty( $button_colors_css ) ? array(
+					'style' => $button_colors_css,
+				) : array(),
+			)
+		);
+	}
 	?>
 </div>

@@ -729,7 +729,7 @@ msgstr "Ugniježđeni blokovi koriste širinu sadržaja s opcijama za punu i vel
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:156
 msgid "Nested blocks will fill the width of this container. Toggle to constrain."
-msgstr "Ugniježđeni blokovi će ispuniti širinu ovog kontejnera. Uključite za ograničavanje."
+msgstr "Ugnije��đeni blokovi će ispuniti širinu ovog kontejnera. Uključite za ograničavanje."
 
 #: static/js/editor/blocks/dynamic-data/components/CoverImageControls.js:165
 msgid "Content width"
@@ -3755,7 +3755,7 @@ msgstr "Unesite važeći Project ID kako biste preuzeli sve fontove."
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:302
 msgid "This provider is used only for testing purposes. It doesnt register any real subscribers."
-msgstr "Ovaj pru��atelj se koristi samo u testne svrhe. Ne registrira stvarne pretplatnike."
+msgstr "Ovaj pružatelj se koristi samo u testne svrhe. Ne registrira stvarne pretplatnike."
 
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:505,
 #: framework/premium/extensions/woocommerce-extra/features/compare/header-items/compare/options.php:539,

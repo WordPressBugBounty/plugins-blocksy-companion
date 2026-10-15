@@ -1213,8 +1213,15 @@ class Blocksy_WP_Import extends WP_Importer {
 			$menu_id = is_array( $menu_id ) ? $menu_id['term_id'] : $menu_id;
 		}
 
-		foreach ( $item['postmeta'] as $meta )
-			${$meta['key']} = $meta['value'];
+		$menu_item_meta = array_column($item['postmeta'], 'value', 'key');
+		$_menu_item_type = $menu_item_meta['_menu_item_type'] ?? '';
+		$_menu_item_object_id = $menu_item_meta['_menu_item_object_id'] ?? 0;
+		$_menu_item_object = $menu_item_meta['_menu_item_object'] ?? '';
+		$_menu_item_menu_item_parent = $menu_item_meta['_menu_item_menu_item_parent'] ?? 0;
+		$_menu_item_url = $menu_item_meta['_menu_item_url'] ?? '';
+		$_menu_item_target = $menu_item_meta['_menu_item_target'] ?? '';
+		$_menu_item_classes = $menu_item_meta['_menu_item_classes'] ?? '';
+		$_menu_item_xfn = $menu_item_meta['_menu_item_xfn'] ?? '';
 
 		if ( 'taxonomy' == $_menu_item_type && isset( $this->processed_terms[intval($_menu_item_object_id)] ) ) {
 			$_menu_item_object_id = $this->processed_terms[intval($_menu_item_object_id)];
@@ -1488,14 +1495,34 @@ class Blocksy_WP_Import extends WP_Importer {
 	 */
 	function backfill_attachment_urls() {
 		global $wpdb;
-		// make sure we do the longest urls first, in case one is a substring of another
-		uksort( $this->url_remap, array(&$this, 'cmpr_strlen') );
 
-		foreach ( $this->url_remap as $from_url => $to_url ) {
-			// remap urls in post_content
-			$wpdb->query( $wpdb->prepare("UPDATE {$wpdb->posts} SET post_content = REPLACE(post_content, %s, %s)", $from_url, $to_url) );
-			// remap enclosure urls
-			$result = $wpdb->query( $wpdb->prepare("UPDATE {$wpdb->postmeta} SET meta_value = REPLACE(meta_value, %s, %s) WHERE meta_key='enclosure'", $from_url, $to_url) );
+		$post_ids = array_values(array_unique(array_filter(array_map(
+			'absint',
+			$this->processed_posts
+		))));
+
+		if (empty($post_ids)) {
+			return;
+		}
+
+		uksort($this->url_remap, array(&$this, 'cmpr_strlen'));
+
+		foreach (array_chunk($post_ids, 250) as $batch) {
+			$placeholders = implode(', ', array_fill(0, count($batch), '%d'));
+
+			foreach ($this->url_remap as $from_url => $to_url) {
+				$args = array_merge([$from_url, $to_url], $batch);
+
+				$wpdb->query($wpdb->prepare(
+					"UPDATE {$wpdb->posts} SET post_content = REPLACE(post_content, %s, %s) WHERE ID IN ($placeholders)",
+					$args
+				));
+
+				$wpdb->query($wpdb->prepare(
+					"UPDATE {$wpdb->postmeta} SET meta_value = REPLACE(meta_value, %s, %s) WHERE meta_key = 'enclosure' AND post_id IN ($placeholders)",
+					$args
+				));
+			}
 		}
 	}
 

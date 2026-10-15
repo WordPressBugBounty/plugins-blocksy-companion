@@ -29,7 +29,7 @@ msgstr "Mỗi 12 giờ"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/feature.php:417
 msgid "<p><strong>🔥 Hurry up! Your selected items are reserved for {time} minutes.</strong></p>"
-msgstr "<p><strong>🔥 Nhanh tay lên! Các món bạn chọn đang được giữ chỗ trong {time} phút.</strong></p>"
+msgstr "<p><strong>🔥 Nhanh tay lên! Các món bạn chọn đang đư��c giữ chỗ trong {time} phút.</strong></p>"
 
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:28
 msgid "Countdown Duration"
@@ -140,7 +140,7 @@ msgstr "Còn hàng"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:217
 msgid "Subscribers"
-msgstr "Người đăng ký"
+msgstr "Ngư���i đăng ký"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/waitlist-table.php:224
 msgid "Pending entries"
@@ -474,7 +474,7 @@ msgstr "Không tìm thấy tệp xuất tại <code>%s</code>. Có thể nguyên
 #. translators: %s is the WXR version number.
 #: framework/features/demo-install/wp-importer.php:282
 msgid "This WXR file (version %s) may not be supported by this version of the importer. Please consider updating."
-msgstr "Tệp WXR này (phiên bản %s) có thể không được hỗ trợ bởi phiên bản trình nhập liệu hiện tại. Vui lòng cân nhắc cập nh��t."
+msgstr "Tệp WXR này (phiên bản %s) có thể không được hỗ trợ bởi phiên bản trình nhập liệu hiện tại. Vui lòng cân nhắc cập nhật."
 
 #. translators: %s is the author's display name.
 #: framework/features/demo-install/wp-importer.php:315
@@ -492,7 +492,7 @@ msgstr "Để việc chỉnh sửa và lưu nội dung đã nhập dễ dàng h�
 #. translators: %s is the default user role.
 #: framework/features/demo-install/wp-importer.php:355
 msgid "If a new user is created by WordPress, a new password will be randomly generated and the new user&#8217;s role will be set as %s. Manually changing the new user&#8217;s details will be necessary."
-msgstr "Nếu người dùng mới được tạo bởi WordPress, một mật khẩu mới sẽ được tạo ngẫu nhiên và vai trò của người dùng mới sẽ được đặt là %s. Bạn sẽ cần thay đổi chi tiết của người dùng mới theo cách thủ công."
+msgstr "Nếu người dùng mới được tạo bởi WordPress, một mật khẩu mới s�� được tạo ngẫu nhiên và vai trò của người dùng mới sẽ được đặt là %s. Bạn sẽ cần thay đổi chi tiết của người dùng mới theo cách thủ công."
 
 #: framework/features/demo-install/wp-importer.php:371
 msgid "Import Attachments"
@@ -1615,7 +1615,7 @@ msgstr "Hủy đăng ký"
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:72
 #: static/js/editor/blocks/tax-query/edit/TermsInspectorControls.js:331
 msgid "Yes"
-msgstr "Có"
+msgstr "C��"
 
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/product-mobile-actions.php:29,
 #: framework/premium/extensions/woocommerce-extra/features/product-waitlist/includes/views/table-single-product-row.php:72
@@ -4076,7 +4076,7 @@ msgstr "Thanh vận chuyển miễn phí"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:212
 msgid "Show if cart is empty"
-msgstr "Hiển thị nếu giỏ hàng trống"
+msgstr "Hiển thị nếu giỏ h��ng trống"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/feature.php:445,
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:180
@@ -4834,7 +4834,7 @@ msgstr "Ngày sau khi nhấp vào nút"
 
 #: framework/premium/features/content-blocks/options/maintenance.php:16
 msgid "Add one or more conditions to display the Maintenance block."
-msgstr "Thêm một hoặc nhiều điều kiện để hiển thị khối bảo trì."
+msgstr "Thêm một hoặc nhiều điều kiện để hi��n thị khối bảo trì."
 
 #: framework/premium/features/content-blocks/options/popup.php:53
 msgid "Popup Display Conditions"
