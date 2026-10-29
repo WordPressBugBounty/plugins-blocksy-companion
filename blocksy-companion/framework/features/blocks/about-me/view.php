@@ -56,17 +56,37 @@ $about_text = do_shortcode(
 );
 
 if ( 'from_wp' === $about_source ) {
-	if ( ! $user_id ) {
-		if ( blocksy_companion_theme_functions()->blocksy_manager() !== \Blocksy\ThemeFunctions::NON_EXISTING_FUNCTION ) {
-			$user_id = blocksy_companion_theme_functions()->blocksy_manager()
-				->entity_id_picker
-				->get_default_value(
-					array(
-						'entity' => 'users',
-					)
-				);
-		}
+	$public_authors = get_users(
+		array(
+			'include'             => array( absint( $user_id ) ),
+			'has_published_posts' => true,
+			'fields'              => 'ID',
+		)
+	);
+
+	if ( empty( $public_authors ) && blocksy_companion_theme_functions()->blocksy_manager() !== \Blocksy\ThemeFunctions::NON_EXISTING_FUNCTION ) {
+		$default_user_id = blocksy_companion_theme_functions()->blocksy_manager()
+			->entity_id_picker
+			->get_default_value(
+				array(
+					'entity' => 'users',
+				)
+			);
+
+		$public_authors = get_users(
+			array(
+				'include'             => array( absint( $default_user_id ) ),
+				'has_published_posts' => true,
+				'fields'              => 'ID',
+			)
+		);
 	}
+
+	if ( empty( $public_authors ) ) {
+		return;
+	}
+
+	$user_id = (int) $public_authors[0];
 
 	$image_output = blocksy_simple_image(
 		blocksy_get_avatar_url(

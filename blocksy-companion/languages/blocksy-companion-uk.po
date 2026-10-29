@@ -182,7 +182,7 @@ msgstr "Детальну інформацію про те, як згенерув
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:149
 msgid "White Label Extension"
-msgstr "Роз��ирення White Label"
+msgstr "Розши��ення White Label"
 
 #: framework/premium/extensions/white-label/dashboard-static/js/AdvancedTab.js:161
 msgid "Please note that disabling this option will hide the white-label extension. To restore it, press the SHIFT key while clicking the dashboard logo."
@@ -417,7 +417,7 @@ msgstr "Цей файл, ймовірно, не є допустимим файл
 
 #: framework/features/svg.php:37
 msgid "SVG files cannot contain PHP code."
-msgstr "Файли SVG не повинні містити PHP-код."
+msgstr "Файли SVG не повинні ��істити PHP-код."
 
 #: framework/helpers/exts-configs.php:403,
 #: framework/premium/extensions/woocommerce-extra/features/cart-reserved-timer/options.php:4
@@ -466,7 +466,7 @@ msgstr "Насолоджуйтесь!"
 
 #: framework/features/demo-install/wp-importer.php:235
 msgid "Remember to update the passwords and roles of imported users."
-msgstr "Не забудьте оновити паролі та ролі ім��ортованих користувачів."
+msgstr "Не забудьте оновити паролі та ролі імпо��тованих користувачів."
 
 #. translators: %s is the path to the WXR file.
 #: framework/features/demo-install/wp-importer.php:258
@@ -485,7 +485,7 @@ msgstr "Не вдалося імпортувати автора %s. Його п�
 
 #: framework/features/demo-install/wp-importer.php:349
 msgid "Assign Authors"
-msgstr "Призначити ав��орів"
+msgstr "Призначити авто��ів"
 
 #: framework/features/demo-install/wp-importer.php:350
 msgid "To make it simpler for you to edit and save the imported content, you may want to reassign the author of the imported item to an existing user of this site, such as your primary administrator account."
@@ -1032,7 +1032,7 @@ msgstr "При натисканні кнопки закриття"
 
 #: framework/premium/features/content-blocks/options/popup.php:313
 msgid "On ESC Button Press"
-msgstr "При натисканні кнопки ESC"
+msgstr "При натисканні кн��пки ESC"
 
 #: framework/premium/features/content-blocks/options/popup.php:325
 msgid "On Backdrop Click"
@@ -1113,11 +1113,11 @@ msgstr "Ліміт архіву"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:575
 msgid "Limit the number of swatches shown on archive pages."
-msgstr "Обмеження кількості зразків, що відображаються на сторінках а��хіву."
+msgstr "Обмеження кількості зразків, що відображаються на сторінках архіву."
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:579
 msgid "Product Page Limit"
-msgstr "Ліміт с��орінки товару"
+msgstr "Ліміт сторінки товару"
 
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:586
 msgid "Limit the number of swatches shown on single product pages."
@@ -1983,7 +1983,7 @@ msgstr "Колір межі контейнера"
 
 #: framework/extensions/newsletter-subscribe/admin-static/js/newsletter-block/Edit.js:197
 msgid "Container Background Color"
-msgstr "Колір фону контейнера"
+msgstr "Ко��ір фону контейнера"
 
 #: framework/extensions/newsletter-subscribe/dashboard-static/js/EditCredentials.js:188
 msgid "API Version"
@@ -2536,7 +2536,7 @@ msgstr "Супутні"
 #: static/js/editor/blocks/query/index.js:13
 #: static/js/editor/blocks/tax-query/index.js:13
 msgid "Create advanced queries based on your specified criterias."
-msgstr "��творення розширених запитів на основі заданих критеріїв."
+msgstr "Створення розширених запитів на основі заданих критеріїв."
 
 #: static/js/editor/blocks/search/Edit.js:163
 msgid "Button Outside"
@@ -2648,7 +2648,7 @@ msgstr "Скинути всі"
 
 #: static/js/options/ConditionsManager/ExpireCondition.js:119
 msgid "The expiration date cannot be set earlier than the start date."
-msgstr "Дата закінчення ��ерміну не може бути раніше дати початку дії."
+msgstr "Дата закінчення терміну не може бути раніше дати початку дії."
 
 #: framework/features/blocks/about-me/options.php:207,
 #: framework/features/blocks/share-box/options.php:66,
@@ -3034,7 +3034,7 @@ msgstr "Цільова кількість"
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:90
 msgid "Amount of items the client has to buy in order to get free shipping."
-msgstr "Кількість товарів, які клієнт повине�� придбати, щоб отримати безкоштовну доставку."
+msgstr "Кількість товарів, які клієнт повинен придбати, щоб отримати бе��коштовну доставку."
 
 #: framework/premium/extensions/woocommerce-extra/features/shipping-progress/options.php:172
 msgid "You can use dynamic code tags such as {items} inside this option."
@@ -3215,7 +3215,7 @@ msgstr "У вас немає дозволу на встановлення доч
 
 #: framework/features/demo-install/content-eraser.php:23
 msgid "Sorry, you don't have permission to erase content."
-msgstr "У вас немає д��зволу на видалення вмісту."
+msgstr "У вас немає дозволу на видалення вмісту."
 
 #: framework/features/demo-install/content-installer.php:73
 msgid "Sorry, you don't have permission to install content."
@@ -3437,7 +3437,7 @@ msgstr "Перейдіть на професійний або агентськи
 
 #: static/js/dashboard/helpers/useProExtensionInFree.js:14
 msgid "This is a Pro extension"
-msgstr "Це професійне розширення"
+msgstr "Ц�� професійне розширення"
 
 #: static/js/dashboard/helpers/useUpsellModal.js:100
 #: static/js/dashboard/screens/DemoInstall/SingleDemo.js:115
@@ -3596,7 +3596,7 @@ msgstr "Розгортувальний"
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:323
 #: static/js/editor/blocks/widgets-wrapper/Edit.js:95
 msgid "Expanded by Default"
-msgstr "Розгорнуто за замовчуванням"
+msgstr "Розгорнуто за замовчуванн��м"
 
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/status-filter/index.js:127
 #: framework/premium/extensions/woocommerce-extra/static/js/blocks/woocommerce-filters/tax-filters/Edit.js:270
@@ -6942,7 +6942,7 @@ msgstr "Умови відображення панелі ярликів"
 
 #: framework/premium/extensions/shortcuts/customizer.php:1028
 msgid "Add one or more conditions to display the shortcuts bar."
-msgstr "Д��дайте одну або кілька умов для відображення панелі ярликів."
+msgstr "Додайте одну або кілька умов для відображення панелі ярликів."
 
 #: framework/premium/extensions/shortcuts/customizer.php:1052,
 #: framework/features/header/items/account/options.php:1918,
@@ -8045,7 +8045,7 @@ msgstr "Соціальні іконки"
 #. translators: %s is a link to the Customizer section.
 #: framework/features/blocks/about-me/options.php:136
 msgid "You can configure social URLs in %s."
-msgstr "Ви можете налаштувати соціальні URL-адреси у %s."
+msgstr "Ви можете налаштувати соціал��ні URL-адреси у %s."
 
 #: framework/features/blocks/about-me/options.php:168,
 #: framework/features/blocks/socials/options.php:62,

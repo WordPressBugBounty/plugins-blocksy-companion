@@ -5978,7 +5978,7 @@ msgstr ""
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:357,
 #: framework/premium/extensions/woocommerce-extra/features/swatches/options.php:512
 msgid "Border Color"
-msgstr "框線色彩"
+msgstr "框線���彩"
 
 #: framework/premium/features/content-blocks/hooks-manager.php:170
 msgid "Before description"

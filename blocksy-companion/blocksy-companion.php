@@ -3,7 +3,7 @@
 /*
 Plugin Name: Blocksy Companion
 Description: This plugin is the companion for the Blocksy theme, it runs and adds its enhacements only if the Blocksy theme is installed and active.
-Version: 2.1.60
+Version: 2.1.61
 Author: CreativeThemes
 Author URI: https://creativethemes.com
 Text Domain: blocksy-companion
@@ -34,25 +34,25 @@ if ( function_exists( 'blocksy_companion_fs' ) || class_exists( '\\Blocksy\\Plug
         blocksy_companion_fs()->set_basename( false, __FILE__ );
     }
 } else {
-    if ( !function_exists( 'blocksy_companion_fs' ) && file_exists( dirname( __FILE__ ) . '/vendor/freemius/start.php' ) && (is_admin() || wp_doing_cron() || defined( 'WP_CLI' ) && WP_CLI || isset( $_REQUEST['customize_theme'] )) ) {
+    if ( !function_exists( 'blocksy_companion_fs' ) && file_exists( __DIR__ . '/vendor/freemius/start.php' ) && (is_admin() || wp_doing_cron() || defined( 'WP_CLI' ) && WP_CLI || isset( $_REQUEST['customize_theme'] )) ) {
         global $blocksy_companion_fs;
         if ( !isset( $blocksy_companion_fs ) ) {
             if ( !defined( 'WP_FS__PRODUCT_5115_MULTISITE' ) ) {
                 // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedConstantFound -- Freemius requirement
                 define( 'WP_FS__PRODUCT_5115_MULTISITE', true );
             }
-            require_once dirname( __FILE__ ) . '/vendor/freemius/start.php';
+            require_once __DIR__ . '/vendor/freemius/start.php';
         }
         $blocksy_has_account = true;
         // start.php can return without loading the SDK when another
         // plugin's bundled copy wins the version election.
         if ( !isset( $blocksy_companion_fs ) && class_exists( '\\Freemius' ) ) {
             $blocksy_fs_instance = \Freemius::instance( 5115, 'blocksy-companion', true );
-            $blocksy_active_extensions = get_option( 'blocksy_active_extensions', [] );
+            $blocksy_active_extensions = get_option( 'blocksy_active_extensions', array() );
             if ( !is_array( $blocksy_active_extensions ) ) {
-                $blocksy_active_extensions = [];
+                $blocksy_active_extensions = array();
             }
-            if ( in_array( 'white-label', $blocksy_active_extensions ) && ($blocksy_fs_instance->is_plan( 'agency' ) || $blocksy_fs_instance->is_plan( 'agency_v2' )) ) {
+            if ( in_array( 'white-label', $blocksy_active_extensions, true ) && ($blocksy_fs_instance->is_plan( 'agency' ) || $blocksy_fs_instance->is_plan( 'agency_v2' )) ) {
                 /**
                  * Filters the Blocksy white-label settings.
                  *
@@ -64,7 +64,7 @@ if ( function_exists( 'blocksy_companion_fs' ) || class_exists( '\\Blocksy\\Plug
                  * @param array $settings White-label settings. Default the stored
                  *                         `blocksy_ext_white_label_settings` option, or [].
                  */
-                $blocksy_wl_settings = apply_filters( 'blocksy:ext:white-label:settings', get_option( 'blocksy_ext_white_label_settings', [] ) );
+                $blocksy_wl_settings = apply_filters( 'blocksy:ext:white-label:settings', get_option( 'blocksy_ext_white_label_settings', array() ) );
                 if ( $blocksy_wl_settings && isset( $blocksy_wl_settings['hide_billing_account'] ) && $blocksy_wl_settings['hide_billing_account'] && !is_multisite() ) {
                     $blocksy_has_account = false;
                 }
@@ -81,18 +81,18 @@ if ( function_exists( 'blocksy_companion_fs' ) || class_exists( '\\Blocksy\\Plug
                 'is_premium'       => false,
                 'has_addons'       => false,
                 'has_paid_plans'   => true,
-                'menu'             => ( true ? [
+                'menu'             => ( true ? array(
                     'slug'    => 'ct-dashboard',
                     'support' => false,
                     'contact' => false,
                     'pricing' => false,
                     'account' => $blocksy_has_account,
-                ] : [
+                ) : array(
                     'support' => false,
                     'contact' => false,
                     'pricing' => false,
                     'account' => false,
-                ] ),
+                ) ),
                 'is_live'          => true,
                 'is_org_compliant' => true,
             ) );

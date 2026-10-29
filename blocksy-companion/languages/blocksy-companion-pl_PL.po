@@ -4409,7 +4409,7 @@ msgstr "Porównaj pola tabeli"
 #: framework/features/blocks/dynamic-data/options.php:19,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:239
 msgid "Length"
-msgstr "Długość"
+msgstr "D��ugość"
 
 #: framework/premium/extensions/woocommerce-extra/features/added-to-cart-popup/customizer-options.php:143,
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:263
@@ -11053,7 +11053,7 @@ msgstr "Etykieta przycisku czytaj więcej"
 #: framework/extensions/product-reviews/metabox.php:153,
 #: framework/extensions/product-reviews/views/single-top.php:167
 msgid "Read More"
-msgstr "Dowiedz się więcej"
+msgstr "Dowiedz się wi��cej"
 
 #: framework/extensions/product-reviews/metabox.php:173
 msgid "Short Description"

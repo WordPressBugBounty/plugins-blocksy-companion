@@ -5,7 +5,7 @@ Requires PHP: 7.0
 Tested up to: 7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 2.1.60
+Stable tag: 2.1.61
 
 The official companion plugin for Blocksy theme, packed with starter sites, extra features, and integrations.
 
@@ -67,6 +67,16 @@ Program. The Patchstack team help validate, triage and handle any security
 vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/blocksy-companion)
 
 == Changelog ==
+2.1.61: 2026-10-29
+- Improvement: About Me block - show only users with published content
+- Improvement: Dynamic Data - sanitize custom field values in the editor preview
+- Improvement: Dynamic Data and Breadcrumbs - improve editor preview text handling
+- Improvement: Dynamic Data and Filters - validate size values
+- Improvement: Posts and Terms blocks - validate the block id used for styles
+- Improvement: Shop Filters - prevent search engines from crawling filter combinations through filter links
+- Improvement: Starter Sites - require the dashboard permission for every import step
+- Improvement: Theme preview - honor preview parameters only for users who can switch themes
+
 2.1.60: 2026-10-15
 - Improvement: Blocks - improve handling of custom block settings
 - Improvement: Content Blocks - improve validation of block settings

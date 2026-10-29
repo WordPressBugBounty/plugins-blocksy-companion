@@ -8656,7 +8656,7 @@ msgstr "À l’extérieur"
 #: framework/premium/extensions/woocommerce-extra/features/compare/options.php:376,
 #: framework/premium/extensions/woocommerce-extra/features/size-guide/customizer-options.php:72
 msgid "Popup Background"
-msgstr "Arrière-plan dans la fenêtre surgissante"
+msgstr "Arrière-plan dans la fen��tre surgissante"
 
 #: framework/premium/features/content-blocks/options/popup.php:739
 msgid "Popup Backdrop Background"

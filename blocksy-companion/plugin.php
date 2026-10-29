@@ -44,6 +44,7 @@ class Plugin {
 
 	private $is_blocksy              = '__NOT_SET__';
 	public $is_blocksy_data          = null;
+	private $is_blocksy_in_preview   = false;
 	private $desired_blocksy_version = '2.1.37-dev1';
 
 	private $request_uri = '';
@@ -222,8 +223,31 @@ class Plugin {
 		$this->early_init();
 
 		if ( ! $this->check_if_blocksy_is_activated() ) {
+			if ( $this->is_blocksy_in_preview ) {
+				add_action(
+					'plugins_loaded',
+					array( $this, 'init_when_theme_preview_is_not_allowed' ),
+					0
+				);
+			}
+
 			return;
 		}
+
+		$this->early_init_with_blocksy_theme();
+
+		add_action( 'init', array( $this, 'init' ), 0 );
+	}
+
+	public function init_when_theme_preview_is_not_allowed() {
+		if ( current_user_can( 'switch_themes' ) ) {
+			return;
+		}
+
+		$this->is_blocksy = true;
+
+		$this->is_blocksy_data['is_correct_theme']         = true;
+		$this->is_blocksy_data['another_theme_in_preview'] = false;
 
 		$this->early_init_with_blocksy_theme();
 
@@ -345,7 +369,7 @@ class Plugin {
 				if ( $is_correct_theme && $maybe_foreign_theme ) {
 					$foreign_theme_obj = wp_get_theme( $maybe_foreign_theme );
 
-					if ( $foreign_theme_obj ) {
+					if ( $foreign_theme_obj->exists() ) {
 						if ( $foreign_theme_obj->parent() ) {
 							$foreign_theme_obj = $foreign_theme_obj->parent();
 						}
@@ -432,6 +456,14 @@ class Plugin {
 				$is_correct_version
 				&&
 				! $another_theme_in_preview
+			);
+
+			$this->is_blocksy_in_preview = (
+				$is_correct_theme
+				&&
+				$is_correct_version
+				&&
+				$another_theme_in_preview
 			);
 		}
 

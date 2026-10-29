@@ -1010,15 +1010,33 @@ function blocksy_companion_colors_to_css( $colors ) {
 	return $css;
 }
 
+function blocksy_companion_sanitize_css_length( $value ) {
+	if (
+		! is_string( $value )
+		||
+		! preg_match( '/^\d+(\.\d+)?(px|em|rem|%|vh|vw)?$/D', $value )
+	) {
+		return null;
+	}
+
+	return $value;
+}
+
+function blocksy_companion_sanitize_aspect_ratio( $value ) {
+	if (
+		! is_string( $value )
+		||
+		! preg_match( '/^(auto|\d+(\.\d+)?(\/\d+(\.\d+)?)?)$/D', $value )
+	) {
+		return null;
+	}
+
+	return $value;
+}
+
 function blocksy_companion_sanitize_border_radius( $radius ) {
-	$length_pattern = '/^\d+(\.\d+)?(px|em|rem|%|vh|vw)?$/D';
-
 	if ( is_string( $radius ) ) {
-		if ( ! preg_match( $length_pattern, $radius ) ) {
-			return null;
-		}
-
-		return $radius;
+		return blocksy_companion_sanitize_css_length( $radius );
 	}
 
 	if ( ! is_array( $radius ) ) {
@@ -1028,14 +1046,12 @@ function blocksy_companion_sanitize_border_radius( $radius ) {
 	$result = array();
 
 	foreach ( array( 'topLeft', 'topRight', 'bottomLeft', 'bottomRight' ) as $corner ) {
-		if (
-			isset( $radius[ $corner ] )
-			&&
-			is_string( $radius[ $corner ] )
-			&&
-			preg_match( $length_pattern, $radius[ $corner ] )
-		) {
-			$result[ $corner ] = $radius[ $corner ];
+		$length = blocksy_companion_sanitize_css_length(
+			blocksy_companion_akg( $corner, $radius, null )
+		);
+
+		if ( null !== $length ) {
+			$result[ $corner ] = $length;
 		}
 	}
 
